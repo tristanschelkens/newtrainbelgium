@@ -97,6 +97,23 @@ function setActiveNavLink() {
   applyFilter("all");
 })();
 
+(function initContactFormStatus() {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sent") !== "1") return;
+
+  const notice = document.createElement("p");
+  notice.className = "muted";
+  notice.style.marginTop = "10px";
+  notice.style.fontSize = "13px";
+  notice.style.color = "var(--nmbs-blue)";
+  notice.textContent = "Message sent successfully. Thank you!";
+
+  form.insertAdjacentElement("afterend", notice);
+})();
+
 
 window.addEventListener("load", () => {
   handleNavbarScroll();
