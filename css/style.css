@@ -91,8 +91,7 @@ img {
 }
 
 .nav-inner {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   padding: 14px 30px;
   display: flex;
   align-items: center;
@@ -104,8 +103,6 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 0;
-  margin-right: auto;
 }
 
 .brand-dot {
