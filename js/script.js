@@ -66,6 +66,16 @@ function setActiveNavLink() {
   const buttons = Array.from(filters.querySelectorAll(".filter-btn"));
   const cards = Array.from(grid.querySelectorAll(".photo-card"));
   const noResults = document.getElementById("noResults");
+  const availableFilters = new Set(
+    buttons.map((btn) => (btn.dataset.filter || "").toLowerCase()),
+  );
+
+  function setActiveButton(value) {
+    buttons.forEach((btn) => {
+      const isActive = (btn.dataset.filter || "").toLowerCase() === value;
+      btn.classList.toggle("active", isActive);
+    });
+  }
 
   function applyFilter(value) {
     let visibleCount = 0;
@@ -88,13 +98,19 @@ function setActiveNavLink() {
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      applyFilter(btn.dataset.filter);
+      const value = (btn.dataset.filter || "all").toLowerCase();
+      setActiveButton(value);
+      applyFilter(value);
     });
   });
 
-  applyFilter("all");
+  const queryFilter = (
+    new URLSearchParams(window.location.search).get("filter") || "all"
+  ).toLowerCase();
+  const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
+
+  setActiveButton(initialFilter);
+  applyFilter(initialFilter);
 })();
 
 (function initContactForm() {
