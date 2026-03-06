@@ -157,16 +157,24 @@ function setActiveNavLink() {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
+    const compactType = lowerType.replace(/\s+/g, "");
+    const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
 
     if (!rawType || lowerType === "unknown") return "";
 
     if (lowerType.startsWith("hle")) {
-      if (rawNumber.startsWith("13")) return "hle13";
-      if (rawNumber.startsWith("18") || rawNumber.startsWith("19")) {
+      if (compactNumber.startsWith("13")) return "hle13";
+      if (compactNumber.startsWith("18") || compactNumber.startsWith("19")) {
         return "hle18-19";
       }
 
-      if (lowerType === "hle" || lowerType === "hle18" || lowerType === "hle19") {
+      if (
+        lowerType === "hle" ||
+        compactType === "hle18" ||
+        compactType === "hle19" ||
+        compactType === "hle18/19" ||
+        compactType === "hle18-19"
+      ) {
         return "hle18-19";
       }
     }
