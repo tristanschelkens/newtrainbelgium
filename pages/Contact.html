@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - trainbelgium.com</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/9332905c2e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images//favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="apple-touch-icon" href="../images//apple-touch-icon.png" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="../images//icon-512.png"
+    />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+
+    <div class="container page-title">
+      <h1>Contact</h1>
+      <p>Questions, collabs, or photo requests? Send me a message......</p>
+    </div>
+
+    <section class="container section" style="padding-top: 18px">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>info@trainbelgium.com</h3>
+          <p class="muted">I reply as soon as possible.</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Herentals</h3>
+          <p class="muted">Antwerp, Belgium</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <div class="card">
+          <h2 style="margin-bottom: 10px">Send a message</h2>
+
+          <form
+            class="contact-form"
+            action="mailto:info@trainbelgium.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+
+            <textarea
+              name="message"
+              rows="7"
+              placeholder="Your message..."
+              required
+            ></textarea>
+
+            <button
+              class="btn btn-primary"
+              type="submit"
+              style="width: max-content"
+            >
+              Send
+            </button>
+          </form>
+
+          <p class="muted" style="margin-top: 10px; font-size: 13px">
+            Note: this opens your email app.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 style="margin-bottom: 10px">FAQ</h2>
+
+          <div style="display: grid; gap: 12px">
+            <div>
+              <strong>Can I use your photos?</strong>
+              <div class="muted">Please ask first.</div>
+            </div>
+
+            <div>
+              <strong>Do you take requests?</strong>
+              <div class="muted">
+                Sometimes — send details (location/date/train).
+              </div>
+            </div>
+
+            <div>
+              <strong>Collabs?</strong>
+              <div class="muted">
+                You can always send me a message with your idea!
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px"></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
