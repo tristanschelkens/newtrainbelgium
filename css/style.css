@@ -539,11 +539,26 @@ img {
   flex-direction: column;
 }
 
-.about-photo-wrap {
-  border-radius: 16px;
-  overflow: hidden;
-  background: #ececec;
-  aspect-ratio: 4 / 5;
+.about-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-photo-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.about-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-photo-wrap:hover img {
+  transform: scale(1.05);
 }
 
 .about-photo-wrap img {
