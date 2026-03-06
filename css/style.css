@@ -850,9 +850,23 @@ body.station-lightbox-open {
   cursor: pointer;
 }
 
-.station-lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.26);
+
+.station-lightbox-watermark {
+  position: absolute;
+  right: max(26px, 4vw);
+  bottom: max(22px, 4vh);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  pointer-events: none;
+  user-select: none;
 }
+
 /* CONTACT */
 .contact-grid {
   display: grid;
@@ -1120,6 +1134,8 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
+
 
 
 
