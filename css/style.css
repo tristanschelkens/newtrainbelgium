@@ -204,6 +204,20 @@ img {
   width: 100%;
 }
 
+.nav-links a.active {
+  color: var(--nmbs-blue);
+  opacity: 1;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.navbar.scrolled .nav-links a.active {
+  color: var(--nmbs-blue);
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .brand-sub {
     display: none;
@@ -252,6 +266,18 @@ img {
   .navbar.scrolled .nav-links a {
     color: #fff;
     opacity: 0.92;
+  }
+
+  .nav-links a.active,
+  .navbar.scrolled .nav-links a.active {
+    color: #4da3ff;
+    opacity: 1;
+  }
+
+  .nav-links a.active::after,
+  .navbar.scrolled .nav-links a.active::after {
+    width: 100%;
+    background: #4da3ff;
   }
 }
 
@@ -537,28 +563,21 @@ img {
 .about-photo-card {
   display: flex;
   flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.about-photo-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+.about-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
-.about-photo-wrap:hover img {
-  transform: scale(1.05);
-}
-
-.about-photo-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.about-photo-wrap:hover img {
-  transform: scale(1.05);
+.about-photo-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ececec;
+  aspect-ratio: 4 / 5;
 }
 
 .about-photo-wrap img {
@@ -566,6 +585,11 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.about-photo-wrap:hover img {
+  transform: scale(1.05);
 }
 
 .about-photo-caption {
