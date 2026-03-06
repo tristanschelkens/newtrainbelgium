@@ -97,24 +97,58 @@ function setActiveNavLink() {
   applyFilter("all");
 })();
 
-(function initContactFormStatus() {
+(function initContactForm() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
 
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("sent") !== "1") return;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const status = document.createElement("p");
+  status.className = "muted";
+  status.style.marginTop = "10px";
+  status.style.fontSize = "13px";
+  form.insertAdjacentElement("afterend", status);
 
-  const notice = document.createElement("p");
-  notice.className = "muted";
-  notice.style.marginTop = "10px";
-  notice.style.fontSize = "13px";
-  notice.style.color = "var(--nmbs-blue)";
-  notice.textContent = "Message sent successfully. Thank you!";
-  form.insertAdjacentElement("afterend", notice);
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const url = new URL(window.location.href);
-  url.searchParams.delete("sent");
-  window.history.replaceState({}, "", url);
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    status.style.color = "var(--muted)";
+    status.textContent = "Sending your message...";
+
+    try {
+      const data = Object.fromEntries(new FormData(form).entries());
+      const response = await fetch("https://formsubmit.co/ajax/info@trainbelgium.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (!response.ok || (result.success !== true && result.success !== "true")) {
+        throw new Error("Form submit failed");
+      }
+
+      status.style.color = "var(--nmbs-blue)";
+      status.textContent = "Message sent successfully. Thank you!";
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      status.style.color = "#c0392b";
+      status.textContent = "Sending failed. Try again in a minute.";
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send";
+      }
+    }
+  });
 })();
 
 
