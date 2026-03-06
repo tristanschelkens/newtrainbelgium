@@ -827,6 +827,28 @@ img {
   border: none;
 }
 
+.submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.captcha-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.captcha-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--nmbs-blue);
+}
+
 /* FOOTER */
 .footer {
   margin-top: auto;

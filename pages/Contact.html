@@ -70,11 +70,20 @@
             method="post"
             accept-charset="UTF-8"
           >
-            <input type="hidden" name="_subject" value="New message from trainbelgium.com" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from trainbelgium.com"
+            />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="true" />
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none" />
-            <input type="hidden" name="_next" value="https://trainbelgium.com/pages/Contact.html?sent=1" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+              style="display: none"
+            />
 
             <div class="form-row">
               <input type="text" name="name" placeholder="Your name" required />
@@ -93,17 +102,24 @@
               required
             ></textarea>
 
-            <button
-              class="btn btn-primary"
-              type="submit"
-              style="width: max-content"
-            >
-              Send
-            </button>
+            <div class="submit-row">
+              <label class="captcha-check">
+                <input type="checkbox" name="human_check" required />
+                <span>I'm not a robot</span>
+              </label>
+
+              <button
+                class="btn btn-primary"
+                type="submit"
+                style="width: max-content"
+              >
+                Send
+              </button>
+            </div>
           </form>
 
           <p class="muted" style="margin-top: 10px; font-size: 13px">
-            Protected with CAPTCHA and anti-spam checks.
+            Message is sent directly without leaving this page.
           </p>
         </div>
 
