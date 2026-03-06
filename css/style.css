@@ -63,152 +63,22 @@ img {
   color: var(--muted);
 }
 
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:50;
-  border-bottom:1px solid rgba(0,0,0,0.06);
-  background:rgba(255,255,255,0.85);
-backdrop-filter: blur(12px);
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.nav-inner{
-  max-width:1400px;
-  margin:0 auto;
-  padding:0 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  
-}
-
-.brand{
-  text-decoration:none;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-width:0;
-  margin-right:auto;
-}
-
-.brand-dot{
-  width:10px;
-  height:10px;
-  border-radius:999px;
-  background:var(--nmbs-blue);
-  flex-shrink:0;
-}
-
-.brand-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.05;
-}
-
-.brand-title{
-  font-weight:900;
-  letter-spacing:0.3px;
-  font-size:17px;
-}
-
-.brand-sub{
-  font-size:11px;
-  color:var(--muted);
-  font-weight:600;
-  margin-top:3px;
-}
-
-.menu-btn,
-.close-btn{
-  background:transparent;
-  border:none;
-  cursor:pointer;
-  font-size:22px;
-  display:none;
-}
-
-.nav-links ul{
-  list-style:none;
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-
-.nav-links a{
-  text-decoration:none;
-  font-size:13px;
-  font-weight:800;
-  opacity:0.86;
-  position:relative;
-  padding:8px 4px;
-  letter-spacing:0.7px;
-  transition:0.18s;
-}
-
-.nav-links a:hover{
-  opacity:1;
-}
-
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:2px;
-  width:0%;
-  height:2px;
-  background:var(--nmbs-blue);
-  transition:0.22s;
-}
-
-.nav-links a:hover::after{
-  width:100%;
-}
-
-@media (max-width: 768px){
-  .brand-sub{
-    display:none;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .close-btn{
-    display:block;
-    color:#fff;
-  }
-
-  .nav-links{
-    position:fixed;
-    top:0;
-    right:-320px;
-    width:280px;
-    height:100vh;
-    background:#111;
-    padding:16px;
-    transition:0.24s;
-    z-index:100;
-    box-shadow:-20px 0 50px rgba(0,0,0,0.35);
-  }
-
-  .nav-links.active{
-    right:0;
-  }
-
-  .nav-links ul{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-    margin-top:14px;
-  }
-
-  .nav-links a{
-    color:#fff;
-    opacity:0.92;
-    font-size:14px;
-    padding:10px 6px;
-  }
+.nav-inner {
+  width: min(var(--container), var(--container-pad));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
 }
 
 .logo {
