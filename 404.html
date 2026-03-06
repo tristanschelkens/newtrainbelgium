@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 - trainbelgium.com</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-32x32.png"
+      href="/images/favicon-32x32.png"
       sizes="32x32"
     />
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-16x16.png"
+      href="/images/favicon-16x16.png"
       sizes="16x16"
     />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
     <style>
       .nf-page {
         min-height: 100vh;
@@ -26,25 +33,25 @@
         place-items: center;
         padding: 24px;
         background:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.68)),
-          url("images/Belgium/Antwerp/Antwerp.webp") center / cover no-repeat;
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+          url("/images/Belgium/Antwerp/Antwerp.webp") center / cover no-repeat;
       }
 
       .nf-card {
         width: min(760px, 100%);
         border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.24);
-        background: rgba(10, 10, 10, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(10, 10, 10, 0.48);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         color: #fff;
-        padding: 30px;
-        box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+        padding: 32px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
         text-align: center;
       }
 
       .nf-code {
-        font-size: clamp(56px, 13vw, 110px);
+        font-size: clamp(56px, 12vw, 110px);
         font-weight: 900;
         line-height: 1;
         color: #fff;
@@ -53,19 +60,19 @@
 
       .nf-title {
         margin-top: 8px;
-        font-size: clamp(24px, 4vw, 40px);
+        font-size: clamp(28px, 4vw, 42px);
         line-height: 1.1;
       }
 
       .nf-text {
         margin-top: 12px;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.7;
         color: rgba(255, 255, 255, 0.9);
       }
 
       .nf-actions {
-        margin-top: 20px;
+        margin-top: 22px;
         display: flex;
         gap: 10px;
         justify-content: center;
@@ -82,7 +89,7 @@
       }
 
       .nf-actions .btn-ghost:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.24);
       }
     </style>
   </head>
@@ -98,8 +105,8 @@
         </p>
 
         <div class="nf-actions">
-          <a class="btn btn-primary" href="pages/Home.html">Go To Home</a>
-          <a class="btn btn-ghost" href="pages/Photos.html">Open Photos</a>
+          <a class="btn btn-primary" href="/pages/Home.html">Go To Home</a>
+          <a class="btn btn-ghost" href="/pages/Photos.html">Open Photos</a>
         </div>
       </section>
     </main>
