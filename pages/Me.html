@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -24,71 +24,185 @@
     <link
       rel="icon"
       type="image/png"
-      href="../images//favicon-16x16.png"
+      href="../images/favicon-16x16.png"
       sizes="16x16"
     />
-    <link rel="apple-touch-icon" href="../images//apple-touch-icon.png" />
-
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="../images//icon-512.png"
+      href="../images/icon-512.png"
     />
   </head>
 
   <body>
     <div id="navbar"></div>
 
-    <div class="container page-title">
-      <h1>About me</h1>
-      <p>Who I am and what I do.</p>
-    </div>
-
-    <section class="container section" style="padding-top: 18px">
-      <div class="profile-wrap">
-        <div class="card">
-          <h2>Who am I?</h2>
-          <p>
-            Hello! I'm an 18-year-old trainspotter with a deep interest in
-            trains. My favourite locomotives from NMBS are the HLE 18/19 and the
-            HLE 27. I am currently a trainee train driver at NMBS following the
-            official training programme.
-          </p>
-
-          <div class="badges">
-            <span class="badge">Trainspotter</span>
-            <span class="badge">NMBS trainee</span>
-            <span class="badge">HLE 18/19</span>
-            <span class="badge">HLE 27</span>
-          </div>
-
-          <div style="margin-top: 16px">
-            <a class="btn btn-primary" href="Photos.html">Explore photos</a>
-            <a
-              class="btn"
-              style="
-                margin-left: 8px;
-                border-color: rgba(0, 0, 0, 0.1);
-                background: #fff;
-              "
-              href="Contact.html"
-              >Contact</a
-            >
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img" style="aspect-ratio: 1/1">
-            <img src="../images/collageAboutMe.png" alt="About me collage" />
-          </div>
-          <p class="muted" style="margin-top: 12px">
-            Based in Belgium — mostly photographing Belgian rail, with
-            occasional trips abroad.
-          </p>
-        </div>
+    <main>
+      <div class="container page-title">
+        <h1>About me</h1>
+        <p>
+          A little more about who I am, my interest in railways, and what I
+          want to share through trainbelgium.
+        </p>
       </div>
-    </section>
+
+      <section class="container section about-page" style="padding-top: 18px">
+        <div class="about-hero-grid">
+          <div class="card about-main-card">
+            <span class="eyebrow">Who am I?</span>
+            <h2>Railways, photography and public transport</h2>
+
+            <p>
+              Hello! I'm an 18-year-old trainspotter from Herentals, Belgium,
+              with a strong passion for trains and public transport.
+            </p>
+
+            <p>
+              My interest in transport started at a young age. Before deciding
+              to become a train driver, I was originally interested in becoming
+              a bus driver. Over time, that interest grew more and more towards
+              railways, which eventually led me to trainspotting and railway
+              photography.
+            </p>
+
+            <p>
+              I created the <strong>trainbelgium</strong> Instagram account in
+              October 2023 to share my photos and experiences with trains and
+              railways.
+            </p>
+
+            <div class="badges">
+              <span class="badge">Based in Herentals</span>
+              <span class="badge">NMBS trainee</span>
+              <span class="badge">Belgium + abroad</span>
+              <span class="badge">Rail photography</span>
+            </div>
+
+            <div class="about-actions">
+              <a class="btn btn-primary" href="Photos.html">Explore photos</a>
+              <a class="btn about-secondary-btn" href="Contact.html"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <div class="card about-photo-card">
+            <div class="about-photo-wrap">
+              <img
+                src="../images/aboutMePicture.webp"
+                alt="Trainbelgium next to locomotive 2701"
+              />
+            </div>
+            <p class="muted about-photo-caption">
+              A personal photo that reflects both my interest in railways and my
+              connection with the Belgian railway world.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-info-grid">
+          <div class="card about-text-card">
+            <span class="eyebrow">Railway photography</span>
+            <h2>What I photograph and why</h2>
+
+            <p>
+              Most of my photos are taken in <strong>Belgium</strong>, but I
+              also enjoy travelling to other countries. I like discovering new
+              cultures and seeing how railways and public transport work in
+              different places.
+            </p>
+
+            <p>
+              Through this website I want to share my photos from different
+              countries, locations and types of trains, often with a bit of
+              extra context or explanation.
+            </p>
+
+            <p>
+              I enjoy photographing all kinds of trains, from passenger services
+              to freight traffic. What I like most is combining trains with
+              interesting surroundings, good light and strong locations.
+            </p>
+          </div>
+
+          <div class="card about-facts-card">
+            <span class="eyebrow">Quick facts</span>
+            <h2>Railway facts about me</h2>
+
+            <div class="facts-list">
+              <div class="fact-item">
+                <span class="fact-label">Based in</span>
+                <span class="fact-value">Herentals, Belgium</span>
+              </div>
+
+              <div class="fact-item">
+                <span class="fact-label">Current role</span>
+                <span class="fact-value">Student train driver at NMBS</span>
+              </div>
+
+              <div class="fact-item">
+                <span class="fact-label">Favourite locomotives</span>
+                <span class="fact-value">HLE 18/19, HLE 27, Vectron</span>
+              </div>
+
+              <div class="fact-item">
+                <span class="fact-label">Favourite line</span>
+                <span class="fact-value">Line 15</span>
+              </div>
+
+              <div class="fact-item">
+                <span class="fact-label">Favourite station</span>
+                <span class="fact-value">Antwerp Central</span>
+              </div>
+
+              <div class="fact-item">
+                <span class="fact-label">Favourite locations</span>
+                <span class="fact-value"
+                  >Nature, open views and attractive stops</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-bottom-grid">
+          <div class="card about-text-card">
+            <span class="eyebrow">Looking ahead</span>
+            <h2>My goal in the railway world</h2>
+
+            <p>
+              My goal is to build a long career within the railway sector. I
+              would like to work for <strong>NMBS</strong> for many years, and
+              perhaps later continue in <strong>freight transport</strong>.
+            </p>
+
+            <p>
+              Railway photography lets me combine my interest in trains with
+              visiting new places and sharing these moments with others.
+            </p>
+          </div>
+
+          <div class="card about-note-card">
+            <span class="eyebrow">About this website</span>
+            <h2>Why trainbelgium exists</h2>
+
+            <p>
+              This website is my place to share railway photography from Belgium
+              and beyond. It brings together the trains I photograph, the places
+              I visit, and the railway systems that interest me most.
+            </p>
+
+            <p>
+              Whether it's Belgian rail, international trains or freight
+              movements, I hope this website gives visitors a nice overview of
+              the variety I enjoy capturing.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <div id="footer"></div>
 
