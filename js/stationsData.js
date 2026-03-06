@@ -21,27 +21,34 @@
     photos: [
       {
         src: "../images/Belgium/Brussels-Midi/Brussels.webp",
-        alt: "Brussels-Midi MR80",
+        alt: "Brussels-Midi HLE 1801 + 8x M7 + HLE 1802",
         label: "Brussels-Midi",
-        vehicleType: "MR80",
-        vehicleNumber: "",
-        carriages: ["Integrated EMU set"],
+        consist: [
+          { kind: "traction", label: "HLE 1801", active: true },
+          { kind: "carriage", label: "8x M7" },
+          { kind: "traction", label: "HLE 1802", active: true },
+        ],
       },
       {
-        src: "../images/Belgium/Brussels-Midi/Brussels.webp",
-        alt: "Brussels-Midi MR08",
+        src: "../images/Belgium/Brussels-Midi/Brussels-2.webp",
+        alt: "Brussels-Midi HLE 1905 + 1x M6 + 8x M7 + 1322",
         label: "Brussels-Midi",
-        vehicleType: "MR08",
-        vehicleNumber: "",
-        carriages: ["Integrated EMU set"],
+        consist: [
+          { kind: "traction", label: "HLE 1905", active: true },
+          { kind: "carriage", label: "1x M6" },
+          { kind: "carriage", label: "8x M7" },
+          { kind: "traction", label: "HLE 1322", active: true },
+        ],
       },
       {
-        src: "../images/Belgium/Brussels-Midi/Brussels.webp",
-        alt: "Brussels-Midi HLE",
+        src: "../images/Belgium/Brussels-Midi/Brussels-3.webp",
+        alt: "Brussels-Midi locomotive train",
         label: "Brussels-Midi",
-        vehicleType: "HLE",
-        vehicleNumber: "",
-        carriages: ["I10", "I11", "M6"],
+        consist: [
+          { kind: "traction", label: "HLE 1910", active: true },
+          { kind: "traction", label: "HLE 1920", active: true },
+          { kind: "traction", label: "HLE 1930", active: false },
+        ],
       },
     ],
   },
@@ -235,6 +242,12 @@
     ],
   },
 };
+
+
+
+
+
+
 
 
 

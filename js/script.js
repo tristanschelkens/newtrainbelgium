@@ -153,51 +153,138 @@ function setActiveNavLink() {
       .replaceAll("'", "&#39;");
   }
 
-  const photos = station.photos.map((photo) => {
-    const vehicleType = (photo.vehicleType || "").trim();
-    const vehicleNumber = (photo.vehicleNumber || "").trim();
+  function normalizeVehicleType(type, number) {
+    const rawType = String(type || "").trim();
+    const rawNumber = String(number || "").trim();
+    const lowerType = rawType.toLowerCase();
 
-    const carriages = Array.isArray(photo.carriages)
+    if (!rawType || lowerType === "unknown") return "";
+
+    if (lowerType.startsWith("hle")) {
+      if (rawNumber.startsWith("13")) return "hle13";
+      if (rawNumber.startsWith("18") || rawNumber.startsWith("19")) {
+        return "hle18-19";
+      }
+
+      if (lowerType === "hle" || lowerType === "hle18" || lowerType === "hle19") {
+        return "hle18-19";
+      }
+    }
+
+    return lowerType;
+  }
+
+  function getVehicleFilterLabel(key) {
+    if (key === "hle18-19") return "HLE18/19";
+    if (key === "hle13") return "HLE13";
+    return key.toUpperCase();
+  }
+
+  function buildConsistFromLegacy(photo) {
+    const consist = [];
+    const vehicleType = String(photo.vehicleType || "").trim();
+    const vehicleNumber = String(photo.vehicleNumber || "").trim();
+
+    if (vehicleType && vehicleType.toLowerCase() !== "unknown") {
+      consist.push({
+        kind: "traction",
+        label: `${vehicleType}${vehicleNumber ? ` ${vehicleNumber}` : ""}`,
+        vehicleType,
+        vehicleNumber,
+        active: true,
+      });
+    }
+
+    const legacyCarriages = Array.isArray(photo.carriages)
       ? photo.carriages
-          .map((item) => String(item || "").trim())
-          .filter(Boolean)
       : typeof photo.carriages === "string"
-        ? photo.carriages
-            .split(",")
-            .map((item) => item.trim())
-            .filter(Boolean)
+        ? photo.carriages.split(",")
         : [];
+
+    legacyCarriages
+      .map((item) => String(item || "").trim())
+      .filter(Boolean)
+      .forEach((item) => {
+        consist.push({ kind: "carriage", label: item });
+      });
+
+    return consist;
+  }
+
+  function normalizeConsist(photo) {
+    const source = Array.isArray(photo.consist) && photo.consist.length > 0
+      ? photo.consist
+      : buildConsistFromLegacy(photo);
+
+    return source
+      .map((entry) => {
+        const kind = String(entry.kind || "carriage").toLowerCase();
+        const label = String(entry.label || "").trim();
+        if (!label) return null;
+
+        const explicitType = String(entry.vehicleType || "").trim();
+        const explicitNumber = String(entry.vehicleNumber || "").trim();
+
+        let inferredType = explicitType;
+        let inferredNumber = explicitNumber;
+
+        if (!inferredType && kind === "traction") {
+          const parts = label.split(/\s+/).filter(Boolean);
+          inferredType = parts[0] || "";
+          inferredNumber = parts[1] || "";
+        }
+
+        return {
+          kind,
+          label,
+          active: kind === "traction" ? entry.active !== false : false,
+          filterKey:
+            kind === "traction"
+              ? normalizeVehicleType(inferredType, inferredNumber)
+              : "",
+        };
+      })
+      .filter(Boolean);
+  }
+
+  const photos = station.photos.map((photo) => {
+    const consist = normalizeConsist(photo);
 
     return {
       src: photo.src || "",
       alt: photo.alt || station.name,
       label: photo.label || station.name,
-      vehicleType,
-      vehicleNumber,
-      carriages,
-      vehicleKey: vehicleType.toLowerCase(),
+      consist,
+      filterKeys: Array.from(
+        new Set(consist.map((item) => item.filterKey).filter(Boolean)),
+      ),
     };
   });
 
   const cardsHtml = photos
     .map((photo) => {
-      const hasVehicleType =
-        photo.vehicleType && photo.vehicleType.toLowerCase() !== "unknown";
-      const vehicleChip = hasVehicleType
-        ? `<span class="station-meta-chip">${esc(`${photo.vehicleType}${photo.vehicleNumber ? ` ${photo.vehicleNumber}` : ""}`)}</span>` 
-        : "";
-      const carriageChips = photo.carriages
-        .map(
-          (carriage) =>
-            `<span class="station-meta-carriage">${esc(carriage)}</span>`,
-        )
+      const chips = photo.consist
+        .map((item, index) => {
+          const cls =
+            item.kind === "traction"
+              ? item.active
+                ? "station-meta-chip"
+                : "station-meta-inactive"
+              : "station-meta-carriage";
+
+          const plus =
+            index < photo.consist.length - 1
+              ? '<span class="station-meta-plus">+</span>'
+              : "";
+
+          return `<span class="${cls}">${esc(item.label)}</span>${plus}`;
+        })
         .join("");
-      const metaHtml = `${vehicleChip}${carriageChips}`;
 
       return `
-        <div class="photo-card station-photo-card" data-vehicle-type="${esc(photo.vehicleKey)}">
+        <div class="photo-card station-photo-card" data-vehicle-types="${esc(photo.filterKeys.join("|"))}">
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
-          ${metaHtml ? `<div class="station-meta">${metaHtml}</div>` : ""}
+          ${chips ? `<div class="station-meta">${chips}</div>` : ""}
         </div>
       `;
     })
@@ -211,8 +298,12 @@ function setActiveNavLink() {
     let visibleCount = 0;
 
     cards.forEach((card) => {
-      const cardType = (card.dataset.vehicleType || "").toLowerCase();
-      const show = value === "all" || cardType === value;
+      const keys = (card.dataset.vehicleTypes || "")
+        .split("|")
+        .map((x) => x.trim().toLowerCase())
+        .filter(Boolean);
+
+      const show = value === "all" || keys.includes(value);
       card.classList.toggle("is-hidden", !show);
       if (show) visibleCount++;
     });
@@ -221,11 +312,7 @@ function setActiveNavLink() {
   }
 
   const uniqueVehicleTypes = Array.from(
-    new Set(
-      photos
-        .map((photo) => photo.vehicleType)
-        .filter((type) => type && type.toLowerCase() !== "unknown"),
-    ),
+    new Set(photos.flatMap((photo) => photo.filterKeys).filter(Boolean)),
   );
 
   if (vehicleFilters && uniqueVehicleTypes.length > 0) {
@@ -234,17 +321,15 @@ function setActiveNavLink() {
       ...uniqueVehicleTypes
         .sort((a, b) => a.localeCompare(b))
         .map(
-          (type) =>
-            `<button class="filter-btn" type="button" data-vehicle-filter="${esc(type.toLowerCase())}">${esc(type)}</button>`,
+          (key) =>
+            `<button class="filter-btn" type="button" data-vehicle-filter="${esc(key)}">${esc(getVehicleFilterLabel(key))}</button>`,
         ),
     ].join("");
 
     vehicleFilters.innerHTML = filtersHtml;
     vehicleFilters.style.display = "flex";
 
-    const filterButtons = Array.from(
-      vehicleFilters.querySelectorAll(".filter-btn"),
-    );
+    const filterButtons = Array.from(vehicleFilters.querySelectorAll(".filter-btn"));
 
     filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -403,6 +488,8 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
 
 
 

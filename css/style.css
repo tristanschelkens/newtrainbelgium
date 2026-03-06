@@ -821,6 +821,27 @@ img {
   font-weight: 700;
   line-height: 1;
 }
+.station-meta-inactive {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(93, 93, 93, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.station-meta-plus {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  margin: 0 2px;
+}
 
 .station-photo-card .overlay {
   display: none;
@@ -1178,6 +1199,7 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
 
 
 
