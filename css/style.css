@@ -858,9 +858,9 @@ img {
 }
 
 .footer-inner {
-  width: min(var(--container), var(--container-pad));
+  width: 100%;
   margin: 0 auto;
-  padding: 18px 0;
+  padding: 18px 30px;
 }
 
 .footer-top {
@@ -882,10 +882,10 @@ img {
   opacity: 0.85;
 }
 
-.footer-left,
-.footer-left h4,
-.footer-left p {
-  text-align: left;
+
+
+.footer-left {
+  padding-left: 22px;
 }
 
 .footer-right {
@@ -972,6 +972,14 @@ img {
 }
 
 @media (max-width: 768px) {
+  .footer-inner {
+    padding: 18px;
+  }
+
+  .footer-left {
+    padding-left: 22px;
+  }
+
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -1018,6 +1026,8 @@ img {
     padding: 18px;
   }
 }
+
+
 
 
 
