@@ -191,7 +191,6 @@ img {
 
 .nav-links a:hover {
   opacity: 1;
-  color: var(--nmbs-blue);
 }
 
 .nav-links a::after {
@@ -223,31 +222,28 @@ img {
   opacity: 1;
 }
 
-@supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .nav-links a {
-    background-image:
-      linear-gradient(var(--nav-link-color), var(--nav-link-color)),
-      linear-gradient(var(--nmbs-blue), var(--nmbs-blue));
-    background-repeat: no-repeat;
-    background-position: left top, left top;
-    background-size:
-      100% 100%,
-      0% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition:
-      opacity 0.24s ease,
-      background-size 0.24s ease;
-  }
+.nav-links a .nav-label {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
 
-  .nav-links a:hover,
-  .nav-links a.active,
-  .navbar.scrolled .nav-links a.active {
-    background-size:
-      100% 100%,
-      100% 100%;
-  }
+.nav-links a .nav-label::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--nmbs-blue);
+  transition: width 0.24s ease;
+}
+
+.nav-links a:hover .nav-label::after,
+.nav-links a.active .nav-label::after,
+.navbar.scrolled .nav-links a.active .nav-label::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
