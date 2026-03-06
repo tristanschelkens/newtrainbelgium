@@ -41,7 +41,7 @@ function setActiveNavLink() {
   const links = document.querySelectorAll(".nav-links a");
   const rawPage =
     window.location.pathname.split("/").pop().toLowerCase() || "home.html";
-  const photoDetailPages = new Set(["station.html", "brussels.html"]);
+  const photoDetailPages = new Set(["station.html"]);
   const currentPage = photoDetailPages.has(rawPage) ? "photos.html" : rawPage;
 
   if (!links.length) return;
@@ -226,6 +226,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
