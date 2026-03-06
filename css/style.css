@@ -802,7 +802,7 @@ img {
   align-items: center;
   padding: 5px 9px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.62);
+  background: rgba(0, 92, 185, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.26);
   color: #fff;
   font-size: 12px;
@@ -814,7 +814,7 @@ img {
   align-items: center;
   padding: 5px 9px;
   border-radius: 999px;
-  background: rgba(0, 92, 185, 0.72);
+  background: rgba(0, 0, 0, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.26);
   color: #fff;
   font-size: 12px;
@@ -1178,6 +1178,8 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
+
 
 
 
