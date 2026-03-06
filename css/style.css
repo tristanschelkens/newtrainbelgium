@@ -932,6 +932,22 @@ body.station-lightbox-open {
   pointer-events: none;
   user-select: none;
 }
+.station-lightbox-meta {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  max-width: calc(100% - 180px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.station-lightbox-meta .station-meta-plus {
+  margin: 0 2px;
+}
 /* CONTACT */
 .contact-grid {
   display: grid;
@@ -1199,6 +1215,7 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
 
 
 

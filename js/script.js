@@ -351,12 +351,14 @@ function setActiveNavLink() {
     <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
     <div class="station-lightbox-media">
       <img src="" alt="" />
+      <div class="station-lightbox-meta" aria-hidden="true"></div>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
   `;
   document.body.appendChild(lightbox);
 
   const lightboxImg = lightbox.querySelector(".station-lightbox-media img");
+  const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
 
   function closeLightbox() {
@@ -365,11 +367,17 @@ function setActiveNavLink() {
     document.body.classList.remove("station-lightbox-open");
   }
 
-  function openLightbox(src, alt) {
+  function openLightbox(src, alt, metaHtml) {
     if (!lightboxImg) return;
 
     lightboxImg.src = src;
     lightboxImg.alt = alt || station.name;
+
+    if (lightboxMeta) {
+      lightboxMeta.innerHTML = metaHtml || "";
+      lightboxMeta.style.display = metaHtml ? "flex" : "none";
+    }
+
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("station-lightbox-open");
@@ -377,7 +385,9 @@ function setActiveNavLink() {
 
   Array.from(grid.querySelectorAll(".station-photo-card img")).forEach((img) => {
     img.addEventListener("click", () => {
-      openLightbox(img.src, img.alt);
+      const card = img.closest(".station-photo-card");
+      const meta = card?.querySelector(".station-meta");
+      openLightbox(img.src, img.alt, meta ? meta.innerHTML : "");
     });
   });
 
@@ -488,6 +498,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
