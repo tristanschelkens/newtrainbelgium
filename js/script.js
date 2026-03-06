@@ -183,11 +183,8 @@ function setActiveNavLink() {
     .map((photo) => {
       const hasVehicleType =
         photo.vehicleType && photo.vehicleType.toLowerCase() !== "unknown";
-      const typeChip = hasVehicleType
-        ? `<span class="station-meta-chip">${esc(photo.vehicleType)}</span>`
-        : "";
-      const numberChip = photo.vehicleNumber
-        ? `<span class="station-meta-number">#${esc(photo.vehicleNumber)}</span>`
+      const vehicleChip = hasVehicleType
+        ? `<span class="station-meta-chip">${esc(`${photo.vehicleType}${photo.vehicleNumber ? ` ${photo.vehicleNumber}` : ""}`)}</span>` 
         : "";
       const carriageChips = photo.carriages
         .map(
@@ -195,7 +192,7 @@ function setActiveNavLink() {
             `<span class="station-meta-carriage">${esc(carriage)}</span>`,
         )
         .join("");
-      const metaHtml = `${typeChip}${numberChip}${carriageChips}`;
+      const metaHtml = `${vehicleChip}${carriageChips}`;
 
       return `
         <div class="photo-card station-photo-card" data-vehicle-type="${esc(photo.vehicleKey)}">
@@ -406,6 +403,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 

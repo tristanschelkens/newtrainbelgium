@@ -8,8 +8,8 @@
         src: "../images/Belgium/Antwerp/Antwerp.webp",
         alt: "Antwerp",
         label: "Antwerp",
-        vehicleType: "HLE18",
-        vehicleNumber: "1834",
+        vehicleType: "HLE",
+        vehicleNumber: "1804",
         carriages: ["3x I10", "4x I11", "2x M7"],
       },
     ],
@@ -235,6 +235,8 @@
     ],
   },
 };
+
+
 
 
 
