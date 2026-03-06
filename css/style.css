@@ -671,11 +671,11 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background: #000;
+  background: transparent;
   aspect-ratio: 4 / 3;
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--border);
+  border: none;
   max-width: 520px;
   justify-self: start;
 }
