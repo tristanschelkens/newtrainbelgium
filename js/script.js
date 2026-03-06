@@ -168,7 +168,7 @@ function setActiveNavLink() {
     <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
     <div class="station-lightbox-media">
       <img src="" alt="" />
-      <div class="station-lightbox-watermark">© trainbelgium.com</div>
+      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
   `;
   document.body.appendChild(lightbox);
@@ -278,6 +278,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
