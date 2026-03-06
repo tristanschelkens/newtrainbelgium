@@ -92,7 +92,9 @@ img {
 
 .nav-inner {
   width: 100%;
-  padding: 14px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
