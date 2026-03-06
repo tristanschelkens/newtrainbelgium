@@ -7,5 +7,5 @@ function loadComponent(id, file) {
     .catch((err) => console.error("Component load error:", file, err));
 }
 
-loadComponent("navbar", "../components/navbar.html");
+loadComponent("navbar", "./components/navbar.html");
 loadComponent("footer", "../components/footer.html");
