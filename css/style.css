@@ -68,19 +68,19 @@ img {
   position:sticky;
   top:0;
   z-index:50;
-  background:rgba(255,255,255,0.94);
-  backdrop-filter: blur(12px);
   border-bottom:1px solid rgba(0,0,0,0.06);
+  background:rgba(255,255,255,0.85);
+backdrop-filter: blur(12px);
 }
 
 .nav-inner{
-  width:min(var(--container), var(--container-pad));
+  max-width:1400px;
   margin:0 auto;
+  padding:0 30px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
-  padding:14px 0;
+  
 }
 
 .brand{
@@ -89,6 +89,7 @@ img {
   align-items:center;
   gap:12px;
   min-width:0;
+  margin-right:auto;
 }
 
 .brand-dot{
