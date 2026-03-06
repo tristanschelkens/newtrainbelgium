@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --nmbs-blue: #005cb9;
   --nmbs-blue-dark: #004a94;
 
@@ -777,8 +777,37 @@ img {
   width: fit-content;
 }
 
+.station-toolbar {
+  margin-top: 4px;
+}
+
 .station-photo-card {
   cursor: zoom-in;
+}
+
+.station-meta {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 2;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  pointer-events: none;
+}
+
+.station-meta-chip,
+.station-meta-number {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .station-photo-card .overlay {
@@ -816,12 +845,10 @@ body.station-lightbox-open {
   transition: opacity 0.28s ease;
 }
 
-
 .station-lightbox.is-open {
   opacity: 1;
   pointer-events: auto;
 }
-
 
 .station-lightbox-media {
   position: relative;
@@ -829,7 +856,6 @@ body.station-lightbox-open {
   transform: scale(0.92);
   transition: transform 0.28s ease;
 }
-
 
 .station-lightbox img {
   width: auto;
@@ -858,7 +884,6 @@ body.station-lightbox-open {
   cursor: pointer;
 }
 
-
 .station-lightbox-watermark {
   position: absolute;
   right: 14px;
@@ -874,7 +899,6 @@ body.station-lightbox-open {
   pointer-events: none;
   user-select: none;
 }
-
 /* CONTACT */
 .contact-grid {
   display: grid;
@@ -1142,6 +1166,8 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
+
 
 
 

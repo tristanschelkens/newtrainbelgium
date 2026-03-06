@@ -1,4 +1,4 @@
-function toggleMenu() {
+﻿function toggleMenu() {
   const nav = document.getElementById("navLinks");
   if (!nav) return;
   nav.classList.toggle("active");
@@ -120,6 +120,7 @@ function setActiveNavLink() {
   const title = document.getElementById("stationTitle");
   const subtitle = document.getElementById("stationSubtitle");
   const notFound = document.getElementById("stationNotFound");
+  const vehicleFilters = document.getElementById("stationVehicleFilters");
 
   const allStations = window.STATIONS_DATA || {};
   const slug = (new URLSearchParams(window.location.search).get("slug") || "")
@@ -143,23 +144,104 @@ function setActiveNavLink() {
 
   document.title = `${station.name} - trainbelgium.com`;
 
-  const cardsHtml = station.photos
-    .map((photo) => {
-      const src = photo.src || "";
-      const alt = photo.alt || station.name;
-      const label = photo.label || station.name;
+  function esc(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
 
-      return `
-        <div class="photo-card station-photo-card">
-          <img loading="lazy" src="${src}" alt="${alt}" />
-          <div class="overlay"><h3>${label}</h3></div>
+  const photos = station.photos.map((photo) => {
+    const vehicleType = (photo.vehicleType || "").trim();
+    const vehicleNumber = (photo.vehicleNumber || "").trim();
+
+    return {
+      src: photo.src || "",
+      alt: photo.alt || station.name,
+      label: photo.label || station.name,
+      vehicleType,
+      vehicleNumber,
+      vehicleKey: vehicleType.toLowerCase(),
+    };
+  });
+
+  const cardsHtml = photos
+    .map((photo) => {
+      const hasVehicleType = photo.vehicleType && photo.vehicleType.toLowerCase() !== "unknown";
+      const typeChip = hasVehicleType
+        ? `<span class="station-meta-chip">${esc(photo.vehicleType)}</span>` 
+        : "";
+      const numberChip = photo.vehicleNumber
+        ? `<span class="station-meta-number">#${esc(photo.vehicleNumber)}</span>` 
+        : "";
+      const metaHtml = `${typeChip}${numberChip}`;
+
+      return ` 
+        <div class="photo-card station-photo-card" data-vehicle-type="${esc(photo.vehicleKey)}">
+          <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
+          ${metaHtml ? `<div class="station-meta">${metaHtml}</div>` : ""}
         </div>
       `;
     })
     .join("");
 
   grid.innerHTML = cardsHtml;
-  grid.classList.toggle("has-few", station.photos.length <= 2);
+
+  const cards = Array.from(grid.querySelectorAll(".station-photo-card"));
+
+  function applyVehicleFilter(value) {
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const cardType = (card.dataset.vehicleType || "").toLowerCase();
+      const show = value === "all" || cardType === value;
+      card.classList.toggle("is-hidden", !show);
+      if (show) visibleCount++;
+    });
+
+    grid.classList.toggle("has-few", visibleCount <= 2);
+  }
+
+  const uniqueVehicleTypes = Array.from(
+    new Set(
+      photos
+        .map((photo) => photo.vehicleType)
+        .filter((type) => type && type.toLowerCase() !== "unknown"),
+    ),
+  );
+
+  if (vehicleFilters && uniqueVehicleTypes.length > 0) {
+    const filtersHtml = [
+      '<button class="filter-btn active" type="button" data-vehicle-filter="all">All</button>',
+      ...uniqueVehicleTypes
+        .sort((a, b) => a.localeCompare(b))
+        .map(
+          (type) =>
+            `<button class="filter-btn" type="button" data-vehicle-filter="${esc(type.toLowerCase())}">${esc(type)}</button>`,
+        ),
+    ].join("");
+
+    vehicleFilters.innerHTML = filtersHtml;
+    vehicleFilters.style.display = "flex";
+
+    const filterButtons = Array.from(
+      vehicleFilters.querySelectorAll(".filter-btn"),
+    );
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const value = (btn.dataset.vehicleFilter || "all").toLowerCase();
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        applyVehicleFilter(value);
+      });
+    });
+  }
+
+  applyVehicleFilter("all");
 
   const lightbox = document.createElement("div");
   lightbox.className = "station-lightbox";
@@ -305,6 +387,12 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
+
+
+
+
 
 
 
