@@ -120,14 +120,13 @@ function setActiveNavLink() {
     status.textContent = "Sending your message...";
 
     try {
-      const data = Object.fromEntries(new FormData(form).entries());
+      const data = new FormData(form);
       const response = await fetch("https://formsubmit.co/ajax/info@trainbelgium.com", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(data),
+        body: data,
       });
 
       const result = await response.json();
