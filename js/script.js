@@ -22,7 +22,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 function handleNavbarScroll() {
   const navbar = document.getElementById("siteNavbar");
   if (!navbar) return;
@@ -38,11 +37,11 @@ function handleNavbarScroll() {
 
 window.addEventListener("scroll", handleNavbarScroll);
 
-
 function setActiveNavLink() {
   const links = document.querySelectorAll(".nav-links a");
-  const currentPage =
+  const rawPage =
     window.location.pathname.split("/").pop().toLowerCase() || "home.html";
+  const currentPage = rawPage === "station.html" ? "photos.html" : rawPage;
 
   if (!links.length) return;
 
@@ -113,6 +112,55 @@ function setActiveNavLink() {
   applyFilter(initialFilter);
 })();
 
+(function initStationPage() {
+  const grid = document.getElementById("stationGrid");
+  if (!grid) return;
+
+  const title = document.getElementById("stationTitle");
+  const subtitle = document.getElementById("stationSubtitle");
+  const notFound = document.getElementById("stationNotFound");
+
+  const allStations = window.STATIONS_DATA || {};
+  const slug = (new URLSearchParams(window.location.search).get("slug") || "")
+    .trim()
+    .toLowerCase();
+
+  const station = allStations[slug];
+
+  if (!station || !Array.isArray(station.photos) || station.photos.length === 0) {
+    if (title) title.textContent = "Station not found";
+    if (subtitle) subtitle.textContent = "No station data available for this link.";
+    if (notFound) notFound.style.display = "block";
+    return;
+  }
+
+  if (title) title.textContent = station.name;
+  if (subtitle) {
+    const description = station.description ? ` - ${station.description}` : "";
+    subtitle.textContent = `${station.country}${description}`;
+  }
+
+  document.title = `${station.name} - trainbelgium.com`;
+
+  const cardsHtml = station.photos
+    .map((photo) => {
+      const src = photo.src || "";
+      const alt = photo.alt || station.name;
+      const label = photo.label || station.name;
+
+      return `
+        <div class="photo-card station-photo-card">
+          <img loading="lazy" src="${src}" alt="${alt}" />
+          <div class="overlay"><h3>${label}</h3></div>
+        </div>
+      `;
+    })
+    .join("");
+
+  grid.innerHTML = cardsHtml;
+  grid.classList.toggle("has-few", station.photos.length <= 2);
+})();
+
 (function initContactForm() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
@@ -166,7 +214,6 @@ function setActiveNavLink() {
   });
 })();
 
-
 window.addEventListener("load", () => {
   handleNavbarScroll();
   setActiveNavLink();
@@ -178,3 +225,5 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+

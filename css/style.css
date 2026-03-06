@@ -677,6 +677,8 @@ img {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   border: none;
   max-width: 520px;
+  text-decoration: none;
+  color: inherit;
   justify-self: start;
 }
 
@@ -764,6 +766,21 @@ img {
   margin-top: 18px;
   color: var(--muted);
 }
+
+
+.station-header {
+  display: grid;
+  gap: 10px;
+}
+
+.station-back {
+  width: fit-content;
+}
+
+.station-photo-card {
+  cursor: default;
+}
+
 
 /* CONTACT */
 .contact-grid {
@@ -1032,6 +1049,11 @@ img {
     padding: 18px;
   }
 }
+
+
+
+
+
 
 
 
