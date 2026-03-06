@@ -267,6 +267,33 @@ function setActiveNavLink() {
   });
 })();
 
+(function initImageProtection() {
+  // This only raises the barrier against casual downloading.
+  document.addEventListener("contextmenu", (e) => {
+    if (e.target.closest("img, .photo-card, .station-lightbox")) {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener("dragstart", (e) => {
+    if (e.target.closest("img")) {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const key = (e.key || "").toLowerCase();
+    const ctrlOrMeta = e.ctrlKey || e.metaKey;
+    const blocked =
+      (ctrlOrMeta && (key === "s" || key === "u" || key === "p")) ||
+      (ctrlOrMeta && e.shiftKey && (key === "i" || key === "j")) ||
+      key === "f12";
+
+    if (blocked) {
+      e.preventDefault();
+    }
+  });
+})();
 window.addEventListener("load", () => {
   handleNavbarScroll();
   setActiveNavLink();
@@ -278,6 +305,8 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
 
 
 
