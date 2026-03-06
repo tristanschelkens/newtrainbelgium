@@ -169,6 +169,7 @@ img {
 }
 
 .nav-links a {
+  --nav-link-color: #fff;
   text-decoration: none;
   font-size: 13px;
   font-weight: 800;
@@ -177,12 +178,14 @@ img {
   position: relative;
   padding: 8px 4px;
   letter-spacing: 0.7px;
-  transition: none;
-  color: #fff;
+  color: var(--nav-link-color);
+  transition:
+    opacity 0.24s ease,
+    color 0.24s ease;
 }
 
 .navbar.scrolled .nav-links a {
-  color: var(--text);
+  --nav-link-color: var(--text);
   opacity: 0.86;
 }
 
@@ -196,11 +199,10 @@ img {
   position: absolute;
   left: 0;
   bottom: 2px;
-  width: 100%;
   height: 2px;
   background: var(--nmbs-blue);
   width: 0%;
-  transition: none;
+  transition: width 0.24s ease;
 }
 
 .nav-links a:hover::after {
@@ -219,6 +221,33 @@ img {
 .navbar.scrolled .nav-links a.active {
   color: var(--nmbs-blue);
   opacity: 1;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .nav-links a {
+    background-image:
+      linear-gradient(var(--nav-link-color), var(--nav-link-color)),
+      linear-gradient(var(--nmbs-blue), var(--nmbs-blue));
+    background-repeat: no-repeat;
+    background-position: left top, left top;
+    background-size:
+      100% 100%,
+      0% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition:
+      opacity 0.24s ease,
+      background-size 0.24s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active,
+  .navbar.scrolled .nav-links a.active {
+    background-size:
+      100% 100%,
+      100% 100%;
+  }
 }
 
 @media (max-width: 768px) {
