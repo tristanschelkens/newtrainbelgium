@@ -778,10 +778,81 @@ img {
 }
 
 .station-photo-card {
-  cursor: default;
+  cursor: zoom-in;
 }
 
+.station-photo-card .overlay {
+  display: none;
+}
 
+.station-photo-card:hover img {
+  transform: none;
+  filter: brightness(0.92);
+}
+
+.station-photo-card:hover .overlay {
+  opacity: 0;
+}
+
+.station-photo-card:hover .overlay h3 {
+  transform: none;
+}
+
+body.station-lightbox-open {
+  overflow: hidden;
+}
+
+.station-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.78);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+.station-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.station-lightbox img {
+  width: auto;
+  max-width: min(1200px, 92vw);
+  max-height: 86vh;
+  border-radius: 14px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+  transform: scale(0.92);
+  transition: transform 0.28s ease;
+}
+
+.station-lightbox.is-open img {
+  transform: scale(1);
+}
+
+.station-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.station-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
 /* CONTACT */
 .contact-grid {
   display: grid;
@@ -1049,6 +1120,7 @@ img {
     padding: 18px;
   }
 }
+
 
 
 

@@ -160,8 +160,57 @@ function setActiveNavLink() {
 
   grid.innerHTML = cardsHtml;
   grid.classList.toggle("has-few", station.photos.length <= 2);
-})();
 
+  const lightbox = document.createElement("div");
+  lightbox.className = "station-lightbox";
+  lightbox.setAttribute("aria-hidden", "true");
+  lightbox.innerHTML = `
+    <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
+    <img src="" alt="" />
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector("img");
+  const closeBtn = lightbox.querySelector(".station-lightbox-close");
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("station-lightbox-open");
+  }
+
+  function openLightbox(src, alt) {
+    if (!lightboxImg) return;
+
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || station.name;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("station-lightbox-open");
+  }
+
+  Array.from(grid.querySelectorAll(".station-photo-card img")).forEach((img) => {
+    img.addEventListener("click", () => {
+      openLightbox(img.src, img.alt);
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeLightbox);
+  }
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+})();
 (function initContactForm() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
@@ -226,6 +275,8 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
 
 
 
