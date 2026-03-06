@@ -802,24 +802,21 @@ body.station-lightbox-open {
   overflow: hidden;
 }
 
-.station-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 1200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.78);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.28s ease;
-}
+
 
 .station-lightbox.is-open {
   opacity: 1;
   pointer-events: auto;
 }
+
+
+.station-lightbox-media {
+  position: relative;
+  display: inline-block;
+  transform: scale(0.92);
+  transition: transform 0.28s ease;
+}
+
 
 .station-lightbox img {
   width: auto;
@@ -827,11 +824,9 @@ body.station-lightbox-open {
   max-height: 86vh;
   border-radius: 14px;
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
-  transform: scale(0.92);
-  transition: transform 0.28s ease;
 }
 
-.station-lightbox.is-open img {
+.station-lightbox.is-open .station-lightbox-media {
   transform: scale(1);
 }
 
@@ -850,11 +845,11 @@ body.station-lightbox-open {
   cursor: pointer;
 }
 
-
+
 .station-lightbox-watermark {
   position: absolute;
-  right: max(26px, 4vw);
-  bottom: max(22px, 4vh);
+  right: 14px;
+  bottom: 14px;
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.45);
@@ -1134,6 +1129,10 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
+
+
+
 
 
 

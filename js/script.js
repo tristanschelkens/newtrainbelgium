@@ -166,12 +166,14 @@ function setActiveNavLink() {
   lightbox.setAttribute("aria-hidden", "true");
   lightbox.innerHTML = `
     <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
-    <img src="" alt="" />
-    <div class="station-lightbox-watermark">© trainbelgium.com</div>
+    <div class="station-lightbox-media">
+      <img src="" alt="" />
+      <div class="station-lightbox-watermark">© trainbelgium.com</div>
+    </div>
   `;
   document.body.appendChild(lightbox);
 
-  const lightboxImg = lightbox.querySelector("img");
+  const lightboxImg = lightbox.querySelector(".station-lightbox-media img");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
 
   function closeLightbox() {
@@ -276,6 +278,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
