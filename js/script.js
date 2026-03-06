@@ -97,49 +97,24 @@ function setActiveNavLink() {
   applyFilter("all");
 })();
 
-(function initContactForm() {
+(function initContactFormStatus() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
 
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const info = document.createElement("p");
-  info.className = "muted";
-  info.style.marginTop = "10px";
-  info.style.fontSize = "13px";
-  form.insertAdjacentElement("afterend", info);
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sent") !== "1") return;
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  const notice = document.createElement("p");
+  notice.className = "muted";
+  notice.style.marginTop = "10px";
+  notice.style.fontSize = "13px";
+  notice.style.color = "var(--nmbs-blue)";
+  notice.textContent = "Message sent successfully. Thank you!";
+  form.insertAdjacentElement("afterend", notice);
 
-    if (submitBtn) submitBtn.disabled = true;
-    if (submitBtn) submitBtn.textContent = "Sending...";
-    info.style.color = "var(--muted)";
-    info.textContent = "Sending your message...";
-
-    try {
-      const data = new FormData(form);
-      const response = await fetch("https://formsubmit.co/ajax/info@trainbelgium.com", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: data,
-      });
-
-      if (!response.ok) throw new Error("Submit failed");
-
-      info.style.color = "var(--nmbs-blue)";
-      info.textContent = "Message sent successfully. Thank you!";
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      info.style.color = "#c0392b";
-      info.textContent = "Sending failed. Please try again in a moment.";
-    } finally {
-      if (submitBtn) submitBtn.disabled = false;
-      if (submitBtn) submitBtn.textContent = "Send";
-    }
-  });
+  const url = new URL(window.location.href);
+  url.searchParams.delete("sent");
+  window.history.replaceState({}, "", url);
 })();
 
 
