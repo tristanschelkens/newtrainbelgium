@@ -41,10 +41,13 @@ window.addEventListener("scroll", handleNavbarScroll);
 
 function setActiveNavLink() {
   const links = document.querySelectorAll(".nav-links a");
-  const currentPage = window.location.pathname.split("/").pop() || "Home.html";
+  const currentPage =
+    window.location.pathname.split("/").pop().toLowerCase() || "home.html";
+
+  if (!links.length) return;
 
   links.forEach((link) => {
-    const linkPage = link.getAttribute("href");
+    const linkPage = (link.getAttribute("href") || "").toLowerCase();
 
     if (linkPage === currentPage) {
       link.classList.add("active");
@@ -96,6 +99,13 @@ function setActiveNavLink() {
 
 
 window.addEventListener("load", () => {
+  handleNavbarScroll();
+  setActiveNavLink();
+});
+
+window.addEventListener("component:loaded", (e) => {
+  if (e.detail?.id !== "navbar") return;
+
   handleNavbarScroll();
   setActiveNavLink();
 });
