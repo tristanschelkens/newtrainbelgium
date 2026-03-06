@@ -802,6 +802,19 @@ body.station-lightbox-open {
   overflow: hidden;
 }
 
+.station-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.78);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
 
 
 .station-lightbox.is-open {
@@ -1129,6 +1142,9 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
+
+
 
 
 
