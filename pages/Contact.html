@@ -93,13 +93,20 @@
               required
             ></textarea>
 
-            <button
-              class="btn btn-primary"
-              type="submit"
-              style="width: max-content"
-            >
-              Send
-            </button>
+            <div class="submit-row">
+              <label class="captcha-check">
+                <input type="checkbox" name="human_check" required />
+                <span>I'm not a robot</span>
+              </label>
+
+              <button
+                class="btn btn-primary"
+                type="submit"
+                style="width: max-content"
+              >
+                Send
+              </button>
+            </div>
           </form>
 
           <p class="muted" style="margin-top: 10px; font-size: 13px">
