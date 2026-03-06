@@ -9,7 +9,8 @@
         alt: "Antwerp",
         label: "Antwerp",
         vehicleType: "HLE18",
-        vehicleNumber: "1804",
+        vehicleNumber: "1834",
+        carriages: ["3x I10", "4x I11", "2x M7"],
       },
     ],
   },
@@ -24,6 +25,7 @@
         label: "Brussels-Midi",
         vehicleType: "MR80",
         vehicleNumber: "",
+        carriages: ["Integrated EMU set"],
       },
       {
         src: "../images/Belgium/Brussels-Midi/Brussels.webp",
@@ -31,6 +33,7 @@
         label: "Brussels-Midi",
         vehicleType: "MR08",
         vehicleNumber: "",
+        carriages: ["Integrated EMU set"],
       },
       {
         src: "../images/Belgium/Brussels-Midi/Brussels.webp",
@@ -38,6 +41,7 @@
         label: "Brussels-Midi",
         vehicleType: "HLE",
         vehicleNumber: "",
+        carriages: ["I10", "I11", "M6"],
       },
     ],
   },
@@ -231,4 +235,8 @@
     ],
   },
 };
+
+
+
+
 

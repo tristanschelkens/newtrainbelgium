@@ -157,28 +157,47 @@ function setActiveNavLink() {
     const vehicleType = (photo.vehicleType || "").trim();
     const vehicleNumber = (photo.vehicleNumber || "").trim();
 
+    const carriages = Array.isArray(photo.carriages)
+      ? photo.carriages
+          .map((item) => String(item || "").trim())
+          .filter(Boolean)
+      : typeof photo.carriages === "string"
+        ? photo.carriages
+            .split(",")
+            .map((item) => item.trim())
+            .filter(Boolean)
+        : [];
+
     return {
       src: photo.src || "",
       alt: photo.alt || station.name,
       label: photo.label || station.name,
       vehicleType,
       vehicleNumber,
+      carriages,
       vehicleKey: vehicleType.toLowerCase(),
     };
   });
 
   const cardsHtml = photos
     .map((photo) => {
-      const hasVehicleType = photo.vehicleType && photo.vehicleType.toLowerCase() !== "unknown";
+      const hasVehicleType =
+        photo.vehicleType && photo.vehicleType.toLowerCase() !== "unknown";
       const typeChip = hasVehicleType
-        ? `<span class="station-meta-chip">${esc(photo.vehicleType)}</span>` 
+        ? `<span class="station-meta-chip">${esc(photo.vehicleType)}</span>`
         : "";
       const numberChip = photo.vehicleNumber
-        ? `<span class="station-meta-number">#${esc(photo.vehicleNumber)}</span>` 
+        ? `<span class="station-meta-number">#${esc(photo.vehicleNumber)}</span>`
         : "";
-      const metaHtml = `${typeChip}${numberChip}`;
+      const carriageChips = photo.carriages
+        .map(
+          (carriage) =>
+            `<span class="station-meta-carriage">${esc(carriage)}</span>`,
+        )
+        .join("");
+      const metaHtml = `${typeChip}${numberChip}${carriageChips}`;
 
-      return ` 
+      return `
         <div class="photo-card station-photo-card" data-vehicle-type="${esc(photo.vehicleKey)}">
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
           ${metaHtml ? `<div class="station-meta">${metaHtml}</div>` : ""}
@@ -387,6 +406,9 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
+
 
 
 

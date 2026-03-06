@@ -809,6 +809,18 @@ img {
   font-weight: 700;
   line-height: 1;
 }
+.station-meta-carriage {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(0, 92, 185, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
 
 .station-photo-card .overlay {
   display: none;
@@ -1166,6 +1178,8 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
+
 
 
 
