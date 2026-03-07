@@ -246,7 +246,7 @@ img {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .brand-sub {
     display: none;
   }
@@ -1105,7 +1105,7 @@ body.station-lightbox-open {
   box-shadow: 0 0 0 6px rgba(0, 92, 185, 0.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .stations-map {
     height: 380px;
     border-radius: 16px;
@@ -1414,5 +1414,308 @@ body.station-lightbox-open {
 
 
 
+
+
+
+
+/* Mobile + Tablet Accessibility Overhaul */
+@media (max-width: 1024px) {
+  :root {
+    --container-pad: 94%;
+  }
+
+  .nav-inner {
+    padding: 12px 18px;
+  }
+
+  .brand-title {
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .navbar.scrolled .menu-btn {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links {
+    right: -100%;
+    width: min(86vw, 340px);
+    padding: 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(165deg, #111 0%, #16181d 100%);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .close-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  .nav-links ul {
+    margin-top: 18px;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+
+  .nav-links a::after {
+    bottom: 4px;
+  }
+
+  .page-title {
+    padding: 96px 0 10px;
+  }
+
+  .page-title h1 {
+    font-size: clamp(32px, 5vw, 42px);
+  }
+
+  .section {
+    padding: 46px 0;
+  }
+
+  .hero {
+    height: 64vh;
+    min-height: 470px;
+  }
+
+  .hero-content {
+    padding-top: 26px;
+  }
+
+  .hero-card {
+    width: min(900px, 98%);
+  }
+
+  .hero-card h1 {
+    font-size: clamp(36px, 7vw, 52px);
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+
+  .photo-card {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .station-lightbox {
+    padding: 14px;
+  }
+
+  .station-lightbox img {
+    max-width: 96vw;
+    max-height: 80vh;
+  }
+
+  .station-lightbox-watermark {
+    right: 10px;
+    bottom: 10px;
+    font-size: 11px;
+  }
+
+  .station-lightbox-meta {
+    left: 10px;
+    bottom: 10px;
+    max-width: calc(100% - 150px);
+  }
+
+  .contact-grid,
+  .contact-form-wrap,
+  .home-split,
+  .profile-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    text-align: left;
+    padding: 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .stations-map {
+    height: 400px;
+  }
+
+  .footer-inner {
+    padding: 18px 16px;
+  }
+
+  .footer-left,
+  .footer-bottom {
+    padding-left: 0;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-right {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-pad: 92%;
+  }
+
+  .navbar {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .hero {
+    min-height: 430px;
+    height: 62vh;
+  }
+
+  .hero-card p {
+    font-size: 14px;
+  }
+
+  .btn {
+    min-height: 44px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .photo-card {
+    border-radius: 14px;
+  }
+
+  .station-meta {
+    left: 8px;
+    bottom: 8px;
+    gap: 5px;
+  }
+
+  .station-meta-chip,
+  .station-meta-inactive,
+  .station-meta-carriage {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .stations-map {
+    height: 330px;
+  }
+
+  .map-popup {
+    width: 220px;
+  }
+
+  .map-popup-link {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: 10px 12px;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .page-title {
+    padding-top: 88px;
+  }
+
+  .page-title h1 {
+    font-size: 30px;
+  }
+
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero-card h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .filter-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .stations-map {
+    height: 300px;
+  }
+}
 
 

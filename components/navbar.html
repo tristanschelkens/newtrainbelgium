@@ -1,4 +1,4 @@
-<nav class="navbar" id="siteNavbar">
+﻿<nav class="navbar" id="siteNavbar">
   <div class="nav-inner">
     <a class="brand" href="Home.html">
       <span class="brand-dot"></span>
@@ -10,15 +10,18 @@
     </a>
 
     <button
+      id="menuBtn"
       class="menu-btn"
       type="button"
       aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
       onclick="toggleMenu()"
     >
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links" id="navLinks" aria-hidden="true">
       <button
         class="close-btn"
         type="button"

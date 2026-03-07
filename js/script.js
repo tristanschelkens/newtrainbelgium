@@ -1,15 +1,35 @@
 ﻿function toggleMenu() {
   const nav = document.getElementById("navLinks");
+  const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
-  nav.classList.toggle("active");
+
+  const willOpen = !nav.classList.contains("active");
+  nav.classList.toggle("active", willOpen);
+  nav.setAttribute("aria-hidden", willOpen ? "false" : "true");
+  if (menuBtn) menuBtn.setAttribute("aria-expanded", willOpen ? "true" : "false");
 }
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+
+  const nav = document.getElementById("navLinks");
+  const menuBtn = document.getElementById("menuBtn");
+  if (!nav || !nav.classList.contains("active")) return;
+
+  nav.classList.remove("active");
+  nav.setAttribute("aria-hidden", "true");
+  if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+});
 
 document.addEventListener("click", (e) => {
   const nav = document.getElementById("navLinks");
+  const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
 
   if (e.target.closest("#navLinks a")) {
     nav.classList.remove("active");
+    nav.setAttribute("aria-hidden", "true");
+    if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
     return;
   }
 
@@ -19,9 +39,10 @@ document.addEventListener("click", (e) => {
     !e.target.closest(".menu-btn")
   ) {
     nav.classList.remove("active");
+    nav.setAttribute("aria-hidden", "true");
+    if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
   }
 });
-
 function handleNavbarScroll() {
   const navbar = document.getElementById("siteNavbar");
   if (!navbar) return;
@@ -682,6 +703,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
