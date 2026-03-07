@@ -5,14 +5,12 @@
     description: "Rail photography in Antwerp.",
     photos: [
       {
-        src: "../images/Belgium/Antwerp/Antwerp.webp",
-        alt: "Antwerp HLE 1804 + 3x I10 + 4x I11 + 2x M7",
+        src: "../images/Belgium/Antwerp/Antwerp_HLE1804M6.webp",
+        alt: "Antwerp HLE 1804 + 8x M6",
         label: "Antwerp",
         consist: [
           { kind: "traction", label: "HLE 1804", active: true },
-          { kind: "carriage", label: "3x I10" },
-          { kind: "carriage", label: "4x I11" },
-          { kind: "carriage", label: "2x M7" },
+          { kind: "carriage", label: "8x M6" },
         ],
       },
     ],
@@ -23,34 +21,12 @@
     description: "Rail photography in Brussels-Midi.",
     photos: [
       {
-        src: "../images/Belgium/Brussels-Midi/Brussels.webp",
-        alt: "Brussels-Midi HLE 1801 + 8x M7 + HLE 1802",
+        src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.webp",
+        alt: "Brussels-Midi HLE 1834 + NightJet",
         label: "Brussels-Midi",
         consist: [
-          { kind: "traction", label: "HLE 1801", active: true },
-          { kind: "carriage", label: "8x M7" },
-          { kind: "traction", label: "HLE 1802", active: true },
-        ],
-      },
-      {
-        src: "../images/Belgium/Brussels-Midi/Brussels-2.webp",
-        alt: "Brussels-Midi HLE 1905 + 1x M6 + 8x M7 + HLE 1322",
-        label: "Brussels-Midi",
-        consist: [
-          { kind: "traction", label: "HLE 1905", active: true },
-          { kind: "carriage", label: "1x M6" },
-          { kind: "carriage", label: "8x M7" },
-          { kind: "traction", label: "HLE 1322", active: true },
-        ],
-      },
-      {
-        src: "../images/Belgium/Brussels-Midi/Brussels-3.webp",
-        alt: "Brussels-Midi locomotive train",
-        label: "Brussels-Midi",
-        consist: [
-          { kind: "traction", label: "HLE 1910", active: true },
-          { kind: "traction", label: "HLE 1920", active: true },
-          { kind: "traction", label: "HLE 1930", active: false },
+          { kind: "traction", label: "HLE 1834", active: true },
+          { kind: "carriage", label: "NightJet" },
         ],
       },
     ],
@@ -61,10 +37,13 @@
     description: "Rail photography in Duffel.",
     photos: [
       {
-        src: "../images/Belgium/Duffel/Duffel.webp",
-        alt: "Duffel",
+        src: "../images/Belgium/Duffel/Duffel_M4HLE27.webp",
+        alt: "Duffel 7x M4 + HLE 27",
         label: "Duffel",
-        consist: [],
+        consist: [
+          { kind: "carriage", label: "7x M4" },
+          { kind: "traction", label: "HLE 27", active: true },
+        ],
       },
     ],
   },
@@ -74,10 +53,13 @@
     description: "Rail photography in Leuven.",
     photos: [
       {
-        src: "../images/Belgium/Leuven/Leuven.webp",
-        alt: "Leuven",
+        src: "../images/Belgium/Leuven/Leuven_HLE1913M7.webp",
+        alt: "Leuven HLE 1913 + 6x M7 ",
         label: "Leuven",
-        consist: [],
+        consist: [
+          { kind: "traction", label: "HLE 1913", active: true },
+          { kind: "traction", label: "M7", active: false },
+        ],
       },
     ],
   },
@@ -87,10 +69,10 @@
     description: "Rail photography in Liege.",
     photos: [
       {
-        src: "../images/Belgium/Liege/Luik.webp",
-        alt: "Liege",
+        src: "../images/Belgium/Liege/Luik_AM08543.webp",
+        alt: "Liege AM08543",
         label: "Liege",
-        consist: [],
+        consist: [{ kind: "traction", label: "AM08 543", active: true }],
       },
     ],
   },
@@ -100,16 +82,24 @@
     description: "Rail photography in Lier.",
     photos: [
       {
-        src: "../images/Belgium/Lier/Lier.webp",
-        alt: "Lier",
+        src: "../images/Belgium/Lier/Lier_M6HLE1819.webp",
+        alt: "Lier 8x M6 + HLE 18/19",
         label: "Lier",
-        consist: [],
+        consist: [
+          { kind: "carriage", label: "8x M6" },
+          { kind: "traction", label: "HLE 18/19", active: true },
+        ],
       },
       {
-        src: "../images/Belgium/Lier/Lier2.webp",
-        alt: "Lier AM08",
+        src: "../images/Belgium/Lier/Lier_MW4124MW41MW41MW41.webp",
+        alt: "Lier MW4124 + MW41 + MW41 + MW41",
         label: "Lier",
-        consist: [{ kind: "traction", label: "AM08", active: true }],
+        consist: [
+          { kind: "traction", label: "MW41 24", active: true },
+          { kind: "traction", label: "MW41", active: true },
+          { kind: "traction", label: "MW41", active: true },
+          { kind: "traction", label: "MW41", active: true },
+        ],
       },
     ],
   },
@@ -119,10 +109,10 @@
     description: "Rail photography in Luchtbal.",
     photos: [
       {
-        src: "../images/Belgium/Luchtbal/Luchtbal.webp",
-        alt: "Luchtbal",
+        src: "../images/Belgium/Luchtbal/Luchtbal_E320.webp",
+        alt: "Luchtbal E320",
         label: "Luchtbal",
-        consist: [],
+        consist: [{ kind: "traction", label: "E320", active: true }],
       },
     ],
   },
@@ -132,10 +122,14 @@
     description: "Rail photography in Mechelen.",
     photos: [
       {
-        src: "../images/Belgium/Mechelen/Mechelen.webp",
-        alt: "Mechelen",
+        src: "../images/Belgium/Mechelen/Mechelen_TRAXXICRTRAXX.webp",
+        alt: "Mechelen TRAXX 186 205 + 7x ICR + TRAXX",
         label: "Mechelen",
-        consist: [],
+        consist: [
+          { kind: "traction", label: "TRAXX 186 205", active: true },
+          { kind: "carriage", label: "7x ICR" },
+          { kind: "traction", label: "TRAXX", active: true },
+        ],
       },
     ],
   },
@@ -145,10 +139,12 @@
     description: "Rail photography in Schaerbeek.",
     photos: [
       {
-        src: "../images/Belgium/Schaerbeek/Schaerbeek.webp",
-        alt: "Schaerbeek",
+        src: "../images/Belgium/Schaerbeek/Schaerbeek_Vectron1293181.webp",
+        alt: "Schaerbeek Vectron 1293 181",
         label: "Schaerbeek",
-        consist: [],
+        consist: [
+          { kind: "traction", label: "Vectron 1293 181", active: true },
+        ],
       },
     ],
   },
@@ -158,10 +154,10 @@
     description: "Rail photography in Paris.",
     photos: [
       {
-        src: "../images/France/Paris/Paris.webp",
-        alt: "Paris",
+        src: "../images/France/Paris/Paris_TGVDuplex245.jpeg",
+        alt: "Paris TGV Duplex 245",
         label: "Paris",
-        consist: [],
+        consist: [{ kind: "traction", label: "TGV Duplex 245", active: true }],
       },
     ],
   },
@@ -171,10 +167,13 @@
     description: "Rail photography in Aachen.",
     photos: [
       {
-        src: "../images/Germany/Aachen/Aachen.webp",
-        alt: "Aachen",
+        src: "../images/Germany/Aachen/Aachen_DoStoBR146005.webp",
+        alt: "Aachen 5x DoSto + BR146 005",
         label: "Aachen",
-        consist: [],
+        consist: [
+          { kind: "carriage", label: "5x DoSto" },
+          { kind: "traction", label: "BR146 005", active: true },
+        ],
       },
     ],
   },
@@ -184,10 +183,13 @@
     description: "Rail photography in Dusseldorf.",
     photos: [
       {
-        src: "../images/Germany/Dusseldorf/Dusseldorf.webp",
-        alt: "Dusseldorf",
+        src: "../images/Germany/Dusseldorf/Dusseldorf_BR14657235xStadlerKISS.webp",
+        alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
         label: "Dusseldorf",
-        consist: [],
+        consist: [
+          { kind: "traction", label: "BR146 572-3", active: true },
+          { kind: "carriage", label: "5x Stadler KISS" },
+        ],
       },
     ],
   },
@@ -197,10 +199,13 @@
     description: "Rail photography in Luxembourg.",
     photos: [
       {
-        src: "../images/Luxembourg/Luxembourg/Luxembourg.webp",
-        alt: "Luxembourg",
+        src: "../images/Luxembourg/Luxembourg/Luxembourg_TRAXX40185xTwindexxVario.webp",
+        alt: "Luxembourg TRAXX 4018 + 5x Twindexx Vario",
         label: "Luxembourg",
-        consist: [],
+        consist: [
+          { kind: "traction", label: "TRAXX 4018", active: true },
+          { kind: "carriage", label: "5x Twindexx Vario" },
+        ],
       },
     ],
   },
@@ -210,10 +215,14 @@
     description: "Rail photography in Roosendaal.",
     photos: [
       {
-        src: "../images/Netherlands/Roosendaal/Roosendaal.webp",
-        alt: "Roosendaal",
+        src: "../images/Netherlands/Roosendaal/Roosendaal_TRAXX1861217xI11TRAXX.webp",
+        alt: "Roosendaal TRAXX 186 121 + 7x I11 + TRAXX",
         label: "Roosendaal",
-        consist: [],
+        consist: [
+          { kind: "traction", label: "TRAXX 186 121", active: true },
+          { kind: "carriage", label: "7x I11" },
+          { kind: "traction", label: "TRAXX", active: true },
+        ],
       },
     ],
   },
@@ -223,10 +232,10 @@
     description: "Rail photography in London.",
     photos: [
       {
-        src: "../images/United Kingdom/London/London.webp",
-        alt: "London",
+        src: "../images/United Kingdom/London/London_Class3733206.webp",
+        alt: "London Class 373 3206",
         label: "London",
-        consist: [],
+        consist: [{ kind: "traction", label: "Class 373 3206", active: true }],
       },
     ],
   },
