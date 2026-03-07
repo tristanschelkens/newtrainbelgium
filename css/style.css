@@ -26,10 +26,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-html,
-body {
+html {
   height: 100%;
   background: #0b0b0b;
+}
+
+body {
+  height: 100%;
 }
 
 body {
@@ -1841,17 +1844,17 @@ body.station-lightbox-open {
   }
 
   .nav-links {
-    width: min(62vw, 248px);
+    width: min(52vw, 210px);
     top: 0;
     height: 100vh;
-    padding: 10px 10px 14px;
+    padding: 8px 8px 12px;
   }
 
   .close-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-    margin-bottom: 2px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    margin-bottom: 0;
   }
 
   .nav-links ul {
@@ -1860,9 +1863,9 @@ body.station-lightbox-open {
   }
 
   .nav-links a {
-    padding: 8px 6px;
-    font-size: 13px;
-    letter-spacing: 0.35px;
+    padding: 7px 4px;
+    font-size: 12.5px;
+    letter-spacing: 0.25px;
   }
 
   .nav-links a::after,
@@ -1873,11 +1876,6 @@ body.station-lightbox-open {
   .station-photo-card .station-meta {
     display: none;
   }
-
-  .home-gallery {
-    background: var(--bg);
-  }
-
   .home-gallery .photo-grid {
     margin-top: 12px;
   }
@@ -1887,6 +1885,9 @@ body.station-lightbox-open {
 .footer {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
+
+
 
 
 
