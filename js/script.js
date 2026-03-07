@@ -201,7 +201,15 @@ function setActiveNavLink() {
     if (!normalized) return "";
 
     const withoutCount = normalized.replace(/^\d+\s*[x×]\s*/i, "");
-    return withoutCount.split(/\s+/)[0] || "";
+    const parts = withoutCount.split(/\s+/).filter(Boolean);
+    if (parts.length === 0) return "";
+
+    // Keep Stadler KISS together as one filter label.
+    if (parts[0] === "stadler" && parts[1]) {
+      return `stadler ${parts[1]}`;
+    }
+
+    return parts[0];
   }
   function getVehicleFilterLabel(key) {
     if (key === "hle18-19") return "HLE 18/19";
@@ -372,7 +380,7 @@ function setActiveNavLink() {
     new Set(photos.flatMap((photo) => photo.filterKeys).filter(Boolean)),
   );
 
-  if (vehicleFilters && uniqueVehicleTypes.length > 0) {
+  if (vehicleFilters && uniqueVehicleTypes.length > 1) {
     const filtersHtml = [
       '<button class="filter-btn active" type="button" data-vehicle-filter="all">All</button>',
       ...uniqueVehicleTypes
@@ -399,6 +407,9 @@ function setActiveNavLink() {
         applyVehicleFilter(value);
       });
     });
+  } else if (vehicleFilters) {
+    vehicleFilters.innerHTML = "";
+    vehicleFilters.style.display = "none";
   }
 
   applyVehicleFilter("all");
@@ -565,6 +576,8 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
 
 
 
