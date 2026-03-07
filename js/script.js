@@ -113,6 +113,101 @@ function setActiveNavLink() {
   applyFilter(initialFilter);
 })();
 
+(function initPhotoMap() {
+  const mapEl = document.getElementById("stationsMap");
+  const grid = document.getElementById("photoGrid");
+
+  if (!mapEl || !grid || typeof window.L === "undefined") return;
+
+  const stationCoords = {
+    antwerp: [51.2172, 4.4211],
+    "brussels-midi": [50.8356, 4.3366],
+    duffel: [51.0959, 4.5167],
+    leuven: [50.8817, 4.7154],
+    liege: [50.6246, 5.5662],
+    lier: [51.1321, 4.5706],
+    luchtbal: [51.2474, 4.4292],
+    mechelen: [51.0179, 4.4816],
+    schaerbeek: [50.8686, 4.3782],
+    paris: [48.8443, 2.3744],
+    aachen: [50.7678, 6.0915],
+    dusseldorf: [51.2194, 6.7945],
+    luxembourg: [49.6000, 6.1347],
+    roosendaal: [51.5402, 4.4622],
+    london: [51.5308, -0.1238],
+  };
+
+  function esc(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  const cards = Array.from(grid.querySelectorAll(".photo-card"));
+  const stations = cards
+    .map((card) => {
+      const href = card.getAttribute("href") || "";
+      const slug = new URLSearchParams(href.split("?")[1] || "").get("slug");
+      const coords = slug ? stationCoords[slug] : null;
+      const img = card.querySelector("img");
+      const title = card.querySelector(".overlay h3")?.textContent?.trim() || img?.alt || slug;
+
+      if (!slug || !coords || !img) return null;
+
+      return {
+        slug,
+        coords,
+        title,
+        image: img.getAttribute("src") || "",
+        href,
+      };
+    })
+    .filter(Boolean);
+
+  if (stations.length === 0) return;
+
+  const map = L.map(mapEl, {
+    scrollWheelZoom: true,
+    zoomControl: true,
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  const bounds = L.latLngBounds([]);
+
+  stations.forEach((station) => {
+    const marker = L.marker(station.coords).addTo(map);
+
+    const popupHtml = `
+      <div class="map-popup">
+        <img src="${esc(station.image)}" alt="${esc(station.title)}" />
+        <div class="map-popup-title">${esc(station.title)}</div>
+        <a class="map-popup-link" href="${esc(station.href)}">Open station</a>
+      </div>
+    `;
+
+    marker.bindPopup(popupHtml, { closeButton: true, offset: [0, -4] });
+    marker.on("click", () => marker.openPopup());
+
+    bounds.extend(station.coords);
+  });
+
+  if (stations.length === 1) {
+    map.setView(stations[0].coords, 11);
+  } else {
+    map.fitBounds(bounds.pad(0.2));
+  }
+
+  window.addEventListener("resize", () => {
+    map.invalidateSize();
+  });
+})();
 (function initStationPage() {
   const grid = document.getElementById("stationGrid");
   if (!grid) return;
@@ -576,6 +671,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 

@@ -948,6 +948,59 @@ body.station-lightbox-open {
 .station-lightbox-meta .station-meta-plus {
   margin: 0 2px;
 }
+
+.stations-map {
+  width: 100%;
+  height: 460px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: #dfe7ef;
+}
+
+.map-popup {
+  width: 220px;
+}
+
+.map-popup img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.map-popup-title {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.map-popup-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--nmbs-blue);
+  background: var(--nmbs-blue);
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.map-popup-link:hover {
+  background: var(--nmbs-blue-dark);
+  border-color: var(--nmbs-blue-dark);
+}
+
+@media (max-width: 768px) {
+  .stations-map {
+    height: 360px;
+  }
+}
 /* CONTACT */
 .contact-grid {
   display: grid;
@@ -1215,6 +1268,7 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
 
 
 
