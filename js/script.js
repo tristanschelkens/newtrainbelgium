@@ -196,8 +196,10 @@ function setActiveNavLink() {
         <a class="map-popup-image-link" href="${esc(station.href)}">
           <img src="${esc(station.image)}" alt="${esc(station.title)}" />
         </a>
-        <a class="map-popup-title" href="${esc(station.href)}">${esc(station.title)}</a>
-        <a class="map-popup-link" href="${esc(station.href)}">Open station</a>
+        <div class="map-popup-footer">
+          <a class="map-popup-title" href="${esc(station.href)}">${esc(station.title)}</a>
+          <a class="map-popup-link" href="${esc(station.href)}">Open station</a>
+        </div>
       </div>
     `;
 
@@ -680,6 +682,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
