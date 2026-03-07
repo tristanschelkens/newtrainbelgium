@@ -29,13 +29,14 @@
 html,
 body {
   height: 100%;
+  background: #0b0b0b;
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0b0b0b;
+  background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
 }
@@ -1824,6 +1825,68 @@ body.station-lightbox-open {
   }
 }
 
+
+
+
+
+
+
+
+/* Mobile cleanup pass */
+@media (max-width: 768px) {
+  .menu-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .nav-links {
+    width: min(62vw, 248px);
+    top: 0;
+    height: 100vh;
+    padding: 10px 10px 14px;
+  }
+
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  .nav-links ul {
+    margin-top: 4px;
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 8px 6px;
+    font-size: 13px;
+    letter-spacing: 0.35px;
+  }
+
+  .nav-links a::after,
+  .nav-links a .nav-label::after {
+    display: none !important;
+  }
+
+  .station-photo-card .station-meta {
+    display: none;
+  }
+
+  .home-gallery {
+    background: var(--bg);
+  }
+
+  .home-gallery .photo-grid {
+    margin-top: 12px;
+  }
+}
+
+/* Keep footer flush with device bottom on iOS */
+.footer {
+  padding-bottom: env(safe-area-inset-bottom);
+}
 
 
 
