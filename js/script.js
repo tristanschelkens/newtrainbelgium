@@ -304,6 +304,10 @@ function setActiveNavLink() {
 
   const cardsHtml = photos
     .map((photo) => {
+      function formatTagLabel(label) {
+        return String(label || "").replace(/(\d+)\s*x\s*/gi, "$1× ");
+      }
+
       const chips = photo.consist
         .map((item, index) => {
           const cls =
@@ -318,7 +322,7 @@ function setActiveNavLink() {
               ? '<span class="station-meta-plus">+</span>'
               : "";
 
-          return `<span class="${cls}">${esc(item.label)}</span>${plus}`;
+          return `<span class="${cls}">${esc(formatTagLabel(item.label))}</span>${plus}`;
         })
         .join("");
 
@@ -549,3 +553,5 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
