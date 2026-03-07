@@ -162,19 +162,23 @@ function setActiveNavLink() {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const compactType = lowerType.replace(/\s+/g, "");
+    const normalizedType = lowerType.replace(/\s+/g, " ").trim();
+    const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
 
-    if (!rawType || lowerType === "unknown") return "";
+    if (!rawType || normalizedType === "unknown") return "";
 
-    if (lowerType.startsWith("hle")) {
-      if (compactNumber.startsWith("13")) return "hle13";
+    if (normalizedType.startsWith("hle") || compactType.startsWith("hle")) {
+      if (compactNumber.startsWith("13") || compactType === "hle13") return "hle13";
+      if (compactNumber.startsWith("21") || compactType === "hle21") return "hle21";
+      if (compactNumber.startsWith("27") || compactType === "hle27") return "hle27";
+      if (compactNumber.startsWith("28") || compactType === "hle28") return "hle28";
+
       if (compactNumber.startsWith("18") || compactNumber.startsWith("19")) {
         return "hle18-19";
       }
 
       if (
-        lowerType === "hle" ||
         compactType === "hle18" ||
         compactType === "hle19" ||
         compactType === "hle18/19" ||
@@ -182,14 +186,20 @@ function setActiveNavLink() {
       ) {
         return "hle18-19";
       }
+
+      return "hle";
     }
 
-    return lowerType;
+    return normalizedType;
   }
 
   function getVehicleFilterLabel(key) {
     if (key === "hle18-19") return "HLE 18/19";
     if (key === "hle13") return "HLE 13";
+    if (key === "hle21") return "HLE 21";
+    if (key === "hle27") return "HLE 27";
+    if (key === "hle28") return "HLE 28";
+    if (key === "hle") return "HLE";
     return key.toUpperCase();
   }
 
@@ -244,8 +254,25 @@ function setActiveNavLink() {
 
         if (!inferredType && kind === "traction") {
           const parts = label.split(/\s+/).filter(Boolean);
-          inferredType = parts[0] || "";
-          inferredNumber = parts[1] || "";
+          const first = parts[0] || "";
+          const firstLower = first.toLowerCase();
+
+          if (firstLower === "hle") {
+            inferredType = "HLE";
+            inferredNumber = parts[1] || "";
+          } else if (/^am\d+/i.test(first)) {
+            inferredType = first;
+            inferredNumber = parts[1] || "";
+          } else if (firstLower === "class" && parts[1]) {
+            inferredType = `Class ${parts[1]}`;
+            inferredNumber = parts[2] || "";
+          } else if (firstLower === "tgv" && parts[1] && /^[a-z]+$/i.test(parts[1])) {
+            inferredType = `TGV ${parts[1]}`;
+            inferredNumber = parts[2] || "";
+          } else {
+            inferredType = first;
+            inferredNumber = parts[1] || "";
+          }
         }
 
         return {
