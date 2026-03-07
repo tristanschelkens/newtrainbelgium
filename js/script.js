@@ -193,6 +193,16 @@ function setActiveNavLink() {
     return normalizedType;
   }
 
+  function normalizeCarriageType(label) {
+    const normalized = String(label || "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ");
+    if (!normalized) return "";
+
+    const withoutCount = normalized.replace(/^\d+\s*[x×]\s*/i, "");
+    return withoutCount.split(/\s+/)[0] || "";
+  }
   function getVehicleFilterLabel(key) {
     if (key === "hle18-19") return "HLE 18/19";
     if (key === "hle13") return "HLE 13";
@@ -282,7 +292,9 @@ function setActiveNavLink() {
           filterKey:
             kind === "traction"
               ? normalizeVehicleType(inferredType, inferredNumber)
-              : "",
+              : kind === "carriage" && entry.active === true
+                ? normalizeCarriageType(label)
+                : "",
         };
       })
       .filter(Boolean);
@@ -553,5 +565,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
+
 
 

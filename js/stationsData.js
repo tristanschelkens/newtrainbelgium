@@ -10,7 +10,7 @@
         label: "Antwerp",
         consist: [
           { kind: "traction", label: "HLE 1804", active: true },
-          { kind: "carriage", label: "8x M6" },
+          { kind: "carriage", label: "8x M6", active: true },
         ],
       },
     ],
@@ -86,7 +86,7 @@
         alt: "Lier 8x M6 + HLE 18/19",
         label: "Lier",
         consist: [
-          { kind: "carriage", label: "8x M6" },
+          { kind: "carriage", label: "8x M6", active: true },
           { kind: "traction", label: "HLE 18/19", active: true },
         ],
       },
@@ -171,7 +171,7 @@
         alt: "Aachen 5x DoSto + BR146 005",
         label: "Aachen",
         consist: [
-          { kind: "carriage", label: "5x DoSto" },
+          { kind: "carriage", label: "5x DoSto", active: true },
           { kind: "traction", label: "BR146 005", active: true },
         ],
       },
@@ -188,7 +188,7 @@
         label: "Dusseldorf",
         consist: [
           { kind: "traction", label: "BR146 572-3", active: true },
-          { kind: "carriage", label: "5x Stadler KISS" },
+          { kind: "carriage", label: "5x Stadler KISS", active: true },
         ],
       },
     ],
