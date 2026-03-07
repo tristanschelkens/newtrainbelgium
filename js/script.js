@@ -180,14 +180,23 @@ function setActiveNavLink() {
   }).addTo(map);
 
   const bounds = L.latLngBounds([]);
+  const stationIcon = L.divIcon({
+    className: "map-pin-icon",
+    html: '<span class="map-pin-dot"></span>',
+    iconSize: [18, 18],
+    iconAnchor: [9, 9],
+    popupAnchor: [0, -10],
+  });
 
   stations.forEach((station) => {
-    const marker = L.marker(station.coords).addTo(map);
+    const marker = L.marker(station.coords, { icon: stationIcon }).addTo(map);
 
     const popupHtml = `
       <div class="map-popup">
-        <img src="${esc(station.image)}" alt="${esc(station.title)}" />
-        <div class="map-popup-title">${esc(station.title)}</div>
+        <a class="map-popup-image-link" href="${esc(station.href)}">
+          <img src="${esc(station.image)}" alt="${esc(station.title)}" />
+        </a>
+        <a class="map-popup-title" href="${esc(station.href)}">${esc(station.title)}</a>
         <a class="map-popup-link" href="${esc(station.href)}">Open station</a>
       </div>
     `;
@@ -671,6 +680,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 

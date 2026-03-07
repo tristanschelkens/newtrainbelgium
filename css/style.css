@@ -951,16 +951,37 @@ body.station-lightbox-open {
 
 .stations-map {
   width: 100%;
-  height: 460px;
-  border-radius: var(--radius-lg);
+  height: 500px;
+  border-radius: 22px;
   overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  background: #dfe7ef;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(0, 92, 185, 0.13), transparent 44%),
+    radial-gradient(circle at 82% 78%, rgba(0, 92, 185, 0.1), transparent 38%),
+    #dfe7ef;
+}
+
+.stations-map .leaflet-control-zoom a {
+  border-radius: 10px;
+}
+
+.stations-map .leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.stations-map .leaflet-popup-content {
+  margin: 12px;
 }
 
 .map-popup {
-  width: 220px;
+  width: 230px;
+}
+
+.map-popup-image-link {
+  display: block;
+  text-decoration: none;
 }
 
 .map-popup img {
@@ -969,12 +990,25 @@ body.station-lightbox-open {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 8px;
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.map-popup-image-link:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.95);
 }
 
 .map-popup-title {
-  font-size: 14px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
   font-weight: 800;
   margin-bottom: 8px;
+}
+
+.map-popup-title:hover {
+  color: var(--nmbs-blue);
 }
 
 .map-popup-link {
@@ -996,9 +1030,25 @@ body.station-lightbox-open {
   border-color: var(--nmbs-blue-dark);
 }
 
+.map-pin-icon {
+  background: transparent;
+  border: none;
+}
+
+.map-pin-dot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--nmbs-blue);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 6px rgba(0, 92, 185, 0.2);
+}
+
 @media (max-width: 768px) {
   .stations-map {
-    height: 360px;
+    height: 380px;
+    border-radius: 16px;
   }
 }
 /* CONTACT */
@@ -1268,6 +1318,7 @@ body.station-lightbox-open {
     padding: 18px;
   }
 }
+
 
 
 
