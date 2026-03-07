@@ -41,7 +41,7 @@
         alt: "Duffel 7x M4 + HLE 27",
         label: "Duffel",
         consist: [
-          { kind: "carriage", label: "7x M4" },
+          { kind: "carriage", label: "7x M4", active: true },
           { kind: "traction", label: "HLE 27", active: true },
         ],
       },
