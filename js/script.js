@@ -129,9 +129,14 @@ function setActiveNavLink() {
 
   const station = allStations[slug];
 
-  if (!station || !Array.isArray(station.photos) || station.photos.length === 0) {
+  if (
+    !station ||
+    !Array.isArray(station.photos) ||
+    station.photos.length === 0
+  ) {
     if (title) title.textContent = "Station not found";
-    if (subtitle) subtitle.textContent = "No station data available for this link.";
+    if (subtitle)
+      subtitle.textContent = "No station data available for this link.";
     if (notFound) notFound.style.display = "block";
     return;
   }
@@ -183,8 +188,8 @@ function setActiveNavLink() {
   }
 
   function getVehicleFilterLabel(key) {
-    if (key === "hle18-19") return "HLE18/19";
-    if (key === "hle13") return "HLE13";
+    if (key === "hle18-19") return "HLE 18/19";
+    if (key === "hle13") return "HLE 13";
     return key.toUpperCase();
   }
 
@@ -220,9 +225,10 @@ function setActiveNavLink() {
   }
 
   function normalizeConsist(photo) {
-    const source = Array.isArray(photo.consist) && photo.consist.length > 0
-      ? photo.consist
-      : buildConsistFromLegacy(photo);
+    const source =
+      Array.isArray(photo.consist) && photo.consist.length > 0
+        ? photo.consist
+        : buildConsistFromLegacy(photo);
 
     return source
       .map((entry) => {
@@ -337,7 +343,9 @@ function setActiveNavLink() {
     vehicleFilters.innerHTML = filtersHtml;
     vehicleFilters.style.display = "flex";
 
-    const filterButtons = Array.from(vehicleFilters.querySelectorAll(".filter-btn"));
+    const filterButtons = Array.from(
+      vehicleFilters.querySelectorAll(".filter-btn"),
+    );
 
     filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -391,13 +399,15 @@ function setActiveNavLink() {
     document.body.classList.add("station-lightbox-open");
   }
 
-  Array.from(grid.querySelectorAll(".station-photo-card img")).forEach((img) => {
-    img.addEventListener("click", () => {
-      const card = img.closest(".station-photo-card");
-      const meta = card?.querySelector(".station-meta");
-      openLightbox(img.src, img.alt, meta ? meta.innerHTML : "");
-    });
-  });
+  Array.from(grid.querySelectorAll(".station-photo-card img")).forEach(
+    (img) => {
+      img.addEventListener("click", () => {
+        const card = img.closest(".station-photo-card");
+        const meta = card?.querySelector(".station-meta");
+        openLightbox(img.src, img.alt, meta ? meta.innerHTML : "");
+      });
+    },
+  );
 
   if (closeBtn) {
     closeBtn.addEventListener("click", closeLightbox);
@@ -439,16 +449,22 @@ function setActiveNavLink() {
 
     try {
       const data = new FormData(form);
-      const response = await fetch("https://formsubmit.co/ajax/info@trainbelgium.com", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
+      const response = await fetch(
+        "https://formsubmit.co/ajax/info@trainbelgium.com",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: data,
         },
-        body: data,
-      });
+      );
 
       const result = await response.json();
-      if (!response.ok || (result.success !== true && result.success !== "true")) {
+      if (
+        !response.ok ||
+        (result.success !== true && result.success !== "true")
+      ) {
         throw new Error("Form submit failed");
       }
 
@@ -506,28 +522,3 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
