@@ -58,7 +58,7 @@
         label: "Leuven",
         consist: [
           { kind: "traction", label: "HLE 1913", active: true },
-          { kind: "traction", label: "M7", active: false },
+          { kind: "traction", label: "6x M7", active: false },
         ],
       },
     ],
@@ -69,6 +69,12 @@
     description: "Rail photography in Liege.",
     photos: [
       {
+        src: "../images/Belgium/Liege/Luik_AM08543.webp",
+        alt: "Liege AM08543",
+        label: "Liege",
+        consist: [{ kind: "traction", label: "AM08 543", active: true }],
+      },
+            {
         src: "../images/Belgium/Liege/Luik_AM08543.webp",
         alt: "Liege AM08543",
         label: "Liege",
