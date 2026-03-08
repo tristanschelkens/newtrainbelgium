@@ -2264,3 +2264,18 @@ body.station-lightbox-open {
     pointer-events: none;
   }
 }
+
+/* Final safe-area strip fix (no full-page dark background) */
+@media (max-width: 1024px) {
+  body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: max(18px, env(safe-area-inset-bottom));
+    background: #0b0b0b;
+    pointer-events: none;
+    z-index: 2147483647;
+  }
+}
