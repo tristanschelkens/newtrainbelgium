@@ -468,15 +468,17 @@ function setActiveNavLink() {
 
   const photos = station.photos.map((photo, sourceIndex) => {
     const consist = normalizeConsist(photo);
-    const isMain = typeof photo.isMain === "boolean" ? photo.isMain : sourceIndex === 0;
+    const series = String(photo.series || "").trim().toLowerCase() || `photo-${sourceIndex}`;
+    const explicitIsMain = typeof photo.isMain === "boolean" ? photo.isMain : null;
 
     return {
       src: photo.src || "",
       alt: photo.alt || station.name,
       label: photo.label || station.name,
       date: String(photo.date || "").trim(),
+      series,
+      explicitIsMain,
       consist,
-      isMain,
       metaHtml: buildMetaHtml(consist),
       sourceIndex,
       filterKeys: Array.from(
@@ -485,9 +487,40 @@ function setActiveNavLink() {
     };
   });
 
-  const visiblePhotos = photos.some((photo) => photo.isMain)
-    ? photos.filter((photo) => photo.isMain)
-    : photos.slice(0, 1);
+  const seriesGroups = new Map();
+  photos.forEach((photo) => {
+    if (!seriesGroups.has(photo.series)) seriesGroups.set(photo.series, []);
+    seriesGroups.get(photo.series).push(photo);
+  });
+
+  const visibleSourceIndexes = new Set();
+  seriesGroups.forEach((group) => {
+    const explicitMains = group.filter((photo) => photo.explicitIsMain === true);
+    if (explicitMains.length > 0) {
+      explicitMains.forEach((photo) => visibleSourceIndexes.add(photo.sourceIndex));
+      return;
+    }
+
+    const firstNonHidden =
+      group.find((photo) => photo.explicitIsMain !== false) || group[0];
+    if (firstNonHidden) visibleSourceIndexes.add(firstNonHidden.sourceIndex);
+  });
+
+  const visiblePhotos = photos.filter((photo) =>
+    visibleSourceIndexes.has(photo.sourceIndex),
+  );
+
+  const photoBySourceIndex = new Map(
+    photos.map((photo) => [photo.sourceIndex, photo]),
+  );
+
+  const seriesPools = new Map();
+  seriesGroups.forEach((group, key) => {
+    seriesPools.set(
+      key,
+      group.map((photo) => photo.sourceIndex),
+    );
+  });
 
   const cardsHtml = visiblePhotos
     .map((photo) => {
@@ -581,6 +614,8 @@ function setActiveNavLink() {
   const prevBtn = lightbox.querySelector(".station-lightbox-nav.prev");
   const nextBtn = lightbox.querySelector(".station-lightbox-nav.next");
   let currentPhotoIndex = 0;
+  let currentSeriesPool = [];
+  let currentSeriesPosition = 0;
 
   function closeLightbox() {
     lightbox.classList.remove("is-open");
@@ -615,21 +650,30 @@ function setActiveNavLink() {
   }
 
   function updateLightboxNav() {
-    const hasMultiple = photos.length > 1;
+    const hasMultiple = currentSeriesPool.length > 1;
     if (prevBtn) prevBtn.style.display = hasMultiple ? "inline-flex" : "none";
     if (nextBtn) nextBtn.style.display = hasMultiple ? "inline-flex" : "none";
   }
 
-  function openLightboxByIndex(index) {
-    if (photos.length === 0) return;
-    const count = photos.length;
-    currentPhotoIndex = ((index % count) + count) % count;
+  function openLightboxByIndex(sourceIndex) {
+    const photo = photoBySourceIndex.get(sourceIndex);
+    if (!photo) return;
 
-    const photo = photos[currentPhotoIndex];
+    currentPhotoIndex = photo.sourceIndex;
+    currentSeriesPool = seriesPools.get(photo.series) || [photo.sourceIndex];
+    const pos = currentSeriesPool.indexOf(photo.sourceIndex);
+    currentSeriesPosition = pos >= 0 ? pos : 0;
+
     const photoDate = (photo.date || "").trim();
-
     openLightbox(photo.src, photo.alt, photo.metaHtml || "", photoDate);
     updateLightboxNav();
+  }
+
+  function openSiblingInSeries(step) {
+    if (!Array.isArray(currentSeriesPool) || currentSeriesPool.length === 0) return;
+    const count = currentSeriesPool.length;
+    currentSeriesPosition = ((currentSeriesPosition + step) % count + count) % count;
+    openLightboxByIndex(currentSeriesPool[currentSeriesPosition]);
   }
 
   Array.from(grid.querySelectorAll(".station-photo-card img")).forEach(
@@ -649,14 +693,14 @@ function setActiveNavLink() {
   if (prevBtn) {
     prevBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      openLightboxByIndex(currentPhotoIndex - 1);
+      openSiblingInSeries(-1);
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      openLightboxByIndex(currentPhotoIndex + 1);
+      openSiblingInSeries(1);
     });
   }
 
@@ -675,12 +719,12 @@ function setActiveNavLink() {
     }
 
     if (e.key === "ArrowLeft") {
-      openLightboxByIndex(currentPhotoIndex - 1);
+      openSiblingInSeries(-1);
       return;
     }
 
     if (e.key === "ArrowRight") {
-      openLightboxByIndex(currentPhotoIndex + 1);
+      openSiblingInSeries(1);
     }
   });
 })();

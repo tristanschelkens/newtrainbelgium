@@ -92,7 +92,7 @@ window.STATIONS_DATA = {
         consist: [{ kind: "traction", label: "HLE 1914", active: true }],
       },
       {
-        isMain: false,
+        isMain: true,
         src: "../images/Belgium/Hasselt/IMG_4796.webp",
         alt: "Hasselt HLE 1814",
         label: "Hasselt",
@@ -136,7 +136,7 @@ window.STATIONS_DATA = {
         consist: [{ kind: "traction", label: "AM08 543", active: true }],
       },
             {
-              isMain: false,
+              isMain: true,
         src: "../images/Belgium/Liege/IMG_4723.webp",
         alt: "Liege 6x m7",
         label: "Liege",
@@ -145,7 +145,7 @@ window.STATIONS_DATA = {
         consist: [{ kind: "traction", label: "6x M7", active: true }],
       },
          {
-           isMain: false,
+           isMain: true,
         src: "../images/Belgium/Liege/IMG_4734.webp",
         alt: "Liege HLE 1873",
         label: "Liege",
@@ -156,7 +156,7 @@ window.STATIONS_DATA = {
         ],
       },
       {
-        isMain: false,
+        isMain: true,
         src: "../images/Belgium/Liege/IMG_4742 2.webp",
         alt: "Liege MR08 504",
         label: "Liege",
@@ -166,7 +166,7 @@ window.STATIONS_DATA = {
         ],
       },
           {
-            isMain: false,
+            isMain: true,
         src: "../images/Belgium/Liege/IMG_4749.webp",
         alt: "Liege Stadler FLIRT 3",
         label: "Liege",
@@ -195,7 +195,7 @@ window.STATIONS_DATA = {
         ],
       },
       {
-        isMain: false,
+        isMain: true,
         src: "../images/Belgium/Lier/Lier_MW4124MW41MW41MW41.webp",
         alt: "Lier MW4124 + MW41 + MW41 + MW41",
         label: "Lier",
@@ -374,3 +374,4 @@ window.STATIONS_DATA = {
     ],
   },
 };
+
