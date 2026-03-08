@@ -2204,3 +2204,17 @@ body.station-lightbox-open {
     color: rgba(17, 17, 17, 0.65) !important;
   }
 }
+
+/* Keep menu close button on the right */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links .close-btn {
+    align-self: flex-end !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+}
