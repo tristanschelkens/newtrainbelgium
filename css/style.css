@@ -2126,7 +2126,7 @@ body.station-lightbox-open {
     min-width: 150px;
     justify-content: flex-end !important;
     text-align: right !important;
-    padding: 8px 8px !important;
+    padding: 8px 6px !important;
     margin-left: auto;
     border-radius: 14px;
   }
@@ -2156,9 +2156,9 @@ body.station-lightbox-open {
 
   /* Keep drawer tighter on mobile/tablet. */
   .nav-links {
-    width: min(32vw, 140px) !important;
-    max-width: 140px !important;
-    right: -160px !important;
+    width: 138px !important;
+    max-width: 138px !important;
+    right: -150px !important;
     padding: 12px !important;
   }
 
@@ -2180,10 +2180,11 @@ body.station-lightbox-open {
   .nav-links.active a {
     width: auto !important;
     min-width: 0 !important;
+    max-width: 120px !important;
     margin-left: auto !important;
     justify-content: flex-end !important;
     text-align: right !important;
-    padding: 8px 8px !important;
+    padding: 8px 6px !important;
     border-radius: 14px !important;
     font-size: 12px !important;
   }
@@ -2216,5 +2217,23 @@ body.station-lightbox-open {
     align-self: flex-end !important;
     margin-left: auto !important;
     margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    overflow-x: hidden;
+  }
+
+  .nav-links .close-btn {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    margin: 0 !important;
+  }
+
+  .nav-links ul {
+    margin-top: 52px !important;
   }
 }
