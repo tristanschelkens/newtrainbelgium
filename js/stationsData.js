@@ -5,6 +5,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Antwerp.",
     photos: [
       {
+        series: "antwerp-photo-0",
         isMain: true,
         src: "../images/Belgium/Antwerp/Antwerp_HLE1804M6.webp",
         alt: "Antwerp HLE 1804 + 8x M6",
@@ -24,6 +25,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Brussels-Midi.",
     photos: [
       {
+        series: "brussels-midi-photo-0",
         isMain: true,
         src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.webp",
         alt: "Brussels-Midi HLE 1834 + NightJet",
@@ -43,6 +45,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Duffel.",
     photos: [
       {
+        series: "duffel-photo-0",
         isMain: true,
         src: "../images/Belgium/Duffel/Duffel_M4HLE27.webp",
         alt: "Duffel 7x M4 + HLE 27",
@@ -62,6 +65,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Eupen.",
     photos: [
       {
+        series: "eupen-photo-0",
         isMain: true,
         src: "../images/Belgium/Eupen/IMG_4764.webp",
         alt: "Eupen HLE 1828 + 7x M7 + 1x I10 + HLE 1837",
@@ -83,6 +87,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Hasselt.",
     photos: [
       {
+        series: "hasselt-photo-0",
         isMain: true,
         src: "../images/Belgium/Hasselt/IMG_4814.webp",
         alt: "Hasselt HLE 1914",
@@ -92,6 +97,7 @@ window.STATIONS_DATA = {
         consist: [{ kind: "traction", label: "HLE 1914", active: true }],
       },
       {
+        series: "hasselt-photo-1",
         isMain: true,
         src: "../images/Belgium/Hasselt/IMG_4796.webp",
         alt: "Hasselt HLE 1814",
@@ -108,6 +114,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Leuven.",
     photos: [
       {
+        series: "leuven-photo-0",
         isMain: true,
         src: "../images/Belgium/Leuven/Leuven_HLE1913M7.webp",
         alt: "Leuven HLE 1913 + 6x M7 ",
@@ -127,6 +134,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Liege.",
     photos: [
       {
+        series: "liege-photo-0",
         isMain: true,
         src: "../images/Belgium/Liege/Luik_AM08543.webp",
         alt: "Liege AM08543",
@@ -136,6 +144,7 @@ window.STATIONS_DATA = {
         consist: [{ kind: "traction", label: "AM08 543", active: true }],
       },
             {
+              series: "liege-photo-1",
               isMain: true,
         src: "../images/Belgium/Liege/IMG_4723.webp",
         alt: "Liege 6x m7",
@@ -145,6 +154,7 @@ window.STATIONS_DATA = {
         consist: [{ kind: "traction", label: "6x M7", active: true }],
       },
          {
+           series: "liege-photo-2",
            isMain: true,
         src: "../images/Belgium/Liege/IMG_4734.webp",
         alt: "Liege HLE 1873",
@@ -156,6 +166,7 @@ window.STATIONS_DATA = {
         ],
       },
       {
+        series: "liege-photo-3",
         isMain: true,
         src: "../images/Belgium/Liege/IMG_4742 2.webp",
         alt: "Liege MR08 504",
@@ -166,6 +177,7 @@ window.STATIONS_DATA = {
         ],
       },
           {
+            series: "liege-photo-4",
             isMain: true,
         src: "../images/Belgium/Liege/IMG_4749.webp",
         alt: "Liege Stadler FLIRT 3",
@@ -183,6 +195,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Lier.",
     photos: [
       {
+        series: "lier-photo-0",
         isMain: true,
         src: "../images/Belgium/Lier/Lier_M6HLE1819.webp",
         alt: "Lier 8x M6 + HLE 18/19",
@@ -195,6 +208,7 @@ window.STATIONS_DATA = {
         ],
       },
       {
+        series: "lier-photo-1",
         isMain: true,
         src: "../images/Belgium/Lier/Lier_MW4124MW41MW41MW41.webp",
         alt: "Lier MW4124 + MW41 + MW41 + MW41",
@@ -216,6 +230,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Luchtbal.",
     photos: [
       {
+        series: "luchtbal-photo-0",
         isMain: true,
         src: "../images/Belgium/Luchtbal/Luchtbal_E320.webp",
         alt: "Luchtbal E320",
@@ -232,6 +247,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Mechelen.",
     photos: [
       {
+        series: "mechelen-photo-0",
         isMain: true,
         src: "../images/Belgium/Mechelen/Mechelen_TRAXXICRTRAXX.webp",
         alt: "Mechelen TRAXX 186 205 + 7x ICR + TRAXX",
@@ -252,6 +268,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Schaerbeek.",
     photos: [
       {
+        series: "schaerbeek-photo-0",
         isMain: true,
         src: "../images/Belgium/Schaerbeek/Schaerbeek_Vectron1293181.webp",
         alt: "Schaerbeek Vectron 1293 181",
@@ -270,6 +287,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Paris.",
     photos: [
       {
+        series: "paris-photo-0",
         isMain: true,
         src: "../images/France/Paris/Paris_TGVDuplex245.jpeg",
         alt: "Paris TGV Duplex 245",
@@ -286,6 +304,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Aachen.",
     photos: [
       {
+        series: "aachen-photo-0",
         isMain: true,
         src: "../images/Germany/Aachen/Aachen_DoStoBR146005.webp",
         alt: "Aachen 5x DoSto + BR146 005",
@@ -305,6 +324,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Dusseldorf.",
     photos: [
       {
+        series: "dusseldorf-photo-0",
         isMain: true,
         src: "../images/Germany/Dusseldorf/Dusseldorf_BR14657235xStadlerKISS.webp",
         alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
@@ -324,6 +344,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Luxembourg.",
     photos: [
       {
+        series: "luxembourg-photo-0",
         isMain: true,
         src: "../images/Luxembourg/Luxembourg/Luxembourg_TRAXX40185xTwindexxVario.webp",
         alt: "Luxembourg TRAXX 4018 + 5x Twindexx Vario",
@@ -343,6 +364,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in Roosendaal.",
     photos: [
       {
+        series: "roosendaal-photo-0",
         isMain: true,
         src: "../images/Netherlands/Roosendaal/Roosendaal_TRAXX1861217xI11TRAXX.webp",
         alt: "Roosendaal TRAXX 186 121 + 7x I11 + TRAXX",
@@ -363,6 +385,7 @@ window.STATIONS_DATA = {
     description: "Rail photography in London.",
     photos: [
       {
+        series: "london-photo-0",
         isMain: true,
         src: "../images/United Kingdom/London/London_Class3733206.webp",
         alt: "London Class 373 3206",
