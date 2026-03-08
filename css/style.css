@@ -938,6 +938,20 @@ body.station-lightbox-open {
   pointer-events: none;
   user-select: none;
 }
+
+.station-lightbox-date {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  display: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.station-lightbox-date .station-meta-number {
+  background: rgba(0, 92, 185, 0.72);
+}
+
 .station-lightbox-meta {
   position: absolute;
   left: 14px;
@@ -1566,6 +1580,11 @@ body.station-lightbox-open {
     max-width: calc(100% - 150px);
   }
 
+  .station-lightbox-date {
+    left: 10px;
+    top: 10px;
+  }
+
   .contact-grid,
   .contact-form-wrap,
   .home-split,
@@ -1885,7 +1904,6 @@ body.station-lightbox-open {
 .footer {
   padding-bottom: env(safe-area-inset-bottom);
 }
-
 
 
 

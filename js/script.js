@@ -446,6 +446,7 @@ function setActiveNavLink() {
       src: photo.src || "",
       alt: photo.alt || station.name,
       label: photo.label || station.name,
+      date: String(photo.date || "").trim(),
       consist,
       filterKeys: Array.from(
         new Set(consist.map((item) => item.filterKey).filter(Boolean)),
@@ -478,7 +479,7 @@ function setActiveNavLink() {
         .join("");
 
       return `
-        <div class="photo-card station-photo-card" data-vehicle-types="${esc(photo.filterKeys.join("|"))}">
+        <div class="photo-card station-photo-card" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}">
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
           ${chips ? `<div class="station-meta">${chips}</div>` : ""}
         </div>
@@ -552,6 +553,7 @@ function setActiveNavLink() {
     <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
     <div class="station-lightbox-media">
       <img src="" alt="" />
+      <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
@@ -559,6 +561,7 @@ function setActiveNavLink() {
   document.body.appendChild(lightbox);
 
   const lightboxImg = lightbox.querySelector(".station-lightbox-media img");
+  const lightboxDate = lightbox.querySelector(".station-lightbox-date");
   const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
 
@@ -568,11 +571,21 @@ function setActiveNavLink() {
     document.body.classList.remove("station-lightbox-open");
   }
 
-  function openLightbox(src, alt, metaHtml) {
+  function openLightbox(src, alt, metaHtml, dateLabel) {
     if (!lightboxImg) return;
 
     lightboxImg.src = src;
     lightboxImg.alt = alt || station.name;
+
+    if (lightboxDate) {
+      if (dateLabel) {
+        lightboxDate.innerHTML = `<span class="station-meta-number">${esc(dateLabel)}</span>`;
+        lightboxDate.style.display = "flex";
+      } else {
+        lightboxDate.innerHTML = "";
+        lightboxDate.style.display = "none";
+      }
+    }
 
     if (lightboxMeta) {
       lightboxMeta.innerHTML = metaHtml || "";
@@ -589,7 +602,8 @@ function setActiveNavLink() {
       img.addEventListener("click", () => {
         const card = img.closest(".station-photo-card");
         const meta = card?.querySelector(".station-meta");
-        openLightbox(img.src, img.alt, meta ? meta.innerHTML : "");
+        const photoDate = (card?.dataset.photoDate || "").trim();
+        openLightbox(img.src, img.alt, meta ? meta.innerHTML : "", photoDate);
       });
     },
   );
@@ -707,7 +721,6 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
 
 
 
