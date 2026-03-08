@@ -2245,22 +2245,22 @@ body.station-lightbox-open {
   }
 }
 
-/* Remove iOS white strip without darkening pages */
+/* Remove iOS white strip under footer */
 @media (max-width: 1024px) {
   .footer {
+    position: relative;
     margin-bottom: 0 !important;
     padding-bottom: calc(env(safe-area-inset-bottom) + 14px) !important;
   }
 
-  body::after {
+  .footer::after {
     content: "";
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: calc(-1 * env(safe-area-inset-bottom));
     height: env(safe-area-inset-bottom);
     background: #0b0b0b;
     pointer-events: none;
-    z-index: 2147483647;
   }
 }
