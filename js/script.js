@@ -291,7 +291,7 @@ function setActiveNavLink() {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const typeWithoutCount = lowerType.replace(/^\d+\s*[x�]\s*/, "");
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[xï¿½]\s*/, "");
     const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
@@ -330,7 +330,7 @@ function setActiveNavLink() {
       .replace(/\s+/g, " ");
     if (!normalized) return "";
 
-    const withoutCount = normalized.replace(/^\d+\s*[x�]\s*/i, "");
+    const withoutCount = normalized.replace(/^\d+\s*[xï¿½]\s*/i, "");
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
@@ -403,7 +403,7 @@ function setActiveNavLink() {
 
         if (!inferredType && kind === "traction") {
           const tractionLabel = label
-            .replace(/^\d+\s*[x�]\s*/i, "")
+            .replace(/^\d+\s*[xï¿½]\s*/i, "")
             .trim();
           const parts = tractionLabel.split(/\s+/).filter(Boolean);
           const first = parts[0] || "";
@@ -443,7 +443,7 @@ function setActiveNavLink() {
   }
 
   function formatTagLabel(label) {
-    return String(label || "").replace(/(\d+)\s*x\s*/gi, "$1� ");
+    return String(label || "").replace(/(\d+)\s*x\s*/gi, "$1&times; ");
   }
 
   function buildMetaHtml(consist) {
