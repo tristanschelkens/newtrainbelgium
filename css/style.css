@@ -28,7 +28,7 @@
 
 html {
   height: 100%;
-  background: #0b0b0b;
+  background: var(--bg);
 }
 
 body {
@@ -540,6 +540,10 @@ img {
 }
 
 .home-gallery h2 {
+  color: #fff;
+}
+
+.home-gallery p {
   color: #fff;
 }
 
@@ -1913,6 +1917,51 @@ body.station-lightbox-open {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+@media (max-width: 768px) {
+  html,
+  body,
+  main {
+    background: var(--bg);
+  }
+
+  .home-gallery h2,
+  .home-gallery p,
+  .home-gallery .muted {
+    color: #fff !important;
+  }
+
+  .nav-links {
+    width: min(78vw, 280px);
+    padding: 12px;
+    background: linear-gradient(180deg, #0e1117 0%, #0b0f15 100%);
+  }
+
+  .nav-links ul {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 12px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
 
 
 
