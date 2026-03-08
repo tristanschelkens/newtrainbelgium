@@ -92,6 +92,16 @@
         date: "8 March 2026",
         consist: [{ kind: "traction", label: "6x M7", active: true }],
       },
+         {
+        src: "../images/Belgium/Liege/IMG_4734.webp",
+        alt: "Liege HLE 1873",
+        label: "Liege",
+        numbers: "1873, 11819, 11814, 12906, 19820",
+        date: "8 March 2026",
+        consist: [{ kind: "traction", label: "HLE 1873", active: true },
+              { kind: "carriage", label: "4x I11", active: true },
+        ],
+      },
     ],
   },
   lier: {
