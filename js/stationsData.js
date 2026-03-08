@@ -53,6 +53,26 @@
       },
     ],
   },
+  eupen: {
+    name: "Eupen",
+    country: "Belgium",
+    description: "Rail photography in Eupen.",
+    photos: [
+      {
+        src: "../images/Belgium/Eupen/IMG_4764.HEIC",
+        alt: "Eupen HLE 1828 + 7x M7 + 1x I10 + HLE 1837",
+        label: "Eupen",
+        numbers: "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
+        date: "8 March 2026",
+        consist: [
+          { kind: "traction", label: "HLE 1828", active: true },
+          { kind: "carriage", label: "7x M7" },
+            { kind: "carriage", label: "I10" },
+          { kind: "traction", label: "HLE 1827", active: true },
+        ],
+      },
+    ],
+  },
   leuven: {
     name: "Leuven",
     country: "Belgium",
