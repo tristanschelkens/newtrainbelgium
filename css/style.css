@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --nmbs-blue: #005cb9;
   --nmbs-blue-dark: #004a94;
 
@@ -820,6 +820,25 @@ img {
   cursor: zoom-in;
 }
 
+
+.station-operator-badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
 .station-meta {
   position: absolute;
   left: 10px;
@@ -995,9 +1014,18 @@ body.station-lightbox-open {
   user-select: none;
 }
 
-.station-lightbox-date {
+.station-lightbox-operator {
   position: absolute;
   left: 14px;
+  top: 14px;
+  display: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.station-lightbox-date {
+  position: absolute;
+  right: 14px;
   top: 14px;
   display: none;
   pointer-events: none;
@@ -1637,7 +1665,7 @@ body.station-lightbox-open {
   }
 
   .station-lightbox-date {
-    left: 10px;
+    right: 10px;
     top: 10px;
   }
 

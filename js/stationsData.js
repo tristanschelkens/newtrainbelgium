@@ -7,6 +7,7 @@ window.STATIONS_DATA = {
       {
         series: "antwerp-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Antwerp/Antwerp_HLE1804M6.webp",
         alt: "Antwerp HLE 1804 + 8x M6",
         label: "Antwerp",
@@ -27,6 +28,7 @@ window.STATIONS_DATA = {
       {
         series: "brussels-midi-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB, ÖBB",
         src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.webp",
         alt: "Brussels-Midi HLE 1834 + NightJet",
         label: "Brussels-Midi",
@@ -47,6 +49,7 @@ window.STATIONS_DATA = {
       {
         series: "duffel-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Duffel/Duffel_M4HLE27.webp",
         alt: "Duffel 7x M4 + HLE 27",
         label: "Duffel",
@@ -67,6 +70,7 @@ window.STATIONS_DATA = {
       {
         series: "eupen-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Eupen/IMG_4764.webp",
         alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
@@ -83,6 +87,7 @@ window.STATIONS_DATA = {
       {
         series: "eupen-photo-0",
         isMain: false,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Eupen/imggzef.jpeg",
         alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
@@ -99,6 +104,7 @@ window.STATIONS_DATA = {
       {
         series: "eupen-photo-0",
         isMain: false,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Eupen/qsfqsfqs.jpeg",
         alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
@@ -122,6 +128,7 @@ window.STATIONS_DATA = {
       {
         series: "hasselt-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Hasselt/IMG_4814.webp",
         alt: "Hasselt HLE 1914 HLE 1853 + I10 + 8x M7 + HLE 1814",
         label: "Hasselt",
@@ -138,6 +145,7 @@ window.STATIONS_DATA = {
       {
         series: "hasselt-photo-0",
         isMain: false,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Hasselt/IMG_4796.webp",
         alt: "Hasselt HLE 1914 HLE 1853 + I10 + 8x M7 + HLE 1814",
         label: "Hasselt",
@@ -161,10 +169,11 @@ window.STATIONS_DATA = {
       {
         series: "leuven-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Leuven/Leuven_HLE1913M7.webp",
         alt: "Leuven HLE 1913 + 6x M7 ",
         label: "Leuven",
-        numbers: "",
+        numbers: "1913",
         date: "",
         consist: [
           { kind: "traction", label: "HLE 1913", active: true },
@@ -181,6 +190,7 @@ window.STATIONS_DATA = {
       {
         series: "liege-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Liege/Luik_AM08543.webp",
         alt: "Liege AM08543",
         label: "Liege",
@@ -191,6 +201,7 @@ window.STATIONS_DATA = {
       {
         series: "liege-photo-1",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Liege/IMG_4723.webp",
         alt: "Liege 6x m7",
         label: "Liege",
@@ -201,6 +212,7 @@ window.STATIONS_DATA = {
       {
         series: "liege-photo-2",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Liege/IMG_4734.webp",
         alt: "Liege HLE 1873",
         label: "Liege",
@@ -214,6 +226,7 @@ window.STATIONS_DATA = {
       {
         series: "liege-photo-3",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Liege/IMG_4742 2.webp",
         alt: "Liege MR08 504",
         label: "Liege",
@@ -224,6 +237,7 @@ window.STATIONS_DATA = {
       {
         series: "liege-photo-4",
         isMain: true,
+        operator: "Arriva",
         src: "../images/Belgium/Liege/IMG_4749.webp",
         alt: "Liege Stadler FLIRT 3",
         label: "Liege",
@@ -241,6 +255,7 @@ window.STATIONS_DATA = {
       {
         series: "lier-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Lier/Lier_M6HLE1819.webp",
         alt: "Lier 8x M6 + HLE 18/19",
         label: "Lier",
@@ -254,6 +269,7 @@ window.STATIONS_DATA = {
       {
         series: "lier-photo-1",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Lier/Lier_MW4124MW41MW41MW41.webp",
         alt: "Lier MW4124 + MW41 + MW41 + MW41",
         label: "Lier",
@@ -276,6 +292,7 @@ window.STATIONS_DATA = {
       {
         series: "luchtbal-photo-0",
         isMain: true,
+        operator: "Eurostar",
         src: "../images/Belgium/Luchtbal/Luchtbal_E320.webp",
         alt: "Luchtbal E320 4029",
         label: "Luchtbal",
@@ -293,6 +310,7 @@ window.STATIONS_DATA = {
       {
         series: "mechelen-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB, NS",
         src: "../images/Belgium/Mechelen/Mechelen_TRAXXICRTRAXX.webp",
         alt: "Mechelen TRAXX 186 205 + 7x ICR + TRAXX",
         label: "Mechelen",
@@ -314,6 +332,7 @@ window.STATIONS_DATA = {
       {
         series: "schaerbeek-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB",
         src: "../images/Belgium/Schaerbeek/Schaerbeek_Vectron1293181.webp",
         alt: "Schaerbeek Vectron 1293 181",
         label: "Schaerbeek",
@@ -333,6 +352,7 @@ window.STATIONS_DATA = {
       {
         series: "paris-photo-0",
         isMain: true,
+        operator: "SNCF",
         src: "../images/France/Paris/Paris_TGVDuplex245.jpeg",
         alt: "Paris TGV Duplex 245",
         label: "Paris",
@@ -350,6 +370,7 @@ window.STATIONS_DATA = {
       {
         series: "aachen-photo-0",
         isMain: true,
+        operator: "DB",
         src: "../images/Germany/Aachen/Aachen_DoStoBR146005.webp",
         alt: "Aachen 5x DoSto + BR146 005",
         label: "Aachen",
@@ -370,6 +391,7 @@ window.STATIONS_DATA = {
       {
         series: "dusseldorf-photo-0",
         isMain: true,
+        operator: "DB",
         src: "../images/Germany/Dusseldorf/Dusseldorf_BR14657235xStadlerKISS.webp",
         alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
         label: "Dusseldorf",
@@ -390,6 +412,7 @@ window.STATIONS_DATA = {
       {
         series: "luxembourg-photo-0",
         isMain: true,
+        operator: "CFL",
         src: "../images/Luxembourg/Luxembourg/Luxembourg_TRAXX40185xTwindexxVario.webp",
         alt: "Luxembourg TRAXX 4018 + 5x Twindexx Vario",
         label: "Luxembourg",
@@ -410,6 +433,7 @@ window.STATIONS_DATA = {
       {
         series: "roosendaal-photo-0",
         isMain: true,
+        operator: "NMBS/SNCB, NS",
         src: "../images/Netherlands/Roosendaal/Roosendaal_TRAXX1861217xI11TRAXX.webp",
         alt: "Roosendaal TRAXX 186 121 + 7x I11 + TRAXX",
         label: "Roosendaal",
@@ -431,6 +455,7 @@ window.STATIONS_DATA = {
       {
         series: "london-photo-0",
         isMain: true,
+        operator: "Eurostar",
         src: "../images/United Kingdom/London/London_Class3733206.webp",
         alt: "London Class 373 3206",
         label: "London",
@@ -441,6 +466,7 @@ window.STATIONS_DATA = {
       {
         series: "london-photo-1",
         isMain: true,
+        operator: "Great Western Railway",
         src: "../images/United Kingdom/London/qscqcc.jpeg",
         alt: "London Class 802 104",
         label: "London",
@@ -451,6 +477,7 @@ window.STATIONS_DATA = {
       {
         series: "london-photo-2",
         isMain: true,
+        operator: "Heatrow Express",
         src: "../images/United Kingdom/London/qscqsc.jpeg",
         alt: "London Class 387 140",
         label: "London",
@@ -461,8 +488,9 @@ window.STATIONS_DATA = {
       {
         series: "london-photo-3",
         isMain: true,
+        operator: "Great Western Railway",
         src: "../images/United Kingdom/London/qscqscc.jpeg",
-        alt: "London Class 387 140",
+        alt: "London Class 387 156",
         label: "London",
         numbers: "387 156, 156",
         date: "7 February 2026",

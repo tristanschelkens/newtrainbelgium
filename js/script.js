@@ -291,7 +291,7 @@ function setActiveNavLink() {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÂ¯Ã‚Â¿Ã‚Â½]\s*/, "");
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
     const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
@@ -330,7 +330,7 @@ function setActiveNavLink() {
       .replace(/\s+/g, " ");
     if (!normalized) return "";
 
-    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÂ¯Ã‚Â¿Ã‚Â½]\s*/i, "");
+    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
@@ -403,7 +403,7 @@ function setActiveNavLink() {
 
         if (!inferredType && kind === "traction") {
           const tractionLabel = label
-            .replace(/^\d+\s*[xÃƒÂ¯Ã‚Â¿Ã‚Â½]\s*/i, "")
+            .replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "")
             .trim();
           const parts = tractionLabel.split(/\s+/).filter(Boolean);
           const first = parts[0] || "";
@@ -479,6 +479,8 @@ function setActiveNavLink() {
       alt: photo.alt || station.name,
       label: photo.label || station.name,
       date: String(photo.date || "").trim(),
+      operator: String(photo.operator || "").trim(),
+      operatorKey: String(photo.operator || "").trim().toLowerCase(),
       series,
       explicitIsMain,
       consist,
@@ -527,8 +529,13 @@ function setActiveNavLink() {
 
   const cardsHtml = visiblePhotos
     .map((photo) => {
+      const operatorBadge = photo.operator
+        ? `<div class="station-operator-badge">${esc(photo.operator)}</div>`
+        : "";
+
       return `
-        <div class="photo-card station-photo-card" data-photo-index="${photo.sourceIndex}" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}">
+        <div class="photo-card station-photo-card" data-photo-index="${photo.sourceIndex}" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}" data-photo-operator="${esc(photo.operatorKey)}">
+          ${operatorBadge}
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
           ${photo.metaHtml ? `<div class="station-meta">${photo.metaHtml}</div>` : ""}
         </div>
@@ -603,6 +610,7 @@ function setActiveNavLink() {
       <button class="station-lightbox-nav prev" type="button" aria-label="Previous photo">&#10094;</button>
       <img src="" alt="" />
       <button class="station-lightbox-nav next" type="button" aria-label="Next photo">&#10095;</button>
+      <div class="station-lightbox-operator" aria-hidden="true"></div>
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
@@ -611,6 +619,7 @@ function setActiveNavLink() {
   document.body.appendChild(lightbox);
 
   const lightboxImg = lightbox.querySelector(".station-lightbox-media img");
+  const lightboxOperator = lightbox.querySelector(".station-lightbox-operator");
   const lightboxDate = lightbox.querySelector(".station-lightbox-date");
   const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
@@ -626,11 +635,21 @@ function setActiveNavLink() {
     document.body.classList.remove("station-lightbox-open");
   }
 
-  function openLightbox(src, alt, metaHtml, dateLabel) {
+  function openLightbox(src, alt, metaHtml, dateLabel, operatorLabel) {
     if (!lightboxImg) return;
 
     lightboxImg.src = src;
     lightboxImg.alt = alt || station.name;
+
+    if (lightboxOperator) {
+      if (operatorLabel) {
+        lightboxOperator.innerHTML = `<span class="station-meta-chip">${esc(operatorLabel)}</span>`;
+        lightboxOperator.style.display = "flex";
+      } else {
+        lightboxOperator.innerHTML = "";
+        lightboxOperator.style.display = "none";
+      }
+    }
 
     if (lightboxDate) {
       if (dateLabel) {
@@ -668,10 +687,15 @@ function setActiveNavLink() {
     currentSeriesPosition = pos >= 0 ? pos : 0;
 
     const photoDate = (photo.date || "").trim();
-    openLightbox(photo.src, photo.alt, photo.metaHtml || "", photoDate);
+    openLightbox(
+      photo.src,
+      photo.alt,
+      photo.metaHtml || "",
+      photoDate,
+      photo.operator || "",
+    );
     updateLightboxNav();
   }
-
   function openSiblingInSeries(step) {
     if (!Array.isArray(currentSeriesPool) || currentSeriesPool.length === 0) return;
     const count = currentSeriesPool.length;
