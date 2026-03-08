@@ -2126,7 +2126,7 @@ body.station-lightbox-open {
     min-width: 150px;
     justify-content: flex-end !important;
     text-align: right !important;
-    padding: 10px 14px !important;
+    padding: 10px 10px !important;
     margin-left: auto;
     border-radius: 14px;
   }
@@ -2156,9 +2156,9 @@ body.station-lightbox-open {
 
   /* Keep drawer tighter on mobile/tablet. */
   .nav-links {
-    width: min(60vw, 260px) !important;
-    max-width: 260px !important;
-    right: -280px !important;
+    width: min(42vw, 180px) !important;
+    max-width: 180px !important;
+    right: -200px !important;
     padding: 12px !important;
   }
 
@@ -2179,11 +2179,12 @@ body.station-lightbox-open {
   .nav-links a,
   .nav-links.active a {
     width: auto !important;
-    min-width: 150px !important;
+    min-width: 0 !important;
     margin-left: auto !important;
     justify-content: flex-end !important;
     text-align: right !important;
-    padding: 10px 14px !important;
+    padding: 10px 10px !important;
     border-radius: 14px !important;
+    font-size: 13px !important;
   }
 }
