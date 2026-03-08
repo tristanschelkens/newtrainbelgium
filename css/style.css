@@ -539,6 +539,14 @@ img {
   align-items: center;
 }
 
+.home-gallery h2 {
+  color: #fff;
+}
+
+.home-gallery .muted {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 /* ABOUT PAGE */
 .about-page {
   display: grid;
@@ -1904,7 +1912,6 @@ body.station-lightbox-open {
 .footer {
   padding-bottom: env(safe-area-inset-bottom);
 }
-
 
 
 
