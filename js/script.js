@@ -289,7 +289,8 @@ function setActiveNavLink() {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const normalizedType = lowerType.replace(/\s+/g, " ").trim();
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[x×]\s*/, "");
+    const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
 
@@ -703,7 +704,6 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
 
 
 
