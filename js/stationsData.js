@@ -120,6 +120,15 @@
         consist: [{ kind: "traction", label: "Stadler FLIRT 3", active: true },
         ],
       },
+            {
+        src: "../images/Belgium/Liege/IMG_4749.webp",
+        alt: "Liege Stadler FLIRT 3",
+        label: "Liege",
+        numbers: "554",
+        date: "8 March 2026",
+        consist: [{ kind: "traction", label: "Stadler FLIRT 3", active: true },
+        ],
+      },
     ],
   },
   lier: {
