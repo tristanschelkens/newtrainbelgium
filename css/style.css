@@ -2126,7 +2126,7 @@ body.station-lightbox-open {
     min-width: 150px;
     justify-content: flex-end !important;
     text-align: right !important;
-    padding: 10px 10px !important;
+    padding: 8px 8px !important;
     margin-left: auto;
     border-radius: 14px;
   }
@@ -2156,9 +2156,9 @@ body.station-lightbox-open {
 
   /* Keep drawer tighter on mobile/tablet. */
   .nav-links {
-    width: min(42vw, 180px) !important;
-    max-width: 180px !important;
-    right: -200px !important;
+    width: min(32vw, 140px) !important;
+    max-width: 140px !important;
+    right: -160px !important;
     padding: 12px !important;
   }
 
@@ -2183,8 +2183,24 @@ body.station-lightbox-open {
     margin-left: auto !important;
     justify-content: flex-end !important;
     text-align: right !important;
-    padding: 10px 10px !important;
+    padding: 8px 8px !important;
     border-radius: 14px !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Show brand subtitle on phone */
+@media (max-width: 768px) {
+  .brand-sub {
+    display: block !important;
+    font-size: 9px !important;
+    line-height: 1.1;
+    margin-top: 2px;
+    color: rgba(255, 255, 255, 0.82) !important;
+    letter-spacing: 0.2px;
+  }
+
+  .navbar.scrolled .brand-sub {
+    color: rgba(17, 17, 17, 0.65) !important;
   }
 }
