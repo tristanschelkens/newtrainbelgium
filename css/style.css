@@ -2211,6 +2211,13 @@ body.station-lightbox-open {
   .nav-links {
     display: flex;
     flex-direction: column;
+    top: 74px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100vh - 90px) !important;
+    bottom: auto !important;
+    border-bottom-left-radius: 16px;
+    overflow-y: auto !important;
   }
 
   .nav-links .close-btn {
@@ -2235,5 +2242,18 @@ body.station-lightbox-open {
 
   .nav-links ul {
     margin-top: 52px !important;
+  }
+}
+
+/* Remove iOS white strip globally */
+@media (max-width: 1024px) {
+  html,
+  body {
+    background: #0b0b0b !important;
+  }
+
+  .footer {
+    margin-bottom: 0 !important;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 14px) !important;
   }
 }
