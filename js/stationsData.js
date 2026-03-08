@@ -84,7 +84,7 @@ window.STATIONS_DATA = {
         series: "eupen-photo-0",
         isMain: true,
         src: "../images/Belgium/Eupen/IMG_4764.webp",
-        alt: "Eupen HLE 1828 + 1x I10+ 7x M7 + HLE 1837",
+        alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
         numbers:
           "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
@@ -98,9 +98,9 @@ window.STATIONS_DATA = {
       },
       {
         series: "eupen-photo-0",
-        isMain: true,
+        isMain: false,
         src: "../images/Belgium/Eupen/WhatsApp Image 2026-03-08 at 21.31.13",
-        alt: "Eupen HLE 1828 + 1x I10+ 7x M7 + HLE 1837",
+        alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
         numbers:
           "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
@@ -114,9 +114,9 @@ window.STATIONS_DATA = {
       },
       {
         series: "eupen-photo-0",
-        isMain: true,
+        isMain: false,
         src: "../images/Belgium/Eupen/WhatsApp Image 2026-03-08 at 21.31.23",
-        alt: "Eupen HLE 1828 + 1x I10+ 7x M7 + HLE 1837",
+        alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
         numbers:
           "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
