@@ -68,22 +68,6 @@ window.STATIONS_DATA = {
         series: "eupen-photo-0",
         isMain: true,
         src: "../images/Belgium/Eupen/IMG_4764.webp",
-        alt: "Eupen HLE 1828 + 7x M7 + 1x I10 + HLE 1837",
-        label: "Eupen",
-        numbers:
-          "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
-        date: "8 March 2026",
-        consist: [
-          { kind: "traction", label: "HLE 1828", active: true },
-          { kind: "carriage", label: "7x M7" },
-          { kind: "carriage", label: "I10" },
-          { kind: "traction", label: "HLE 1837", active: true },
-        ],
-      },
-      {
-        series: "eupen-photo-0",
-        isMain: true,
-        src: "../images/Belgium/Eupen/IMG_4764.webp",
         alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
         numbers:
