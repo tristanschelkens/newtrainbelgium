@@ -822,10 +822,6 @@ img {
 
 
 .station-operator-badge {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  z-index: 2;
   display: inline-flex;
   align-items: center;
   padding: 5px 9px;
@@ -838,6 +834,18 @@ img {
   line-height: 1;
   pointer-events: none;
   user-select: none;
+}
+
+.station-operator-stack {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: calc(100% - 20px);
+  pointer-events: none;
 }
 .station-meta {
   position: absolute;
@@ -1019,6 +1027,9 @@ body.station-lightbox-open {
   left: 14px;
   top: 14px;
   display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: calc(100% - 180px);
   pointer-events: none;
   user-select: none;
 }
