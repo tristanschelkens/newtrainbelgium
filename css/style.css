@@ -1943,6 +1943,44 @@ body.station-lightbox-open {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+/* Final mobile overrides */
+@media (max-width: 768px) {
+  .home-gallery {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .home-gallery::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #05070b;
+    z-index: -1;
+  }
+
+  .home-gallery h2,
+  .home-gallery p,
+  .home-gallery .muted {
+    color: #fff !important;
+  }
+
+  .nav-links.active ul {
+    align-items: stretch !important;
+  }
+
+  .nav-links.active a {
+    display: flex !important;
+    justify-content: flex-end !important;
+    text-align: right !important;
+    padding-right: 14px !important;
+  }
+
+  .nav-links.active a .nav-label {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
 @media (max-width: 768px) {
   html,
   body,
@@ -1988,7 +2026,6 @@ body.station-lightbox-open {
     background: rgba(255, 255, 255, 0.08);
   }
 }
-
 
 
 
