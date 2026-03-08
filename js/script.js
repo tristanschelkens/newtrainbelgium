@@ -1,4 +1,4 @@
-ï»¿function toggleMenu() {
+function toggleMenu() {
   const nav = document.getElementById("navLinks");
   const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
@@ -291,7 +291,7 @@ function setActiveNavLink() {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃ—]\s*/, "");
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[x×]\s*/, "");
     const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
@@ -330,7 +330,7 @@ function setActiveNavLink() {
       .replace(/\s+/g, " ");
     if (!normalized) return "";
 
-    const withoutCount = normalized.replace(/^\d+\s*[xÃ—]\s*/i, "");
+    const withoutCount = normalized.replace(/^\d+\s*[x×]\s*/i, "");
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
@@ -403,7 +403,7 @@ function setActiveNavLink() {
 
         if (!inferredType && kind === "traction") {
           const tractionLabel = label
-            .replace(/^\d+\s*[xÃ—]\s*/i, "")
+            .replace(/^\d+\s*[x×]\s*/i, "")
             .trim();
           const parts = tractionLabel.split(/\s+/).filter(Boolean);
           const first = parts[0] || "";
@@ -442,8 +442,33 @@ function setActiveNavLink() {
       .filter(Boolean);
   }
 
-  const photos = station.photos.map((photo) => {
+  function formatTagLabel(label) {
+    return String(label || "").replace(/(\d+)\s*x\s*/gi, "$1× ");
+  }
+
+  function buildMetaHtml(consist) {
+    return consist
+      .map((item, index) => {
+        const cls =
+          item.kind === "traction"
+            ? item.active
+              ? "station-meta-chip"
+              : "station-meta-inactive"
+            : "station-meta-carriage";
+
+        const plus =
+          index < consist.length - 1
+            ? '<span class="station-meta-plus">+</span>'
+            : "";
+
+        return `<span class="${cls}">${esc(formatTagLabel(item.label))}</span>${plus}`;
+      })
+      .join("");
+  }
+
+  const photos = station.photos.map((photo, sourceIndex) => {
     const consist = normalizeConsist(photo);
+    const isMain = typeof photo.isMain === "boolean" ? photo.isMain : sourceIndex === 0;
 
     return {
       src: photo.src || "",
@@ -451,45 +476,29 @@ function setActiveNavLink() {
       label: photo.label || station.name,
       date: String(photo.date || "").trim(),
       consist,
+      isMain,
+      metaHtml: buildMetaHtml(consist),
+      sourceIndex,
       filterKeys: Array.from(
         new Set(consist.map((item) => item.filterKey).filter(Boolean)),
       ),
     };
   });
 
-  const cardsHtml = photos
-    .map((photo, index) => {
-      function formatTagLabel(label) {
-        return String(label || "").replace(/(\d+)\s*x\s*/gi, "$1Ã— ");
-      }
+  const visiblePhotos = photos.some((photo) => photo.isMain)
+    ? photos.filter((photo) => photo.isMain)
+    : photos.slice(0, 1);
 
-      const chips = photo.consist
-        .map((item, index) => {
-          const cls =
-            item.kind === "traction"
-              ? item.active
-                ? "station-meta-chip"
-                : "station-meta-inactive"
-              : "station-meta-carriage";
-
-          const plus =
-            index < photo.consist.length - 1
-              ? '<span class="station-meta-plus">+</span>'
-              : "";
-
-          return `<span class="${cls}">${esc(formatTagLabel(item.label))}</span>${plus}`;
-        })
-        .join("");
-
+  const cardsHtml = visiblePhotos
+    .map((photo) => {
       return `
-        <div class="photo-card station-photo-card" data-photo-index="${index}" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}">
+        <div class="photo-card station-photo-card" data-photo-index="${photo.sourceIndex}" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}">
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
-          ${chips ? `<div class="station-meta">${chips}</div>` : ""}
+          ${photo.metaHtml ? `<div class="station-meta">${photo.metaHtml}</div>` : ""}
         </div>
       `;
     })
     .join("");
-
   grid.innerHTML = cardsHtml;
 
   const cards = Array.from(grid.querySelectorAll(".station-photo-card"));
@@ -512,7 +521,7 @@ function setActiveNavLink() {
   }
 
   const uniqueVehicleTypes = Array.from(
-    new Set(photos.flatMap((photo) => photo.filterKeys).filter(Boolean)),
+    new Set(visiblePhotos.flatMap((photo) => photo.filterKeys).filter(Boolean)),
   );
 
   if (vehicleFilters && uniqueVehicleTypes.length > 1) {
@@ -617,11 +626,9 @@ function setActiveNavLink() {
     currentPhotoIndex = ((index % count) + count) % count;
 
     const photo = photos[currentPhotoIndex];
-    const card = cards[currentPhotoIndex];
-    const meta = card?.querySelector(".station-meta");
     const photoDate = (photo.date || "").trim();
 
-    openLightbox(photo.src, photo.alt, meta ? meta.innerHTML : "", photoDate);
+    openLightbox(photo.src, photo.alt, photo.metaHtml || "", photoDate);
     updateLightboxNav();
   }
 
@@ -774,6 +781,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
