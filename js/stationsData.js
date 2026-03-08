@@ -99,7 +99,7 @@ window.STATIONS_DATA = {
       {
         series: "eupen-photo-0",
         isMain: false,
-        src: "../images/Belgium/Eupen/WhatsApp Image 2026-03-08 at 21.31.13",
+        src: "../images/Belgium/Eupen/imggzef",
         alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
         numbers:
@@ -115,7 +115,7 @@ window.STATIONS_DATA = {
       {
         series: "eupen-photo-0",
         isMain: false,
-        src: "../images/Belgium/Eupen/WhatsApp Image 2026-03-08 at 21.31.23",
+        src: "../images/Belgium/Eupen/qsfqsfqs",
         alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
         label: "Eupen",
         numbers:
