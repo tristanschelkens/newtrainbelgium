@@ -79,7 +79,7 @@
     description: "Rail photography in Hasselt.",
     photos: [
       {
-        src: "../images/Belgium/IMG_4814.webp",
+        src: "../images/Belgium/Hasselt/IMG_4814.webp",
         alt: "Hasselt HLE 1914",
         label: "Hasselt",
         numbers: "",
