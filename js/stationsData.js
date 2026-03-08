@@ -67,7 +67,7 @@
         consist: [
           { kind: "traction", label: "HLE 1828", active: true },
           { kind: "carriage", label: "7x M7", active: true },
-          { kind: "carriage", label: "1x I10", active: true },
+          { kind: "carriage", label: "I10" },
           { kind: "traction", label: "HLE 1837", active: true },
         ],
       },
