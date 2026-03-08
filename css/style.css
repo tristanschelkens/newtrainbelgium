@@ -933,6 +933,33 @@ body.station-lightbox-open {
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
 }
 
+.station-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.station-lightbox-nav.prev {
+  left: 12px;
+}
+
+.station-lightbox-nav.next {
+  right: 12px;
+}
+
 .station-lightbox.is-open .station-lightbox-media {
   transform: scale(1);
 }
@@ -2026,6 +2053,5 @@ body.station-lightbox-open {
     background: rgba(255, 255, 255, 0.08);
   }
 }
-
 
 

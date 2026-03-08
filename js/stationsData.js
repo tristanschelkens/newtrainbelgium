@@ -73,6 +73,29 @@
       },
     ],
   },
+  hasselt: {
+    name: "Hasselt",
+    country: "Belgium",
+    description: "Rail photography in Hasselt.",
+    photos: [
+      {
+        src: "../images/Belgium/IMG_4814.webp",
+        alt: "Hasselt HLE 1914",
+        label: "Hasselt",
+        numbers: "",
+        date: "",
+        consist: [{ kind: "traction", label: "HLE 1914", active: true }],
+      },
+      {
+        src: "../images/Belgium/Hasselt/IMG_4796.webp",
+        alt: "Hasselt HLE 1814",
+        label: "Hasselt",
+        numbers: "",
+        date: "",
+        consist: [{ kind: "traction", label: "HLE 1814", active: true }],
+      },
+    ],
+  },
   leuven: {
     name: "Leuven",
     country: "Belgium",

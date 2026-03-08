@@ -145,6 +145,7 @@ function setActiveNavLink() {
     "brussels-midi": [50.8356, 4.3366],
     duffel: [51.0959, 4.5167],
     eupen: [50.6299, 6.0369],
+    hasselt: [50.9307, 5.3325],
     leuven: [50.8817, 4.7154],
     liege: [50.6246, 5.5662],
     lier: [51.1321, 4.5706],
@@ -457,7 +458,7 @@ function setActiveNavLink() {
   });
 
   const cardsHtml = photos
-    .map((photo) => {
+    .map((photo, index) => {
       function formatTagLabel(label) {
         return String(label || "").replace(/(\d+)\s*x\s*/gi, "$1× ");
       }
@@ -481,7 +482,7 @@ function setActiveNavLink() {
         .join("");
 
       return `
-        <div class="photo-card station-photo-card" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}">
+        <div class="photo-card station-photo-card" data-photo-index="${index}" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}">
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
           ${chips ? `<div class="station-meta">${chips}</div>` : ""}
         </div>
@@ -554,7 +555,9 @@ function setActiveNavLink() {
   lightbox.innerHTML = `
     <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
     <div class="station-lightbox-media">
+      <button class="station-lightbox-nav prev" type="button" aria-label="Previous photo">&#10094;</button>
       <img src="" alt="" />
+      <button class="station-lightbox-nav next" type="button" aria-label="Next photo">&#10095;</button>
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
@@ -566,6 +569,9 @@ function setActiveNavLink() {
   const lightboxDate = lightbox.querySelector(".station-lightbox-date");
   const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
+  const prevBtn = lightbox.querySelector(".station-lightbox-nav.prev");
+  const nextBtn = lightbox.querySelector(".station-lightbox-nav.next");
+  let currentPhotoIndex = 0;
 
   function closeLightbox() {
     lightbox.classList.remove("is-open");
@@ -599,19 +605,52 @@ function setActiveNavLink() {
     document.body.classList.add("station-lightbox-open");
   }
 
+  function updateLightboxNav() {
+    const hasMultiple = photos.length > 1;
+    if (prevBtn) prevBtn.style.display = hasMultiple ? "inline-flex" : "none";
+    if (nextBtn) nextBtn.style.display = hasMultiple ? "inline-flex" : "none";
+  }
+
+  function openLightboxByIndex(index) {
+    if (photos.length === 0) return;
+    const count = photos.length;
+    currentPhotoIndex = ((index % count) + count) % count;
+
+    const photo = photos[currentPhotoIndex];
+    const card = cards[currentPhotoIndex];
+    const meta = card?.querySelector(".station-meta");
+    const photoDate = (photo.date || "").trim();
+
+    openLightbox(photo.src, photo.alt, meta ? meta.innerHTML : "", photoDate);
+    updateLightboxNav();
+  }
+
   Array.from(grid.querySelectorAll(".station-photo-card img")).forEach(
     (img) => {
       img.addEventListener("click", () => {
         const card = img.closest(".station-photo-card");
-        const meta = card?.querySelector(".station-meta");
-        const photoDate = (card?.dataset.photoDate || "").trim();
-        openLightbox(img.src, img.alt, meta ? meta.innerHTML : "", photoDate);
+        const index = Number(card?.dataset.photoIndex || 0);
+        openLightboxByIndex(index);
       });
     },
   );
 
   if (closeBtn) {
     closeBtn.addEventListener("click", closeLightbox);
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openLightboxByIndex(currentPhotoIndex - 1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openLightboxByIndex(currentPhotoIndex + 1);
+    });
   }
 
   lightbox.addEventListener("click", (e) => {
@@ -621,8 +660,20 @@ function setActiveNavLink() {
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+    if (!lightbox.classList.contains("is-open")) return;
+
+    if (e.key === "Escape") {
       closeLightbox();
+      return;
+    }
+
+    if (e.key === "ArrowLeft") {
+      openLightboxByIndex(currentPhotoIndex - 1);
+      return;
+    }
+
+    if (e.key === "ArrowRight") {
+      openLightboxByIndex(currentPhotoIndex + 1);
     }
   });
 })();
@@ -723,7 +774,6 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
 
 
 
