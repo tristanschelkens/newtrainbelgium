@@ -2131,3 +2131,59 @@ body.station-lightbox-open {
     border-radius: 14px;
   }
 }
+
+/* Hard mobile fix (conflict-proof) */
+@media (max-width: 1024px) {
+  /* Remove fragile pseudo strip and force full-bleed dark block. */
+  .home-gallery {
+    background: #05070b !important;
+    box-shadow: 0 0 0 100vmax #05070b !important;
+    clip-path: inset(0 -100vmax) !important;
+    position: relative !important;
+    isolation: isolate !important;
+  }
+
+  .home-gallery::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .home-gallery h2,
+  .home-gallery p,
+  .home-gallery .muted {
+    color: #fff !important;
+  }
+
+  /* Keep drawer tighter on mobile/tablet. */
+  .nav-links {
+    width: min(60vw, 260px) !important;
+    max-width: 260px !important;
+    right: -280px !important;
+    padding: 12px !important;
+  }
+
+  .nav-links.active {
+    right: 0 !important;
+  }
+
+  .nav-links ul,
+  .nav-links.active ul {
+    align-items: flex-end !important;
+    gap: 10px !important;
+  }
+
+  .nav-links li {
+    width: auto !important;
+  }
+
+  .nav-links a,
+  .nav-links.active a {
+    width: auto !important;
+    min-width: 150px !important;
+    margin-left: auto !important;
+    justify-content: flex-end !important;
+    text-align: right !important;
+    padding: 10px 14px !important;
+    border-radius: 14px !important;
+  }
+}
