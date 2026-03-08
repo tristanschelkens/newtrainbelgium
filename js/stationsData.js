@@ -332,7 +332,7 @@ window.STATIONS_DATA = {
       {
         series: "schaerbeek-photo-0",
         isMain: true,
-        operator: "NMBS/SNCB",
+        operator: "ÖBB",
         src: "../images/Belgium/Schaerbeek/Schaerbeek_Vectron1293181.webp",
         alt: "Schaerbeek Vectron 1293 181",
         label: "Schaerbeek",

@@ -2094,3 +2094,40 @@ body.station-lightbox-open {
 }
 
 
+
+/* Final mobile polish */
+@media (max-width: 768px) {
+  /* Keep the featured block full-bleed dark on mobile (no split white column). */
+  .home-gallery::before {
+    left: 50% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    transform: translateX(-50%) !important;
+    inset: auto !important;
+    background: #05070b !important;
+  }
+
+  /* Tighter slide menu width + compact right-aligned action chips. */
+  .nav-links {
+    width: clamp(190px, 34vw, 250px) !important;
+    padding: 12px !important;
+  }
+
+  .nav-links ul,
+  .nav-links.active ul {
+    align-items: flex-end !important;
+    gap: 10px !important;
+  }
+
+  .nav-links a,
+  .nav-links.active a {
+    width: fit-content !important;
+    min-width: 150px;
+    justify-content: flex-end !important;
+    text-align: right !important;
+    padding: 10px 14px !important;
+    margin-left: auto;
+    border-radius: 14px;
+  }
+}
