@@ -399,7 +399,10 @@ function setActiveNavLink() {
         let inferredNumber = explicitNumber;
 
         if (!inferredType && kind === "traction") {
-          const parts = label.split(/\s+/).filter(Boolean);
+          const tractionLabel = label
+            .replace(/^\d+\s*[x×]\s*/i, "")
+            .trim();
+          const parts = tractionLabel.split(/\s+/).filter(Boolean);
           const first = parts[0] || "";
           const firstLower = first.toLowerCase();
 
@@ -704,7 +707,6 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
 
 
 
