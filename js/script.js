@@ -144,6 +144,7 @@ function setActiveNavLink() {
     antwerp: [51.2172, 4.4211],
     "brussels-midi": [50.8356, 4.3366],
     duffel: [51.0959, 4.5167],
+    eupen: [50.6299, 6.0369],
     leuven: [50.8817, 4.7154],
     liege: [50.6246, 5.5662],
     lier: [51.1321, 4.5706],
@@ -346,6 +347,7 @@ function setActiveNavLink() {
     if (key === "hle27") return "HLE 27";
     if (key === "hle28") return "HLE 28";
     if (key === "hle") return "HLE";
+    if (key === "stadler" || key === "stadler flirt") return "FLIRT 3";
     return key.toUpperCase();
   }
 
@@ -721,8 +723,6 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
-
 
 
 
