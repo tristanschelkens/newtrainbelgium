@@ -788,14 +788,52 @@ function setActiveNavLink() {
     "Brussel-Centraal",
     "Brussel-Noord",
     "Brussel-Zuid",
-    "Gent-Sint-Pieters",
-    "Leuven",
-    "Luik-Guillemins",
-    "Mechelen",
+    "Aalst",
+    "Aarschot",
+    "Berchem",
+    "Bergen",
+    "Blankenberge",
     "Brugge",
-    "Namur",
+    "Charleroi-Centraal",
+    "De Panne",
+    "Dendermonde",
+    "Diest",
+    "Dinant",
+    "Doornik",
+    "Eupen",
+    "Gent-Sint-Pieters",
+    "Genk",
+    "Halle",
+    "Leuven",
+    "Herentals",
+    "Luik-Guillemins",
     "Hasselt",
     "Kortrijk",
+    "Landen",
+    "Lier",
+    "Lokeren",
+    "Louvain-la-Neuve",
+    "Marche-en-Famenne",
+    "Mechelen",
+    "Mol",
+    "Mons",
+    "Mouscron",
+    "Namur",
+    "Neerpelt",
+    "Nivelles",
+    "Noorderkempen",
+    "Oostende",
+    "Ottignies",
+    "Poperinge",
+    "Roeselare",
+    "Ronse",
+    "Sint-Niklaas",
+    "Spa-Geronstere",
+    "Tienen",
+    "Tongeren",
+    "Turnhout",
+    "Verviers-Centraal",
+    "Waregem",
   ];
   const BELGIUM_BOUNDS = [
     [49.45, 2.4],
@@ -803,11 +841,11 @@ function setActiveNavLink() {
   ];
   const MAP_CENTER = [50.7, 4.6];
   const AUTO_REFRESH_MS = 60000;
-  const DEPARTURES_PER_STATION = 4;
-  const MAX_VEHICLES = 18;
-  const LIVEBOARD_BATCH_SIZE = 3;
-  const VEHICLE_BATCH_SIZE = 4;
-  const BATCH_DELAY_MS = 1050;
+  const DEPARTURES_PER_STATION = 6;
+  const MAX_VEHICLES = 120;
+  const LIVEBOARD_BATCH_SIZE = 6;
+  const VEHICLE_BATCH_SIZE = 8;
+  const BATCH_DELAY_MS = 700;
 
   const map = L.map(mapEl, {
     scrollWheelZoom: true,
@@ -1152,9 +1190,19 @@ function setActiveNavLink() {
   function renderTrains(trains) {
     trainsLayer.clearLayers();
     hubsLayer.clearLayers();
+    const stacks = new Map();
 
     trains.forEach((train) => {
-      const marker = L.marker([train.position.lat, train.position.lng], {
+      const stackKey = `${train.position.lat.toFixed(4)},${train.position.lng.toFixed(4)}`;
+      const stackIndex = stacks.get(stackKey) || 0;
+      stacks.set(stackKey, stackIndex + 1);
+
+      const angle = stackIndex * 0.9;
+      const radius = stackIndex === 0 ? 0 : 0.012 + stackIndex * 0.0025;
+      const displayLat = train.position.lat + Math.sin(angle) * radius;
+      const displayLng = train.position.lng + Math.cos(angle) * radius;
+
+      const marker = L.marker([displayLat, displayLng], {
         icon: trainIcon,
         title: train.shortName,
       }).addTo(trainsLayer);
