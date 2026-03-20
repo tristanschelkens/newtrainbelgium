@@ -1,0 +1,19 @@
+{
+  "updatedAt": "2026-03-20T20:15:00+01:00",
+  "trains": [
+    {
+      "id": "BE.NMBS.IC1234",
+      "shortName": "IC1234",
+      "origin": "Oostende",
+      "destination": "Eupen",
+      "lat": 50.8467,
+      "lng": 4.3525,
+      "status": "Between stations",
+      "previousStop": "Brussel-Centraal",
+      "nextStop": "Brussel-Noord",
+      "delayMinutes": 2,
+      "timestamp": 1774034100,
+      "progress": 0.45
+    }
+  ]
+}

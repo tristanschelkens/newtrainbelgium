@@ -781,6 +781,7 @@ function setActiveNavLink() {
   const trainCountLabel = document.getElementById("liveMapTrainCount");
   const updatedAtLabel = document.getElementById("liveMapUpdatedAt");
   const messageEl = document.getElementById("liveMapMessage");
+  const FULL_FEED_URL = "../data/live-trains.json";
 
   const HUB_STATIONS = [
     "Antwerpen-Centraal",
@@ -1101,6 +1102,53 @@ function setActiveNavLink() {
     `;
   }
 
+  function normalizeFeedTrain(train) {
+    const lat = Number(train?.lat);
+    const lng = Number(train?.lng);
+    if (!isBelgiumCoord(lat, lng)) return null;
+
+    const status = String(train?.status || "Live").trim() || "Live";
+    const currentSegment = String(train?.currentSegment || train?.nextStop || "").trim();
+
+    return {
+      id: String(train?.id || train?.shortName || `${lat},${lng}`),
+      shortName: String(train?.shortName || train?.id || "Train"),
+      origin: String(train?.origin || "Unknown"),
+      destination: String(train?.destination || "Unknown"),
+      timestamp: toNumber(train?.timestamp),
+      delayMinutes: Math.round(toNumber(train?.delayMinutes || train?.delay)),
+      sourceStation: String(train?.sourceStation || ""),
+      sourceCoords: Array.isArray(train?.sourceCoords) ? train.sourceCoords : null,
+      position: {
+        lat,
+        lng,
+        status,
+        previousStop: { name: String(train?.previousStop || "") },
+        nextStop: { name: String(train?.nextStop || currentSegment || "") },
+        progress: clamp(Number(train?.progress || 0), 0, 1),
+      },
+    };
+  }
+
+  async function fetchFullFeed(signal) {
+    try {
+      const data = await fetchJson(FULL_FEED_URL, signal);
+      const trains = toArray(data?.trains)
+        .map(normalizeFeedTrain)
+        .filter(Boolean);
+
+      if (trains.length === 0) return null;
+
+      return {
+        trains,
+        updatedAt: data?.updatedAt || data?.timestamp || null,
+      };
+    } catch (err) {
+      if (err?.name === "AbortError") throw err;
+      return null;
+    }
+  }
+
   function renderTrains(trains) {
     trainsLayer.clearLayers();
     hubsLayer.clearLayers();
@@ -1264,6 +1312,31 @@ function setActiveNavLink() {
     setStatus("Loading...");
 
     try {
+      const fullFeed = await fetchFullFeed(currentController.signal);
+      if (requestId !== activeRequestId) return;
+
+      if (fullFeed) {
+        renderTrains(fullFeed.trains);
+        setStatus("Live");
+        setMessage(
+          "The map is using a central live feed for faster full-network loading.",
+          false,
+        );
+
+        if (updatedAtLabel) {
+          updatedAtLabel.textContent = fullFeed.updatedAt
+            ? formatRelativeUpdate(new Date(fullFeed.updatedAt))
+            : formatRelativeUpdate(new Date());
+        }
+
+        return;
+      }
+
+      setMessage(
+        "No central full-network feed detected, so the page is using the slower estimated realtime fallback.",
+        false,
+      );
+
       const vehicles = await collectDepartures(currentController.signal);
       if (requestId !== activeRequestId) return;
 
