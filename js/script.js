@@ -802,9 +802,11 @@ function setActiveNavLink() {
   ];
   const MAP_CENTER = [50.7, 4.6];
   const AUTO_REFRESH_MS = 60000;
-  const REQUEST_SPACING_MS = 380;
   const DEPARTURES_PER_STATION = 4;
-  const MAX_VEHICLES = 28;
+  const MAX_VEHICLES = 18;
+  const LIVEBOARD_BATCH_SIZE = 3;
+  const VEHICLE_BATCH_SIZE = 4;
+  const BATCH_DELAY_MS = 1050;
 
   const map = L.map(mapEl, {
     scrollWheelZoom: true,
@@ -862,6 +864,29 @@ function setActiveNavLink() {
     return new Promise((resolve) => {
       window.setTimeout(resolve, ms);
     });
+  }
+
+  async function runInBatches(items, batchSize, delayMs, worker, onBatchDone) {
+    const results = [];
+
+    for (let index = 0; index < items.length; index += batchSize) {
+      const batch = items.slice(index, index + batchSize);
+      const batchResults = await Promise.all(
+        batch.map((item, batchIndex) => worker(item, index + batchIndex)),
+      );
+
+      results.push(...batchResults);
+
+      if (typeof onBatchDone === "function") {
+        onBatchDone(batchResults, index, items.length);
+      }
+
+      if (index + batchSize < items.length && delayMs > 0) {
+        await wait(delayMs);
+      }
+    }
+
+    return results;
   }
 
   function clamp(value, min, max) {
@@ -1108,49 +1133,53 @@ function setActiveNavLink() {
   async function collectDepartures(signal) {
     const vehicles = new Map();
 
-    for (let index = 0; index < HUB_STATIONS.length; index += 1) {
-      const station = HUB_STATIONS[index];
-      setStatus(`Reading ${station}...`);
+    await runInBatches(
+      HUB_STATIONS,
+      LIVEBOARD_BATCH_SIZE,
+      BATCH_DELAY_MS,
+      async (station) => {
+        setStatus(`Reading ${station}...`);
 
-      if (index > 0) {
-        await wait(REQUEST_SPACING_MS);
-      }
+        try {
+          const data = await fetchJson(
+            `https://api.irail.be/liveboard/?station=${encodeURIComponent(station)}&format=json&lang=en&alerts=false`,
+            signal,
+          );
 
-      let data = null;
+          return { station, data };
+        } catch (err) {
+          if (err?.name === "AbortError") throw err;
 
-      try {
-        data = await fetchJson(
-          `https://api.irail.be/liveboard/?station=${encodeURIComponent(station)}&format=json&lang=en&alerts=false`,
-          signal,
-        );
-      } catch (err) {
-        if (err?.name === "AbortError") throw err;
+          console.error("Liveboard request failed:", station, err);
+          return null;
+        }
+      },
+      (batchResults) => {
+        batchResults.filter(Boolean).forEach((entry) => {
+          const { station, data } = entry;
+          const departures = toArray(data?.departures?.departure)
+            .filter((departure) => Number(departure?.canceled) !== 1)
+            .slice(0, DEPARTURES_PER_STATION);
 
-        console.error("Liveboard request failed:", station, err);
-        continue;
-      }
+          departures.forEach((departure) => {
+            const vehicleId = String(departure?.vehicle || "").trim();
+            if (!vehicleId || vehicles.has(vehicleId)) return;
 
-      const departures = toArray(data?.departures?.departure)
-        .filter((departure) => Number(departure?.canceled) !== 1)
-        .slice(0, DEPARTURES_PER_STATION);
-
-      departures.forEach((departure) => {
-        const vehicleId = String(departure?.vehicle || "").trim();
-        if (!vehicleId || vehicles.has(vehicleId)) return;
-
-        vehicles.set(vehicleId, {
-          id: vehicleId,
-          shortName:
-            departure?.vehicleinfo?.shortname ||
-            vehicleId.replace(/^BE\.NMBS\./, ""),
-          sourceStation: station,
-          sourceCoords: [
-            Number(data?.stationinfo?.locationY),
-            Number(data?.stationinfo?.locationX),
-          ],
+            vehicles.set(vehicleId, {
+              id: vehicleId,
+              shortName:
+                departure?.vehicleinfo?.shortname ||
+                vehicleId.replace(/^BE\.NMBS\./, ""),
+              sourceStation: station,
+              sourceCoords: [
+                Number(data?.stationinfo?.locationY),
+                Number(data?.stationinfo?.locationX),
+              ],
+            });
+          });
         });
-      });
-    }
+      },
+    );
 
     return Array.from(vehicles.values()).slice(0, MAX_VEHICLES);
   }
@@ -1159,49 +1188,59 @@ function setActiveNavLink() {
     const trains = [];
     const nowTs = Math.floor(Date.now() / 1000);
 
-    for (let index = 0; index < vehicles.length; index += 1) {
-      const vehicle = vehicles[index];
-      setStatus(`Calculating ${vehicle.shortName} (${index + 1}/${vehicles.length})...`);
+    await runInBatches(
+      vehicles,
+      VEHICLE_BATCH_SIZE,
+      BATCH_DELAY_MS,
+      async (vehicle, index) => {
+        setStatus(`Calculating ${vehicle.shortName} (${index + 1}/${vehicles.length})...`);
 
-      if (index > 0) {
-        await wait(REQUEST_SPACING_MS);
-      }
+        try {
+          const data = await fetchJson(
+            `https://api.irail.be/vehicle/?id=${encodeURIComponent(vehicle.id)}&format=json&lang=en&alerts=false`,
+            signal,
+          );
 
-      try {
-        const data = await fetchJson(
-          `https://api.irail.be/vehicle/?id=${encodeURIComponent(vehicle.id)}&format=json&lang=en&alerts=false`,
-          signal,
-        );
+          const stops = normalizeStops(data?.stops?.stop);
+          const position = interpolatePosition(stops, nowTs);
+          if (!position || !isBelgiumCoord(position.lat, position.lng)) return null;
 
-        const stops = normalizeStops(data?.stops?.stop);
-        const position = interpolatePosition(stops, nowTs);
-        if (!position || !isBelgiumCoord(position.lat, position.lng)) continue;
+          const origin = stops[0]?.name || vehicle.sourceStation;
+          const destination = stops[stops.length - 1]?.name || "Unknown";
+          const delayMinutes =
+            position.nextStop?.delay ??
+            position.previousStop?.delay ??
+            0;
 
-        const origin = stops[0]?.name || vehicle.sourceStation;
-        const destination = stops[stops.length - 1]?.name || "Unknown";
-        const delayMinutes =
-          position.nextStop?.delay ??
-          position.previousStop?.delay ??
-          0;
+          return {
+            id: vehicle.id,
+            shortName:
+              data?.vehicleinfo?.shortname ||
+              vehicle.shortName ||
+              vehicle.id.replace(/^BE\.NMBS\./, ""),
+            origin,
+            destination,
+            timestamp: toNumber(data?.timestamp),
+            delayMinutes,
+            sourceStation: vehicle.sourceStation,
+            sourceCoords: vehicle.sourceCoords,
+            position,
+          };
+        } catch (err) {
+          if (err?.name === "AbortError") throw err;
 
-        trains.push({
-          id: vehicle.id,
-          shortName:
-            data?.vehicleinfo?.shortname ||
-            vehicle.shortName ||
-            vehicle.id.replace(/^BE\.NMBS\./, ""),
-          origin,
-          destination,
-          timestamp: toNumber(data?.timestamp),
-          delayMinutes,
-          sourceStation: vehicle.sourceStation,
-          sourceCoords: vehicle.sourceCoords,
-          position,
+          console.error("Vehicle request failed:", vehicle.id, err);
+          return null;
+        }
+      },
+      (batchResults) => {
+        batchResults.filter(Boolean).forEach((train) => {
+          trains.push(train);
         });
-      } catch (err) {
-        console.error("Vehicle request failed:", vehicle.id, err);
-      }
-    }
+
+        renderTrains(trains);
+      },
+    );
 
     return trains;
   }
@@ -1227,6 +1266,11 @@ function setActiveNavLink() {
     try {
       const vehicles = await collectDepartures(currentController.signal);
       if (requestId !== activeRequestId) return;
+
+      setMessage(
+        "First trains appear as soon as a batch is ready, then the rest fills in automatically.",
+        false,
+      );
 
       const trains = await collectTrains(vehicles, currentController.signal);
       if (requestId !== activeRequestId) return;
