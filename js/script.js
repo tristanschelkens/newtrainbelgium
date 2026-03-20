@@ -772,6 +772,510 @@ function setActiveNavLink() {
     }
   });
 })();
+(function initLiveTrainMap() {
+  const mapEl = document.getElementById("liveTrainsMap");
+  if (!mapEl || typeof window.L === "undefined") return;
+
+  const refreshBtn = document.getElementById("liveMapRefreshBtn");
+  const statusLabel = document.getElementById("liveMapStatusLabel");
+  const trainCountLabel = document.getElementById("liveMapTrainCount");
+  const updatedAtLabel = document.getElementById("liveMapUpdatedAt");
+  const messageEl = document.getElementById("liveMapMessage");
+
+  const HUB_STATIONS = [
+    "Antwerpen-Centraal",
+    "Brussel-Centraal",
+    "Brussel-Noord",
+    "Brussel-Zuid",
+    "Gent-Sint-Pieters",
+    "Leuven",
+    "Luik-Guillemins",
+    "Mechelen",
+    "Brugge",
+    "Namur",
+    "Hasselt",
+    "Kortrijk",
+  ];
+  const BELGIUM_BOUNDS = [
+    [49.45, 2.4],
+    [51.7, 6.45],
+  ];
+  const MAP_CENTER = [50.7, 4.6];
+  const AUTO_REFRESH_MS = 60000;
+  const REQUEST_SPACING_MS = 380;
+  const DEPARTURES_PER_STATION = 4;
+  const MAX_VEHICLES = 28;
+
+  const map = L.map(mapEl, {
+    scrollWheelZoom: true,
+    zoomControl: true,
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  map.setMaxBounds(BELGIUM_BOUNDS);
+  map.fitBounds(BELGIUM_BOUNDS, { padding: [20, 20] });
+  map.setView(MAP_CENTER, 8);
+
+  const trainsLayer = L.layerGroup().addTo(map);
+  const hubsLayer = L.layerGroup().addTo(map);
+
+  const hubIcon = L.divIcon({
+    className: "live-hub-icon",
+    html: '<span class="live-hub-dot"></span>',
+    iconSize: [12, 12],
+    iconAnchor: [6, 6],
+  });
+
+  const trainIcon = L.divIcon({
+    className: "live-train-icon",
+    html: '<span class="live-train-dot"></span>',
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+    popupAnchor: [0, -10],
+  });
+
+  let refreshTimer = null;
+  let currentController = null;
+  let activeRequestId = 0;
+  let loading = false;
+
+  function esc(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function toArray(value) {
+    if (Array.isArray(value)) return value;
+    return value ? [value] : [];
+  }
+
+  function wait(ms) {
+    return new Promise((resolve) => {
+      window.setTimeout(resolve, ms);
+    });
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function toNumber(value) {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }
+
+  function isBelgiumCoord(lat, lng) {
+    return (
+      Number.isFinite(lat) &&
+      Number.isFinite(lng) &&
+      lat >= BELGIUM_BOUNDS[0][0] &&
+      lat <= BELGIUM_BOUNDS[1][0] &&
+      lng >= BELGIUM_BOUNDS[0][1] &&
+      lng <= BELGIUM_BOUNDS[1][1]
+    );
+  }
+
+  function formatTime(timestampSeconds) {
+    if (!timestampSeconds) return "-";
+
+    return new Intl.DateTimeFormat("nl-BE", {
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date(timestampSeconds * 1000));
+  }
+
+  function formatRelativeUpdate(date) {
+    return new Intl.DateTimeFormat("nl-BE", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(date);
+  }
+
+  function setStatus(text) {
+    if (statusLabel) statusLabel.textContent = text;
+  }
+
+  function setMessage(text, isError) {
+    if (!messageEl) return;
+    messageEl.textContent = text;
+    messageEl.classList.toggle("is-error", !!isError);
+  }
+
+  async function fetchJson(url, signal) {
+    const response = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+      },
+      signal,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Request failed: ${response.status}`);
+    }
+
+    return response.json();
+  }
+
+  function getStopCoords(stop) {
+    const info = stop?.stationinfo || {};
+    const lat = Number(info.locationY);
+    const lng = Number(info.locationX);
+
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+
+    return [lat, lng];
+  }
+
+  function getArrivalTime(stop) {
+    const scheduled =
+      toNumber(stop?.scheduledArrivalTime) ||
+      toNumber(stop?.time) ||
+      toNumber(stop?.scheduledDepartureTime);
+    const delay = toNumber(stop?.arrivalDelay || stop?.delay);
+    return scheduled + delay;
+  }
+
+  function getDepartureTime(stop) {
+    const scheduled =
+      toNumber(stop?.scheduledDepartureTime) ||
+      toNumber(stop?.time) ||
+      toNumber(stop?.scheduledArrivalTime);
+    const delay = toNumber(stop?.departureDelay || stop?.delay);
+    return scheduled + delay;
+  }
+
+  function normalizeStops(rawStops) {
+    return toArray(rawStops)
+      .map((stop) => {
+        const coords = getStopCoords(stop);
+        if (!coords) return null;
+
+        return {
+          name: stop.station || stop?.stationinfo?.name || "Unknown station",
+          coords,
+          arrival: getArrivalTime(stop),
+          departure: getDepartureTime(stop),
+          delay: Math.round(toNumber(stop?.delay || stop?.departureDelay) / 60),
+          canceled: Number(stop?.canceled || stop?.departureCanceled || stop?.arrivalCanceled) === 1,
+        };
+      })
+      .filter(Boolean)
+      .filter((stop) => !stop.canceled)
+      .sort((a, b) => a.arrival - b.arrival);
+  }
+
+  function interpolatePosition(stops, nowTs) {
+    if (stops.length === 0) return null;
+
+    for (let index = 0; index < stops.length; index += 1) {
+      const stop = stops[index];
+      const arrival = stop.arrival || stop.departure;
+      const departure = stop.departure || stop.arrival;
+
+      if (nowTs >= arrival && nowTs <= departure) {
+        return {
+          lat: stop.coords[0],
+          lng: stop.coords[1],
+          status: "At station",
+          previousStop: stop,
+          nextStop: stop,
+          progress: 1,
+        };
+      }
+
+      const nextStop = stops[index + 1];
+      if (!nextStop) continue;
+
+      const segmentStart = departure;
+      const segmentEnd = nextStop.arrival || nextStop.departure;
+      if (!segmentStart || !segmentEnd || segmentEnd <= segmentStart) continue;
+
+      if (nowTs >= segmentStart && nowTs <= segmentEnd) {
+        const rawProgress = (nowTs - segmentStart) / (segmentEnd - segmentStart);
+        const progress = clamp(rawProgress, 0, 1);
+
+        return {
+          lat: stop.coords[0] + (nextStop.coords[0] - stop.coords[0]) * progress,
+          lng: stop.coords[1] + (nextStop.coords[1] - stop.coords[1]) * progress,
+          status: "Between stations",
+          previousStop: stop,
+          nextStop,
+          progress,
+        };
+      }
+    }
+
+    const firstStop = stops[0];
+    const lastStop = stops[stops.length - 1];
+
+    if (nowTs < firstStop.arrival) {
+      return {
+        lat: firstStop.coords[0],
+        lng: firstStop.coords[1],
+        status: "Not departed yet",
+        previousStop: firstStop,
+        nextStop: firstStop,
+        progress: 0,
+      };
+    }
+
+    if (nowTs <= (lastStop.departure || lastStop.arrival) + 300) {
+      return {
+        lat: lastStop.coords[0],
+        lng: lastStop.coords[1],
+        status: "Arriving / terminated",
+        previousStop: lastStop,
+        nextStop: lastStop,
+        progress: 1,
+      };
+    }
+
+    return null;
+  }
+
+  function buildPopup(train) {
+    const delayText =
+      train.delayMinutes > 0
+        ? `+${train.delayMinutes} min`
+        : train.delayMinutes < 0
+          ? `${train.delayMinutes} min`
+          : "On time";
+
+    const viaText =
+      train.position.status === "Between stations"
+        ? `${esc(train.position.previousStop.name)} -> ${esc(train.position.nextStop.name)}`
+        : esc(train.position.nextStop.name);
+
+    return `
+      <div class="live-popup">
+        <div class="live-popup-top">
+          <span class="live-popup-line">${esc(train.shortName)}</span>
+          <span class="live-popup-delay">${esc(delayText)}</span>
+        </div>
+        <div class="live-popup-route">
+          <strong>${esc(train.origin)}</strong>
+          <span>to</span>
+          <strong>${esc(train.destination)}</strong>
+        </div>
+        <div class="live-popup-meta">
+          <div><span>Status</span><strong>${esc(train.position.status)}</strong></div>
+          <div><span>Current segment</span><strong>${viaText}</strong></div>
+          <div><span>Last realtime check</span><strong>${esc(formatTime(train.timestamp))}</strong></div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTrains(trains) {
+    trainsLayer.clearLayers();
+    hubsLayer.clearLayers();
+
+    trains.forEach((train) => {
+      const marker = L.marker([train.position.lat, train.position.lng], {
+        icon: trainIcon,
+        title: train.shortName,
+      }).addTo(trainsLayer);
+
+      marker.bindPopup(buildPopup(train), {
+        closeButton: true,
+        offset: [0, -8],
+      });
+    });
+
+    HUB_STATIONS.forEach((name) => {
+      const hub = trains.find((train) => train.sourceStation === name);
+      const coords = hub?.sourceCoords;
+      if (!coords || !isBelgiumCoord(coords[0], coords[1])) return;
+
+      L.marker(coords, { icon: hubIcon, interactive: false }).addTo(hubsLayer);
+    });
+
+    if (trainCountLabel) {
+      trainCountLabel.textContent = String(trains.length);
+    }
+  }
+
+  async function collectDepartures(signal) {
+    const vehicles = new Map();
+
+    for (let index = 0; index < HUB_STATIONS.length; index += 1) {
+      const station = HUB_STATIONS[index];
+      setStatus(`Reading ${station}...`);
+
+      if (index > 0) {
+        await wait(REQUEST_SPACING_MS);
+      }
+
+      let data = null;
+
+      try {
+        data = await fetchJson(
+          `https://api.irail.be/liveboard/?station=${encodeURIComponent(station)}&format=json&lang=en&alerts=false`,
+          signal,
+        );
+      } catch (err) {
+        if (err?.name === "AbortError") throw err;
+
+        console.error("Liveboard request failed:", station, err);
+        continue;
+      }
+
+      const departures = toArray(data?.departures?.departure)
+        .filter((departure) => Number(departure?.canceled) !== 1)
+        .slice(0, DEPARTURES_PER_STATION);
+
+      departures.forEach((departure) => {
+        const vehicleId = String(departure?.vehicle || "").trim();
+        if (!vehicleId || vehicles.has(vehicleId)) return;
+
+        vehicles.set(vehicleId, {
+          id: vehicleId,
+          shortName:
+            departure?.vehicleinfo?.shortname ||
+            vehicleId.replace(/^BE\.NMBS\./, ""),
+          sourceStation: station,
+          sourceCoords: [
+            Number(data?.stationinfo?.locationY),
+            Number(data?.stationinfo?.locationX),
+          ],
+        });
+      });
+    }
+
+    return Array.from(vehicles.values()).slice(0, MAX_VEHICLES);
+  }
+
+  async function collectTrains(vehicles, signal) {
+    const trains = [];
+    const nowTs = Math.floor(Date.now() / 1000);
+
+    for (let index = 0; index < vehicles.length; index += 1) {
+      const vehicle = vehicles[index];
+      setStatus(`Calculating ${vehicle.shortName} (${index + 1}/${vehicles.length})...`);
+
+      if (index > 0) {
+        await wait(REQUEST_SPACING_MS);
+      }
+
+      try {
+        const data = await fetchJson(
+          `https://api.irail.be/vehicle/?id=${encodeURIComponent(vehicle.id)}&format=json&lang=en&alerts=false`,
+          signal,
+        );
+
+        const stops = normalizeStops(data?.stops?.stop);
+        const position = interpolatePosition(stops, nowTs);
+        if (!position || !isBelgiumCoord(position.lat, position.lng)) continue;
+
+        const origin = stops[0]?.name || vehicle.sourceStation;
+        const destination = stops[stops.length - 1]?.name || "Unknown";
+        const delayMinutes =
+          position.nextStop?.delay ??
+          position.previousStop?.delay ??
+          0;
+
+        trains.push({
+          id: vehicle.id,
+          shortName:
+            data?.vehicleinfo?.shortname ||
+            vehicle.shortName ||
+            vehicle.id.replace(/^BE\.NMBS\./, ""),
+          origin,
+          destination,
+          timestamp: toNumber(data?.timestamp),
+          delayMinutes,
+          sourceStation: vehicle.sourceStation,
+          sourceCoords: vehicle.sourceCoords,
+          position,
+        });
+      } catch (err) {
+        console.error("Vehicle request failed:", vehicle.id, err);
+      }
+    }
+
+    return trains;
+  }
+
+  async function refreshLiveMap() {
+    if (loading) return;
+
+    loading = true;
+    activeRequestId += 1;
+    const requestId = activeRequestId;
+
+    if (currentController) currentController.abort();
+    currentController = new AbortController();
+
+    if (refreshBtn) refreshBtn.disabled = true;
+
+    setMessage(
+      "Loading live trains from several major Belgian stations. This can take a few seconds.",
+      false,
+    );
+    setStatus("Loading...");
+
+    try {
+      const vehicles = await collectDepartures(currentController.signal);
+      if (requestId !== activeRequestId) return;
+
+      const trains = await collectTrains(vehicles, currentController.signal);
+      if (requestId !== activeRequestId) return;
+
+      renderTrains(trains);
+      setStatus(trains.length > 0 ? "Live" : "No trains found");
+      setMessage(
+        "Estimated live positions are shown for trains that could be derived from current iRail realtime departures.",
+        false,
+      );
+
+      if (updatedAtLabel) {
+        updatedAtLabel.textContent = formatRelativeUpdate(new Date());
+      }
+    } catch (err) {
+      if (err?.name !== "AbortError") {
+        console.error(err);
+        setStatus("Unavailable");
+        setMessage(
+          "The live map could not be updated right now. Please try again in a moment.",
+          true,
+        );
+      }
+    } finally {
+      if (requestId === activeRequestId) {
+        loading = false;
+        if (refreshBtn) refreshBtn.disabled = false;
+      }
+    }
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener("click", () => {
+      refreshLiveMap();
+    });
+  }
+
+  refreshLiveMap();
+  refreshTimer = window.setInterval(refreshLiveMap, AUTO_REFRESH_MS);
+
+  window.addEventListener("resize", () => {
+    map.invalidateSize();
+  });
+
+  window.addEventListener("beforeunload", () => {
+    if (refreshTimer) window.clearInterval(refreshTimer);
+    if (currentController) currentController.abort();
+  });
+})();
 (function initContactForm() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
