@@ -874,6 +874,7 @@ function setActiveNavLink() {
 
   const trainsLayer = L.layerGroup().addTo(map);
   const routeLayer = L.layerGroup().addTo(map);
+  const selectedTrainLayer = L.layerGroup().addTo(map);
 
   const trainIcon = L.divIcon({
     className: "live-train-icon",
@@ -887,10 +888,74 @@ function setActiveNavLink() {
   let activeRequestId = 0;
   let loading = false;
   let selectedTrainId = null;
+  let currentRenderedTrains = [];
+  const snappedRailCache = new Map();
 
   function updateRailOverlay() {
     const showRail = !!selectedTrainId && map.getZoom() >= 10;
     railLayer.setOpacity(showRail ? 0.26 : 0);
+  }
+
+  function getDistanceScore(aLat, aLng, bLat, bLng) {
+    const latScale = 111320;
+    const lngScale = Math.cos(((aLat + bLat) / 2) * (Math.PI / 180)) * 111320;
+    const dLat = (aLat - bLat) * latScale;
+    const dLng = (aLng - bLng) * lngScale;
+    return dLat * dLat + dLng * dLng;
+  }
+
+  async function fetchNearestRailPoint(lat, lng, signal) {
+    const cacheKey = `${lat.toFixed(4)},${lng.toFixed(4)}`;
+    if (snappedRailCache.has(cacheKey)) {
+      return snappedRailCache.get(cacheKey);
+    }
+
+    const query = `
+      [out:json][timeout:10];
+      (
+        way["railway"~"rail|light_rail|narrow_gauge"](around:900,${lat},${lng});
+        >;
+      );
+      out body;
+    `.trim();
+
+    try {
+      const data = await fetchJson(
+        `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`,
+        signal,
+      );
+
+      const nodes = toArray(data?.elements).filter(
+        (element) =>
+          element?.type === "node" &&
+          Number.isFinite(element?.lat) &&
+          Number.isFinite(element?.lon),
+      );
+
+      if (nodes.length === 0) {
+        snappedRailCache.set(cacheKey, null);
+        return null;
+      }
+
+      let nearest = null;
+      let nearestScore = Number.POSITIVE_INFINITY;
+
+      nodes.forEach((node) => {
+        const score = getDistanceScore(lat, lng, Number(node.lat), Number(node.lon));
+        if (score < nearestScore) {
+          nearestScore = score;
+          nearest = [Number(node.lat), Number(node.lon)];
+        }
+      });
+
+      snappedRailCache.set(cacheKey, nearest);
+      return nearest;
+    } catch (err) {
+      if (err?.name === "AbortError") throw err;
+      console.error("Rail snap request failed:", err);
+      snappedRailCache.set(cacheKey, null);
+      return null;
+    }
   }
 
   function esc(value) {
@@ -1103,38 +1168,70 @@ function setActiveNavLink() {
 
   function drawTrainRoute(train) {
     routeLayer.clearLayers();
+    selectedTrainLayer.clearLayers();
     updateRailOverlay();
 
     const coords = Array.isArray(train?.routeCoords) ? train.routeCoords : [];
-    if (coords.length < 2) return;
+    const zoomedIn = map.getZoom() >= 13;
+    if (coords.length < 2 && !train) return;
 
-    const line = L.polyline(coords, {
-      color: "#005cb9",
-      weight: 3,
-      opacity: 0.9,
-      dashArray: "8 7",
-      lineCap: "round",
-      lineJoin: "round",
-      smoothFactor: 0,
-    }).addTo(routeLayer);
-
-    line.bindTooltip(`${train.shortName}: ${train.origin} -> ${train.destination}`, {
-      sticky: true,
-      direction: "top",
-    });
-
-    coords.forEach((coord, index) => {
-      const isEndpoint = index === 0 || index === coords.length - 1;
-
-      L.circleMarker(coord, {
-        radius: isEndpoint ? 4 : 2.5,
-        color: isEndpoint ? "#003b79" : "#005cb9",
-        weight: 2,
-        fillColor: isEndpoint ? "#ffffff" : "#b7d8ff",
-        fillOpacity: 1,
-        opacity: 1,
+    if (!zoomedIn && coords.length >= 2) {
+      const line = L.polyline(coords, {
+        color: "#005cb9",
+        weight: 3,
+        opacity: 0.82,
+        dashArray: "8 7",
+        lineCap: "round",
+        lineJoin: "round",
+        smoothFactor: 0,
       }).addTo(routeLayer);
-    });
+
+      line.bindTooltip(`${train.shortName}: ${train.origin} -> ${train.destination}`, {
+        sticky: true,
+        direction: "top",
+      });
+
+      coords.forEach((coord, index) => {
+        const isEndpoint = index === 0 || index === coords.length - 1;
+
+        L.circleMarker(coord, {
+          radius: isEndpoint ? 4 : 2.5,
+          color: isEndpoint ? "#003b79" : "#005cb9",
+          weight: 2,
+          fillColor: isEndpoint ? "#ffffff" : "#b7d8ff",
+          fillOpacity: 1,
+          opacity: 1,
+        }).addTo(routeLayer);
+      });
+    }
+  }
+
+  async function updateSelectedTrainMarker(train) {
+    selectedTrainLayer.clearLayers();
+    if (!train?.position) return;
+
+    let snappedPoint = null;
+
+    try {
+      snappedPoint = await fetchNearestRailPoint(
+        train.position.lat,
+        train.position.lng,
+        currentController?.signal,
+      );
+    } catch (err) {
+      if (err?.name === "AbortError") return;
+    }
+
+    const point = snappedPoint || [train.position.lat, train.position.lng];
+
+    L.circleMarker(point, {
+      radius: 8,
+      color: "#ffffff",
+      weight: 3,
+      fillColor: "#005cb9",
+      fillOpacity: 1,
+      opacity: 1,
+    }).addTo(selectedTrainLayer);
   }
 
   function interpolatePosition(stops, nowTs) {
@@ -1286,6 +1383,7 @@ function setActiveNavLink() {
   }
 
   function renderTrains(trains) {
+    currentRenderedTrains = Array.isArray(trains) ? trains.slice() : [];
     trainsLayer.clearLayers();
 
     trains.forEach((train) => {
@@ -1310,6 +1408,7 @@ function setActiveNavLink() {
       marker.on("click", () => {
         selectedTrainId = train.id;
         drawTrainRoute(train);
+        updateSelectedTrainMarker(train);
       });
     });
 
@@ -1320,8 +1419,10 @@ function setActiveNavLink() {
     if (selectedTrainId) {
       const selectedTrain = trains.find((train) => train.id === selectedTrainId);
       drawTrainRoute(selectedTrain || null);
+      updateSelectedTrainMarker(selectedTrain || null);
     } else {
       routeLayer.clearLayers();
+      selectedTrainLayer.clearLayers();
       updateRailOverlay();
     }
   }
@@ -1534,6 +1635,14 @@ function setActiveNavLink() {
 
   map.on("zoomend", () => {
     updateRailOverlay();
+    if (!selectedTrainId) return;
+
+    const selectedTrain = currentRenderedTrains.find(
+      (train) => train.id === selectedTrainId,
+    );
+
+    drawTrainRoute(selectedTrain || null);
+    updateSelectedTrainMarker(selectedTrain || null);
   });
 
   window.addEventListener("resize", () => {
