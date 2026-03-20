@@ -841,7 +841,6 @@ function setActiveNavLink() {
   ];
   const MAP_CENTER = [50.7, 4.6];
   const DEPARTURES_PER_STATION = 6;
-  const MAX_VEHICLES = 120;
   const LIVEBOARD_BATCH_SIZE = 6;
   const VEHICLE_BATCH_SIZE = 8;
   const BATCH_DELAY_MS = 700;
@@ -1478,7 +1477,7 @@ function setActiveNavLink() {
       },
     );
 
-    return Array.from(vehicles.values()).slice(0, MAX_VEHICLES);
+    return Array.from(vehicles.values());
   }
 
   async function collectTrains(vehicles, signal) {
