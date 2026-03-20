@@ -1292,67 +1292,56 @@ body.station-lightbox-open {
     #d9e7ee;
 }
 
-.live-hub-icon,
 .live-train-icon {
   background: transparent;
   border: none;
 }
 
-.live-hub-dot {
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: rgba(12, 18, 28, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 5px rgba(12, 18, 28, 0.12);
-}
-
 .live-train-dot {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 999px;
   background: linear-gradient(135deg, #0073e6, #005cb9);
   border: 2px solid #fff;
   box-shadow:
-    0 0 0 6px rgba(0, 92, 185, 0.16),
-    0 10px 22px rgba(0, 92, 185, 0.24);
+    0 0 0 4px rgba(0, 92, 185, 0.14),
+    0 8px 16px rgba(0, 92, 185, 0.2);
 }
 
 .live-train-icon.is-on-time .live-train-dot {
   background: linear-gradient(135deg, #21bf73, #159957);
   box-shadow:
-    0 0 0 6px rgba(33, 191, 115, 0.16),
-    0 10px 22px rgba(21, 153, 87, 0.24);
+    0 0 0 4px rgba(33, 191, 115, 0.14),
+    0 8px 16px rgba(21, 153, 87, 0.2);
 }
 
 .live-train-icon.is-delay-1 .live-train-dot {
   background: linear-gradient(135deg, #ffcd38, #f39c12);
   box-shadow:
-    0 0 0 6px rgba(243, 156, 18, 0.16),
-    0 10px 22px rgba(243, 156, 18, 0.24);
+    0 0 0 4px rgba(243, 156, 18, 0.14),
+    0 8px 16px rgba(243, 156, 18, 0.2);
 }
 
 .live-train-icon.is-delay-2 .live-train-dot {
   background: linear-gradient(135deg, #ff9f1c, #e67e22);
   box-shadow:
-    0 0 0 6px rgba(230, 126, 34, 0.18),
-    0 10px 22px rgba(230, 126, 34, 0.24);
+    0 0 0 4px rgba(230, 126, 34, 0.15),
+    0 8px 16px rgba(230, 126, 34, 0.2);
 }
 
 .live-train-icon.is-delay-3 .live-train-dot {
   background: linear-gradient(135deg, #ff6f3c, #d35400);
   box-shadow:
-    0 0 0 6px rgba(211, 84, 0, 0.18),
-    0 10px 22px rgba(211, 84, 0, 0.24);
+    0 0 0 4px rgba(211, 84, 0, 0.15),
+    0 8px 16px rgba(211, 84, 0, 0.2);
 }
 
 .live-train-icon.is-delay-4 .live-train-dot {
   background: linear-gradient(135deg, #e74c3c, #b32020);
   box-shadow:
-    0 0 0 6px rgba(179, 32, 32, 0.18),
-    0 10px 22px rgba(179, 32, 32, 0.24);
+    0 0 0 4px rgba(179, 32, 32, 0.15),
+    0 8px 16px rgba(179, 32, 32, 0.2);
 }
 
 .live-popup {

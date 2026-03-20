@@ -849,17 +849,21 @@ function setActiveNavLink() {
   const map = L.map(mapEl, {
     scrollWheelZoom: true,
     zoomControl: true,
+    maxBoundsViscosity: 1,
+    worldCopyJump: false,
   });
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
+    noWrap: true,
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
-  L.tileLayer("https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png", {
+  const railLayer = L.tileLayer("https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png", {
     maxZoom: 18,
-    opacity: 0.72,
+    noWrap: true,
+    opacity: 0,
     attribution:
       '&copy; <a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>',
   }).addTo(map);
@@ -869,15 +873,7 @@ function setActiveNavLink() {
   map.setView(MAP_CENTER, 8);
 
   const trainsLayer = L.layerGroup().addTo(map);
-  const hubsLayer = L.layerGroup().addTo(map);
   const routeLayer = L.layerGroup().addTo(map);
-
-  const hubIcon = L.divIcon({
-    className: "live-hub-icon",
-    html: '<span class="live-hub-dot"></span>',
-    iconSize: [12, 12],
-    iconAnchor: [6, 6],
-  });
 
   const trainIcon = L.divIcon({
     className: "live-train-icon",
@@ -891,6 +887,11 @@ function setActiveNavLink() {
   let activeRequestId = 0;
   let loading = false;
   let selectedTrainId = null;
+
+  function updateRailOverlay() {
+    const showRail = !!selectedTrainId && map.getZoom() >= 10;
+    railLayer.setOpacity(showRail ? 0.26 : 0);
+  }
 
   function esc(value) {
     return String(value || "")
@@ -1102,6 +1103,7 @@ function setActiveNavLink() {
 
   function drawTrainRoute(train) {
     routeLayer.clearLayers();
+    updateRailOverlay();
 
     const coords = Array.isArray(train?.routeCoords) ? train.routeCoords : [];
     if (coords.length < 2) return;
@@ -1285,21 +1287,11 @@ function setActiveNavLink() {
 
   function renderTrains(trains) {
     trainsLayer.clearLayers();
-    hubsLayer.clearLayers();
-    const stacks = new Map();
 
     trains.forEach((train) => {
-      const stackKey = `${train.position.lat.toFixed(4)},${train.position.lng.toFixed(4)}`;
-      const stackIndex = stacks.get(stackKey) || 0;
-      stacks.set(stackKey, stackIndex + 1);
-
-      const angle = stackIndex * 0.9;
-      const radius = stackIndex === 0 ? 0 : 0.012 + stackIndex * 0.0025;
-      const displayLat = train.position.lat + Math.sin(angle) * radius;
-      const displayLng = train.position.lng + Math.cos(angle) * radius;
       const delayVisual = getDelayVisual(train.delayMinutes);
 
-      const marker = L.marker([displayLat, displayLng], {
+      const marker = L.marker([train.position.lat, train.position.lng], {
         icon: L.divIcon({
           className: `live-train-icon ${delayVisual.className}`,
           html: '<span class="live-train-dot"></span>',
@@ -1321,14 +1313,6 @@ function setActiveNavLink() {
       });
     });
 
-    HUB_STATIONS.forEach((name) => {
-      const hub = trains.find((train) => train.sourceStation === name);
-      const coords = hub?.sourceCoords;
-      if (!coords || !isBelgiumCoord(coords[0], coords[1])) return;
-
-      L.marker(coords, { icon: hubIcon, interactive: false }).addTo(hubsLayer);
-    });
-
     if (trainCountLabel) {
       trainCountLabel.textContent = String(trains.length);
     }
@@ -1338,6 +1322,7 @@ function setActiveNavLink() {
       drawTrainRoute(selectedTrain || null);
     } else {
       routeLayer.clearLayers();
+      updateRailOverlay();
     }
   }
 
@@ -1546,6 +1531,10 @@ function setActiveNavLink() {
   }
 
   refreshLiveMap();
+
+  map.on("zoomend", () => {
+    updateRailOverlay();
+  });
 
   window.addEventListener("resize", () => {
     map.invalidateSize();
