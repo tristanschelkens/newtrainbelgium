@@ -1320,6 +1320,41 @@ body.station-lightbox-open {
     0 10px 22px rgba(0, 92, 185, 0.24);
 }
 
+.live-train-icon.is-on-time .live-train-dot {
+  background: linear-gradient(135deg, #21bf73, #159957);
+  box-shadow:
+    0 0 0 6px rgba(33, 191, 115, 0.16),
+    0 10px 22px rgba(21, 153, 87, 0.24);
+}
+
+.live-train-icon.is-delay-1 .live-train-dot {
+  background: linear-gradient(135deg, #ffcd38, #f39c12);
+  box-shadow:
+    0 0 0 6px rgba(243, 156, 18, 0.16),
+    0 10px 22px rgba(243, 156, 18, 0.24);
+}
+
+.live-train-icon.is-delay-2 .live-train-dot {
+  background: linear-gradient(135deg, #ff9f1c, #e67e22);
+  box-shadow:
+    0 0 0 6px rgba(230, 126, 34, 0.18),
+    0 10px 22px rgba(230, 126, 34, 0.24);
+}
+
+.live-train-icon.is-delay-3 .live-train-dot {
+  background: linear-gradient(135deg, #ff6f3c, #d35400);
+  box-shadow:
+    0 0 0 6px rgba(211, 84, 0, 0.18),
+    0 10px 22px rgba(211, 84, 0, 0.24);
+}
+
+.live-train-icon.is-delay-4 .live-train-dot {
+  background: linear-gradient(135deg, #e74c3c, #b32020);
+  box-shadow:
+    0 0 0 6px rgba(179, 32, 32, 0.18),
+    0 10px 22px rgba(179, 32, 32, 0.24);
+}
+
 .live-popup {
   width: 280px;
   padding: 16px;
@@ -1353,6 +1388,31 @@ body.station-lightbox-open {
 .live-popup-delay {
   background: rgba(17, 17, 17, 0.08);
   color: #111;
+}
+
+.live-popup-delay.is-on-time {
+  background: rgba(33, 191, 115, 0.12);
+  color: #0e7a45;
+}
+
+.live-popup-delay.is-delay-1 {
+  background: rgba(243, 156, 18, 0.14);
+  color: #b56a00;
+}
+
+.live-popup-delay.is-delay-2 {
+  background: rgba(230, 126, 34, 0.16);
+  color: #b85e11;
+}
+
+.live-popup-delay.is-delay-3 {
+  background: rgba(211, 84, 0, 0.16);
+  color: #a64500;
+}
+
+.live-popup-delay.is-delay-4 {
+  background: rgba(179, 32, 32, 0.14);
+  color: #a61d1d;
 }
 
 .live-popup-route {

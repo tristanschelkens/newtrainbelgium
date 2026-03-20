@@ -965,6 +965,43 @@ function setActiveNavLink() {
     }).format(date);
   }
 
+  function getDelayVisual(delayMinutes) {
+    const delay = Math.max(0, Number(delayMinutes) || 0);
+
+    if (delay < 3) {
+      return {
+        className: "is-on-time",
+        label: delay === 0 ? "On time" : `+${delay} min`,
+      };
+    }
+
+    if (delay < 6) {
+      return {
+        className: "is-delay-1",
+        label: `+${delay} min`,
+      };
+    }
+
+    if (delay < 10) {
+      return {
+        className: "is-delay-2",
+        label: `+${delay} min`,
+      };
+    }
+
+    if (delay < 15) {
+      return {
+        className: "is-delay-3",
+        label: `+${delay} min`,
+      };
+    }
+
+    return {
+      className: "is-delay-4",
+      label: `+${delay} min`,
+    };
+  }
+
   function setStatus(text) {
     if (statusLabel) statusLabel.textContent = text;
   }
@@ -1108,12 +1145,8 @@ function setActiveNavLink() {
   }
 
   function buildPopup(train) {
-    const delayText =
-      train.delayMinutes > 0
-        ? `+${train.delayMinutes} min`
-        : train.delayMinutes < 0
-          ? `${train.delayMinutes} min`
-          : "On time";
+    const delayVisual = getDelayVisual(train.delayMinutes);
+    const delayText = delayVisual.label;
 
     const viaText =
       train.position.status === "Between stations"
@@ -1124,7 +1157,7 @@ function setActiveNavLink() {
       <div class="live-popup">
         <div class="live-popup-top">
           <span class="live-popup-line">${esc(train.shortName)}</span>
-          <span class="live-popup-delay">${esc(delayText)}</span>
+          <span class="live-popup-delay ${esc(delayVisual.className)}">${esc(delayText)}</span>
         </div>
         <div class="live-popup-route">
           <strong>${esc(train.origin)}</strong>
@@ -1201,9 +1234,16 @@ function setActiveNavLink() {
       const radius = stackIndex === 0 ? 0 : 0.012 + stackIndex * 0.0025;
       const displayLat = train.position.lat + Math.sin(angle) * radius;
       const displayLng = train.position.lng + Math.cos(angle) * radius;
+      const delayVisual = getDelayVisual(train.delayMinutes);
 
       const marker = L.marker([displayLat, displayLng], {
-        icon: trainIcon,
+        icon: L.divIcon({
+          className: `live-train-icon ${delayVisual.className}`,
+          html: '<span class="live-train-dot"></span>',
+          iconSize: [20, 20],
+          iconAnchor: [10, 10],
+          popupAnchor: [0, -10],
+        }),
         title: train.shortName,
       }).addTo(trainsLayer);
 
