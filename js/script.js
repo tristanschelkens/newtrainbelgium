@@ -857,6 +857,13 @@ function setActiveNavLink() {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
+  L.tileLayer("https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    opacity: 0.72,
+    attribution:
+      '&copy; <a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>',
+  }).addTo(map);
+
   map.setMaxBounds(BELGIUM_BOUNDS);
   map.fitBounds(BELGIUM_BOUNDS, { padding: [20, 20] });
   map.setView(MAP_CENTER, 8);
@@ -1101,16 +1108,30 @@ function setActiveNavLink() {
 
     const line = L.polyline(coords, {
       color: "#005cb9",
-      weight: 4,
-      opacity: 0.82,
-      dashArray: "10 8",
+      weight: 3,
+      opacity: 0.9,
+      dashArray: "8 7",
       lineCap: "round",
       lineJoin: "round",
+      smoothFactor: 0,
     }).addTo(routeLayer);
 
     line.bindTooltip(`${train.shortName}: ${train.origin} -> ${train.destination}`, {
       sticky: true,
       direction: "top",
+    });
+
+    coords.forEach((coord, index) => {
+      const isEndpoint = index === 0 || index === coords.length - 1;
+
+      L.circleMarker(coord, {
+        radius: isEndpoint ? 4 : 2.5,
+        color: isEndpoint ? "#003b79" : "#005cb9",
+        weight: 2,
+        fillColor: isEndpoint ? "#ffffff" : "#b7d8ff",
+        fillOpacity: 1,
+        opacity: 1,
+      }).addTo(routeLayer);
     });
   }
 
@@ -1207,7 +1228,6 @@ function setActiveNavLink() {
           <div><span>Status</span><strong>${esc(train.position.status)}</strong></div>
           <div><span>Current segment</span><strong>${viaText}</strong></div>
           <div><span>Last realtime check</span><strong>${esc(formatTime(train.timestamp))}</strong></div>
-          <div><span>Journey path</span><strong>Click the marker to show the route</strong></div>
         </div>
       </div>
     `;
