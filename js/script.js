@@ -840,7 +840,6 @@ function setActiveNavLink() {
     [51.7, 6.45],
   ];
   const MAP_CENTER = [50.7, 4.6];
-  const AUTO_REFRESH_MS = 60000;
   const DEPARTURES_PER_STATION = 6;
   const MAX_VEHICLES = 120;
   const LIVEBOARD_BATCH_SIZE = 6;
@@ -864,6 +863,7 @@ function setActiveNavLink() {
 
   const trainsLayer = L.layerGroup().addTo(map);
   const hubsLayer = L.layerGroup().addTo(map);
+  const routeLayer = L.layerGroup().addTo(map);
 
   const hubIcon = L.divIcon({
     className: "live-hub-icon",
@@ -880,10 +880,10 @@ function setActiveNavLink() {
     popupAnchor: [0, -10],
   });
 
-  let refreshTimer = null;
   let currentController = null;
   let activeRequestId = 0;
   let loading = false;
+  let selectedTrainId = null;
 
   function esc(value) {
     return String(value || "")
@@ -1075,6 +1075,45 @@ function setActiveNavLink() {
       .sort((a, b) => a.arrival - b.arrival);
   }
 
+  function buildRouteCoords(stops) {
+    const coords = [];
+    const seen = new Set();
+
+    stops.forEach((stop) => {
+      const lat = stop?.coords?.[0];
+      const lng = stop?.coords?.[1];
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+
+      const key = `${lat.toFixed(5)},${lng.toFixed(5)}`;
+      if (seen.has(key)) return;
+      seen.add(key);
+      coords.push([lat, lng]);
+    });
+
+    return coords;
+  }
+
+  function drawTrainRoute(train) {
+    routeLayer.clearLayers();
+
+    const coords = Array.isArray(train?.routeCoords) ? train.routeCoords : [];
+    if (coords.length < 2) return;
+
+    const line = L.polyline(coords, {
+      color: "#005cb9",
+      weight: 4,
+      opacity: 0.82,
+      dashArray: "10 8",
+      lineCap: "round",
+      lineJoin: "round",
+    }).addTo(routeLayer);
+
+    line.bindTooltip(`${train.shortName}: ${train.origin} -> ${train.destination}`, {
+      sticky: true,
+      direction: "top",
+    });
+  }
+
   function interpolatePosition(stops, nowTs) {
     if (stops.length === 0) return null;
 
@@ -1168,6 +1207,7 @@ function setActiveNavLink() {
           <div><span>Status</span><strong>${esc(train.position.status)}</strong></div>
           <div><span>Current segment</span><strong>${viaText}</strong></div>
           <div><span>Last realtime check</span><strong>${esc(formatTime(train.timestamp))}</strong></div>
+          <div><span>Journey path</span><strong>Click the marker to show the route</strong></div>
         </div>
       </div>
     `;
@@ -1190,6 +1230,9 @@ function setActiveNavLink() {
       delayMinutes: Math.round(toNumber(train?.delayMinutes || train?.delay)),
       sourceStation: String(train?.sourceStation || ""),
       sourceCoords: Array.isArray(train?.sourceCoords) ? train.sourceCoords : null,
+      routeCoords: toArray(train?.route)
+        .map((point) => [Number(point?.lat), Number(point?.lng)])
+        .filter((point) => isBelgiumCoord(point[0], point[1])),
       position: {
         lat,
         lng,
@@ -1251,6 +1294,11 @@ function setActiveNavLink() {
         closeButton: true,
         offset: [0, -8],
       });
+
+      marker.on("click", () => {
+        selectedTrainId = train.id;
+        drawTrainRoute(train);
+      });
     });
 
     HUB_STATIONS.forEach((name) => {
@@ -1263,6 +1311,13 @@ function setActiveNavLink() {
 
     if (trainCountLabel) {
       trainCountLabel.textContent = String(trains.length);
+    }
+
+    if (selectedTrainId) {
+      const selectedTrain = trains.find((train) => train.id === selectedTrainId);
+      drawTrainRoute(selectedTrain || null);
+    } else {
+      routeLayer.clearLayers();
     }
   }
 
@@ -1360,6 +1415,7 @@ function setActiveNavLink() {
             delayMinutes,
             sourceStation: vehicle.sourceStation,
             sourceCoords: vehicle.sourceCoords,
+            routeCoords: buildRouteCoords(stops),
             position,
           };
         } catch (err) {
@@ -1470,14 +1526,12 @@ function setActiveNavLink() {
   }
 
   refreshLiveMap();
-  refreshTimer = window.setInterval(refreshLiveMap, AUTO_REFRESH_MS);
 
   window.addEventListener("resize", () => {
     map.invalidateSize();
   });
 
   window.addEventListener("beforeunload", () => {
-    if (refreshTimer) window.clearInterval(refreshTimer);
     if (currentController) currentController.abort();
   });
 })();
