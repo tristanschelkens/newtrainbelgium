@@ -879,8 +879,15 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Doppelstock-Wendezug",
+            label: "Tarus 1116",
             active: true,
+            filterKey: "doppelstock-wendezug",
+            filterLabel: "Doppelstock-Wendezug",
+          },
+          {
+            kind: "carriage",
+            label: "Doppelstock-Wendezug 86-33 210-4",
+            active: false,
             filterKey: "doppelstock-wendezug",
             filterLabel: "Doppelstock-Wendezug",
           },
@@ -1080,7 +1087,7 @@ window.STATIONS_DATA = {
         label: "Bratislava",
         numbers: "263 003-6",
         date: "",
-        consist: [{ kind: "traction", label: "263 003-6", active: true }],
+        consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
       },
       {
         series: "bratislava-photo-0",
@@ -1091,7 +1098,7 @@ window.STATIONS_DATA = {
         label: "Bratislava",
         numbers: "263 003-6",
         date: "",
-        consist: [{ kind: "traction", label: "263 003-6", active: true }],
+        consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
       },
       {
         series: "bratislava-photo-0",
@@ -1102,7 +1109,7 @@ window.STATIONS_DATA = {
         label: "Bratislava",
         numbers: "263 003-6",
         date: "",
-        consist: [{ kind: "traction", label: "263 003-6", active: true }],
+        consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
       },
     ],
   },
