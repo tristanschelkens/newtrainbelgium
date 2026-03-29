@@ -732,8 +732,9 @@ function setActiveNavLink() {
   }
 
   function buildMetaHtml(consist) {
-    return consist
-      .filter((item) => item.showOnCard !== false)
+    const visibleItems = consist.filter((item) => item.showOnCard !== false);
+
+    return visibleItems
       .map((item, index) => {
         const cls =
           item.kind === "traction"
@@ -743,7 +744,7 @@ function setActiveNavLink() {
             : "station-meta-carriage";
 
         const plus =
-          index < consist.length - 1
+          index < visibleItems.length - 1
             ? '<span class="station-meta-plus">+</span>'
             : "";
 
