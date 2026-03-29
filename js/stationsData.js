@@ -881,8 +881,8 @@ window.STATIONS_DATA = {
             kind: "traction",
             label: "Tarus 1116",
             active: true,
-            filterKey: "doppelstock-wendezug",
-            filterLabel: "Doppelstock-Wendezug",
+            filterKey: "tarus",
+            filterLabel: "Tarus",
           },
           {
             kind: "carriage",
@@ -1064,8 +1064,15 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Doppelstock-Wendezug 86-33 210-4",
+            label: "Tarus 1116",
             active: true,
+            filterKey: "tarus",
+            filterLabel: "Tarus",
+          },
+          {
+            kind: "carriage",
+            label: "Doppelstock-Wendezug 86-33 210-4",
+            active: false,
             filterKey: "doppelstock-wendezug",
             filterLabel: "Doppelstock-Wendezug",
           },
