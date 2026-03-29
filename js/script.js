@@ -221,6 +221,7 @@ function setActiveNavLink() {
 (function initPhotoFilters() {
   const filters = document.getElementById("photoFilters");
   const grid = document.getElementById("photoGrid");
+  const mapSection = document.getElementById("stationsMap")?.closest("section");
 
   if (!filters || !grid) return;
 
@@ -255,6 +256,17 @@ function setActiveNavLink() {
     }
 
     grid.classList.toggle("has-few", visibleCount <= 2);
+
+    if (mapSection) {
+      const showMap = value === "all";
+      mapSection.style.display = showMap ? "" : "none";
+
+      if (showMap && window.photoStationsMap) {
+        window.setTimeout(() => {
+          window.photoStationsMap.invalidateSize();
+        }, 0);
+      }
+    }
   }
 
   buttons.forEach((btn) => {
@@ -450,6 +462,7 @@ function setActiveNavLink() {
     scrollWheelZoom: true,
     zoomControl: true,
   });
+  window.photoStationsMap = map;
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
