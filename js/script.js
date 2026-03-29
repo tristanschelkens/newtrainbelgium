@@ -242,7 +242,7 @@ function setActiveNavLink() {
   overlayText.textContent = latestPhoto.stationName;
 
   caption.classList.add("latest-photo-line");
-  caption.innerHTML = `<span class="latest-photo-prefix">Latest photo</span> <a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
+  caption.innerHTML = `<a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
 })();
 
 (function initPhotoMap() {

@@ -613,11 +613,10 @@ img {
   color: #26374d !important;
   font-size: 13px;
   line-height: 1.4;
-}
-
-.latest-photo-prefix {
-  color: rgba(38, 55, 77, 0.72);
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .latest-photo-link {
@@ -635,9 +634,13 @@ img {
   border-color: rgba(0, 59, 121, 0.4);
 }
 
+.latest-photo-separator {
+  color: rgba(38, 55, 77, 0.45);
+  font-weight: 700;
+}
+
 .latest-photo-date {
   display: inline-block;
-  margin-left: 6px;
   padding: 1px 7px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.035);
