@@ -802,7 +802,7 @@ window.STATIONS_DATA = {
       },
       {
         series: "vienna-photo-12",
-        isMain: true,
+        isMain: false,
         operator: "ÖBB",
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Marchegg_Wide.jpeg",
         alt: "Vienna ÖBB Cityjet Marchegg wide view",
@@ -813,7 +813,7 @@ window.STATIONS_DATA = {
           {
             kind: "traction",
             label: "Class 4024 054-0",
-            active: false,
+            active: true,
             filterKey: "class-4024",
             filterLabel: "Class 4024",
           },
