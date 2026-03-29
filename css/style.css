@@ -672,13 +672,20 @@ img {
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
-    color 0.2s ease,
-    font-size 0.2s ease;
+    color 0.2s ease;
+}
+
+.home-gallery-cta span {
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .home-gallery-cta:hover {
   transform: none !important;
-  font-size: 15.5px;
+}
+
+.home-gallery-cta:hover span {
+  transform: scale(1.06);
 }
 
 .home-gallery::before {
