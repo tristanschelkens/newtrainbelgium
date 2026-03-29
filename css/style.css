@@ -550,13 +550,41 @@ img {
 }
 
 .latest-photo-visual {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  max-width: none;
-  justify-self: stretch;
-  border-radius: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   box-shadow: none;
+}
+
+.latest-photo-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.92);
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.latest-photo-visual:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.78);
+}
+
+.latest-photo-visual:hover .overlay {
+  opacity: 1;
+}
+
+.latest-photo-visual:hover .overlay h3 {
+  transform: translateY(0);
 }
 
 .latest-photo-meta {

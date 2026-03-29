@@ -206,6 +206,7 @@ function setActiveNavLink() {
       ...photo,
       stationName: station?.name || photo?.label || "Unknown location",
       stationSlug: slug,
+      sourceIndex: index,
       sortIndex: index,
       parsedDate: parsePhotoDate(photo?.date),
     })),
@@ -229,8 +230,12 @@ function setActiveNavLink() {
   const stationLink = latestPhoto.stationSlug
     ? `Station.html?slug=${encodeURIComponent(latestPhoto.stationSlug)}`
     : "Photos.html";
+  const directPhotoLink =
+    latestPhoto.stationSlug && Number.isInteger(latestPhoto.sourceIndex)
+      ? `Station.html?slug=${encodeURIComponent(latestPhoto.stationSlug)}&photo=${latestPhoto.sourceIndex}&lightbox=1`
+      : stationLink;
 
-  link.href = stationLink;
+  link.href = directPhotoLink;
   link.setAttribute("aria-label", latestPhoto.stationName);
   image.src = latestPhoto.src;
   image.alt = latestPhoto.alt || `${latestPhoto.stationName} featured photo`;
@@ -361,6 +366,11 @@ function setActiveNavLink() {
   const slug = (new URLSearchParams(window.location.search).get("slug") || "")
     .trim()
     .toLowerCase();
+  const requestedPhotoIndex = Number(
+    new URLSearchParams(window.location.search).get("photo"),
+  );
+  const shouldOpenLightbox =
+    new URLSearchParams(window.location.search).get("lightbox") === "1";
 
   const station = allStations[slug];
 
@@ -877,6 +887,10 @@ function setActiveNavLink() {
       openSiblingInSeries(1);
     }
   });
+
+  if (shouldOpenLightbox && Number.isInteger(requestedPhotoIndex)) {
+    openLightboxByIndex(requestedPhotoIndex);
+  }
 })();
 (function initLiveTrainMap() {
   const mapEl = document.getElementById("liveTrainsMap");
