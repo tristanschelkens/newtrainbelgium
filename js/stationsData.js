@@ -634,7 +634,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 1116 193",
         label: "Vienna",
         numbers: "1116 193",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -946,25 +946,7 @@ window.STATIONS_DATA = {
           },
         ],
       },
-      {
-        series: "vienna-photo-16",
-        isMain: false,
-        operator: "ZSSK",
-        src: "../images/Austria/Vienna/Vienna_ZSSK_263003_Side.jpeg",
-        alt: "Vienna ZSSK 263 003-6 side view",
-        label: "Vienna",
-        numbers: "263 003-6",
-        date: "",
-        consist: [
-          {
-            kind: "traction",
-            label: "Taurus",
-            active: true,
-            filterKey: "taurus",
-            filterLabel: "Taurus",
-          },
-        ],
-      },
+
       {
         series: "vienna-photo-16",
         isMain: false,
