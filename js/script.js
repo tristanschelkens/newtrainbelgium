@@ -67,65 +67,27 @@ document.addEventListener("click", (e) => {
 (function initHeroSlideshow() {
   const primary = document.getElementById("heroBgPrimary");
   const secondary = document.getElementById("heroBgSecondary");
+  const stationData = window.STATIONS_DATA;
 
-  if (!primary || !secondary) return;
+  if (!primary || !secondary || !stationData || typeof stationData !== "object") return;
 
-  const heroImages = [
-    {
-      src: "../images/Belgium/Antwerp/Antwerp_HLE1804M6.webp",
-      alt: "Antwerp HLE 1804 + 8x M6",
-    },
-    {
-      src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.webp",
-      alt: "Brussels-Midi HLE 1834 + NightJet",
-    },
-    {
-      src: "../images/Belgium/Eupen/IMG_4764.webp",
-      alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
-    },
-    {
-      src: "../images/Belgium/Hasselt/IMG_4814.webp",
-      alt: "Hasselt HLE 1914 + I10 + 8x M7 + HLE 1814",
-    },
-    {
-      src: "../images/Belgium/Liege/IMG_4734.webp",
-      alt: "Liège HLE 1873 + 4x I11",
-    },
-    {
-      src: "../images/Belgium/Luchtbal/Luchtbal_E320.webp",
-      alt: "Luchtbal E320 4029",
-    },
-    {
-      src: "../images/Belgium/Mechelen/Mechelen_TRAXXICRTRAXX.webp",
-      alt: "Mechelen TRAXX 186 205 + 7x ICR + TRAXX",
-    },
-    {
-      src: "../images/Germany/Dusseldorf/Dusseldorf_BR14657235xStadlerKISS.webp",
-      alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
-    },
-    {
-      src: "../images/Germany/Aachen/Aachen_DoStoBR146005.webp",
-      alt: "Aachen DoSto BR146 005",
-    },
-    {
-      src: "../images/Luxembourg/Luxembourg/Luxembourg_TRAXX40185xTwindexxVario.webp",
-      alt: "Luxembourg TRAXX 4018 + Twindexx Vario",
-    },
-    {
-      src: "../images/France/Paris/Paris_TGVDuplex245.jpeg",
-      alt: "Paris TGV Duplex 245",
-    },
-    {
-      src: "../images/Netherlands/Roosendaal/Roosendaal_TRAXX1861217xI11TRAXX.webp",
-      alt: "Roosendaal TRAXX 186 121 + I11 + TRAXX",
-    },
-    {
-      src: "../images/United Kingdom/London/London_Class3733206.webp",
-      alt: "London Class 373 3206",
-    },
-  ];
+  const heroImages = Object.values(stationData)
+    .flatMap((station) =>
+      Array.isArray(station?.photos)
+        ? station.photos
+            .filter((photo) => photo && photo.src)
+            .map((photo) => ({
+              src: photo.src,
+              alt: String(photo.alt || `${station.name || "Gallery"}`).trim(),
+            }))
+        : [],
+    );
 
-  if (heroImages.length < 2) return;
+  const uniqueHeroImages = Array.from(
+    new Map(heroImages.map((image) => [image.src, image])).values(),
+  );
+
+  if (uniqueHeroImages.length < 2) return;
 
   let activeImage = primary;
   let inactiveImage = secondary;
@@ -138,7 +100,7 @@ document.addEventListener("click", (e) => {
   }
 
   function buildQueue(lastIndex) {
-    const indexes = heroImages.map((_, index) => index);
+    const indexes = uniqueHeroImages.map((_, index) => index);
 
     for (let i = indexes.length - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -164,14 +126,14 @@ document.addEventListener("click", (e) => {
     return playQueue.shift();
   }
 
-  applyImage(primary, heroImages[0]);
+  applyImage(primary, uniqueHeroImages[0]);
   currentIndex = 0;
   playQueue = buildQueue(currentIndex);
-  applyImage(secondary, heroImages[getNextIndex()]);
+  applyImage(secondary, uniqueHeroImages[getNextIndex()]);
 
   window.setInterval(() => {
     currentIndex = getNextIndex();
-    const nextImage = heroImages[currentIndex];
+    const nextImage = uniqueHeroImages[currentIndex];
 
     applyImage(inactiveImage, nextImage);
     inactiveImage.classList.add("is-active");
@@ -2093,6 +2055,7 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+
 
 
 
