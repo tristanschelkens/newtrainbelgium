@@ -54,7 +54,7 @@ window.STATIONS_DATA = {
         alt: "Duffel 7x M4 + HLE 27",
         label: "Duffel",
         numbers: "",
-        date: "",
+        date: "25 May 2024",
         consist: [
           { kind: "carriage", label: "7x M4", active: true },
           { kind: "traction", label: "HLE 27", active: true },
