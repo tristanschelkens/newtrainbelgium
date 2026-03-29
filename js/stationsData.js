@@ -662,6 +662,12 @@ window.STATIONS_DATA = {
             filterKey: "taurus",
             filterLabel: "Taurus",
           },
+          {
+            kind: "carriage",
+            label: "UIC-Z",
+            filterKey: "UIC-Z",
+            filterLabel: "UIC-Z",
+          },
         ],
       },
       {
