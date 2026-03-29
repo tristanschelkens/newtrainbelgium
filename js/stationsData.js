@@ -553,20 +553,13 @@ window.STATIONS_DATA = {
         date: "",
         consist: [{ kind: "traction", label: "Eurostar 4003", active: true }],
       },
-    ],
-  },
-  vienna: {
-    name: "Vienna",
-    country: "Austria",
-    description: "Rail photography in Vienna.",
-    photos: [
       {
-        series: "vienna-photo-0",
+        series: "amsterdam-photo-6",
         isMain: true,
         operator: "Rail Force One",
-        src: "../images/Austria/Vienna/Vienna_RailForceOne_193946.jpeg",
-        alt: "Vienna Rail Force One 193 946",
-        label: "Vienna",
+        src: "../images/Netherlands/Amsterdam/Amsterdam_RailForceOne_193946.jpeg",
+        alt: "Amsterdam Rail Force One 193 946",
+        label: "Amsterdam",
         numbers: "193 946",
         date: "",
         consist: [
@@ -579,6 +572,13 @@ window.STATIONS_DATA = {
           },
         ],
       },
+    ],
+  },
+  vienna: {
+    name: "Vienna",
+    country: "Austria",
+    description: "Rail photography in Vienna.",
+    photos: [
       {
         series: "vienna-photo-1",
         isMain: true,
