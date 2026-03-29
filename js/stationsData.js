@@ -646,7 +646,6 @@ window.STATIONS_DATA = {
           {
             kind: "carriage",
             label: "4x UIC-Z",
-            filterKey: "UIC-Z",
           },
         ],
       },
@@ -670,7 +669,6 @@ window.STATIONS_DATA = {
           {
             kind: "carriage",
             label: "4x UIC-Z",
-            filterKey: "UIC-Z",
           },
         ],
       },
