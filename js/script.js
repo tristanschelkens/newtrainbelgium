@@ -134,6 +134,99 @@ function setActiveNavLink() {
   applyFilter(initialFilter);
 })();
 
+(function initLatestHomePhoto() {
+  const image = document.getElementById("latestPhotoImage");
+  const caption = document.getElementById("latestPhotoCaption");
+  const stationData = window.STATIONS_DATA;
+
+  if (!image || !caption || !stationData || typeof stationData !== "object") {
+    return;
+  }
+
+  const monthMap = {
+    january: 0,
+    februari: 1,
+    february: 1,
+    march: 2,
+    april: 3,
+    may: 4,
+    juni: 5,
+    june: 5,
+    july: 6,
+    augustus: 7,
+    august: 7,
+    september: 8,
+    oktober: 9,
+    october: 9,
+    november: 10,
+    december: 11,
+  };
+
+  function parsePhotoDate(value) {
+    const raw = String(value || "").trim();
+    if (!raw) return null;
+
+    const match = raw.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+    if (!match) return null;
+
+    const day = Number(match[1]);
+    const month = monthMap[match[2].toLowerCase()];
+    const year = Number(match[3]);
+
+    if (
+      !Number.isInteger(day) ||
+      month === undefined ||
+      !Number.isInteger(year)
+    ) {
+      return null;
+    }
+
+    return new Date(year, month, day);
+  }
+
+  function formatPhotoDate(date) {
+    return new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(date);
+  }
+
+  const allPhotos = Object.entries(stationData).flatMap(([slug, station]) =>
+    (station?.photos || []).map((photo, index) => ({
+      ...photo,
+      stationName: station?.name || photo?.label || "Unknown location",
+      stationSlug: slug,
+      sortIndex: index,
+      parsedDate: parsePhotoDate(photo?.date),
+    })),
+  );
+
+  const latestPhoto = allPhotos
+    .filter(
+      (photo) =>
+        photo.src &&
+        photo.parsedDate instanceof Date &&
+        !Number.isNaN(photo.parsedDate.getTime()),
+    )
+    .sort((a, b) => {
+      const dateDiff = b.parsedDate.getTime() - a.parsedDate.getTime();
+      if (dateDiff !== 0) return dateDiff;
+      return a.sortIndex - b.sortIndex;
+    })[0];
+
+  if (!latestPhoto) return;
+
+  image.src = latestPhoto.src;
+  image.alt = latestPhoto.alt || `${latestPhoto.stationName} featured photo`;
+
+  const stationLink = latestPhoto.stationSlug
+    ? `Station.html?slug=${encodeURIComponent(latestPhoto.stationSlug)}`
+    : "Photos.html";
+
+  caption.innerHTML = `Latest photo: <a href="${stationLink}">${latestPhoto.stationName}</a> - ${formatPhotoDate(latestPhoto.parsedDate)}.`;
+})();
+
 (function initPhotoMap() {
   const mapEl = document.getElementById("stationsMap");
   const grid = document.getElementById("photoGrid");
