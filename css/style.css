@@ -665,6 +665,7 @@ img {
 .home-gallery {
   position: relative;
   z-index: 0;
+  padding-bottom: 32px;
 }
 
 .home-gallery::before {
