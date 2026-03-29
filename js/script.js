@@ -395,7 +395,6 @@ function setActiveNavLink() {
     antwerp: [51.2172, 4.4211],
     amsterdam: [52.3791, 4.8994],
     "brussels-midi": [50.8356, 4.3366],
-    bratislava: [48.1587, 17.1069],
     duffel: [51.0959, 4.5167],
     eupen: [50.6299, 6.0369],
     hasselt: [50.9307, 5.3325],
