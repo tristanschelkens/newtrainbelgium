@@ -1387,6 +1387,7 @@ function setActiveNavLink() {
   function setMessage(text, isError) {
     if (!messageEl) return;
     messageEl.textContent = text;
+    messageEl.style.display = text ? "" : "none";
     messageEl.classList.toggle("is-error", !!isError);
   }
 
@@ -1873,10 +1874,7 @@ function setActiveNavLink() {
       if (fullFeed) {
         renderTrains(fullFeed.trains);
         setStatus("Live");
-        setMessage(
-          "The map is using a central live feed for faster full-network loading.",
-          false,
-        );
+        setMessage("", false);
 
         if (updatedAtLabel) {
           updatedAtLabel.textContent = fullFeed.updatedAt
@@ -1905,10 +1903,7 @@ function setActiveNavLink() {
 
       renderTrains(trains);
       setStatus(trains.length > 0 ? "Live" : "No trains found");
-      setMessage(
-        "Estimated live positions are shown for trains that could be derived from current iRail realtime departures.",
-        false,
-      );
+      setMessage("", false);
 
       if (updatedAtLabel) {
         updatedAtLabel.textContent = formatRelativeUpdate(new Date());
