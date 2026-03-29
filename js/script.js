@@ -703,6 +703,7 @@ function setActiveNavLink() {
           kind,
           label,
           active: kind === "traction" ? entry.active !== false : false,
+          showOnCard: entry.showOnCard !== false,
           filterKey:
             String(entry.filterKey || "").trim().toLowerCase() ||
             (kind === "traction"
@@ -732,6 +733,7 @@ function setActiveNavLink() {
 
   function buildMetaHtml(consist) {
     return consist
+      .filter((item) => item.showOnCard !== false)
       .map((item, index) => {
         const cls =
           item.kind === "traction"
