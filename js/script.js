@@ -130,17 +130,47 @@ document.addEventListener("click", (e) => {
   let activeImage = primary;
   let inactiveImage = secondary;
   let currentIndex = 0;
+  let playQueue = [];
 
   function applyImage(element, image) {
     element.src = image.src;
     element.alt = image.alt;
   }
 
+  function buildQueue(lastIndex) {
+    const indexes = heroImages.map((_, index) => index);
+
+    for (let i = indexes.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = indexes[i];
+      indexes[i] = indexes[j];
+      indexes[j] = temp;
+    }
+
+    if (indexes[0] === lastIndex && indexes.length > 1) {
+      const temp = indexes[0];
+      indexes[0] = indexes[1];
+      indexes[1] = temp;
+    }
+
+    return indexes;
+  }
+
+  function getNextIndex() {
+    if (playQueue.length === 0) {
+      playQueue = buildQueue(currentIndex);
+    }
+
+    return playQueue.shift();
+  }
+
   applyImage(primary, heroImages[0]);
-  applyImage(secondary, heroImages[1]);
+  currentIndex = 0;
+  playQueue = buildQueue(currentIndex);
+  applyImage(secondary, heroImages[getNextIndex()]);
 
   window.setInterval(() => {
-    currentIndex = (currentIndex + 1) % heroImages.length;
+    currentIndex = getNextIndex();
     const nextImage = heroImages[currentIndex];
 
     applyImage(inactiveImage, nextImage);
