@@ -645,9 +645,8 @@ window.STATIONS_DATA = {
           },
           {
             kind: "carriage",
-            label: "UIC-Z",
+            label: "4x UIC-Z",
             filterKey: "UIC-Z",
-            filterLabel: "UIC-Z",
           },
         ],
       },
@@ -670,9 +669,8 @@ window.STATIONS_DATA = {
           },
           {
             kind: "carriage",
-            label: "UIC-Z",
+            label: "4x UIC-Z",
             filterKey: "UIC-Z",
-            filterLabel: "UIC-Z",
           },
         ],
       },
@@ -733,7 +731,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "KISS",
+            label: "6x KISS",
             active: true,
             filterKey: "kiss",
             filterLabel: "KISS",
