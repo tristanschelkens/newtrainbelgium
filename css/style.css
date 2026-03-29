@@ -589,35 +589,34 @@ img {
 
 .latest-photo-meta {
   margin-top: 10px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, #f8fbff, #eef5fd);
-  border: 1px solid rgba(0, 92, 185, 0.14);
+  padding: 2px 2px 0;
+  border: none;
+  background: transparent;
 }
 
 .latest-photo-tag {
   display: inline-flex;
   align-items: center;
-  padding: 5px 9px;
+  padding: 4px 8px;
   border-radius: 999px;
   background: rgba(0, 92, 185, 0.1);
   border: 1px solid rgba(0, 92, 185, 0.2);
   color: var(--nmbs-blue);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
 }
 
 .latest-photo-line {
   margin: 8px 0 0;
-  color: #10253f !important;
-  font-size: 14px;
+  color: #26374d !important;
+  font-size: 13px;
   line-height: 1.4;
 }
 
 .latest-photo-prefix {
-  color: rgba(16, 37, 63, 0.68);
+  color: rgba(38, 55, 77, 0.72);
   font-weight: 600;
 }
 
@@ -625,7 +624,7 @@ img {
   color: var(--nmbs-blue);
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 92, 185, 0.18);
+  border-bottom: 1px solid rgba(0, 92, 185, 0.14);
   transition:
     color 0.2s ease,
     border-color 0.2s ease;
@@ -639,12 +638,12 @@ img {
 .latest-photo-date {
   display: inline-block;
   margin-left: 6px;
-  padding: 2px 8px;
+  padding: 1px 7px;
   border-radius: 999px;
-  background: rgba(0, 92, 185, 0.08);
-  border: 1px solid rgba(0, 92, 185, 0.12);
-  color: rgba(16, 37, 63, 0.82);
-  font-size: 13px;
+  background: rgba(0, 0, 0, 0.035);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(38, 55, 77, 0.82);
+  font-size: 12px;
   font-weight: 600;
 }
 
