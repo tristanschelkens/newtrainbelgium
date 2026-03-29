@@ -954,25 +954,6 @@ window.STATIONS_DATA = {
       },
 
       {
-        series: "vienna-photo-16",
-        isMain: false,
-        operator: "ZSSK",
-        src: "../images/Austria/Vienna/Vienna_ZSSK_263003_Wide.jpeg",
-        alt: "Vienna ZSSK 263 003-6 wide view",
-        label: "Vienna",
-        numbers: "263 003-6",
-        date: "",
-        consist: [
-          {
-            kind: "traction",
-            label: "Taurus",
-            active: true,
-            filterKey: "taurus",
-            filterLabel: "Taurus",
-          },
-        ],
-      },
-      {
         series: "vienna-photo-17",
         isMain: true,
         operator: "MÁV-START",
