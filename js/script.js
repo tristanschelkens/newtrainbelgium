@@ -224,7 +224,8 @@ function setActiveNavLink() {
     ? `Station.html?slug=${encodeURIComponent(latestPhoto.stationSlug)}`
     : "Photos.html";
 
-  caption.innerHTML = `Latest photo: <a href="${stationLink}">${latestPhoto.stationName}</a> - ${formatPhotoDate(latestPhoto.parsedDate)}.`;
+  caption.classList.add("latest-photo-line");
+  caption.innerHTML = `<span class="latest-photo-prefix">Latest photo</span> <a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
 })();
 
 (function initPhotoMap() {
