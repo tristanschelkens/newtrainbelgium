@@ -683,12 +683,19 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_4020302.jpeg",
         alt: "Vienna ÖBB 4020 302-8",
         label: "Vienna",
-        numbers: "4020 302-8",
+        numbers: "4020 302-8, 4020 305-1",
         date: "",
         consist: [
           {
             kind: "traction",
             label: "Class 4020 302-8",
+            active: true,
+            filterKey: "class-4020",
+            filterLabel: "Class 4020",
+          },
+          {
+            kind: "traction",
+            label: "Class 4020 305-1",
             active: true,
             filterKey: "class-4020",
             filterLabel: "Class 4020",
