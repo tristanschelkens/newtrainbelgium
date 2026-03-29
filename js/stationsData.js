@@ -770,10 +770,15 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Steuerwagen 80-90.729",
+            label: "7x RailJet",
             active: true,
-            filterKey: "steuerwagen",
-            filterLabel: "Steuerwagen",
+          },
+          {
+            kind: "traction",
+            label: "Taurus 1116",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
           },
         ],
       },
