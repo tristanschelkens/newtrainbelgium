@@ -454,7 +454,7 @@ window.STATIONS_DATA = {
     photos: [
       {
         series: "amsterdam-photo-0",
-        isMain: false,
+        isMain: true,
         operator: "NS",
         src: "../images/Netherlands/Amsterdam/Amsterdam_NS_VIRM_8631.jpeg",
         alt: "Amsterdam NS VIRM",
@@ -465,7 +465,7 @@ window.STATIONS_DATA = {
       },
       {
         series: "amsterdam-photo-0",
-        isMain: true,
+        isMain: false,
         operator: "NS",
         src: "../images/Netherlands/Amsterdam/Amsterdam_NS_VIRM_9525.jpeg",
         alt: "Amsterdam NS VIRM 8636",
