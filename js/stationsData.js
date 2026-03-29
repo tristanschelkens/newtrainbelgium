@@ -726,11 +726,6 @@ window.STATIONS_DATA = {
         date: "",
         consist: [
           {
-            kind: "carriage",
-            label: "4x CityShuttle",
-            active: true,
-          },
-          {
             kind: "traction",
             label: "6x KISS",
             active: true,
@@ -749,6 +744,11 @@ window.STATIONS_DATA = {
         numbers: "1116 199",
         date: "",
         consist: [
+          {
+            kind: "carriage",
+            label: "4x CityShuttle",
+            active: true,
+          },
           {
             kind: "traction",
             label: "Taurus 1116 199",
