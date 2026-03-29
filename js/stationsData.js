@@ -621,8 +621,6 @@ window.STATIONS_DATA = {
           {
             kind: "carriage",
             label: "NightJet",
-            filterKey: "NightJet",
-            filterLabel: "NightJet",
           },
         ],
       },
@@ -727,6 +725,11 @@ window.STATIONS_DATA = {
         numbers: "",
         date: "",
         consist: [
+          {
+            kind: "carriage",
+            label: "4x CityShuttle",
+            active: true,
+          },
           {
             kind: "traction",
             label: "6x KISS",
@@ -921,8 +924,6 @@ window.STATIONS_DATA = {
             kind: "carriage",
             label: "4x CityShuttle",
             active: true,
-            filterKey: "CityShuttle",
-            filterLabel: "CityShuttle",
           },
           {
             kind: "traction",
@@ -1059,8 +1060,6 @@ window.STATIONS_DATA = {
             kind: "carriage",
             label: "4x CityShuttle",
             active: false,
-            filterKey: "CityShuttle",
-            filterLabel: "CityShuttle",
           },
         ],
       },
