@@ -769,7 +769,7 @@ window.STATIONS_DATA = {
         date: "",
         consist: [
           {
-            kind: "traction",
+            kind: "carriage",
             label: "7x RailJet",
             active: true,
           },
@@ -798,6 +798,10 @@ window.STATIONS_DATA = {
             active: true,
             filterKey: "taurus",
             filterLabel: "Taurus",
+          },
+          {
+            kind: "carriage",
+            label: "CityJet",
           },
         ],
       },
