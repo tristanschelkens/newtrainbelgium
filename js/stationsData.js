@@ -1136,7 +1136,10 @@ window.STATIONS_DATA = {
         label: "Bratislava",
         numbers: "263 003-6",
         date: "23 March 2026",
-        consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
+        consist: [
+          { kind: "traction", label: "Škoda 263 003-6", active: true },
+          { kind: "cariage", label: "4x DoSto" },
+        ],
       },
       {
         series: "bratislava-photo-0",
@@ -1147,7 +1150,10 @@ window.STATIONS_DATA = {
         label: "Bratislava",
         numbers: "263 003-6",
         date: "23 March 2026",
-        consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
+        consist: [
+          { kind: "traction", label: "Škoda 263 003-6", active: true },
+          { kind: "cariage", label: "4x DoSto" },
+        ],
       },
       {
         series: "bratislava-photo-0",
@@ -1158,7 +1164,10 @@ window.STATIONS_DATA = {
         label: "Bratislava",
         numbers: "263 003-6",
         date: "23 March 2026",
-        consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
+        consist: [
+          { kind: "traction", label: "Škoda 263 003-6", active: true },
+          { kind: "cariage", label: "4x DoSto" },
+        ],
       },
     ],
   },
