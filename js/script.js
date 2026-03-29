@@ -394,6 +394,7 @@ function setActiveNavLink() {
   const stationCoords = {
     antwerp: [51.2172, 4.4211],
     amsterdam: [52.3791, 4.8994],
+    bratislava: [48.1459, 17.1077],
     "brussels-midi": [50.8356, 4.3366],
     duffel: [51.0959, 4.5167],
     eupen: [50.6299, 6.0369],
