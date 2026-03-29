@@ -590,7 +590,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 5047 011-1",
         label: "Vienna",
         numbers: "5047 011-1",
-        date: "",
+        date: "23 March 2026",
         consist: [
           {
             kind: "traction",
@@ -609,7 +609,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 1116 167",
         label: "Vienna",
         numbers: "1116 167",
-        date: "",
+        date: "23 March 2026",
         consist: [
           {
             kind: "traction",
@@ -678,7 +678,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 4020 302-8",
         label: "Vienna",
         numbers: "4020 302-8, 4020 305-1",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -703,8 +703,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_4020305.jpeg",
         alt: "Vienna ÖBB 4020 305-1",
         label: "Vienna",
-        numbers: "4020 305-1",
-        date: "",
+        numbers: "4020 305-1, 4020 302-8",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -730,7 +730,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB Cityjet doubledecker",
         label: "Vienna",
         numbers: "",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -749,7 +749,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 1116 199",
         label: "Vienna",
         numbers: "1116 199",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "carriage",
@@ -772,8 +772,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_Railjet_8090729.jpeg",
         alt: "Vienna ÖBB Railjet 80-90.729",
         label: "Vienna",
-        numbers: "80-90 729",
-        date: "",
+        numbers: "80-90.729",
+        date: "23 March 2026",
         consist: [
           {
             kind: "carriage",
@@ -797,7 +797,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 1116 182 Army Vectron",
         label: "Vienna",
         numbers: "1116 182",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -820,7 +820,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 4024 017-7",
         label: "Vienna",
         numbers: "4024 017-7",
-        date: "",
+        date: "23 March 2026",
         consist: [
           {
             kind: "traction",
@@ -846,7 +846,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 1116 111",
         label: "Vienna",
         numbers: "1116 111",
-        date: "",
+        date: "23 March 2026",
         consist: [
           {
             kind: "traction",
@@ -869,7 +869,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 2070 041",
         label: "Vienna",
         numbers: "2070 041",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -887,8 +887,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Marchegg_Wide.jpeg",
         alt: "Vienna ÖBB Cityjet Marchegg wide view",
         label: "Vienna",
-        numbers: "",
-        date: "",
+        numbers: "4024 054-0",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -906,8 +906,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Marchegg.jpeg",
         alt: "Vienna ÖBB Cityjet Marchegg",
         label: "Vienna",
-        numbers: "",
-        date: "",
+        numbers: "4024 054-0",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -925,8 +925,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Crossing.jpeg",
         alt: "Vienna ÖBB Cityjet crossing",
         label: "Vienna",
-        numbers: "",
-        date: "",
+        numbers: "4746 113, 4746",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -951,8 +951,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Glueck.jpeg",
         alt: "Vienna ÖBB Cityjet Glueck",
         label: "Vienna",
-        numbers: "",
-        date: "",
+        numbers: "86-33 106-4, 4746 569",
+        date: "24 March 2026",
         consist: [
           {
             kind: "carriage",
@@ -984,8 +984,8 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Stockerau.jpeg",
         alt: "Vienna ÖBB Cityjet Stockerau",
         label: "Vienna",
-        numbers: "",
-        date: "",
+        numbers: "4746 117",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -1012,7 +1012,7 @@ window.STATIONS_DATA = {
         alt: "Vienna H-START 470 005",
         label: "Vienna",
         numbers: "470 005",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -1035,7 +1035,7 @@ window.STATIONS_DATA = {
         alt: "Vienna H-START 470 005 front view",
         label: "Vienna",
         numbers: "470 005",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -1058,7 +1058,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 1293 134",
         label: "Vienna",
         numbers: "1293 124",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -1081,7 +1081,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ČD 193 576-6 Bobo",
         label: "Vienna",
         numbers: "193 576-6",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
@@ -1104,7 +1104,7 @@ window.STATIONS_DATA = {
         alt: "Vienna ÖBB 86-33 210-4",
         label: "Vienna",
         numbers: "86-33 210-4",
-        date: "",
+        date: "24 March 2026",
         consist: [
           {
             kind: "traction",
