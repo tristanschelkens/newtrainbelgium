@@ -89,7 +89,7 @@ document.addEventListener("click", (e) => {
     },
     {
       src: "../images/Belgium/Liege/IMG_4734.webp",
-      alt: "Liege HLE 1873 + 4x I11",
+      alt: "Liège HLE 1873 + 4x I11",
     },
     {
       src: "../images/Belgium/Luchtbal/Luchtbal_E320.webp",
@@ -269,11 +269,24 @@ function setActiveNavLink() {
     }
   }
 
+  function persistPhotoFilter(value) {
+    const url = new URL(window.location.href);
+
+    if (value === "all") {
+      url.searchParams.delete("filter");
+    } else {
+      url.searchParams.set("filter", value);
+    }
+
+    window.history.replaceState({}, "", url);
+  }
+
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const value = (btn.dataset.filter || "all").toLowerCase();
       setActiveButton(value);
       applyFilter(value);
+      persistPhotoFilter(value);
     });
   });
 
@@ -873,9 +886,29 @@ function setActiveNavLink() {
 
   const uniqueVehicleTypes = Array.from(filterDefinitions.keys());
 
-  if (vehicleFilters && uniqueVehicleTypes.length > 1) {
+  function persistVehicleFilter(value) {
+    const url = new URL(window.location.href);
+
+    if (value === "all") {
+      url.searchParams.delete("vehicleFilter");
+    } else {
+      url.searchParams.set("vehicleFilter", value);
+    }
+
+    window.history.replaceState({}, "", url);
+  }
+
+  const queryVehicleFilter = (
+    new URLSearchParams(window.location.search).get("vehicleFilter") || "all"
+  ).toLowerCase();
+  const initialVehicleFilter =
+    queryVehicleFilter === "all" || filterDefinitions.has(queryVehicleFilter)
+      ? queryVehicleFilter
+      : "all";
+
+  if (vehicleFilters && visiblePhotos.length > 1 && uniqueVehicleTypes.length > 1) {
     const filtersHtml = [
-      '<button class="filter-btn active" type="button" data-vehicle-filter="all">All</button>',
+      '<button class="filter-btn" type="button" data-vehicle-filter="all">All</button>',
       ...uniqueVehicleTypes
         .sort((a, b) => a.localeCompare(b))
         .map(
@@ -898,14 +931,24 @@ function setActiveNavLink() {
         filterButtons.forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
         applyVehicleFilter(value);
+        persistVehicleFilter(value);
       });
     });
+
+    const initialButton =
+      filterButtons.find(
+        (btn) =>
+          (btn.dataset.vehicleFilter || "all").toLowerCase() === initialVehicleFilter,
+      ) || filterButtons[0];
+
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    if (initialButton) initialButton.classList.add("active");
   } else if (vehicleFilters) {
     vehicleFilters.innerHTML = "";
     vehicleFilters.style.display = "none";
   }
 
-  applyVehicleFilter("all");
+  applyVehicleFilter(initialVehicleFilter);
 
   const lightbox = document.createElement("div");
   lightbox.className = "station-lightbox";
