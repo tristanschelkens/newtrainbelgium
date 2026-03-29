@@ -1014,6 +1014,10 @@ window.STATIONS_DATA = {
             filterKey: "taurus",
             filterLabel: "Taurus",
           },
+          {
+            kind: "carriage",
+            label: "5x UIC-Z",
+          },
         ],
       },
       {
@@ -1033,6 +1037,10 @@ window.STATIONS_DATA = {
             filterKey: "taurus",
             filterLabel: "Taurus",
           },
+          {
+            kind: "carriage",
+            label: "5x UIC-Z",
+          },
         ],
       },
       {
@@ -1051,6 +1059,10 @@ window.STATIONS_DATA = {
             active: true,
             filterKey: "vectron",
             filterLabel: "Vectron",
+          },
+          {
+            kind: "carriage",
+            label: "5x CityShuttle",
           },
         ],
       },
