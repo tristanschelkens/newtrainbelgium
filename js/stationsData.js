@@ -584,7 +584,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 5047",
+            label: "Class 5047 011-1",
             active: true,
             filterKey: "class-5047",
             filterLabel: "Class 5047",
