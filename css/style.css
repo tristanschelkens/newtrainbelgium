@@ -540,13 +540,26 @@ img {
 }
 
 .latest-photo-card {
-  padding: 14px;
+  padding: 12px;
+}
+
+.latest-photo-shell {
+  aspect-ratio: auto;
+  border-radius: 16px;
+  overflow: visible;
+}
+
+.latest-photo-visual {
+  display: block;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
 }
 
 .latest-photo-meta {
-  margin-top: 14px;
-  padding: 14px 16px;
-  border-radius: 16px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
   background: linear-gradient(180deg, #f8fbff, #eef5fd);
   border: 1px solid rgba(0, 92, 185, 0.14);
 }
@@ -554,22 +567,22 @@ img {
 .latest-photo-tag {
   display: inline-flex;
   align-items: center;
-  padding: 7px 11px;
+  padding: 5px 9px;
   border-radius: 999px;
   background: rgba(0, 92, 185, 0.1);
   border: 1px solid rgba(0, 92, 185, 0.2);
   color: var(--nmbs-blue);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
 .latest-photo-line {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: #10253f !important;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .latest-photo-prefix {
@@ -579,9 +592,9 @@ img {
 
 .latest-photo-link {
   color: var(--nmbs-blue);
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
-  border-bottom: 2px solid rgba(0, 92, 185, 0.18);
+  border-bottom: 1px solid rgba(0, 92, 185, 0.18);
   transition:
     color 0.2s ease,
     border-color 0.2s ease;
@@ -595,12 +608,13 @@ img {
 .latest-photo-date {
   display: inline-block;
   margin-left: 6px;
-  padding: 4px 10px;
+  padding: 2px 8px;
   border-radius: 999px;
   background: rgba(0, 92, 185, 0.08);
   border: 1px solid rgba(0, 92, 185, 0.12);
   color: rgba(16, 37, 63, 0.82);
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .home-gallery h2 {

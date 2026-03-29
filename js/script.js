@@ -135,11 +135,20 @@ function setActiveNavLink() {
 })();
 
 (function initLatestHomePhoto() {
+  const link = document.getElementById("latestPhotoLink");
   const image = document.getElementById("latestPhotoImage");
   const caption = document.getElementById("latestPhotoCaption");
+  const overlayText = document.getElementById("latestPhotoOverlayText");
   const stationData = window.STATIONS_DATA;
 
-  if (!image || !caption || !stationData || typeof stationData !== "object") {
+  if (
+    !link ||
+    !image ||
+    !caption ||
+    !overlayText ||
+    !stationData ||
+    typeof stationData !== "object"
+  ) {
     return;
   }
 
@@ -217,12 +226,15 @@ function setActiveNavLink() {
 
   if (!latestPhoto) return;
 
-  image.src = latestPhoto.src;
-  image.alt = latestPhoto.alt || `${latestPhoto.stationName} featured photo`;
-
   const stationLink = latestPhoto.stationSlug
     ? `Station.html?slug=${encodeURIComponent(latestPhoto.stationSlug)}`
     : "Photos.html";
+
+  link.href = stationLink;
+  link.setAttribute("aria-label", latestPhoto.stationName);
+  image.src = latestPhoto.src;
+  image.alt = latestPhoto.alt || `${latestPhoto.stationName} featured photo`;
+  overlayText.textContent = latestPhoto.stationName;
 
   caption.classList.add("latest-photo-line");
   caption.innerHTML = `<span class="latest-photo-prefix">Latest photo</span> <a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
