@@ -1076,9 +1076,9 @@ window.STATIONS_DATA = {
       {
         series: "vienna-photo-19",
         isMain: true,
-        operator: "CD",
+        operator: "ČD",
         src: "../images/Austria/Vienna/Vienna_CD_193576.jpeg",
-        alt: "Vienna CD 193 576-6 Bobo",
+        alt: "Vienna ČD 193 576-6 Bobo",
         label: "Vienna",
         numbers: "193 576-6",
         date: "",
