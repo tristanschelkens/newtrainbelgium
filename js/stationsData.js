@@ -641,7 +641,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 4020",
+            label: "Class 4020 302-8",
             active: true,
             filterKey: "class-4020",
             filterLabel: "Class 4020",
@@ -660,7 +660,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 4020",
+            label: "Class 4020 302-8",
             active: true,
             filterKey: "class-4020",
             filterLabel: "Class 4020",
@@ -710,14 +710,14 @@ window.STATIONS_DATA = {
         isMain: true,
         operator: "ÖBB",
         src: "../images/Austria/Vienna/Vienna_OEBB_Railjet_8090729.jpeg",
-        alt: "Vienna ÖBB Railjet 80-90 729",
+        alt: "Vienna ÖBB Railjet 80-90.729",
         label: "Vienna",
         numbers: "80-90 729",
         date: "",
         consist: [
           {
             kind: "traction",
-            label: "Steuerwagen",
+            label: "Steuerwagen 80-90.729",
             active: true,
             filterKey: "steuerwagen",
             filterLabel: "Steuerwagen",
@@ -755,7 +755,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 4024",
+            label: "Class 4024 017-7",
             active: true,
             filterKey: "class-4024",
             filterLabel: "Class 4024",
@@ -793,7 +793,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 2070",
+            label: "Class 2070 041",
             active: true,
             filterKey: "class-2070",
             filterLabel: "Class 2070",
@@ -812,8 +812,8 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 4024",
-            active: true,
+            label: "Class 4024 054-0",
+            active: false,
             filterKey: "class-4024",
             filterLabel: "Class 4024",
           },
@@ -821,7 +821,7 @@ window.STATIONS_DATA = {
       },
       {
         series: "vienna-photo-12",
-        isMain: false,
+        isMain: true,
         operator: "ÖBB",
         src: "../images/Austria/Vienna/Vienna_OEBB_Cityjet_Marchegg.jpeg",
         alt: "Vienna ÖBB Cityjet Marchegg",
@@ -831,7 +831,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Class 4024",
+            label: "Class 4024 054-0",
             active: true,
             filterKey: "class-4024",
             filterLabel: "Class 4024",
@@ -850,7 +850,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Desiro ML",
+            label: "Desiro ML 4746 113",
             active: true,
             filterKey: "desiro-ml",
             filterLabel: "Desiro ML",
@@ -895,7 +895,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Desiro ML",
+            label: "Desiro ML 4746 117",
             active: true,
             filterKey: "desiro-ml",
             filterLabel: "Desiro ML",
@@ -913,7 +913,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Taurus",
+            label: "Taurus 1116 193",
             active: true,
             filterKey: "taurus",
             filterLabel: "Taurus",
@@ -1003,12 +1003,12 @@ window.STATIONS_DATA = {
         src: "../images/Austria/Vienna/Vienna_OEBB_1293134.jpeg",
         alt: "Vienna ÖBB 1293 134",
         label: "Vienna",
-        numbers: "1293 134",
+        numbers: "1293 124",
         date: "",
         consist: [
           {
             kind: "traction",
-            label: "Vectron 1293 134",
+            label: "Vectron 1293 124",
             active: true,
             filterKey: "vectron",
             filterLabel: "Vectron",
@@ -1046,7 +1046,7 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Doppelstock-Wendezug",
+            label: "Doppelstock-Wendezug 86-33 210-4",
             active: true,
             filterKey: "doppelstock-wendezug",
             filterLabel: "Doppelstock-Wendezug",
