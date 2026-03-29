@@ -801,7 +801,7 @@ window.STATIONS_DATA = {
           },
           {
             kind: "carriage",
-            label: "CityJet",
+            label: "5x CityJet",
           },
         ],
       },
@@ -815,6 +815,13 @@ window.STATIONS_DATA = {
         numbers: "4024 017-7",
         date: "",
         consist: [
+          {
+            kind: "traction",
+            label: "Class 4024",
+            active: true,
+            filterKey: "class-4024",
+            filterLabel: "Class 4024",
+          },
           {
             kind: "traction",
             label: "Class 4024 017-7",
@@ -840,6 +847,10 @@ window.STATIONS_DATA = {
             active: true,
             filterKey: "taurus",
             filterLabel: "Taurus",
+          },
+          {
+            kind: "carriage",
+            label: "5x CityJet",
           },
         ],
       },
@@ -917,6 +928,13 @@ window.STATIONS_DATA = {
             filterKey: "desiro-ml",
             filterLabel: "Desiro ML",
           },
+          {
+            kind: "traction",
+            label: "Desiro ML 4746",
+            active: true,
+            filterKey: "desiro-ml",
+            filterLabel: "Desiro ML",
+          },
         ],
       },
       {
@@ -965,6 +983,13 @@ window.STATIONS_DATA = {
           {
             kind: "traction",
             label: "Desiro ML 4746 117",
+            active: true,
+            filterKey: "desiro-ml",
+            filterLabel: "Desiro ML",
+          },
+          {
+            kind: "traction",
+            label: "Desiro ML 4746",
             active: true,
             filterKey: "desiro-ml",
             filterLabel: "Desiro ML",
