@@ -84,12 +84,44 @@ document.addEventListener("click", (e) => {
       alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
     },
     {
+      src: "../images/Belgium/Hasselt/IMG_4814.webp",
+      alt: "Hasselt HLE 1914 + I10 + 8x M7 + HLE 1814",
+    },
+    {
+      src: "../images/Belgium/Liege/IMG_4734.webp",
+      alt: "Liege HLE 1873 + 4x I11",
+    },
+    {
+      src: "../images/Belgium/Luchtbal/Luchtbal_E320.webp",
+      alt: "Luchtbal E320 4029",
+    },
+    {
+      src: "../images/Belgium/Mechelen/Mechelen_TRAXXICRTRAXX.webp",
+      alt: "Mechelen TRAXX 186 205 + 7x ICR + TRAXX",
+    },
+    {
       src: "../images/Germany/Dusseldorf/Dusseldorf_BR14657235xStadlerKISS.webp",
       alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
     },
     {
+      src: "../images/Germany/Aachen/Aachen_DoStoBR146005.webp",
+      alt: "Aachen DoSto BR146 005",
+    },
+    {
       src: "../images/Luxembourg/Luxembourg/Luxembourg_TRAXX40185xTwindexxVario.webp",
       alt: "Luxembourg TRAXX 4018 + Twindexx Vario",
+    },
+    {
+      src: "../images/France/Paris/Paris_TGVDuplex245.jpeg",
+      alt: "Paris TGV Duplex 245",
+    },
+    {
+      src: "../images/Netherlands/Roosendaal/Roosendaal_TRAXX1861217xI11TRAXX.webp",
+      alt: "Roosendaal TRAXX 186 121 + I11 + TRAXX",
+    },
+    {
+      src: "../images/United Kingdom/London/London_Class3733206.webp",
+      alt: "London Class 373 3206",
     },
   ];
 
