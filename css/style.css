@@ -332,9 +332,15 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center 45%;
+  opacity: 0;
   filter: brightness(0.8);
   transform: scale(1.02);
+  transition: opacity 1.2s ease-in-out;
   animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+.hero-bg.is-active {
+  opacity: 1;
 }
 
 @keyframes heroZoom {

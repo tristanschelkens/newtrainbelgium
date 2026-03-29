@@ -64,6 +64,63 @@ document.addEventListener("click", (e) => {
   });
 })();
 
+(function initHeroSlideshow() {
+  const primary = document.getElementById("heroBgPrimary");
+  const secondary = document.getElementById("heroBgSecondary");
+
+  if (!primary || !secondary) return;
+
+  const heroImages = [
+    {
+      src: "../images/Belgium/Antwerp/Antwerp_HLE1804M6.webp",
+      alt: "Antwerp HLE 1804 + 8x M6",
+    },
+    {
+      src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.webp",
+      alt: "Brussels-Midi HLE 1834 + NightJet",
+    },
+    {
+      src: "../images/Belgium/Eupen/IMG_4764.webp",
+      alt: "Eupen HLE 1828 + I10 + 7x M7 + HLE 1837",
+    },
+    {
+      src: "../images/Germany/Dusseldorf/Dusseldorf_BR14657235xStadlerKISS.webp",
+      alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
+    },
+    {
+      src: "../images/Luxembourg/Luxembourg/Luxembourg_TRAXX40185xTwindexxVario.webp",
+      alt: "Luxembourg TRAXX 4018 + Twindexx Vario",
+    },
+  ];
+
+  if (heroImages.length < 2) return;
+
+  let activeImage = primary;
+  let inactiveImage = secondary;
+  let currentIndex = 0;
+
+  function applyImage(element, image) {
+    element.src = image.src;
+    element.alt = image.alt;
+  }
+
+  applyImage(primary, heroImages[0]);
+  applyImage(secondary, heroImages[1]);
+
+  window.setInterval(() => {
+    currentIndex = (currentIndex + 1) % heroImages.length;
+    const nextImage = heroImages[currentIndex];
+
+    applyImage(inactiveImage, nextImage);
+    inactiveImage.classList.add("is-active");
+    activeImage.classList.remove("is-active");
+
+    const previousActive = activeImage;
+    activeImage = inactiveImage;
+    inactiveImage = previousActive;
+  }, 10000);
+})();
+
 function handleNavbarScroll() {
   const navbar = document.getElementById("siteNavbar");
   if (!navbar) return;
