@@ -488,15 +488,21 @@ window.STATIONS_DATA = {
       {
         series: "amsterdam-photo-2",
         isMain: true,
-        operator: "DB, Eurostar",
+        operator: "DB",
         src: "../images/Netherlands/Amsterdam/Amsterdam_ICE3neo_Eurostar.jpeg",
         alt: "Amsterdam ICE 3neo with Eurostar",
         label: "Amsterdam",
         numbers: "",
         date: "",
         consist: [
-          { kind: "traction", label: "ICE 3neo", active: true },
-          { kind: "traction", label: "Eurostar PBKA", active: false },
+          { kind: "traction", label: "ICE 3 neo", active: true },
+          {
+            kind: "traction",
+            label: "Eurostar PBKA",
+            active: false,
+            filterKey: "pbka",
+            filterLabel: "PBKA",
+          },
         ],
       },
       {
@@ -961,7 +967,7 @@ window.STATIONS_DATA = {
       {
         series: "vienna-photo-17",
         isMain: true,
-        operator: "H-START",
+        operator: "MÁV-START",
         src: "../images/Austria/Vienna/Vienna_HSTART_470005.jpeg",
         alt: "Vienna H-START 470 005",
         label: "Vienna",
