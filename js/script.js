@@ -43,6 +43,27 @@ document.addEventListener("click", (e) => {
     if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
   }
 });
+
+(function initButtonHoverLabels() {
+  const buttons = document.querySelectorAll(".btn, .filter-btn");
+
+  buttons.forEach((button) => {
+    if (button.querySelector(".btn-label")) return;
+
+    const textNodes = Array.from(button.childNodes).filter(
+      (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim(),
+    );
+
+    if (textNodes.length !== 1) return;
+
+    const label = document.createElement("span");
+    label.className = "btn-label";
+    label.textContent = textNodes[0].textContent.trim();
+
+    button.replaceChild(label, textNodes[0]);
+  });
+})();
+
 function handleNavbarScroll() {
   const navbar = document.getElementById("siteNavbar");
   if (!navbar) return;
