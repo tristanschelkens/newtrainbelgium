@@ -562,7 +562,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "193 946",
         date: "",
-        consist: [{ kind: "traction", label: "Vectron 193 946", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Vectron 193 946",
+            active: true,
+            filterKey: "vectron",
+            filterLabel: "Vectron",
+          },
+        ],
       },
       {
         series: "vienna-photo-1",
@@ -573,7 +581,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "5047 011-1",
         date: "",
-        consist: [{ kind: "traction", label: "5047 011-1", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 5047",
+            active: true,
+            filterKey: "class-5047",
+            filterLabel: "Class 5047",
+          },
+        ],
       },
       {
         series: "vienna-photo-2",
@@ -584,7 +600,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "1116 167",
         date: "",
-        consist: [{ kind: "traction", label: "1116 167", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 1116 167",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-3",
@@ -595,7 +619,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "1116 193",
         date: "",
-        consist: [{ kind: "traction", label: "1116 193", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 1116 193",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-4",
@@ -606,7 +638,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "4020 302-8",
         date: "",
-        consist: [{ kind: "traction", label: "4020 302-8", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 4020",
+            active: true,
+            filterKey: "class-4020",
+            filterLabel: "Class 4020",
+          },
+        ],
       },
       {
         series: "vienna-photo-4",
@@ -617,7 +657,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "4020 305-1",
         date: "",
-        consist: [{ kind: "traction", label: "4020 305-1", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 4020",
+            active: true,
+            filterKey: "class-4020",
+            filterLabel: "Class 4020",
+          },
+        ],
       },
       {
         series: "vienna-photo-5",
@@ -628,7 +676,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "",
         date: "",
-        consist: [{ kind: "traction", label: "Cityjet Doubledecker", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "KISS",
+            active: true,
+            filterKey: "kiss",
+            filterLabel: "KISS",
+          },
+        ],
       },
       {
         series: "vienna-photo-6",
@@ -639,7 +695,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "1116 199",
         date: "",
-        consist: [{ kind: "traction", label: "1116 199", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 1116 199",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-7",
@@ -650,7 +714,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "80-90 729",
         date: "",
-        consist: [{ kind: "traction", label: "Railjet", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Steuerwagen",
+            active: true,
+            filterKey: "steuerwagen",
+            filterLabel: "Steuerwagen",
+          },
+        ],
       },
       {
         series: "vienna-photo-8",
@@ -661,7 +733,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "1116 182",
         date: "",
-        consist: [{ kind: "traction", label: "1116 182", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 1116 182",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-9",
@@ -672,7 +752,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "4024 017-7",
         date: "",
-        consist: [{ kind: "traction", label: "4024 017-7", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 4024",
+            active: true,
+            filterKey: "class-4024",
+            filterLabel: "Class 4024",
+          },
+        ],
       },
       {
         series: "vienna-photo-10",
@@ -683,7 +771,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "1116 111",
         date: "",
-        consist: [{ kind: "traction", label: "1116 111", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 1116 111",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-11",
@@ -694,7 +790,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "2070 041",
         date: "",
-        consist: [{ kind: "traction", label: "2070 041", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 2070",
+            active: true,
+            filterKey: "class-2070",
+            filterLabel: "Class 2070",
+          },
+        ],
       },
       {
         series: "vienna-photo-12",
@@ -705,7 +809,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "",
         date: "",
-        consist: [{ kind: "traction", label: "Cityjet Marchegg", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 4024",
+            active: true,
+            filterKey: "class-4024",
+            filterLabel: "Class 4024",
+          },
+        ],
       },
       {
         series: "vienna-photo-12",
@@ -716,7 +828,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "",
         date: "",
-        consist: [{ kind: "traction", label: "Cityjet Marchegg", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Class 4024",
+            active: true,
+            filterKey: "class-4024",
+            filterLabel: "Class 4024",
+          },
+        ],
       },
       {
         series: "vienna-photo-13",
@@ -727,7 +847,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "",
         date: "",
-        consist: [{ kind: "traction", label: "Cityjet", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Desiro ML",
+            active: true,
+            filterKey: "desiro-ml",
+            filterLabel: "Desiro ML",
+          },
+        ],
       },
       {
         series: "vienna-photo-14",
@@ -738,7 +866,22 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "",
         date: "",
-        consist: [{ kind: "traction", label: "Cityjet", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Doppelstock-Wendezug",
+            active: true,
+            filterKey: "doppelstock-wendezug",
+            filterLabel: "Doppelstock-Wendezug",
+          },
+          {
+            kind: "traction",
+            label: "Desiro ML",
+            active: false,
+            filterKey: "desiro-ml",
+            filterLabel: "Desiro ML",
+          },
+        ],
       },
       {
         series: "vienna-photo-15",
@@ -749,7 +892,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "",
         date: "",
-        consist: [{ kind: "traction", label: "Cityjet Stockerau", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Desiro ML",
+            active: true,
+            filterKey: "desiro-ml",
+            filterLabel: "Desiro ML",
+          },
+        ],
       },
       {
         series: "vienna-photo-16",
@@ -759,7 +910,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "263 003-6",
         date: "",
-        consist: [{ kind: "traction", label: "263 003-6", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-16",
@@ -770,7 +929,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "263 003-6",
         date: "",
-        consist: [{ kind: "traction", label: "263 003-6", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-16",
@@ -781,7 +948,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "263 003-6",
         date: "",
-        consist: [{ kind: "traction", label: "263 003-6", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-17",
@@ -792,7 +967,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "470 005",
         date: "",
-        consist: [{ kind: "traction", label: "470 005", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 470 005",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-17",
@@ -803,7 +986,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "470 005",
         date: "",
-        consist: [{ kind: "traction", label: "470 005", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Taurus 470 005",
+            active: true,
+            filterKey: "taurus",
+            filterLabel: "Taurus",
+          },
+        ],
       },
       {
         series: "vienna-photo-18",
@@ -814,7 +1005,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "1293 134",
         date: "",
-        consist: [{ kind: "traction", label: "Vectron 1293 134", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Vectron 1293 134",
+            active: true,
+            filterKey: "vectron",
+            filterLabel: "Vectron",
+          },
+        ],
       },
       {
         series: "vienna-photo-19",
@@ -825,7 +1024,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "193 576-6",
         date: "",
-        consist: [{ kind: "traction", label: "193 576-6", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Vectron 193 576-6",
+            active: true,
+            filterKey: "vectron",
+            filterLabel: "Vectron",
+          },
+        ],
       },
       {
         series: "vienna-photo-20",
@@ -836,7 +1043,15 @@ window.STATIONS_DATA = {
         label: "Vienna",
         numbers: "86-33 210-4",
         date: "",
-        consist: [{ kind: "traction", label: "Doubledecker 86-33 210-4", active: true }],
+        consist: [
+          {
+            kind: "traction",
+            label: "Doppelstock-Wendezug",
+            active: true,
+            filterKey: "doppelstock-wendezug",
+            filterLabel: "Doppelstock-Wendezug",
+          },
+        ],
       },
     ],
   },

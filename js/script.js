@@ -704,11 +704,20 @@ function setActiveNavLink() {
           label,
           active: kind === "traction" ? entry.active !== false : false,
           filterKey:
-            kind === "traction"
+            String(entry.filterKey || "").trim().toLowerCase() ||
+            (kind === "traction"
               ? normalizeVehicleType(inferredType, inferredNumber)
               : kind === "carriage" && entry.active === true
                 ? normalizeCarriageType(label)
-                : "",
+                : ""),
+          filterLabel:
+            String(entry.filterLabel || "").trim() ||
+            (kind === "traction"
+              ? getVehicleFilterLabel(
+                  String(entry.filterKey || "").trim().toLowerCase() ||
+                    normalizeVehicleType(inferredType, inferredNumber),
+                )
+              : ""),
         };
       })
       .filter(Boolean);
@@ -846,9 +855,20 @@ function setActiveNavLink() {
     grid.classList.toggle("has-few", visibleCount <= 2);
   }
 
-  const uniqueVehicleTypes = Array.from(
-    new Set(visiblePhotos.flatMap((photo) => photo.filterKeys).filter(Boolean)),
-  );
+  const filterDefinitions = new Map();
+  visiblePhotos.forEach((photo) => {
+    photo.consist.forEach((item) => {
+      if (!item.filterKey) return;
+      if (!filterDefinitions.has(item.filterKey)) {
+        filterDefinitions.set(
+          item.filterKey,
+          item.filterLabel || getVehicleFilterLabel(item.filterKey),
+        );
+      }
+    });
+  });
+
+  const uniqueVehicleTypes = Array.from(filterDefinitions.keys());
 
   if (vehicleFilters && uniqueVehicleTypes.length > 1) {
     const filtersHtml = [
@@ -857,7 +877,7 @@ function setActiveNavLink() {
         .sort((a, b) => a.localeCompare(b))
         .map(
           (key) =>
-            `<button class="filter-btn" type="button" data-vehicle-filter="${esc(key)}">${esc(getVehicleFilterLabel(key))}</button>`,
+            `<button class="filter-btn" type="button" data-vehicle-filter="${esc(key)}">${esc(filterDefinitions.get(key) || getVehicleFilterLabel(key))}</button>`,
         ),
     ].join("");
 
