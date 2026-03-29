@@ -404,6 +404,8 @@ function setActiveNavLink() {
   link.setAttribute("aria-label", latestPhoto.stationName);
   image.src = latestPhoto.src;
   image.alt = latestPhoto.alt || `${latestPhoto.stationName} featured photo`;
+  image.style.objectPosition =
+    latestPhoto.stationSlug === "brussels-midi" ? "42% center" : "center";
   overlayText.textContent = latestPhoto.stationName;
 
   caption.classList.add("latest-photo-line");
