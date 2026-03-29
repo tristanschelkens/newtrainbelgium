@@ -532,7 +532,7 @@ window.STATIONS_DATA = {
         label: "Amsterdam",
         numbers: "4001",
         date: "22 March 2026",
-        consist: [{ kind: "traction", label: "Eurostar 4001", active: true }],
+        consist: [{ kind: "traction", label: "E320 4001", active: true }],
       },
       {
         series: "amsterdam-photo-6",
@@ -543,7 +543,7 @@ window.STATIONS_DATA = {
         label: "Amsterdam",
         numbers: "4002",
         date: "22 March 2026",
-        consist: [{ kind: "traction", label: "E320 4003", active: true }],
+        consist: [{ kind: "traction", label: "E320 4002", active: true }],
       },
       {
         series: "amsterdam-photo-7",
