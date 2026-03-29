@@ -484,7 +484,7 @@ window.STATIONS_DATA = {
         numbers: "",
         date: "",
         consist: [
-          { kind: "traction", label: "ICE 3 neo", active: true },
+          { kind: "traction", label: "E320 ", active: true },
           {
             kind: "traction",
             label: "Eurostar PBA",
@@ -528,9 +528,9 @@ window.STATIONS_DATA = {
         isMain: true,
         operator: "Eurostar",
         src: "../images/Netherlands/Amsterdam/Amsterdam_Eurostar_4003.jpeg",
-        alt: "Amsterdam Eurostar 4003",
+        alt: "Amsterdam Eurostar 4002",
         label: "Amsterdam",
-        numbers: "4003",
+        numbers: "4002",
         date: "",
         consist: [{ kind: "traction", label: "E320 4003", active: true }],
       },
