@@ -1135,7 +1135,7 @@ window.STATIONS_DATA = {
         alt: "Bratislava ZSSK 263 003-6",
         label: "Bratislava",
         numbers: "263 003-6",
-        date: "",
+        date: "23 March 2026",
         consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
       },
       {
@@ -1146,7 +1146,7 @@ window.STATIONS_DATA = {
         alt: "Bratislava ZSSK 263 003-6 side view",
         label: "Bratislava",
         numbers: "263 003-6",
-        date: "",
+        date: "23 March 2026",
         consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
       },
       {
@@ -1157,7 +1157,7 @@ window.STATIONS_DATA = {
         alt: "Bratislava ZSSK 263 003-6 wide view",
         label: "Bratislava",
         numbers: "263 003-6",
-        date: "",
+        date: "23 March 2026",
         consist: [{ kind: "traction", label: "Škoda 263 003-6", active: true }],
       },
     ],
