@@ -29,7 +29,7 @@ window.STATIONS_DATA = {
         series: "brussels-midi-photo-0",
         isMain: true,
         operator: "NMBS/SNCB, ÖBB",
-        src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.webp",
+        src: "../images/Belgium/Brussels-Midi/Brussels_HLE1834NightJet.jpeg",
         alt: "Brussels-Midi HLE 1834 + NightJet",
         label: "Brussels-Midi",
         numbers: "1834",
