@@ -713,6 +713,13 @@ window.STATIONS_DATA = {
             filterKey: "class-4020",
             filterLabel: "Class 4020",
           },
+          {
+            kind: "traction",
+            label: "Class 4020 305-1",
+            active: true,
+            filterKey: "class-4020",
+            filterLabel: "Class 4020",
+          },
         ],
       },
       {
@@ -954,10 +961,10 @@ window.STATIONS_DATA = {
           },
           {
             kind: "traction",
-            label: "Tarus 1116",
+            label: "Taurus 1116",
             active: true,
-            filterKey: "tarus",
-            filterLabel: "Tarus",
+            filterKey: "taurus",
+            filterLabel: "Taurus",
           },
 
           {
@@ -999,7 +1006,7 @@ window.STATIONS_DATA = {
 
       {
         series: "vienna-photo-17",
-        isMain: true,
+        isMain: false,
         operator: "MÁV-START",
         src: "../images/Austria/Vienna/Vienna_HSTART_470005.jpeg",
         alt: "Vienna H-START 470 005",
@@ -1022,8 +1029,8 @@ window.STATIONS_DATA = {
       },
       {
         series: "vienna-photo-17",
-        isMain: false,
-        operator: "H-START",
+        isMain: true,
+        operator: "MÁV-START",
         src: "../images/Austria/Vienna/Vienna_HSTART_470005_Front.jpeg",
         alt: "Vienna H-START 470 005 front view",
         label: "Vienna",
@@ -1097,10 +1104,10 @@ window.STATIONS_DATA = {
         consist: [
           {
             kind: "traction",
-            label: "Tarus 1116",
+            label: "Taurus 1116",
             active: true,
-            filterKey: "tarus",
-            filterLabel: "Tarus",
+            filterKey: "taurus",
+            filterLabel: "Taurus",
           },
           {
             kind: "carriage",
