@@ -878,19 +878,20 @@ window.STATIONS_DATA = {
         date: "",
         consist: [
           {
+            kind: "carriage",
+            label: "4x CityShuttle",
+            active: true,
+            filterKey: "CityShuttle",
+            filterLabel: "CityShuttle",
+          },
+          {
             kind: "traction",
             label: "Tarus 1116",
             active: true,
             filterKey: "tarus",
             filterLabel: "Tarus",
           },
-          {
-            kind: "carriage",
-            label: "Doppelstock-Wendezug 86-33 210-4",
-            active: false,
-            filterKey: "doppelstock-wendezug",
-            filterLabel: "Doppelstock-Wendezug",
-          },
+
           {
             kind: "traction",
             label: "Desiro ML",
@@ -1071,10 +1072,10 @@ window.STATIONS_DATA = {
           },
           {
             kind: "carriage",
-            label: "Doppelstock-Wendezug 86-33 210-4",
+            label: "4x CityShuttle",
             active: false,
-            filterKey: "doppelstock-wendezug",
-            filterLabel: "Doppelstock-Wendezug",
+            filterKey: "CityShuttle",
+            filterLabel: "CityShuttle",
           },
         ],
       },
