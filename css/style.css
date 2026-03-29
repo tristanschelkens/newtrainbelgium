@@ -677,7 +677,9 @@ img {
 
 .home-gallery-cta span {
   display: inline-block;
-  transition: transform 0.2s ease;
+  transition:
+    letter-spacing 0.2s ease,
+    text-shadow 0.2s ease;
 }
 
 .home-gallery-cta:hover {
@@ -685,7 +687,8 @@ img {
 }
 
 .home-gallery-cta:hover span {
-  transform: scale(1.06);
+  letter-spacing: 0.15px;
+  text-shadow: 0 0 0 currentColor;
 }
 
 .home-gallery::before {
