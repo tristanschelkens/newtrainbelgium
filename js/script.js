@@ -198,6 +198,7 @@ function setActiveNavLink() {
   );
   const cardPhotoEntries = new Map();
   const allPhotoEntries = [];
+  const photoSeriesGroups = new Map();
   let activeFilter = "all";
   let activeQuery = "";
 
@@ -216,6 +217,37 @@ function setActiveNavLink() {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+  }
+
+  function formatSearchTagLabel(label) {
+    return String(label || "").replace(
+      /(\d+)\s*x\s*/gi,
+      (_, n) => `${n}${String.fromCharCode(215)} `,
+    );
+  }
+
+  function buildSearchMetaHtml(consist) {
+    const visibleItems = (Array.isArray(consist) ? consist : []).filter(
+      (item) => item && item.showOnCard !== false,
+    );
+
+    return visibleItems
+      .map((item, index) => {
+        const kind = String(item.kind || "carriage").toLowerCase();
+        const cls =
+          kind === "traction"
+            ? item.active !== false
+              ? "station-meta-chip"
+              : "station-meta-inactive"
+            : "station-meta-carriage";
+        const plus =
+          index < visibleItems.length - 1
+            ? '<span class="station-meta-plus">+</span>'
+            : "";
+
+        return `<span class="${cls}">${esc(formatSearchTagLabel(item.label || ""))}</span>${plus}`;
+      })
+      .join("");
   }
 
   function hydratePhotoCard(card) {
@@ -269,10 +301,17 @@ function setActiveNavLink() {
       return {
         index,
         slug,
+        series:
+          String(photo?.series || "").trim().toLowerCase() || `photo-${index}`,
+        seriesKey: `${slug}::${String(photo?.series || "").trim().toLowerCase() || `photo-${index}`}`,
+        explicitIsMain: typeof photo?.isMain === "boolean" ? photo.isMain : null,
         stationName: station?.name || slug,
         country: String(station?.country || "").toLowerCase(),
         src: photo?.src || "",
         alt: photo?.alt || station?.name || slug,
+        date: String(photo?.date || "").trim(),
+        operator: String(photo?.operator || "").trim(),
+        metaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
         search: normalizeSearchValue(photoSearch),
       };
@@ -280,10 +319,156 @@ function setActiveNavLink() {
 
     cardPhotoEntries.set(card, photoEntries);
     allPhotoEntries.push(...photoEntries);
+    photoEntries.forEach((entry) => {
+      if (!photoSeriesGroups.has(entry.seriesKey)) photoSeriesGroups.set(entry.seriesKey, []);
+      photoSeriesGroups.get(entry.seriesKey).push(entry);
+    });
   }
 
   cards.forEach((card) => {
     hydratePhotoCard(card);
+  });
+
+  const searchLightbox = document.createElement("div");
+  searchLightbox.className = "station-lightbox";
+  searchLightbox.setAttribute("aria-hidden", "true");
+  searchLightbox.innerHTML = `
+    <button class="station-lightbox-close" type="button" aria-label="Close image">&times;</button>
+    <div class="station-lightbox-media">
+      <button class="station-lightbox-nav prev" type="button" aria-label="Previous photo">&#10094;</button>
+      <img src="" alt="" />
+      <button class="station-lightbox-nav next" type="button" aria-label="Next photo">&#10095;</button>
+      <div class="station-lightbox-operator" aria-hidden="true"></div>
+      <div class="station-lightbox-date" aria-hidden="true"></div>
+      <div class="station-lightbox-meta" aria-hidden="true"></div>
+      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
+    </div>
+  `;
+  document.body.appendChild(searchLightbox);
+
+  const searchLightboxImg = searchLightbox.querySelector(".station-lightbox-media img");
+  const searchLightboxOperator = searchLightbox.querySelector(".station-lightbox-operator");
+  const searchLightboxDate = searchLightbox.querySelector(".station-lightbox-date");
+  const searchLightboxMeta = searchLightbox.querySelector(".station-lightbox-meta");
+  const searchLightboxClose = searchLightbox.querySelector(".station-lightbox-close");
+  const searchLightboxPrev = searchLightbox.querySelector(".station-lightbox-nav.prev");
+  const searchLightboxNext = searchLightbox.querySelector(".station-lightbox-nav.next");
+  let currentSearchSeriesPool = [];
+  let currentSearchSeriesPosition = 0;
+
+  function closeSearchLightbox() {
+    searchLightbox.classList.remove("is-open");
+    searchLightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("station-lightbox-open");
+  }
+
+  function updateSearchLightboxNav() {
+    const hasMultiple = currentSearchSeriesPool.length > 1;
+    if (searchLightboxPrev) {
+      searchLightboxPrev.style.display = hasMultiple ? "inline-flex" : "none";
+    }
+    if (searchLightboxNext) {
+      searchLightboxNext.style.display = hasMultiple ? "inline-flex" : "none";
+    }
+  }
+
+  function openSearchLightboxEntry(entry) {
+    if (!entry || !searchLightboxImg) return;
+
+    currentSearchSeriesPool = photoSeriesGroups.get(entry.seriesKey) || [entry];
+    const foundIndex = currentSearchSeriesPool.findIndex(
+      (item) => item.slug === entry.slug && item.index === entry.index,
+    );
+    currentSearchSeriesPosition = foundIndex >= 0 ? foundIndex : 0;
+
+    searchLightboxImg.src = entry.src;
+    searchLightboxImg.alt = entry.alt || entry.stationName;
+
+    if (searchLightboxOperator) {
+      if (entry.operator) {
+        const labels = entry.operator
+          .split(",")
+          .map((item) => item.trim())
+          .filter(Boolean);
+        searchLightboxOperator.innerHTML = labels
+          .map((label) => `<span class="station-meta-chip">${esc(label)}</span>`)
+          .join("");
+        searchLightboxOperator.style.display = "flex";
+      } else {
+        searchLightboxOperator.innerHTML = "";
+        searchLightboxOperator.style.display = "none";
+      }
+    }
+
+    if (searchLightboxDate) {
+      if (entry.date) {
+        searchLightboxDate.innerHTML = `<span class="station-meta-number">${esc(entry.date)}</span>`;
+        searchLightboxDate.style.display = "flex";
+      } else {
+        searchLightboxDate.innerHTML = "";
+        searchLightboxDate.style.display = "none";
+      }
+    }
+
+    if (searchLightboxMeta) {
+      searchLightboxMeta.innerHTML = entry.metaHtml || "";
+      searchLightboxMeta.style.display = entry.metaHtml ? "flex" : "none";
+    }
+
+    searchLightbox.classList.add("is-open");
+    searchLightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("station-lightbox-open");
+    updateSearchLightboxNav();
+  }
+
+  function openSiblingSearchLightbox(step) {
+    if (!currentSearchSeriesPool.length) return;
+    const count = currentSearchSeriesPool.length;
+    currentSearchSeriesPosition =
+      ((currentSearchSeriesPosition + step) % count + count) % count;
+    openSearchLightboxEntry(currentSearchSeriesPool[currentSearchSeriesPosition]);
+  }
+
+  if (searchLightboxClose) {
+    searchLightboxClose.addEventListener("click", closeSearchLightbox);
+  }
+
+  if (searchLightboxPrev) {
+    searchLightboxPrev.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openSiblingSearchLightbox(-1);
+    });
+  }
+
+  if (searchLightboxNext) {
+    searchLightboxNext.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openSiblingSearchLightbox(1);
+    });
+  }
+
+  searchLightbox.addEventListener("click", (e) => {
+    if (e.target === searchLightbox) {
+      closeSearchLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!searchLightbox.classList.contains("is-open")) return;
+
+    if (e.key === "Escape") {
+      closeSearchLightbox();
+      return;
+    }
+
+    if (e.key === "ArrowLeft") {
+      openSiblingSearchLightbox(-1);
+      return;
+    }
+
+    if (e.key === "ArrowRight") {
+      openSiblingSearchLightbox(1);
+    }
   });
 
   function setActiveButton(value) {
@@ -307,18 +492,40 @@ function setActiveNavLink() {
         return countryMatch && queryMatch;
       });
 
-      grid.innerHTML = matchingPhotos
+      const matchingSeriesKeys = Array.from(
+        new Set(matchingPhotos.map((photo) => photo.seriesKey)),
+      );
+      const groupedResults = matchingSeriesKeys
+        .map((seriesKey) => {
+          const group = photoSeriesGroups.get(seriesKey) || [];
+          const explicitMains = group.filter((photo) => photo.explicitIsMain === true);
+          return (
+            explicitMains[0] ||
+            group.find((photo) => photo.explicitIsMain !== false) ||
+            group[0] ||
+            null
+          );
+        })
+        .filter(Boolean);
+
+      grid.innerHTML = groupedResults
         .map(
           (photo) => `
-            <a class="photo-card" data-country="${esc(photo.country)}" href="${esc(photo.href)}">
+            <button
+              class="photo-card photo-search-result"
+              type="button"
+              data-series-key="${esc(photo.seriesKey)}"
+              data-photo-index="${photo.index}"
+              data-photo-slug="${esc(photo.slug)}"
+            >
               <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
               <div class="overlay"><h3>${esc(photo.stationName)}</h3></div>
-            </a>
+            </button>
           `,
         )
         .join("");
 
-      visibleCount = matchingPhotos.length;
+      visibleCount = groupedResults.length;
 
       if (noResults) {
         noResults.style.display = visibleCount === 0 ? "block" : "none";
@@ -446,6 +653,21 @@ function setActiveNavLink() {
 
   setActiveButton(initialFilter);
   applyFilters();
+
+  grid.addEventListener("click", (e) => {
+    const searchCard = e.target.closest(".photo-search-result");
+    if (!searchCard) return;
+
+    const slug = String(searchCard.dataset.photoSlug || "").trim().toLowerCase();
+    const index = Number(searchCard.dataset.photoIndex || 0);
+    const entry = (photoSeriesGroups.get(searchCard.dataset.seriesKey || "") || []).find(
+      (photo) => photo.slug === slug && photo.index === index,
+    );
+
+    if (entry) {
+      openSearchLightboxEntry(entry);
+    }
+  });
 })();
 
 (function initLatestHomePhoto() {
