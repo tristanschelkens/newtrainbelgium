@@ -191,10 +191,13 @@ function setActiveNavLink() {
 
   const buttons = Array.from(filters.querySelectorAll(".filter-btn"));
   const cards = Array.from(grid.querySelectorAll(".photo-card"));
+  const originalGridHtml = grid.innerHTML;
   const noResults = document.getElementById("noResults");
   const availableFilters = new Set(
     buttons.map((btn) => (btn.dataset.filter || "").toLowerCase()),
   );
+  const cardPhotoEntries = new Map();
+  const allPhotoEntries = [];
   let activeFilter = "all";
   let activeQuery = "";
 
@@ -206,7 +209,16 @@ function setActiveNavLink() {
       .trim();
   }
 
-  cards.forEach((card) => {
+  function esc(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function hydratePhotoCard(card) {
     const href = card.getAttribute("href") || "";
     const slug = (new URLSearchParams(href.split("?")[1] || "").get("slug") || "")
       .trim()
@@ -235,6 +247,43 @@ function setActiveNavLink() {
       .join(" ");
 
     card.dataset.search = normalizeSearchValue(searchParts);
+    card.dataset.defaultHref = href;
+
+    const photoEntries = stationPhotos.map((photo, index) => {
+      const photoSearch = [
+        slug,
+        station?.name,
+        station?.country,
+        station?.description,
+        photo?.operator,
+        photo?.alt,
+        photo?.label,
+        photo?.numbers,
+        ...(Array.isArray(photo?.consist)
+          ? photo.consist.map((item) => item?.label)
+          : []),
+      ]
+        .filter(Boolean)
+        .join(" ");
+
+      return {
+        index,
+        slug,
+        stationName: station?.name || slug,
+        country: String(station?.country || "").toLowerCase(),
+        src: photo?.src || "",
+        alt: photo?.alt || station?.name || slug,
+        href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
+        search: normalizeSearchValue(photoSearch),
+      };
+    });
+
+    cardPhotoEntries.set(card, photoEntries);
+    allPhotoEntries.push(...photoEntries);
+  }
+
+  cards.forEach((card) => {
+    hydratePhotoCard(card);
   });
 
   function setActiveButton(value) {
@@ -250,14 +299,72 @@ function setActiveNavLink() {
       .split(/\s+/)
       .filter(Boolean);
 
-    cards.forEach((card) => {
+    if (queryTerms.length > 0) {
+      const matchingPhotos = allPhotoEntries.filter((photo) => {
+        const countryMatch =
+          activeFilter === "all" || photo.country === activeFilter;
+        const queryMatch = queryTerms.every((term) => photo.search.includes(term));
+        return countryMatch && queryMatch;
+      });
+
+      grid.innerHTML = matchingPhotos
+        .map(
+          (photo) => `
+            <a class="photo-card" data-country="${esc(photo.country)}" href="${esc(photo.href)}">
+              <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
+              <div class="overlay"><h3>${esc(photo.stationName)}</h3></div>
+            </a>
+          `,
+        )
+        .join("");
+
+      visibleCount = matchingPhotos.length;
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+
+      grid.classList.toggle("has-few", visibleCount <= 2);
+
+      if (mapSection) {
+        mapSection.style.display = "none";
+      }
+
+      return;
+    }
+
+    if (grid.innerHTML !== originalGridHtml) {
+      grid.innerHTML = originalGridHtml;
+      cardPhotoEntries.clear();
+      allPhotoEntries.length = 0;
+      Array.from(grid.querySelectorAll(".photo-card")).forEach((card) => {
+        hydratePhotoCard(card);
+      });
+    }
+
+    Array.from(grid.querySelectorAll(".photo-card")).forEach((card) => {
       const country = (card.dataset.country || "").toLowerCase();
       const searchText = card.dataset.search || "";
+      const defaultHref = card.dataset.defaultHref || card.getAttribute("href") || "";
+      const photoEntries = cardPhotoEntries.get(card) || [];
       const countryMatch = activeFilter === "all" || country === activeFilter;
       const queryMatch =
         queryTerms.length === 0 ||
         queryTerms.every((term) => searchText.includes(term));
       const show = countryMatch && queryMatch;
+
+      let targetHref = defaultHref;
+      if (queryTerms.length > 0) {
+        const matchingPhoto = photoEntries.find((entry) =>
+          queryTerms.every((term) => entry.search.includes(term)),
+        );
+
+        if (matchingPhoto) {
+          targetHref = matchingPhoto.href;
+        }
+      }
+
+      card.setAttribute("href", targetHref);
 
       card.classList.toggle("is-hidden", !show);
 
