@@ -268,6 +268,109 @@ function setActiveNavLink() {
     return normalizeSearchValue(value).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   }
 
+  function deriveMaterialFacet(item) {
+    if (!item || String(item.kind || "").toLowerCase() !== "traction") return null;
+
+    const explicitLabel = String(item.filterLabel || "").trim();
+    const explicitKey = String(item.filterKey || "").trim();
+    if (explicitLabel) {
+      return {
+        key: normalizeFacetKey(explicitKey || explicitLabel),
+        label: explicitLabel,
+      };
+    }
+
+    const label = String(item.label || "").trim();
+    if (!label) return null;
+
+    const normalized = normalizeSearchValue(label);
+
+    if (normalized.startsWith("vectron")) {
+      return { key: "vectron", label: "Vectron" };
+    }
+    if (normalized.startsWith("taurus")) {
+      return { key: "taurus", label: "Taurus" };
+    }
+    if (normalized.startsWith("railjet")) {
+      return { key: "railjet", label: "Railjet" };
+    }
+    if (normalized.startsWith("desiro ml")) {
+      return { key: "desiro-ml", label: "Desiro ML" };
+    }
+    if (normalized.startsWith("kiss")) {
+      return { key: "kiss", label: "KISS" };
+    }
+    if (normalized.startsWith("cityshuttle")) {
+      return { key: "cityshuttle", label: "CityShuttle" };
+    }
+    if (normalized.startsWith("cityjet")) {
+      return { key: "cityjet", label: "CityJet" };
+    }
+    if (normalized.startsWith("nightjet")) {
+      return { key: "nightjet", label: "NightJet" };
+    }
+    if (normalized.startsWith("flirt 3")) {
+      return { key: "flirt-3", label: "FLIRT 3" };
+    }
+    if (normalized.startsWith("virm")) {
+      return { key: "virm", label: "VIRM" };
+    }
+    if (normalized.startsWith("mw41")) {
+      return { key: "mw41", label: "MW41" };
+    }
+    if (normalized.startsWith("am08")) {
+      return { key: "am08", label: "AM08" };
+    }
+    if (normalized.startsWith("e320")) {
+      return { key: "e320", label: "E320" };
+    }
+    if (normalized.startsWith("traxx")) {
+      return { key: "traxx", label: "TRAXX" };
+    }
+    if (normalized.startsWith("br146")) {
+      return { key: "br146", label: "BR146" };
+    }
+    if (normalized.startsWith("class ")) {
+      const match = normalized.match(/^class\s+(\d+)/);
+      if (match) {
+        return {
+          key: `class-${match[1]}`,
+          label: `Class ${match[1]}`,
+        };
+      }
+    }
+    if (normalized.startsWith("hle")) {
+      const compact = normalized.replace(/\s+/g, "");
+      if (
+        compact.startsWith("hle18") ||
+        compact.startsWith("hle19") ||
+        compact.startsWith("hle18/19") ||
+        compact.startsWith("hle18-19")
+      ) {
+        return { key: "hle-18-19", label: "HLE 18/19" };
+      }
+      const match = normalized.match(/^hle\s*(\d+)/);
+      if (match) {
+        const family = match[1];
+        return {
+          key: `hle-${family}`,
+          label: `HLE ${family}`,
+        };
+      }
+    }
+    if (normalized.startsWith("tgv duplex")) {
+      return { key: "tgv-duplex", label: "TGV Duplex" };
+    }
+    if (normalized.startsWith("pba")) {
+      return { key: "pba", label: "PBA" };
+    }
+
+    return {
+      key: normalizeFacetKey(label),
+      label,
+    };
+  }
+
   function hydratePhotoCard(card) {
     const href = card.getAttribute("href") || "";
     const slug = (new URLSearchParams(href.split("?")[1] || "").get("slug") || "")
@@ -333,14 +436,14 @@ function setActiveNavLink() {
           .split(",")
           .map((item) => normalizeFacetKey(item))
           .filter(Boolean),
-        materialKeys: Array.isArray(photo?.consist)
+        materialFacets: Array.isArray(photo?.consist)
           ? Array.from(
-              new Set(
+              new Map(
                 photo.consist
-                  .map((item) => item?.filterKey || item?.filterLabel || item?.label)
-                  .map((item) => normalizeFacetKey(item))
-                  .filter(Boolean),
-              ),
+                  .map((item) => deriveMaterialFacet(item))
+                  .filter(Boolean)
+                  .map((facet) => [facet.key, facet]),
+              ).values(),
             )
           : [],
         metaHtml: buildSearchMetaHtml(photo?.consist),
@@ -355,7 +458,7 @@ function setActiveNavLink() {
       new Set(photoEntries.flatMap((entry) => entry.operatorKeys)),
     ).join("|");
     card.dataset.materials = Array.from(
-      new Set(photoEntries.flatMap((entry) => entry.materialKeys)),
+      new Set(photoEntries.flatMap((entry) => entry.materialFacets.map((facet) => facet.key))),
     ).join("|");
     photoEntries.forEach((entry) => {
       if (!photoSeriesGroups.has(entry.seriesKey)) photoSeriesGroups.set(entry.seriesKey, []);
@@ -553,7 +656,7 @@ function setActiveNavLink() {
           photo.operatorKeys.includes(activeOperatorFilter);
         const materialMatch =
           activeMaterialFilter === "all" ||
-          photo.materialKeys.includes(activeMaterialFilter);
+          photo.materialFacets.some((facet) => facet.key === activeMaterialFilter);
         const queryMatch = queryTerms.every((term) => photo.search.includes(term));
         return countryMatch && operatorMatch && materialMatch && queryMatch;
       });
@@ -730,15 +833,11 @@ function setActiveNavLink() {
   ).sort((a, b) => a.label.localeCompare(b.label));
 
   const materialLookup = new Map();
-  Object.values(stationData).forEach((station) => {
-    (station?.photos || []).forEach((photo) => {
-      (photo?.consist || []).forEach((item) => {
-        const label = String(item?.filterLabel || item?.label || "").trim();
-        const key = normalizeFacetKey(item?.filterKey || label);
-        if (key && label && !materialLookup.has(key)) {
-          materialLookup.set(key, { key, label });
-        }
-      });
+  allPhotoEntries.forEach((entry) => {
+    entry.materialFacets.forEach((facet) => {
+      if (facet?.key && facet?.label && !materialLookup.has(facet.key)) {
+        materialLookup.set(facet.key, facet);
+      }
     });
   });
 
