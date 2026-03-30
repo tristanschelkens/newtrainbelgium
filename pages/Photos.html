@@ -78,77 +78,96 @@
             </div>
           </div>
 
-          <div class="photos-filter-menu" id="photoFilterMenu">
+          <div class="photos-toolbar-actions">
             <button
-              class="photos-filter-toggle"
-              id="photoFilterToggle"
+              class="photos-reset-btn"
+              id="photoResetFilters"
               type="button"
-              aria-expanded="false"
-              aria-controls="photoFilterPanel"
+              aria-label="Reset search and filters"
             >
-              <span class="photos-filter-toggle-label">Filters</span>
-              <strong class="photos-filter-toggle-value" id="photoFilterSummary">All filters</strong>
+              Reset
             </button>
 
-            <div class="photos-filter-panel" id="photoFilterPanel" hidden>
-              <div class="photos-filter-panel-head">
-                <span class="photos-filter-eyebrow">Refine gallery</span>
-                <h3>Filter results</h3>
-              </div>
+            <div class="photos-filter-menu" id="photoFilterMenu">
+              <button
+                class="photos-filter-toggle"
+                id="photoFilterToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="photoFilterPanel"
+              >
+                <span class="photos-filter-toggle-label">Filters</span>
+                <strong class="photos-filter-toggle-value" id="photoFilterSummary">All filters</strong>
+              </button>
 
-              <div class="photos-filter-grid">
-                <section class="photos-filter-group">
-                  <h4>Country</h4>
-                  <div class="filters" id="photoFilters">
-                    <button class="filter-btn active" type="button" data-filter="all">
-                      All
-                    </button>
+              <div class="photos-filter-panel" id="photoFilterPanel" hidden>
+                <div class="photos-filter-panel-head">
+                  <span class="photos-filter-eyebrow">Refine gallery</span>
+                  <h3>Filter results</h3>
+                </div>
 
-                    <button class="filter-btn" type="button" data-filter="austria">
-                      Austria
-                    </button>
+                <div class="photos-filter-grid">
+                  <section class="photos-filter-group">
+                    <h4>Country</h4>
+                    <div class="filters" id="photoFilters">
+                      <button class="filter-btn active" type="button" data-filter="all">
+                        All
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="belgium">
-                      Belgium
-                    </button>
+                      <button class="filter-btn" type="button" data-filter="austria">
+                        Austria
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="france">
-                      France
-                    </button>
+                      <button class="filter-btn" type="button" data-filter="belgium">
+                        Belgium
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="germany">
-                      Germany
-                    </button>
+                      <button class="filter-btn" type="button" data-filter="france">
+                        France
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="luxembourg">
-                      Luxembourg
-                    </button>
+                      <button class="filter-btn" type="button" data-filter="germany">
+                        Germany
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="netherlands">
-                      Netherlands
-                    </button>
+                      <button class="filter-btn" type="button" data-filter="luxembourg">
+                        Luxembourg
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="slovakia">
-                      Slovakia
-                    </button>
+                      <button class="filter-btn" type="button" data-filter="netherlands">
+                        Netherlands
+                      </button>
 
-                    <button class="filter-btn" type="button" data-filter="united kingdom">
-                      United Kingdom
-                    </button>
-                  </div>
-                </section>
+                      <button class="filter-btn" type="button" data-filter="slovakia">
+                        Slovakia
+                      </button>
 
-                <section class="photos-filter-group">
-                  <h4>Operator</h4>
-                  <div class="filters" id="photoOperatorFilters"></div>
-                </section>
+                      <button class="filter-btn" type="button" data-filter="united kingdom">
+                        United Kingdom
+                      </button>
+                    </div>
+                  </section>
 
-                <section class="photos-filter-group photos-filter-group-wide">
-                  <h4>Train Type</h4>
-                  <div class="filters" id="photoMaterialFilters"></div>
-                </section>
+                  <section class="photos-filter-group">
+                    <h4>Operator</h4>
+                    <div class="filters" id="photoOperatorFilters"></div>
+                  </section>
+
+                  <section class="photos-filter-group photos-filter-group-wide">
+                    <h4>Train Type</h4>
+                    <div class="filters" id="photoMaterialFilters"></div>
+                  </section>
+                </div>
               </div>
             </div>
+
+            <button
+              class="photos-reset-btn"
+              id="photoResetBtn"
+              type="button"
+            >
+              Reset
+            </button>
           </div>
         </div>
       </div>

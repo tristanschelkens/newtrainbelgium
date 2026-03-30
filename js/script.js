@@ -185,6 +185,7 @@ function setActiveNavLink() {
   const grid = document.getElementById("photoGrid");
   const mapSection = document.getElementById("stationsMap")?.closest("section");
   const searchInput = document.getElementById("photoSearch");
+  const resetFiltersButton = document.getElementById("photoResetFilters");
   const filterMenu = document.getElementById("photoFilterMenu");
   const filterToggle = document.getElementById("photoFilterToggle");
   const filterPanel = document.getElementById("photoFilterPanel");
@@ -269,7 +270,9 @@ function setActiveNavLink() {
   }
 
   function deriveMaterialFacet(item) {
-    if (!item || String(item.kind || "").toLowerCase() !== "traction") return null;
+    if (!item) return null;
+    const kind = String(item.kind || "").toLowerCase();
+    if (kind !== "traction" && kind !== "carriage") return null;
 
     const explicitLabel = String(item.filterLabel || "").trim();
     const explicitKey = String(item.filterKey || "").trim();
@@ -284,54 +287,55 @@ function setActiveNavLink() {
     if (!label) return null;
 
     const normalized = normalizeSearchValue(label);
+    const withoutCount = normalized.replace(/^\d+\s*x\s*/i, "").trim();
 
-    if (normalized.startsWith("vectron")) {
+    if (withoutCount.startsWith("vectron")) {
       return { key: "vectron", label: "Vectron" };
     }
-    if (normalized.startsWith("taurus")) {
+    if (withoutCount.startsWith("taurus")) {
       return { key: "taurus", label: "Taurus" };
     }
-    if (normalized.startsWith("railjet")) {
+    if (withoutCount.startsWith("railjet")) {
       return { key: "railjet", label: "Railjet" };
     }
-    if (normalized.startsWith("desiro ml")) {
+    if (withoutCount.startsWith("desiro ml")) {
       return { key: "desiro-ml", label: "Desiro ML" };
     }
-    if (normalized.startsWith("kiss")) {
+    if (withoutCount.startsWith("kiss")) {
       return { key: "kiss", label: "KISS" };
     }
-    if (normalized.startsWith("cityshuttle")) {
+    if (withoutCount.startsWith("cityshuttle")) {
       return { key: "cityshuttle", label: "CityShuttle" };
     }
-    if (normalized.startsWith("cityjet")) {
+    if (withoutCount.startsWith("cityjet")) {
       return { key: "cityjet", label: "CityJet" };
     }
-    if (normalized.startsWith("nightjet")) {
+    if (withoutCount.startsWith("nightjet")) {
       return { key: "nightjet", label: "NightJet" };
     }
-    if (normalized.startsWith("flirt 3")) {
+    if (withoutCount.startsWith("flirt 3")) {
       return { key: "flirt-3", label: "FLIRT 3" };
     }
-    if (normalized.startsWith("virm")) {
+    if (withoutCount.startsWith("virm")) {
       return { key: "virm", label: "VIRM" };
     }
-    if (normalized.startsWith("mw41")) {
+    if (withoutCount.startsWith("mw41")) {
       return { key: "mw41", label: "MW41" };
     }
-    if (normalized.startsWith("am08")) {
+    if (withoutCount.startsWith("am08")) {
       return { key: "am08", label: "AM08" };
     }
-    if (normalized.startsWith("e320")) {
+    if (withoutCount.startsWith("e320")) {
       return { key: "e320", label: "E320" };
     }
-    if (normalized.startsWith("traxx")) {
+    if (withoutCount.startsWith("traxx")) {
       return { key: "traxx", label: "TRAXX" };
     }
-    if (normalized.startsWith("br146")) {
+    if (withoutCount.startsWith("br146")) {
       return { key: "br146", label: "BR146" };
     }
-    if (normalized.startsWith("class ")) {
-      const match = normalized.match(/^class\s+(\d+)/);
+    if (withoutCount.startsWith("class ")) {
+      const match = withoutCount.match(/^class\s+(\d+)/);
       if (match) {
         return {
           key: `class-${match[1]}`,
@@ -339,8 +343,8 @@ function setActiveNavLink() {
         };
       }
     }
-    if (normalized.startsWith("hle")) {
-      const compact = normalized.replace(/\s+/g, "");
+    if (withoutCount.startsWith("hle")) {
+      const compact = withoutCount.replace(/\s+/g, "");
       if (
         compact.startsWith("hle18") ||
         compact.startsWith("hle19") ||
@@ -349,7 +353,7 @@ function setActiveNavLink() {
       ) {
         return { key: "hle-18-19", label: "HLE 18/19" };
       }
-      const match = normalized.match(/^hle\s*(\d+)/);
+      const match = withoutCount.match(/^hle\s*(\d+)/);
       if (match) {
         const family = match[1];
         return {
@@ -358,16 +362,43 @@ function setActiveNavLink() {
         };
       }
     }
-    if (normalized.startsWith("tgv duplex")) {
+    if (withoutCount.startsWith("tgv duplex")) {
       return { key: "tgv-duplex", label: "TGV Duplex" };
     }
-    if (normalized.startsWith("pba")) {
+    if (withoutCount.startsWith("pba")) {
       return { key: "pba", label: "PBA" };
+    }
+    if (withoutCount.startsWith("m7")) {
+      return { key: "m7", label: "M7" };
+    }
+    if (withoutCount.startsWith("m6")) {
+      return { key: "m6", label: "M6" };
+    }
+    if (withoutCount.startsWith("m4")) {
+      return { key: "m4", label: "M4" };
+    }
+    if (withoutCount.startsWith("i11")) {
+      return { key: "i11", label: "I11" };
+    }
+    if (withoutCount.startsWith("i10")) {
+      return { key: "i10", label: "I10" };
+    }
+    if (withoutCount.startsWith("icr")) {
+      return { key: "icr", label: "ICR" };
+    }
+    if (withoutCount.startsWith("uic-z") || withoutCount.startsWith("uicz")) {
+      return { key: "uic-z", label: "UIC-Z" };
+    }
+    if (withoutCount.startsWith("dosto")) {
+      return { key: "dosto", label: "DoSto" };
+    }
+    if (withoutCount.startsWith("twindexx vario")) {
+      return { key: "twindexx-vario", label: "Twindexx Vario" };
     }
 
     return {
-      key: normalizeFacetKey(label),
-      label,
+      key: normalizeFacetKey(withoutCount),
+      label: withoutCount.toUpperCase() === withoutCount ? withoutCount : label.replace(/^\d+\s*x\s*/i, "").trim(),
     };
   }
 
@@ -647,8 +678,12 @@ function setActiveNavLink() {
     const queryTerms = normalizeSearchValue(activeQuery)
       .split(/\s+/)
       .filter(Boolean);
+    const usePhotoResults =
+      queryTerms.length > 0 ||
+      activeOperatorFilter !== "all" ||
+      activeMaterialFilter !== "all";
 
-    if (queryTerms.length > 0) {
+    if (usePhotoResults) {
       const matchingPhotos = allPhotoEntries.filter((photo) => {
         const countryMatch = activeFilter === "all" || photo.country === activeFilter;
         const operatorMatch =
@@ -657,7 +692,9 @@ function setActiveNavLink() {
         const materialMatch =
           activeMaterialFilter === "all" ||
           photo.materialFacets.some((facet) => facet.key === activeMaterialFilter);
-        const queryMatch = queryTerms.every((term) => photo.search.includes(term));
+        const queryMatch =
+          queryTerms.length === 0 ||
+          queryTerms.every((term) => photo.search.includes(term));
         return countryMatch && operatorMatch && materialMatch && queryMatch;
       });
 
@@ -807,6 +844,27 @@ function setActiveNavLink() {
     window.history.replaceState({}, "", url);
   }
 
+  function resetPhotoFilters() {
+    activeFilter = "all";
+    activeOperatorFilter = "all";
+    activeMaterialFilter = "all";
+    activeQuery = "";
+
+    if (searchInput) {
+      searchInput.value = "";
+    }
+
+    renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
+    renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
+    setActiveButton(activeFilter);
+    applyFilters();
+    persistPhotoFilter(activeFilter);
+    persistPhotoSearch(activeQuery);
+    persistFacetParam("operator", activeOperatorFilter);
+    persistFacetParam("material", activeMaterialFilter);
+    setFilterMenuOpen(false);
+  }
+
   function renderFacetButtons(container, options, activeValue, dataAttr) {
     if (!container) return;
 
@@ -917,6 +975,8 @@ function setActiveNavLink() {
       persistFacetParam("material", activeMaterialFilter);
     });
   }
+
+  resetFiltersButton?.addEventListener("click", resetPhotoFilters);
 
   const urlParams = new URLSearchParams(window.location.search);
   const queryFilter = (urlParams.get("filter") || "all").toLowerCase();

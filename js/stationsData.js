@@ -1137,7 +1137,13 @@ window.STATIONS_DATA = {
         numbers: "263 003-6",
         date: "23 March 2026",
         consist: [
-          { kind: "traction", label: "Škoda 263 003-6", active: true },
+          {
+            kind: "traction",
+            label: "Škoda 263 003-6",
+            active: true,
+            filterKey: "skoda-263",
+            filterLabel: "Škoda 263",
+          },
           { kind: "cariage", label: "4x DoSto" },
         ],
       },
@@ -1151,7 +1157,13 @@ window.STATIONS_DATA = {
         numbers: "263 003-6",
         date: "23 March 2026",
         consist: [
-          { kind: "traction", label: "Škoda 263 003-6", active: true },
+          {
+            kind: "traction",
+            label: "Škoda 263 003-6",
+            active: true,
+            filterKey: "skoda-263",
+            filterLabel: "Škoda 263",
+          },
           { kind: "cariage", label: "4x DoSto" },
         ],
       },
@@ -1165,7 +1177,13 @@ window.STATIONS_DATA = {
         numbers: "263 003-6",
         date: "23 March 2026",
         consist: [
-          { kind: "traction", label: "Škoda 263 003-6", active: true },
+          {
+            kind: "traction",
+            label: "Škoda 263 003-6",
+            active: true,
+            filterKey: "skoda-263",
+            filterLabel: "Škoda 263",
+          },
           { kind: "cariage", label: "4x DoSto" },
         ],
       },

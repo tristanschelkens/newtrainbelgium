@@ -942,7 +942,7 @@ button.photo-card {
 .photos-toolbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 14px;
+  gap: 18px;
   align-items: end;
 }
 
@@ -953,14 +953,16 @@ button.photo-card {
 
 .photos-search {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
+  max-width: 880px;
 }
 
 .photos-search-label {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   color: var(--text);
+  letter-spacing: 0.25px;
 }
 
 .photos-search-shell {
@@ -972,25 +974,26 @@ button.photo-card {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
-  left: 18px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 14px;
-  color: rgba(17, 17, 17, 0.42);
+  font-size: 18px;
+  color: rgba(17, 17, 17, 0.38);
   pointer-events: none;
 }
 
 .photos-search-input {
   width: 100%;
-  min-height: 72px;
-  padding: 18px 20px 18px 52px;
-  border-radius: 22px;
+  min-height: 68px;
+  padding: 18px 22px 18px 58px;
+  border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
   color: var(--text);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   outline: none;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
   transition:
@@ -1008,20 +1011,27 @@ button.photo-card {
 }
 
 .photos-search-input::placeholder {
-  color: rgba(17, 17, 17, 0.48);
-  font-weight: 500;
+  color: rgba(17, 17, 17, 0.44);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.photos-toolbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
 }
 
 .photos-filter-menu {
   position: relative;
-  width: 210px;
+  width: 194px;
 }
 
 .photos-filter-toggle {
   width: 100%;
-  min-height: 72px;
-  padding: 14px 18px;
-  border-radius: 22px;
+  min-height: 68px;
+  padding: 13px 18px;
+  border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
@@ -1053,10 +1063,45 @@ button.photo-card {
 }
 
 .photos-filter-toggle-value {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
   color: var(--text);
   line-height: 1.25;
+}
+
+.photos-reset-btn {
+  min-width: 112px;
+  min-height: 68px;
+  padding: 0 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    color 0.18s ease;
+}
+
+.photos-reset-btn:hover {
+  border-color: rgba(0, 92, 185, 0.28);
+  box-shadow:
+    0 0 0 4px rgba(0, 92, 185, 0.08),
+    0 14px 32px rgba(0, 92, 185, 0.08);
+  color: var(--nmbs-blue);
+}
+
+.photos-reset-btn:focus-visible {
+  outline: none;
+  border-color: rgba(0, 92, 185, 0.4);
+  box-shadow:
+    0 0 0 4px rgba(0, 92, 185, 0.12),
+    0 14px 32px rgba(0, 92, 185, 0.08);
 }
 
 .photos-filter-panel {
@@ -1791,12 +1836,23 @@ body.station-lightbox-open {
 
 @media (max-width: 1024px) {
   .photos-filter-menu {
+    width: auto;
+    flex: 1 1 0;
+  }
+
+  .photos-toolbar-actions {
     width: 100%;
+    flex-wrap: nowrap;
   }
 
   .photos-filter-toggle {
     width: 100%;
     min-width: 0;
+  }
+
+  .photos-reset-btn {
+    width: auto;
+    flex: 0 0 auto;
   }
 
   .photos-filter-panel {
@@ -1828,6 +1884,28 @@ body.station-lightbox-open {
 
   .live-map-header {
     align-items: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .photos-toolbar-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .photos-filter-menu,
+  .photos-reset-btn {
+    width: 100%;
+  }
+
+  .photos-search-input {
+    min-height: 64px;
+    padding: 16px 18px 16px 52px;
+    font-size: 17px;
+  }
+
+  .photos-search-input::placeholder {
+    font-size: 16px;
   }
 }
 /* CONTACT */
