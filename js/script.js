@@ -547,7 +547,14 @@ function setActiveNavLink() {
   function openSearchLightboxEntry(entry) {
     if (!entry || !searchLightboxImg) return;
 
-    currentSearchSeriesPool = photoSeriesGroups.get(entry.seriesKey) || [entry];
+    currentSearchSeriesPool = Array.from(
+      new Map(
+        (photoSeriesGroups.get(entry.seriesKey) || [entry]).map((item) => [
+          `${item.slug}::${item.index}`,
+          item,
+        ]),
+      ).values(),
+    );
     const foundIndex = currentSearchSeriesPool.findIndex(
       (item) => item.slug === entry.slug && item.index === entry.index,
     );
@@ -750,6 +757,7 @@ function setActiveNavLink() {
       grid.innerHTML = originalGridHtml;
       cardPhotoEntries.clear();
       allPhotoEntries.length = 0;
+      photoSeriesGroups.clear();
       Array.from(grid.querySelectorAll(".photo-card")).forEach((card) => {
         hydratePhotoCard(card);
       });
