@@ -931,6 +931,45 @@ img {
   align-items: center;
 }
 
+.photos-search {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.photos-search-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.photos-search-input {
+  width: min(560px, 100%);
+  padding: 13px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.photos-search-input:focus {
+  border-color: rgba(0, 92, 185, 0.4);
+  box-shadow: 0 0 0 4px rgba(0, 92, 185, 0.12);
+  background: #fff;
+}
+
+.photos-search-input::placeholder {
+  color: rgba(17, 17, 17, 0.48);
+  font-weight: 500;
+}
+
 .filter-btn {
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: #fff;

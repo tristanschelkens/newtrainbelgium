@@ -64,6 +64,17 @@
       </section>
 
       <div class="container" style="padding-bottom: 10px">
+        <div class="photos-search">
+          <label class="photos-search-label" for="photoSearch">Search</label>
+          <input
+            id="photoSearch"
+            class="photos-search-input"
+            type="search"
+            placeholder="Search by train type, number, operator or city..."
+            autocomplete="off"
+          />
+        </div>
+
         <div class="filters" id="photoFilters">
           <button class="filter-btn active" type="button" data-filter="all">
             All
@@ -404,6 +415,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <script src="../js/stationsData.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

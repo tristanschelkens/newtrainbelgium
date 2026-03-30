@@ -184,6 +184,8 @@ function setActiveNavLink() {
   const filters = document.getElementById("photoFilters");
   const grid = document.getElementById("photoGrid");
   const mapSection = document.getElementById("stationsMap")?.closest("section");
+  const searchInput = document.getElementById("photoSearch");
+  const stationData = window.STATIONS_DATA || {};
 
   if (!filters || !grid) return;
 
@@ -193,6 +195,47 @@ function setActiveNavLink() {
   const availableFilters = new Set(
     buttons.map((btn) => (btn.dataset.filter || "").toLowerCase()),
   );
+  let activeFilter = "all";
+  let activeQuery = "";
+
+  function normalizeSearchValue(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  cards.forEach((card) => {
+    const href = card.getAttribute("href") || "";
+    const slug = (new URLSearchParams(href.split("?")[1] || "").get("slug") || "")
+      .trim()
+      .toLowerCase();
+    const station = stationData[slug];
+    const stationPhotos = Array.isArray(station?.photos) ? station.photos : [];
+
+    const searchParts = [
+      slug,
+      station?.name,
+      station?.country,
+      station?.description,
+      card.querySelector(".overlay h3")?.textContent,
+      card.querySelector("img")?.alt,
+      ...stationPhotos.flatMap((photo) => [
+        photo?.operator,
+        photo?.alt,
+        photo?.label,
+        photo?.numbers,
+        ...(Array.isArray(photo?.consist)
+          ? photo.consist.map((item) => item?.label)
+          : []),
+      ]),
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    card.dataset.search = normalizeSearchValue(searchParts);
+  });
 
   function setActiveButton(value) {
     buttons.forEach((btn) => {
@@ -201,12 +244,20 @@ function setActiveNavLink() {
     });
   }
 
-  function applyFilter(value) {
+  function applyFilters() {
     let visibleCount = 0;
+    const queryTerms = normalizeSearchValue(activeQuery)
+      .split(/\s+/)
+      .filter(Boolean);
 
     cards.forEach((card) => {
       const country = (card.dataset.country || "").toLowerCase();
-      const show = value === "all" || country === value;
+      const searchText = card.dataset.search || "";
+      const countryMatch = activeFilter === "all" || country === activeFilter;
+      const queryMatch =
+        queryTerms.length === 0 ||
+        queryTerms.every((term) => searchText.includes(term));
+      const show = countryMatch && queryMatch;
 
       card.classList.toggle("is-hidden", !show);
 
@@ -220,7 +271,7 @@ function setActiveNavLink() {
     grid.classList.toggle("has-few", visibleCount <= 2);
 
     if (mapSection) {
-      const showMap = value === "all";
+      const showMap = activeFilter === "all" && queryTerms.length === 0;
       mapSection.style.display = showMap ? "" : "none";
 
       if (showMap && window.photoStationsMap) {
@@ -243,22 +294,51 @@ function setActiveNavLink() {
     window.history.replaceState({}, "", url);
   }
 
+  function persistPhotoSearch(value) {
+    const url = new URL(window.location.href);
+
+    if (!value) {
+      url.searchParams.delete("q");
+    } else {
+      url.searchParams.set("q", value);
+    }
+
+    window.history.replaceState({}, "", url);
+  }
+
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const value = (btn.dataset.filter || "all").toLowerCase();
+      activeFilter = value;
       setActiveButton(value);
-      applyFilter(value);
+      applyFilters();
       persistPhotoFilter(value);
+      persistPhotoSearch(activeQuery);
     });
   });
 
-  const queryFilter = (
-    new URLSearchParams(window.location.search).get("filter") || "all"
-  ).toLowerCase();
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      activeQuery = searchInput.value.trim();
+      applyFilters();
+      persistPhotoFilter(activeFilter);
+      persistPhotoSearch(activeQuery);
+    });
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const queryFilter = (urlParams.get("filter") || "all").toLowerCase();
+  const querySearch = (urlParams.get("q") || "").trim();
   const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
+  activeFilter = initialFilter;
+  activeQuery = querySearch;
+
+  if (searchInput) {
+    searchInput.value = activeQuery;
+  }
 
   setActiveButton(initialFilter);
-  applyFilter(initialFilter);
+  applyFilters();
 })();
 
 (function initLatestHomePhoto() {
