@@ -1233,6 +1233,13 @@ body.station-lightbox-open {
     #dfe7ef;
 }
 
+.stations-map .leaflet-control-container,
+.stations-map .leaflet-pane,
+.stations-map .leaflet-top,
+.stations-map .leaflet-bottom {
+  z-index: 1;
+}
+
 .stations-map .leaflet-control-zoom a {
   border-radius: 10px;
 }
