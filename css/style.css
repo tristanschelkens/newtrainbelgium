@@ -940,10 +940,10 @@ button.photo-card {
 }
 
 .photos-toolbar {
-  display: flex;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
   align-items: end;
-  flex-wrap: wrap;
 }
 
 .photos-toolbar-wrap {
@@ -954,8 +954,7 @@ button.photo-card {
 .photos-search {
   display: grid;
   gap: 8px;
-  flex: 1 1 520px;
-  min-width: min(520px, 100%);
+  min-width: 0;
 }
 
 .photos-search-label {
@@ -983,13 +982,14 @@ button.photo-card {
 
 .photos-search-input {
   width: 100%;
-  padding: 15px 18px 15px 46px;
-  border-radius: 18px;
+  min-height: 72px;
+  padding: 18px 20px 18px 52px;
+  border-radius: 22px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
   color: var(--text);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   outline: none;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
@@ -1014,13 +1014,14 @@ button.photo-card {
 
 .photos-filter-menu {
   position: relative;
-  min-width: 250px;
+  width: 210px;
 }
 
 .photos-filter-toggle {
-  min-width: 250px;
+  width: 100%;
+  min-height: 72px;
   padding: 14px 18px;
-  border-radius: 18px;
+  border-radius: 22px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
@@ -1052,17 +1053,18 @@ button.photo-card {
 }
 
 .photos-filter-toggle-value {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   color: var(--text);
+  line-height: 1.25;
 }
 
 .photos-filter-panel {
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
-  width: min(620px, calc(100vw - 32px));
-  padding: 18px;
+  width: min(860px, calc(100vw - 32px));
+  padding: 22px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: rgba(255, 255, 255, 0.98);
@@ -1074,7 +1076,7 @@ button.photo-card {
 .photos-filter-panel-head {
   display: grid;
   gap: 2px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .photos-filter-eyebrow {
@@ -1086,8 +1088,32 @@ button.photo-card {
 }
 
 .photos-filter-panel h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 800;
+}
+
+.photos-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.photos-filter-group {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.photos-filter-group-wide {
+  grid-column: 1 / -1;
+}
+
+.photos-filter-group h4 {
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(17, 17, 17, 0.58);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
 .filter-btn {
@@ -1777,6 +1803,14 @@ body.station-lightbox-open {
     left: 0;
     right: auto;
     width: 100%;
+  }
+
+  .photos-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .photos-filter-grid {
+    grid-template-columns: 1fr;
   }
 
   .stations-map {

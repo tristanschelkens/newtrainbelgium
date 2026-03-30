@@ -189,6 +189,8 @@ function setActiveNavLink() {
   const filterToggle = document.getElementById("photoFilterToggle");
   const filterPanel = document.getElementById("photoFilterPanel");
   const filterSummary = document.getElementById("photoFilterSummary");
+  const operatorFilters = document.getElementById("photoOperatorFilters");
+  const materialFilters = document.getElementById("photoMaterialFilters");
   const stationData = window.STATIONS_DATA || {};
 
   if (!filters || !grid) return;
@@ -204,6 +206,8 @@ function setActiveNavLink() {
   const allPhotoEntries = [];
   const photoSeriesGroups = new Map();
   let activeFilter = "all";
+  let activeOperatorFilter = "all";
+  let activeMaterialFilter = "all";
   let activeQuery = "";
 
   function normalizeSearchValue(value) {
@@ -258,6 +262,10 @@ function setActiveNavLink() {
         return `<span class="${cls}">${esc(formatSearchTagLabel(item.label || ""))}</span>${plus}`;
       })
       .join("");
+  }
+
+  function normalizeFacetKey(value) {
+    return normalizeSearchValue(value).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   }
 
   function hydratePhotoCard(card) {
@@ -321,6 +329,20 @@ function setActiveNavLink() {
         alt: photo?.alt || station?.name || slug,
         date: String(photo?.date || "").trim(),
         operator: String(photo?.operator || "").trim(),
+        operatorKeys: String(photo?.operator || "")
+          .split(",")
+          .map((item) => normalizeFacetKey(item))
+          .filter(Boolean),
+        materialKeys: Array.isArray(photo?.consist)
+          ? Array.from(
+              new Set(
+                photo.consist
+                  .map((item) => item?.filterKey || item?.filterLabel || item?.label)
+                  .map((item) => normalizeFacetKey(item))
+                  .filter(Boolean),
+              ),
+            )
+          : [],
         metaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
         search: buildSearchIndex(photoSearch),
@@ -329,6 +351,12 @@ function setActiveNavLink() {
 
     cardPhotoEntries.set(card, photoEntries);
     allPhotoEntries.push(...photoEntries);
+    card.dataset.operators = Array.from(
+      new Set(photoEntries.flatMap((entry) => entry.operatorKeys)),
+    ).join("|");
+    card.dataset.materials = Array.from(
+      new Set(photoEntries.flatMap((entry) => entry.materialKeys)),
+    ).join("|");
     photoEntries.forEach((entry) => {
       if (!photoSeriesGroups.has(entry.seriesKey)) photoSeriesGroups.set(entry.seriesKey, []);
       photoSeriesGroups.get(entry.seriesKey).push(entry);
@@ -491,10 +519,17 @@ function setActiveNavLink() {
       const activeButton = buttons.find(
         (btn) => (btn.dataset.filter || "").toLowerCase() === value,
       );
-      filterSummary.textContent =
-        value === "all"
-          ? "All countries"
-          : activeButton?.textContent?.trim() || "Selected";
+      const parts = [];
+      if (value !== "all") parts.push(activeButton?.textContent?.trim() || "Country");
+      if (activeOperatorFilter !== "all") {
+        const btn = operatorFilters?.querySelector(`[data-operator-filter="${activeOperatorFilter}"]`);
+        parts.push(btn?.textContent?.trim() || "Operator");
+      }
+      if (activeMaterialFilter !== "all") {
+        const btn = materialFilters?.querySelector(`[data-material-filter="${activeMaterialFilter}"]`);
+        parts.push(btn?.textContent?.trim() || "Train type");
+      }
+      filterSummary.textContent = parts.length > 0 ? parts.join(" · ") : "All filters";
     }
   }
 
@@ -512,10 +547,15 @@ function setActiveNavLink() {
 
     if (queryTerms.length > 0) {
       const matchingPhotos = allPhotoEntries.filter((photo) => {
-        const countryMatch =
-          activeFilter === "all" || photo.country === activeFilter;
+        const countryMatch = activeFilter === "all" || photo.country === activeFilter;
+        const operatorMatch =
+          activeOperatorFilter === "all" ||
+          photo.operatorKeys.includes(activeOperatorFilter);
+        const materialMatch =
+          activeMaterialFilter === "all" ||
+          photo.materialKeys.includes(activeMaterialFilter);
         const queryMatch = queryTerms.every((term) => photo.search.includes(term));
-        return countryMatch && queryMatch;
+        return countryMatch && operatorMatch && materialMatch && queryMatch;
       });
 
       const matchingSeriesKeys = Array.from(
@@ -580,11 +620,17 @@ function setActiveNavLink() {
       const searchText = card.dataset.search || "";
       const defaultHref = card.dataset.defaultHref || card.getAttribute("href") || "";
       const photoEntries = cardPhotoEntries.get(card) || [];
+      const operatorKeys = (card.dataset.operators || "").split("|").filter(Boolean);
+      const materialKeys = (card.dataset.materials || "").split("|").filter(Boolean);
       const countryMatch = activeFilter === "all" || country === activeFilter;
+      const operatorMatch =
+        activeOperatorFilter === "all" || operatorKeys.includes(activeOperatorFilter);
+      const materialMatch =
+        activeMaterialFilter === "all" || materialKeys.includes(activeMaterialFilter);
       const queryMatch =
         queryTerms.length === 0 ||
         queryTerms.every((term) => searchText.includes(term));
-      const show = countryMatch && queryMatch;
+      const show = countryMatch && operatorMatch && materialMatch && queryMatch;
 
       let targetHref = defaultHref;
       if (queryTerms.length > 0) {
@@ -646,6 +692,63 @@ function setActiveNavLink() {
     window.history.replaceState({}, "", url);
   }
 
+  function persistFacetParam(name, value) {
+    const url = new URL(window.location.href);
+
+    if (value === "all") {
+      url.searchParams.delete(name);
+    } else {
+      url.searchParams.set(name, value);
+    }
+
+    window.history.replaceState({}, "", url);
+  }
+
+  function renderFacetButtons(container, options, activeValue, dataAttr) {
+    if (!container) return;
+
+    container.innerHTML = [
+      `<button class="filter-btn${activeValue === "all" ? " active" : ""}" type="button" ${dataAttr}="all">All</button>`,
+      ...options.map(
+        (option) =>
+          `<button class="filter-btn${activeValue === option.key ? " active" : ""}" type="button" ${dataAttr}="${esc(option.key)}">${esc(option.label)}</button>`,
+      ),
+    ].join("");
+  }
+
+  const operatorOptions = Array.from(
+    new Map(
+      allPhotoEntries
+        .flatMap((entry) =>
+          entry.operator
+            .split(",")
+            .map((label) => label.trim())
+            .filter(Boolean)
+            .map((label) => [normalizeFacetKey(label), { key: normalizeFacetKey(label), label }]),
+        ),
+    ).values(),
+  ).sort((a, b) => a.label.localeCompare(b.label));
+
+  const materialLookup = new Map();
+  Object.values(stationData).forEach((station) => {
+    (station?.photos || []).forEach((photo) => {
+      (photo?.consist || []).forEach((item) => {
+        const label = String(item?.filterLabel || item?.label || "").trim();
+        const key = normalizeFacetKey(item?.filterKey || label);
+        if (key && label && !materialLookup.has(key)) {
+          materialLookup.set(key, { key, label });
+        }
+      });
+    });
+  });
+
+  const sortedMaterialOptions = Array.from(materialLookup.values()).sort((a, b) =>
+    a.label.localeCompare(b.label),
+  );
+
+  renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
+  renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
+
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const value = (btn.dataset.filter || "all").toLowerCase();
@@ -654,8 +757,36 @@ function setActiveNavLink() {
       applyFilters();
       persistPhotoFilter(value);
       persistPhotoSearch(activeQuery);
+      persistFacetParam("operator", activeOperatorFilter);
+      persistFacetParam("material", activeMaterialFilter);
       setFilterMenuOpen(false);
     });
+  });
+
+  operatorFilters?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-operator-filter]");
+    if (!btn) return;
+    activeOperatorFilter = (btn.dataset.operatorFilter || "all").toLowerCase();
+    renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
+    setActiveButton(activeFilter);
+    applyFilters();
+    persistPhotoFilter(activeFilter);
+    persistPhotoSearch(activeQuery);
+    persistFacetParam("operator", activeOperatorFilter);
+    persistFacetParam("material", activeMaterialFilter);
+  });
+
+  materialFilters?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-material-filter]");
+    if (!btn) return;
+    activeMaterialFilter = (btn.dataset.materialFilter || "all").toLowerCase();
+    renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
+    setActiveButton(activeFilter);
+    applyFilters();
+    persistPhotoFilter(activeFilter);
+    persistPhotoSearch(activeQuery);
+    persistFacetParam("operator", activeOperatorFilter);
+    persistFacetParam("material", activeMaterialFilter);
   });
 
   if (filterToggle && filterPanel) {
@@ -683,20 +814,34 @@ function setActiveNavLink() {
       applyFilters();
       persistPhotoFilter(activeFilter);
       persistPhotoSearch(activeQuery);
+      persistFacetParam("operator", activeOperatorFilter);
+      persistFacetParam("material", activeMaterialFilter);
     });
   }
 
   const urlParams = new URLSearchParams(window.location.search);
   const queryFilter = (urlParams.get("filter") || "all").toLowerCase();
   const querySearch = (urlParams.get("q") || "").trim();
+  const queryOperator = (urlParams.get("operator") || "all").toLowerCase();
+  const queryMaterial = (urlParams.get("material") || "all").toLowerCase();
   const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
   activeFilter = initialFilter;
+  activeOperatorFilter =
+    queryOperator === "all" || operatorOptions.some((option) => option.key === queryOperator)
+      ? queryOperator
+      : "all";
+  activeMaterialFilter =
+    queryMaterial === "all" || sortedMaterialOptions.some((option) => option.key === queryMaterial)
+      ? queryMaterial
+      : "all";
   activeQuery = querySearch;
 
   if (searchInput) {
     searchInput.value = activeQuery;
   }
 
+  renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
+  renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
   setActiveButton(initialFilter);
   applyFilters();
   setFilterMenuOpen(false);
