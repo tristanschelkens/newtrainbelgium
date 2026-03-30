@@ -63,54 +63,78 @@
         ></div>
       </section>
 
-      <div class="container" style="padding-bottom: 10px">
-        <div class="photos-search">
-          <label class="photos-search-label" for="photoSearch">Search</label>
-          <input
-            id="photoSearch"
-            class="photos-search-input"
-            type="search"
-            placeholder="Search by train type, number, operator or city..."
-            autocomplete="off"
-          />
-        </div>
+      <div class="container photos-toolbar-wrap" style="padding-bottom: 10px">
+        <div class="photos-toolbar">
+          <div class="photos-search">
+            <label class="photos-search-label" for="photoSearch">Search</label>
+            <div class="photos-search-shell">
+              <input
+                id="photoSearch"
+                class="photos-search-input"
+                type="search"
+                placeholder="Search by train type, number, operator or city..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
 
-        <div class="filters" id="photoFilters">
-          <button class="filter-btn active" type="button" data-filter="all">
-            All
-          </button>
+          <div class="photos-filter-menu" id="photoFilterMenu">
+            <button
+              class="photos-filter-toggle"
+              id="photoFilterToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="photoFilterPanel"
+            >
+              <span class="photos-filter-toggle-label">Filters</span>
+              <strong class="photos-filter-toggle-value" id="photoFilterSummary">All countries</strong>
+            </button>
 
-          <button class="filter-btn" type="button" data-filter="austria">
-            Austria
-          </button>
+            <div class="photos-filter-panel" id="photoFilterPanel" hidden>
+              <div class="photos-filter-panel-head">
+                <span class="photos-filter-eyebrow">Refine gallery</span>
+                <h3>Countries</h3>
+              </div>
 
-          <button class="filter-btn" type="button" data-filter="belgium">
-            Belgium
-          </button>
+              <div class="filters" id="photoFilters">
+                <button class="filter-btn active" type="button" data-filter="all">
+                  All
+                </button>
 
-          <button class="filter-btn" type="button" data-filter="france">
-            France
-          </button>
+                <button class="filter-btn" type="button" data-filter="austria">
+                  Austria
+                </button>
 
-          <button class="filter-btn" type="button" data-filter="germany">
-            Germany
-          </button>
+                <button class="filter-btn" type="button" data-filter="belgium">
+                  Belgium
+                </button>
 
-          <button class="filter-btn" type="button" data-filter="luxembourg">
-            Luxembourg
-          </button>
+                <button class="filter-btn" type="button" data-filter="france">
+                  France
+                </button>
 
-          <button class="filter-btn" type="button" data-filter="netherlands">
-            Netherlands
-          </button>
+                <button class="filter-btn" type="button" data-filter="germany">
+                  Germany
+                </button>
 
-          <button class="filter-btn" type="button" data-filter="slovakia">
-            Slovakia
-          </button>
+                <button class="filter-btn" type="button" data-filter="luxembourg">
+                  Luxembourg
+                </button>
 
-          <button class="filter-btn" type="button" data-filter="united kingdom">
-            United Kingdom
-          </button>
+                <button class="filter-btn" type="button" data-filter="netherlands">
+                  Netherlands
+                </button>
+
+                <button class="filter-btn" type="button" data-filter="slovakia">
+                  Slovakia
+                </button>
+
+                <button class="filter-btn" type="button" data-filter="united kingdom">
+                  United Kingdom
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

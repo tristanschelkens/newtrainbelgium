@@ -939,10 +939,23 @@ button.photo-card {
   align-items: center;
 }
 
+.photos-toolbar {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.photos-toolbar-wrap {
+  position: relative;
+  z-index: 5;
+}
+
 .photos-search {
   display: grid;
   gap: 8px;
-  margin-bottom: 14px;
+  flex: 1 1 520px;
+  min-width: min(520px, 100%);
 }
 
 .photos-search-label {
@@ -951,16 +964,35 @@ button.photo-card {
   color: var(--text);
 }
 
+.photos-search-shell {
+  position: relative;
+}
+
+.photos-search-shell::before {
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.42);
+  pointer-events: none;
+}
+
 .photos-search-input {
-  width: min(560px, 100%);
-  padding: 13px 16px;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  background: #fff;
+  width: 100%;
+  padding: 15px 18px 15px 46px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
   color: var(--text);
   font-size: 14px;
   font-weight: 600;
   outline: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
   transition:
     border-color 0.18s ease,
     box-shadow 0.18s ease,
@@ -969,13 +1001,93 @@ button.photo-card {
 
 .photos-search-input:focus {
   border-color: rgba(0, 92, 185, 0.4);
-  box-shadow: 0 0 0 4px rgba(0, 92, 185, 0.12);
+  box-shadow:
+    0 0 0 4px rgba(0, 92, 185, 0.12),
+    0 14px 30px rgba(0, 92, 185, 0.08);
   background: #fff;
 }
 
 .photos-search-input::placeholder {
   color: rgba(17, 17, 17, 0.48);
   font-weight: 500;
+}
+
+.photos-filter-menu {
+  position: relative;
+  min-width: 250px;
+}
+
+.photos-filter-toggle {
+  min-width: 250px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  display: grid;
+  gap: 3px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.photos-filter-toggle:hover,
+.photos-filter-toggle[aria-expanded="true"] {
+  border-color: rgba(0, 92, 185, 0.28);
+  box-shadow:
+    0 0 0 4px rgba(0, 92, 185, 0.08),
+    0 14px 32px rgba(0, 92, 185, 0.08);
+}
+
+.photos-filter-toggle-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.photos-filter-toggle-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.photos-filter-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(620px, calc(100vw - 32px));
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
+}
+
+.photos-filter-panel-head {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.photos-filter-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.46);
+}
+
+.photos-filter-panel h3 {
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .filter-btn {
@@ -1652,6 +1764,21 @@ body.station-lightbox-open {
 }
 
 @media (max-width: 1024px) {
+  .photos-filter-menu {
+    width: 100%;
+  }
+
+  .photos-filter-toggle {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .photos-filter-panel {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
   .stations-map {
     height: 380px;
     border-radius: 16px;

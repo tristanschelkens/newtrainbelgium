@@ -185,6 +185,10 @@ function setActiveNavLink() {
   const grid = document.getElementById("photoGrid");
   const mapSection = document.getElementById("stationsMap")?.closest("section");
   const searchInput = document.getElementById("photoSearch");
+  const filterMenu = document.getElementById("photoFilterMenu");
+  const filterToggle = document.getElementById("photoFilterToggle");
+  const filterPanel = document.getElementById("photoFilterPanel");
+  const filterSummary = document.getElementById("photoFilterSummary");
   const stationData = window.STATIONS_DATA || {};
 
   if (!filters || !grid) return;
@@ -482,6 +486,22 @@ function setActiveNavLink() {
       const isActive = (btn.dataset.filter || "").toLowerCase() === value;
       btn.classList.toggle("active", isActive);
     });
+
+    if (filterSummary) {
+      const activeButton = buttons.find(
+        (btn) => (btn.dataset.filter || "").toLowerCase() === value,
+      );
+      filterSummary.textContent =
+        value === "all"
+          ? "All countries"
+          : activeButton?.textContent?.trim() || "Selected";
+    }
+  }
+
+  function setFilterMenuOpen(isOpen) {
+    if (!filterToggle || !filterPanel) return;
+    filterToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    filterPanel.hidden = !isOpen;
   }
 
   function applyFilters() {
@@ -634,8 +654,28 @@ function setActiveNavLink() {
       applyFilters();
       persistPhotoFilter(value);
       persistPhotoSearch(activeQuery);
+      setFilterMenuOpen(false);
     });
   });
+
+  if (filterToggle && filterPanel) {
+    filterToggle.addEventListener("click", () => {
+      const isOpen = filterToggle.getAttribute("aria-expanded") === "true";
+      setFilterMenuOpen(!isOpen);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!filterMenu || !filterMenu.contains(e.target)) {
+        setFilterMenuOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        setFilterMenuOpen(false);
+      }
+    });
+  }
 
   if (searchInput) {
     searchInput.addEventListener("input", () => {
@@ -659,6 +699,7 @@ function setActiveNavLink() {
 
   setActiveButton(initialFilter);
   applyFilters();
+  setFilterMenuOpen(false);
 
   grid.addEventListener("click", (e) => {
     const searchCard = e.target.closest(".photo-search-result");
