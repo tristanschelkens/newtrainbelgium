@@ -210,6 +210,12 @@ function setActiveNavLink() {
       .trim();
   }
 
+  function buildSearchIndex(value) {
+    const normalized = normalizeSearchValue(value);
+    const compact = normalized.replace(/[^a-z0-9]+/g, "");
+    return `${normalized} ${compact}`.trim();
+  }
+
   function esc(value) {
     return String(value || "")
       .replaceAll("&", "&amp;")
@@ -278,7 +284,7 @@ function setActiveNavLink() {
       .filter(Boolean)
       .join(" ");
 
-    card.dataset.search = normalizeSearchValue(searchParts);
+    card.dataset.search = buildSearchIndex(searchParts);
     card.dataset.defaultHref = href;
 
     const photoEntries = stationPhotos.map((photo, index) => {
@@ -313,7 +319,7 @@ function setActiveNavLink() {
         operator: String(photo?.operator || "").trim(),
         metaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
-        search: normalizeSearchValue(photoSearch),
+        search: buildSearchIndex(photoSearch),
       };
     });
 
