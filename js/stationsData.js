@@ -14,7 +14,7 @@ window.STATIONS_DATA = {
         numbers: "1804",
         date: "25 February 2026",
         consist: [
-          { kind: "traction", label: "HLE 1804", active: true },
+          { kind: "traction", label: "HLE18 04", active: true },
           { kind: "carriage", label: "8x M6", active: true },
         ],
       },
@@ -57,7 +57,7 @@ window.STATIONS_DATA = {
         date: "6 June 2025",
         consist: [
           { kind: "carriage", label: "8x M6", active: true },
-          { kind: "traction", label: "HLE 18", active: true },
+          { kind: "traction", label: "HLE18 19", active: true },
         ],
       },
       {
@@ -72,7 +72,7 @@ window.STATIONS_DATA = {
         consist: [
           { kind: "carriage", label: "M7", active: true },
           { kind: "carriage", label: "6x M6", active: true },
-          { kind: "traction", label: "HLE 1854", active: true },
+          { kind: "traction", label: "HLE18 54", active: true },
         ],
       },
       {
@@ -113,9 +113,9 @@ window.STATIONS_DATA = {
         numbers: "4127",
         date: "25 June 2025",
         consist: [
-          { kind: "traction", label: "AR41", active: true },
-          { kind: "traction", label: "AR41", active: true },
-          { kind: "traction", label: "AR41", active: true },
+          { kind: "traction", label: "AR41 62", active: true },
+          { kind: "traction", label: "AR41 36", active: true },
+          { kind: "traction", label: "AR41 76", active: true },
           { kind: "traction", label: "AR41 27", active: true },
         ],
       },
@@ -130,7 +130,7 @@ window.STATIONS_DATA = {
         date: "19 February 2025",
         consist: [
           { kind: "traction", label: "AM08 569", active: true },
-          { kind: "traction", label: "AM08", active: true },
+          { kind: "traction", label: "AM08 548", active: true },
         ],
       },
       {
@@ -158,7 +158,7 @@ window.STATIONS_DATA = {
         numbers: "1904",
         date: "3 May 2025",
         consist: [
-          { kind: "traction", label: "HLE 1904", active: true },
+          { kind: "traction", label: "HLE19 04", active: true },
           { kind: "carriage", label: "8x M6", active: false },
         ],
       },
@@ -248,7 +248,7 @@ window.STATIONS_DATA = {
         numbers: "1834",
         date: "7 Februari 2025",
         consist: [
-          { kind: "traction", label: "HLE 1834", active: true },
+          { kind: "traction", label: "HLE18 34", active: true },
           { kind: "carriage", label: "NightJet" },
         ],
       },
@@ -264,13 +264,13 @@ window.STATIONS_DATA = {
         isMain: true,
         operator: "NMBS/SNCB",
         src: "../images/Belgium/Duffel/Duffel_M4HLE27.webp",
-        alt: "Duffel 7x M4 + HLE 27",
+        alt: "Duffel 7x M4 + HLE27 45",
         label: "Duffel",
         numbers: "",
         date: "25 May 2024",
         consist: [
           { kind: "carriage", label: "7x M4", active: true },
-          { kind: "traction", label: "HLE 27", active: true },
+          { kind: "traction", label: "HLE27 45", active: true },
         ],
       },
     ],
@@ -291,10 +291,10 @@ window.STATIONS_DATA = {
           "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
         date: "8 March 2026",
         consist: [
-          { kind: "traction", label: "HLE 1828", active: true },
+          { kind: "traction", label: "HLE18 28", active: true },
           { kind: "carriage", label: "I10" },
           { kind: "carriage", label: "7x M7" },
-          { kind: "traction", label: "HLE 1837", active: true },
+          { kind: "traction", label: "HLE18 37", active: true },
         ],
       },
       {
@@ -308,10 +308,10 @@ window.STATIONS_DATA = {
           "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
         date: "8 March 2026",
         consist: [
-          { kind: "traction", label: "HLE 1828", active: true },
+          { kind: "traction", label: "HLE18 28", active: true },
           { kind: "carriage", label: "I10" },
           { kind: "carriage", label: "7x M7" },
-          { kind: "traction", label: "HLE 1837", active: true },
+          { kind: "traction", label: "HLE18 37", active: true },
         ],
       },
       {
@@ -325,10 +325,10 @@ window.STATIONS_DATA = {
           "1837, 72144, 73032, 79010, 73006, 73010, 72010, 72054, 12773, 1828",
         date: "8 March 2026",
         consist: [
-          { kind: "traction", label: "HLE 1828", active: true },
+          { kind: "traction", label: "HLE18 28", active: true },
           { kind: "carriage", label: "I10" },
           { kind: "carriage", label: "7x M7" },
-          { kind: "traction", label: "HLE 1837", active: true },
+          { kind: "traction", label: "HLE18 37", active: true },
         ],
       },
     ],
@@ -348,11 +348,11 @@ window.STATIONS_DATA = {
         numbers: "1914, 1853, 12759, 72149, 72049, 73011, 79020, 1814",
         date: "8 March 2026",
         consist: [
-          { kind: "traction", label: "HLE 1914", active: true },
-          { kind: "traction", label: "HLE 1853", active: false },
+          { kind: "traction", label: "HLE19 14", active: true },
+          { kind: "traction", label: "HLE18 53", active: false },
           { kind: "carriage", label: "I10" },
           { kind: "carriage", label: "8x M7" },
-          { kind: "traction", label: "HLE 1814", active: true },
+          { kind: "traction", label: "HLE18 14", active: true },
         ],
       },
       {
@@ -365,11 +365,11 @@ window.STATIONS_DATA = {
         numbers: "1914, 1853, 12759, 72149, 72049, 73011, 79020, 1814",
         date: "8 March 2026",
         consist: [
-          { kind: "traction", label: "HLE 1914", active: true },
-          { kind: "traction", label: "HLE 1853", active: false },
+          { kind: "traction", label: "HLE19 14", active: true },
+          { kind: "traction", label: "HLE18 53", active: false },
           { kind: "carriage", label: "I10" },
           { kind: "carriage", label: "8x M7" },
-          { kind: "traction", label: "HLE 1814", active: true },
+          { kind: "traction", label: "HLE18 14", active: true },
         ],
       },
     ],
@@ -389,7 +389,7 @@ window.STATIONS_DATA = {
         numbers: "1913",
         date: "",
         consist: [
-          { kind: "traction", label: "HLE 1913", active: true },
+          { kind: "traction", label: "HLE19 13", active: true },
           { kind: "traction", label: "6x M7", active: false },
         ],
       },
@@ -432,7 +432,7 @@ window.STATIONS_DATA = {
         numbers: "1873, 11819, 11814, 12906, 19820",
         date: "8 March 2026",
         consist: [
-          { kind: "traction", label: "HLE 1873", active: true },
+          { kind: "traction", label: "HLE18 73", active: true },
           { kind: "carriage", label: "4x I11", active: true },
         ],
       },
@@ -476,7 +476,7 @@ window.STATIONS_DATA = {
         date: "",
         consist: [
           { kind: "carriage", label: "8x M6", active: true },
-          { kind: "traction", label: "HLE 18/19", active: true },
+          { kind: "traction", label: "HLE18 42", active: true },
         ],
       },
       {
@@ -489,10 +489,10 @@ window.STATIONS_DATA = {
         numbers: "4124",
         date: "27 May 2024",
         consist: [
-          { kind: "traction", label: "MW41 24", active: true },
-          { kind: "traction", label: "MW41", active: true },
-          { kind: "traction", label: "MW41", active: true },
-          { kind: "traction", label: "MW41", active: true },
+          { kind: "traction", label: "AR41 24", active: true },
+          { kind: "traction", label: "AR41 36", active: true },
+          { kind: "traction", label: "AR41 76", active: true },
+          { kind: "traction", label: "AR41 27", active: true },
         ],
       },
     ],
@@ -532,7 +532,7 @@ window.STATIONS_DATA = {
         consist: [
           { kind: "traction", label: "TRAXX 186 205", active: true },
           { kind: "carriage", label: "7x ICR" },
-          { kind: "traction", label: "TRAXX", active: true },
+          { kind: "traction", label: "TRAXX 186 200", active: true },
         ],
       },
     ],
@@ -655,7 +655,7 @@ window.STATIONS_DATA = {
         consist: [
           { kind: "traction", label: "TRAXX 186 121", active: true },
           { kind: "carriage", label: "7x I11" },
-          { kind: "traction", label: "TRAXX", active: true },
+          { kind: "traction", label: "TRAXX 186 200", active: true },
         ],
       },
     ],
