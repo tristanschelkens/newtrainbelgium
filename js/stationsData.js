@@ -212,8 +212,8 @@ window.STATIONS_DATA = {
         numbers: "561",
         date: "14 May 2025",
         consist: [
-          { kind: "carriage", label: "AM96 561", active: true },
-          { kind: "carriage", label: "AM96 517", active: true },
+          { kind: "traction", label: "AM96 561", active: true },
+          { kind: "traction", label: "AM96 517", active: true },
         ],
       },
       {

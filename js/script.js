@@ -241,12 +241,18 @@ function setActiveNavLink() {
     );
   }
 
-  function buildSearchMetaHtml(consist) {
+  function buildSearchMetaHtml(consist, options = {}) {
     const visibleItems = (Array.isArray(consist) ? consist : []).filter(
       (item) => item && item.showOnCard !== false,
     );
+    const maxVisible =
+      Number.isInteger(options.maxVisible) && options.maxVisible > 0
+        ? options.maxVisible
+        : null;
+    const renderedItems = maxVisible ? visibleItems.slice(0, maxVisible) : visibleItems;
+    const hasOverflow = maxVisible ? visibleItems.length > maxVisible : false;
 
-    return visibleItems
+    const tagsHtml = renderedItems
       .map((item, index) => {
         const kind = String(item.kind || "carriage").toLowerCase();
         const cls =
@@ -263,6 +269,8 @@ function setActiveNavLink() {
         return `<span class="${cls}">${esc(formatSearchTagLabel(item.label || ""))}</span>${plus}`;
       })
       .join("");
+
+    return hasOverflow ? `${tagsHtml}<span class="station-meta-plus">+</span>` : tagsHtml;
   }
 
   function normalizeFacetKey(value) {
@@ -477,7 +485,8 @@ function setActiveNavLink() {
               ).values(),
             )
           : [],
-        metaHtml: buildSearchMetaHtml(photo?.consist),
+        metaHtml: buildSearchMetaHtml(photo?.consist, { maxVisible: 3 }),
+        fullMetaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
         search: buildSearchIndex(photoSearch),
       };
@@ -590,8 +599,10 @@ function setActiveNavLink() {
     }
 
     if (searchLightboxMeta) {
-      searchLightboxMeta.innerHTML = entry.metaHtml || "";
-      searchLightboxMeta.style.display = entry.metaHtml ? "flex" : "none";
+      searchLightboxMeta.innerHTML = entry.fullMetaHtml || entry.metaHtml || "";
+      searchLightboxMeta.style.display = Boolean(entry.fullMetaHtml || entry.metaHtml)
+        ? "flex"
+        : "none";
     }
 
     searchLightbox.classList.add("is-open");
@@ -1476,10 +1487,16 @@ function setActiveNavLink() {
     );
   }
 
-  function buildMetaHtml(consist) {
+  function buildMetaHtml(consist, options = {}) {
     const visibleItems = consist.filter((item) => item.showOnCard !== false);
+    const maxVisible =
+      Number.isInteger(options.maxVisible) && options.maxVisible > 0
+        ? options.maxVisible
+        : null;
+    const renderedItems = maxVisible ? visibleItems.slice(0, maxVisible) : visibleItems;
+    const hasOverflow = maxVisible ? visibleItems.length > maxVisible : false;
 
-    return visibleItems
+    const tagsHtml = renderedItems
       .map((item, index) => {
         const cls =
           item.kind === "traction"
@@ -1496,6 +1513,8 @@ function setActiveNavLink() {
         return `<span class="${cls}">${esc(formatTagLabel(item.label))}</span>${plus}`;
       })
       .join("");
+
+    return hasOverflow ? `${tagsHtml}<span class="station-meta-plus">+</span>` : tagsHtml;
   }
 
   const photos = station.photos.map((photo, sourceIndex) => {
@@ -1520,7 +1539,8 @@ function setActiveNavLink() {
       series,
       explicitIsMain,
       consist,
-      metaHtml: buildMetaHtml(consist),
+      metaHtml: buildMetaHtml(consist, { maxVisible: 3 }),
+      fullMetaHtml: buildMetaHtml(consist),
       sourceIndex,
       filterKeys: Array.from(
         new Set(consist.map((item) => item.filterKey).filter(Boolean)),
@@ -1777,7 +1797,7 @@ function setActiveNavLink() {
     openLightbox(
       photo.src,
       photo.alt,
-      photo.metaHtml || "",
+      photo.fullMetaHtml || photo.metaHtml || "",
       photoDate,
       photo.operator || "",
     );
