@@ -42,7 +42,7 @@ window.STATIONS_DATA = {
         numbers: "808, 08147, 147",
         date: "30 June 2025",
         consist: [
-          { kind: "traction", label: "AM75 808", active: true },
+          { kind: "traction", label: "AM75 808", active: true, separatorAfter: "|" },
           { kind: "traction", label: "AM08 147", active: true },
         ],
       },

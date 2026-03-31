@@ -1311,6 +1311,16 @@ button.photo-card {
   margin: 0 2px;
 }
 
+.station-meta-separator {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 900;
+  font-size: 13px;
+  margin: 0 4px;
+  letter-spacing: 0.04em;
+}
+
 .station-photo-card .overlay {
   display: none;
 }

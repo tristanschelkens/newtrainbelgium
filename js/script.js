@@ -261,9 +261,12 @@ function setActiveNavLink() {
               ? "station-meta-chip"
               : "station-meta-inactive"
             : "station-meta-carriage";
+        const separatorLabel = String(item.separatorAfter || "").trim();
         const plus =
-          index < visibleItems.length - 1
-            ? '<span class="station-meta-plus">+</span>'
+          index < renderedItems.length - 1
+            ? separatorLabel
+              ? `<span class="station-meta-separator">${esc(separatorLabel)}</span>`
+              : '<span class="station-meta-plus">+</span>'
             : "";
 
         return `<span class="${cls}">${esc(formatSearchTagLabel(item.label || ""))}</span>${plus}`;
@@ -1460,6 +1463,7 @@ function setActiveNavLink() {
           label,
           active: kind === "traction" ? entry.active !== false : false,
           showOnCard: entry.showOnCard !== false,
+          separatorAfter: String(entry.separatorAfter || "").trim(),
           filterKey:
             String(entry.filterKey || "").trim().toLowerCase() ||
             (kind === "traction"
@@ -1505,9 +1509,12 @@ function setActiveNavLink() {
               : "station-meta-inactive"
             : "station-meta-carriage";
 
+        const separatorLabel = String(item.separatorAfter || "").trim();
         const plus =
-          index < visibleItems.length - 1
-            ? '<span class="station-meta-plus">+</span>'
+          index < renderedItems.length - 1
+            ? separatorLabel
+              ? `<span class="station-meta-separator">${esc(separatorLabel)}</span>`
+              : '<span class="station-meta-plus">+</span>'
             : "";
 
         return `<span class="${cls}">${esc(formatTagLabel(item.label))}</span>${plus}`;
