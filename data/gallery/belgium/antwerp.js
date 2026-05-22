@@ -2,7 +2,7 @@ station({
   slug: "antwerp",
   name: "Antwerp",
   country: "Belgium",
-  coords: [51.2172, 4.4211],
+  coords: [51.2165, 4.4211],
   folder: "../images/Belgium/Antwerp/",
   description: "Rail photography in Antwerp.",
 

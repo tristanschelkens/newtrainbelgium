@@ -2,7 +2,7 @@ station({
   slug: "amsterdam",
   name: "Amsterdam",
   country: "Netherlands",
-  coords: [52.3791, 4.8994],
+  coords: [52.2244, 4.5402],
   folder: "../images/Netherlands/Amsterdam/",
   description: "Rail photography in Amsterdam.",
 

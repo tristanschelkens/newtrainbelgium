@@ -2,7 +2,7 @@ station({
   slug: "luchtbal",
   name: "Luchtbal",
   country: "Belgium",
-  coords: [51.2474, 4.4292],
+  coords: [51.2442, 4.4248],
   folder: "../images/Belgium/Luchtbal/",
   description: "Rail photography in Luchtbal.",
 

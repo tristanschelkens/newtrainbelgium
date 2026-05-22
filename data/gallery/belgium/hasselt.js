@@ -2,7 +2,7 @@ station({
   slug: "hasselt",
   name: "Hasselt",
   country: "Belgium",
-  coords: [50.9307, 5.3325],
+  coords: [50.9305, 5.3278],
   folder: "../images/Belgium/Hasselt/",
   description: "Rail photography in Hasselt.",
 

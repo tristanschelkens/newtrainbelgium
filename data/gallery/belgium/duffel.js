@@ -2,7 +2,7 @@ station({
   slug: "duffel",
   name: "Duffel",
   country: "Belgium",
-  coords: [51.0959, 4.5167],
+  coords: [51.0913, 4.4929],
   folder: "../images/Belgium/Duffel/",
   description: "Rail photography in Duffel.",
 

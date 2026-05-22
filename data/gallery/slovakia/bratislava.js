@@ -2,7 +2,7 @@ station({
   slug: "bratislava",
   name: "Bratislava",
   country: "Slovakia",
-  coords: [48.1459, 17.1077],
+  coords: [48.1590, 17.1063],
   folder: "../images/Slovakia/Bratislava/",
   description: "Rail photography in Bratislava.",
 

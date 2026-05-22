@@ -2,7 +2,7 @@ station({
   slug: "roosendaal",
   name: "Roosendaal",
   country: "Netherlands",
-  coords: [51.5402, 4.4622],
+  coords: [51.5403, 4.4584],
   folder: "../images/Netherlands/Roosendaal/",
   description: "Rail photography in Roosendaal.",
 

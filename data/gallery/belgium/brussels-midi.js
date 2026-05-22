@@ -2,7 +2,7 @@ station({
   slug: "brussels-midi",
   name: "Brussels-Midi",
   country: "Belgium",
-  coords: [50.8356, 4.3366],
+  coords: [50.5008, 4.2010],
   folder: "../images/Belgium/Brussels-Midi/",
   description: "Rail photography in Brussels-Midi.",
 

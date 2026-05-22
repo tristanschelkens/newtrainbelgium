@@ -2,7 +2,7 @@ station({
   slug: "mechelen",
   name: "Mechelen",
   country: "Belgium",
-  coords: [51.0179, 4.4816],
+  coords: [51.0177, 4.4840],
   folder: "../images/Belgium/Mechelen/",
   description: "Rail photography in Mechelen.",
 

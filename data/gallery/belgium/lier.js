@@ -2,7 +2,7 @@ station({
   slug: "lier",
   name: "Lier",
   country: "Belgium",
-  coords: [51.1321, 4.5706],
+  coords: [51.1358, 4.5592],
   folder: "../images/Belgium/Lier/",
   description: "Rail photography in Lier.",
 

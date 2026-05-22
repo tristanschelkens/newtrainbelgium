@@ -12,7 +12,7 @@ station({
       operator: "NMBS/SNCB",
       alt: "Charleroi Central",
       numbers: "997",
-      consist: [traction("AM66")],
+      consist: [traction("AM66 997")],
       images: ["Charleroi-Central_AM66997.webp"],
     },
       {
@@ -20,7 +20,7 @@ station({
       operator: "NMBS/SNCB",
       alt: "Charleroi Central",
       numbers: "4105",
-      consist: [traction("AR41")],
+      consist: [traction("AR41 05")],
       images: ["Charleroi-Central_AR4105.webp", "Charleroi-Central_AR4105_2.webp"],
     },
        {
@@ -28,7 +28,7 @@ station({
       operator: "NMBS/SNCB",
       alt: "Charleroi Central",
       numbers: "4110",
-      consist: [traction("AR41")],
+      consist: [traction("AR41 10")],
       images: ["Charleroi-Central_AR4110.webp", "Charleroi-Central_AR4110_2.webp"],
     },
   ],

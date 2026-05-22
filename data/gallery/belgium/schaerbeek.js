@@ -2,7 +2,7 @@ station({
   slug: "schaerbeek",
   name: "Schaerbeek",
   country: "Belgium",
-  coords: [50.8686, 4.3782],
+  coords: [50.8782, 4.3787],
   folder: "../images/Belgium/Schaerbeek/",
   description: "Rail photography in Schaerbeek.",
 
