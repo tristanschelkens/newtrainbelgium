@@ -756,6 +756,11 @@ img {
   height: auto;
 }
 
+.about-hero-grid .about-photo-wrap {
+  aspect-ratio: auto;
+  height: clamp(560px, calc(1020px - 30vw), 620px);
+}
+
 .eyebrow {
   display: inline-block;
   font-size: 12px;
@@ -2129,7 +2134,9 @@ body.station-lightbox-open {
     grid-template-columns: 1fr;
   }
 
-  .about-photo-wrap {
+  .about-photo-wrap,
+  .about-hero-grid .about-photo-wrap {
+    height: auto;
     aspect-ratio: 4 / 4.5;
   }
 }
