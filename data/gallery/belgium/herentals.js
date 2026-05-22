@@ -21,7 +21,7 @@ station({
       id: "photo-1",
       photographer: "Leon Van de Sande",
       operator: "NMBS/SNCB",
-      date: "23 March 2026",
+      date: "-",
       alt: "Herentals 10x M7",
       numbers: "76010",
       consist: [traction("M7")],
