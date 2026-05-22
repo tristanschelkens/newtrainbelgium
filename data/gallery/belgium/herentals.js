@@ -38,7 +38,7 @@ station({
       operator: "Infrabel",
       alt: "Herentals HLD 6207 + HLD 6291",
       numbers: "6207, 6291",
-      consist: [traction("HLD 6207"), traction("HLD62 91")],
+      consist: [traction("HLD62 07"), traction("HLD62 91")],
       images: ["Herentals_HLD6207HLD6291.webp"],
     }
   ],
