@@ -7,8 +7,17 @@ station({
   description: "Rail photography in Leuven.",
 
   photos: [
-    {
+        {
       id: "photo-0",
+      operator: "TGV INOUI",
+      date: "1 April 2026",
+      alt: "TGV M 1402",
+      numbers: "1402",
+      consist: [traction("TGV M 1402")],
+      images: ["Leuven_HLE1913M7.webp", "Leuven_TGV1402_2.wepb", "Leuven_TGV1402_3.wepb", "Leuven_TGV1402_4.webp", "Leuven_TGV1402_5.webp", "Leuven_TGV1402_6.webp", "Leuven_TGV1402_7.webp"],
+    },
+    {
+      id: "photo-1",
       operator: "NMBS/SNCB",
       date: "9 April 2025",
       alt: "Leuven HLE 1913 + 6x M7 ",
