@@ -1477,6 +1477,13 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     if (!rawType || normalizedType === "unknown") return "";
 
+    if (
+      normalizedType === "coradia max" ||
+      (normalizedType === "coradia" && compactNumber === "max")
+    ) {
+      return "coradia-max";
+    }
+
     if (normalizedType.startsWith("hle") || compactType.startsWith("hle")) {
       if (compactNumber.startsWith("13") || compactType === "hle13") return "hle13";
       if (compactNumber.startsWith("17") || compactType === "hle17") return "hle17";
@@ -1522,6 +1529,7 @@ function renderCountryFiltersFromData(filters, stationData) {
     return parts[0];
   }
   function getVehicleFilterLabel(key) {
+    if (key === "coradia-max") return "Coradia Max";
     if (key === "hle18-19") return "HLE 18/19";
     if (key === "hle13") return "HLE 13";
     if (key === "hle17") return "HLE 17";
@@ -1593,6 +1601,9 @@ function renderCountryFiltersFromData(filters, stationData) {
           if (firstLower === "hle") {
             inferredType = "HLE";
             inferredNumber = parts[1] || "";
+          } else if (firstLower === "coradia" && String(parts[1] || "").toLowerCase() === "max") {
+            inferredType = "Coradia Max";
+            inferredNumber = parts[2] || "";
           } else if (/^am\d+/i.test(first)) {
             inferredType = first;
             inferredNumber = parts[1] || "";
