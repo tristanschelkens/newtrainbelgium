@@ -18,7 +18,7 @@ station({
     },
             {
       id: "photo-1",
-      photographer: "Leon Van de Sandesss",
+      photographer: "Leon Van de Sande",
       operator: "NMBS/SNCB",
       alt: "Herentals 10x M7",
       numbers: "76010",
