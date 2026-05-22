@@ -3,7 +3,7 @@ station({
   name: "Charleroi-Central",
   country: "Belgium",
   coords: [50.4044, 4.4382],
-  folder: "../images/Belgium/charleroi-central/",
+  folder: "../images/Belgium/Charleroi-Central/",
   description: "Rail photography in Charleroi Central.",
 
   photos: [
