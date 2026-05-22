@@ -743,6 +743,10 @@ img {
   align-items: start;
 }
 
+.about-info-grid {
+  align-items: stretch;
+}
+
 .about-main-card,
 .about-text-card,
 .about-facts-card,
@@ -753,6 +757,11 @@ img {
 
 .about-hero-grid .about-main-card,
 .about-hero-grid .about-photo-card {
+  height: auto;
+}
+
+.about-info-grid .about-text-card,
+.about-info-grid .about-facts-card {
   height: auto;
 }
 
