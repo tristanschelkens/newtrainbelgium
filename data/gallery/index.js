@@ -59,6 +59,7 @@ function mainImage(file, options) {
     "austria/vienna",
     "belgium/antwerp",
     "belgium/brussels-midi",
+    "belgium/charleroi-central",
     "belgium/duffel",
     "belgium/eupen",
     "belgium/hasselt",

@@ -2,7 +2,7 @@ station({
   slug: "herentals",
   name: "Herentals",
   country: "Belgium",
-  coords: [51.1810, 4.8289],
+  coords: [51.1807, 4.8275],
   folder: "../images/Belgium/Herentals/",
   description: "Rail photography in Herentals.",
 
@@ -32,6 +32,14 @@ station({
       numbers: "1902",
       consist: [traction("HLE19 02"), carriage("8x M6", true)],
       images: ["Herentals_HLE1902M6.webp"],
+    },
+       {
+      id: "photo-3",
+      operator: "Infrabel",
+      alt: "Herentals HLD 6207 + HLD 6291",
+      numbers: "6207, 6291",
+      consist: [traction("HLD 6207"), traction("HLD62 91")],
+      images: ["Herentals_HLD6207HLD6291.webp"],
     }
   ],
 });
