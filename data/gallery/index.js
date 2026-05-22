@@ -62,6 +62,7 @@ function mainImage(file, options) {
     "belgium/duffel",
     "belgium/eupen",
     "belgium/hasselt",
+    "belgium/herentals",
     "belgium/leuven",
     "belgium/liege",
     "belgium/lier",
