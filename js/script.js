@@ -1476,6 +1476,7 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     if (normalizedType.startsWith("hle") || compactType.startsWith("hle")) {
       if (compactNumber.startsWith("13") || compactType === "hle13") return "hle13";
+      if (compactNumber.startsWith("17") || compactType === "hle17") return "hle17";
       if (compactNumber.startsWith("21") || compactType === "hle21") return "hle21";
       if (compactNumber.startsWith("27") || compactType === "hle27") return "hle27";
       if (compactNumber.startsWith("28") || compactType === "hle28") return "hle28";
@@ -1520,6 +1521,7 @@ function renderCountryFiltersFromData(filters, stationData) {
   function getVehicleFilterLabel(key) {
     if (key === "hle18-19") return "HLE 18/19";
     if (key === "hle13") return "HLE 13";
+    if (key === "hle17") return "HLE 17";
     if (key === "hle21") return "HLE 21";
     if (key === "hle27") return "HLE 27";
     if (key === "hle28") return "HLE 28";
