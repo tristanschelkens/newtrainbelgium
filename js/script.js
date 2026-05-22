@@ -610,6 +610,7 @@ function renderCountryFiltersFromData(filters, stationData) {
         src: photo?.src || "",
         alt: photo?.alt || station?.name || slug,
         date: String(photo?.date || "").trim(),
+        photographer: String(photo?.photographer || "").trim(),
         operator: String(photo?.operator || "").trim(),
         operatorKeys: String(photo?.operator || "")
           .split(",")
@@ -671,6 +672,7 @@ function renderCountryFiltersFromData(filters, stationData) {
   const searchLightboxOperator = searchLightbox.querySelector(".station-lightbox-operator");
   const searchLightboxDate = searchLightbox.querySelector(".station-lightbox-date");
   const searchLightboxMeta = searchLightbox.querySelector(".station-lightbox-meta");
+  const searchLightboxWatermark = searchLightbox.querySelector(".station-lightbox-watermark");
   const searchLightboxClose = searchLightbox.querySelector(".station-lightbox-close");
   const searchLightboxPrev = searchLightbox.querySelector(".station-lightbox-nav.prev");
   const searchLightboxNext = searchLightbox.querySelector(".station-lightbox-nav.next");
@@ -743,6 +745,11 @@ function renderCountryFiltersFromData(filters, stationData) {
       searchLightboxMeta.style.display = Boolean(entry.fullMetaHtml || entry.metaHtml)
         ? "flex"
         : "none";
+    }
+
+    if (searchLightboxWatermark) {
+      const owner = (entry.photographer || "").trim() || "trainbelgium.com";
+      searchLightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
     }
 
     searchLightbox.classList.add("is-open");
@@ -1672,6 +1679,7 @@ function renderCountryFiltersFromData(filters, stationData) {
       alt: photo.alt || station.name,
       label: photo.label || station.name,
       date: String(photo.date || "").trim(),
+      photographer: String(photo.photographer || "").trim(),
       operator: String(photo.operator || "").trim(),
       operatorLabels: String(photo.operator || "")
         .split(",")
@@ -1868,6 +1876,7 @@ function renderCountryFiltersFromData(filters, stationData) {
   const lightboxOperator = lightbox.querySelector(".station-lightbox-operator");
   const lightboxDate = lightbox.querySelector(".station-lightbox-date");
   const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
+  const lightboxWatermark = lightbox.querySelector(".station-lightbox-watermark");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
   const prevBtn = lightbox.querySelector(".station-lightbox-nav.prev");
   const nextBtn = lightbox.querySelector(".station-lightbox-nav.next");
@@ -1881,7 +1890,14 @@ function renderCountryFiltersFromData(filters, stationData) {
     document.body.classList.remove("station-lightbox-open");
   }
 
-  function openLightbox(src, alt, metaHtml, dateLabel, operatorLabel) {
+  function openLightbox(
+    src,
+    alt,
+    metaHtml,
+    dateLabel,
+    operatorLabel,
+    photographerLabel,
+  ) {
     if (!lightboxImg) return;
 
     lightboxImg.src = src;
@@ -1918,6 +1934,11 @@ function renderCountryFiltersFromData(filters, stationData) {
       lightboxMeta.style.display = metaHtml ? "flex" : "none";
     }
 
+    if (lightboxWatermark) {
+      const owner = String(photographerLabel || "").trim() || "trainbelgium.com";
+      lightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
+    }
+
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("station-lightbox-open");
@@ -1945,6 +1966,7 @@ function renderCountryFiltersFromData(filters, stationData) {
       photo.fullMetaHtml || photo.metaHtml || "",
       photoDate,
       photo.operator || "",
+      photo.photographer || "",
     );
     updateLightboxNav();
   }

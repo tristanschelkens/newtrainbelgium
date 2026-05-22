@@ -61,6 +61,7 @@ window.GALLERY_STATIONS = window.GALLERY_STATIONS || [];
           label: station.name || station.slug,
           numbers: meta.numbers || photo.numbers || "",
           date: meta.date || photo.date || "",
+          photographer: meta.photographer || photo.photographer || "",
           consist: (meta.consist || photo.consist || []).map(normalizeConsistItem),
         });
       });

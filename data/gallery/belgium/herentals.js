@@ -9,6 +9,7 @@ station({
   photos: [
     {
       id: "photo-0",
+        photographer: "Leon Van de Sande",
       operator: "NMBS/SNCB",
       alt: "Herentals HLE 1701 + 4x I11",
       numbers: "1701",
@@ -17,6 +18,7 @@ station({
     },
             {
       id: "photo-1",
+        photographer: "Leon Van de Sande",
       operator: "NMBS/SNCB",
       alt: "Herentals 10x M7",
       numbers: "76010",
