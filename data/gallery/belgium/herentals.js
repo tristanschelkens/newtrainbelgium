@@ -11,6 +11,7 @@ station({
       id: "photo-0",
       photographer: "Leon Van de Sande",
       operator: "NMBS/SNCB",
+      date: "1 April 2026",
       alt: "Herentals HLE 1701 + 4x I11",
       numbers: "1701",
       consist: [traction("HLE17 01"), carriage("4x I11", true)],
@@ -20,6 +21,7 @@ station({
       id: "photo-1",
       photographer: "Leon Van de Sande",
       operator: "NMBS/SNCB",
+      date: "23 March 2026",
       alt: "Herentals 10x M7",
       numbers: "76010",
       consist: [traction("M7")],
@@ -28,6 +30,7 @@ station({
         {
       id: "photo-2",
       operator: "NMBS/SNCB",
+      date: "23 March 2026",
       alt: "Herentals HLE 1902 + 8x M6",
       numbers: "1902",
       consist: [traction("HLE19 02"), carriage("8x M6", true)],
@@ -36,6 +39,7 @@ station({
        {
       id: "photo-3",
       operator: "Infrabel",
+      date: "31 January 2026",
       alt: "Herentals HLD 6207 + HLD 6291",
       numbers: "6207, 6291",
       consist: [traction("HLD62 07"), traction("HLD62 91")],

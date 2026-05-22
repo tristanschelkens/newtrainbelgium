@@ -2,7 +2,7 @@ station({
   slug: "eupen",
   name: "Eupen",
   country: "Belgium",
-  coords: [50.6299, 6.0369],
+  coords: [50.6351, 6.0389],
   folder: "../images/Belgium/Eupen/",
   description: "Rail photography in Eupen.",
 
