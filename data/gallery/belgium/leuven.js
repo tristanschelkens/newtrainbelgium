@@ -2,7 +2,7 @@ station({
   slug: "leuven",
   name: "Leuven",
   country: "Belgium",
-  coords: [50.5253, 4.4258],
+  coords: [50.8814, 4.7162],
   folder: "../images/Belgium/Leuven/",
   description: "Rail photography in Leuven.",
 
