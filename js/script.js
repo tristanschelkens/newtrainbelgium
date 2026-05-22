@@ -180,6 +180,105 @@ function setActiveNavLink() {
   });
 }
 
+function renderPhotoGalleryCardsFromData(grid, stationData) {
+  if (!grid || !stationData || typeof stationData !== "object") return;
+
+  function esc(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function getStationCoverPhoto(station) {
+    const photos = Array.isArray(station?.photos) ? station.photos : [];
+    if (photos.length === 0) return null;
+
+    const groupedPhotos = new Map();
+    photos.forEach((photo, index) => {
+      const key = String(photo?.series || `photo-${index}`).trim().toLowerCase();
+      if (!groupedPhotos.has(key)) groupedPhotos.set(key, []);
+      groupedPhotos.get(key).push(photo);
+    });
+
+    for (const group of groupedPhotos.values()) {
+      const mainPhoto =
+        group.find((photo) => photo?.isMain === true) ||
+        group.find((photo) => photo?.isMain !== false) ||
+        group[0];
+      if (mainPhoto?.src) return mainPhoto;
+    }
+
+    return photos.find((photo) => photo?.src) || null;
+  }
+
+  const cardsHtml = Object.entries(stationData)
+    .filter(([, station]) => Array.isArray(station?.photos) && station.photos.length > 0)
+    .sort(([, a], [, b]) =>
+      String(a?.name || "").localeCompare(String(b?.name || "")),
+    )
+    .map(([slug, station]) => {
+      const coverPhoto = getStationCoverPhoto(station);
+      if (!coverPhoto?.src) return "";
+
+      const name = station?.name || coverPhoto.label || slug;
+      const country = String(station?.country || "").toLowerCase();
+
+      return `
+        <a
+          class="photo-card"
+          data-country="${esc(country)}"
+          href="Station.html?slug=${encodeURIComponent(slug)}"
+        >
+          <img
+            loading="lazy"
+            src="${esc(coverPhoto.src)}"
+            alt="${esc(name)}"
+          />
+          <div class="overlay"><h3>${esc(name)}</h3></div>
+        </a>
+      `;
+    })
+    .join("");
+
+  if (cardsHtml.trim()) {
+    grid.innerHTML = cardsHtml;
+  }
+}
+
+function renderCountryFiltersFromData(filters, stationData) {
+  if (!filters || !stationData || typeof stationData !== "object") return;
+
+  function esc(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  const countries = Array.from(
+    new Set(
+      Object.values(stationData)
+        .map((station) => String(station?.country || "").trim())
+        .filter(Boolean),
+    ),
+  ).sort((a, b) => a.localeCompare(b));
+
+  if (countries.length === 0) return;
+
+  filters.innerHTML = [
+    '<button class="filter-btn active" type="button" data-filter="all">All</button>',
+    ...countries.map(
+      (country) =>
+        `<button class="filter-btn" type="button" data-filter="${esc(country.toLowerCase())}">${esc(country)}</button>`,
+    ),
+  ].join("");
+}
+
 (function initPhotoFilters() {
   const filters = document.getElementById("photoFilters");
   const grid = document.getElementById("photoGrid");
@@ -195,6 +294,9 @@ function setActiveNavLink() {
   const stationData = window.STATIONS_DATA || {};
 
   if (!filters || !grid) return;
+
+  renderCountryFiltersFromData(filters, stationData);
+  renderPhotoGalleryCardsFromData(grid, stationData);
 
   const buttons = Array.from(filters.querySelectorAll(".filter-btn"));
   const cards = Array.from(grid.querySelectorAll(".photo-card"));
@@ -220,9 +322,44 @@ function setActiveNavLink() {
   }
 
   function buildSearchIndex(value) {
-    const normalized = normalizeSearchValue(value);
-    const compact = normalized.replace(/[^a-z0-9]+/g, "");
-    return `${normalized} ${compact}`.trim();
+    return normalizeSearchValue(value);
+  }
+
+  function getSearchTokens(searchText) {
+    return String(searchText || "").match(/[a-z0-9]+/g) || [];
+  }
+
+  function getSearchNumberGroups(searchText) {
+    return String(searchText || "").match(/\d+/g) || [];
+  }
+
+  function matchesSearchTerm(searchText, term) {
+    const normalizedTerm = normalizeSearchValue(term);
+    if (!normalizedTerm) return true;
+
+    if (/^\d+$/.test(normalizedTerm)) {
+      const tokens = getSearchTokens(searchText);
+      const numberGroups = getSearchNumberGroups(searchText);
+      const compactNumberPairs = numberGroups
+        .map((group, index) =>
+          index < numberGroups.length - 1 ? `${group}${numberGroups[index + 1]}` : "",
+        )
+        .filter(Boolean);
+
+      return (
+        numberGroups.includes(normalizedTerm) ||
+        compactNumberPairs.includes(normalizedTerm) ||
+        tokens.some(
+          (token) => /^[a-z]+\d+$/.test(token) && token.endsWith(normalizedTerm),
+        )
+      );
+    }
+
+    return String(searchText || "").includes(normalizedTerm);
+  }
+
+  function matchesSearchTerms(searchText, terms) {
+    return terms.every((term) => matchesSearchTerm(searchText, term));
   }
 
   function esc(value) {
@@ -715,7 +852,7 @@ function setActiveNavLink() {
           photo.materialFacets.some((facet) => facet.key === activeMaterialFilter);
         const queryMatch =
           queryTerms.length === 0 ||
-          queryTerms.every((term) => photo.search.includes(term));
+          matchesSearchTerms(photo.search, queryTerms);
         return countryMatch && operatorMatch && materialMatch && queryMatch;
       });
 
@@ -791,13 +928,13 @@ function setActiveNavLink() {
         activeMaterialFilter === "all" || materialKeys.includes(activeMaterialFilter);
       const queryMatch =
         queryTerms.length === 0 ||
-        queryTerms.every((term) => searchText.includes(term));
+        matchesSearchTerms(searchText, queryTerms);
       const show = countryMatch && operatorMatch && materialMatch && queryMatch;
 
       let targetHref = defaultHref;
       if (queryTerms.length > 0) {
         const matchingPhoto = photoEntries.find((entry) =>
-          queryTerms.every((term) => entry.search.includes(term)),
+          matchesSearchTerms(entry.search, queryTerms),
         );
 
         if (matchingPhoto) {
@@ -1159,6 +1296,7 @@ function setActiveNavLink() {
 (function initPhotoMap() {
   const mapEl = document.getElementById("stationsMap");
   const grid = document.getElementById("photoGrid");
+  const stationData = window.STATIONS_DATA || {};
 
   if (!mapEl || !grid || typeof window.L === "undefined") return;
 
@@ -1199,7 +1337,7 @@ function setActiveNavLink() {
     .map((card) => {
       const href = card.getAttribute("href") || "";
       const slug = new URLSearchParams(href.split("?")[1] || "").get("slug");
-      const coords = slug ? stationCoords[slug] : null;
+      const coords = slug ? stationData[slug]?.coords || stationCoords[slug] : null;
       const img = card.querySelector("img");
       const title = card.querySelector(".overlay h3")?.textContent?.trim() || img?.alt || slug;
 

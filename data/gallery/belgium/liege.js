@@ -1,0 +1,56 @@
+station({
+  slug: "liege",
+  name: "Liège",
+  country: "Belgium",
+  coords: [50.6246, 5.5662],
+  folder: "../images/Belgium/Liege/",
+  description: "Rail photography in Liège.",
+
+  photos: [
+    {
+      id: "photo-0",
+      operator: "NMBS/SNCB",
+      date: "20 July 2024",
+      alt: "Liège AM08543",
+      numbers: "08543, 8543",
+      consist: [traction("AM08 543")],
+      images: ["Luik_AM08543.webp"],
+    },
+    {
+      id: "photo-1",
+      operator: "NMBS/SNCB",
+      date: "8 March 2026",
+      alt: "Liège 6x m7",
+      numbers: "75199, 73174, 73208, 73209, 79041, 76044",
+      consist: [traction("6x M7")],
+      images: ["IMG_4723.webp"],
+    },
+    {
+      id: "photo-2",
+      operator: "NMBS/SNCB",
+      date: "8 March 2026",
+      alt: "Liège HLE 1873",
+      numbers: "1873, 11819, 11814, 12906, 19820",
+      consist: [traction("HLE18 73"), carriage("4x I11", true)],
+      images: ["IMG_4734.webp"],
+    },
+    {
+      id: "photo-3",
+      operator: "NMBS/SNCB",
+      date: "8 March 2026",
+      alt: "Liège MR08 504",
+      numbers: "8504, 08504, 12906, 19820",
+      consist: [traction("AM08 504")],
+      images: ["IMG_4742 2.webp"],
+    },
+    {
+      id: "photo-4",
+      operator: "Arriva",
+      date: "8 March 2026",
+      alt: "Liège Stadler FLIRT 3",
+      numbers: "554",
+      consist: [traction("FLIRT 3")],
+      images: ["IMG_4749.webp"],
+    }
+  ],
+});

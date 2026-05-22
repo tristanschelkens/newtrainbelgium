@@ -1,0 +1,47 @@
+station({
+  slug: "london",
+  name: "London",
+  country: "United Kingdom",
+  coords: [51.5308, -0.1238],
+  folder: "../images/United Kingdom/London/",
+  description: "Rail photography in London.",
+
+  photos: [
+    {
+      id: "photo-0",
+      operator: "Eurostar",
+      date: "7 February 2026",
+      alt: "London Class 373 3206",
+      numbers: "373 3206, 3206",
+      consist: [traction("Class 373 3206")],
+      images: ["London_Class3733206.webp"],
+    },
+    {
+      id: "photo-1",
+      operator: "Great Western Railway",
+      date: "7 February 2026",
+      alt: "London Class 802 104",
+      numbers: "802 104, 104",
+      consist: [traction("Class 802 104")],
+      images: ["qscqcc.jpeg"],
+    },
+    {
+      id: "photo-2",
+      operator: "Heatrow Express",
+      date: "7 February 2026",
+      alt: "London Class 387 140",
+      numbers: "387 140, 140",
+      consist: [traction("Class 387 140")],
+      images: ["qscqsc.jpeg"],
+    },
+    {
+      id: "photo-3",
+      operator: "Great Western Railway",
+      date: "7 February 2026",
+      alt: "London Class 387 156",
+      numbers: "387 156, 156",
+      consist: [traction("Class 387 156")],
+      images: ["qscqscc.jpeg"],
+    }
+  ],
+});

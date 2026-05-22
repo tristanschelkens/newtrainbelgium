@@ -1,0 +1,19 @@
+station({
+  slug: "duffel",
+  name: "Duffel",
+  country: "Belgium",
+  coords: [51.0959, 4.5167],
+  folder: "../images/Belgium/Duffel/",
+  description: "Rail photography in Duffel.",
+
+  photos: [
+    {
+      id: "photo-0",
+      operator: "NMBS/SNCB",
+      date: "25 May 2024",
+      alt: "Duffel 7x M4 + HLE27 45",
+      consist: [carriage("7x M4", true), traction("HLE27 45")],
+      images: ["Duffel_M4HLE27.webp"],
+    }
+  ],
+});
