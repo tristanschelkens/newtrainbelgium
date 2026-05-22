@@ -10,6 +10,7 @@ station({
     {
       id: "photo-0",
       operator: "Eurostar",
+      date:"23 May 2025",
       alt: "Luchtbal E320 4029",
       numbers: "4029",
       consist: [traction("E320 4029")],
