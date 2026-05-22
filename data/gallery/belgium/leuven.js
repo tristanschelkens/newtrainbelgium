@@ -10,6 +10,7 @@ station({
     {
       id: "photo-0",
       operator: "NMBS/SNCB",
+      date: "9 April 2025",
       alt: "Leuven HLE 1913 + 6x M7 ",
       numbers: "1913",
       consist: [traction("HLE19 13"), traction("6x M7", false)],
