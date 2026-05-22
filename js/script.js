@@ -461,6 +461,9 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (withoutCount.startsWith("nightjet")) {
       return { key: "nightjet", label: "NightJet" };
     }
+    if (withoutCount.startsWith("coradia max")) {
+      return { key: "coradia-max", label: "Coradia Max" };
+    }
     if (withoutCount.startsWith("flirt 3")) {
       return { key: "flirt-3", label: "FLIRT 3" };
     }
