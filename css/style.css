@@ -739,12 +739,21 @@ img {
   align-items: stretch;
 }
 
+.about-hero-grid {
+  align-items: start;
+}
+
 .about-main-card,
 .about-text-card,
 .about-facts-card,
 .about-note-card,
 .about-photo-card {
   height: 100%;
+}
+
+.about-hero-grid .about-main-card,
+.about-hero-grid .about-photo-card {
+  height: auto;
 }
 
 .eyebrow {
