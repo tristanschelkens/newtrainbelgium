@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - trainbelgium.com</title>
+
+    <link rel="stylesheet" href="../css/style.css?v=20260524-1" />
+    <script
+      src="https://kit.fontawesome.com/9332905c2e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="../images/icon-512.png" />
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+
+    <main>
+      <div class="container page-title">
+        <h1>Login</h1>
+        <p>Sign in with your username and password.</p>
+      </div>
+
+      <section class="container section login-section">
+        <div class="card login-card">
+          <h2>Account login</h2>
+
+          <form class="login-form" method="post" action="#">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              autocomplete="username"
+              required
+              placeholder="Enter your username"
+            />
+
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="Enter your password"
+            />
+
+            <button class="btn btn-primary" type="submit">Login</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/loadComponents.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

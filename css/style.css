@@ -2029,6 +2029,51 @@ body.station-lightbox-open {
   border: none;
 }
 
+.login-section {
+  padding-top: 18px;
+}
+
+.login-card {
+  width: min(560px, 100%);
+  margin: 0 auto;
+}
+
+.login-card h2 {
+  margin-bottom: 14px;
+}
+
+.login-form {
+  display: grid;
+  gap: 12px;
+}
+
+.login-form label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+}
+
+.login-form input:focus {
+  border-color: rgba(0, 92, 185, 0.65);
+  box-shadow: 0 0 0 4px var(--focus);
+}
+
+.login-form .btn {
+  border: none;
+  width: 100%;
+  margin-top: 6px;
+}
+
 .submit-row {
   display: flex;
   align-items: center;
