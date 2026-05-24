@@ -80,6 +80,22 @@
 
           <div class="photos-toolbar-actions">
             <button
+              class="photos-reset-btn photos-sort-btn active"
+              id="photoSortPlace"
+              type="button"
+              aria-label="Sort by location"
+            >
+              Sort by place
+            </button>
+            <button
+              class="photos-reset-btn photos-sort-btn"
+              id="photoSortCompany"
+              type="button"
+              aria-label="Sort by company"
+            >
+              Sort by company
+            </button>
+            <button
               class="photos-reset-btn"
               id="photoResetFilters"
               type="button"
@@ -165,7 +181,20 @@
       </div>
 
       <section class="container section" style="padding-top: 18px">
-        <h2>Gallery</h2>
+        <div class="photos-gallery-head">
+          <h2>Gallery</h2>
+          <div class="photos-breadcrumb-bar" id="photoBreadcrumbBar" hidden>
+            <button
+              class="photos-breadcrumb-back"
+              id="photoBreadcrumbBack"
+              type="button"
+              aria-label="Go back one level"
+            >
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <nav class="photos-breadcrumb" id="photoBreadcrumb" aria-label="Gallery navigation"></nav>
+          </div>
+        </div>
 
         <div class="photo-grid" id="photoGrid">
           <!-- Station cards are generated from data/gallery. -->

@@ -214,6 +214,24 @@ function renderPhotoGalleryCardsFromData(grid, stationData) {
     return photos.find((photo) => photo?.src) || null;
   }
 
+  function getPrimaryOperatorLabel(operatorValue) {
+    return String(operatorValue || "")
+      .split(",")
+      .map((part) => part.trim())
+      .filter(Boolean)[0] || "";
+  }
+
+  function getStationFallbackSources(station, preferredSrc) {
+    const photos = Array.isArray(station?.photos) ? station.photos : [];
+    const list = photos
+      .map((photo) => String(photo?.src || "").trim())
+      .filter(Boolean);
+    const unique = Array.from(new Set(list));
+    const preferred = String(preferredSrc || "").trim();
+    if (!preferred) return unique;
+    return [preferred, ...unique.filter((item) => item !== preferred)];
+  }
+
   const cardsHtml = Object.entries(stationData)
     .filter(([, station]) => Array.isArray(station?.photos) && station.photos.length > 0)
     .sort(([, a], [, b]) =>
@@ -225,17 +243,22 @@ function renderPhotoGalleryCardsFromData(grid, stationData) {
 
       const name = station?.name || coverPhoto.label || slug;
       const country = String(station?.country || "").toLowerCase();
+      const primaryOperator = getPrimaryOperatorLabel(coverPhoto.operator || "");
+      const fallbackSources = getStationFallbackSources(station, coverPhoto.src);
 
       return `
         <a
           class="photo-card"
           data-country="${esc(country)}"
+          data-sort-place="${esc(name)}"
+          data-sort-company="${esc(primaryOperator)}"
           href="Station.html?slug=${encodeURIComponent(slug)}"
         >
           <img
             loading="lazy"
             src="${esc(coverPhoto.src)}"
             alt="${esc(name)}"
+            data-fallback-sources="${esc(fallbackSources.join("|||"))}"
           />
           <div class="overlay"><h3>${esc(name)}</h3></div>
         </a>
@@ -245,7 +268,69 @@ function renderPhotoGalleryCardsFromData(grid, stationData) {
 
   if (cardsHtml.trim()) {
     grid.innerHTML = cardsHtml;
+    prepareImageFallbacks(grid);
   }
+}
+
+function getImageFallbackQueue(src) {
+  const raw = String(src || "").trim();
+  if (!raw) return [];
+
+  const [base, query = ""] = raw.split("?");
+  const match = base.match(/^(.*)\.([a-z0-9]+)$/i);
+  if (!match) return [];
+
+  const stem = match[1];
+  const ext = match[2].toLowerCase();
+  const candidates = ["webp", "jpg", "jpeg", "png"];
+  const ordered = [ext, ...candidates.filter((item) => item !== ext)];
+
+  return ordered.map((item) => `${stem}.${item}${query ? `?${query}` : ""}`);
+}
+
+function prepareImageFallbacks(root) {
+  const scope = root && root.querySelectorAll ? root : document;
+  const images = scope.querySelectorAll("img");
+
+  images.forEach((img) => {
+    if (img.dataset.fallbackReady === "true") return;
+
+    const baseQueue = getImageFallbackQueue(img.getAttribute("src"));
+    const extraSources = String(img.dataset.fallbackSources || "")
+      .split("|||")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    const extraQueue = extraSources.flatMap((source) => getImageFallbackQueue(source));
+    const queue = Array.from(new Set([...baseQueue, ...extraQueue]));
+    if (queue.length <= 1) return;
+
+    img.dataset.fallbackReady = "true";
+    img.dataset.fallbackQueue = JSON.stringify(queue);
+    img.dataset.fallbackIndex = "0";
+
+    function tryNextFallback() {
+      let list = [];
+      try {
+        list = JSON.parse(img.dataset.fallbackQueue || "[]");
+      } catch {
+        list = [];
+      }
+      if (!Array.isArray(list) || list.length === 0) return;
+
+      const current = Number.parseInt(img.dataset.fallbackIndex || "0", 10);
+      const next = Number.isNaN(current) ? 1 : current + 1;
+      if (next >= list.length) return;
+
+      img.dataset.fallbackIndex = String(next);
+      img.src = list[next];
+    }
+
+    img.addEventListener("error", tryNextFallback);
+
+    if (img.complete && img.naturalWidth === 0) {
+      tryNextFallback();
+    }
+  });
 }
 
 function renderCountryFiltersFromData(filters, stationData) {
@@ -291,6 +376,11 @@ function renderCountryFiltersFromData(filters, stationData) {
   const filterSummary = document.getElementById("photoFilterSummary");
   const operatorFilters = document.getElementById("photoOperatorFilters");
   const materialFilters = document.getElementById("photoMaterialFilters");
+  const sortByPlaceBtn = document.getElementById("photoSortPlace");
+  const sortByCompanyBtn = document.getElementById("photoSortCompany");
+  const breadcrumbBar = document.getElementById("photoBreadcrumbBar");
+  const breadcrumb = document.getElementById("photoBreadcrumb");
+  const breadcrumbBackBtn = document.getElementById("photoBreadcrumbBack");
   const stationData = window.STATIONS_DATA || {};
 
   if (!filters || !grid) return;
@@ -312,6 +402,12 @@ function renderCountryFiltersFromData(filters, stationData) {
   let activeOperatorFilter = "all";
   let activeMaterialFilter = "all";
   let activeQuery = "";
+  let activeSortMode = "place";
+  let companyDrillOperator = "";
+  let companyDrillMaterial = "";
+  let placeDrillStation = "";
+  let placeDrillMaterial = "";
+  const scrollStateKey = "photos-scroll-y";
 
   function normalizeSearchValue(value) {
     return String(value || "")
@@ -473,6 +569,16 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (withoutCount.startsWith("mw41")) {
       return { key: "mw41", label: "MW41" };
     }
+    {
+      const emuMatch = withoutCount.match(/^(am|ar)\s*(\d{2,3})\b/i);
+      if (emuMatch) {
+        const family = `${emuMatch[1].toUpperCase()}${emuMatch[2]}`;
+        return {
+          key: normalizeFacetKey(family),
+          label: family,
+        };
+      }
+    }
     if (withoutCount.startsWith("am08")) {
       return { key: "am08", label: "AM08" };
     }
@@ -553,6 +659,31 @@ function renderCountryFiltersFromData(filters, stationData) {
     };
   }
 
+  function deriveLeadMaterialFacets(consist) {
+    const items = Array.isArray(consist) ? consist : [];
+    const first = items[0];
+    const facet = deriveMaterialFacet(first);
+    return facet ? [facet] : [];
+  }
+
+  function getLeadPowerLabel(consist) {
+    const items = Array.isArray(consist) ? consist : [];
+    const firstTraction = items.find(
+      (item) => String(item?.kind || "").toLowerCase() === "traction" && String(item?.label || "").trim(),
+    );
+    return firstTraction ? String(firstTraction.label || "").trim() : "";
+  }
+
+  function trainOrderValue(value) {
+    const normalized = normalizeSearchValue(value).replace(/\s+/g, "");
+    if (!normalized) return Number.POSITIVE_INFINITY;
+    const groups = normalized.match(/\d+/g);
+    if (!groups || groups.length === 0) return Number.POSITIVE_INFINITY;
+    const joined = groups.join("");
+    const parsed = Number.parseInt(joined, 10);
+    return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY;
+  }
+
   function hydratePhotoCard(card) {
     const href = card.getAttribute("href") || "";
     const slug = (new URLSearchParams(href.split("?")[1] || "").get("slug") || "")
@@ -629,6 +760,8 @@ function renderCountryFiltersFromData(filters, stationData) {
               ).values(),
             )
           : [],
+        leadMaterialFacets: deriveLeadMaterialFacets(photo?.consist),
+        leadPowerLabel: getLeadPowerLabel(photo?.consist),
         metaHtml: buildSearchMetaHtml(photo?.consist, { maxVisible: 3 }),
         fullMetaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
@@ -841,7 +974,412 @@ function renderCountryFiltersFromData(filters, stationData) {
     filterPanel.hidden = !isOpen;
   }
 
+  function sortVisibleCards() {
+    const cardsToSort = Array.from(grid.querySelectorAll(".photo-card"));
+    if (cardsToSort.length <= 1) return;
+    const key = activeSortMode === "company" ? "sortCompany" : "sortPlace";
+    cardsToSort.sort((a, b) =>
+      String(a.dataset[key] || "").localeCompare(String(b.dataset[key] || ""), undefined, {
+        sensitivity: "base",
+      }),
+    );
+    cardsToSort.forEach((card) => grid.appendChild(card));
+  }
+
+  function updateSortButtons() {
+    sortByPlaceBtn?.classList.toggle("active", activeSortMode === "place");
+    sortByCompanyBtn?.classList.toggle("active", activeSortMode === "company");
+  }
+
+  function formatCompanyLabel(label) {
+    return String(label || "").replace(/\//g, " / ");
+  }
+
+  function operatorLabelByKey(key) {
+    for (const entry of allPhotoEntries) {
+      if (normalizeFacetKey(firstOperatorLabel(entry)) === key) {
+        return firstOperatorLabel(entry);
+      }
+    }
+    return String(key || "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (m) => m.toUpperCase());
+  }
+
+  function materialLabelByKey(key) {
+    for (const entry of allPhotoEntries) {
+      const match = (entry.materialFacets || []).find((facet) => facet.key === key);
+      if (match?.label) return match.label;
+    }
+    return String(key || "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (m) => m.toUpperCase());
+  }
+
+  function stationLabelBySlug(slug) {
+    const station = stationData[String(slug || "").toLowerCase()];
+    if (station?.name) return station.name;
+    return String(slug || "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (m) => m.toUpperCase());
+  }
+
+  function updateBreadcrumbs() {
+    if (!breadcrumbBar || !breadcrumb) return;
+
+    if (activeSortMode !== "company" && activeSortMode !== "place") {
+      breadcrumbBar.hidden = true;
+      breadcrumb.innerHTML = "";
+      return;
+    }
+
+    const parts = [];
+
+    if (activeSortMode === "company") {
+      parts.push('<button class="photos-crumb-btn" type="button" data-crumb-level="company-root">Company</button>');
+
+      if (companyDrillOperator) {
+        parts.push(
+          '<span class="photos-crumb-sep">/</span>',
+        );
+        if (companyDrillMaterial) {
+          parts.push(
+            `<button class="photos-crumb-btn" type="button" data-crumb-level="company-operator">${esc(formatCompanyLabel(operatorLabelByKey(companyDrillOperator)))}</button>`,
+          );
+        } else {
+          parts.push(`<span class="photos-crumb-current">${esc(formatCompanyLabel(operatorLabelByKey(companyDrillOperator)))}</span>`);
+        }
+      }
+
+      if (companyDrillMaterial) {
+        parts.push('<span class="photos-crumb-sep">/</span>');
+        parts.push(`<span class="photos-crumb-current">${esc(materialLabelByKey(companyDrillMaterial))}</span>`);
+      }
+    } else if (activeSortMode === "place") {
+      parts.push('<button class="photos-crumb-btn" type="button" data-crumb-level="place-root">Place</button>');
+
+      if (placeDrillStation) {
+        parts.push('<span class="photos-crumb-sep">/</span>');
+        if (placeDrillMaterial) {
+          parts.push(
+            `<button class="photos-crumb-btn" type="button" data-crumb-level="place-station">${esc(stationLabelBySlug(placeDrillStation))}</button>`,
+          );
+        } else {
+          parts.push(`<span class="photos-crumb-current">${esc(stationLabelBySlug(placeDrillStation))}</span>`);
+        }
+      }
+
+      if (placeDrillMaterial) {
+        parts.push('<span class="photos-crumb-sep">/</span>');
+        parts.push(`<span class="photos-crumb-current">${esc(materialLabelByKey(placeDrillMaterial))}</span>`);
+      }
+    }
+
+    breadcrumb.innerHTML = parts.join("");
+    breadcrumbBar.hidden = false;
+    if (breadcrumbBackBtn) {
+      if (activeSortMode === "company") {
+        breadcrumbBackBtn.hidden = !(companyDrillOperator || companyDrillMaterial);
+      } else if (activeSortMode === "place") {
+        breadcrumbBackBtn.hidden = !(placeDrillStation || placeDrillMaterial);
+      }
+    }
+  }
+
+  function firstOperatorLabel(entry) {
+    return String(entry?.operator || "")
+      .split(",")
+      .map((part) => part.trim())
+      .filter(Boolean)[0] || "Unknown";
+  }
+
+  function renderOperatorDrillCards() {
+    const operatorMap = new Map();
+    allPhotoEntries.forEach((entry) => {
+      const label = firstOperatorLabel(entry);
+      const key = normalizeFacetKey(label) || "unknown";
+      if (!operatorMap.has(key)) {
+        operatorMap.set(key, {
+          key,
+          label,
+          count: 0,
+          previewSrc: entry.src || "",
+        });
+      }
+      operatorMap.get(key).count += 1;
+    });
+    const cards = Array.from(operatorMap.values())
+      .sort((a, b) => a.label.localeCompare(b.label))
+      .map(
+        (item) => `
+          <button class="photo-card photo-search-result" type="button" data-company-card="${esc(item.key)}">
+            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(item.label)}</h3>
+            </div>
+          </button>
+        `,
+      )
+      .join("");
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = operatorMap.size === 0 ? "block" : "none";
+  }
+
+  function renderMaterialDrillCards() {
+    const materialMap = new Map();
+    allPhotoEntries
+      .filter((entry) => normalizeFacetKey(firstOperatorLabel(entry)) === companyDrillOperator)
+      .forEach((entry) => {
+        entry.leadMaterialFacets.forEach((facet) => {
+          const key = facet.key || "unknown";
+          if (!materialMap.has(key)) {
+            materialMap.set(key, {
+              key,
+              label: facet.label || key,
+              count: 0,
+              previewSrc: entry.src || "",
+            });
+          }
+          materialMap.get(key).count += 1;
+        });
+      });
+    const cards = Array.from(materialMap.values())
+      .sort((a, b) => a.label.localeCompare(b.label))
+      .map(
+        (item) => `
+          <button class="photo-card photo-search-result" type="button" data-material-card="${esc(item.key)}">
+            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(item.label)}</h3>
+            </div>
+          </button>
+        `,
+      )
+      .join("");
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = materialMap.size === 0 ? "block" : "none";
+  }
+
+  function renderPlaceDrillCards() {
+    const stationMap = new Map();
+    allPhotoEntries.forEach((entry) => {
+      if (!entry.slug) return;
+      if (!stationMap.has(entry.slug)) {
+        stationMap.set(entry.slug, {
+          slug: entry.slug,
+          label: stationLabelBySlug(entry.slug),
+          previewSrc: entry.src || "",
+        });
+      }
+    });
+
+    const cards = Array.from(stationMap.values())
+      .sort((a, b) => a.label.localeCompare(b.label))
+      .map(
+        (item) => `
+          <button class="photo-card photo-search-result" type="button" data-place-card="${esc(item.slug)}">
+            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(item.label)}</h3>
+            </div>
+          </button>
+        `,
+      )
+      .join("");
+
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = stationMap.size === 0 ? "block" : "none";
+  }
+
+  function renderPlaceMaterialDrillCards() {
+    const materialMap = new Map();
+    allPhotoEntries
+      .filter((entry) => entry.slug === placeDrillStation)
+      .forEach((entry) => {
+        entry.leadMaterialFacets.forEach((facet) => {
+          const key = facet.key || "unknown";
+          if (!materialMap.has(key)) {
+            materialMap.set(key, {
+              key,
+              label: facet.label || key,
+              previewSrc: entry.src || "",
+            });
+          }
+        });
+      });
+
+    const cards = Array.from(materialMap.values())
+      .sort((a, b) => a.label.localeCompare(b.label))
+      .map(
+        (item) => `
+          <button class="photo-card photo-search-result" type="button" data-place-material-card="${esc(item.key)}">
+            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(item.label)}</h3>
+            </div>
+          </button>
+        `,
+      )
+      .join("");
+
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = materialMap.size === 0 ? "block" : "none";
+  }
+
+  function renderPlacePhotoCards() {
+    const entries = allPhotoEntries.filter((entry) => {
+      const stationOk = entry.slug === placeDrillStation;
+      const materialOk = entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial);
+      return stationOk && materialOk;
+    });
+
+    const grouped = Array.from(
+      new Map(entries.map((entry) => [entry.seriesKey, entry])).values(),
+    )
+      .map((entry) => {
+        const seriesPool = (photoSeriesGroups.get(entry.seriesKey) || []).slice();
+        if (seriesPool.length === 0) return entry;
+        const mainPhoto =
+          seriesPool.find((photo) => photo.explicitIsMain === true) ||
+          seriesPool.find((photo) => photo.explicitIsMain !== false) ||
+          seriesPool[0];
+        return mainPhoto || entry;
+      })
+      .sort((a, b) => {
+        const aLead = trainOrderValue(a.leadPowerLabel || a.numbers || "");
+        const bLead = trainOrderValue(b.leadPowerLabel || b.numbers || "");
+        if (aLead !== bLead) return aLead - bLead;
+        return String(a.leadPowerLabel || a.alt || "").localeCompare(String(b.leadPowerLabel || b.alt || ""));
+      });
+
+    grid.innerHTML = grouped
+      .map((photo) => {
+        const operatorBadges = String(photo.operator || "")
+          .split(",")
+          .map((label) => label.trim())
+          .filter(Boolean)
+          .map((label) => `<span class="station-operator-badge">${esc(label)}</span>`)
+          .join("");
+        const operatorBadge = operatorBadges
+          ? `<div class="station-operator-stack">${operatorBadges}</div>`
+          : "";
+        const leadMeta = photo.leadPowerLabel
+          ? `<div class="station-meta"><span class="station-meta-chip">${esc(photo.leadPowerLabel)}</span></div>`
+          : "";
+
+        return `
+          <button
+            class="photo-card station-photo-card photo-search-result"
+            type="button"
+            data-series-key="${esc(photo.seriesKey)}"
+            data-photo-index="${photo.index}"
+            data-photo-slug="${esc(photo.slug)}"
+          >
+            ${operatorBadge}
+            <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
+            ${leadMeta}
+          </button>
+        `;
+      })
+      .join("");
+
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = grouped.length === 0 ? "block" : "none";
+  }
+
+  function renderCompanyPhotoCards() {
+    const entries = allPhotoEntries.filter((entry) => {
+      const opOk = normalizeFacetKey(firstOperatorLabel(entry)) === companyDrillOperator;
+      const matOk = entry.leadMaterialFacets.some((f) => f.key === companyDrillMaterial);
+      return opOk && matOk;
+    });
+    const grouped = Array.from(
+      new Map(entries.map((entry) => [entry.seriesKey, entry])).values(),
+    )
+      .map((entry) => {
+        const seriesPool = (photoSeriesGroups.get(entry.seriesKey) || []).slice();
+        if (seriesPool.length === 0) return entry;
+        const mainPhoto =
+          seriesPool.find((photo) => photo.explicitIsMain === true) ||
+          seriesPool.find((photo) => photo.explicitIsMain !== false) ||
+          seriesPool[0];
+        return mainPhoto || entry;
+      })
+      .sort((a, b) => {
+        const aLead = trainOrderValue(a.leadPowerLabel || a.numbers || "");
+        const bLead = trainOrderValue(b.leadPowerLabel || b.numbers || "");
+        if (aLead !== bLead) return aLead - bLead;
+        return String(a.leadPowerLabel || a.alt || "").localeCompare(String(b.leadPowerLabel || b.alt || ""));
+      });
+    grid.innerHTML = grouped
+      .map((photo) => {
+        const operatorBadges = String(photo.operator || "")
+          .split(",")
+          .map((label) => label.trim())
+          .filter(Boolean)
+          .map((label) => `<span class="station-operator-badge">${esc(label)}</span>`)
+          .join("");
+        const operatorBadge = operatorBadges
+          ? `<div class="station-operator-stack">${operatorBadges}</div>`
+          : "";
+        const leadMeta = photo.leadPowerLabel
+          ? `<div class="station-meta"><span class="station-meta-chip">${esc(photo.leadPowerLabel)}</span></div>`
+          : "";
+
+        return `
+          <button
+            class="photo-card station-photo-card photo-search-result"
+            type="button"
+            data-series-key="${esc(photo.seriesKey)}"
+            data-photo-index="${photo.index}"
+            data-photo-slug="${esc(photo.slug)}"
+          >
+            ${operatorBadge}
+            <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
+            ${leadMeta}
+          </button>
+        `;
+      })
+      .join("");
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = grouped.length === 0 ? "block" : "none";
+  }
+
   function applyFilters() {
+    if (activeSortMode === "place") {
+      if (!placeDrillStation) {
+        renderPlaceDrillCards();
+      } else if (!placeDrillMaterial) {
+        renderPlaceMaterialDrillCards();
+      } else {
+        renderPlacePhotoCards();
+      }
+      grid.classList.toggle("has-few", false);
+      if (mapSection) mapSection.style.display = "none";
+      updateBreadcrumbs();
+      persistSortState();
+      return;
+    }
+
+    if (activeSortMode === "company") {
+      if (!companyDrillOperator) {
+        renderOperatorDrillCards();
+      } else if (!companyDrillMaterial) {
+        renderMaterialDrillCards();
+      } else {
+        renderCompanyPhotoCards();
+      }
+      grid.classList.toggle("has-few", false);
+      if (mapSection) mapSection.style.display = "none";
+      updateBreadcrumbs();
+      persistSortState();
+      return;
+    }
+
     let visibleCount = 0;
     const queryTerms = normalizeSearchValue(activeQuery)
       .split(/\s+/)
@@ -891,6 +1429,13 @@ function renderCountryFiltersFromData(filters, stationData) {
               data-series-key="${esc(photo.seriesKey)}"
               data-photo-index="${photo.index}"
               data-photo-slug="${esc(photo.slug)}"
+              data-sort-place="${esc(photo.stationName || "")}"
+              data-sort-company="${esc(
+                String(photo.operator || "")
+                  .split(",")
+                  .map((part) => part.trim())
+                  .filter(Boolean)[0] || "",
+              )}"
             >
               <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
               <div class="overlay"><h3>${esc(photo.stationName)}</h3></div>
@@ -898,6 +1443,7 @@ function renderCountryFiltersFromData(filters, stationData) {
           `,
         )
         .join("");
+      sortVisibleCards();
 
       visibleCount = groupedResults.length;
 
@@ -969,12 +1515,15 @@ function renderCountryFiltersFromData(filters, stationData) {
       const showMap = activeFilter === "all" && queryTerms.length === 0;
       mapSection.style.display = showMap ? "" : "none";
 
-      if (showMap && window.photoStationsMap) {
+    if (showMap && window.photoStationsMap) {
         window.setTimeout(() => {
           window.photoStationsMap.invalidateSize();
         }, 0);
       }
     }
+    sortVisibleCards();
+    updateBreadcrumbs();
+    persistSortState();
   }
 
   function persistPhotoFilter(value) {
@@ -1009,6 +1558,30 @@ function renderCountryFiltersFromData(filters, stationData) {
     } else {
       url.searchParams.set(name, value);
     }
+
+    window.history.replaceState({}, "", url);
+  }
+
+  function persistSortState() {
+    const url = new URL(window.location.href);
+
+    if (activeSortMode === "company") {
+      url.searchParams.set("sort", "company");
+    } else {
+      url.searchParams.set("sort", "place");
+    }
+
+    if (companyDrillOperator) url.searchParams.set("company", companyDrillOperator);
+    else url.searchParams.delete("company");
+
+    if (companyDrillMaterial) url.searchParams.set("company_material", companyDrillMaterial);
+    else url.searchParams.delete("company_material");
+
+    if (placeDrillStation) url.searchParams.set("place", placeDrillStation);
+    else url.searchParams.delete("place");
+
+    if (placeDrillMaterial) url.searchParams.set("place_material", placeDrillMaterial);
+    else url.searchParams.delete("place_material");
 
     window.history.replaceState({}, "", url);
   }
@@ -1147,11 +1720,85 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   resetFiltersButton?.addEventListener("click", resetPhotoFilters);
 
+  sortByPlaceBtn?.addEventListener("click", () => {
+    activeSortMode = "place";
+    companyDrillOperator = "";
+    companyDrillMaterial = "";
+    placeDrillStation = "";
+    placeDrillMaterial = "";
+    updateSortButtons();
+    renderPlaceDrillCards();
+    applyFilters();
+  });
+
+  sortByCompanyBtn?.addEventListener("click", () => {
+    activeSortMode = "company";
+    companyDrillOperator = "";
+    companyDrillMaterial = "";
+    placeDrillStation = "";
+    placeDrillMaterial = "";
+    updateSortButtons();
+    applyFilters();
+  });
+
+  breadcrumbBackBtn?.addEventListener("click", () => {
+    if (activeSortMode === "company") {
+      if (companyDrillMaterial) {
+        companyDrillMaterial = "";
+      } else if (companyDrillOperator) {
+        companyDrillOperator = "";
+      }
+    } else if (activeSortMode === "place") {
+      if (placeDrillMaterial) {
+        placeDrillMaterial = "";
+      } else if (placeDrillStation) {
+        placeDrillStation = "";
+      }
+    }
+    applyFilters();
+  });
+
+  breadcrumb?.addEventListener("click", (event) => {
+    const crumb = event.target.closest("[data-crumb-level]");
+    if (!crumb) return;
+    const level = String(crumb.dataset.crumbLevel || "");
+
+    if (level === "company-root") {
+      companyDrillOperator = "";
+      companyDrillMaterial = "";
+      applyFilters();
+      return;
+    }
+
+    if (level === "company-operator") {
+      companyDrillMaterial = "";
+      applyFilters();
+      return;
+    }
+
+    if (level === "place-root") {
+      placeDrillStation = "";
+      placeDrillMaterial = "";
+      applyFilters();
+      return;
+    }
+
+    if (level === "place-station") {
+      placeDrillMaterial = "";
+      applyFilters();
+    }
+  });
+
   const urlParams = new URLSearchParams(window.location.search);
   const queryFilter = (urlParams.get("filter") || "all").toLowerCase();
   const querySearch = (urlParams.get("q") || "").trim();
   const queryOperator = (urlParams.get("operator") || "all").toLowerCase();
   const queryMaterial = (urlParams.get("material") || "all").toLowerCase();
+  const querySort = (urlParams.get("sort") || "place").toLowerCase();
+  const queryCompany = (urlParams.get("company") || "").trim().toLowerCase();
+  const queryCompanyMaterial = (urlParams.get("company_material") || "").trim().toLowerCase();
+  const queryPlace = (urlParams.get("place") || "").trim().toLowerCase();
+  const queryPlaceMaterial = (urlParams.get("place_material") || "").trim().toLowerCase();
   const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
   activeFilter = initialFilter;
   activeOperatorFilter =
@@ -1170,11 +1817,66 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
   renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
+  activeSortMode = querySort === "company" ? "company" : "place";
+  companyDrillOperator = activeSortMode === "company" ? queryCompany : "";
+  companyDrillMaterial = activeSortMode === "company" ? queryCompanyMaterial : "";
+  placeDrillStation = activeSortMode === "place" ? queryPlace : "";
+  placeDrillMaterial = activeSortMode === "place" ? queryPlaceMaterial : "";
+  updateSortButtons();
   setActiveButton(initialFilter);
   applyFilters();
   setFilterMenuOpen(false);
 
+  const savedScroll = Number(sessionStorage.getItem(scrollStateKey) || "0");
+  if (Number.isFinite(savedScroll) && savedScroll > 0) {
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: savedScroll, behavior: "auto" });
+    });
+  }
+
+  let scrollWriteTimer = null;
+  function persistScrollPosition() {
+    sessionStorage.setItem(scrollStateKey, String(Math.max(0, Math.round(window.scrollY || 0))));
+  }
+
+  window.addEventListener("scroll", () => {
+    if (scrollWriteTimer) window.clearTimeout(scrollWriteTimer);
+    scrollWriteTimer = window.setTimeout(persistScrollPosition, 80);
+  }, { passive: true });
+
+  window.addEventListener("beforeunload", persistScrollPosition);
+
   grid.addEventListener("click", (e) => {
+    const placeCard = e.target.closest("[data-place-card]");
+    if (placeCard) {
+      placeDrillStation = String(placeCard.dataset.placeCard || "");
+      placeDrillMaterial = "";
+      applyFilters();
+      return;
+    }
+
+    const placeMaterialCard = e.target.closest("[data-place-material-card]");
+    if (placeMaterialCard) {
+      placeDrillMaterial = String(placeMaterialCard.dataset.placeMaterialCard || "");
+      applyFilters();
+      return;
+    }
+
+    const companyCard = e.target.closest("[data-company-card]");
+    if (companyCard) {
+      companyDrillOperator = String(companyCard.dataset.companyCard || "");
+      companyDrillMaterial = "";
+      applyFilters();
+      return;
+    }
+
+    const materialCard = e.target.closest("[data-material-card]");
+    if (materialCard) {
+      companyDrillMaterial = String(materialCard.dataset.materialCard || "");
+      applyFilters();
+      return;
+    }
+
     const searchCard = e.target.closest(".photo-search-result");
     if (!searchCard) return;
 
@@ -1885,10 +2587,48 @@ function renderCountryFiltersFromData(filters, stationData) {
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
+    <div class="station-lightbox-panel">
+      <div class="station-lightbox-panel-top">
+        <h3>Comments</h3>
+        <p class="muted" id="stationLightboxCommentsMeta">Join the discussion for this photo.</p>
+      </div>
+      <a class="btn btn-secondary station-lightbox-submit-link" id="stationLightboxSubmitSimilar" href="../pages/Submit.html">Submit photo of this train</a>
+      <div class="station-lightbox-comments" id="stationLightboxCommentsList"></div>
+      <form class="login-form" id="stationLightboxCommentForm" novalidate>
+        <input
+          id="stationLightboxCommentInput"
+          name="comment"
+          type="text"
+          maxlength="240"
+          placeholder="Write your comment..."
+          required
+        />
+        <button class="btn btn-primary" type="submit">Post comment</button>
+      </form>
+      <p class="login-status" id="stationLightboxCommentStatus" role="status" aria-live="polite"></p>
+    </div>
   `;
   document.body.appendChild(lightbox);
+  const commenterProfileModal = document.createElement("div");
+  commenterProfileModal.className = "station-profile-modal";
+  commenterProfileModal.setAttribute("aria-hidden", "true");
+  commenterProfileModal.innerHTML = `
+    <div class="station-profile-card">
+      <button class="station-profile-close" type="button" aria-label="Close profile">&times;</button>
+      <div class="station-profile-head">
+        <img id="stationProfileAvatar" src="../images/default-avatar.svg" alt="Profile avatar" />
+        <div>
+          <h3 id="stationProfileName">Member</h3>
+          <p id="stationProfileUser" class="muted"></p>
+        </div>
+      </div>
+      <div id="stationProfileDetails" class="station-profile-details"></div>
+    </div>
+  `;
+  document.body.appendChild(commenterProfileModal);
 
   const lightboxImg = lightbox.querySelector(".station-lightbox-media img");
+  const lightboxMedia = lightbox.querySelector(".station-lightbox-media");
   const lightboxOperator = lightbox.querySelector(".station-lightbox-operator");
   const lightboxDate = lightbox.querySelector(".station-lightbox-date");
   const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
@@ -1896,6 +2636,18 @@ function renderCountryFiltersFromData(filters, stationData) {
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
   const prevBtn = lightbox.querySelector(".station-lightbox-nav.prev");
   const nextBtn = lightbox.querySelector(".station-lightbox-nav.next");
+  const lightboxCommentsMeta = lightbox.querySelector("#stationLightboxCommentsMeta");
+  const lightboxCommentsList = lightbox.querySelector("#stationLightboxCommentsList");
+  const lightboxPanel = lightbox.querySelector(".station-lightbox-panel");
+  const lightboxCommentForm = lightbox.querySelector("#stationLightboxCommentForm");
+  const lightboxCommentInput = lightbox.querySelector("#stationLightboxCommentInput");
+  const lightboxCommentStatus = lightbox.querySelector("#stationLightboxCommentStatus");
+  const lightboxSubmitSimilar = lightbox.querySelector("#stationLightboxSubmitSimilar");
+  const stationProfileAvatar = commenterProfileModal.querySelector("#stationProfileAvatar");
+  const stationProfileName = commenterProfileModal.querySelector("#stationProfileName");
+  const stationProfileUser = commenterProfileModal.querySelector("#stationProfileUser");
+  const stationProfileDetails = commenterProfileModal.querySelector("#stationProfileDetails");
+  const stationProfileClose = commenterProfileModal.querySelector(".station-profile-close");
   let currentPhotoIndex = 0;
   let currentSeriesPool = [];
   let currentSeriesPosition = 0;
@@ -1904,6 +2656,77 @@ function renderCountryFiltersFromData(filters, stationData) {
     lightbox.classList.remove("is-open");
     lightbox.setAttribute("aria-hidden", "true");
     document.body.classList.remove("station-lightbox-open");
+  }
+
+  function syncLightboxPanelWidth() {
+    if (!lightboxPanel || !lightboxImg || !lightboxMedia) return;
+    const width = Math.round(lightboxMedia.getBoundingClientRect().width || 0);
+    if (width > 0) {
+      lightboxPanel.style.width = `${width}px`;
+      lightboxPanel.style.maxWidth = "92vw";
+    }
+  }
+
+  function getExpectedLightboxWidth(referenceImg) {
+    const ratio =
+      (referenceImg?.naturalWidth || 0) > 0 && (referenceImg?.naturalHeight || 0) > 0
+        ? referenceImg.naturalWidth / referenceImg.naturalHeight
+        : 16 / 10;
+    const viewportW = window.innerWidth || 1280;
+    const viewportH = window.innerHeight || 800;
+    const maxW = Math.min(1200, viewportW * 0.92);
+    const maxH = Math.max(320, viewportH - 230);
+    return Math.round(Math.min(maxW, maxH * ratio));
+  }
+
+  function applyPredictedPanelWidth(referenceImg) {
+    if (!lightboxPanel) return;
+    const predicted = getExpectedLightboxWidth(referenceImg);
+    if (predicted > 0) {
+      lightboxPanel.style.width = `${predicted}px`;
+      lightboxPanel.style.maxWidth = "92vw";
+    }
+  }
+
+  function openCommenterProfile(username) {
+    const user = String(username || "").trim().toLowerCase();
+    if (!user || !stationProfileDetails || !stationProfileName || !stationProfileUser || !stationProfileAvatar) return;
+    let profiles = {};
+    let accounts = {};
+    let roles = { moderators: [] };
+    try {
+      profiles = JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
+    } catch {}
+    try {
+      accounts = JSON.parse(localStorage.getItem("tb_accounts_v1") || "{}");
+    } catch {}
+    try {
+      roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
+    } catch {}
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    const profile = profiles[user] || {};
+    const account = accounts[user] || {};
+    const role = user === owner ? "Owner" : Array.isArray(roles?.moderators) && roles.moderators.includes(user) ? "Moderator" : "Member";
+    const avatar = String(profile.avatar || "../images/default-avatar.svg");
+    const displayName = String(user);
+    stationProfileAvatar.src = avatar;
+    stationProfileName.textContent = displayName;
+    stationProfileUser.textContent = "";
+    stationProfileUser.style.display = "none";
+    stationProfileDetails.innerHTML = `
+      <p><strong>Role:</strong> ${esc(role)}</p>
+      <p><strong>Email:</strong> ${esc(String(profile.email || account.email || "Not set"))}</p>
+      <p><strong>Notifications:</strong> ${profile.notifications ? "Enabled" : "Disabled"}</p>
+      <p><strong>Created:</strong> ${account.createdAt ? new Date(account.createdAt).toLocaleString("en-GB") : "Unknown"}</p>
+      <p><strong>Avatar path:</strong> ${esc(avatar)}</p>
+    `;
+    commenterProfileModal.classList.add("is-open");
+    commenterProfileModal.setAttribute("aria-hidden", "false");
+  }
+
+  function closeCommenterProfile() {
+    commenterProfileModal.classList.remove("is-open");
+    commenterProfileModal.setAttribute("aria-hidden", "true");
   }
 
   function openLightbox(
@@ -1958,6 +2781,8 @@ function renderCountryFiltersFromData(filters, stationData) {
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("station-lightbox-open");
+    requestAnimationFrame(syncLightboxPanelWidth);
+    setTimeout(syncLightboxPanelWidth, 240);
   }
 
   function updateLightboxNav() {
@@ -1966,7 +2791,7 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (nextBtn) nextBtn.style.display = hasMultiple ? "inline-flex" : "none";
   }
 
-  function openLightboxByIndex(sourceIndex) {
+  function openLightboxByIndex(sourceIndex, referenceImg = null) {
     const photo = photoBySourceIndex.get(sourceIndex);
     if (!photo) return;
 
@@ -1976,6 +2801,7 @@ function renderCountryFiltersFromData(filters, stationData) {
     currentSeriesPosition = pos >= 0 ? pos : 0;
 
     const photoDate = (photo.date || "").trim();
+    applyPredictedPanelWidth(referenceImg);
     openLightbox(
       photo.src,
       photo.alt,
@@ -1984,8 +2810,176 @@ function renderCountryFiltersFromData(filters, stationData) {
       photo.operator || "",
       photo.photographer || "",
     );
+    renderLightboxComments();
     updateLightboxNav();
   }
+
+  function getActiveUser() {
+    return String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
+  }
+
+  function getCurrentCommentKey() {
+    return `${slug}::${currentPhotoIndex}`;
+  }
+
+  function canModerateComments() {
+    const user = getActiveUser();
+    if (!user) return false;
+    try {
+      const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+        .trim()
+        .toLowerCase();
+      if (user === owner) return true;
+      const rawRoles = localStorage.getItem("tb_roles_v1");
+      const roles = rawRoles ? JSON.parse(rawRoles) : {};
+      const moderators = Array.isArray(roles?.moderators) ? roles.moderators : [];
+      return moderators.map((name) => String(name || "").trim().toLowerCase()).includes(user);
+    } catch {
+      return false;
+    }
+  }
+
+  function setCommentStatus(message, isError = false) {
+    if (!lightboxCommentStatus) return;
+    lightboxCommentStatus.textContent = message;
+    lightboxCommentStatus.classList.toggle("is-error", isError);
+    lightboxCommentStatus.classList.toggle("is-success", !isError && Boolean(message));
+  }
+
+  function renderLightboxComments() {
+    if (!lightboxCommentsList) return;
+    const profilesMap = (() => {
+      try {
+        const raw = localStorage.getItem("tb_profiles_v1");
+        return raw ? JSON.parse(raw) : {};
+      } catch {
+        return {};
+      }
+    })();
+    const allComments = (() => {
+      try {
+        const raw = localStorage.getItem("tb_photo_comments_v1");
+        return raw ? JSON.parse(raw) : {};
+      } catch {
+        return {};
+      }
+    })();
+    const comments = Array.isArray(allComments[getCurrentCommentKey()])
+      ? allComments[getCurrentCommentKey()]
+      : [];
+
+    if (lightboxCommentsMeta) {
+      lightboxCommentsMeta.textContent = "Join the discussion for this photo.";
+    }
+
+    if (comments.length === 0) {
+      lightboxCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
+    } else {
+      lightboxCommentsList.innerHTML = comments
+        .map((item, commentIndex) => {
+          const commenter = String(item.user || "user").toLowerCase();
+          const avatar = String((profilesMap[commenter] || {}).avatar || "../images/default-avatar.svg");
+          return `
+            <article class="station-lightbox-comment">
+              <div class="station-lightbox-comment-header">
+                <button class="station-comment-author" type="button" data-comment-user="${esc(item.user || "user")}">
+                  <img src="${esc(avatar)}" alt="${esc(item.user || "user")} avatar" />
+                  <strong>${esc(item.user || "user")}</strong>
+                </button>
+                ${
+                  canModerateComments()
+                    ? `<button class="station-lightbox-comment-delete" type="button" data-comment-delete="${commentIndex}">Delete</button>`
+                    : ""
+                }
+              </div>
+              <p>${esc(item.text || "")}</p>
+              <small>${new Date(item.createdAt).toLocaleString("en-GB")}</small>
+            </article>
+          `;
+        })
+        .join("");
+    }
+
+    const activePhoto = photoBySourceIndex.get(currentPhotoIndex);
+    if (lightboxSubmitSimilar && activePhoto) {
+      const params = new URLSearchParams({
+        station: slug,
+        operator: String(activePhoto.operator || ""),
+        date: String(activePhoto.date || ""),
+        title: String(activePhoto.alt || "").slice(0, 120),
+        notes: `Same train as photo #${currentPhotoIndex + 1}${activePhoto.numbers ? ` (${activePhoto.numbers})` : ""}`,
+      });
+      lightboxSubmitSimilar.href = `../pages/Submit.html?${params.toString()}`;
+    }
+  }
+
+  lightboxCommentForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const user = getActiveUser();
+    if (!user) {
+      setCommentStatus("Log in to post a comment.", true);
+      return;
+    }
+    const text = String(lightboxCommentInput?.value || "").trim();
+    if (!text) {
+      setCommentStatus("Please write a comment first.", true);
+      return;
+    }
+
+    let allComments = {};
+    try {
+      const raw = localStorage.getItem("tb_photo_comments_v1");
+      allComments = raw ? JSON.parse(raw) : {};
+    } catch {
+      allComments = {};
+    }
+    const key = getCurrentCommentKey();
+    if (!Array.isArray(allComments[key])) allComments[key] = [];
+    allComments[key].push({
+      user,
+      text,
+      createdAt: new Date().toISOString(),
+    });
+    localStorage.setItem("tb_photo_comments_v1", JSON.stringify(allComments));
+    if (lightboxCommentInput) lightboxCommentInput.value = "";
+    setCommentStatus("Comment posted.");
+    renderLightboxComments();
+  });
+
+  lightboxImg?.addEventListener("load", syncLightboxPanelWidth);
+  lightboxMedia?.addEventListener("transitionend", syncLightboxPanelWidth);
+  window.addEventListener("resize", syncLightboxPanelWidth);
+
+  lightboxCommentsList?.addEventListener("click", (event) => {
+    const authorBtn = event.target.closest("[data-comment-user]");
+    if (authorBtn) {
+      openCommenterProfile(authorBtn.dataset.commentUser);
+      return;
+    }
+    const deleteBtn = event.target.closest("[data-comment-delete]");
+    if (!deleteBtn) return;
+    if (!canModerateComments()) {
+      setCommentStatus("Only moderators or owner can delete comments.", true);
+      return;
+    }
+    const deleteIndex = Number(deleteBtn.dataset.commentDelete);
+    if (!Number.isInteger(deleteIndex) || deleteIndex < 0) return;
+    let allComments = {};
+    try {
+      const raw = localStorage.getItem("tb_photo_comments_v1");
+      allComments = raw ? JSON.parse(raw) : {};
+    } catch {
+      allComments = {};
+    }
+    const key = getCurrentCommentKey();
+    const list = Array.isArray(allComments[key]) ? allComments[key] : [];
+    if (!list[deleteIndex]) return;
+    list.splice(deleteIndex, 1);
+    allComments[key] = list;
+    localStorage.setItem("tb_photo_comments_v1", JSON.stringify(allComments));
+    setCommentStatus("Comment deleted.");
+    renderLightboxComments();
+  });
   function openSiblingInSeries(step) {
     if (!Array.isArray(currentSeriesPool) || currentSeriesPool.length === 0) return;
     const count = currentSeriesPool.length;
@@ -1998,7 +2992,7 @@ function renderCountryFiltersFromData(filters, stationData) {
       img.addEventListener("click", () => {
         const card = img.closest(".station-photo-card");
         const index = Number(card?.dataset.photoIndex || 0);
-        openLightboxByIndex(index);
+        openLightboxByIndex(index, img);
       });
     },
   );
@@ -2026,8 +3020,27 @@ function renderCountryFiltersFromData(filters, stationData) {
       closeLightbox();
     }
   });
+  stationProfileClose?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    closeCommenterProfile();
+  });
+  commenterProfileModal.addEventListener("click", (event) => {
+    const closeAction = event.target.closest(".station-profile-close");
+    if (closeAction) {
+      event.preventDefault();
+      event.stopPropagation();
+      closeCommenterProfile();
+      return;
+    }
+    if (event.target === commenterProfileModal) closeCommenterProfile();
+  });
 
   document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && commenterProfileModal.classList.contains("is-open")) {
+      closeCommenterProfile();
+      return;
+    }
     if (!lightbox.classList.contains("is-open")) return;
 
     if (e.key === "Escape") {
@@ -2983,6 +3996,166 @@ function renderCountryFiltersFromData(filters, stationData) {
   });
 })();
 
+(function initLoginPage() {
+  const signInForm = document.getElementById("loginSignInForm");
+  const createForm = document.getElementById("loginCreateForm");
+  const status = document.getElementById("loginStatus");
+  const signInTab = document.getElementById("loginTabSignIn");
+  const createTab = document.getElementById("loginTabCreate");
+  const signInPanel = document.getElementById("loginPanelSignIn");
+  const createPanel = document.getElementById("loginPanelCreate");
+
+  if (!signInForm || !createForm || !status) return;
+
+  const storageKey = "tb_accounts_v1";
+  const sessionKey = "tb_active_user_v1";
+  const resetFlagKey = "tb_login_reset_done_20260524_v2";
+
+  try {
+    if (!localStorage.getItem(resetFlagKey)) {
+      localStorage.removeItem(storageKey);
+      localStorage.removeItem(sessionKey);
+      localStorage.setItem(resetFlagKey, "1");
+    }
+  } catch {}
+
+  function normalizeUsername(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+
+  function hashPassword(value) {
+    return btoa(unescape(encodeURIComponent(String(value || ""))));
+  }
+
+  function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
+  }
+
+  function readAccounts() {
+    try {
+      const raw = localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) : {};
+      return parsed && typeof parsed === "object" ? parsed : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function writeAccounts(accounts) {
+    localStorage.setItem(storageKey, JSON.stringify(accounts));
+  }
+
+  function showStatus(message, isError = false) {
+    status.textContent = message;
+    status.classList.toggle("is-error", isError);
+    status.classList.toggle("is-success", !isError && Boolean(message));
+  }
+
+  function setTab(mode) {
+    const isCreate = mode === "create";
+    createPanel.hidden = !isCreate;
+    signInPanel.hidden = isCreate;
+    createTab.classList.toggle("active", isCreate);
+    signInTab.classList.toggle("active", !isCreate);
+    createTab.setAttribute("aria-selected", isCreate ? "true" : "false");
+    signInTab.setAttribute("aria-selected", !isCreate ? "true" : "false");
+    showStatus("");
+  }
+
+  signInTab?.addEventListener("click", () => setTab("signin"));
+  createTab?.addEventListener("click", () => setTab("create"));
+
+  createForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const usernameInput = createForm.querySelector("#createUsername");
+    const emailInput = createForm.querySelector("#createEmail");
+    const passwordInput = createForm.querySelector("#createPassword");
+    const confirmInput = createForm.querySelector("#createPasswordConfirm");
+
+    const username = normalizeUsername(usernameInput?.value);
+    const email = String(emailInput?.value || "").trim().toLowerCase();
+    const password = String(passwordInput?.value || "");
+    const confirm = String(confirmInput?.value || "");
+
+    if (username.length < 3) {
+      showStatus("Username must be at least 3 characters.", true);
+      return;
+    }
+    if (password.length < 6) {
+      showStatus("Password must be at least 6 characters.", true);
+      return;
+    }
+    if (!isValidEmail(email)) {
+      showStatus("Please enter a valid email address.", true);
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      showStatus("Password must contain at least 1 uppercase letter.", true);
+      return;
+    }
+    if (!/[0-9]/.test(password)) {
+      showStatus("Password must contain at least 1 number.", true);
+      return;
+    }
+    if (password !== confirm) {
+      showStatus("Passwords do not match.", true);
+      return;
+    }
+
+    const accounts = readAccounts();
+    if (accounts[username]) {
+      showStatus("This username already exists.", true);
+      return;
+    }
+    const emailAlreadyUsed = Object.values(accounts).some(
+      (account) =>
+        String(account?.email || "").trim().toLowerCase() === email,
+    );
+    if (emailAlreadyUsed) {
+      showStatus("This email address is already in use.", true);
+      return;
+    }
+
+    accounts[username] = {
+      email: email,
+      passwordHash: hashPassword(password),
+      createdAt: new Date().toISOString(),
+    };
+    writeAccounts(accounts);
+    localStorage.setItem(sessionKey, username);
+
+    createForm.reset();
+    setTab("signin");
+    showStatus("Account created. You are now logged in.");
+  });
+
+  signInForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const usernameInput = signInForm.querySelector("#signinUsername");
+    const passwordInput = signInForm.querySelector("#signinPassword");
+
+    const username = normalizeUsername(usernameInput?.value);
+    const password = String(passwordInput?.value || "");
+    const accounts = readAccounts();
+    const account = accounts[username];
+
+    if (!account || account.passwordHash !== hashPassword(password)) {
+      showStatus("Invalid username or password.", true);
+      return;
+    }
+
+    localStorage.setItem(sessionKey, username);
+    showStatus(`Logged in as ${username}.`);
+  });
+
+  const activeUser = normalizeUsername(localStorage.getItem(sessionKey));
+  if (activeUser) {
+    showStatus(`Already logged in as ${activeUser}.`);
+  }
+})();
+
 (function initImageProtection() {
   // This only raises the barrier against casual downloading.
   document.addEventListener("contextmenu", (e) => {
@@ -3010,9 +4183,849 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
   });
 })();
+
+(function initCommunityFeatures() {
+  const accountsKey = "tb_accounts_v1";
+  const sessionKey = "tb_active_user_v1";
+  const profileKey = "tb_profiles_v1";
+  const submissionsKey = "tb_photo_submissions_v1";
+  const commentsKey = "tb_photo_comments_v1";
+  const rolesKey = "tb_roles_v1";
+  const ownerKey = "tb_owner_user_v1";
+
+  function normalizeUser(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+
+  function readJson(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch {
+      return fallback;
+    }
+  }
+
+  function writeJson(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  function getActiveUser() {
+    return normalizeUser(localStorage.getItem(sessionKey));
+  }
+
+  function getOwnerUser() {
+    const saved = normalizeUser(localStorage.getItem(ownerKey));
+    if (saved) return saved;
+    localStorage.setItem(ownerKey, "trainbelgium");
+    return "trainbelgium";
+  }
+
+  function readRoles() {
+    const roles = readJson(rolesKey, { moderators: [] });
+    if (!Array.isArray(roles.moderators)) roles.moderators = [];
+    return roles;
+  }
+
+  function writeRoles(roles) {
+    const normalized = {
+      moderators: Array.from(
+        new Set((roles?.moderators || []).map((user) => normalizeUser(user)).filter(Boolean)),
+      ),
+    };
+    writeJson(rolesKey, normalized);
+  }
+
+  function isOwner(user) {
+    return normalizeUser(user) === getOwnerUser();
+  }
+
+  function isModerator(user) {
+    const normalized = normalizeUser(user);
+    if (!normalized) return false;
+    if (isOwner(normalized)) return true;
+    return readRoles().moderators.includes(normalized);
+  }
+
+  function showStatus(el, message, isError = false) {
+    if (!el) return;
+    el.textContent = message;
+    el.classList.toggle("is-error", isError);
+    el.classList.toggle("is-success", !isError && Boolean(message));
+  }
+
+  function escHtml(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  (function initNavVisibility() {
+    function applyNavVisibility() {
+      const activeUser = getActiveUser();
+      const navModerationItem = document.getElementById("navModerationItem");
+      const navProfileItem = document.getElementById("navProfileItem");
+      const navLoginItem = document.getElementById("navLoginItem");
+      if (navModerationItem) {
+        navModerationItem.style.display = isModerator(activeUser) ? "" : "none";
+      }
+      if (navProfileItem) {
+        navProfileItem.style.display = activeUser ? "" : "none";
+      }
+      if (navLoginItem) {
+        navLoginItem.style.display = activeUser ? "none" : "";
+      }
+    }
+
+    applyNavVisibility();
+    window.addEventListener("component:loaded", (event) => {
+      if (event.detail?.id === "navbar") applyNavVisibility();
+    });
+    window.addEventListener("storage", applyNavVisibility);
+    window.addEventListener("pageshow", applyNavVisibility);
+  })();
+
+  (function initSubmitPage() {
+    const form = document.getElementById("submitPhotoForm");
+    const status = document.getElementById("submitPhotoStatus");
+    if (!form) return;
+    const imageInput = document.getElementById("submitImageUrl");
+    const imageFileInput = document.getElementById("submitImageFile");
+    const imagePickBtn = document.getElementById("submitImagePickBtn");
+    const stationInput = document.getElementById("submitStationSlug");
+    const stationSuggestions = document.getElementById("submitStationSuggestions");
+    const operatorInput = document.getElementById("submitOperator");
+    const operatorSuggestions = document.getElementById("submitOperatorSuggestions");
+    const operatorClearBtn = document.getElementById("submitOperatorClear");
+    const operatorSelectedLogo = document.getElementById("submitOperatorSelectedLogo");
+    const dateInput = document.getElementById("submitDate");
+    let selectedStation = "";
+    let selectedOperator = "";
+
+    imagePickBtn?.addEventListener("click", () => {
+      imageFileInput?.click();
+    });
+
+    imageFileInput?.addEventListener("change", () => {
+      const picked = imageFileInput.files && imageFileInput.files[0];
+      if (!picked || !imageInput) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = typeof reader.result === "string" ? reader.result : "";
+        if (!result) return;
+        imageInput.value = result;
+      };
+      reader.readAsDataURL(picked);
+    });
+
+    function getStationOptions() {
+      const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
+        ? window.STATIONS_DATA
+        : {};
+      return Object.entries(stationData)
+        .map(([slug, item]) => ({
+          slug: String(slug || "").trim().toLowerCase(),
+          name: String(item?.name || "").trim(),
+        }))
+        .filter((item) => item.slug);
+    }
+
+    function getOperatorOptions() {
+      const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
+        ? window.STATIONS_DATA
+        : {};
+      const set = new Set();
+      Object.values(stationData).forEach((station) => {
+        const photos = Array.isArray(station?.photos) ? station.photos : [];
+        photos.forEach((photo) => {
+          String(photo?.operator || "")
+            .split(",")
+            .map((entry) => entry.trim())
+            .filter(Boolean)
+            .forEach((op) => set.add(op));
+        });
+      });
+      return Array.from(set).sort((a, b) => a.localeCompare(b));
+    }
+
+    function normalizeDigitsDate(value) {
+      const digits = String(value || "").replace(/\D/g, "").slice(0, 8);
+      if (digits.length <= 2) return digits;
+      if (digits.length <= 4) return `${digits.slice(0, 2)}/${digits.slice(2)}`;
+      return `${digits.slice(0, 2)}/${digits.slice(2, 4)}/${digits.slice(4)}`;
+    }
+
+    function parseDdMmYyyy(value) {
+      const match = String(value || "").trim().match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      if (!match) return null;
+      const day = Number(match[1]);
+      const month = Number(match[2]);
+      const year = Number(match[3]);
+      const dt = new Date(year, month - 1, day);
+      if (
+        dt.getFullYear() !== year ||
+        dt.getMonth() !== month - 1 ||
+        dt.getDate() !== day
+      ) {
+        return null;
+      }
+      return dt;
+    }
+
+    function validateDateInput() {
+      if (!dateInput) return true;
+      const dt = parseDdMmYyyy(dateInput.value);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const valid = Boolean(dt) && dt <= today;
+      dateInput.classList.toggle("is-error", !valid && dateInput.value.trim() !== "");
+      return valid;
+    }
+
+    function hideSuggestionList(el) {
+      if (!el) return;
+      el.hidden = true;
+      el.innerHTML = "";
+    }
+
+    function validateStationSelection() {
+      if (!stationInput) return true;
+      const typed = String(stationInput.value || "").trim().toLowerCase();
+      const ok = typed !== "" && selectedStation !== "" && typed === selectedStation;
+      stationInput.classList.toggle("is-error", typed !== "" && !ok);
+      return ok;
+    }
+
+    function operatorInitials(value) {
+      const words = String(value || "")
+        .replaceAll("/", " ")
+        .replaceAll("-", " ")
+        .split(/\s+/)
+        .filter(Boolean);
+      if (words.length === 0) return "?";
+      if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+      return `${words[0][0] || ""}${words[1][0] || ""}`.toUpperCase();
+    }
+
+    function normalizeSearchText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+    }
+
+    function operatorMatchesQuery(operator, query) {
+      const normalizedOperator = normalizeSearchText(operator);
+      const normalizedQuery = normalizeSearchText(query);
+      if (!normalizedQuery) return false;
+
+      // Direct start still wins.
+      if (normalizedOperator.startsWith(normalizedQuery)) return true;
+
+      // Also match if any word/segment starts with query.
+      const segments = normalizedOperator
+        .replace(/[\/,+\-]/g, " ")
+        .split(/\s+/)
+        .filter(Boolean);
+      return segments.some((segment) => segment.startsWith(normalizedQuery));
+    }
+
+    function getOperatorLogoPath(value) {
+      const raw = String(value || "").trim();
+      const key = raw
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+      const has = (needle) => key.includes(needle);
+
+      if (has("nmbs") || has("sncb")) return "../images/OperatorLogos/NMBS-SNCB.webp";
+      if (has("rail force one")) return "../images/OperatorLogos/RailForceOne.webp";
+      if (has("eurostar")) return "../images/OperatorLogos/Eurostar.webp";
+      if (has("infrabel")) return "../images/OperatorLogos/Infrabel.webp";
+      if (has("heathrow express") || has("heatrow express")) return "../images/OperatorLogos/HeatrowExpress.webp";
+      if (has("arriva")) return "../images/OperatorLogos/Arriva.webp";
+      if (has("tgv inoui") || has("inoui")) return "../images/OperatorLogos/TGVouigo.webp";
+      if (has("sncf")) return "../images/OperatorLogos/SNCF.webp";
+      if (has("zssk")) return "../images/OperatorLogos/ZSSK.webp";
+      if (has("mav start") || has("mav")) return "../images/OperatorLogos/MAV-start.webp";
+      if (has("gwr") || has("great western railway")) return "../images/OperatorLogos/GWR.webp";
+      if (has("cd")) return "../images/OperatorLogos/CD.webp";
+      if (has("cfl")) return "../images/OperatorLogos/CFL.webp";
+      if (has("db")) return "../images/OperatorLogos/DB.webp";
+      if (has("ns")) return "../images/OperatorLogos/NS.webp";
+      if (has("obb") || has("oebb")) return "../images/OperatorLogos/OBB.webp";
+      return "";
+    }
+
+    function getOperatorLogoClass(value) {
+      const key = String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+      if (key.includes("db")) return "logo-db";
+      if (key.includes("cd")) return "logo-cd";
+      if (key.includes("zssk")) return "logo-zssk";
+      if (key.includes("eurostar")) return "logo-eurostar";
+      if (key.includes("obb") || key.includes("oebb")) return "logo-obb";
+      if (key.includes("sncf")) return "logo-sncf";
+      return "";
+    }
+
+    function renderStationSuggestions() {
+      if (!stationInput || !stationSuggestions) return;
+      const q = String(stationInput.value || "").trim().toLowerCase();
+      if (!q) {
+        hideSuggestionList(stationSuggestions);
+        selectedStation = "";
+        return;
+      }
+      const matches = getStationOptions()
+        .filter((item) => item.slug.includes(q) || item.name.toLowerCase().includes(q))
+        .slice(0, 8);
+      if (matches.length === 0) {
+        hideSuggestionList(stationSuggestions);
+        selectedStation = "";
+        return;
+      }
+      stationSuggestions.innerHTML = matches
+        .map(
+          (item) => `
+            <button class="moderator-suggestion submit-suggestion" type="button" data-station-slug="${escHtml(item.slug)}">
+              <span>
+                <strong>${escHtml(item.name || item.slug)}</strong>
+                <small>${escHtml(item.slug)}</small>
+              </span>
+            </button>
+          `,
+        )
+        .join("");
+      stationSuggestions.hidden = false;
+      validateStationSelection();
+    }
+
+    function renderOperatorSuggestions() {
+      if (!operatorInput || !operatorSuggestions) return;
+      const q = normalizeSearchText(operatorInput.value);
+      if (!q) {
+        hideSuggestionList(operatorSuggestions);
+        return;
+      }
+      const matches = getOperatorOptions()
+        .filter((item) => operatorMatchesQuery(item, q))
+        .slice(0, 8);
+      if (matches.length === 0) {
+        hideSuggestionList(operatorSuggestions);
+        return;
+      }
+      operatorSuggestions.innerHTML = matches
+        .map(
+          (item) => `
+            <button class="moderator-suggestion submit-suggestion submit-operator-suggestion" type="button" data-operator-value="${escHtml(item)}">
+              <span class="submit-operator-logo">
+                <img class="${escHtml(getOperatorLogoClass(item))}" src="${escHtml(getOperatorLogoPath(item))}" alt="${escHtml(item)} logo" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;" />
+                <span hidden>${escHtml(operatorInitials(item))}</span>
+              </span>
+              <span><strong>${escHtml(item)}</strong></span>
+            </button>
+          `,
+        )
+        .join("");
+      operatorSuggestions.hidden = false;
+    }
+
+    function applySelectedOperatorUI() {
+      if (!operatorInput || !operatorClearBtn || !operatorSelectedLogo) return;
+      const hasSelection = Boolean(selectedOperator);
+      operatorInput.classList.toggle("has-operator-selection", hasSelection);
+      operatorClearBtn.hidden = !hasSelection;
+      if (!hasSelection) {
+        operatorSelectedLogo.hidden = true;
+        operatorSelectedLogo.src = "";
+        return;
+      }
+      const logoPath = getOperatorLogoPath(selectedOperator);
+      if (logoPath) {
+        operatorSelectedLogo.src = logoPath;
+        operatorSelectedLogo.hidden = false;
+      } else {
+        operatorSelectedLogo.hidden = true;
+      }
+    }
+
+    stationInput?.addEventListener("input", () => {
+      selectedStation = "";
+      renderStationSuggestions();
+      validateStationSelection();
+    });
+
+    stationSuggestions?.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-station-slug]");
+      if (!btn || !stationInput) return;
+      selectedStation = String(btn.dataset.stationSlug || "").toLowerCase();
+      stationInput.value = selectedStation;
+      hideSuggestionList(stationSuggestions);
+      validateStationSelection();
+    });
+
+    stationInput?.addEventListener("blur", validateStationSelection);
+
+    operatorInput?.addEventListener("input", () => {
+      selectedOperator = "";
+      applySelectedOperatorUI();
+      renderOperatorSuggestions();
+    });
+
+    operatorSuggestions?.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-operator-value]");
+      if (!btn || !operatorInput) return;
+      selectedOperator = String(btn.dataset.operatorValue || "");
+      operatorInput.value = selectedOperator;
+      applySelectedOperatorUI();
+      hideSuggestionList(operatorSuggestions);
+    });
+
+    operatorClearBtn?.addEventListener("click", () => {
+      selectedOperator = "";
+      if (operatorInput) {
+        operatorInput.value = "";
+        operatorInput.focus();
+      }
+      applySelectedOperatorUI();
+      hideSuggestionList(operatorSuggestions);
+    });
+
+    dateInput?.addEventListener("input", () => {
+      dateInput.value = normalizeDigitsDate(dateInput.value);
+      validateDateInput();
+    });
+
+    dateInput?.addEventListener("blur", validateDateInput);
+
+    try {
+      const params = new URLSearchParams(window.location.search || "");
+      const stationParam = String(params.get("station") || "").trim().toLowerCase();
+      const titleParam = String(params.get("title") || "").trim();
+      const operatorParam = String(params.get("operator") || "").trim();
+      const dateParam = String(params.get("date") || "").trim();
+      const locationParam = String(params.get("location") || "").trim();
+      const notesParam = String(params.get("notes") || "").trim();
+      if (stationParam) {
+        form.station_slug.value = stationParam;
+        selectedStation = stationParam;
+      }
+      if (titleParam) form.title.value = titleParam;
+      if (operatorParam) {
+        form.operator.value = operatorParam;
+        selectedOperator = operatorParam;
+        applySelectedOperatorUI();
+      }
+      if (dateParam) form.date.value = dateParam;
+      if (locationParam && form.location) form.location.value = locationParam;
+      if (notesParam) form.notes.value = notesParam;
+    } catch {}
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const user = getActiveUser();
+      if (!user) {
+        showStatus(status, "Please log in before submitting a photo.", true);
+        return;
+      }
+
+      const stationSlug = String(form.station_slug?.value || "").trim().toLowerCase();
+      const title = String(form.title?.value || "").trim();
+      const image = String(form.image?.value || "").trim();
+      const date = String(form.date?.value || "").trim();
+      const location = String(form.location?.value || "").trim();
+      const operator = String(form.operator?.value || "").trim();
+      const notes = String(form.notes?.value || "").trim();
+
+      if (!stationSlug || !title || !image || !date || !location || !operator) {
+        showStatus(status, "Please complete all required fields.", true);
+        return;
+      }
+      if (!selectedStation || stationSlug !== selectedStation) {
+        showStatus(status, "Please select a station from the list.", true);
+        validateStationSelection();
+        return;
+      }
+      if (!validateDateInput()) {
+        showStatus(status, "Date must be valid and cannot be in the future.", true);
+        return;
+      }
+
+      const submissions = readJson(submissionsKey, []);
+      submissions.push({
+        id: `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+        stationSlug,
+        title,
+        image,
+        date,
+        location,
+        operator,
+        notes,
+        submittedBy: user,
+        submittedAt: new Date().toISOString(),
+        status: "pending",
+      });
+      writeJson(submissionsKey, submissions);
+      form.reset();
+      showStatus(status, "Submission sent to moderation.");
+    });
+  })();
+
+  (function initProfilePage() {
+    const form = document.getElementById("profileForm");
+    const status = document.getElementById("profileStatus");
+    if (!form) return;
+    const defaultAvatar = "../images/default-avatar.svg";
+    const avatarPathInput = document.getElementById("profileAvatar");
+    const avatarFileInput = document.getElementById("profileAvatarFile");
+    const avatarPickBtn = document.getElementById("profileAvatarPickBtn");
+    const avatarPreview = document.getElementById("profileAvatarPreview");
+    const summaryName = document.getElementById("profileSummaryName");
+    const summaryMeta = document.getElementById("profileSummaryMeta");
+    const roleBadge = document.getElementById("profileRoleBadge");
+    const logoutBtn = document.getElementById("profileLogoutBtn");
+
+    logoutBtn?.addEventListener("click", () => {
+      localStorage.removeItem(sessionKey);
+      window.location.href = "Login.html";
+    });
+
+    const user = getActiveUser();
+    if (!user) {
+      if (summaryName) summaryName.textContent = "Guest";
+      if (summaryMeta) summaryMeta.textContent = "Not logged in";
+      if (roleBadge) roleBadge.textContent = "Member";
+      if (avatarPreview) avatarPreview.src = defaultAvatar;
+      showStatus(status, "Please log in first to edit your profile.", true);
+      form.querySelectorAll("input, button").forEach((el) => {
+        el.disabled = true;
+      });
+      if (logoutBtn) logoutBtn.disabled = true;
+      return;
+    }
+
+    const profiles = readJson(profileKey, {});
+    const accounts = readJson(accountsKey, {});
+    const profile = profiles[user] || {};
+    const account = accounts[user] || {};
+    const owner = getOwnerUser();
+    const userIsOwner = isOwner(user);
+    const userIsModerator = isModerator(user);
+    const moderatorCard = document.getElementById("moderatorManagementCard");
+    const moderatorForm = document.getElementById("moderatorAssignForm");
+    const moderatorStatus = document.getElementById("moderatorAssignStatus");
+    const moderatorList = document.getElementById("moderatorList");
+    const moderatorInput = document.getElementById("moderatorUsername");
+    const moderatorSuggestions = document.getElementById("moderatorSuggestions");
+    const moderatorAddBtn = document.getElementById("moderatorAddBtn");
+    let selectedModeratorUser = "";
+
+    form.profileUsername.value = user;
+    form.profileAvatar.value = profile.avatar || "";
+    form.profileEmail.value = profile.email || account.email || "";
+    form.profileNotifications.checked = Boolean(profile.notifications);
+
+    if (summaryName) summaryName.textContent = user;
+    if (summaryMeta) summaryMeta.textContent = `${profile.email || account.email || "No email set"}`;
+    if (roleBadge) roleBadge.textContent = userIsOwner ? "Owner" : userIsModerator ? "Moderator" : "Member";
+    if (avatarPreview) {
+      avatarPreview.src = profile.avatar || defaultAvatar;
+      avatarPreview.alt = `${user} avatar`;
+    }
+
+    avatarPickBtn?.addEventListener("click", () => {
+      avatarFileInput?.click();
+    });
+
+    avatarFileInput?.addEventListener("change", () => {
+      const picked = avatarFileInput.files && avatarFileInput.files[0];
+      if (!picked) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = typeof reader.result === "string" ? reader.result : "";
+        if (!result) return;
+        if (avatarPathInput) avatarPathInput.value = result;
+        if (avatarPreview) avatarPreview.src = result;
+      };
+      reader.readAsDataURL(picked);
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = String(form.profileEmail?.value || "").trim().toLowerCase();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showStatus(status, "Please enter a valid email address.", true);
+        return;
+      }
+
+      profiles[user] = {
+        avatar: String(form.profileAvatar?.value || "").trim(),
+        email,
+        notifications: Boolean(form.profileNotifications?.checked),
+      };
+      writeJson(profileKey, profiles);
+      if (summaryName) summaryName.textContent = user;
+      if (summaryMeta) summaryMeta.textContent = `${profiles[user].email || ""}`;
+      if (avatarPreview) avatarPreview.src = profiles[user].avatar || defaultAvatar;
+      showStatus(status, "Profile saved.");
+    });
+
+    function renderModeratorList() {
+      if (!moderatorList) return;
+      const roles = readRoles();
+      if (roles.moderators.length === 0) {
+        moderatorList.innerHTML = '<p class="muted">No extra moderators yet.</p>';
+        return;
+      }
+      moderatorList.innerHTML = roles.moderators
+        .map(
+          (username) => `
+            <article class="moderation-item" data-mod-user="${username}">
+              <h3>${username}</h3>
+              <div class="moderation-actions">
+                <button class="btn btn-danger" type="button" data-mod-action="remove">Remove moderator</button>
+              </div>
+            </article>
+          `,
+        )
+        .join("");
+    }
+
+    function getModeratorCandidates(query) {
+      const accountsMap = readJson(accountsKey, {});
+      const profilesMap = readJson(profileKey, {});
+      const q = normalizeUser(query);
+      if (!q) return [];
+      const usernames = Array.from(
+        new Set([
+          ...Object.keys(accountsMap || {}),
+          ...Object.keys(profilesMap || {}),
+        ]),
+      );
+      return usernames
+        .map((username) => normalizeUser(username))
+        .filter((username) => {
+          if (!username) return false;
+          const profileItem = profilesMap[username] || {};
+          const accountItem = accountsMap[username] || {};
+          const email = normalizeUser(profileItem.email || accountItem.email || "");
+          return username.includes(q) || email.includes(q);
+        })
+        .filter((username) => username !== owner)
+        .slice(0, 8)
+        .map((username) => {
+          const profileItem = profilesMap[username] || {};
+          const accountItem = accountsMap[username] || {};
+          return {
+            username,
+            avatar: String(profileItem.avatar || defaultAvatar),
+            email: String(profileItem.email || accountItem.email || ""),
+          };
+        });
+    }
+
+    function hideModeratorSuggestions() {
+      if (!moderatorSuggestions) return;
+      moderatorSuggestions.hidden = true;
+      moderatorSuggestions.innerHTML = "";
+    }
+
+    function renderModeratorSuggestions() {
+      if (!moderatorSuggestions || !moderatorInput) return;
+      const candidates = getModeratorCandidates(moderatorInput.value);
+      const roles = readRoles();
+      const filtered = candidates.filter((item) => !roles.moderators.includes(item.username));
+      if (filtered.length === 0) {
+        hideModeratorSuggestions();
+        selectedModeratorUser = "";
+        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+        return;
+      }
+      moderatorSuggestions.innerHTML = filtered
+        .map(
+          (item) => `
+            <button class="moderator-suggestion" type="button" data-mod-suggest="${item.username}">
+              <img src="${escHtml(item.avatar)}" alt="${escHtml(item.username)} avatar" />
+              <span>
+                <strong>${escHtml(item.username)}</strong>
+                <small>${item.email ? escHtml(item.email) : ""}</small>
+              </span>
+            </button>
+          `,
+        )
+        .join("");
+      moderatorSuggestions.hidden = false;
+      if (moderatorAddBtn) moderatorAddBtn.disabled = selectedModeratorUser === "";
+    }
+
+    if (userIsOwner && moderatorCard) {
+      moderatorCard.hidden = false;
+      renderModeratorList();
+      renderModeratorSuggestions();
+
+      moderatorInput?.addEventListener("input", renderModeratorSuggestions);
+      moderatorInput?.addEventListener("input", () => {
+        selectedModeratorUser = "";
+        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+      });
+
+      moderatorSuggestions?.addEventListener("click", (event) => {
+        const btn = event.target.closest("[data-mod-suggest]");
+        if (!btn || !moderatorInput) return;
+        moderatorInput.value = String(btn.dataset.modSuggest || "");
+        selectedModeratorUser = normalizeUser(btn.dataset.modSuggest || "");
+        hideModeratorSuggestions();
+        if (moderatorAddBtn) moderatorAddBtn.disabled = !selectedModeratorUser;
+      });
+
+      moderatorForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const candidate = normalizeUser(selectedModeratorUser || moderatorForm.moderator_username?.value);
+        if (!candidate) {
+          showStatus(moderatorStatus, "Select a member from the list first.", true);
+          return;
+        }
+        if (!selectedModeratorUser || candidate !== normalizeUser(moderatorInput?.value)) {
+          showStatus(moderatorStatus, "Select a member from the list first.", true);
+          return;
+        }
+        if (candidate === owner) {
+          showStatus(moderatorStatus, "Owner already has full access.", true);
+          return;
+        }
+        const roles = readRoles();
+        const profilesMap = readJson(profileKey, {});
+        const accountsMap = readJson(accountsKey, {});
+        const accountExists = Boolean(accountsMap[candidate] || profilesMap[candidate]);
+        if (!accountExists) {
+          showStatus(moderatorStatus, "Select an existing member from the list.", true);
+          return;
+        }
+        if (roles.moderators.includes(candidate)) {
+          showStatus(moderatorStatus, "This user is already a moderator.", true);
+          return;
+        }
+        roles.moderators.push(candidate);
+        writeRoles(roles);
+        moderatorForm.reset();
+        selectedModeratorUser = "";
+        hideModeratorSuggestions();
+        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+        showStatus(moderatorStatus, "Moderator added.");
+        renderModeratorList();
+      });
+
+      moderatorList?.addEventListener("click", (event) => {
+        const btn = event.target.closest("[data-mod-action='remove']");
+        if (!btn) return;
+        const item = btn.closest("[data-mod-user]");
+        const username = normalizeUser(item?.dataset.modUser);
+        if (!username) return;
+        const roles = readRoles();
+        roles.moderators = roles.moderators.filter((user) => user !== username);
+        writeRoles(roles);
+        showStatus(moderatorStatus, "Moderator removed.");
+        renderModeratorList();
+        renderModeratorSuggestions();
+      });
+    }
+  })();
+
+  (function initModerationPage() {
+    const list = document.getElementById("moderationList");
+    const status = document.getElementById("moderationStatus");
+    if (!list) return;
+
+    const user = getActiveUser();
+    if (!isModerator(user)) {
+      showStatus(status, "Only moderators can access this page.", true);
+      return;
+    }
+
+    function render() {
+      const submissions = readJson(submissionsKey, []);
+      const pending = submissions.filter((item) => item.status === "pending");
+
+      if (pending.length === 0) {
+        list.innerHTML = '<p class="muted">No pending submissions.</p>';
+        return;
+      }
+
+      list.innerHTML = pending
+        .map(
+          (item) => `
+            <article class="moderation-item" data-submission-id="${item.id}">
+              <h3>${item.title}</h3>
+              <p><strong>Station:</strong> ${item.stationSlug}</p>
+              <div class="moderation-preview">
+                <img src="${escHtml(item.image)}" alt="${escHtml(item.title)}" loading="lazy" />
+              </div>
+              <p><strong>Date:</strong> ${item.date}</p>
+              <p><strong>Location:</strong> ${item.location || "-"}</p>
+              <p><strong>Operator:</strong> ${item.operator}</p>
+              <p><strong>By:</strong> ${item.submittedBy}</p>
+              ${item.notes ? `<p><strong>Notes:</strong> ${item.notes}</p>` : ""}
+              <div class="moderation-actions">
+                <button class="btn btn-primary" type="button" data-action="approve">Approve</button>
+                <button class="btn btn-danger" type="button" data-action="reject">Reject</button>
+              </div>
+            </article>
+          `,
+        )
+        .join("");
+    }
+
+    list.addEventListener("click", (event) => {
+      const btn = event.target.closest("button[data-action]");
+      if (!btn) return;
+      const itemEl = btn.closest("[data-submission-id]");
+      const id = itemEl?.dataset.submissionId;
+      if (!id) return;
+      const action = btn.dataset.action;
+
+      const submissions = readJson(submissionsKey, []);
+      const target = submissions.find((item) => item.id === id);
+      if (!target) return;
+      if (action === "approve") {
+        const match = String(target.date || "").match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+        if (match) {
+          const dt = new Date(Number(match[3]), Number(match[2]) - 1, Number(match[1]));
+          if (!Number.isNaN(dt.getTime())) {
+            target.date = dt.toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            });
+          }
+        }
+      }
+      target.status = action === "approve" ? "approved" : "rejected";
+      target.moderatedBy = user;
+      target.moderatedAt = new Date().toISOString();
+      writeJson(submissionsKey, submissions);
+      render();
+    });
+
+    render();
+  })();
+
+})();
+
 window.addEventListener("load", () => {
   handleNavbarScroll();
   setActiveNavLink();
+  prepareImageFallbacks(document);
 });
 
 window.addEventListener("component:loaded", (e) => {

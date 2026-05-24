@@ -28,6 +28,12 @@ window.GALLERY_STATIONS = window.GALLERY_STATIONS || [];
     return image && typeof image === "object" ? image : {};
   }
 
+  function normalizeImageFile(file) {
+    var cleanFile = String(file || "").trim();
+    if (!cleanFile) return "";
+    return cleanFile;
+  }
+
   var stations = {};
 
   window.GALLERY_STATIONS.forEach(function(station) {
@@ -42,12 +48,12 @@ window.GALLERY_STATIONS = window.GALLERY_STATIONS || [];
         : photo.image
           ? [photo.image]
           : [];
-      var mainImage = photo.mainImage || imageFileName(images[0]);
+      var mainImage = normalizeImageFile(photo.mainImage || imageFileName(images[0]));
       var series = station.slug + "-" + (photo.id || "photo-" + photoIndex);
 
       images.forEach(function(image, imageIndex) {
         var meta = imageMeta(image);
-        var file = imageFileName(image);
+        var file = normalizeImageFile(imageFileName(image));
         if (!file) return;
 
         var isMain = meta.main === true || file === mainImage || (imageIndex === 0 && !photo.mainImage);
