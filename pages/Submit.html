@@ -25,19 +25,22 @@
         <div class="card submit-card">
           <h2>Photo submission</h2>
           <form id="submitPhotoForm" class="login-form" novalidate>
-            <label for="submitStationSlug">Station slug</label>
-            <input id="submitStationSlug" name="station_slug" type="text" placeholder="Type station..." required autocomplete="off" />
+            <label for="submitStation">Station</label>
+            <div class="submit-operator-picker" id="submitStationPicker">
+              <button class="submit-operator-clear" id="submitStationClear" type="button" aria-label="Clear station" hidden>&times;</button>
+              <img id="submitStationSelectedFlag" class="submit-operator-selected-logo submit-station-selected-flag" src="" alt="Selected station flag" hidden />
+              <input id="submitStation" name="station" type="text" placeholder="Type station..." required autocomplete="off" />
+            </div>
             <div id="submitStationSuggestions" class="moderator-suggestions" hidden></div>
-            <label for="submitTitle">Photo title</label>
-            <input id="submitTitle" name="title" type="text" placeholder="e.g. HLE 1902 + 8x M6" required />
+            <label>Composition</label>
+            <div id="submitCompositionRows" class="submit-composition-rows"></div>
+            <input id="submitTitle" name="title" type="hidden" />
             <label for="submitImageUrl">Image path or URL</label>
             <div class="profile-avatar-input-row">
               <input id="submitImageUrl" name="image" type="text" placeholder="../images/Belgium/..." required />
               <button class="btn btn-secondary" id="submitImagePickBtn" type="button">Choose file</button>
             </div>
             <input id="submitImageFile" name="image_file" type="file" accept="image/*" hidden />
-            <label for="submitLocation">Location</label>
-            <input id="submitLocation" name="location" type="text" placeholder="e.g. Platform 7, Antwerp Central" required />
             <label for="submitDate">Date</label>
             <input id="submitDate" name="date" type="text" placeholder="24/03/2025" maxlength="10" inputmode="numeric" required />
             <label for="submitOperator">Operator</label>

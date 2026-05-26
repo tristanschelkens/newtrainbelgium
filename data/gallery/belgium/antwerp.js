@@ -49,7 +49,7 @@ station({
       date: "9 March 2026",
       alt: "Antwerp M6 driving trailer 75002",
       numbers: "75003, 69050, 61016, 62162, 62229, 62019, 62200, 1854",
-      consist: [carriage("M7", true), carriage("6x M6", true), traction("HLE18 54")],
+      consist: [carriage("M7", true) , carriage("6x M6", true), traction("HLE18 54")],
       images: ["Antwerp_M6_75002.jpeg"],
     },
     {

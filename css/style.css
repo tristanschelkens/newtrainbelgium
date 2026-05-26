@@ -889,6 +889,7 @@ img {
   flex-wrap: wrap;
 }
 
+
 .photos-breadcrumb-bar {
   min-height: 44px;
   display: flex;
@@ -1032,10 +1033,11 @@ button.photo-card {
 
 .photos-toolbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 16px;
   align-items: end;
 }
+
 
 .photos-toolbar-wrap {
   position: relative;
@@ -2400,6 +2402,13 @@ body.station-lightbox-open {
   background: #fff;
 }
 
+.submit-station-suggestion {
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+}
+
 .submit-suggestion:last-child {
   margin-bottom: 0;
 }
@@ -2414,14 +2423,89 @@ body.station-lightbox-open {
   gap: 10px;
 }
 
+.submit-composition-rows {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.submit-composition-rows.is-error .submit-composition-row {
+  outline: 1px solid #de5757;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.submit-composition-row {
+  display: grid;
+  grid-template-columns: minmax(210px, 250px) minmax(0, 1fr) 110px;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.submit-composition-row select,
+.submit-composition-row input {
+  width: 100%;
+  margin: 0;
+  border-radius: 12px;
+}
+
+.comp-kind-toggle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+}
+
+.comp-kind-toggle button {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.comp-kind-toggle button.is-active {
+  border-color: rgba(0, 92, 185, 0.55);
+  background: #eef5ff;
+  color: #045ab5;
+}
+
+.submit-composition-row[data-kind="locomotive"] .submit-composition-count {
+  visibility: hidden;
+}
+
+@media (max-width: 760px) {
+  .submit-composition-row {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-composition-count {
+    max-width: 140px;
+  }
+}
+
+.submit-station-selected-flag {
+  object-fit: cover;
+  padding: 0;
+}
+
 .submit-suggestion:hover {
   border-color: rgba(0, 92, 185, 0.55);
   background: #eef5ff;
 }
 
 .submit-operator-logo {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.14);
   display: inline-flex;
@@ -2438,7 +2522,7 @@ body.station-lightbox-open {
   height: 100%;
   object-fit: contain;
   padding: 0;
-  transform: scale(1.28);
+  transform: scale(1.18);
   transform-origin: center;
 }
 
@@ -2457,7 +2541,7 @@ body.station-lightbox-open {
 }
 
 .submit-operator-picker input.has-operator-selection {
-  padding-left: 78px;
+  padding-left: 72px;
 }
 
 .submit-operator-clear {
@@ -2479,11 +2563,11 @@ body.station-lightbox-open {
 
 .submit-operator-selected-logo {
   position: absolute;
-  left: 38px;
+  left: 36px;
   top: 50%;
   transform: translateY(-50%);
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.14);
   object-fit: contain;
@@ -2504,7 +2588,7 @@ body.station-lightbox-open {
 .submit-operator-logo img.logo-eurostar,
 .submit-operator-logo img.logo-obb,
 .submit-operator-logo img.logo-sncf {
-  transform: scale(1.28);
+  transform: scale(1.18);
 }
 
 .btn.btn-secondary {

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 50 30"
+   width="1000"
+   height="600"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="34ea56f9-1456-4b13-a1cd-c5a97587f783.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <clipPath
+     id="t">
+    <path
+       d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z"
+       id="path1" />
+  </clipPath>
+  <path
+     d="M0,0v30h50v-30z"
+     fill="#012169"
+     id="path2" />
+  <path
+     d="M0,0 50,30M50,0 0,30"
+     stroke="#fff"
+     stroke-width="6"
+     id="path3" />
+  <path
+     d="M0,0 50,30M50,0 0,30"
+     clip-path="url(#t)"
+     stroke="#C8102E"
+     stroke-width="4"
+     id="path4" />
+  <path
+     d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z"
+     fill="#C8102E"
+     stroke="#FFF"
+     stroke-width="2"
+     id="path5" />
+</svg>

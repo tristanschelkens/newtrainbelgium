@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="900"
+   height="600"
+   viewBox="0 0 9 6"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="2dc8ddf2-3107-4be1-92da-5e294182960a.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <rect
+     fill="#21468B"
+     width="9"
+     height="6"
+     id="rect1" />
+  <rect
+     fill="#FFF"
+     width="9"
+     height="4"
+     id="rect2" />
+  <rect
+     fill="#AE1C28"
+     width="9"
+     height="2"
+     id="rect3" />
+</svg>

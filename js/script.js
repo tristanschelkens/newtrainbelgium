@@ -381,6 +381,9 @@ function renderCountryFiltersFromData(filters, stationData) {
   const breadcrumbBar = document.getElementById("photoBreadcrumbBar");
   const breadcrumb = document.getElementById("photoBreadcrumb");
   const breadcrumbBackBtn = document.getElementById("photoBreadcrumbBack");
+  const photosSearchBlock = document.querySelector(".photos-search");
+  const galleryHead = document.querySelector(".photos-gallery-head");
+  const galleryTitle = galleryHead?.querySelector("h2");
   const stationData = window.STATIONS_DATA || {};
 
   if (!filters || !grid) return;
@@ -405,9 +408,28 @@ function renderCountryFiltersFromData(filters, stationData) {
   let activeSortMode = "place";
   let companyDrillOperator = "";
   let companyDrillMaterial = "";
+  let companyDrillNumber = "";
   let placeDrillStation = "";
   let placeDrillMaterial = "";
+  let placeDrillNumber = "";
   const scrollStateKey = "photos-scroll-y";
+
+  function isNumberDrillLevel() {
+    if (activeSortMode === "company") return Boolean(companyDrillNumber);
+    if (activeSortMode === "place") return Boolean(placeDrillNumber);
+    return false;
+  }
+
+  function updatePhotosPageUiState() {
+    const onNumberLevel = isNumberDrillLevel();
+    if (photosSearchBlock) {
+      photosSearchBlock.hidden = onNumberLevel;
+      photosSearchBlock.style.display = onNumberLevel ? "none" : "";
+    }
+    if (galleryTitle) {
+      galleryTitle.hidden = true;
+    }
+  }
 
   function normalizeSearchValue(value) {
     return String(value || "")
@@ -569,6 +591,16 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (withoutCount.startsWith("mw41")) {
       return { key: "mw41", label: "MW41" };
     }
+    if (withoutCount.startsWith("hld")) {
+      const match = withoutCount.match(/^hld\s*(\d{1,3})/i);
+      if (match) {
+        return {
+          key: `hld-${match[1]}`,
+          label: `HLD ${match[1]}`,
+        };
+      }
+      return { key: "hld", label: "HLD" };
+    }
     {
       const emuMatch = withoutCount.match(/^(am|ar)\s*(\d{2,3})\b/i);
       if (emuMatch) {
@@ -602,12 +634,13 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
     if (withoutCount.startsWith("hle")) {
       const compact = withoutCount.replace(/\s+/g, "");
-      if (
-        compact.startsWith("hle18") ||
-        compact.startsWith("hle19") ||
-        compact.startsWith("hle18/19") ||
-        compact.startsWith("hle18-19")
-      ) {
+      if (compact.startsWith("hle18")) {
+        return { key: "hle-18", label: "HLE 18" };
+      }
+      if (compact.startsWith("hle19")) {
+        return { key: "hle-19", label: "HLE 19" };
+      }
+      if (compact.startsWith("hle18/19") || compact.startsWith("hle18-19")) {
         return { key: "hle-18-19", label: "HLE 18/19" };
       }
       const match = withoutCount.match(/^hle\s*(\d+)/);
@@ -659,19 +692,38 @@ function renderCountryFiltersFromData(filters, stationData) {
     };
   }
 
-  function deriveLeadMaterialFacets(consist) {
+  function deriveLeadMaterialFacets(consist, photo = null) {
     const items = Array.isArray(consist) ? consist : [];
-    const first = items[0];
+    const preferredLabel = String(photo?.leadMaterial || photo?.primaryMaterial || "").trim().toLowerCase();
+    const preferredItem =
+      preferredLabel
+        ? items.find((item) => String(item?.label || "").trim().toLowerCase() === preferredLabel)
+        : null;
+    const explicitLead = items.find((item) => item && item.lead === true);
+    const first = preferredItem || explicitLead || items[0];
     const facet = deriveMaterialFacet(first);
     return facet ? [facet] : [];
   }
 
-  function getLeadPowerLabel(consist) {
+  function getLeadPowerLabel(consist, photo = null) {
     const items = Array.isArray(consist) ? consist : [];
+    const preferredLabel = String(photo?.leadTraction || photo?.primaryTraction || "").trim().toLowerCase();
+    const preferredTraction =
+      preferredLabel
+        ? items.find(
+            (item) =>
+              String(item?.kind || "").toLowerCase() === "traction" &&
+              String(item?.label || "").trim().toLowerCase() === preferredLabel,
+          )
+        : null;
+    const explicitLead = items.find(
+      (item) => String(item?.kind || "").toLowerCase() === "traction" && item?.lead === true,
+    );
     const firstTraction = items.find(
       (item) => String(item?.kind || "").toLowerCase() === "traction" && String(item?.label || "").trim(),
     );
-    return firstTraction ? String(firstTraction.label || "").trim() : "";
+    const chosen = preferredTraction || explicitLead || firstTraction;
+    return chosen ? String(chosen.label || "").trim() : "";
   }
 
   function trainOrderValue(value) {
@@ -682,6 +734,14 @@ function renderCountryFiltersFromData(filters, stationData) {
     const joined = groups.join("");
     const parsed = Number.parseInt(joined, 10);
     return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY;
+  }
+
+  function leadPowerNumberValue(label) {
+    const raw = String(label || "").trim();
+    if (!raw) return "";
+    const groups = raw.match(/\d+/g);
+    if (!groups || groups.length === 0) return "";
+    return groups[groups.length - 1];
   }
 
   function hydratePhotoCard(card) {
@@ -760,8 +820,9 @@ function renderCountryFiltersFromData(filters, stationData) {
               ).values(),
             )
           : [],
-        leadMaterialFacets: deriveLeadMaterialFacets(photo?.consist),
-        leadPowerLabel: getLeadPowerLabel(photo?.consist),
+        leadMaterialFacets: deriveLeadMaterialFacets(photo?.consist, photo),
+        leadPowerLabel: getLeadPowerLabel(photo?.consist, photo),
+        leadPowerNumber: leadPowerNumberValue(getLeadPowerLabel(photo?.consist, photo)),
         metaHtml: buildSearchMetaHtml(photo?.consist, { maxVisible: 3 }),
         fullMetaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
@@ -801,10 +862,23 @@ function renderCountryFiltersFromData(filters, stationData) {
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
+    <div class="station-lightbox-panel">
+      <div class="station-lightbox-panel-top">
+        <h3>Comments</h3>
+        <p class="muted">Join the discussion for this photo.</p>
+      </div>
+      <div class="station-lightbox-comments" id="photoSearchCommentsList"></div>
+      <form class="login-form" id="photoSearchCommentForm">
+        <input id="photoSearchCommentInput" name="comment" type="text" maxlength="400" placeholder="Write your comment..." />
+        <button class="btn btn-primary" type="submit">Post comment</button>
+      </form>
+      <p class="muted" id="photoSearchCommentStatus"></p>
+    </div>
   `;
   document.body.appendChild(searchLightbox);
 
   const searchLightboxImg = searchLightbox.querySelector(".station-lightbox-media img");
+  const searchLightboxMedia = searchLightbox.querySelector(".station-lightbox-media");
   const searchLightboxOperator = searchLightbox.querySelector(".station-lightbox-operator");
   const searchLightboxDate = searchLightbox.querySelector(".station-lightbox-date");
   const searchLightboxMeta = searchLightbox.querySelector(".station-lightbox-meta");
@@ -812,13 +886,135 @@ function renderCountryFiltersFromData(filters, stationData) {
   const searchLightboxClose = searchLightbox.querySelector(".station-lightbox-close");
   const searchLightboxPrev = searchLightbox.querySelector(".station-lightbox-nav.prev");
   const searchLightboxNext = searchLightbox.querySelector(".station-lightbox-nav.next");
+  const searchLightboxPanel = searchLightbox.querySelector(".station-lightbox-panel");
+  const searchCommentsList = searchLightbox.querySelector("#photoSearchCommentsList");
+  const searchCommentForm = searchLightbox.querySelector("#photoSearchCommentForm");
+  const searchCommentInput = searchLightbox.querySelector("#photoSearchCommentInput");
+  const searchCommentStatus = searchLightbox.querySelector("#photoSearchCommentStatus");
   let currentSearchSeriesPool = [];
   let currentSearchSeriesPosition = 0;
+  let currentSearchEntry = null;
+
+  function activeUserName() {
+    return String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
+  }
+
+  function readCommentsStore() {
+    try {
+      return JSON.parse(localStorage.getItem("tb_photo_comments_v1") || "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function writeCommentsStore(value) {
+    localStorage.setItem("tb_photo_comments_v1", JSON.stringify(value || {}));
+  }
+
+  function readProfilesStore() {
+    try {
+      return JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function canModerateUser(user) {
+    const normalized = String(user || "").trim().toLowerCase();
+    if (!normalized) return false;
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    if (normalized === owner) return true;
+    try {
+      const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
+      const mods = Array.isArray(roles?.moderators) ? roles.moderators.map((item) => String(item || "").trim().toLowerCase()) : [];
+      return mods.includes(normalized);
+    } catch {
+      return false;
+    }
+  }
+
+  function currentSearchCommentKey() {
+    if (!currentSearchEntry) return "";
+    return `${currentSearchEntry.slug}::${currentSearchEntry.series}`;
+  }
+
+  function setSearchCommentStatus(message, isError = false) {
+    if (!searchCommentStatus) return;
+    searchCommentStatus.textContent = message || "";
+    searchCommentStatus.classList.toggle("is-error", Boolean(isError && message));
+    searchCommentStatus.classList.toggle("is-success", Boolean(!isError && message));
+  }
+
+  function renderSearchComments() {
+    if (!searchCommentsList) return;
+    const key = currentSearchCommentKey();
+    if (!key) {
+      searchCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
+      return;
+    }
+    const store = readCommentsStore();
+    const profiles = readProfilesStore();
+    const items = Array.isArray(store[key]) ? store[key] : [];
+    const user = activeUserName();
+    const canModerate = canModerateUser(user);
+    if (items.length === 0) {
+      searchCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
+      return;
+    }
+    searchCommentsList.innerHTML = items
+      .map((item, index) => {
+        const author = String(item.user || "user").toLowerCase();
+        const avatar = String((profiles[author] || {}).avatar || "../images/default-avatar.svg");
+        const canDelete = canModerate || user === author;
+        return `
+          <article class="station-lightbox-comment">
+            <div class="station-lightbox-comment-header">
+              <span class="station-comment-author">
+                <img src="${esc(avatar)}" alt="${esc(author)} avatar" />
+                <strong>${esc(author)}</strong>
+              </span>
+              ${canDelete ? `<button class="station-lightbox-comment-delete" type="button" data-search-comment-delete="${index}">Delete</button>` : ""}
+            </div>
+            <p>${esc(item.text || "")}</p>
+            <small>${esc(item.createdAt || "")}</small>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  function persistSearchLightboxState(entry) {
+    const url = new URL(window.location.href);
+    if (!entry) {
+      url.searchParams.delete("lb");
+      url.searchParams.delete("lb_slug");
+      url.searchParams.delete("lb_idx");
+      url.searchParams.delete("lb_series");
+      window.history.replaceState({}, "", url);
+      return;
+    }
+    url.searchParams.set("lb", "1");
+    url.searchParams.set("lb_slug", entry.slug);
+    url.searchParams.set("lb_idx", String(entry.index));
+    url.searchParams.set("lb_series", entry.seriesKey);
+    window.history.replaceState({}, "", url);
+  }
 
   function closeSearchLightbox() {
     searchLightbox.classList.remove("is-open");
     searchLightbox.setAttribute("aria-hidden", "true");
     document.body.classList.remove("station-lightbox-open");
+    currentSearchEntry = null;
+    persistSearchLightboxState(null);
+    if (searchLightboxPanel) searchLightboxPanel.style.width = "";
+  }
+
+  function syncSearchLightboxPanelWidth() {
+    if (!searchLightboxPanel) return;
+    const width = Math.round(Number(searchLightboxMedia?.offsetWidth || 0));
+    if (!width) return;
+    searchLightboxPanel.style.width = `${width}px`;
+    searchLightboxPanel.style.maxWidth = `${width}px`;
   }
 
   function updateSearchLightboxNav() {
@@ -833,6 +1029,7 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   function openSearchLightboxEntry(entry) {
     if (!entry || !searchLightboxImg) return;
+    currentSearchEntry = entry;
 
     currentSearchSeriesPool = Array.from(
       new Map(
@@ -891,7 +1088,11 @@ function renderCountryFiltersFromData(filters, stationData) {
     searchLightbox.classList.add("is-open");
     searchLightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("station-lightbox-open");
+    renderSearchComments();
+    persistSearchLightboxState(entry);
     updateSearchLightboxNav();
+    window.requestAnimationFrame(syncSearchLightboxPanelWidth);
+    window.setTimeout(syncSearchLightboxPanelWidth, 20);
   }
 
   function openSiblingSearchLightbox(step) {
@@ -944,6 +1145,57 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
   });
 
+  searchCommentForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const user = activeUserName();
+    if (!user) {
+      setSearchCommentStatus("Log in to post a comment.", true);
+      return;
+    }
+    const text = String(searchCommentInput?.value || "").trim();
+    if (!text) {
+      setSearchCommentStatus("Please write a comment first.", true);
+      return;
+    }
+    const key = currentSearchCommentKey();
+    if (!key) return;
+    const store = readCommentsStore();
+    const items = Array.isArray(store[key]) ? store[key] : [];
+    items.push({
+      user,
+      text,
+      createdAt: new Date().toLocaleString("en-GB", { hour12: false }),
+    });
+    store[key] = items;
+    writeCommentsStore(store);
+    if (searchCommentInput) searchCommentInput.value = "";
+    setSearchCommentStatus("Comment posted.");
+    renderSearchComments();
+  });
+
+  searchCommentsList?.addEventListener("click", (event) => {
+    const deleteBtn = event.target.closest("[data-search-comment-delete]");
+    if (!deleteBtn) return;
+    const user = activeUserName();
+    const key = currentSearchCommentKey();
+    if (!user || !key) return;
+    const index = Number(deleteBtn.dataset.searchCommentDelete || -1);
+    if (!Number.isInteger(index) || index < 0) return;
+    const store = readCommentsStore();
+    const items = Array.isArray(store[key]) ? store[key] : [];
+    if (!items[index]) return;
+    const author = String(items[index].user || "").toLowerCase();
+    if (!(canModerateUser(user) || user === author)) {
+      setSearchCommentStatus("Only moderators or owner can delete comments.", true);
+      return;
+    }
+    items.splice(index, 1);
+    store[key] = items;
+    writeCommentsStore(store);
+    setSearchCommentStatus("Comment removed.");
+    renderSearchComments();
+  });
+
   function setActiveButton(value) {
     buttons.forEach((btn) => {
       const isActive = (btn.dataset.filter || "").toLowerCase() === value;
@@ -973,6 +1225,14 @@ function renderCountryFiltersFromData(filters, stationData) {
     filterToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     filterPanel.hidden = !isOpen;
   }
+
+  searchLightboxImg?.addEventListener("load", syncSearchLightboxPanelWidth);
+  searchLightboxMedia?.addEventListener("transitionend", syncSearchLightboxPanelWidth);
+  window.addEventListener("resize", () => {
+    if (searchLightbox.classList.contains("is-open")) {
+      syncSearchLightboxPanelWidth();
+    }
+  });
 
   function sortVisibleCards() {
     const cardsToSort = Array.from(grid.querySelectorAll(".photo-card"));
@@ -1042,7 +1302,7 @@ function renderCountryFiltersFromData(filters, stationData) {
         parts.push(
           '<span class="photos-crumb-sep">/</span>',
         );
-        if (companyDrillMaterial) {
+        if (companyDrillMaterial || companyDrillNumber) {
           parts.push(
             `<button class="photos-crumb-btn" type="button" data-crumb-level="company-operator">${esc(formatCompanyLabel(operatorLabelByKey(companyDrillOperator)))}</button>`,
           );
@@ -1053,14 +1313,23 @@ function renderCountryFiltersFromData(filters, stationData) {
 
       if (companyDrillMaterial) {
         parts.push('<span class="photos-crumb-sep">/</span>');
-        parts.push(`<span class="photos-crumb-current">${esc(materialLabelByKey(companyDrillMaterial))}</span>`);
+        if (companyDrillNumber) {
+          parts.push(`<button class="photos-crumb-btn" type="button" data-crumb-level="company-material">${esc(materialLabelByKey(companyDrillMaterial))}</button>`);
+        } else {
+          parts.push(`<span class="photos-crumb-current">${esc(materialLabelByKey(companyDrillMaterial))}</span>`);
+        }
+      }
+
+      if (companyDrillNumber) {
+        parts.push('<span class="photos-crumb-sep">/</span>');
+        parts.push(`<span class="photos-crumb-current">${esc(companyDrillNumber)}</span>`);
       }
     } else if (activeSortMode === "place") {
       parts.push('<button class="photos-crumb-btn" type="button" data-crumb-level="place-root">Place</button>');
 
       if (placeDrillStation) {
         parts.push('<span class="photos-crumb-sep">/</span>');
-        if (placeDrillMaterial) {
+        if (placeDrillMaterial || placeDrillNumber) {
           parts.push(
             `<button class="photos-crumb-btn" type="button" data-crumb-level="place-station">${esc(stationLabelBySlug(placeDrillStation))}</button>`,
           );
@@ -1071,7 +1340,18 @@ function renderCountryFiltersFromData(filters, stationData) {
 
       if (placeDrillMaterial) {
         parts.push('<span class="photos-crumb-sep">/</span>');
-        parts.push(`<span class="photos-crumb-current">${esc(materialLabelByKey(placeDrillMaterial))}</span>`);
+        if (placeDrillNumber) {
+          parts.push(
+            `<button class="photos-crumb-btn" type="button" data-crumb-level="place-material">${esc(materialLabelByKey(placeDrillMaterial))}</button>`,
+          );
+        } else {
+          parts.push(`<span class="photos-crumb-current">${esc(materialLabelByKey(placeDrillMaterial))}</span>`);
+        }
+      }
+
+      if (placeDrillNumber) {
+        parts.push('<span class="photos-crumb-sep">/</span>');
+        parts.push(`<span class="photos-crumb-current">${esc(placeDrillNumber)}</span>`);
       }
     }
 
@@ -1079,9 +1359,9 @@ function renderCountryFiltersFromData(filters, stationData) {
     breadcrumbBar.hidden = false;
     if (breadcrumbBackBtn) {
       if (activeSortMode === "company") {
-        breadcrumbBackBtn.hidden = !(companyDrillOperator || companyDrillMaterial);
+        breadcrumbBackBtn.hidden = !(companyDrillOperator || companyDrillMaterial || companyDrillNumber);
       } else if (activeSortMode === "place") {
-        breadcrumbBackBtn.hidden = !(placeDrillStation || placeDrillMaterial);
+        breadcrumbBackBtn.hidden = !(placeDrillStation || placeDrillMaterial || placeDrillNumber);
       }
     }
   }
@@ -1230,25 +1510,53 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (noResults) noResults.style.display = materialMap.size === 0 ? "block" : "none";
   }
 
+  function renderPlaceNumberDrillCards() {
+    const numberMap = new Map();
+    allPhotoEntries
+      .filter((entry) => entry.slug === placeDrillStation)
+      .filter((entry) => entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial))
+      .forEach((entry) => {
+        const number = String(entry.leadPowerNumber || "").trim();
+        if (!number) return;
+        if (!numberMap.has(number)) {
+          numberMap.set(number, {
+            number,
+            previewSrc: entry.src || "",
+            leadLabel: entry.leadPowerLabel || number,
+          });
+        }
+      });
+
+    const cards = Array.from(numberMap.values())
+      .sort((a, b) => trainOrderValue(a.number) - trainOrderValue(b.number))
+      .map(
+        (item) => `
+          <button class="photo-card photo-search-result" type="button" data-place-number-card="${esc(item.number)}">
+            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.leadLabel)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(item.leadLabel)}</h3>
+            </div>
+          </button>
+        `,
+      )
+      .join("");
+
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = numberMap.size === 0 ? "block" : "none";
+  }
+
   function renderPlacePhotoCards() {
     const entries = allPhotoEntries.filter((entry) => {
       const stationOk = entry.slug === placeDrillStation;
       const materialOk = entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial);
-      return stationOk && materialOk;
+      const numberOk = String(entry.leadPowerNumber || "") === String(placeDrillNumber || "");
+      return stationOk && materialOk && numberOk;
     });
 
     const grouped = Array.from(
-      new Map(entries.map((entry) => [entry.seriesKey, entry])).values(),
+      new Map(entries.map((entry) => [`${entry.slug}::${entry.index}`, entry])).values(),
     )
-      .map((entry) => {
-        const seriesPool = (photoSeriesGroups.get(entry.seriesKey) || []).slice();
-        if (seriesPool.length === 0) return entry;
-        const mainPhoto =
-          seriesPool.find((photo) => photo.explicitIsMain === true) ||
-          seriesPool.find((photo) => photo.explicitIsMain !== false) ||
-          seriesPool[0];
-        return mainPhoto || entry;
-      })
       .sort((a, b) => {
         const aLead = trainOrderValue(a.leadPowerLabel || a.numbers || "");
         const bLead = trainOrderValue(b.leadPowerLabel || b.numbers || "");
@@ -1295,7 +1603,8 @@ function renderCountryFiltersFromData(filters, stationData) {
     const entries = allPhotoEntries.filter((entry) => {
       const opOk = normalizeFacetKey(firstOperatorLabel(entry)) === companyDrillOperator;
       const matOk = entry.leadMaterialFacets.some((f) => f.key === companyDrillMaterial);
-      return opOk && matOk;
+      const numOk = String(entry.leadPowerNumber || "") === String(companyDrillNumber || "");
+      return opOk && matOk && numOk;
     });
     const grouped = Array.from(
       new Map(entries.map((entry) => [entry.seriesKey, entry])).values(),
@@ -1349,41 +1658,152 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (noResults) noResults.style.display = grouped.length === 0 ? "block" : "none";
   }
 
-  function applyFilters() {
+  function renderCompanyNumberDrillCards() {
+    const numberMap = new Map();
+    allPhotoEntries
+      .filter((entry) => normalizeFacetKey(firstOperatorLabel(entry)) === companyDrillOperator)
+      .filter((entry) => entry.leadMaterialFacets.some((f) => f.key === companyDrillMaterial))
+      .forEach((entry) => {
+        const number = String(entry.leadPowerNumber || "").trim();
+        if (!number) return;
+        if (!numberMap.has(number)) {
+          numberMap.set(number, {
+            number,
+            previewSrc: entry.src || "",
+            leadLabel: entry.leadPowerLabel || number,
+          });
+        }
+      });
+
+    const cards = Array.from(numberMap.values())
+      .sort((a, b) => trainOrderValue(a.number) - trainOrderValue(b.number))
+      .map(
+        (item) => `
+          <button class="photo-card photo-search-result" type="button" data-company-number-card="${esc(item.number)}">
+            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.leadLabel)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(item.leadLabel)}</h3>
+            </div>
+          </button>
+        `,
+      )
+      .join("");
+
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = numberMap.size === 0 ? "block" : "none";
+  }
+
+  function applyFilters(pushHistory = false) {
+    const queryTerms = normalizeSearchValue(activeQuery)
+      .split(/\s+/)
+      .filter(Boolean);
+
     if (activeSortMode === "place") {
+      if (queryTerms.length > 0) {
+        const filtered = allPhotoEntries.filter((entry) => {
+          if (!matchesSearchTerms(entry.search, queryTerms)) return false;
+          if (placeDrillStation && entry.slug !== placeDrillStation) return false;
+          if (placeDrillMaterial && !entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial)) return false;
+          if (placeDrillNumber && String(entry.leadPowerNumber || "") !== String(placeDrillNumber || "")) return false;
+          return true;
+        });
+        const grouped = Array.from(new Map(filtered.map((entry) => [entry.seriesKey, entry])).values());
+        grid.innerHTML = grouped
+          .map(
+            (photo) => `
+              <button
+                class="photo-card photo-search-result"
+                type="button"
+                data-series-key="${esc(photo.seriesKey)}"
+                data-photo-index="${photo.index}"
+                data-photo-slug="${esc(photo.slug)}"
+              >
+                <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
+                <div class="overlay"><h3>${esc(photo.leadPowerLabel || photo.alt || "")}</h3></div>
+              </button>
+            `,
+          )
+          .join("");
+        prepareImageFallbacks(grid);
+        if (noResults) noResults.style.display = grouped.length === 0 ? "block" : "none";
+        grid.classList.toggle("has-few", false);
+        if (mapSection) mapSection.style.display = "none";
+        updateBreadcrumbs();
+        updatePhotosPageUiState();
+        persistSortState(pushHistory);
+        return;
+      }
       if (!placeDrillStation) {
         renderPlaceDrillCards();
       } else if (!placeDrillMaterial) {
         renderPlaceMaterialDrillCards();
+      } else if (!placeDrillNumber) {
+        renderPlaceNumberDrillCards();
       } else {
         renderPlacePhotoCards();
       }
       grid.classList.toggle("has-few", false);
       if (mapSection) mapSection.style.display = "none";
       updateBreadcrumbs();
-      persistSortState();
+      updatePhotosPageUiState();
+      persistSortState(pushHistory);
       return;
     }
 
     if (activeSortMode === "company") {
+      if (queryTerms.length > 0) {
+        const filtered = allPhotoEntries.filter((entry) => {
+          if (!matchesSearchTerms(entry.search, queryTerms)) return false;
+          if (companyDrillOperator && normalizeFacetKey(firstOperatorLabel(entry)) !== companyDrillOperator) return false;
+          if (companyDrillMaterial && !entry.leadMaterialFacets.some((f) => f.key === companyDrillMaterial)) return false;
+          if (companyDrillNumber && String(entry.leadPowerNumber || "") !== String(companyDrillNumber || "")) return false;
+          return true;
+        });
+        const grouped = Array.from(new Map(filtered.map((entry) => [entry.seriesKey, entry])).values());
+        grid.innerHTML = grouped
+          .map(
+            (photo) => `
+              <button
+                class="photo-card photo-search-result"
+                type="button"
+                data-series-key="${esc(photo.seriesKey)}"
+                data-photo-index="${photo.index}"
+                data-photo-slug="${esc(photo.slug)}"
+              >
+                <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
+                <div class="overlay"><h3>${esc(photo.leadPowerLabel || photo.alt || "")}</h3></div>
+              </button>
+            `,
+          )
+          .join("");
+        prepareImageFallbacks(grid);
+        if (noResults) noResults.style.display = grouped.length === 0 ? "block" : "none";
+        grid.classList.toggle("has-few", false);
+        if (mapSection) mapSection.style.display = "none";
+        updateBreadcrumbs();
+        updatePhotosPageUiState();
+        persistSortState(pushHistory);
+        return;
+      }
       if (!companyDrillOperator) {
         renderOperatorDrillCards();
       } else if (!companyDrillMaterial) {
         renderMaterialDrillCards();
+      } else if (!companyDrillNumber) {
+        renderCompanyNumberDrillCards();
       } else {
         renderCompanyPhotoCards();
       }
       grid.classList.toggle("has-few", false);
       if (mapSection) mapSection.style.display = "none";
       updateBreadcrumbs();
-      persistSortState();
+      updatePhotosPageUiState();
+      persistSortState(pushHistory);
       return;
     }
 
     let visibleCount = 0;
-    const queryTerms = normalizeSearchValue(activeQuery)
-      .split(/\s+/)
-      .filter(Boolean);
     const usePhotoResults =
       queryTerms.length > 0 ||
       activeOperatorFilter !== "all" ||
@@ -1523,7 +1943,8 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
     sortVisibleCards();
     updateBreadcrumbs();
-    persistSortState();
+    updatePhotosPageUiState();
+    persistSortState(pushHistory);
   }
 
   function persistPhotoFilter(value) {
@@ -1562,7 +1983,7 @@ function renderCountryFiltersFromData(filters, stationData) {
     window.history.replaceState({}, "", url);
   }
 
-  function persistSortState() {
+  function persistSortState(pushHistory = false) {
     const url = new URL(window.location.href);
 
     if (activeSortMode === "company") {
@@ -1576,6 +1997,8 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     if (companyDrillMaterial) url.searchParams.set("company_material", companyDrillMaterial);
     else url.searchParams.delete("company_material");
+    if (companyDrillNumber) url.searchParams.set("company_number", companyDrillNumber);
+    else url.searchParams.delete("company_number");
 
     if (placeDrillStation) url.searchParams.set("place", placeDrillStation);
     else url.searchParams.delete("place");
@@ -1583,6 +2006,17 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (placeDrillMaterial) url.searchParams.set("place_material", placeDrillMaterial);
     else url.searchParams.delete("place_material");
 
+    if (placeDrillNumber) url.searchParams.set("place_number", placeDrillNumber);
+    else url.searchParams.delete("place_number");
+
+    if (pushHistory) {
+      const next = url.toString();
+      const current = window.location.href;
+      if (next !== current) {
+        window.history.pushState({}, "", url);
+        return;
+      }
+    }
     window.history.replaceState({}, "", url);
   }
 
@@ -1724,38 +2158,42 @@ function renderCountryFiltersFromData(filters, stationData) {
     activeSortMode = "place";
     companyDrillOperator = "";
     companyDrillMaterial = "";
+    companyDrillNumber = "";
     placeDrillStation = "";
     placeDrillMaterial = "";
+    placeDrillNumber = "";
     updateSortButtons();
     renderPlaceDrillCards();
-    applyFilters();
+    applyFilters(true);
   });
 
   sortByCompanyBtn?.addEventListener("click", () => {
     activeSortMode = "company";
     companyDrillOperator = "";
     companyDrillMaterial = "";
+    companyDrillNumber = "";
     placeDrillStation = "";
     placeDrillMaterial = "";
+    placeDrillNumber = "";
     updateSortButtons();
-    applyFilters();
+    applyFilters(true);
   });
 
   breadcrumbBackBtn?.addEventListener("click", () => {
-    if (activeSortMode === "company") {
-      if (companyDrillMaterial) {
-        companyDrillMaterial = "";
-      } else if (companyDrillOperator) {
-        companyDrillOperator = "";
-      }
-    } else if (activeSortMode === "place") {
-      if (placeDrillMaterial) {
-        placeDrillMaterial = "";
-      } else if (placeDrillStation) {
-        placeDrillStation = "";
-      }
+    if (window.history.length > 1) {
+      window.history.back();
+      return;
     }
-    applyFilters();
+    if (activeSortMode === "company") {
+      if (companyDrillNumber) companyDrillNumber = "";
+      else if (companyDrillMaterial) companyDrillMaterial = "";
+      else if (companyDrillOperator) companyDrillOperator = "";
+    } else if (activeSortMode === "place") {
+      if (placeDrillNumber) placeDrillNumber = "";
+      else if (placeDrillMaterial) placeDrillMaterial = "";
+      else if (placeDrillStation) placeDrillStation = "";
+    }
+    applyFilters(true);
   });
 
   breadcrumb?.addEventListener("click", (event) => {
@@ -1766,66 +2204,110 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (level === "company-root") {
       companyDrillOperator = "";
       companyDrillMaterial = "";
-      applyFilters();
+      companyDrillNumber = "";
+      applyFilters(true);
       return;
     }
 
     if (level === "company-operator") {
       companyDrillMaterial = "";
-      applyFilters();
+      companyDrillNumber = "";
+      applyFilters(true);
+      return;
+    }
+
+    if (level === "company-material") {
+      companyDrillNumber = "";
+      applyFilters(true);
       return;
     }
 
     if (level === "place-root") {
       placeDrillStation = "";
       placeDrillMaterial = "";
-      applyFilters();
+      placeDrillNumber = "";
+      applyFilters(true);
       return;
     }
 
     if (level === "place-station") {
       placeDrillMaterial = "";
-      applyFilters();
+      placeDrillNumber = "";
+      applyFilters(true);
+      return;
+    }
+
+    if (level === "place-material") {
+      placeDrillNumber = "";
+      applyFilters(true);
     }
   });
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const queryFilter = (urlParams.get("filter") || "all").toLowerCase();
-  const querySearch = (urlParams.get("q") || "").trim();
-  const queryOperator = (urlParams.get("operator") || "all").toLowerCase();
-  const queryMaterial = (urlParams.get("material") || "all").toLowerCase();
-  const querySort = (urlParams.get("sort") || "place").toLowerCase();
-  const queryCompany = (urlParams.get("company") || "").trim().toLowerCase();
-  const queryCompanyMaterial = (urlParams.get("company_material") || "").trim().toLowerCase();
-  const queryPlace = (urlParams.get("place") || "").trim().toLowerCase();
-  const queryPlaceMaterial = (urlParams.get("place_material") || "").trim().toLowerCase();
-  const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
-  activeFilter = initialFilter;
-  activeOperatorFilter =
-    queryOperator === "all" || operatorOptions.some((option) => option.key === queryOperator)
-      ? queryOperator
-      : "all";
-  activeMaterialFilter =
-    queryMaterial === "all" || sortedMaterialOptions.some((option) => option.key === queryMaterial)
-      ? queryMaterial
-      : "all";
-  activeQuery = querySearch;
+  function applyStateFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryFilter = (urlParams.get("filter") || "all").toLowerCase();
+    const querySearch = (urlParams.get("q") || "").trim();
+    const queryOperator = (urlParams.get("operator") || "all").toLowerCase();
+    const queryMaterial = (urlParams.get("material") || "all").toLowerCase();
+    const querySort = (urlParams.get("sort") || "place").toLowerCase();
+    const queryCompany = (urlParams.get("company") || "").trim().toLowerCase();
+    const queryCompanyMaterial = (urlParams.get("company_material") || "").trim().toLowerCase();
+    const queryCompanyNumber = String(urlParams.get("company_number") || "").trim();
+    const queryPlace = (urlParams.get("place") || "").trim().toLowerCase();
+    const queryPlaceMaterial = (urlParams.get("place_material") || "").trim().toLowerCase();
+    const queryPlaceNumber = String(urlParams.get("place_number") || "").trim();
 
-  if (searchInput) {
-    searchInput.value = activeQuery;
+    const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
+    activeFilter = initialFilter;
+    activeOperatorFilter =
+      queryOperator === "all" || operatorOptions.some((option) => option.key === queryOperator)
+        ? queryOperator
+        : "all";
+    activeMaterialFilter =
+      queryMaterial === "all" || sortedMaterialOptions.some((option) => option.key === queryMaterial)
+        ? queryMaterial
+        : "all";
+    activeQuery = querySearch;
+    activeSortMode = querySort === "company" ? "company" : "place";
+    companyDrillOperator = activeSortMode === "company" ? queryCompany : "";
+    companyDrillMaterial = activeSortMode === "company" ? queryCompanyMaterial : "";
+    companyDrillNumber = activeSortMode === "company" ? queryCompanyNumber : "";
+    placeDrillStation = activeSortMode === "place" ? queryPlace : "";
+    placeDrillMaterial = activeSortMode === "place" ? queryPlaceMaterial : "";
+    placeDrillNumber = activeSortMode === "place" ? queryPlaceNumber : "";
+
+    if (searchInput) searchInput.value = activeQuery;
+    renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
+    renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
+    updateSortButtons();
+    setActiveButton(initialFilter);
+    applyFilters(false);
   }
 
-  renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
-  renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
-  activeSortMode = querySort === "company" ? "company" : "place";
-  companyDrillOperator = activeSortMode === "company" ? queryCompany : "";
-  companyDrillMaterial = activeSortMode === "company" ? queryCompanyMaterial : "";
-  placeDrillStation = activeSortMode === "place" ? queryPlace : "";
-  placeDrillMaterial = activeSortMode === "place" ? queryPlaceMaterial : "";
-  updateSortButtons();
-  setActiveButton(initialFilter);
-  applyFilters();
+  applyStateFromUrl();
   setFilterMenuOpen(false);
+
+  window.addEventListener("popstate", () => {
+    applyStateFromUrl();
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const lbOpen = (urlParams.get("lb") || "") === "1";
+  const lbSlug = String(urlParams.get("lb_slug") || "").trim().toLowerCase();
+  const lbIndex = Number(urlParams.get("lb_idx") || -1);
+  const lbSeries = String(urlParams.get("lb_series") || "").trim();
+  if (lbOpen) {
+    const fromSeries = (photoSeriesGroups.get(lbSeries) || []).find(
+      (item) => item.slug === lbSlug && item.index === lbIndex,
+    );
+    const fallback = allPhotoEntries.find(
+      (item) => item.slug === lbSlug && item.index === lbIndex,
+    );
+    const toOpen = fromSeries || fallback || null;
+    if (toOpen) {
+      window.requestAnimationFrame(() => openSearchLightboxEntry(toOpen));
+    }
+  }
 
   const savedScroll = Number(sessionStorage.getItem(scrollStateKey) || "0");
   if (Number.isFinite(savedScroll) && savedScroll > 0) {
@@ -1851,14 +2333,23 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (placeCard) {
       placeDrillStation = String(placeCard.dataset.placeCard || "");
       placeDrillMaterial = "";
-      applyFilters();
+      placeDrillNumber = "";
+      applyFilters(true);
       return;
     }
 
     const placeMaterialCard = e.target.closest("[data-place-material-card]");
     if (placeMaterialCard) {
       placeDrillMaterial = String(placeMaterialCard.dataset.placeMaterialCard || "");
-      applyFilters();
+      placeDrillNumber = "";
+      applyFilters(true);
+      return;
+    }
+
+    const placeNumberCard = e.target.closest("[data-place-number-card]");
+    if (placeNumberCard) {
+      placeDrillNumber = String(placeNumberCard.dataset.placeNumberCard || "");
+      applyFilters(true);
       return;
     }
 
@@ -1866,14 +2357,23 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (companyCard) {
       companyDrillOperator = String(companyCard.dataset.companyCard || "");
       companyDrillMaterial = "";
-      applyFilters();
+      companyDrillNumber = "";
+      applyFilters(true);
       return;
     }
 
     const materialCard = e.target.closest("[data-material-card]");
     if (materialCard) {
       companyDrillMaterial = String(materialCard.dataset.materialCard || "");
-      applyFilters();
+      companyDrillNumber = "";
+      applyFilters(true);
+      return;
+    }
+
+    const companyNumberCard = e.target.closest("[data-company-number-card]");
+    if (companyNumberCard) {
+      companyDrillNumber = String(companyNumberCard.dataset.companyNumberCard || "");
+      applyFilters(true);
       return;
     }
 
@@ -1886,9 +2386,45 @@ function renderCountryFiltersFromData(filters, stationData) {
       (photo) => photo.slug === slug && photo.index === index,
     );
 
-    if (entry) {
-      openSearchLightboxEntry(entry);
+    if (!entry) return;
+
+    const hasQuery = String(activeQuery || "").trim().length > 0;
+    if (hasQuery) {
+      if (activeSortMode === "place") {
+        const targetStation = String(entry.slug || "");
+        const leadMaterialKey = String(entry.leadMaterialFacets?.[0]?.key || "");
+        const targetNumber = String(entry.leadPowerNumber || "");
+        const alreadyAtTarget =
+          placeDrillStation === targetStation &&
+          placeDrillMaterial === leadMaterialKey &&
+          String(placeDrillNumber || "") === targetNumber;
+        if (!alreadyAtTarget) {
+          placeDrillStation = targetStation;
+          placeDrillMaterial = leadMaterialKey;
+          placeDrillNumber = targetNumber;
+          applyFilters(true);
+          return;
+        }
+      }
+      if (activeSortMode === "company") {
+        const targetOperator = normalizeFacetKey(firstOperatorLabel(entry));
+        const leadMaterialKey = String(entry.leadMaterialFacets?.[0]?.key || "");
+        const targetNumber = String(entry.leadPowerNumber || "");
+        const alreadyAtTarget =
+          companyDrillOperator === targetOperator &&
+          companyDrillMaterial === leadMaterialKey &&
+          String(companyDrillNumber || "") === targetNumber;
+        if (!alreadyAtTarget) {
+          companyDrillOperator = targetOperator;
+          companyDrillMaterial = leadMaterialKey;
+          companyDrillNumber = targetNumber;
+          applyFilters(true);
+          return;
+        }
+      }
     }
+
+    openSearchLightboxEntry(entry);
   });
 })();
 
@@ -4051,6 +4587,15 @@ function renderCountryFiltersFromData(filters, stationData) {
     status.classList.toggle("is-success", !isError && Boolean(message));
   }
 
+  function clearFieldErrors(form) {
+    form?.querySelectorAll("input").forEach((input) => input.classList.remove("is-error"));
+  }
+
+  function setFieldError(input, hasError) {
+    if (!input) return;
+    input.classList.toggle("is-error", Boolean(hasError));
+  }
+
   function setTab(mode) {
     const isCreate = mode === "create";
     createPanel.hidden = !isCreate;
@@ -4077,35 +4622,32 @@ function renderCountryFiltersFromData(filters, stationData) {
     const email = String(emailInput?.value || "").trim().toLowerCase();
     const password = String(passwordInput?.value || "");
     const confirm = String(confirmInput?.value || "");
+    clearFieldErrors(createForm);
 
+    if (!username) {
+      setFieldError(usernameInput, true);
+      showStatus("Please enter a username.", true);
+      return;
+    }
     if (username.length < 3) {
+      setFieldError(usernameInput, true);
       showStatus("Username must be at least 3 characters.", true);
       return;
     }
-    if (password.length < 6) {
-      showStatus("Password must be at least 6 characters.", true);
+    const accounts = readAccounts();
+    if (accounts[username]) {
+      setFieldError(usernameInput, true);
+      showStatus("This username already exists.", true);
+      return;
+    }
+    if (!email) {
+      setFieldError(emailInput, true);
+      showStatus("Please enter your email address.", true);
       return;
     }
     if (!isValidEmail(email)) {
+      setFieldError(emailInput, true);
       showStatus("Please enter a valid email address.", true);
-      return;
-    }
-    if (!/[A-Z]/.test(password)) {
-      showStatus("Password must contain at least 1 uppercase letter.", true);
-      return;
-    }
-    if (!/[0-9]/.test(password)) {
-      showStatus("Password must contain at least 1 number.", true);
-      return;
-    }
-    if (password !== confirm) {
-      showStatus("Passwords do not match.", true);
-      return;
-    }
-
-    const accounts = readAccounts();
-    if (accounts[username]) {
-      showStatus("This username already exists.", true);
       return;
     }
     const emailAlreadyUsed = Object.values(accounts).some(
@@ -4113,7 +4655,33 @@ function renderCountryFiltersFromData(filters, stationData) {
         String(account?.email || "").trim().toLowerCase() === email,
     );
     if (emailAlreadyUsed) {
+      setFieldError(emailInput, true);
       showStatus("This email address is already in use.", true);
+      return;
+    }
+    if (!password) {
+      setFieldError(passwordInput, true);
+      showStatus("Please choose a password.", true);
+      return;
+    }
+    if (password.length < 6) {
+      setFieldError(passwordInput, true);
+      showStatus("Password must be at least 6 characters.", true);
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setFieldError(passwordInput, true);
+      showStatus("Password must contain at least 1 uppercase letter.", true);
+      return;
+    }
+    if (!/[0-9]/.test(password)) {
+      setFieldError(passwordInput, true);
+      showStatus("Password must contain at least 1 number.", true);
+      return;
+    }
+    if (password !== confirm) {
+      setFieldError(confirmInput, true);
+      showStatus("Passwords do not match.", true);
       return;
     }
 
@@ -4125,9 +4693,7 @@ function renderCountryFiltersFromData(filters, stationData) {
     writeAccounts(accounts);
     localStorage.setItem(sessionKey, username);
 
-    createForm.reset();
-    setTab("signin");
-    showStatus("Account created. You are now logged in.");
+    window.location.replace("Photos.html");
   });
 
   signInForm.addEventListener("submit", (event) => {
@@ -4138,16 +4704,36 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     const username = normalizeUsername(usernameInput?.value);
     const password = String(passwordInput?.value || "");
+    clearFieldErrors(signInForm);
     const accounts = readAccounts();
     const account = accounts[username];
 
     if (!account || account.passwordHash !== hashPassword(password)) {
+      setFieldError(usernameInput, true);
+      setFieldError(passwordInput, true);
       showStatus("Invalid username or password.", true);
       return;
     }
 
     localStorage.setItem(sessionKey, username);
-    showStatus(`Logged in as ${username}.`);
+    window.location.replace("Photos.html");
+  });
+
+  const createUsernameInput = createForm.querySelector("#createUsername");
+  createUsernameInput?.addEventListener("input", () => {
+    const username = normalizeUsername(createUsernameInput.value);
+    if (!username) {
+      createUsernameInput.classList.remove("is-error");
+      return;
+    }
+    const accounts = readAccounts();
+    const isTaken = Boolean(accounts[username]);
+    createUsernameInput.classList.toggle("is-error", isTaken);
+    if (isTaken) {
+      showStatus("This username already exists.", true);
+    } else if (status.classList.contains("is-error") && status.textContent === "This username already exists.") {
+      showStatus("");
+    }
   });
 
   const activeUser = normalizeUsername(localStorage.getItem(sessionKey));
@@ -4293,16 +4879,20 @@ function renderCountryFiltersFromData(filters, stationData) {
     const status = document.getElementById("submitPhotoStatus");
     if (!form) return;
     const imageInput = document.getElementById("submitImageUrl");
+    const titleInput = document.getElementById("submitTitle");
+    const stationInput = document.getElementById("submitStation");
+    const stationSuggestions = document.getElementById("submitStationSuggestions");
+    const stationClearBtn = document.getElementById("submitStationClear");
+    const stationSelectedFlag = document.getElementById("submitStationSelectedFlag");
+    const compositionRows = document.getElementById("submitCompositionRows");
     const imageFileInput = document.getElementById("submitImageFile");
     const imagePickBtn = document.getElementById("submitImagePickBtn");
-    const stationInput = document.getElementById("submitStationSlug");
-    const stationSuggestions = document.getElementById("submitStationSuggestions");
     const operatorInput = document.getElementById("submitOperator");
     const operatorSuggestions = document.getElementById("submitOperatorSuggestions");
     const operatorClearBtn = document.getElementById("submitOperatorClear");
     const operatorSelectedLogo = document.getElementById("submitOperatorSelectedLogo");
     const dateInput = document.getElementById("submitDate");
-    let selectedStation = "";
+    let selectedStation = null;
     let selectedOperator = "";
 
     imagePickBtn?.addEventListener("click", () => {
@@ -4316,21 +4906,203 @@ function renderCountryFiltersFromData(filters, stationData) {
       reader.onload = () => {
         const result = typeof reader.result === "string" ? reader.result : "";
         if (!result) return;
-        imageInput.value = result;
+        // Convert picked image to compressed WEBP to avoid localStorage quota failures.
+        const img = new Image();
+        img.onload = () => {
+          try {
+            const maxSide = 2400;
+            const ratio = Math.min(1, maxSide / Math.max(img.width || 1, img.height || 1));
+            const width = Math.max(1, Math.round((img.width || 1) * ratio));
+            const height = Math.max(1, Math.round((img.height || 1) * ratio));
+            const canvas = document.createElement("canvas");
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext("2d");
+            if (!ctx) {
+              imageInput.value = result;
+              return;
+            }
+            ctx.drawImage(img, 0, 0, width, height);
+            const compressed = canvas.toDataURL("image/webp", 0.86);
+            imageInput.value = compressed || result;
+          } catch {
+            imageInput.value = result;
+          }
+        };
+        img.onerror = () => {
+          imageInput.value = result;
+        };
+        img.src = result;
       };
       reader.readAsDataURL(picked);
     });
 
-    function getStationOptions() {
+    function getStationOptionsLegacyUnused() {
+      const beneluxStations = [
+        "Antwerp", "Brussels-Midi", "Brussels-Central", "Brussels-North", "Mechelen", "Leuven", "Ghent-Sint-Pieters", "Bruges", "Ostend",
+        "Liège-Guillemins", "Namur", "Charleroi-Central", "Mons", "Hasselt", "Genk", "Turnhout", "Herentals", "Lier", "Mol", "Aarschot",
+        "Kortrijk", "Tournai", "Ath", "Nivelles", "Eupen", "Verviers-Central", "Ottignies", "Binche", "La Louvière-Sud", "Aalst",
+        "Dendermonde", "Lokeren", "Sint-Niklaas", "Mouscron", "Arlon", "Roeselare", "Knokke", "Blankenberge", "Schaarbeek",
+        "Amsterdam Centraal", "Amsterdam Zuid", "Schiphol Airport", "Rotterdam Centraal", "Den Haag Centraal", "Utrecht Centraal",
+        "Eindhoven", "Tilburg", "Breda", "Roosendaal", "Dordrecht", "Leiden Centraal", "Haarlem", "Alkmaar", "Zwolle", "Groningen",
+        "Leeuwarden", "Maastricht", "Sittard", "Venlo", "Arnhem Centraal", "Nijmegen", "Amersfoort Centraal", "Deventer", "Enschede",
+        "Middelburg", "Vlissingen", "Heerlen", "Hilversum", "Den Bosch", "Apeldoorn",
+        "Luxembourg", "Belval-Université", "Esch-sur-Alzette", "Ettelbruck", "Mersch", "Pétange", "Differdange", "Clervaux", "Wiltz",
+        "Troisvierges", "Kleinbettingen", "Bettembourg", "Rodange", "Dudelange-Ville", "Dommeldange", "Cents-Hamm", "Oetrange"
+      ];
+      const toSlug = (value) => String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
       const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
         ? window.STATIONS_DATA
         : {};
-      return Object.entries(stationData)
+      const fromData = Object.entries(stationData)
         .map(([slug, item]) => ({
           slug: String(slug || "").trim().toLowerCase(),
           name: String(item?.name || "").trim(),
         }))
         .filter((item) => item.slug);
+      const merged = new Map(fromData.map((item) => [item.slug, item]));
+      beneluxStations.forEach((name) => {
+        const slug = toSlug(name);
+        if (!slug || merged.has(slug)) return;
+        merged.set(slug, { slug, name });
+      });
+      return Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    function getStationOptions() {
+      const beneluxStations = [
+        { name: "Antwerp-Central", province: "Antwerp", country: "Belgium" },
+        { name: "Antwerp-Berchem", province: "Antwerp", country: "Belgium" },
+        { name: "Antwerp-Luchtbal", province: "Antwerp", country: "Belgium" },
+        { name: "Mortsel", province: "Antwerp", country: "Belgium" },
+        { name: "Mortsel-Oude-God", province: "Antwerp", country: "Belgium" },
+        { name: "Mechelen", province: "Antwerp", country: "Belgium" },
+        { name: "Lier", province: "Antwerp", country: "Belgium" },
+        { name: "Herentals", province: "Antwerp", country: "Belgium" },
+        { name: "Brussels-Midi", province: "Brussels", country: "Belgium" },
+        { name: "Brussels-Central", province: "Brussels", country: "Belgium" },
+        { name: "Brussels-North", province: "Brussels", country: "Belgium" },
+        { name: "Schaerbeek", province: "Brussels", country: "Belgium" },
+        { name: "Leuven", province: "Flemish Brabant", country: "Belgium" },
+        { name: "Hasselt", province: "Limburg", country: "Belgium" },
+        { name: "Liege-Guillemins", province: "Liege", country: "Belgium" },
+        { name: "Eupen", province: "Liege", country: "Belgium" },
+        { name: "Charleroi-Central", province: "Hainaut", country: "Belgium" },
+        { name: "Namur", province: "Namur", country: "Belgium" },
+        { name: "Ghent-Sint-Pieters", province: "East Flanders", country: "Belgium" },
+        { name: "Bruges", province: "West Flanders", country: "Belgium" },
+        { name: "Ostend", province: "West Flanders", country: "Belgium" },
+        { name: "Kortrijk", province: "West Flanders", country: "Belgium" },
+        { name: "Mons", province: "Hainaut", country: "Belgium" },
+        { name: "Aalst", province: "East Flanders", country: "Belgium" },
+        { name: "Sint-Niklaas", province: "East Flanders", country: "Belgium" },
+        { name: "Dendermonde", province: "East Flanders", country: "Belgium" },
+        { name: "Lokeren", province: "East Flanders", country: "Belgium" },
+        { name: "Genk", province: "Limburg", country: "Belgium" },
+        { name: "Turnhout", province: "Antwerp", country: "Belgium" },
+        { name: "Aarschot", province: "Flemish Brabant", country: "Belgium" },
+        { name: "Arlon", province: "Luxembourg", country: "Belgium" },
+        { name: "Mouscron", province: "Hainaut", country: "Belgium" },
+        { name: "Ottignies", province: "Walloon Brabant", country: "Belgium" },
+        { name: "Verviers-Central", province: "Liege", country: "Belgium" },
+        { name: "Amsterdam Centraal", province: "North Holland", country: "Netherlands" },
+        { name: "Amsterdam Zuid", province: "North Holland", country: "Netherlands" },
+        { name: "Schiphol Airport", province: "North Holland", country: "Netherlands" },
+        { name: "Rotterdam Centraal", province: "South Holland", country: "Netherlands" },
+        { name: "Den Haag Centraal", province: "South Holland", country: "Netherlands" },
+        { name: "Eindhoven", province: "North Brabant", country: "Netherlands" },
+        { name: "Tilburg", province: "North Brabant", country: "Netherlands" },
+        { name: "Breda", province: "North Brabant", country: "Netherlands" },
+        { name: "Utrecht Centraal", province: "Utrecht", country: "Netherlands" },
+        { name: "Roosendaal", province: "North Brabant", country: "Netherlands" },
+        { name: "Leiden Centraal", province: "South Holland", country: "Netherlands" },
+        { name: "Haarlem", province: "North Holland", country: "Netherlands" },
+        { name: "Alkmaar", province: "North Holland", country: "Netherlands" },
+        { name: "Zwolle", province: "Overijssel", country: "Netherlands" },
+        { name: "Groningen", province: "Groningen", country: "Netherlands" },
+        { name: "Arnhem Centraal", province: "Gelderland", country: "Netherlands" },
+        { name: "Nijmegen", province: "Gelderland", country: "Netherlands" },
+        { name: "Maastricht", province: "Limburg", country: "Netherlands" },
+        { name: "Den Bosch", province: "North Brabant", country: "Netherlands" },
+        { name: "Luxembourg", province: "Luxembourg", country: "Luxembourg" },
+        { name: "Belval-Universite", province: "Esch-sur-Alzette", country: "Luxembourg" },
+        { name: "Esch-sur-Alzette", province: "Esch-sur-Alzette", country: "Luxembourg" },
+        { name: "Ettelbruck", province: "Diekirch", country: "Luxembourg" },
+        { name: "Mersch", province: "Mersch", country: "Luxembourg" },
+        { name: "Pétange", province: "Esch-sur-Alzette", country: "Luxembourg" },
+        { name: "Differdange", province: "Esch-sur-Alzette", country: "Luxembourg" },
+        { name: "Clervaux", province: "Clervaux", country: "Luxembourg" },
+        { name: "Bettembourg", province: "Esch-sur-Alzette", country: "Luxembourg" }
+      ];
+      const toSlug = (value) => String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      const countryToFlag = {
+        belgium: "../images/Other/Flags/Belgium.svg",
+        netherlands: "../images/Other/Flags/Netherlands.svg",
+        luxembourg: "../images/Other/Flags/Luxembourg.svg"
+      };
+      const provinceFallbackBySlug = {
+        "mechelen": "Antwerp",
+        "lier": "Antwerp",
+        "herentals": "Antwerp",
+        "antwerp-central": "Antwerp",
+        "antwerp-berchem": "Antwerp",
+        "antwerp-luchtbal": "Antwerp",
+        "mortsel": "Antwerp",
+        "mortsel-oude-god": "Antwerp",
+        "brussels-midi": "Brussels",
+        "brussels-central": "Brussels",
+        "brussels-north": "Brussels",
+        "schaerbeek": "Brussels",
+        "leuven": "Flemish Brabant",
+        "hasselt": "Limburg",
+        "liege": "Liege",
+        "liege-guillemins": "Liege",
+        "charleroi-central": "Hainaut",
+        "eupen": "Liege",
+        "amsterdam": "North Holland",
+        "amsterdam-centraal": "North Holland",
+        "amsterdam-zuid": "North Holland",
+        "roosendaal": "North Brabant",
+        "luxembourg": "Luxembourg"
+      };
+      const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
+        ? window.STATIONS_DATA
+        : {};
+      const fromData = Object.entries(stationData)
+        .map(([slug, item]) => {
+          const country = String(item?.country || "").trim() || "Belgium";
+          return {
+            slug: String(slug || "").trim().toLowerCase(),
+            name: String(item?.name || "").trim(),
+            province: String(item?.province || provinceFallbackBySlug[String(slug || "").trim().toLowerCase()] || item?.name || "").trim(),
+            country,
+            flag: countryToFlag[toSlug(country).replaceAll("-", "")] || ""
+          };
+        })
+        .filter((item) => item.slug);
+      const merged = new Map(fromData.map((item) => [item.slug, item]));
+      beneluxStations.forEach((item) => {
+        const slug = toSlug(item.name);
+        if (!slug || merged.has(slug)) return;
+        merged.set(slug, {
+          slug,
+          name: item.name,
+          province: item.province,
+          country: item.country,
+          flag: countryToFlag[toSlug(item.country).replaceAll("-", "")] || ""
+        });
+      });
+      return Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
     }
 
     function getOperatorOptions() {
@@ -4394,9 +5166,29 @@ function renderCountryFiltersFromData(filters, stationData) {
     function validateStationSelection() {
       if (!stationInput) return true;
       const typed = String(stationInput.value || "").trim().toLowerCase();
-      const ok = typed !== "" && selectedStation !== "" && typed === selectedStation;
+      const selectedName = String(selectedStation?.name || "").trim().toLowerCase();
+      const ok = typed !== "" && selectedName !== "" && typed === selectedName;
       stationInput.classList.toggle("is-error", typed !== "" && !ok);
       return ok;
+    }
+
+    function applySelectedStationUI() {
+      if (!stationInput || !stationClearBtn || !stationSelectedFlag) return;
+      const hasSelection = Boolean(selectedStation && selectedStation.name);
+      stationInput.classList.toggle("has-operator-selection", hasSelection);
+      stationClearBtn.hidden = !hasSelection;
+      if (!hasSelection) {
+        stationSelectedFlag.hidden = true;
+        stationSelectedFlag.src = "";
+        return;
+      }
+      const flagPath = String(selectedStation.flag || "").trim();
+      if (flagPath) {
+        stationSelectedFlag.src = flagPath;
+        stationSelectedFlag.hidden = false;
+      } else {
+        stationSelectedFlag.hidden = true;
+      }
     }
 
     function operatorInitials(value) {
@@ -4444,22 +5236,22 @@ function renderCountryFiltersFromData(filters, stationData) {
         .trim();
       const has = (needle) => key.includes(needle);
 
-      if (has("nmbs") || has("sncb")) return "../images/OperatorLogos/NMBS-SNCB.webp";
-      if (has("rail force one")) return "../images/OperatorLogos/RailForceOne.webp";
-      if (has("eurostar")) return "../images/OperatorLogos/Eurostar.webp";
-      if (has("infrabel")) return "../images/OperatorLogos/Infrabel.webp";
-      if (has("heathrow express") || has("heatrow express")) return "../images/OperatorLogos/HeatrowExpress.webp";
-      if (has("arriva")) return "../images/OperatorLogos/Arriva.webp";
-      if (has("tgv inoui") || has("inoui")) return "../images/OperatorLogos/TGVouigo.webp";
-      if (has("sncf")) return "../images/OperatorLogos/SNCF.webp";
-      if (has("zssk")) return "../images/OperatorLogos/ZSSK.webp";
-      if (has("mav start") || has("mav")) return "../images/OperatorLogos/MAV-start.webp";
-      if (has("gwr") || has("great western railway")) return "../images/OperatorLogos/GWR.webp";
-      if (has("cd")) return "../images/OperatorLogos/CD.webp";
-      if (has("cfl")) return "../images/OperatorLogos/CFL.webp";
-      if (has("db")) return "../images/OperatorLogos/DB.webp";
-      if (has("ns")) return "../images/OperatorLogos/NS.webp";
-      if (has("obb") || has("oebb")) return "../images/OperatorLogos/OBB.webp";
+      if (has("nmbs") || has("sncb")) return "../images/Other/OperatorLogos/NMBS-SNCB.svg";
+      if (has("rail force one")) return "../images/Other/OperatorLogos/RailForceOne.svg";
+      if (has("eurostar")) return "../images/Other/OperatorLogos/Eurostar.svg";
+      if (has("infrabel")) return "../images/Other/OperatorLogos/Infrabel.svg";
+      if (has("heathrow express") || has("heatrow express")) return "../images/Other/OperatorLogos/HeatrowExpress.svg";
+      if (has("arriva")) return "../images/Other/OperatorLogos/Arriva.svg";
+      if (has("tgv inoui") || has("inoui")) return "../images/Other/OperatorLogos/TGVouigo.svg";
+      if (has("sncf")) return "../images/Other/OperatorLogos/SNCF.svg";
+      if (has("zssk")) return "../images/Other/OperatorLogos/ZSSK.svg";
+      if (has("mav start") || has("mav")) return "../images/Other/OperatorLogos/MAV-start.svg";
+      if (has("gwr") || has("great western railway")) return "../images/Other/OperatorLogos/GWR.svg";
+      if (has("cd")) return "../images/Other/OperatorLogos/CD.svg";
+      if (has("cfl")) return "../images/Other/OperatorLogos/CFL.svg";
+      if (has("db")) return "../images/Other/OperatorLogos/DB.svg";
+      if (has("ns")) return "../images/Other/OperatorLogos/NS.svg";
+      if (has("obb") || has("oebb")) return "../images/Other/OperatorLogos/OBB.svg";
       return "";
     }
 
@@ -4479,12 +5271,116 @@ function renderCountryFiltersFromData(filters, stationData) {
       return "";
     }
 
+    function rowIsComplete(row) {
+      const kind = row.querySelector('[data-comp-field="kind"]')?.value || "";
+      const label = String(row.querySelector('[data-comp-field="label"]')?.value || "").trim();
+      if (!kind || !label) return false;
+      if (kind === "carriage") {
+        const count = Number(row.querySelector('[data-comp-field="count"]')?.value || 0);
+        return count > 0;
+      }
+      return true;
+    }
+
+    function getCompositionItems() {
+      if (!compositionRows) return [];
+      return Array.from(compositionRows.querySelectorAll(".submit-composition-row"))
+        .map((row) => {
+          const kind = String(row.querySelector('[data-comp-field="kind"]')?.value || "");
+          const label = String(row.querySelector('[data-comp-field="label"]')?.value || "").trim();
+          const count = Number(row.querySelector('[data-comp-field="count"]')?.value || 0);
+          if (!kind || !label) return null;
+          if (kind === "carriage") {
+            if (count < 1) return null;
+            return { kind, label, count };
+          }
+          return { kind, label };
+        })
+        .filter(Boolean);
+    }
+
+    function buildCompositionTitle(items) {
+      return items
+        .map((item) => {
+          if (item.kind === "carriage") return `${item.count}x ${item.label}`;
+          return item.label;
+        })
+        .join(" + ");
+    }
+
+    function syncCompositionTitle() {
+      const items = getCompositionItems();
+      if (titleInput) titleInput.value = buildCompositionTitle(items);
+      return items;
+    }
+
+    function appendCompositionRow() {
+      if (!compositionRows) return;
+      const row = document.createElement("div");
+      row.className = "submit-composition-row";
+      row.innerHTML = `
+        <div class="comp-kind-toggle" role="group" aria-label="Type">
+          <button type="button" data-kind-val="locomotive">Locomotive</button>
+          <button type="button" data-kind-val="carriage">Carriage</button>
+          <input data-comp-field="kind" type="hidden" value="" />
+        </div>
+        <input data-comp-field="label" type="text" placeholder="e.g. M6 or HLE 1812" />
+        <input data-comp-field="count" class="submit-composition-count" type="number" min="1" step="1" placeholder="Qty" />
+      `;
+      compositionRows.appendChild(row);
+
+      const kindInput = row.querySelector('[data-comp-field="kind"]');
+      const kindButtons = Array.from(row.querySelectorAll("[data-kind-val]"));
+      const labelInput = row.querySelector('[data-comp-field="label"]');
+      const countInput = row.querySelector('[data-comp-field="count"]');
+      const syncKindButtons = () => {
+        kindButtons.forEach((btn) => {
+          const active = String(btn.dataset.kindVal || "") === String(kindInput.value || "");
+          btn.classList.toggle("is-active", active);
+        });
+      };
+      const refreshKindUi = () => {
+        row.dataset.kind = kindInput.value || "";
+        if (kindInput.value === "carriage") {
+          countInput.disabled = false;
+          labelInput.placeholder = "e.g. M6";
+        } else {
+          countInput.disabled = true;
+          countInput.value = "";
+          labelInput.placeholder = "e.g. HLE 1812";
+        }
+        syncKindButtons();
+      };
+      refreshKindUi();
+
+      kindButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          kindInput.value = String(btn.dataset.kindVal || "");
+          refreshKindUi();
+          syncCompositionTitle();
+          const rows = Array.from(compositionRows.querySelectorAll(".submit-composition-row"));
+          const last = rows[rows.length - 1];
+          if (last && row === last && rowIsComplete(row)) appendCompositionRow();
+        });
+      });
+
+      [labelInput, countInput].forEach((el) => {
+        el?.addEventListener("input", () => {
+          refreshKindUi();
+          syncCompositionTitle();
+          const rows = Array.from(compositionRows.querySelectorAll(".submit-composition-row"));
+          const last = rows[rows.length - 1];
+          if (last && row === last && rowIsComplete(row)) appendCompositionRow();
+        });
+      });
+    }
+
     function renderStationSuggestions() {
       if (!stationInput || !stationSuggestions) return;
       const q = String(stationInput.value || "").trim().toLowerCase();
       if (!q) {
         hideSuggestionList(stationSuggestions);
-        selectedStation = "";
+        selectedStation = null;
         return;
       }
       const matches = getStationOptions()
@@ -4492,16 +5388,17 @@ function renderCountryFiltersFromData(filters, stationData) {
         .slice(0, 8);
       if (matches.length === 0) {
         hideSuggestionList(stationSuggestions);
-        selectedStation = "";
+        selectedStation = null;
         return;
       }
       stationSuggestions.innerHTML = matches
         .map(
           (item) => `
-            <button class="moderator-suggestion submit-suggestion" type="button" data-station-slug="${escHtml(item.slug)}">
+            <button class="moderator-suggestion submit-suggestion submit-station-suggestion" type="button" data-station-slug="${escHtml(item.slug)}">
+              ${item.flag ? `<img src="${escHtml(item.flag)}" alt="${escHtml(item.country)} flag" />` : `<img src="../images/default-avatar.svg" alt="" />`}
               <span>
                 <strong>${escHtml(item.name || item.slug)}</strong>
-                <small>${escHtml(item.slug)}</small>
+                <small>${escHtml(item.province || "-")}, ${escHtml(item.country || "-")}</small>
               </span>
             </button>
           `,
@@ -4561,7 +5458,8 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
 
     stationInput?.addEventListener("input", () => {
-      selectedStation = "";
+      selectedStation = null;
+      applySelectedStationUI();
       renderStationSuggestions();
       validateStationSelection();
     });
@@ -4569,13 +5467,27 @@ function renderCountryFiltersFromData(filters, stationData) {
     stationSuggestions?.addEventListener("click", (event) => {
       const btn = event.target.closest("[data-station-slug]");
       if (!btn || !stationInput) return;
-      selectedStation = String(btn.dataset.stationSlug || "").toLowerCase();
-      stationInput.value = selectedStation;
+      const pickedSlug = String(btn.dataset.stationSlug || "").toLowerCase();
+      const picked = getStationOptions().find((item) => item.slug === pickedSlug);
+      selectedStation = picked || null;
+      stationInput.value = picked ? picked.name : pickedSlug;
+      applySelectedStationUI();
       hideSuggestionList(stationSuggestions);
       validateStationSelection();
     });
 
     stationInput?.addEventListener("blur", validateStationSelection);
+
+    stationClearBtn?.addEventListener("click", () => {
+      selectedStation = null;
+      if (stationInput) {
+        stationInput.value = "";
+        stationInput.focus();
+      }
+      applySelectedStationUI();
+      hideSuggestionList(stationSuggestions);
+      validateStationSelection();
+    });
 
     operatorInput?.addEventListener("input", () => {
       selectedOperator = "";
@@ -4609,26 +5521,33 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     dateInput?.addEventListener("blur", validateDateInput);
 
+    if (compositionRows) appendCompositionRow();
+    applySelectedStationUI();
+
     try {
       const params = new URLSearchParams(window.location.search || "");
       const stationParam = String(params.get("station") || "").trim().toLowerCase();
-      const titleParam = String(params.get("title") || "").trim();
       const operatorParam = String(params.get("operator") || "").trim();
       const dateParam = String(params.get("date") || "").trim();
       const locationParam = String(params.get("location") || "").trim();
       const notesParam = String(params.get("notes") || "").trim();
       if (stationParam) {
-        form.station_slug.value = stationParam;
-        selectedStation = stationParam;
+        const bySlug = getStationOptions().find((item) => item.slug === stationParam);
+        const byName = getStationOptions().find((item) => item.name.toLowerCase() === stationParam);
+        const picked = bySlug || byName || null;
+        if (picked && stationInput) {
+          stationInput.value = picked.name;
+          selectedStation = picked;
+          applySelectedStationUI();
+        }
       }
-      if (titleParam) form.title.value = titleParam;
       if (operatorParam) {
         form.operator.value = operatorParam;
         selectedOperator = operatorParam;
         applySelectedOperatorUI();
       }
       if (dateParam) form.date.value = dateParam;
-      if (locationParam && form.location) form.location.value = locationParam;
+      if (locationParam && stationInput && !stationInput.value) stationInput.value = locationParam;
       if (notesParam) form.notes.value = notesParam;
     } catch {}
 
@@ -4640,19 +5559,29 @@ function renderCountryFiltersFromData(filters, stationData) {
         return;
       }
 
-      const stationSlug = String(form.station_slug?.value || "").trim().toLowerCase();
-      const title = String(form.title?.value || "").trim();
-      const image = String(form.image?.value || "").trim();
-      const date = String(form.date?.value || "").trim();
-      const location = String(form.location?.value || "").trim();
-      const operator = String(form.operator?.value || "").trim();
+      const stationName = String(stationInput?.value || "").trim();
+      const pickedStation = getStationOptions().find(
+        (item) => item.name.toLowerCase() === stationName.toLowerCase(),
+      );
+      const stationSlug = String(pickedStation?.slug || "").trim().toLowerCase();
+      const composition = syncCompositionTitle();
+      const title = String(titleInput?.value || "").trim();
+      const image = String(imageInput?.value || "").trim();
+      const date = String(dateInput?.value || "").trim();
+      const operator = String(operatorInput?.value || "").trim();
       const notes = String(form.notes?.value || "").trim();
+      compositionRows?.classList.remove("is-error");
 
-      if (!stationSlug || !title || !image || !date || !location || !operator) {
+      if (!stationSlug || !title || !image || !date || !operator) {
         showStatus(status, "Please complete all required fields.", true);
+        stationInput?.classList.toggle("is-error", !stationSlug || !pickedStation);
+        compositionRows?.classList.toggle("is-error", !title);
+        imageInput?.classList.toggle("is-error", !image);
+        dateInput?.classList.toggle("is-error", !date);
+        operatorInput?.classList.toggle("is-error", !operator);
         return;
       }
-      if (!selectedStation || stationSlug !== selectedStation) {
+      if (!selectedStation || !pickedStation || stationName.toLowerCase() !== String(selectedStation.name || "").toLowerCase()) {
         showStatus(status, "Please select a station from the list.", true);
         validateStationSelection();
         return;
@@ -4662,22 +5591,48 @@ function renderCountryFiltersFromData(filters, stationData) {
         return;
       }
 
-      const submissions = readJson(submissionsKey, []);
-      submissions.push({
-        id: `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
-        stationSlug,
-        title,
-        image,
-        date,
-        location,
-        operator,
-        notes,
-        submittedBy: user,
-        submittedAt: new Date().toISOString(),
-        status: "pending",
-      });
-      writeJson(submissionsKey, submissions);
+      try {
+        const submissions = readJson(submissionsKey, []);
+        submissions.push({
+          id: `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+          stationSlug,
+          stationName,
+          stationProvince: String(pickedStation?.province || ""),
+          stationCountry: String(pickedStation?.country || ""),
+          title,
+          composition,
+          image,
+          date,
+          operator,
+          notes,
+          submittedBy: user,
+          submittedAt: new Date().toISOString(),
+          status: "pending",
+        });
+        writeJson(submissionsKey, submissions);
+      } catch (err) {
+        const msg = String(err && err.message ? err.message : err || "");
+        const isQuota = msg.toLowerCase().includes("quota");
+        showStatus(
+          status,
+          isQuota
+            ? "Upload failed: image is too large for local storage. Please use a smaller photo and try again."
+            : "Upload failed due to a save error. Please try again.",
+          true,
+        );
+        return;
+      }
+
       form.reset();
+      selectedStation = null;
+      selectedOperator = "";
+      applySelectedStationUI();
+      applySelectedOperatorUI();
+      if (compositionRows) {
+        compositionRows.innerHTML = "";
+        compositionRows.classList.remove("is-error");
+        appendCompositionRow();
+      }
       showStatus(status, "Submission sent to moderation.");
     });
   })();
@@ -4967,12 +5922,16 @@ function renderCountryFiltersFromData(filters, stationData) {
           (item) => `
             <article class="moderation-item" data-submission-id="${item.id}">
               <h3>${item.title}</h3>
-              <p><strong>Station:</strong> ${item.stationSlug}</p>
+              <p><strong>Station:</strong> ${item.stationName || item.stationSlug}</p>
               <div class="moderation-preview">
                 <img src="${escHtml(item.image)}" alt="${escHtml(item.title)}" loading="lazy" />
               </div>
               <p><strong>Date:</strong> ${item.date}</p>
-              <p><strong>Location:</strong> ${item.location || "-"}</p>
+              ${Array.isArray(item.composition) && item.composition.length > 0
+                ? `<p><strong>Composition:</strong> ${item.composition
+                    .map((part) => part.kind === "carriage" ? `${Number(part.count || 0)}x ${escHtml(part.label || "")}` : escHtml(part.label || ""))
+                    .join(" + ")}</p>`
+                : ""}
               <p><strong>Operator:</strong> ${item.operator}</p>
               <p><strong>By:</strong> ${item.submittedBy}</p>
               ${item.notes ? `<p><strong>Notes:</strong> ${item.notes}</p>` : ""}

@@ -13,7 +13,9 @@ station({
       date: "16 February 2024",
       alt: "Aachen 5x DoSto + BR146 005",
       numbers: "146 005",
-      consist: [carriage("5x DoSto", true), traction("BR146 005")],
+      leadTraction: "BR146 005",
+      leadMaterial: "BR146 005",
+      consist: [carriage("5x DoSto", true), { kind: "traction", label: "BR146 005", lead: true }],
       images: ["Aachen_DoStoBR146005.webp"],
     }
   ],

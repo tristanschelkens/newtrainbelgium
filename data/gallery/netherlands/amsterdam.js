@@ -17,15 +17,6 @@ station({
       images: [mainImage("Amsterdam_NS_VIRM_8631.jpeg"), image("Amsterdam_NS_VIRM_9525.jpeg", { alt: "Amsterdam NS VIRM 8636" })],
     },
     {
-      id: "photo-2",
-      operator: "DB",
-      date: "22 March 2026",
-      alt: "Amsterdam ICE 3 neo with Eurostar",
-      numbers: "4539",
-      consist: [traction("E320 "), inactiveTraction("Eurostar PBA", { showOnCard: false, filterKey: "pba", filterLabel: "PBA" })],
-      images: ["Amsterdam_ICE3neo_Eurostar.jpeg"],
-    },
-    {
       id: "photo-3",
       operator: "NS, ÖBB",
       date: "22 March 2026",
