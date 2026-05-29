@@ -54,7 +54,6 @@ function mainImage(file, options) {
     ? currentScript.src.replace(/\/[^\/]*$/, "/")
     : "../data/gallery/";
 
-  // Add new stations here, without ".js".
   var stations = [
     "austria/vienna",
     "belgium/antwerp",
@@ -84,5 +83,6 @@ function mainImage(file, options) {
     document.write('<script src="' + baseUrl + stationPath + '.js"><\/script>');
   });
 
+  document.write('<script src="' + baseUrl + 'community.js"><\/script>');
   document.write('<script src="' + baseUrl + 'build.js"><\/script>');
 })();

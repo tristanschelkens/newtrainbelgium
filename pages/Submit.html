@@ -46,7 +46,20 @@
               <input id="submitStation" name="station" type="text" placeholder="Type station..." required autocomplete="off" />
             </div>
             <div id="submitStationSuggestions" class="moderator-suggestions" hidden></div>
+            <label for="submitOperator">Operator</label>
+            <div class="submit-operator-picker" id="submitOperatorPicker">
+              <button class="submit-operator-clear" id="submitOperatorClear" type="button" aria-label="Clear operator" hidden>&times;</button>
+              <div id="submitOperatorChips" class="submit-operator-chips" aria-live="polite"></div>
+              <button class="submit-operator-add" id="submitOperatorAdd" type="button" aria-label="Add another operator" hidden>+</button>
+              <input id="submitOperator" name="operator" type="text" placeholder="Type operator..." required autocomplete="off" />
+            </div>
+            <div id="submitOperatorSuggestions" class="moderator-suggestions" hidden></div>
             <label>Composition</label>
+            <div id="submitTrainTypePicker" class="submit-train-type-picker" role="group" aria-label="Train type">
+              <button type="button" data-train-type="trainset">Trainset</button>
+              <button type="button" data-train-type="hauled-set">Hauled set</button>
+              <input id="submitTrainType" name="train_type" type="hidden" value="" />
+            </div>
             <div id="submitCompositionRows" class="submit-composition-rows"></div>
             <input id="submitTitle" name="title" type="hidden" />
             <label for="submitImageUrl">Image path or URL</label>
@@ -57,13 +70,6 @@
             <input id="submitImageFile" name="image_file" type="file" accept="image/*" hidden />
             <label for="submitDate">Date</label>
             <input id="submitDate" name="date" type="text" placeholder="24/03/2025" maxlength="10" inputmode="numeric" required />
-            <label for="submitOperator">Operator</label>
-            <div class="submit-operator-picker" id="submitOperatorPicker">
-              <button class="submit-operator-clear" id="submitOperatorClear" type="button" aria-label="Clear operator" hidden>&times;</button>
-              <img id="submitOperatorSelectedLogo" class="submit-operator-selected-logo" src="" alt="Selected operator logo" hidden />
-              <input id="submitOperator" name="operator" type="text" placeholder="Type operator..." required autocomplete="off" />
-            </div>
-            <div id="submitOperatorSuggestions" class="moderator-suggestions" hidden></div>
             <label for="submitNotes">Notes</label>
             <input id="submitNotes" name="notes" type="text" placeholder="Optional note for moderators" />
             <button class="btn btn-primary" type="submit">Send for review</button>
@@ -75,6 +81,46 @@
     <div id="footer"></div>
     <script src="../js/loadComponents.js"></script>
     <script src="../data/gallery/index.js"></script>
+    <script src="../data/stations/albania.js"></script>
+    <script src="../data/stations/andorra.js"></script>
+    <script src="../data/stations/austria.js"></script>
+    <script src="../data/stations/belarus.js"></script>
+    <script src="../data/stations/belgium.js"></script>
+    <script src="../data/stations/bosnia-and-herzegovina.js"></script>
+    <script src="../data/stations/bulgaria.js"></script>
+    <script src="../data/stations/croatia.js"></script>
+    <script src="../data/stations/czech-republic.js"></script>
+    <script src="../data/stations/denmark.js"></script>
+    <script src="../data/stations/estonia.js"></script>
+    <script src="../data/stations/finland.js"></script>
+    <script src="../data/stations/france.js"></script>
+    <script src="../data/stations/germany.js"></script>
+    <script src="../data/stations/greece.js"></script>
+    <script src="../data/stations/hungary.js"></script>
+    <script src="../data/stations/ireland.js"></script>
+    <script src="../data/stations/italy.js"></script>
+    <script src="../data/stations/latvia.js"></script>
+    <script src="../data/stations/liechtenstein.js"></script>
+    <script src="../data/stations/lithuania.js"></script>
+    <script src="../data/stations/luxembourg.js"></script>
+    <script src="../data/stations/malta.js"></script>
+    <script src="../data/stations/montenegro.js"></script>
+    <script src="../data/stations/netherlands.js"></script>
+    <script src="../data/stations/north-macedonia.js"></script>
+    <script src="../data/stations/norway.js"></script>
+    <script src="../data/stations/poland.js"></script>
+    <script src="../data/stations/portugal.js"></script>
+    <script src="../data/stations/romania.js"></script>
+    <script src="../data/stations/russia.js"></script>
+    <script src="../data/stations/serbia.js"></script>
+    <script src="../data/stations/slovakia.js"></script>
+    <script src="../data/stations/slovenia.js"></script>
+    <script src="../data/stations/spain.js"></script>
+    <script src="../data/stations/sweden.js"></script>
+    <script src="../data/stations/switzerland.js"></script>
+    <script src="../data/stations/turkey.js"></script>
+    <script src="../data/stations/ukraine.js"></script>
+    <script src="../data/stations/united-kingdom.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

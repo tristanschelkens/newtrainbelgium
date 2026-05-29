@@ -11,6 +11,7 @@ station({
       id: "photo-0",
       operator: "ZSSK",
       date: "23 March 2026",
+      photographer: "trainbelgium",
       alt: "Bratislava ZSSK 263 003-6",
       numbers: "263 003-6",
       consist: [traction("Škoda 263 003-6", { active: true, filterKey: "skoda-263", filterLabel: "Škoda 263" }), carriage("4x DoSto")],

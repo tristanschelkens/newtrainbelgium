@@ -1276,6 +1276,19 @@ function renderCountryFiltersFromData(filters, stationData) {
       .replace(/\b\w/g, (m) => m.toUpperCase());
   }
 
+  function formatDrillNumber(materialKey, number) {
+    const key = String(materialKey || "").trim().toLowerCase();
+    const raw = String(number || "").trim();
+    if (!raw) return "";
+    if (
+      (key === "hle-18" || key === "hle-19" || key === "hle-18-19") &&
+      /^(18|19)\d{2}$/.test(raw)
+    ) {
+      return raw.slice(2);
+    }
+    return raw;
+  }
+
   function stationLabelBySlug(slug) {
     const station = stationData[String(slug || "").toLowerCase()];
     if (station?.name) return station.name;
@@ -1322,7 +1335,11 @@ function renderCountryFiltersFromData(filters, stationData) {
 
       if (companyDrillNumber) {
         parts.push('<span class="photos-crumb-sep">/</span>');
-        parts.push(`<span class="photos-crumb-current">${esc(companyDrillNumber)}</span>`);
+        parts.push(
+          `<span class="photos-crumb-current">${esc(
+            formatDrillNumber(companyDrillMaterial, companyDrillNumber),
+          )}</span>`,
+        );
       }
     } else if (activeSortMode === "place") {
       parts.push('<button class="photos-crumb-btn" type="button" data-crumb-level="place-root">Place</button>');
@@ -1351,7 +1368,11 @@ function renderCountryFiltersFromData(filters, stationData) {
 
       if (placeDrillNumber) {
         parts.push('<span class="photos-crumb-sep">/</span>');
-        parts.push(`<span class="photos-crumb-current">${esc(placeDrillNumber)}</span>`);
+        parts.push(
+          `<span class="photos-crumb-current">${esc(
+            formatDrillNumber(placeDrillMaterial, placeDrillNumber),
+          )}</span>`,
+        );
       }
     }
 
@@ -2759,7 +2780,6 @@ function renderCountryFiltersFromData(filters, stationData) {
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
-    // Keep Stadler KISS together as one filter label.
     if (parts[0] === "stadler" && parts[1]) {
       return `stadler ${parts[1]}`;
     }
@@ -4743,7 +4763,6 @@ function renderCountryFiltersFromData(filters, stationData) {
 })();
 
 (function initImageProtection() {
-  // This only raises the barrier against casual downloading.
   document.addEventListener("contextmenu", (e) => {
     if (e.target.closest("img, .photo-card, .station-lightbox")) {
       e.preventDefault();
@@ -4890,10 +4909,17 @@ function renderCountryFiltersFromData(filters, stationData) {
     const operatorInput = document.getElementById("submitOperator");
     const operatorSuggestions = document.getElementById("submitOperatorSuggestions");
     const operatorClearBtn = document.getElementById("submitOperatorClear");
-    const operatorSelectedLogo = document.getElementById("submitOperatorSelectedLogo");
+    const operatorChips = document.getElementById("submitOperatorChips");
+    const operatorAddBtn = document.getElementById("submitOperatorAdd");
+    const maxOperators = 4;
+    const trainTypePicker = document.getElementById("submitTrainTypePicker");
+    const trainTypeInput = document.getElementById("submitTrainType");
     const dateInput = document.getElementById("submitDate");
     let selectedStation = null;
     let selectedOperator = "";
+    let selectedOperators = [];
+    let isAddingOperator = false;
+    let selectedImageDataUrl = "";
 
     imagePickBtn?.addEventListener("click", () => {
       imageFileInput?.click();
@@ -4906,7 +4932,6 @@ function renderCountryFiltersFromData(filters, stationData) {
       reader.onload = () => {
         const result = typeof reader.result === "string" ? reader.result : "";
         if (!result) return;
-        // Convert picked image to compressed WEBP to avoid localStorage quota failures.
         const img = new Image();
         img.onload = () => {
           try {
@@ -4924,12 +4949,15 @@ function renderCountryFiltersFromData(filters, stationData) {
             }
             ctx.drawImage(img, 0, 0, width, height);
             const compressed = canvas.toDataURL("image/webp", 0.86);
-            imageInput.value = compressed || result;
+            selectedImageDataUrl = compressed || result;
+            imageInput.value = selectedImageDataUrl;
           } catch {
+            selectedImageDataUrl = result;
             imageInput.value = result;
           }
         };
         img.onerror = () => {
+          selectedImageDataUrl = result;
           imageInput.value = result;
         };
         img.src = result;
@@ -4937,108 +4965,7 @@ function renderCountryFiltersFromData(filters, stationData) {
       reader.readAsDataURL(picked);
     });
 
-    function getStationOptionsLegacyUnused() {
-      const beneluxStations = [
-        "Antwerp", "Brussels-Midi", "Brussels-Central", "Brussels-North", "Mechelen", "Leuven", "Ghent-Sint-Pieters", "Bruges", "Ostend",
-        "Liège-Guillemins", "Namur", "Charleroi-Central", "Mons", "Hasselt", "Genk", "Turnhout", "Herentals", "Lier", "Mol", "Aarschot",
-        "Kortrijk", "Tournai", "Ath", "Nivelles", "Eupen", "Verviers-Central", "Ottignies", "Binche", "La Louvière-Sud", "Aalst",
-        "Dendermonde", "Lokeren", "Sint-Niklaas", "Mouscron", "Arlon", "Roeselare", "Knokke", "Blankenberge", "Schaarbeek",
-        "Amsterdam Centraal", "Amsterdam Zuid", "Schiphol Airport", "Rotterdam Centraal", "Den Haag Centraal", "Utrecht Centraal",
-        "Eindhoven", "Tilburg", "Breda", "Roosendaal", "Dordrecht", "Leiden Centraal", "Haarlem", "Alkmaar", "Zwolle", "Groningen",
-        "Leeuwarden", "Maastricht", "Sittard", "Venlo", "Arnhem Centraal", "Nijmegen", "Amersfoort Centraal", "Deventer", "Enschede",
-        "Middelburg", "Vlissingen", "Heerlen", "Hilversum", "Den Bosch", "Apeldoorn",
-        "Luxembourg", "Belval-Université", "Esch-sur-Alzette", "Ettelbruck", "Mersch", "Pétange", "Differdange", "Clervaux", "Wiltz",
-        "Troisvierges", "Kleinbettingen", "Bettembourg", "Rodange", "Dudelange-Ville", "Dommeldange", "Cents-Hamm", "Oetrange"
-      ];
-      const toSlug = (value) => String(value || "")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-      const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
-        ? window.STATIONS_DATA
-        : {};
-      const fromData = Object.entries(stationData)
-        .map(([slug, item]) => ({
-          slug: String(slug || "").trim().toLowerCase(),
-          name: String(item?.name || "").trim(),
-        }))
-        .filter((item) => item.slug);
-      const merged = new Map(fromData.map((item) => [item.slug, item]));
-      beneluxStations.forEach((name) => {
-        const slug = toSlug(name);
-        if (!slug || merged.has(slug)) return;
-        merged.set(slug, { slug, name });
-      });
-      return Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
-    }
-
     function getStationOptions() {
-      const beneluxStations = [
-        { name: "Antwerp-Central", province: "Antwerp", country: "Belgium" },
-        { name: "Antwerp-Berchem", province: "Antwerp", country: "Belgium" },
-        { name: "Antwerp-Luchtbal", province: "Antwerp", country: "Belgium" },
-        { name: "Mortsel", province: "Antwerp", country: "Belgium" },
-        { name: "Mortsel-Oude-God", province: "Antwerp", country: "Belgium" },
-        { name: "Mechelen", province: "Antwerp", country: "Belgium" },
-        { name: "Lier", province: "Antwerp", country: "Belgium" },
-        { name: "Herentals", province: "Antwerp", country: "Belgium" },
-        { name: "Brussels-Midi", province: "Brussels", country: "Belgium" },
-        { name: "Brussels-Central", province: "Brussels", country: "Belgium" },
-        { name: "Brussels-North", province: "Brussels", country: "Belgium" },
-        { name: "Schaerbeek", province: "Brussels", country: "Belgium" },
-        { name: "Leuven", province: "Flemish Brabant", country: "Belgium" },
-        { name: "Hasselt", province: "Limburg", country: "Belgium" },
-        { name: "Liege-Guillemins", province: "Liege", country: "Belgium" },
-        { name: "Eupen", province: "Liege", country: "Belgium" },
-        { name: "Charleroi-Central", province: "Hainaut", country: "Belgium" },
-        { name: "Namur", province: "Namur", country: "Belgium" },
-        { name: "Ghent-Sint-Pieters", province: "East Flanders", country: "Belgium" },
-        { name: "Bruges", province: "West Flanders", country: "Belgium" },
-        { name: "Ostend", province: "West Flanders", country: "Belgium" },
-        { name: "Kortrijk", province: "West Flanders", country: "Belgium" },
-        { name: "Mons", province: "Hainaut", country: "Belgium" },
-        { name: "Aalst", province: "East Flanders", country: "Belgium" },
-        { name: "Sint-Niklaas", province: "East Flanders", country: "Belgium" },
-        { name: "Dendermonde", province: "East Flanders", country: "Belgium" },
-        { name: "Lokeren", province: "East Flanders", country: "Belgium" },
-        { name: "Genk", province: "Limburg", country: "Belgium" },
-        { name: "Turnhout", province: "Antwerp", country: "Belgium" },
-        { name: "Aarschot", province: "Flemish Brabant", country: "Belgium" },
-        { name: "Arlon", province: "Luxembourg", country: "Belgium" },
-        { name: "Mouscron", province: "Hainaut", country: "Belgium" },
-        { name: "Ottignies", province: "Walloon Brabant", country: "Belgium" },
-        { name: "Verviers-Central", province: "Liege", country: "Belgium" },
-        { name: "Amsterdam Centraal", province: "North Holland", country: "Netherlands" },
-        { name: "Amsterdam Zuid", province: "North Holland", country: "Netherlands" },
-        { name: "Schiphol Airport", province: "North Holland", country: "Netherlands" },
-        { name: "Rotterdam Centraal", province: "South Holland", country: "Netherlands" },
-        { name: "Den Haag Centraal", province: "South Holland", country: "Netherlands" },
-        { name: "Eindhoven", province: "North Brabant", country: "Netherlands" },
-        { name: "Tilburg", province: "North Brabant", country: "Netherlands" },
-        { name: "Breda", province: "North Brabant", country: "Netherlands" },
-        { name: "Utrecht Centraal", province: "Utrecht", country: "Netherlands" },
-        { name: "Roosendaal", province: "North Brabant", country: "Netherlands" },
-        { name: "Leiden Centraal", province: "South Holland", country: "Netherlands" },
-        { name: "Haarlem", province: "North Holland", country: "Netherlands" },
-        { name: "Alkmaar", province: "North Holland", country: "Netherlands" },
-        { name: "Zwolle", province: "Overijssel", country: "Netherlands" },
-        { name: "Groningen", province: "Groningen", country: "Netherlands" },
-        { name: "Arnhem Centraal", province: "Gelderland", country: "Netherlands" },
-        { name: "Nijmegen", province: "Gelderland", country: "Netherlands" },
-        { name: "Maastricht", province: "Limburg", country: "Netherlands" },
-        { name: "Den Bosch", province: "North Brabant", country: "Netherlands" },
-        { name: "Luxembourg", province: "Luxembourg", country: "Luxembourg" },
-        { name: "Belval-Universite", province: "Esch-sur-Alzette", country: "Luxembourg" },
-        { name: "Esch-sur-Alzette", province: "Esch-sur-Alzette", country: "Luxembourg" },
-        { name: "Ettelbruck", province: "Diekirch", country: "Luxembourg" },
-        { name: "Mersch", province: "Mersch", country: "Luxembourg" },
-        { name: "Pétange", province: "Esch-sur-Alzette", country: "Luxembourg" },
-        { name: "Differdange", province: "Esch-sur-Alzette", country: "Luxembourg" },
-        { name: "Clervaux", province: "Clervaux", country: "Luxembourg" },
-        { name: "Bettembourg", province: "Esch-sur-Alzette", country: "Luxembourg" }
-      ];
       const toSlug = (value) => String(value || "")
         .toLowerCase()
         .normalize("NFD")
@@ -5046,62 +4973,76 @@ function renderCountryFiltersFromData(filters, stationData) {
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "");
       const countryToFlag = {
+        albania: "../images/Other/Flags/Albania.svg",
+        andorra: "../images/Other/Flags/Andorra.svg",
+        austria: "../images/Other/Flags/Austria.svg",
+        belarus: "../images/Other/Flags/Belarus.svg",
         belgium: "../images/Other/Flags/Belgium.svg",
+        bosniaandherzegovina: "../images/Other/Flags/BosniëHerzegovina.svg",
+        bulgaria: "../images/Other/Flags/Bulgaria.svg",
+        croatia: "../images/Other/Flags/Croatia.svg",
+        cyprus: "../images/Other/Flags/Cyprus.svg",
+        czechrepublic: "../images/Other/Flags/CzechRepublic.svg",
+        denmark: "../images/Other/Flags/Denmark.svg",
+        estonia: "../images/Other/Flags/Estonia.svg",
+        finland: "../images/Other/Flags/Finland.svg",
+        france: "../images/Other/Flags/France.svg",
+        germany: "../images/Other/Flags/Germany.svg",
+        greece: "../images/Other/Flags/Greece.svg",
+        hungary: "../images/Other/Flags/Hungary.svg",
+        iceland: "../images/Other/Flags/Iceland.svg",
+        ireland: "../images/Other/Flags/Ireland.svg",
+        italy: "../images/Other/Flags/Italy.svg",
+        latvia: "../images/Other/Flags/Latvia.svg",
+        liechtenstein: "../images/Other/Flags/Liechtenstein.svg",
+        lithuania: "../images/Other/Flags/Lithuania.svg",
+        luxembourg: "../images/Other/Flags/Luxembourg.svg",
+        malta: "../images/Other/Flags/Malta.svg",
+        moldova: "../images/Other/Flags/Moldova.svg",
+        monaco: "../images/Other/Flags/Monaco.svg",
+        montenegro: "../images/Other/Flags/Montenegro.svg",
         netherlands: "../images/Other/Flags/Netherlands.svg",
-        luxembourg: "../images/Other/Flags/Luxembourg.svg"
+        northmacedonia: "../images/Other/Flags/NorthMacedonia.svg",
+        norway: "../images/Other/Flags/Norway.svg",
+        poland: "../images/Other/Flags/Poland.svg",
+        portugal: "../images/Other/Flags/Portugal.svg",
+        romania: "../images/Other/Flags/Romania.svg",
+        russia: "../images/Other/Flags/Russia.svg",
+        sanmarino: "../images/Other/Flags/SanMarino.svg",
+        serbia: "../images/Other/Flags/Serbia.svg",
+        slovakia: "../images/Other/Flags/Slovakia.svg",
+        slovenia: "../images/Other/Flags/Slovenia.svg",
+        spain: "../images/Other/Flags/Spain.svg",
+        sweden: "../images/Other/Flags/Sweden.svg",
+        switzerland: "../images/Other/Flags/Switzerland.svg",
+        turkey: "../images/Other/Flags/Turkey.svg",
+        ukraine: "../images/Other/Flags/Ukraine.svg",
+        unitedkingdom: "../images/Other/Flags/UnitedKingdom.svg",
+        vaticancity: "../images/Other/Flags/VaticanCity.svg",
       };
-      const provinceFallbackBySlug = {
-        "mechelen": "Antwerp",
-        "lier": "Antwerp",
-        "herentals": "Antwerp",
-        "antwerp-central": "Antwerp",
-        "antwerp-berchem": "Antwerp",
-        "antwerp-luchtbal": "Antwerp",
-        "mortsel": "Antwerp",
-        "mortsel-oude-god": "Antwerp",
-        "brussels-midi": "Brussels",
-        "brussels-central": "Brussels",
-        "brussels-north": "Brussels",
-        "schaerbeek": "Brussels",
-        "leuven": "Flemish Brabant",
-        "hasselt": "Limburg",
-        "liege": "Liege",
-        "liege-guillemins": "Liege",
-        "charleroi-central": "Hainaut",
-        "eupen": "Liege",
-        "amsterdam": "North Holland",
-        "amsterdam-centraal": "North Holland",
-        "amsterdam-zuid": "North Holland",
-        "roosendaal": "North Brabant",
-        "luxembourg": "Luxembourg"
-      };
-      const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
-        ? window.STATIONS_DATA
-        : {};
-      const fromData = Object.entries(stationData)
-        .map(([slug, item]) => {
-          const country = String(item?.country || "").trim() || "Belgium";
-          return {
-            slug: String(slug || "").trim().toLowerCase(),
-            name: String(item?.name || "").trim(),
-            province: String(item?.province || provinceFallbackBySlug[String(slug || "").trim().toLowerCase()] || item?.name || "").trim(),
+      const sources = Object.keys(window)
+        .filter((key) => key.startsWith("STATIONS_") && Array.isArray(window[key]))
+        .map((key) => window[key]);
+      const merged = new Map();
+      sources
+        .flat()
+        .forEach((item) => {
+          const name = String(item?.name || "").trim();
+          const slug = String(item?.slug || toSlug(name)).trim().toLowerCase();
+          const country = String(item?.country || "").trim();
+          const province = String(item?.province || item?.region || item?.state || "").trim();
+          if (!name || !slug || !country) return;
+          merged.set(slug, {
+            slug,
+            name,
+            province,
             country,
-            flag: countryToFlag[toSlug(country).replaceAll("-", "")] || ""
-          };
-        })
-        .filter((item) => item.slug);
-      const merged = new Map(fromData.map((item) => [item.slug, item]));
-      beneluxStations.forEach((item) => {
-        const slug = toSlug(item.name);
-        if (!slug || merged.has(slug)) return;
-        merged.set(slug, {
-          slug,
-          name: item.name,
-          province: item.province,
-          country: item.country,
-          flag: countryToFlag[toSlug(item.country).replaceAll("-", "")] || ""
+            coordinates: item?.coordinates && typeof item.coordinates === "object"
+              ? { lat: Number(item.coordinates.lat), lng: Number(item.coordinates.lng) }
+              : null,
+            flag: countryToFlag[toSlug(country).replaceAll("-", "")] || "",
+          });
         });
-      });
       return Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
     }
 
@@ -5131,11 +5072,12 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
 
     function parseDdMmYyyy(value) {
-      const match = String(value || "").trim().match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      const match = String(value || "").trim().match(/^(\d{2})\/(\d{2})\/(\d{2}|\d{4})$/);
       if (!match) return null;
       const day = Number(match[1]);
       const month = Number(match[2]);
-      const year = Number(match[3]);
+      const rawYear = String(match[3] || "");
+      const year = rawYear.length === 2 ? 2000 + Number(rawYear) : Number(rawYear);
       const dt = new Date(year, month - 1, day);
       if (
         dt.getFullYear() !== year ||
@@ -5215,10 +5157,8 @@ function renderCountryFiltersFromData(filters, stationData) {
       const normalizedQuery = normalizeSearchText(query);
       if (!normalizedQuery) return false;
 
-      // Direct start still wins.
       if (normalizedOperator.startsWith(normalizedQuery)) return true;
 
-      // Also match if any word/segment starts with query.
       const segments = normalizedOperator
         .replace(/[\/,+\-]/g, " ")
         .split(/\s+/)
@@ -5272,6 +5212,12 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
 
     function rowIsComplete(row) {
+      if (row.classList.contains("trainset")) {
+        const values = Array.from(row.querySelectorAll("[data-sp-slot]"))
+          .map((input) => String(input.value || "").trim())
+          .filter(Boolean);
+        return values.length > 0;
+      }
       const kind = row.querySelector('[data-comp-field="kind"]')?.value || "";
       const label = String(row.querySelector('[data-comp-field="label"]')?.value || "").trim();
       if (!kind || !label) return false;
@@ -5284,6 +5230,16 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     function getCompositionItems() {
       if (!compositionRows) return [];
+      const selectedType = String(trainTypeInput?.value || "");
+      if (selectedType === "trainset" || selectedType === "self-propelled") {
+        return Array.from(compositionRows.querySelectorAll(".submit-composition-row.trainset"))
+          .flatMap((row) =>
+            Array.from(row.querySelectorAll("[data-sp-slot]"))
+              .map((input) => String(input.value || "").trim())
+              .filter(Boolean)
+              .map((label) => ({ kind: "trainset", label })),
+          );
+      }
       return Array.from(compositionRows.querySelectorAll(".submit-composition-row"))
         .map((row) => {
           const kind = String(row.querySelector('[data-comp-field="kind"]')?.value || "");
@@ -5314,10 +5270,77 @@ function renderCountryFiltersFromData(filters, stationData) {
       return items;
     }
 
+    function applyTrainTypeUI() {
+      const selectedType = String(trainTypeInput?.value || "");
+      const buttons = Array.from(trainTypePicker?.querySelectorAll("[data-train-type]") || []);
+      buttons.forEach((btn) => {
+        const active = String(btn.dataset.trainType || "") === selectedType;
+        btn.classList.toggle("is-active", active);
+      });
+      if (compositionRows) {
+        compositionRows.classList.toggle("is-disabled", !selectedType);
+        const hasRows = compositionRows.querySelectorAll(".submit-composition-row").length > 0;
+        if (selectedType && !hasRows) appendCompositionRow();
+      }
+      return Boolean(selectedType);
+    }
+
     function appendCompositionRow() {
       if (!compositionRows) return;
+      const selectedType = String(trainTypeInput?.value || "");
       const row = document.createElement("div");
       row.className = "submit-composition-row";
+
+      if (selectedType === "trainset" || selectedType === "self-propelled") {
+        const maxTrainsetUnits = 4;
+        row.classList.add("trainset");
+        row.innerHTML = `
+          <div class="submit-trainset-slots" data-trainset-slots></div>
+        `;
+        compositionRows.appendChild(row);
+
+        const slotsWrap = row.querySelector("[data-trainset-slots]");
+        const addBtn = document.createElement("button");
+        addBtn.className = "submit-operator-add submit-trainset-add";
+        addBtn.setAttribute("data-trainset-add", "");
+        addBtn.type = "button";
+        addBtn.setAttribute("aria-label", "Add trainset unit");
+        addBtn.textContent = "+";
+        const syncTrainsetAddState = () => {
+          const count = row.querySelectorAll("[data-sp-slot]").length;
+          if (addBtn) addBtn.hidden = count >= maxTrainsetUnits;
+          if (slotsWrap && !slotsWrap.contains(addBtn)) slotsWrap.appendChild(addBtn);
+        };
+        const appendTrainsetSlot = () => {
+          const count = row.querySelectorAll("[data-sp-slot]").length;
+          if (!slotsWrap || count >= maxTrainsetUnits) return;
+          const input = document.createElement("input");
+          input.type = "text";
+          input.placeholder = `Unit ${count + 1}`;
+          input.setAttribute("data-sp-slot", String(count + 1));
+          input.addEventListener("input", () => {
+            syncCompositionTitle();
+          });
+          if (slotsWrap.contains(addBtn)) {
+            slotsWrap.insertBefore(input, addBtn);
+          } else {
+            slotsWrap.appendChild(input);
+          }
+          syncTrainsetAddState();
+        };
+
+        addBtn?.addEventListener("click", () => {
+          appendTrainsetSlot();
+          const inputs = row.querySelectorAll("[data-sp-slot]");
+          const last = inputs[inputs.length - 1];
+          if (last) last.focus();
+        });
+
+        appendTrainsetSlot();
+        syncTrainsetAddState();
+        return;
+      }
+
       row.innerHTML = `
         <div class="comp-kind-toggle" role="group" aria-label="Type">
           <button type="button" data-kind-val="locomotive">Locomotive</button>
@@ -5383,8 +5406,26 @@ function renderCountryFiltersFromData(filters, stationData) {
         selectedStation = null;
         return;
       }
+
+      const norm = (value) =>
+        String(value || "")
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+
+      const startsLikeStationQuery = (item, query) => {
+        const normalizedQuery = norm(query).trim();
+        if (!normalizedQuery) return false;
+        const nameSegments = norm(item.name).split(/[^a-z0-9]+/).filter(Boolean);
+        const slugSegments = String(item.slug || "").toLowerCase().split("-").filter(Boolean);
+        if (norm(item.name).startsWith(normalizedQuery)) return true;
+        if (String(item.slug || "").toLowerCase().startsWith(normalizedQuery)) return true;
+        return nameSegments.some((segment) => segment.startsWith(normalizedQuery))
+          || slugSegments.some((segment) => segment.startsWith(normalizedQuery));
+      };
+
       const matches = getStationOptions()
-        .filter((item) => item.slug.includes(q) || item.name.toLowerCase().includes(q))
+        .filter((item) => startsLikeStationQuery(item, q))
         .slice(0, 8);
       if (matches.length === 0) {
         hideSuggestionList(stationSuggestions);
@@ -5398,7 +5439,7 @@ function renderCountryFiltersFromData(filters, stationData) {
               ${item.flag ? `<img src="${escHtml(item.flag)}" alt="${escHtml(item.country)} flag" />` : `<img src="../images/default-avatar.svg" alt="" />`}
               <span>
                 <strong>${escHtml(item.name || item.slug)}</strong>
-                <small>${escHtml(item.province || "-")}, ${escHtml(item.country || "-")}</small>
+                <small>${escHtml(item.province ? `${item.province}, ${item.country || "-"}` : (item.country || "-"))}</small>
               </span>
             </button>
           `,
@@ -5410,12 +5451,17 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     function renderOperatorSuggestions() {
       if (!operatorInput || !operatorSuggestions) return;
+      if (selectedOperators.length >= maxOperators) {
+        hideSuggestionList(operatorSuggestions);
+        return;
+      }
       const q = normalizeSearchText(operatorInput.value);
       if (!q) {
         hideSuggestionList(operatorSuggestions);
         return;
       }
       const matches = getOperatorOptions()
+        .filter((item) => !selectedOperators.includes(item))
         .filter((item) => operatorMatchesQuery(item, q))
         .slice(0, 8);
       if (matches.length === 0) {
@@ -5438,24 +5484,52 @@ function renderCountryFiltersFromData(filters, stationData) {
       operatorSuggestions.hidden = false;
     }
 
-    function applySelectedOperatorUI() {
-      if (!operatorInput || !operatorClearBtn || !operatorSelectedLogo) return;
-      const hasSelection = Boolean(selectedOperator);
-      operatorInput.classList.toggle("has-operator-selection", hasSelection);
-      operatorClearBtn.hidden = !hasSelection;
-      if (!hasSelection) {
-        operatorSelectedLogo.hidden = true;
-        operatorSelectedLogo.src = "";
-        return;
-      }
-      const logoPath = getOperatorLogoPath(selectedOperator);
-      if (logoPath) {
-        operatorSelectedLogo.src = logoPath;
-        operatorSelectedLogo.hidden = false;
-      } else {
-        operatorSelectedLogo.hidden = true;
-      }
+    function renderOperatorChips() {
+      if (!operatorChips) return;
+      operatorChips.innerHTML = selectedOperators
+        .map((operator) => {
+          const logo = getOperatorLogoPath(operator);
+          return `
+            <button class="submit-operator-chip" type="button" data-remove-operator="${escHtml(operator)}" aria-label="Remove ${escHtml(operator)}">
+              ${logo
+                ? `<img class="submit-operator-chip-logo ${escHtml(getOperatorLogoClass(operator))}" src="${escHtml(logo)}" alt="${escHtml(operator)} logo" />`
+                : `<span class="submit-operator-chip-fallback">${escHtml(operatorInitials(operator))}</span>`}
+              <span class="submit-operator-chip-remove" aria-hidden="true">&times;</span>
+              <span>${escHtml(operator)}</span>
+            </button>
+          `;
+        })
+        .join("");
     }
+
+    function applySelectedOperatorUI() {
+      if (!operatorInput || !operatorClearBtn || !operatorAddBtn) return;
+      const hasSelection = selectedOperators.length > 0;
+      const hasRoom = selectedOperators.length < maxOperators;
+      operatorClearBtn.hidden = true;
+      operatorAddBtn.hidden = !hasSelection || !hasRoom;
+      const showInput = !hasSelection || (hasRoom && isAddingOperator);
+      operatorInput.hidden = !showInput;
+      if (!showInput) {
+        operatorInput.value = "";
+        hideSuggestionList(operatorSuggestions);
+      }
+      selectedOperator = selectedOperators[0] || "";
+    }
+
+    operatorChips?.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-remove-operator]");
+      if (!btn) return;
+      const value = String(btn.dataset.removeOperator || "").trim();
+      if (!value) return;
+      selectedOperators = selectedOperators.filter((item) => item !== value);
+      if (selectedOperators.length === 0) {
+        isAddingOperator = false;
+      }
+      renderOperatorChips();
+      applySelectedOperatorUI();
+      hideSuggestionList(operatorSuggestions);
+    });
 
     stationInput?.addEventListener("input", () => {
       selectedStation = null;
@@ -5490,7 +5564,7 @@ function renderCountryFiltersFromData(filters, stationData) {
     });
 
     operatorInput?.addEventListener("input", () => {
-      selectedOperator = "";
+      isAddingOperator = true;
       applySelectedOperatorUI();
       renderOperatorSuggestions();
     });
@@ -5498,20 +5572,44 @@ function renderCountryFiltersFromData(filters, stationData) {
     operatorSuggestions?.addEventListener("click", (event) => {
       const btn = event.target.closest("[data-operator-value]");
       if (!btn || !operatorInput) return;
-      selectedOperator = String(btn.dataset.operatorValue || "");
-      operatorInput.value = selectedOperator;
+      if (selectedOperators.length >= maxOperators) return;
+      const picked = String(btn.dataset.operatorValue || "").trim();
+      if (picked && !selectedOperators.includes(picked)) selectedOperators.push(picked);
+      isAddingOperator = false;
+      operatorInput.value = "";
+      renderOperatorChips();
       applySelectedOperatorUI();
       hideSuggestionList(operatorSuggestions);
     });
 
     operatorClearBtn?.addEventListener("click", () => {
       selectedOperator = "";
+      selectedOperators = [];
+      isAddingOperator = false;
       if (operatorInput) {
         operatorInput.value = "";
         operatorInput.focus();
       }
+      renderOperatorChips();
       applySelectedOperatorUI();
       hideSuggestionList(operatorSuggestions);
+    });
+
+    operatorAddBtn?.addEventListener("click", () => {
+      if (!operatorInput) return;
+      if (selectedOperators.length >= maxOperators) return;
+      isAddingOperator = true;
+      applySelectedOperatorUI();
+      operatorInput.focus();
+      hideSuggestionList(operatorSuggestions);
+    });
+
+    trainTypePicker?.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-train-type]");
+      if (!btn || !trainTypeInput) return;
+      trainTypeInput.value = String(btn.dataset.trainType || "");
+      if (compositionRows) compositionRows.innerHTML = "";
+      applyTrainTypeUI();
     });
 
     dateInput?.addEventListener("input", () => {
@@ -5521,8 +5619,20 @@ function renderCountryFiltersFromData(filters, stationData) {
 
     dateInput?.addEventListener("blur", validateDateInput);
 
-    if (compositionRows) appendCompositionRow();
+    if (dateInput) {
+      const now = new Date();
+      const dd = String(now.getDate()).padStart(2, "0");
+      const mm = String(now.getMonth() + 1).padStart(2, "0");
+      const yyyy = String(now.getFullYear());
+      dateInput.placeholder = `${dd}/${mm}/${yyyy}`;
+    }
+
+    if (trainTypeInput && !String(trainTypeInput.value || "").trim()) {
+      trainTypeInput.value = "trainset";
+    }
     applySelectedStationUI();
+    renderOperatorChips();
+    applyTrainTypeUI();
 
     try {
       const params = new URLSearchParams(window.location.search || "");
@@ -5542,8 +5652,18 @@ function renderCountryFiltersFromData(filters, stationData) {
         }
       }
       if (operatorParam) {
-        form.operator.value = operatorParam;
-        selectedOperator = operatorParam;
+        selectedOperators = Array.from(
+          new Set(
+            operatorParam
+              .split(",")
+              .map((part) => part.trim())
+              .filter(Boolean),
+          ),
+        );
+        selectedOperator = selectedOperators[0] || "";
+        isAddingOperator = false;
+        if (operatorInput) operatorInput.value = "";
+        renderOperatorChips();
         applySelectedOperatorUI();
       }
       if (dateParam) form.date.value = dateParam;
@@ -5566,16 +5686,19 @@ function renderCountryFiltersFromData(filters, stationData) {
       const stationSlug = String(pickedStation?.slug || "").trim().toLowerCase();
       const composition = syncCompositionTitle();
       const title = String(titleInput?.value || "").trim();
-      const image = String(imageInput?.value || "").trim();
+      const image = String(selectedImageDataUrl || imageInput?.value || "").trim();
       const date = String(dateInput?.value || "").trim();
-      const operator = String(operatorInput?.value || "").trim();
+      const operator = selectedOperators.join(", ").trim();
+      const trainType = String(trainTypeInput?.value || "").trim();
       const notes = String(form.notes?.value || "").trim();
       compositionRows?.classList.remove("is-error");
+      trainTypePicker?.classList.remove("is-error");
 
-      if (!stationSlug || !title || !image || !date || !operator) {
+      if (!stationSlug || !title || !image || !date || !operator || !trainType) {
         showStatus(status, "Please complete all required fields.", true);
         stationInput?.classList.toggle("is-error", !stationSlug || !pickedStation);
         compositionRows?.classList.toggle("is-error", !title);
+        trainTypePicker?.classList.toggle("is-error", !trainType);
         imageInput?.classList.toggle("is-error", !image);
         dateInput?.classList.toggle("is-error", !date);
         operatorInput?.classList.toggle("is-error", !operator);
@@ -5599,8 +5722,10 @@ function renderCountryFiltersFromData(filters, stationData) {
           stationName,
           stationProvince: String(pickedStation?.province || ""),
           stationCountry: String(pickedStation?.country || ""),
+          stationCoords: pickedStation?.coordinates || null,
           title,
           composition,
+          trainType,
           image,
           date,
           operator,
@@ -5626,8 +5751,14 @@ function renderCountryFiltersFromData(filters, stationData) {
       form.reset();
       selectedStation = null;
       selectedOperator = "";
+      selectedOperators = [];
+      isAddingOperator = false;
+      selectedImageDataUrl = "";
+      if (trainTypeInput) trainTypeInput.value = "";
       applySelectedStationUI();
       applySelectedOperatorUI();
+      applyTrainTypeUI();
+      renderOperatorChips();
       if (compositionRows) {
         compositionRows.innerHTML = "";
         compositionRows.classList.remove("is-error");
@@ -5924,7 +6055,10 @@ function renderCountryFiltersFromData(filters, stationData) {
               <h3>${item.title}</h3>
               <p><strong>Station:</strong> ${item.stationName || item.stationSlug}</p>
               <div class="moderation-preview">
-                <img src="${escHtml(item.image)}" alt="${escHtml(item.title)}" loading="lazy" />
+                ${item.image
+                  ? `<img src="${escHtml(item.image)}" alt="${escHtml(item.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false;" />`
+                  : ""}
+                <p class="moderation-preview-fallback" ${item.image ? "hidden" : ""}>Image preview unavailable. Check submitted image path.</p>
               </div>
               <p><strong>Date:</strong> ${item.date}</p>
               ${Array.isArray(item.composition) && item.composition.length > 0
@@ -5943,6 +6077,24 @@ function renderCountryFiltersFromData(filters, stationData) {
           `,
         )
         .join("");
+
+      list.querySelectorAll(".moderation-preview").forEach((preview) => {
+        const img = preview.querySelector("img");
+        const fallback = preview.querySelector(".moderation-preview-fallback");
+        if (!fallback) return;
+        if (!img) {
+          fallback.hidden = false;
+          return;
+        }
+        img.addEventListener("load", () => {
+          img.style.display = "";
+          fallback.hidden = true;
+        });
+        img.addEventListener("error", () => {
+          img.style.display = "none";
+          fallback.hidden = false;
+        });
+      });
     }
 
     list.addEventListener("click", (event) => {
@@ -5993,9 +6145,3 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
-
-
-
-
-
-

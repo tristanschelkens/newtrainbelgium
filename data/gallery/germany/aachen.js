@@ -11,6 +11,7 @@ station({
       id: "photo-0",
       operator: "DB",
       date: "16 February 2024",
+      photographer: "trainbelgium",
       alt: "Aachen 5x DoSto + BR146 005",
       numbers: "146 005",
       leadTraction: "BR146 005",

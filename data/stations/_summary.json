@@ -1,0 +1,242 @@
+[
+  {
+    "iso2": "AL",
+    "countryName": "Albania",
+    "fileName": "albania.js",
+    "count": 1
+  },
+  {
+    "iso2": "AD",
+    "countryName": "Andorra",
+    "fileName": "andorra.js",
+    "count": 2
+  },
+  {
+    "iso2": "AT",
+    "countryName": "Austria",
+    "fileName": "austria.js",
+    "count": 780
+  },
+  {
+    "iso2": "BY",
+    "countryName": "Belarus",
+    "fileName": "belarus.js",
+    "count": 1
+  },
+  {
+    "iso2": "BE",
+    "countryName": "Belgium",
+    "fileName": "belgium.js",
+    "count": 557
+  },
+  {
+    "iso2": "BA",
+    "countryName": "Bosnia and Herzegovina",
+    "fileName": "bosnia-and-herzegovina.js",
+    "count": 7
+  },
+  {
+    "iso2": "BG",
+    "countryName": "Bulgaria",
+    "fileName": "bulgaria.js",
+    "count": 60
+  },
+  {
+    "iso2": "HR",
+    "countryName": "Croatia",
+    "fileName": "croatia.js",
+    "count": 66
+  },
+  {
+    "iso2": "CZ",
+    "countryName": "Czech Republic",
+    "fileName": "czech-republic.js",
+    "count": 430
+  },
+  {
+    "iso2": "DK",
+    "countryName": "Denmark",
+    "fileName": "denmark.js",
+    "count": 215
+  },
+  {
+    "iso2": "EE",
+    "countryName": "Estonia",
+    "fileName": "estonia.js",
+    "count": 1
+  },
+  {
+    "iso2": "FI",
+    "countryName": "Finland",
+    "fileName": "finland.js",
+    "count": 16
+  },
+  {
+    "iso2": "FR",
+    "countryName": "France",
+    "fileName": "france.js",
+    "count": 4241
+  },
+  {
+    "iso2": "DE",
+    "countryName": "Germany",
+    "fileName": "germany.js",
+    "count": 6624
+  },
+  {
+    "iso2": "GR",
+    "countryName": "Greece",
+    "fileName": "greece.js",
+    "count": 1
+  },
+  {
+    "iso2": "HU",
+    "countryName": "Hungary",
+    "fileName": "hungary.js",
+    "count": 86
+  },
+  {
+    "iso2": "IE",
+    "countryName": "Ireland",
+    "fileName": "ireland.js",
+    "count": 167
+  },
+  {
+    "iso2": "IT",
+    "countryName": "Italy",
+    "fileName": "italy.js",
+    "count": 3713
+  },
+  {
+    "iso2": "LV",
+    "countryName": "Latvia",
+    "fileName": "latvia.js",
+    "count": 2
+  },
+  {
+    "iso2": "LI",
+    "countryName": "Liechtenstein",
+    "fileName": "liechtenstein.js",
+    "count": 2
+  },
+  {
+    "iso2": "LT",
+    "countryName": "Lithuania",
+    "fileName": "lithuania.js",
+    "count": 2
+  },
+  {
+    "iso2": "LU",
+    "countryName": "Luxembourg",
+    "fileName": "luxembourg.js",
+    "count": 62
+  },
+  {
+    "iso2": "MT",
+    "countryName": "Malta",
+    "fileName": "malta.js",
+    "count": 1
+  },
+  {
+    "iso2": "ME",
+    "countryName": "Montenegro",
+    "fileName": "montenegro.js",
+    "count": 6
+  },
+  {
+    "iso2": "NL",
+    "countryName": "Netherlands",
+    "fileName": "netherlands.js",
+    "count": 401
+  },
+  {
+    "iso2": "MK",
+    "countryName": "North Macedonia",
+    "fileName": "north-macedonia.js",
+    "count": 7
+  },
+  {
+    "iso2": "NO",
+    "countryName": "Norway",
+    "fileName": "norway.js",
+    "count": 629
+  },
+  {
+    "iso2": "PL",
+    "countryName": "Poland",
+    "fileName": "poland.js",
+    "count": 157
+  },
+  {
+    "iso2": "PT",
+    "countryName": "Portugal",
+    "fileName": "portugal.js",
+    "count": 40
+  },
+  {
+    "iso2": "RO",
+    "countryName": "Romania",
+    "fileName": "romania.js",
+    "count": 14
+  },
+  {
+    "iso2": "RU",
+    "countryName": "Russia",
+    "fileName": "russia.js",
+    "count": 5
+  },
+  {
+    "iso2": "RS",
+    "countryName": "Serbia",
+    "fileName": "serbia.js",
+    "count": 21
+  },
+  {
+    "iso2": "SK",
+    "countryName": "Slovakia",
+    "fileName": "slovakia.js",
+    "count": 48
+  },
+  {
+    "iso2": "SI",
+    "countryName": "Slovenia",
+    "fileName": "slovenia.js",
+    "count": 23
+  },
+  {
+    "iso2": "ES",
+    "countryName": "Spain",
+    "fileName": "spain.js",
+    "count": 1351
+  },
+  {
+    "iso2": "SE",
+    "countryName": "Sweden",
+    "fileName": "sweden.js",
+    "count": 81
+  },
+  {
+    "iso2": "CH",
+    "countryName": "Switzerland",
+    "fileName": "switzerland.js",
+    "count": 21916
+  },
+  {
+    "iso2": "TR",
+    "countryName": "Turkey",
+    "fileName": "turkey.js",
+    "count": 3
+  },
+  {
+    "iso2": "UA",
+    "countryName": "Ukraine",
+    "fileName": "ukraine.js",
+    "count": 25
+  },
+  {
+    "iso2": "GB",
+    "countryName": "United Kingdom",
+    "fileName": "united-kingdom.js",
+    "count": 2667
+  }
+]
