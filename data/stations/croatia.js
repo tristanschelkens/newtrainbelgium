@@ -27,7 +27,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.39779,
       "lng": 17.9268
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Blacko",
@@ -37,7 +37,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.31712,
       "lng": 17.77459
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Čaglin",
@@ -47,7 +47,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.34985,
       "lng": 17.98791
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Daranovci",
@@ -57,7 +57,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.33422,
       "lng": 17.57662
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Dervisaga",
@@ -67,7 +67,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.3298,
       "lng": 17.73134
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Doljanovci",
@@ -77,7 +77,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.44595,
       "lng": 17.74511
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Dubrovnik Airport",
@@ -117,7 +117,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.52379,
       "lng": 17.97906
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Gabos",
@@ -137,7 +137,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.33933,
       "lng": 17.53721
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Ivandol",
@@ -147,7 +147,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.342175,
       "lng": 17.509314
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Jakšić",
@@ -157,7 +157,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.35783,
       "lng": 17.76374
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Klostar",
@@ -167,7 +167,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.98128,
       "lng": 17.139534
     },
-    "province": "Koprivnica-Krizevci"
+    "province": "Koprivnica-Krievci"
   },
   {
     "name": "Kneževi Vinogradi",
@@ -197,7 +197,7 @@ window.STATIONS_CROATIA = [
       "lat": 46.16487,
       "lng": 16.817468
     },
-    "province": "Koprivnica-Krizevci"
+    "province": "Koprivnica-Krievci"
   },
   {
     "name": "Koška",
@@ -217,7 +217,7 @@ window.STATIONS_CROATIA = [
       "lat": 46.353613,
       "lng": 16.808461
     },
-    "province": "Medimurje"
+    "province": "Meimurje"
   },
   {
     "name": "Križic",
@@ -257,7 +257,7 @@ window.STATIONS_CROATIA = [
       "lat": 46.097681,
       "lng": 16.685426
     },
-    "province": "Koprivnica-Krizevci"
+    "province": "Koprivnica-Krievci"
   },
   {
     "name": "Lovinac",
@@ -277,7 +277,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.36819,
       "lng": 17.97452
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Mucna Reka",
@@ -287,7 +287,7 @@ window.STATIONS_CROATIA = [
       "lat": 46.124865,
       "lng": 16.763677
     },
-    "province": "Koprivnica-Krizevci"
+    "province": "Koprivnica-Krievci"
   },
   {
     "name": "Nova Kapela",
@@ -307,7 +307,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.320386,
       "lng": 17.633938
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Osijek",
@@ -347,7 +347,7 @@ window.STATIONS_CROATIA = [
       "lat": 43.675664,
       "lng": 16.11773
     },
-    "province": "Sibenik-Knin"
+    "province": "ibenik-Knin"
   },
   {
     "name": "Ploče",
@@ -367,7 +367,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.455399,
       "lng": 18.221876
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Podravska Moslavina",
@@ -407,7 +407,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.36309,
       "lng": 17.79398
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Rijeka",
@@ -437,7 +437,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.30908,
       "lng": 17.99333
     },
-    "province": "Pozega-Slavonia"
+    "province": "Poega-Slavonia"
   },
   {
     "name": "Satnica",
@@ -467,7 +467,7 @@ window.STATIONS_CROATIA = [
       "lat": 43.730039,
       "lng": 15.898106
     },
-    "province": "Sibenik-Knin"
+    "province": "ibenik-Knin"
   },
   {
     "name": "Sisak",
@@ -547,7 +547,7 @@ window.STATIONS_CROATIA = [
       "lat": 45.945233,
       "lng": 16.621099
     },
-    "province": "Koprivnica-Krizevci"
+    "province": "Koprivnica-Krievci"
   },
   {
     "name": "Ubli",
@@ -567,7 +567,7 @@ window.STATIONS_CROATIA = [
       "lat": 46.3042,
       "lng": 16.334398
     },
-    "province": "Varazdin"
+    "province": "Varadin"
   },
   {
     "name": "Veliškovci",

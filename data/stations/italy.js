@@ -8967,7 +8967,7 @@ window.STATIONS_ITALY = [
       "lat": 44.145476,
       "lng": 12.24951
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Cesenatico",
@@ -8977,7 +8977,7 @@ window.STATIONS_ITALY = [
       "lat": 44.200562,
       "lng": 12.391279
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Cesi",
@@ -12697,7 +12697,7 @@ window.STATIONS_ITALY = [
       "lat": 44.224284,
       "lng": 12.054831
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Forlimpopoli-Bertinoro",
@@ -12707,7 +12707,7 @@ window.STATIONS_ITALY = [
       "lat": 44.194179,
       "lng": 12.128147
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Formia",
@@ -13437,7 +13437,7 @@ window.STATIONS_ITALY = [
       "lat": 44.116746,
       "lng": 12.327527
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Gambolò-Remondò",
@@ -13517,7 +13517,7 @@ window.STATIONS_ITALY = [
       "lat": 44.170556,
       "lng": 12.432333
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Gavignano Sabino",
@@ -30927,7 +30927,7 @@ window.STATIONS_ITALY = [
       "lat": 44.095199,
       "lng": 12.404223
     },
-    "province": "Forli-Cesena"
+    "province": "Forl-Cesena"
   },
   {
     "name": "Savignano-Greci",

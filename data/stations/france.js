@@ -147,7 +147,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.441297,
       "lng": 5.237088
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Aéroport Paris Orly",
@@ -197,7 +197,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.31728,
       "lng": 3.466203
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Agen",
@@ -287,7 +287,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.033333,
       "lng": -0.066667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Aguessac",
@@ -377,7 +377,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.014788,
       "lng": 3.198262
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Aigues-Mortes",
@@ -397,7 +397,7 @@ window.STATIONS_FRANCE = [
       "lat": 43,
       "lng": 1.883333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Aiguillon",
@@ -427,7 +427,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.913888,
       "lng": 6.337299
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Ailly-sur-Noye",
@@ -487,7 +487,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.170501,
       "lng": 5.158245
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Aiton - Bourgneuf",
@@ -507,7 +507,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.614206,
       "lng": 2.398447
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Aix-en-Provence Centre",
@@ -517,7 +517,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.522912,
       "lng": 5.445345
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Aix-en-Provence TGV",
@@ -527,7 +527,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.455237,
       "lng": 5.317534
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Aix-les-Bains - Le Revard",
@@ -557,7 +557,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.75212,
       "lng": 4.771782
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Alban",
@@ -677,7 +677,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.874921,
       "lng": 4.832874
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Albine",
@@ -737,7 +737,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.258939,
       "lng": 1.473147
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Allenc",
@@ -747,7 +747,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.541296,
       "lng": 3.663893
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Allex",
@@ -757,7 +757,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.766667,
       "lng": 4.916667
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Alleyras",
@@ -857,7 +857,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.375512,
       "lng": 3.577938
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Ambazac",
@@ -887,7 +887,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.549265,
       "lng": 3.734965
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Ambert Ville",
@@ -897,7 +897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.549219,
       "lng": 3.734896
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Amboise",
@@ -977,7 +977,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.733333,
       "lng": 6.066667
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Ampilly-le-Sec",
@@ -987,7 +987,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.8,
       "lng": 4.516667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Amplepuis",
@@ -997,7 +997,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.970982,
       "lng": 4.326844
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Ancenis",
@@ -1037,7 +1037,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.883333,
       "lng": 0.333333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Ancy-sur-Moselle",
@@ -1087,7 +1087,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.316667,
       "lng": 0.066667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Andrézieux",
@@ -1227,7 +1227,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.243681,
       "lng": 4.668642
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Annonay Zone Industrielle",
@@ -1237,7 +1237,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.241144,
       "lng": 4.718285
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Anor",
@@ -1277,7 +1277,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.939304,
       "lng": 4.719807
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Anstaing",
@@ -1327,7 +1327,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.116667,
       "lng": 0.133333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Anvin",
@@ -1357,7 +1357,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.716667,
       "lng": 5.05
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Apach",
@@ -1417,7 +1417,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.457011,
       "lng": 5.585475
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Arcachon",
@@ -1467,7 +1467,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.313234,
       "lng": 5.367622
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Arengosse",
@@ -1497,7 +1497,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.1,
       "lng": -0.05
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Argelès-sur-Mer",
@@ -1507,7 +1507,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.54397,
       "lng": 3.022349
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Argent-sur-Sauldre",
@@ -1567,7 +1567,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.246011,
       "lng": -4.316833
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Arlanc",
@@ -1577,7 +1577,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.416667,
       "lng": 3.733333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Arles",
@@ -1587,7 +1587,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.684853,
       "lng": 4.63203
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Arleux",
@@ -1687,7 +1687,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.904577,
       "lng": 0.360403
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Arrest Usine Mélius",
@@ -1737,7 +1737,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.216667,
       "lng": -1.516667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Ars-sur-Moselle",
@@ -1777,7 +1777,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.133333,
       "lng": 1.433333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Artigueloutan",
@@ -1797,7 +1797,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.066667,
       "lng": 0
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Artigues (Lot-et-Garonne)",
@@ -1857,7 +1857,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.4,
       "lng": 3.6
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Aspres-sur-Buëch",
@@ -1937,7 +1937,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.296045,
       "lng": 5.56658
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Aubazine - St-Hilaire",
@@ -1947,7 +1947,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.181678,
       "lng": 1.641235
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Aubenas",
@@ -1957,7 +1957,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.610982,
       "lng": 4.407202
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Aubenas Gare Routière",
@@ -1967,7 +1967,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.611318,
       "lng": 4.408111
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Aubenas Place de la Paix",
@@ -1977,7 +1977,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.617974,
       "lng": 4.38921
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Aubiac",
@@ -1997,7 +1997,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.983812,
       "lng": 3.160512
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Aubie - St-Antoine",
@@ -2027,7 +2027,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.563411,
       "lng": 4.614828
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Aubigné-Racan",
@@ -2287,7 +2287,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.792057,
       "lng": 3.161433
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Aulnoye-Aymeries",
@@ -2307,7 +2307,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.8,
       "lng": 1.333333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Aumale",
@@ -2327,7 +2327,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.71817,
       "lng": 3.283549
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Auneau",
@@ -2367,7 +2367,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.25,
       "lng": 0.1
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Auriac",
@@ -2417,7 +2417,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.55,
       "lng": 5.7
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Autreville",
@@ -2437,7 +2437,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.954875,
       "lng": 4.292908
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Autun Lycée technique",
@@ -2447,7 +2447,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.928761,
       "lng": 4.22012
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Auxerre-St-Gervais",
@@ -2477,7 +2477,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.192663,
       "lng": 5.37737
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Auzances",
@@ -2567,7 +2567,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.921586,
       "lng": 4.786079
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Avignonet",
@@ -2647,7 +2647,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.816667,
       "lng": 3.866667
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Ax-les-Thermes",
@@ -2657,7 +2657,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.724797,
       "lng": 1.833252
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Ax-les-Thermes Centre",
@@ -2667,7 +2667,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.716667,
       "lng": 1.833333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Aÿ",
@@ -2727,7 +2727,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.016667,
       "lng": -0.1
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Azay-le-Rideau",
@@ -2787,7 +2787,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.435883,
       "lng": 2.909601
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Babinière",
@@ -2817,7 +2817,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.977705,
       "lng": 0.632579
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bagnac",
@@ -2837,7 +2837,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.068723,
       "lng": 0.148487
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bagnoles-de-l’Orne Église",
@@ -2867,7 +2867,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.528613,
       "lng": 3.628178
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Bagnols-sur-Cèze",
@@ -2887,7 +2887,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.653323,
       "lng": 4.007159
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Bailleau-le-Pin",
@@ -2987,7 +2987,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.504164,
       "lng": 4.381719
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Balbigny",
@@ -3027,7 +3027,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.482011,
       "lng": 3.456098
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Banassac - La Canourgue",
@@ -3037,7 +3037,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.447763,
       "lng": 3.195852
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Bandol",
@@ -3057,7 +3057,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.926747,
       "lng": -3.706527
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Bannay",
@@ -3097,7 +3097,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.482958,
       "lng": 3.12505
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Bar-le-Duc",
@@ -3197,7 +3197,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.231003,
       "lng": 0.489462
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Baraqueville - Carcenac-Peyralès",
@@ -3227,7 +3227,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.935871,
       "lng": -2.166274
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Barberey Centre Commercial",
@@ -3287,7 +3287,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.9,
       "lng": 0.066667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Barentin",
@@ -3317,7 +3317,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.866667,
       "lng": 5.85
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Barisey-la-Côte",
@@ -3337,7 +3337,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.499264,
       "lng": 3.410979
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Barnay",
@@ -3347,7 +3347,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.083333,
       "lng": 4.333333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Baroncourt",
@@ -3527,7 +3527,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.783333,
       "lng": 6.016667
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Baule",
@@ -3637,7 +3637,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.3,
       "lng": 0.083333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Baziège",
@@ -3687,7 +3687,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.865221,
       "lng": 3.317994
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Beau-Marais",
@@ -3717,7 +3717,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.833333,
       "lng": 4.8
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Beaugency",
@@ -3777,7 +3777,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.023053,
       "lng": 4.848379
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Beaupuy Clinique",
@@ -3877,7 +3877,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.866667,
       "lng": 4.916667
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Beauvoir-sur-Mer St-Nicolas",
@@ -3887,7 +3887,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.916859,
       "lng": -2.046252
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Beauvoir-sur-Niort",
@@ -3897,7 +3897,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.176886,
       "lng": -0.468754
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Beauvoisin",
@@ -3937,7 +3937,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.608697,
       "lng": 3.149569
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Bédarrides",
@@ -4037,7 +4037,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.59359,
       "lng": -3.322853
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Bellegarde-sur-Valserine",
@@ -4087,7 +4087,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.111917,
       "lng": 4.729028
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Belleville-sur-Vie",
@@ -4097,7 +4097,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.788316,
       "lng": -1.434667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Bellignat",
@@ -4137,7 +4137,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.561797,
       "lng": 3.751892
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Belz - Ploemel",
@@ -4157,7 +4157,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.458078,
       "lng": 1.916726
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Bénesse-Maremne",
@@ -4187,7 +4187,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.373362,
       "lng": -0.592757
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Benfeld",
@@ -4267,7 +4267,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.166667,
       "lng": 0.116667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bernac-Dessus",
@@ -4277,7 +4277,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.166667,
       "lng": 0.116667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bernay",
@@ -4297,7 +4297,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.500886,
       "lng": 5.178951
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Bersac",
@@ -4347,7 +4347,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.99979,
       "lng": 0.617616
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bertren Nord",
@@ -4357,7 +4357,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.006291,
       "lng": 0.620273
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bertren Sud",
@@ -4367,7 +4367,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.992888,
       "lng": 0.626907
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bertrichamps",
@@ -4467,7 +4467,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.083333,
       "lng": 1.833333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Bétaille",
@@ -4547,7 +4547,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.33633,
       "lng": 3.218873
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Biache-St-Vaast",
@@ -4757,7 +4757,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.373443,
       "lng": 4.741076
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Blangy-sur-Bresle",
@@ -4797,7 +4797,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.694064,
       "lng": 4.391359
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Blazac",
@@ -4847,7 +4847,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.883333,
       "lng": 5.866667
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Blonville-sur-Mer - Benerville",
@@ -4917,7 +4917,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.906584,
       "lng": 4.575043
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Bois-d’Oingt Centre",
@@ -4927,7 +4927,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.913483,
       "lng": 4.568614
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Bois-le-Roi",
@@ -5027,7 +5027,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.497873,
       "lng": 2.087559
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Bonnemain",
@@ -5137,7 +5137,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.204287,
       "lng": 0.203938
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bordes - Lhez",
@@ -5147,7 +5147,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.2,
       "lng": 0.216667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bords",
@@ -5287,7 +5287,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.966667,
       "lng": -2
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Boulazac Isle Manoire",
@@ -5387,7 +5387,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.432407,
       "lng": 1.94867
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Bourg-St-Andéol Hôtel de Ville",
@@ -5397,7 +5397,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.366667,
       "lng": 4.65
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Bourg-St-Bernard",
@@ -5467,7 +5467,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.583954,
       "lng": 5.273401
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Bourgtheroulde-Thuit-Hébert",
@@ -5487,7 +5487,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.833333,
       "lng": 0.333333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Bournezeau",
@@ -5497,7 +5497,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.651826,
       "lng": -1.180617
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Bourth",
@@ -5657,7 +5657,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.425729,
       "lng": 3.324219
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Brax - Leguevin",
@@ -5677,7 +5677,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.17162,
       "lng": 4.2869
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Brazey-en-Plaine",
@@ -5687,7 +5687,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.131455,
       "lng": 5.212128
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Bréauté - Beuzeville",
@@ -5737,7 +5737,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.669204,
       "lng": -3.196269
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Bressuire",
@@ -5747,7 +5747,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.838446,
       "lng": -0.496327
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Brest",
@@ -5757,7 +5757,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.38811,
       "lng": -4.478903
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Bretagne-de-Marsan",
@@ -5817,7 +5817,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.390044,
       "lng": 5.110584
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Bretoncelles",
@@ -5957,7 +5957,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.673772,
       "lng": 4.76366
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Brignoles",
@@ -5977,7 +5977,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.26245,
       "lng": 5.901472
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Brimeux",
@@ -5997,7 +5997,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.908578,
       "lng": 4.20699
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Brion - Montréal-la-Cluse",
@@ -6017,7 +6017,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.05,
       "lng": -0.183333
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Brionne",
@@ -6057,7 +6057,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.152618,
       "lng": 1.528655
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Broons",
@@ -6067,7 +6067,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.333296,
       "lng": -2.235658
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Brou",
@@ -6087,7 +6087,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.861944,
       "lng": 4.2961
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Bruère-Allichamps",
@@ -6207,7 +6207,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.600597,
       "lng": 1.924815
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Buire-sur-l’Ancre",
@@ -6307,7 +6307,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.713068,
       "lng": 4.700958
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Buzançais",
@@ -6377,7 +6377,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.886671,
       "lng": 0.350471
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Cadix - Cuq-Toulzat",
@@ -6527,7 +6527,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.40622,
       "lng": -3.419782
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Calonne-Ricouart",
@@ -6547,7 +6547,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.274968,
       "lng": -4.596148
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Cambes Village",
@@ -6617,7 +6617,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.016667,
       "lng": 0.166667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Campsas Centre",
@@ -6677,7 +6677,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.1028,
       "lng": 0.4436
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Cantin",
@@ -6747,7 +6747,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.333333,
       "lng": 3.033333
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Capvern",
@@ -6757,7 +6757,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.103345,
       "lng": 0.329639
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Capvern-les-Bains",
@@ -6767,7 +6767,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.103353,
       "lng": 0.329633
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Carantilly - Marigny",
@@ -6837,7 +6837,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.278002,
       "lng": -3.562217
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Carhaix République",
@@ -6847,7 +6847,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.260594,
       "lng": -3.592269
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Carignan",
@@ -6897,7 +6897,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.340524,
       "lng": -3.490882
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Carnoles",
@@ -6937,7 +6937,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.336592,
       "lng": 5.153594
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Cartigny",
@@ -6957,7 +6957,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.787812,
       "lng": 4.730938
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Cassel",
@@ -6977,7 +6977,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.23406,
       "lng": 5.553055
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Castagnède-du-Salat",
@@ -7017,7 +7017,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.294422,
       "lng": 0.5055
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Castelnau-Rivière-Basse",
@@ -7027,7 +7027,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.581098,
       "lng": -0.027069
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Castelnaudary",
@@ -7147,7 +7147,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.284426,
       "lng": -2.155593
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Caumont",
@@ -7157,7 +7157,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.033333,
       "lng": 1.1
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Caussade (Hautes Pyrénées)",
@@ -7167,7 +7167,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.516667,
       "lng": 0.033333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Caussade (Tarn-et-Garonne)",
@@ -7187,7 +7187,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.891223,
       "lng": -0.113677
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Cavaillon",
@@ -7227,7 +7227,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.054725,
       "lng": 1.50429
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Cazaux-Layrisse",
@@ -7267,7 +7267,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.4,
       "lng": 2.983333
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Ceilhes - Roqueredonde",
@@ -7277,7 +7277,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.812266,
       "lng": 3.155158
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Ceint-d’Eau Village",
@@ -7337,7 +7337,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.441773,
       "lng": 3.163403
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Cercottes",
@@ -7357,7 +7357,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.857882,
       "lng": 3.645203
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Cérences Centre",
@@ -7377,7 +7377,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.817688,
       "lng": -0.668993
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Cernay",
@@ -7407,7 +7407,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.56116,
       "lng": 5.376118
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Cesson-Sévigné",
@@ -7467,7 +7467,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.438357,
       "lng": 5.428101
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Chabreloche",
@@ -7477,7 +7477,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.883333,
       "lng": 3.7
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Chabris",
@@ -7497,7 +7497,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.907269,
       "lng": 4.749682
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Chaingy-Fourneaux-Plage",
@@ -7537,7 +7537,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.843962,
       "lng": -1.871879
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Chalon-sur-Saône",
@@ -7547,7 +7547,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.781612,
       "lng": 4.843454
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Chalonnes",
@@ -7617,7 +7617,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.016667,
       "lng": 4.5
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Chambourg",
@@ -7657,7 +7657,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.981641,
       "lng": 4.506935
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Chamonix Aiguille du Midi",
@@ -7727,7 +7727,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.70314,
       "lng": 6.701277
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Champagnole",
@@ -7797,7 +7797,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.473979,
       "lng": 3.345412
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Chanas",
@@ -7807,7 +7807,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.31881,
       "lng": 4.818492
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Change",
@@ -7817,7 +7817,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.933333,
       "lng": 4.633333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Chantenay",
@@ -7837,7 +7837,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.72832,
       "lng": 3.172084
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Chantilly - Gouvieux",
@@ -7857,7 +7857,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.689847,
       "lng": -1.054414
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Chaourse",
@@ -7887,7 +7887,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.698489,
       "lng": 4.764301
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Charbonnières-les-Bains",
@@ -7897,7 +7897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.782142,
       "lng": 4.735912
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Chargey-les-Gray",
@@ -7907,7 +7907,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.483333,
       "lng": 5.583333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Charix - Lalleyriat",
@@ -7947,7 +7947,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.866667,
       "lng": 4.833333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Charmoille",
@@ -7957,7 +7957,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.666667,
       "lng": 6.1
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Charnay - Condemine",
@@ -7967,7 +7967,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.310672,
       "lng": 4.785209
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Charolles",
@@ -7977,7 +7977,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.433333,
       "lng": 4.283333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Charost",
@@ -8007,7 +8007,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.58237,
       "lng": 4.794843
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Chasseneuil-du-Poitou",
@@ -8037,7 +8037,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.553985,
       "lng": 3.839932
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Château de Chambord",
@@ -8227,7 +8227,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.201603,
       "lng": -4.094308
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Châteauneuf - Bujaleuf",
@@ -8297,7 +8297,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.533219,
       "lng": -2.974678
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Châtellerault",
@@ -8327,7 +8327,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.875182,
       "lng": 4.645116
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Châtillon-en-Michaille",
@@ -8347,7 +8347,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.861261,
       "lng": 4.574829
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Châtillon-sur-Seine Avenue Joffre",
@@ -8357,7 +8357,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.834793,
       "lng": 4.548442
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Châtillon-sur-Seine Ville",
@@ -8367,7 +8367,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.860808,
       "lng": 4.572237
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Chatonrupt",
@@ -8407,7 +8407,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.207455,
       "lng": 4.345428
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Chaugey",
@@ -8417,7 +8417,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.087204,
       "lng": 5.255191
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Chaulnes",
@@ -8517,7 +8517,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.713834,
       "lng": 6.03311
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Chavagnes-les-Redoux",
@@ -8527,7 +8527,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.716667,
       "lng": -0.9
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Chazay - Marcilly",
@@ -8537,7 +8537,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.872962,
       "lng": 4.725222
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Chedde",
@@ -8557,7 +8557,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.892477,
       "lng": 4.675842
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Chelan",
@@ -8677,7 +8677,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.885545,
       "lng": 4.622263
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Chevaigné",
@@ -8757,7 +8757,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.524661,
       "lng": 3.263818
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Chissay-en-Touraine",
@@ -8827,7 +8827,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.703499,
       "lng": 4.66007
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Chorges",
@@ -8917,7 +8917,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.604091,
       "lng": 4.299715
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Civray le Grand Entrevin",
@@ -8937,7 +8937,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.859183,
       "lng": 4.718241
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Cize - Bolozon",
@@ -8957,7 +8957,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.270556,
       "lng": 0.502344
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Clacy-Mons",
@@ -8997,7 +8997,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.466698,
       "lng": 3.520767
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Claracq",
@@ -9017,7 +9017,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.827244,
       "lng": 5.605062
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Clères",
@@ -9067,7 +9067,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.778945,
       "lng": 3.100543
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Clermont-Ferrand la Pardieu",
@@ -9077,7 +9077,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.766947,
       "lng": 3.134163
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Clermont-Ferrand la Rotonde",
@@ -9087,7 +9087,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.768095,
       "lng": 3.09097
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Clermont-lès-Fermes",
@@ -9147,7 +9147,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.43362,
       "lng": 4.662505
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Cluses",
@@ -9177,7 +9177,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.480316,
       "lng": -3.273802
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Cobrieux",
@@ -9237,7 +9237,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.526944,
       "lng": 3.078232
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Collonges - Fontaines",
@@ -9247,7 +9247,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.82911,
       "lng": 4.846614
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Collonges (Ain)",
@@ -9267,7 +9267,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.221253,
       "lng": 5.265348
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Colmar",
@@ -9417,7 +9417,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.877671,
       "lng": -3.920531
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Concarneau Port",
@@ -9427,7 +9427,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.867055,
       "lng": -3.927593
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Conches",
@@ -9597,7 +9597,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.254807,
       "lng": 3.677323
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Corcieux - Vanémont",
@@ -9647,7 +9647,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.048866,
       "lng": 4.349394
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Corgoloin",
@@ -9657,7 +9657,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.084198,
       "lng": 4.917123
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Cormatin",
@@ -9667,7 +9667,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.55,
       "lng": 4.683333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Cormenon les Charmilles",
@@ -9707,7 +9707,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.215176,
       "lng": 1.697848
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Cornimont",
@@ -9757,7 +9757,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.32948,
       "lng": 1.881079
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Corseul - Languenan",
@@ -9767,7 +9767,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.496057,
       "lng": -2.141433
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Cosne-sur-Loire",
@@ -9777,7 +9777,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.413996,
       "lng": 2.931981
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Costaros",
@@ -9887,7 +9887,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.748775,
       "lng": 4.492997
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Courçay - Tauxigny",
@@ -9947,7 +9947,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.466667,
       "lng": 2.733333
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Courpière",
@@ -9957,7 +9957,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.757943,
       "lng": 3.543376
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Coursan",
@@ -10047,7 +10047,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.066667,
       "lng": 1.833333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Coutras",
@@ -10067,7 +10067,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.766667,
       "lng": 4.616667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Couzon-au-Mont-d’Or",
@@ -10077,7 +10077,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.848674,
       "lng": 4.829479
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Cramoisy",
@@ -10137,7 +10137,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.246176,
       "lng": 4.784023
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Creil",
@@ -10157,7 +10157,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.366667,
       "lng": 3.016667
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Creissels",
@@ -10177,7 +10177,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.803835,
       "lng": 4.892292
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Crépy-Couvron",
@@ -10207,7 +10207,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.730155,
       "lng": 5.016097
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Creutzwald Gare Routière",
@@ -10297,7 +10297,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.408832,
       "lng": 5.019645
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Cros-de-Cagnes",
@@ -10337,7 +10337,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.247929,
       "lng": -4.49285
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Cruas Centre",
@@ -10347,7 +10347,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.65,
       "lng": 4.766667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Cubzac-les-Ponts",
@@ -10377,7 +10377,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.05826,
       "lng": -1.253301
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Cuinchy",
@@ -10537,7 +10537,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.556267,
       "lng": 5.679883
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Dancourt",
@@ -10617,7 +10617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.815143,
       "lng": 4.761345
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Dardilly les Mouilles",
@@ -10627,7 +10627,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.796741,
       "lng": 4.760029
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Darsac",
@@ -10647,7 +10647,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.602169,
       "lng": 2.292465
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Daudes",
@@ -10667,7 +10667,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.25,
       "lng": 4.716667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Dax Hôpital",
@@ -10737,7 +10737,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.837362,
       "lng": 3.467274
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Dégagnac",
@@ -10867,7 +10867,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.916667,
       "lng": 4.65
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Diarville",
@@ -10887,7 +10887,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.758255,
       "lng": 5.363205
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Diebling",
@@ -10967,7 +10967,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.48516,
       "lng": 3.987654
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Dijon Porte Neuve",
@@ -10977,7 +10977,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.322806,
       "lng": 5.054872
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Dijon Ville",
@@ -10987,7 +10987,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.32337,
       "lng": 5.027208
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Dinan",
@@ -10997,7 +10997,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.456764,
       "lng": -2.053542
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Dingé",
@@ -11037,7 +11037,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.392634,
       "lng": -4.285503
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Dirol",
@@ -11047,7 +11047,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.316667,
       "lng": 3.65
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Dissay",
@@ -11227,7 +11227,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.839781,
       "lng": 4.734483
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Dommartin-Remiencourt",
@@ -11337,7 +11337,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.443365,
       "lng": 4.704626
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Dorat la Chauprillade",
@@ -11347,7 +11347,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.901986,
       "lng": 3.518755
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Dorlisheim",
@@ -11417,7 +11417,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.093363,
       "lng": -4.330373
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Doudeville",
@@ -11517,7 +11517,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.016667,
       "lng": 4.333333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Drap - Cantaron",
@@ -11637,7 +11637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.794771,
       "lng": 3.048557
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Duttlenheim",
@@ -11657,7 +11657,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.35,
       "lng": 4.283333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Eauze",
@@ -11717,7 +11717,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.533333,
       "lng": 5.166667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Echirolles",
@@ -11727,7 +11727,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.153022,
       "lng": 5.718943
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "École-Valentin",
@@ -11787,7 +11787,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.55,
       "lng": 5.55
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Écully - La Demi-Lune",
@@ -11797,7 +11797,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.765716,
       "lng": 4.779524
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Égletons",
@@ -11807,7 +11807,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.402382,
       "lng": 2.065124
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Eguelshardt - Abri",
@@ -11867,7 +11867,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.597114,
       "lng": 2.963585
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Éloyes",
@@ -11997,7 +11997,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.985932,
       "lng": 4.519281
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Épinac la Garenne",
@@ -12007,7 +12007,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.986004,
       "lng": 4.533727
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Épinac Quartier Dinay",
@@ -12017,7 +12017,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.998958,
       "lng": 4.497078
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Épinal",
@@ -12037,7 +12037,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.5,
       "lng": 4.166667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Épouville",
@@ -12077,7 +12077,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.847869,
       "lng": 1.290196
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Ernée",
@@ -12097,7 +12097,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.442777,
       "lng": 2.029038
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Erstein",
@@ -12167,7 +12167,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.33915,
       "lng": 0.13289
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Escot",
@@ -12247,7 +12247,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.463243,
       "lng": 2.017907
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Esténos",
@@ -12287,7 +12287,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.540285,
       "lng": 4.868273
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Esvres-sur-Indre",
@@ -12337,7 +12337,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.7,
       "lng": 4.433333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Étalans",
@@ -12367,7 +12367,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.867908,
       "lng": 4.183842
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Eterpigny",
@@ -12407,7 +12407,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.833333,
       "lng": 4.9
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Étretat",
@@ -12537,7 +12537,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.966667,
       "lng": 1.166667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Eygun",
@@ -12557,7 +12557,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.645315,
       "lng": 2.461002
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Eymoutiers - Vassiviere",
@@ -12867,7 +12867,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.665858,
       "lng": 4.853135
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Feyzin Arrêt TCL",
@@ -12877,7 +12877,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.665843,
       "lng": 4.853597
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Figeac",
@@ -12937,7 +12937,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.75,
       "lng": 4.683333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Flavy-le-Martel",
@@ -13007,7 +13007,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.844994,
       "lng": 4.660382
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Fleurville - Pont-de-Vaux",
@@ -13017,7 +13017,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.450928,
       "lng": 4.884072
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Flez-Cuzy - Tannay",
@@ -13027,7 +13027,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.363058,
       "lng": 3.614993
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Floirac",
@@ -13067,7 +13067,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.969746,
       "lng": 1.607147
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Folligny",
@@ -13107,7 +13107,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.496775,
       "lng": 2.033377
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Font-Romeu-Odeillo-Via",
@@ -13117,7 +13117,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.491232,
       "lng": 2.038392
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Fontainebleau - Avon",
@@ -13137,7 +13137,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.851211,
       "lng": 4.775069
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Fontan - Saorge",
@@ -13157,7 +13157,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.46786,
       "lng": -0.809593
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Fontenay-le-Comte Pôle Santé",
@@ -13167,7 +13167,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.46774,
       "lng": -0.82483
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Fontenoy-sur-Moselle",
@@ -13187,7 +13187,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.513806,
       "lng": 2.188659
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Forbach",
@@ -13247,7 +13247,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.23452,
       "lng": -0.406945
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Fos-sur-Mer",
@@ -13257,7 +13257,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.428029,
       "lng": 4.974579
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Foucart - Alvimare",
@@ -13307,7 +13307,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.665304,
       "lng": -1.231972
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Fougères",
@@ -13347,7 +13347,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.018968,
       "lng": 3.087367
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Fourmies",
@@ -13377,7 +13377,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.816667,
       "lng": 3.716667
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Fraisse - Unieux",
@@ -13407,7 +13407,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.733647,
       "lng": 4.769373
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Franois",
@@ -13437,7 +13437,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.923824,
       "lng": 0.367371
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Freistroff",
@@ -13467,7 +13467,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.55,
       "lng": 5.866667
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Fresnoy-le-Grand",
@@ -13607,7 +13607,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.552715,
       "lng": 5.293479
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Frontenex",
@@ -13627,7 +13627,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.444934,
       "lng": 3.758689
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Fronville",
@@ -13667,7 +13667,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.727592,
       "lng": -3.128453
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Fumay",
@@ -13817,7 +13817,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.642107,
       "lng": 4.330058
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Gambsheim",
@@ -13887,7 +13887,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.042999,
       "lng": 3.085877
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Gardanne",
@@ -13897,7 +13897,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.455992,
       "lng": 5.463332
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Gardonne",
@@ -13967,7 +13967,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.233333,
       "lng": 0.483333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Gazeran",
@@ -14007,7 +14007,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.478542,
       "lng": 5.129307
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Gemil Mairie",
@@ -14037,7 +14037,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.581218,
       "lng": 4.237997
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Générac",
@@ -14057,7 +14057,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.244579,
       "lng": 5.223406
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Génolhac",
@@ -14107,7 +14107,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.833588,
       "lng": 3.143105
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Gestel",
@@ -14127,7 +14127,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.8,
       "lng": 5.933333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Gevrey-Chambertin",
@@ -14137,7 +14137,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.227469,
       "lng": 4.999058
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Gex Centre",
@@ -14167,7 +14167,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.8,
       "lng": 2.483333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Gien",
@@ -14217,7 +14217,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.537014,
       "lng": 3.782161
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Gimont - Cahuzac",
@@ -14257,7 +14257,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.699774,
       "lng": 3.594336
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Gisors",
@@ -14287,7 +14287,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.595766,
       "lng": 4.772575
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Givors Ville",
@@ -14297,7 +14297,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.584948,
       "lng": 4.766086
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Givry",
@@ -14307,7 +14307,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.783333,
       "lng": 4.75
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Gizy",
@@ -14367,7 +14367,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.341941,
       "lng": 5.974136
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Gondrexange",
@@ -14467,7 +14467,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.560998,
       "lng": -3.166819
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Gournay - Ferrières",
@@ -14597,7 +14597,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.733333,
       "lng": 4.916667
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Granville",
@@ -14627,7 +14627,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.666667,
       "lng": 6.083333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Graulhet Place Jourdain",
@@ -14657,7 +14657,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.45,
       "lng": 5.583333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Grémonville",
@@ -14697,7 +14697,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.191493,
       "lng": 5.714584
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Grenoble Gare Routière",
@@ -14707,7 +14707,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.191029,
       "lng": 5.715422
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Grenoble Universités Gières",
@@ -14717,7 +14717,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.184877,
       "lng": 5.78474
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Greny",
@@ -14787,7 +14787,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.419299,
       "lng": 4.90775
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Grigny le Sablon",
@@ -14797,7 +14797,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.60726,
       "lng": 4.796144
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Grilly",
@@ -14847,7 +14847,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.85,
       "lng": 0.35
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Guchen",
@@ -14857,7 +14857,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.866667,
       "lng": 0.333333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Gudmont",
@@ -14957,7 +14957,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.933333,
       "lng": 4.866667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Guillerval",
@@ -14977,7 +14977,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.485268,
       "lng": -3.999616
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Guingamp",
@@ -14987,7 +14987,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.555659,
       "lng": -3.143343
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Gujan-Mestras",
@@ -15297,7 +15297,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.016667,
       "lng": 0.366667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Heiligenberg - Mollkirch",
@@ -15407,7 +15407,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.55,
       "lng": 0
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Héricourt",
@@ -15417,7 +15417,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.57297,
       "lng": 6.769198
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Hermes-Berthecourt",
@@ -15527,7 +15527,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.133333,
       "lng": 0.1
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Hirson",
@@ -15747,7 +15747,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.233333,
       "lng": 0
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Idron RN",
@@ -15787,7 +15787,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.66824,
       "lng": 2.624286
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Illfurth",
@@ -15817,7 +15817,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.933354,
       "lng": 3.259711
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Incarville",
@@ -15897,7 +15897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.6898,
       "lng": 4.8327
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Is-sur-Tille",
@@ -15907,7 +15907,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.520454,
       "lng": 5.129481
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Isbergues",
@@ -15937,7 +15937,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.543884,
       "lng": 3.25398
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Issoire Lycée Deville",
@@ -15947,7 +15947,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.53244,
       "lng": 3.267372
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Issoire Lycée Murat",
@@ -15957,7 +15957,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.555002,
       "lng": 3.250454
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Issoudun",
@@ -15987,7 +15987,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.515395,
       "lng": 4.980427
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Iteuil",
@@ -16027,7 +16027,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.066667,
       "lng": 0.383333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Jacques-Monod-la-Demi-Lieue",
@@ -16067,7 +16067,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.085454,
       "lng": 5.742449
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Jarville-la-Malgrange",
@@ -16087,7 +16087,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.54347,
       "lng": 2.139337
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Jaunay-Clan",
@@ -16187,7 +16187,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.561525,
       "lng": 2.311146
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Joncherey",
@@ -16277,7 +16277,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.483333,
       "lng": 4.233333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Juan-les-Pins",
@@ -16297,7 +16297,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.687021,
       "lng": 4.681077
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Jussey",
@@ -16307,7 +16307,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.816667,
       "lng": 5.9
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Jussey Centre",
@@ -16317,7 +16317,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.827646,
       "lng": 5.934786
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Juvisy",
@@ -16387,7 +16387,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.409663,
       "lng": -4.388214
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Keskastel",
@@ -16497,7 +16497,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.09043,
       "lng": 6.06531
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "L’Arbresle",
@@ -16507,7 +16507,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.833299,
       "lng": 4.618319
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "L’Argentière - Les-Ecrins",
@@ -16547,7 +16547,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.363628,
       "lng": 5.32136
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "L’Habitarelle",
@@ -16557,7 +16557,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.63325,
       "lng": 3.67616
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "L’Herbergement - Les-Brouzils",
@@ -16567,7 +16567,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.906917,
       "lng": -1.371243
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "L’Hermitage - Mordelles",
@@ -16607,7 +16607,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.589454,
       "lng": 1.800264
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "L’Huis-Renaud",
@@ -16617,7 +16617,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.186284,
       "lng": 4.2782
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "L’Île-d’Elle",
@@ -16627,7 +16627,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.323275,
       "lng": -0.941512
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "L’Isle-d’Abeau",
@@ -16637,7 +16637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.607645,
       "lng": 5.21969
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "L’Isle-Jourdain",
@@ -16687,7 +16687,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.957715,
       "lng": 4.328755
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "La Bachellerie",
@@ -16707,7 +16707,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.285838,
       "lng": 5.48451
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "La Barthe-de-Neste - Avezac-Prat-Lahitte",
@@ -16717,7 +16717,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.076227,
       "lng": 0.379776
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "La Bassée",
@@ -16737,7 +16737,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.593483,
       "lng": 3.904285
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "La Bastide-de-Bousignac",
@@ -16747,7 +16747,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.049826,
       "lng": 1.883554
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "La Bathie",
@@ -16817,7 +16817,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.139575,
       "lng": 2.859428
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "La Bourboule",
@@ -16827,7 +16827,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.59063,
       "lng": 2.746261
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "La Bouteille",
@@ -16917,7 +16917,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.64127,
       "lng": 1.82648
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "La Chaize-le-Vicomte",
@@ -16927,7 +16927,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.676779,
       "lng": -1.282068
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "La Chapelle Aulnay",
@@ -16967,7 +16967,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.266667,
       "lng": 4.3
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "La Chapelle-St-Mesmin",
@@ -16997,7 +16997,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.179914,
       "lng": 3.023883
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "La Chaumusse Fort du Plasne",
@@ -17047,7 +17047,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.199593,
       "lng": 5.632647
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "La Clayette - Baudemont",
@@ -17057,7 +17057,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.288147,
       "lng": 4.29842
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "La Cluse Ville",
@@ -17087,7 +17087,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.192246,
       "lng": -1.42267
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "La Couronne - Carro",
@@ -17097,7 +17097,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.339808,
       "lng": 5.051708
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "La Couronne Charente",
@@ -17137,7 +17137,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.360418,
       "lng": -0.296208
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "La Croix-Blanche",
@@ -17157,7 +17157,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.365984,
       "lng": 4.692278
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "La Croix-de-Méan",
@@ -17217,7 +17217,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.666667,
       "lng": -0.083333
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "La Ferté-Bernard",
@@ -17337,7 +17337,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.426309,
       "lng": -4.307452
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "La Fouillouse",
@@ -17467,7 +17467,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.969878,
       "lng": -2.238655
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "La Guierche",
@@ -17497,7 +17497,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.496125,
       "lng": -2.003661
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "La Hume",
@@ -17597,7 +17597,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.139698,
       "lng": 3.039547
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "La Méaugon",
@@ -17607,7 +17607,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.499613,
       "lng": -2.843936
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "La Membrolle-sur-Choisille",
@@ -17647,7 +17647,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.906286,
       "lng": 0.177276
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "La Mothe-Achard",
@@ -17657,7 +17657,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.606865,
       "lng": -1.659636
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "La Mothe-St-Héray",
@@ -17667,7 +17667,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.380759,
       "lng": -0.129842
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "La Motte",
@@ -17677,7 +17677,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.235657,
       "lng": -2.733428
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "La Neuville-sous-Laon",
@@ -17707,7 +17707,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.284677,
       "lng": 5.51557
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "La Place (Malay)",
@@ -17717,7 +17717,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.575584,
       "lng": 4.694008
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "La Pomarède",
@@ -17737,7 +17737,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.290517,
       "lng": 5.441315
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "La Porcherie",
@@ -17787,7 +17787,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.33447,
       "lng": 5.197568
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "La Réole",
@@ -17827,7 +17827,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.139681,
       "lng": 1.365509
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "La Roche-Clermault",
@@ -17847,7 +17847,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.366667,
       "lng": 4.166667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "La Roche-Maurice",
@@ -17857,7 +17857,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.474089,
       "lng": -4.205096
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "La Roche-sous-Montigny",
@@ -17887,7 +17887,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.67212,
       "lng": -1.435621
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "La Roche-sur-Yon Place de Vendée",
@@ -17897,7 +17897,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.666667,
       "lng": -1.433333
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "La Roche-Vineuse - Milly",
@@ -17907,7 +17907,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.351019,
       "lng": 4.707304
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "La Rochefoucauld",
@@ -18047,7 +18047,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.799882,
       "lng": 4.716492
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "La Tour-du-Crieu",
@@ -18057,7 +18057,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.1,
       "lng": 1.633333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "La Tour-du-Pin",
@@ -18067,7 +18067,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.560277,
       "lng": 5.450092
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "La Tricherie",
@@ -18137,7 +18137,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.6276,
       "lng": 5.150866
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "La Ville-Gozet",
@@ -18177,7 +18177,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.799363,
       "lng": 4.781134
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "La Voulte Cité",
@@ -18187,7 +18187,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.81457,
       "lng": 4.793147
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "La Voulte Mairie",
@@ -18197,7 +18197,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.799424,
       "lng": 4.781134
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "La Wantzenau",
@@ -18217,7 +18217,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.924981,
       "lng": 3.503869
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Laas",
@@ -18257,7 +18257,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.033333,
       "lng": 0.35
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Labastide-d’Anjou Poste",
@@ -18337,7 +18337,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.455487,
       "lng": 4.213855
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Laboissière-Fescamps",
@@ -18437,7 +18437,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.35516,
       "lng": 0.14844
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Lacave",
@@ -18457,7 +18457,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.58228,
       "lng": 4.346167
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Lachaud - Curmilhac",
@@ -18627,7 +18627,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.699966,
       "lng": 5.091333
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Lamarche",
@@ -18647,7 +18647,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.46606,
       "lng": -2.511546
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Lamontjoie",
@@ -18717,7 +18717,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.061083,
       "lng": 4.492114
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lancerf",
@@ -18727,7 +18727,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.761873,
       "lng": -3.11814
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Lancey",
@@ -18737,7 +18737,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.234478,
       "lng": 5.880976
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Lançon",
@@ -18747,7 +18747,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.583333,
       "lng": 5.133333
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Landas",
@@ -18777,7 +18777,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.507421,
       "lng": -2.331372
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Landerneau",
@@ -18787,7 +18787,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.453572,
       "lng": -4.256528
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Landevant",
@@ -18807,7 +18807,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.496002,
       "lng": -4.082181
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Landrecies",
@@ -18867,7 +18867,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.732776,
       "lng": 3.857305
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Langon (Gironde)",
@@ -18967,7 +18967,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.114273,
       "lng": 0.387367
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Lannemezan Demi-Lune",
@@ -18977,7 +18977,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.11917,
       "lng": 0.411875
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Lannemezan Hôtel Pyrénées",
@@ -18987,7 +18987,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.133333,
       "lng": 0.383333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Lannepax",
@@ -19007,7 +19007,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.727638,
       "lng": -3.460353
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Lanobre",
@@ -19027,7 +19027,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.335109,
       "lng": 4.860963
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Lanthénas",
@@ -19057,7 +19057,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.28799,
       "lng": -4.462767
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Laon",
@@ -19107,7 +19107,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.226783,
       "lng": 2.893393
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Laplume",
@@ -19127,7 +19127,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.646821,
       "lng": 2.704652
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Laragne",
@@ -19157,7 +19157,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.54448,
       "lng": 4.292178
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Larnagol Village",
@@ -19197,7 +19197,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.979072,
       "lng": 1.874457
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Laroque-des-Arcs",
@@ -19277,7 +19277,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.459046,
       "lng": 1.904503
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Latrape",
@@ -19287,7 +19287,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.795556,
       "lng": 1.313611
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Lau-Balagnas",
@@ -19297,7 +19297,7 @@ window.STATIONS_FRANCE = [
       "lat": 43,
       "lng": -0.083333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Laucourt",
@@ -19427,7 +19427,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.933333,
       "lng": 1.85
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Laveline-devant-Bruyères",
@@ -19447,7 +19447,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.575761,
       "lng": 4.453357
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Lavilledieu (Tarn-et-Garonne)",
@@ -19497,7 +19497,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.183333,
       "lng": -1.383333
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Le Bosquet",
@@ -19537,7 +19537,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.69121,
       "lng": 3.168938
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Le Breuil",
@@ -19547,7 +19547,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.9,
       "lng": 4.566667
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Le Breuil-sur-Couze",
@@ -19557,7 +19557,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.467084,
       "lng": 3.262148
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Le Breuil-sur-Couze Lycée",
@@ -19567,7 +19567,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.458791,
       "lng": 3.287058
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Le Breuil-sur-Couze Salle des Fêtes",
@@ -19577,7 +19577,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.478163,
       "lng": 3.29024
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Le Bruel",
@@ -19587,7 +19587,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.481329,
       "lng": 3.358325
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Le Bruel Bel-Air",
@@ -19637,7 +19637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.215796,
       "lng": 1.429814
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Le Cailar",
@@ -19687,7 +19687,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.740759,
       "lng": 1.789734
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Le Cateau",
@@ -19717,7 +19717,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.723796,
       "lng": 3.188666
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Le Chambon-Feugerolles",
@@ -19757,7 +19757,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.807815,
       "lng": 4.43044
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Le Creusot TGV",
@@ -19767,7 +19767,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.765343,
       "lng": 4.499513
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Le Croisic",
@@ -19817,7 +19817,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.173302,
       "lng": 1.409149
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Le Franceix",
@@ -19827,7 +19827,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.668114,
       "lng": 2.251321
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Le Fraysse",
@@ -19867,7 +19867,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.396626,
       "lng": 5.423112
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Le Grau-du-Roi",
@@ -20017,7 +20017,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.7685,
       "lng": 4.748443
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Le Merlerault",
@@ -20057,7 +20057,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.508968,
       "lng": 3.252057
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Le Mont-Dore",
@@ -20067,7 +20067,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.579319,
       "lng": 2.804739
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Le Moulin-des-Ponts",
@@ -20107,7 +20107,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.371797,
       "lng": 4.795402
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Le Pénity",
@@ -20117,7 +20117,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.364628,
       "lng": -3.476382
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Le Perrier",
@@ -20127,7 +20127,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.816667,
       "lng": -2
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Le Pigeon",
@@ -20177,7 +20177,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.750882,
       "lng": 4.74751
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Le Puy-en-Velay",
@@ -20267,7 +20267,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.678763,
       "lng": 2.79308
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Le Subdray Lycée Agricole",
@@ -20297,7 +20297,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.552529,
       "lng": 4.685992
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Le Teil Melas",
@@ -20307,7 +20307,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.55,
       "lng": 4.683333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Le Teil Sablons",
@@ -20317,7 +20317,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.55,
       "lng": 4.683333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Le Theil - La Rouge",
@@ -20437,7 +20437,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.833775,
       "lng": 2.908475
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Le Verdeau",
@@ -20497,7 +20497,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.666667,
       "lng": 5.466667
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Leforest",
@@ -20567,7 +20567,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.82163,
       "lng": 4.667103
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lentilly - Charpenay",
@@ -20577,7 +20577,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.816525,
       "lng": 4.682401
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lépanges",
@@ -20617,7 +20617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.542109,
       "lng": 5.575488
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Les Ancizes - St-Georges",
@@ -20627,7 +20627,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.932648,
       "lng": 2.835314
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Les Arcs - Draguignan",
@@ -20687,7 +20687,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.786285,
       "lng": 1.686299
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Les Cabrils",
@@ -20697,7 +20697,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.779707,
       "lng": 3.186083
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Les Cauquillous",
@@ -20737,7 +20737,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.616667,
       "lng": -1.516667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Les Deux Alpes",
@@ -20747,7 +20747,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.01098,
       "lng": 6.12415
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Les Échets",
@@ -20787,7 +20787,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.666582,
       "lng": 4.683406
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Les Flachères",
@@ -20797,7 +20797,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.777435,
       "lng": 4.754152
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Les Fontinettes",
@@ -20877,7 +20877,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.582551,
       "lng": 5.270948
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Les Lacs",
@@ -20897,7 +20897,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.543054,
       "lng": 4.462602
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Les Mais",
@@ -20907,7 +20907,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.426258,
       "lng": -3.382861
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Les Marguerons",
@@ -20917,7 +20917,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.739044,
       "lng": 4.718177
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Les Martres-de-Veyre",
@@ -20927,7 +20927,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.688155,
       "lng": 3.193228
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Les Masseries",
@@ -21027,7 +21027,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.083333,
       "lng": 1.716667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Les Quatre-Roues",
@@ -21077,7 +21077,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.499917,
       "lng": -1.78105
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Les Salèlles",
@@ -21087,7 +21087,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.483269,
       "lng": 3.280401
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Les Tines",
@@ -21127,7 +21127,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.405354,
       "lng": 4.128622
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Les Versannes",
@@ -21287,7 +21287,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.283333,
       "lng": 1.35
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Lezennes",
@@ -21317,7 +21317,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.821218,
       "lng": 3.385986
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Liancourt-Rantigny",
@@ -21367,7 +21367,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.2,
       "lng": 4.283333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Liesle",
@@ -21417,7 +21417,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.620839,
       "lng": 2.28566
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Ligugé",
@@ -21667,7 +21667,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.779604,
       "lng": 4.830541
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Loches",
@@ -21697,7 +21697,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.1,
       "lng": -4.2
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Logelbach",
@@ -21767,7 +21767,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.193794,
       "lng": 5.134695
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Longeray",
@@ -22007,7 +22007,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.754497,
       "lng": 4.817168
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Lorp",
@@ -22017,7 +22017,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.008915,
       "lng": 1.107817
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Lorraine TGV",
@@ -22037,7 +22037,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.05,
       "lng": 0.383333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Lothiers",
@@ -22057,7 +22057,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.040693,
       "lng": 1.530539
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Loubens-Lauragais",
@@ -22077,7 +22077,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.180338,
       "lng": -2.762718
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Loudrefing",
@@ -22107,7 +22107,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.6309,
       "lng": 5.217485
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Loulay",
@@ -22147,7 +22147,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.10037,
       "lng": -0.042174
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Loures - Barbazan",
@@ -22157,7 +22157,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.021075,
       "lng": 0.610449
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Loures-Barousse",
@@ -22167,7 +22167,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.026607,
       "lng": 0.608282
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Louroux-de-Bouble",
@@ -22227,7 +22227,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.85414,
       "lng": 4.681501
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Luant",
@@ -22247,7 +22247,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.444615,
       "lng": 1.388829
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Luc",
@@ -22257,7 +22257,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.654092,
       "lng": 3.891563
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Luc-en-Diois",
@@ -22267,7 +22267,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.613662,
       "lng": 5.454623
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Luc-la-Primaube",
@@ -22327,7 +22327,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.463823,
       "lng": -1.167422
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Luçon Centre",
@@ -22337,7 +22337,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.45,
       "lng": -1.166667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Lucy",
@@ -22407,7 +22407,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.709581,
       "lng": 3.194899
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Lunel",
@@ -22417,7 +22417,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.679392,
       "lng": 4.131086
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Lunel-Viel",
@@ -22427,7 +22427,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.681173,
       "lng": 4.09374
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Lunery",
@@ -22467,7 +22467,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.266667,
       "lng": -0.116667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Lurbe - St-Christau",
@@ -22487,7 +22487,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.683269,
       "lng": 6.492579
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Lury-sur-Arnon",
@@ -22507,7 +22507,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.67099,
       "lng": 5.697368
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Luscan Pont",
@@ -22617,7 +22617,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.814861,
       "lng": 6.372659
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Luz-St-Sauveur",
@@ -22627,7 +22627,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.873369,
       "lng": -0.002543
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Luzech",
@@ -22667,7 +22667,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.764285,
       "lng": 1.753125
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Luzenac Centre",
@@ -22677,7 +22677,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.766667,
       "lng": 1.766667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Luzy",
@@ -22687,7 +22687,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.794079,
       "lng": 3.969325
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Lyon Gorge de Loup",
@@ -22697,7 +22697,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.766078,
       "lng": 4.804631
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lyon Jean Macé",
@@ -22707,7 +22707,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.74495,
       "lng": 4.84139
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lyon Part-Dieu",
@@ -22717,7 +22717,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.760559,
       "lng": 4.859355
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lyon Perrache",
@@ -22727,7 +22727,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.748476,
       "lng": 4.825733
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lyon St-Exupéry TGV",
@@ -22737,7 +22737,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.721109,
       "lng": 5.074969
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lyon St-Paul",
@@ -22747,7 +22747,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.76601,
       "lng": 4.827057
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Lyon Vaise",
@@ -22757,7 +22757,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.779938,
       "lng": 4.80396
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Macau",
@@ -22807,7 +22807,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.282884,
       "lng": 4.778876
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Mâcon Ville",
@@ -22817,7 +22817,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.302572,
       "lng": 4.824887
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Magalas",
@@ -22827,7 +22827,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.4676,
       "lng": 3.229542
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Magland",
@@ -22987,7 +22987,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.327003,
       "lng": 4.810536
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Malansac",
@@ -23007,7 +23007,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.484019,
       "lng": 4.759806
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Malaunay - Le Houlme",
@@ -23037,7 +23037,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.566667,
       "lng": 4.683333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Malbuisson",
@@ -23147,7 +23147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.133333,
       "lng": 4.35
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Manosque - Gréoux-les-Bains",
@@ -23177,7 +23177,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.966667,
       "lng": 2.933333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Marans",
@@ -23257,7 +23257,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.260692,
       "lng": 4.042269
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Marcilly-sur-Tille",
@@ -23267,7 +23267,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.516667,
       "lng": 5.133333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Marennes",
@@ -23297,7 +23297,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.533333,
       "lng": -1.233333
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Margaux",
@@ -23377,7 +23377,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.199083,
       "lng": -0.428404
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Marigny Centre (Manche)",
@@ -23447,7 +23447,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.833461,
       "lng": 4.360191
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Marmande",
@@ -23557,7 +23557,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.642822,
       "lng": 2.485839
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Marsac (Creuse)",
@@ -23587,7 +23587,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.483333,
       "lng": 3.733333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Marsan",
@@ -23607,7 +23607,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.318196,
       "lng": 3.535528
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Marseille Blancarde",
@@ -23617,7 +23617,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.296144,
       "lng": 5.406559
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Marseille St-Antoine",
@@ -23627,7 +23627,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.369599,
       "lng": 5.35781
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Marseille St-Charles",
@@ -23637,7 +23637,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.302666,
       "lng": 5.380407
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Marseille-en-Beauvaisis",
@@ -23737,7 +23737,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.392921,
       "lng": 5.02578
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Martres-Tolosane",
@@ -23757,7 +23757,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.544682,
       "lng": 3.281072
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Mas-Grenier",
@@ -23797,7 +23797,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.536175,
       "lng": 1.54154
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Masseret Ville",
@@ -23807,7 +23807,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.533333,
       "lng": 1.516667
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Masseube Place Dasté",
@@ -23837,7 +23837,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.491669,
       "lng": 4.671415
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Massy - Palaiseau",
@@ -23897,7 +23897,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.462502,
       "lng": 0.034221
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Maubourguet Marmajou",
@@ -23907,7 +23907,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.447437,
       "lng": 0.039768
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Mauléon",
@@ -23997,7 +23997,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.483333,
       "lng": 2.15
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Mauves-sur-Loire",
@@ -24037,7 +24037,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.199588,
       "lng": -0.673726
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Mauzens-Miremont",
@@ -24197,7 +24197,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.522322,
       "lng": 3.501988
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Ménil-Flin",
@@ -24277,7 +24277,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.659488,
       "lng": 1.837128
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Mérenvielle",
@@ -24377,7 +24377,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.798893,
       "lng": 5.17941
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Merxheim",
@@ -24477,7 +24477,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.242076,
       "lng": 3.006518
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Mesvres",
@@ -24487,7 +24487,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.862799,
       "lng": 4.244966
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Métabief",
@@ -24587,7 +24587,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.96905,
       "lng": 4.795444
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Meuse TGV",
@@ -24607,7 +24607,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.55,
       "lng": 1.433333
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Meximieux - Pérouges",
@@ -24627,7 +24627,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.530231,
       "lng": 2.164091
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Meymac Bourg",
@@ -24637,7 +24637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.527325,
       "lng": 2.138309
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Meyrargues",
@@ -24647,7 +24647,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.644008,
       "lng": 5.539574
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Mézerac Abri",
@@ -24747,7 +24747,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.688896,
       "lng": 2.69375
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Millau",
@@ -24807,7 +24807,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.580704,
       "lng": 5.000264
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Miramont-d’Astarac",
@@ -24877,7 +24877,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.083333,
       "lng": 1.883333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Miribel",
@@ -24927,7 +24927,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.322185,
       "lng": 5.581915
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Moirans - La-Galifette",
@@ -24937,7 +24937,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.324154,
       "lng": 5.56517
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Moissac",
@@ -24977,7 +24977,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.35,
       "lng": 4.216667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Molsheim",
@@ -25027,7 +25027,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.333333,
       "lng": 3.666667
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Mondoubleau Station Service",
@@ -25047,7 +25047,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.911996,
       "lng": 5.63397
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Monéteau-Gurgy",
@@ -25077,7 +25077,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.25,
       "lng": 0.533333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Monlong Église",
@@ -25087,7 +25087,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.206787,
       "lng": 0.465438
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Monnaie",
@@ -25157,7 +25157,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.50209,
       "lng": 2.113138
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Mont-Notre-Dame",
@@ -25197,7 +25197,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.333333,
       "lng": 3.116667
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Montaignac-St-Hippolyte",
@@ -25207,7 +25207,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.35469,
       "lng": 1.979753
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Montaigu",
@@ -25217,7 +25217,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.983705,
       "lng": -1.316236
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Montaigut",
@@ -25237,7 +25237,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.183333,
       "lng": 2.8
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Montargis",
@@ -25347,7 +25347,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.618747,
       "lng": 4.33616
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Montbarrey",
@@ -25467,7 +25467,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.670664,
       "lng": 4.361026
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Montchanin",
@@ -25477,7 +25477,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.759265,
       "lng": 4.481487
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Montcornet",
@@ -25557,7 +25557,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.066667,
       "lng": 1.5
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Montélimar Gare Routière",
@@ -25567,7 +25567,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.559622,
       "lng": 4.74535
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Montendre",
@@ -25687,7 +25687,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.933333,
       "lng": 1.633333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Montgaillard (Hautes Pyrénées)",
@@ -25697,7 +25697,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.116667,
       "lng": 0.116667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Montgenèvre Gare Routière",
@@ -25897,7 +25897,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.783333,
       "lng": 4.916667
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Montpaon",
@@ -25917,7 +25917,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.577049,
       "lng": 3.95599
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Montpellier St-Roch",
@@ -25927,7 +25927,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.604738,
       "lng": 3.880674
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Montpellier Sud de France",
@@ -25937,7 +25937,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.59508,
       "lng": 3.92403
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Montpezat-de-Quercy",
@@ -26137,7 +26137,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.5038,
       "lng": 5.6468
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Montureux-lès-Baulay",
@@ -26147,7 +26147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.816667,
       "lng": 5.983333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Montville",
@@ -26277,7 +26277,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.57797,
       "lng": -3.832514
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Morre",
@@ -26437,7 +26437,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.507451,
       "lng": -3.243505
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Moutier-Rozeille",
@@ -26477,7 +26477,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.466667,
       "lng": -0.966667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Moyeuvre-Grande",
@@ -26617,7 +26617,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.02559,
       "lng": 4.38037
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Mussidan",
@@ -26647,7 +26647,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.447311,
       "lng": 2.932561
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Naintré - Les Barres",
@@ -26677,7 +26677,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.466667,
       "lng": -1.033333
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Namps-Quevauvillers",
@@ -26807,7 +26807,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.312669,
       "lng": 1.768799
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Naves Lycée Agricole",
@@ -26817,7 +26817,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.313952,
       "lng": 1.767082
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Neau",
@@ -26877,7 +26877,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.8,
       "lng": 3.533333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Nérondes",
@@ -27007,7 +27007,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.281583,
       "lng": 5.111198
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Neuilly-St-Front",
@@ -27037,7 +27037,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.583333,
       "lng": 5.55
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Neuves-Maisons",
@@ -27107,7 +27107,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.523396,
       "lng": 2.881663
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Neuwiller-lès-Saverne - Pharmacie",
@@ -27137,7 +27137,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.006897,
       "lng": 3.163675
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Nevers les Perrières",
@@ -27147,7 +27147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.005521,
       "lng": 3.146714
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Nexon",
@@ -27287,7 +27287,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.340223,
       "lng": 5.256942
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Niort",
@@ -27297,7 +27297,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.319491,
       "lng": -0.454639
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Niversac",
@@ -27397,7 +27397,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.616667,
       "lng": 6.133333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Noirétable Place Passeliere",
@@ -27417,7 +27417,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.000583,
       "lng": -2.249086
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Noirterre",
@@ -27427,7 +27427,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.866667,
       "lng": -0.4
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Noizay",
@@ -27447,7 +27447,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.95,
       "lng": 4.633333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Nolay Place Carnot",
@@ -27457,7 +27457,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.944267,
       "lng": 4.6366
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Nomain",
@@ -27547,7 +27547,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.416667,
       "lng": 0.033333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Nousty",
@@ -27677,7 +27677,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.130545,
       "lng": 4.956204
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Nurieux",
@@ -27697,7 +27697,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.541698,
       "lng": 2.263018
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Nyons - Office de Tourisme",
@@ -27707,7 +27707,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.36041,
       "lng": 5.13865
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Nyons Cave Cooperative",
@@ -27717,7 +27717,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.36007,
       "lng": 5.132739
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Obermodern",
@@ -27747,7 +27747,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.264734,
       "lng": 1.406829
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Ocqueville",
@@ -27817,7 +27817,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.55472,
       "lng": 2.271931
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Olliergues",
@@ -27827,7 +27827,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.666667,
       "lng": 3.633333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Ollioules - Sanary-sur-Mer",
@@ -27847,7 +27847,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.548661,
       "lng": -1.76738
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Oloron-Ste-Marie",
@@ -27967,7 +27967,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.1,
       "lng": 0.133333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Orgon",
@@ -27977,7 +27977,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.785913,
       "lng": 5.045674
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Origny-en-Thiérache",
@@ -28067,7 +28067,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.55,
       "lng": 5.2
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Osmoy Carrefour",
@@ -28087,7 +28087,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.419967,
       "lng": 1.977117
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Ossès - St-Martin-d’Arrossa",
@@ -28107,7 +28107,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.183368,
       "lng": -0.021484
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Ostricourt",
@@ -28147,7 +28147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.255916,
       "lng": 5.07279
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Oulchy-Breny",
@@ -28167,7 +28167,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.716626,
       "lng": 4.813579
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Oulmes Centre",
@@ -28177,7 +28177,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.4,
       "lng": -0.666667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Ourscamps",
@@ -28217,7 +28217,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.171144,
       "lng": 0.252399
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Pachins",
@@ -28237,7 +28237,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.046249,
       "lng": 5.201054
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Pagny-sur-Meuse",
@@ -28267,7 +28267,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.1,
       "lng": 1.45
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Paimpol",
@@ -28277,7 +28277,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.77694,
       "lng": -3.046096
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Palluau",
@@ -28297,7 +28297,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.116207,
       "lng": 1.619451
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Pamproux",
@@ -28307,7 +28307,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.39963,
       "lng": -0.051931
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Panassac",
@@ -28337,7 +28337,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.447312,
       "lng": 4.113744
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Parc Astérix",
@@ -28357,7 +28357,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.466512,
       "lng": 2.871217
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Parempuyre",
@@ -28377,7 +28377,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.613974,
       "lng": 3.217825
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Parigné-le-Pôlin la Chenaie",
@@ -28487,7 +28487,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.911529,
       "lng": 4.636941
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Parnac",
@@ -28517,7 +28517,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.648287,
       "lng": -0.240519
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Pas-de-Jeu",
@@ -28537,7 +28537,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.409655,
       "lng": 5.253822
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Pau",
@@ -28747,7 +28747,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.584834,
       "lng": 1.97767
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Péronne Centre",
@@ -28777,7 +28777,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.696292,
       "lng": 2.879779
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Perpignan Airport",
@@ -28787,7 +28787,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.740922,
       "lng": 2.866995
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Perrignier",
@@ -28807,7 +28807,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.533333,
       "lng": 3.833333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Perrusson",
@@ -28897,7 +28897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.643861,
       "lng": 2.255168
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Petit-Réderching",
@@ -29037,7 +29037,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.330999,
       "lng": 5.392746
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Picquigny",
@@ -29057,7 +29057,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.706677,
       "lng": 4.824506
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Pierre-Buffière",
@@ -29077,7 +29077,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.966667,
       "lng": -0.066667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Pierrelatte",
@@ -29087,7 +29087,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.374719,
       "lng": 4.703783
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Pierreville",
@@ -29167,7 +29167,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.4,
       "lng": -2.816667
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Plainval",
@@ -29197,7 +29197,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.521679,
       "lng": -2.228921
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Planès",
@@ -29207,7 +29207,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.500919,
       "lng": 2.136927
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Pléchâtel",
@@ -29227,7 +29227,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.376656,
       "lng": -2.354611
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Plerguer",
@@ -29247,7 +29247,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.425646,
       "lng": -2.442461
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Pleudihen",
@@ -29257,7 +29257,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.499382,
       "lng": -1.961752
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Pleumeur-Bodou",
@@ -29267,7 +29267,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.77197,
       "lng": -3.517916
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Pleyber-Christ",
@@ -29277,7 +29277,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.507826,
       "lng": -3.882554
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Ploërmel",
@@ -29297,7 +29297,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.327545,
       "lng": -2.825875
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Plomodiern",
@@ -29307,7 +29307,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.180431,
       "lng": -4.235203
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Plonevez-Porzay",
@@ -29317,7 +29317,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.1,
       "lng": -4.216667
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Plouaret - Trégor",
@@ -29327,7 +29327,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.606282,
       "lng": -3.466823
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Plougonver",
@@ -29337,7 +29337,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.458413,
       "lng": -3.370458
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Plouharnel - Carnac",
@@ -29357,7 +29357,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.564706,
       "lng": -3.710057
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Plounérin",
@@ -29367,7 +29367,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.58163,
       "lng": -3.568231
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Plouvara - Plerneuf",
@@ -29377,7 +29377,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.508585,
       "lng": -2.892514
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Podensac",
@@ -29407,7 +29407,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.316667,
       "lng": 3.083333
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Pointe-de-Grave",
@@ -29447,7 +29447,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.256006,
       "lng": 5.473585
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Poligny",
@@ -29497,7 +29497,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.395281,
       "lng": 1.387168
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Pompertuzat",
@@ -29637,7 +29637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.524636,
       "lng": 5.680772
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Pont-de-Bois",
@@ -29667,7 +29667,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.254402,
       "lng": -4.086123
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Pont-de-Castelfranc",
@@ -29687,7 +29687,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.125155,
       "lng": 5.699867
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Pont-de-Cotte",
@@ -29697,7 +29697,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.463722,
       "lng": 4.670723
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Pont-de-Dore",
@@ -29707,7 +29707,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.842783,
       "lng": 3.490325
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Pont-de-Dore le Chambon",
@@ -29717,7 +29717,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.843125,
       "lng": 3.498071
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Pont-de-Guran",
@@ -29777,7 +29777,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.063993,
       "lng": -0.038644
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Pont-de-Sallaumines",
@@ -29817,7 +29817,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.788554,
       "lng": 3.237783
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Pont-Hébert",
@@ -29867,7 +29867,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.470223,
       "lng": -3.311444
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Pont-Remy",
@@ -29947,7 +29947,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.75,
       "lng": 5.266667
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Pontanevaux",
@@ -29957,7 +29957,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.213032,
       "lng": 4.772889
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Pontarion",
@@ -29997,7 +29997,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.871491,
       "lng": 4.492778
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Pontcharra-sur-Breda - Allevard",
@@ -30007,7 +30007,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.434151,
       "lng": 6.007917
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Pontchâteau",
@@ -30037,7 +30037,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.821,
       "lng": 2.845803
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Pontgouin",
@@ -30067,7 +30067,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.939486,
       "lng": 3.160125
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Pontorson - Mont-St-Michel",
@@ -30087,7 +30087,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.705644,
       "lng": -3.157428
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Pontrieux Halte",
@@ -30097,7 +30097,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.698036,
       "lng": -3.164496
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Pornic",
@@ -30147,7 +30147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.75922,
       "lng": 6.0396
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Port-de-Bouc",
@@ -30157,7 +30157,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.407132,
       "lng": 4.984601
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Port-de-Carhaix",
@@ -30167,7 +30167,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.236602,
       "lng": -3.599568
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Port-de-Piles",
@@ -30227,7 +30227,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.683333,
       "lng": 6.05
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Port-Vendres",
@@ -30237,7 +30237,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.513608,
       "lng": 3.102576
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Porta",
@@ -30247,7 +30247,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.514932,
       "lng": 1.824639
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Porte de Charenton",
@@ -30267,7 +30267,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.539136,
       "lng": 1.824846
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Portet - Saint-Simon",
@@ -30317,7 +30317,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.076784,
       "lng": 3.09403
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Pouilly-sous-Charlieu",
@@ -30337,7 +30337,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.28217,
       "lng": 2.966063
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Poule",
@@ -30347,7 +30347,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.15,
       "lng": 4.466667
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Pouru-St-Rémy",
@@ -30377,7 +30377,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.083333,
       "lng": 0.133333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Pouzauges",
@@ -30387,7 +30387,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.752354,
       "lng": -0.814678
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Pouzauges Centre",
@@ -30397,7 +30397,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.782371,
       "lng": -0.837305
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Pradelles",
@@ -30417,7 +30417,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.617099,
       "lng": 2.429418
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Pradons",
@@ -30427,7 +30427,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.466667,
       "lng": 4.366667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Pratviel la Ferme",
@@ -30487,7 +30487,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.383333,
       "lng": 4.316667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Preignac",
@@ -30517,7 +30517,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.219018,
       "lng": -0.636501
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Pringy (Haute Savoie)",
@@ -30537,7 +30537,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.316667,
       "lng": 4.75
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Prissé-la-Charrière",
@@ -30547,7 +30547,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.15277,
       "lng": -0.493625
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Privas Cours du Palais",
@@ -30557,7 +30557,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.734651,
       "lng": 4.600153
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Privas Hôpital Ste Marie",
@@ -30567,7 +30567,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.733333,
       "lng": 4.6
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Prouvy-Thiant",
@@ -30627,7 +30627,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.363067,
       "lng": 3.035402
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Puits",
@@ -30637,7 +30637,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.733333,
       "lng": 4.466667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Pujaudran Centre",
@@ -30657,7 +30657,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.35,
       "lng": 0.066667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Pulligny - Autrey",
@@ -30677,7 +30677,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.65,
       "lng": 6.133333
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Puy de Dôme (Panoramique des Dômes)",
@@ -30687,7 +30687,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.772719,
       "lng": 2.987693
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Puy-Guillaume",
@@ -30697,7 +30697,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.95,
       "lng": 3.483333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Puy-Guillaume la Roche",
@@ -30707,7 +30707,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.973307,
       "lng": 3.482618
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Puy-Guillaume Ville",
@@ -30717,7 +30717,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.963904,
       "lng": 3.478322
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Puy-l’Évêque",
@@ -30787,7 +30787,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.514745,
       "lng": 2.060001
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Quédillac",
@@ -30877,7 +30877,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.994455,
       "lng": -4.092103
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Quimperlé",
@@ -30887,7 +30887,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.869375,
       "lng": -3.552693
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Quincieux",
@@ -30897,7 +30897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.906882,
       "lng": 4.778564
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Quintin",
@@ -30907,7 +30907,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.4,
       "lng": -2.916667
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Rabastens - Couffouleux",
@@ -30927,7 +30927,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.38604,
       "lng": 0.147423
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Rabastens-de-Bigorre Centre",
@@ -30987,7 +30987,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.859879,
       "lng": 5.885947
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Raismes",
@@ -31097,7 +31097,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.496672,
       "lng": 4.973127
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Razac",
@@ -31117,7 +31117,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.583333,
       "lng": 6.016667
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Réalville",
@@ -31137,7 +31137,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.368822,
       "lng": 5.53469
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Rebouc",
@@ -31147,7 +31147,7 @@ window.STATIONS_FRANCE = [
       "lat": 43,
       "lng": 0.366667
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Rechicourt-le-Château",
@@ -31307,7 +31307,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.15,
       "lng": 0.45
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Remelfang",
@@ -31337,7 +31337,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.9,
       "lng": 4.716667
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Rémilly",
@@ -31357,7 +31357,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.816667,
       "lng": 3.816667
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Remilly-Aillicourt",
@@ -31537,7 +31537,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.603408,
       "lng": 2.390749
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Ribeauvillé Gare Routière",
@@ -31607,7 +31607,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.46582,
       "lng": 2.817893
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Riom - Châtel-Guyon",
@@ -31617,7 +31617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.889965,
       "lng": 3.120498
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Riom-es-Montagnes",
@@ -31667,7 +31667,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.158536,
       "lng": -1.270928
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Rives",
@@ -31677,7 +31677,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.357535,
       "lng": 5.491893
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Rivesaltes",
@@ -31687,7 +31687,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.766441,
       "lng": 2.86789
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Rivières",
@@ -31787,7 +31787,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.684204,
       "lng": 2.804634
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Rochy-Condé",
@@ -31837,7 +31837,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.4866,
       "lng": 5.230666
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Rohrbach-lès-Bitche",
@@ -31887,7 +31887,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.176391,
       "lng": 4.742101
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Romans - Bourg-de-Péage",
@@ -31897,7 +31897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.048857,
       "lng": 5.0498
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Rombas - Clouange",
@@ -31977,7 +31977,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.752535,
       "lng": 4.725152
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Ronchamp",
@@ -31987,7 +31987,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.699031,
       "lng": 6.623279
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Ronchin",
@@ -32057,7 +32057,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.720749,
       "lng": -3.983343
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Roscoff Port de Bloscon",
@@ -32067,7 +32067,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.719122,
       "lng": -3.967942
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Rosheim",
@@ -32117,7 +32117,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.960273,
       "lng": -3.832763
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Rosult",
@@ -32247,7 +32247,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.416667,
       "lng": 4.1
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Royan",
@@ -32267,7 +32267,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.76765,
       "lng": 3.061502
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Royaucourt Église",
@@ -32407,7 +32407,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.370587,
       "lng": 5.079358
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Rully",
@@ -32417,7 +32417,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.88043,
       "lng": 4.761033
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Rumilly",
@@ -32447,7 +32447,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.45,
       "lng": 4.35
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Rupt-sur-Moselle",
@@ -32507,7 +32507,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.456886,
       "lng": 2.032113
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Saillans",
@@ -32517,7 +32517,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.694437,
       "lng": 5.19404
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Saillat - Chassenon",
@@ -32537,7 +32537,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.811097,
       "lng": 4.601245
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Saincaize",
@@ -32547,7 +32547,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.931417,
       "lng": 3.07187
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Sains-du-Nord",
@@ -32597,7 +32597,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.502671,
       "lng": 2.232487
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Saint-Dié-des-Vosges",
@@ -32627,7 +32627,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.690753,
       "lng": 4.703731
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Saint-Martin d’Hères",
@@ -32637,7 +32637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.165133,
       "lng": 5.767761
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Saint-Martin du Touch",
@@ -32757,7 +32757,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.964152,
       "lng": 4.548703
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Saix",
@@ -32787,7 +32787,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.963309,
       "lng": 0.631253
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Saléchan Embranchement",
@@ -32797,7 +32797,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.954738,
       "lng": 0.639195
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Salies-de-Béarn Thermes",
@@ -32877,7 +32877,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.183333,
       "lng": 0.1
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Salles-Courbatiès",
@@ -32907,7 +32907,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.639061,
       "lng": 5.088569
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Salses",
@@ -32917,7 +32917,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.835609,
       "lng": 2.917447
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Salvagnac",
@@ -32937,7 +32937,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.178219,
       "lng": 1.602372
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Samoussy",
@@ -32997,7 +32997,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.906531,
       "lng": 4.713089
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Santenay-les-Bains",
@@ -33007,7 +33007,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.910675,
       "lng": 4.701752
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Santes",
@@ -33057,7 +33057,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.73877,
       "lng": 3.16812
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Sarralbe",
@@ -33097,7 +33097,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.966667,
       "lng": 0.383333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Sarre-Union",
@@ -33207,7 +33207,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.820264,
       "lng": 4.875315
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Saubusse-les-Bains",
@@ -33237,7 +33237,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.266667,
       "lng": 4.233333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Saulon",
@@ -33247,7 +33247,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.224035,
       "lng": 5.104599
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Saulxures",
@@ -33297,7 +33297,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.332864,
       "lng": 5.110001
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Sauto",
@@ -33307,7 +33307,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.506371,
       "lng": 2.160039
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Sauvagnon",
@@ -33357,7 +33357,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.284516,
       "lng": 3.394866
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Sauviat-sur-Vige",
@@ -33407,7 +33407,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.239357,
       "lng": 1.570616
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Saverdun Centre",
@@ -33417,7 +33417,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.233333,
       "lng": 1.583333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Saverne",
@@ -33467,7 +33467,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.55,
       "lng": 5.75
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Savy-Berlette",
@@ -33617,7 +33617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.366667,
       "lng": 1.716667
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Seissan Halle",
@@ -33687,7 +33687,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.58704,
       "lng": 5.18604
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Seltz",
@@ -33717,7 +33717,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.222032,
       "lng": 0.095869
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Semur-en-Auxois",
@@ -33727,7 +33727,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.483333,
       "lng": 4.333333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Senailly",
@@ -33737,7 +33737,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.583333,
       "lng": 4.266667
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Sénas",
@@ -33747,7 +33747,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.740957,
       "lng": 5.073365
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Sennecey-le-Grand",
@@ -33757,7 +33757,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.640645,
       "lng": 4.874316
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Senozan",
@@ -33767,7 +33767,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.392145,
       "lng": 4.871063
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Sens",
@@ -33787,7 +33787,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.362419,
       "lng": 5.339959
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Sept-Saulx",
@@ -33807,7 +33807,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.403114,
       "lng": 5.370176
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Serdinya",
@@ -33817,7 +33817,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.567023,
       "lng": 2.323087
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Sérézin",
@@ -33827,7 +33827,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.62716,
       "lng": 4.81806
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Sérifontaine",
@@ -33847,7 +33847,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.283333,
       "lng": 3.283333
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Sermizelles-Vézelay",
@@ -33927,7 +33927,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.316667,
       "lng": 4.75
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Servas - Lent",
@@ -33977,7 +33977,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.412485,
       "lng": 3.69656
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Seurre",
@@ -33987,7 +33987,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.996411,
       "lng": 5.151312
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Seuzac",
@@ -34117,7 +34117,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.434747,
       "lng": 5.426148
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Sin-le-Noble",
@@ -34137,7 +34137,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.433333,
       "lng": 4.133333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Siorac-en-Périgord",
@@ -34157,7 +34157,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.969228,
       "lng": 0.634935
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Sisteron",
@@ -34327,7 +34327,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.515701,
       "lng": 0.000332
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Soues",
@@ -34337,7 +34337,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.202588,
       "lng": 0.098386
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Sougy",
@@ -34347,7 +34347,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.849108,
       "lng": 3.390227
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Souillac",
@@ -34447,7 +34447,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.897774,
       "lng": 4.856089
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Affrique",
@@ -34477,7 +34477,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.502004,
       "lng": 3.8788
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Agne",
@@ -34697,7 +34697,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.544518,
       "lng": 5.524187
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Antoine",
@@ -34807,7 +34807,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.248841,
       "lng": 1.398697
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "St-Aunès",
@@ -34817,7 +34817,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.635438,
       "lng": 3.962899
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "St-Avold",
@@ -34887,7 +34887,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.65,
       "lng": 4.683333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Bonnet-de-Rochefort",
@@ -34927,7 +34927,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.50758,
       "lng": -2.765
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "St-Césaire",
@@ -34947,7 +34947,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.551158,
       "lng": 5.040296
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "St-Chamond",
@@ -34967,7 +34967,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.801738,
       "lng": 3.27069
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "St-Chinian Esplanade",
@@ -34977,7 +34977,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.416667,
       "lng": 2.95
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "St-Christophe",
@@ -35017,7 +35017,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.450392,
       "lng": 4.769707
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Claude",
@@ -35037,7 +35037,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.333333,
       "lng": 1.683333
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "St-Clément-des-Baleines",
@@ -35047,7 +35047,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.233333,
       "lng": -1.55
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Clément-Laronxe",
@@ -35147,7 +35147,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.5,
       "lng": 4.533333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Didier",
@@ -35157,7 +35157,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.333333,
       "lng": 4.183333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "St-Didier-sous-Aubenas",
@@ -35167,7 +35167,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.606958,
       "lng": 4.415463
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Didier-sur-Arroux",
@@ -35177,7 +35177,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.833114,
       "lng": 4.115646
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Dizier",
@@ -35217,7 +35217,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.235723,
       "lng": 5.671269
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Élix",
@@ -35237,7 +35237,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.15,
       "lng": 2.833333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "St-Émilion",
@@ -35317,7 +35317,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.7,
       "lng": 4.466667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Étienne-de-Fontbellon",
@@ -35327,7 +35327,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.6,
       "lng": 4.383333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Étienne-de-Montluc",
@@ -35367,7 +35367,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.677287,
       "lng": 2.737822
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "St-Florent-sur-Cher",
@@ -35427,7 +35427,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.705811,
       "lng": 4.852566
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "St-Fraimbault-de-Prières Centre",
@@ -35467,7 +35467,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.466667,
       "lng": 4.783333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Geniès-de-Malgoirès",
@@ -35527,7 +35527,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.043767,
       "lng": 5.701787
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Georges-de-Luzençon",
@@ -35547,7 +35547,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.062195,
       "lng": 4.718891
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "St-Georges-les-Bains - Châteaurouge",
@@ -35557,7 +35557,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.848585,
       "lng": 4.826856
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Geours",
@@ -35597,7 +35597,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.888352,
       "lng": 4.804265
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "St-Germain-de-Joux",
@@ -35667,7 +35667,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.029714,
       "lng": 2.805344
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "St-Gervais-les-Bains - Le Fayet",
@@ -35737,7 +35737,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.696466,
       "lng": -1.941296
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Girons",
@@ -35747,7 +35747,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.98629,
       "lng": 1.14378
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Girons Capots",
@@ -35757,7 +35757,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.983942,
       "lng": 1.142642
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Hilaire",
@@ -35787,7 +35787,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.071341,
       "lng": 5.243851
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Hilaire-au-Temple",
@@ -35827,7 +35827,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.716674,
       "lng": -1.949684
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Hilaire-de-Riez Centre",
@@ -35837,7 +35837,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.718728,
       "lng": -1.944618
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Hilaire-la-Gravelle",
@@ -35937,7 +35937,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.09973,
       "lng": 5.244123
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "St-Jean-de-Luz - Ciboure",
@@ -35967,7 +35967,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.783333,
       "lng": -2.066667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Jean-de-Monts Esplanade de la Mer",
@@ -35977,7 +35977,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.783333,
       "lng": -2.066667
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Jean-de-Monts Gare Routière",
@@ -35987,7 +35987,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.790393,
       "lng": -2.059625
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Jean-de-Verges",
@@ -35997,7 +35997,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.012859,
       "lng": 1.608059
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Jean-de-Verges Centre",
@@ -36007,7 +36007,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.016667,
       "lng": 1.616667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Jean-de-Verges Hôpital",
@@ -36017,7 +36017,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.016667,
       "lng": 1.616667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Jean-de-Verges Loubencat",
@@ -36027,7 +36027,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.016667,
       "lng": 1.616667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Jean-du-Falga",
@@ -36037,7 +36037,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.083333,
       "lng": 1.616667
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Jean-le-Centenier",
@@ -36047,7 +36047,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.583333,
       "lng": 4.533333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Jean-le-Comtal",
@@ -36117,7 +36117,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.351898,
       "lng": 5.377068
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "St-Julien",
@@ -36127,7 +36127,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.45,
       "lng": -2.816667
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "St-Julien - Changy",
@@ -36137,7 +36137,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.394685,
       "lng": 4.25383
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Julien - Clénay",
@@ -36147,7 +36147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.406013,
       "lng": 5.128186
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "St-Julien-du-Sault",
@@ -36177,7 +36177,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.733333,
       "lng": 4.683333
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Julien-les-Villas",
@@ -36227,7 +36227,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.817125,
       "lng": 0.32238
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "St-Laurent - Fouras",
@@ -36257,7 +36257,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.083386,
       "lng": 0.496488
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "St-Laurent-d’Aigouze",
@@ -36277,7 +36277,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.077415,
       "lng": 0.482605
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "St-Laurent-du-Var",
@@ -36307,7 +36307,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.83831,
       "lng": 3.456938
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "St-Léger-du-Bois - Sully",
@@ -36317,7 +36317,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.009875,
       "lng": 4.455943
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Léger-sur-Dheune",
@@ -36327,7 +36327,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.848453,
       "lng": 4.628604
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Léon-sur-l’Isle",
@@ -36377,7 +36377,7 @@ window.STATIONS_FRANCE = [
       "lat": 43,
       "lng": 1.133333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Lô",
@@ -36437,7 +36437,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.346121,
       "lng": 5.365117
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "St-Loup Place de l’Église",
@@ -36457,7 +36457,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.880997,
       "lng": 6.307407
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "St-Lyé",
@@ -36497,7 +36497,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.406607,
       "lng": -0.201073
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "St-Malo",
@@ -36527,7 +36527,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.28818,
       "lng": 5.467116
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "St-Marcel-en-Dombes",
@@ -36547,7 +36547,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.150898,
       "lng": 5.323649
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Mariens - St-Yzan",
@@ -36597,7 +36597,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.622334,
       "lng": 4.80034
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "St-Martin-de-Fraigneau",
@@ -36607,7 +36607,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.433333,
       "lng": -0.75
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "St-Martin-de-la-Mer",
@@ -36617,7 +36617,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.233333,
       "lng": 4.233333
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "St-Martin-de-Ré",
@@ -36837,7 +36837,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.2,
       "lng": -4.283333
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "St-Nicolas - St-Romain",
@@ -36857,7 +36857,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.081797,
       "lng": 4.483181
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "St-Omer",
@@ -36897,7 +36897,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.398064,
       "lng": 5.041339
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "St-Pardoux-le-Vieux",
@@ -36907,7 +36907,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.616667,
       "lng": 2.283333
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "St-Paterne",
@@ -36937,7 +36937,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.912902,
       "lng": 1.640108
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Paul-de-Jarrat Centre",
@@ -36947,7 +36947,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.916667,
       "lng": 1.65
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Paul-de-Varax",
@@ -36967,7 +36967,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.101577,
       "lng": -0.161976
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "St-Péray",
@@ -36977,7 +36977,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.94771,
       "lng": 4.85035
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Phal Monument aux morts",
@@ -37097,7 +37097,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.793237,
       "lng": 3.111743
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "St-Pierre-Quiberon",
@@ -37147,7 +37147,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.67684,
       "lng": -3.98731
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "St-Pol-sur-Ternoise",
@@ -37167,7 +37167,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.516667,
       "lng": 3.516667
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "St-Priest",
@@ -37177,7 +37177,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.686659,
       "lng": 4.934242
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "St-Priest-Taurion",
@@ -37197,7 +37197,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.633333,
       "lng": 4.416667
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Quentin",
@@ -37217,7 +37217,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.638109,
       "lng": 5.099896
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "St-Quentin-la-Tour",
@@ -37227,7 +37227,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.033333,
       "lng": 1.9
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Rambert-d’Albon",
@@ -37237,7 +37237,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.297797,
       "lng": 4.810849
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Rambert-en-Bugey",
@@ -37267,7 +37267,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.650491,
       "lng": 2.266279
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "St-Rémy-en-l’Eau",
@@ -37297,7 +37297,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.861605,
       "lng": 4.542335
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "St-Romain-le-Puy",
@@ -37377,7 +37377,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.6,
       "lng": 2.683333
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "St-Savin",
@@ -37397,7 +37397,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.983333,
       "lng": -0.083333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "St-Savinien-sur-Charente",
@@ -37557,7 +37557,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.844222,
       "lng": 4.337754
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Symphorien-des-Bois",
@@ -37567,7 +37567,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.333333,
       "lng": 4.283333
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "St-Thégonnec",
@@ -37577,7 +37577,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.494208,
       "lng": -3.948312
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "St-Vaast-d’Équiqueville",
@@ -37617,7 +37617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.186395,
       "lng": 4.81439
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "St-Vaury",
@@ -37697,7 +37697,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.25,
       "lng": 1.4
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "St-Yorre Croix des Vernes",
@@ -37887,7 +37887,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.9,
       "lng": -0.283333
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Ste-Geneviève",
@@ -37907,7 +37907,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.441184,
       "lng": 2.010435
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Ste-Lizaigne",
@@ -37937,7 +37937,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.983333,
       "lng": 0.233333
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Ste-Marie-de-Ré",
@@ -37947,7 +37947,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.15,
       "lng": -1.3
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Ste-Marthe-en-Provence",
@@ -37957,7 +37957,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.339241,
       "lng": 5.390412
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Ste-Maure - Noyant",
@@ -38027,7 +38027,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.216667,
       "lng": 1.383333
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Steenbecque",
@@ -38147,7 +38147,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.004136,
       "lng": 4.482417
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Surdon",
@@ -38207,7 +38207,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.072183,
       "lng": 4.839967
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Taizé Communauté",
@@ -38217,7 +38217,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.514143,
       "lng": 4.677051
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Taizé Gare",
@@ -38227,7 +38227,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.514169,
       "lng": 4.677118
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Taizé Mairie",
@@ -38237,7 +38237,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.512012,
       "lng": 4.679487
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Tajan - Couterou",
@@ -38247,7 +38247,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.18754,
       "lng": 0.448202
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Talence-Médoquine",
@@ -38297,7 +38297,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.889921,
       "lng": 4.439208
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Tarascon Espace Mitterand",
@@ -38307,7 +38307,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.856162,
       "lng": 1.604871
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Tarascon-sur-Ariège",
@@ -38317,7 +38317,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.849539,
       "lng": 1.599932
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Tarascon-sur-Rhône",
@@ -38327,7 +38327,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.801331,
       "lng": 4.657206
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Tarbes",
@@ -38337,7 +38337,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.239955,
       "lng": 0.069415
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Tarbes Boulevard Martinet",
@@ -38347,7 +38347,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.240001,
       "lng": 0.070403
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Tarsac",
@@ -38367,7 +38367,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.76151,
       "lng": 4.75857
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Taulignan",
@@ -38377,7 +38377,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.446722,
       "lng": 4.980976
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Tauves",
@@ -38387,7 +38387,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.56089,
       "lng": 2.620697
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Tauxigny",
@@ -38417,7 +38417,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.231434,
       "lng": -4.355092
     },
-    "province": "Finistere"
+    "province": "Finistre"
   },
   {
     "name": "Templeuve",
@@ -38467,7 +38467,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.943345,
       "lng": 4.531237
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Ternay",
@@ -38477,7 +38477,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.602906,
       "lng": 4.814739
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Terrasson",
@@ -38617,7 +38617,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.494795,
       "lng": 4.622193
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Thenon",
@@ -38707,7 +38707,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.86105,
       "lng": 3.54318
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Thiers le Moutier",
@@ -38717,7 +38717,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.847547,
       "lng": 3.507312
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Thiers Lycée",
@@ -38727,7 +38727,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.885716,
       "lng": 3.529299
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Thiers Mairie",
@@ -38737,7 +38737,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.856465,
       "lng": 3.54441
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Thionville",
@@ -38797,7 +38797,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.985244,
       "lng": -0.209794
     },
-    "province": "Deux-Sevres"
+    "province": "Deux-Svres"
   },
   {
     "name": "Thourotte",
@@ -38817,7 +38817,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.522949,
       "lng": 2.222728
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Thuès-les-Bains",
@@ -38827,7 +38827,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.528801,
       "lng": 2.249094
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Tieffenbach - Struth",
@@ -38857,7 +38857,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.514121,
       "lng": 5.169067
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Tillières",
@@ -39117,7 +39117,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.183607,
       "lng": 0.23897
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Tournay N117 D28",
@@ -39127,7 +39127,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.176466,
       "lng": 0.24821
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Tournay Village Retraite",
@@ -39137,7 +39137,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.185041,
       "lng": 0.230006
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Tournemire - Roquefort",
@@ -39157,7 +39157,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.56668,
       "lng": 4.906647
     },
-    "province": "Saone-et-Loire"
+    "province": "Sane-et-Loire"
   },
   {
     "name": "Tours",
@@ -39177,7 +39177,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.062932,
       "lng": 1.78763
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Tourville",
@@ -39227,7 +39227,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.33764,
       "lng": 2.880416
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Trannes",
@@ -39247,7 +39247,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.748566,
       "lng": -3.134877
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Trébeurden",
@@ -39257,7 +39257,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.769477,
       "lng": -3.565047
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Trégastel",
@@ -39267,7 +39267,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.822703,
       "lng": -3.509365
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Trégonneau - Squiffiec",
@@ -39277,7 +39277,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.624358,
       "lng": -3.174252
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Trélazé",
@@ -39367,7 +39367,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.113029,
       "lng": 3.054153
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Trouville - Deauville",
@@ -39467,7 +39467,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.258725,
       "lng": 1.756467
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Tulle Cité Administrative",
@@ -39477,7 +39477,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.254026,
       "lng": 1.754271
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Tulle Préfecture",
@@ -39487,7 +39487,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.270062,
       "lng": 1.76531
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Tullins - Fures",
@@ -39497,7 +39497,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.300996,
       "lng": 5.492194
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Turckheim",
@@ -39517,7 +39517,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.037954,
       "lng": 1.600705
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Uchaud",
@@ -39547,7 +39547,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.144257,
       "lng": 0.428722
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Ur-les-Escaldes",
@@ -39557,7 +39557,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.457481,
       "lng": 1.940482
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Urçay",
@@ -39617,7 +39617,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.821922,
       "lng": 1.62
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Ussel",
@@ -39627,7 +39627,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.557438,
       "lng": 2.314344
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Ussel Ville",
@@ -39637,7 +39637,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.549474,
       "lng": 2.307683
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Ustaritz",
@@ -39657,7 +39657,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.271138,
       "lng": -2.78608
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Uzel Centre",
@@ -39667,7 +39667,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.280199,
       "lng": -2.808733
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Uzer",
@@ -39677,7 +39677,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.523059,
       "lng": 4.324251
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Uzerche",
@@ -39687,7 +39687,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.440709,
       "lng": 1.570274
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Uzerche Ville",
@@ -39697,7 +39697,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.426951,
       "lng": 1.563062
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Vaas",
@@ -39747,7 +39747,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.630207,
       "lng": 6.105859
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Val-de-Reuil",
@@ -39787,7 +39787,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.421876,
       "lng": 4.825553
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Valençay",
@@ -39807,7 +39807,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.92694,
       "lng": 4.8925
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Valence TGV",
@@ -39817,7 +39817,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.991545,
       "lng": 4.978703
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Valence Ville",
@@ -39827,7 +39827,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.928049,
       "lng": 4.893273
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Valence-d’Agen",
@@ -39857,7 +39857,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.672678,
       "lng": 4.060109
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Vallant-St-Georges",
@@ -39907,7 +39907,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.407431,
       "lng": 4.385441
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Vallorcine",
@@ -40007,7 +40007,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.191163,
       "lng": 1.447286
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Varilhes",
@@ -40017,7 +40017,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.041559,
       "lng": 1.628482
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Vatimont - Mairie",
@@ -40117,7 +40117,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.001357,
       "lng": 3.134209
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Vayrac",
@@ -40157,7 +40157,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.767501,
       "lng": 1.721083
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Vecoux",
@@ -40187,7 +40187,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.32652,
       "lng": 4.92746
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Vélines",
@@ -40207,7 +40207,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.602035,
       "lng": 6.047214
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Velluire Centre",
@@ -40217,7 +40217,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.402218,
       "lng": -0.894363
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Vendenheim",
@@ -40307,7 +40307,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.705551,
       "lng": 4.888109
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Venterol",
@@ -40317,7 +40317,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.389839,
       "lng": 5.094942
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Vercheny",
@@ -40327,7 +40327,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.705419,
       "lng": 5.259168
     },
-    "province": "Drome"
+    "province": "Drme"
   },
   {
     "name": "Verdalle Centre",
@@ -40387,7 +40387,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.521276,
       "lng": 5.645926
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Verfeil",
@@ -40477,7 +40477,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.645648,
       "lng": 4.813291
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Vernet-d’Ariège",
@@ -40487,7 +40487,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.189414,
       "lng": 1.611621
     },
-    "province": "Ariege"
+    "province": "Arige"
   },
   {
     "name": "Verneuil",
@@ -40497,7 +40497,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.860969,
       "lng": 3.557596
     },
-    "province": "Nievre"
+    "province": "Nivre"
   },
   {
     "name": "Verneuil-sur-Avre",
@@ -40557,7 +40557,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.438591,
       "lng": 4.670022
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Vers",
@@ -40617,7 +40617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.784543,
       "lng": 3.288269
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Vertolaye",
@@ -40627,7 +40627,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.647915,
       "lng": 3.698009
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Vertou",
@@ -40667,7 +40667,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.617773,
       "lng": 6.151926
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Vesseaux",
@@ -40677,7 +40677,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.652215,
       "lng": 4.443712
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Veuves - Monteaux",
@@ -40707,7 +40707,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.727465,
       "lng": 4.556173
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Vezac",
@@ -40757,7 +40757,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.315653,
       "lng": 3.425356
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Vic-en-Bigorre",
@@ -40767,7 +40767,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.387647,
       "lng": 0.063686
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Vic-Fézensac Mairie",
@@ -40787,7 +40787,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.500769,
       "lng": 3.799451
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Vic-le-Comte",
@@ -40797,7 +40797,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.664911,
       "lng": 3.207079
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Vic-sur-Cère",
@@ -40867,7 +40867,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.140563,
       "lng": 0.10974
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Vielle-Aure",
@@ -40877,7 +40877,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.820196,
       "lng": 0.329184
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Vielmur-sur-Agout",
@@ -40897,7 +40897,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.521207,
       "lng": 4.874211
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Vienne Gare Routière",
@@ -40907,7 +40907,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.521299,
       "lng": 4.873992
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Vierzon",
@@ -40977,7 +40977,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.047653,
       "lng": 5.685454
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Vigeois",
@@ -40987,7 +40987,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.382947,
       "lng": 1.514946
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Vignols - St-Solve",
@@ -40997,7 +40997,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.313078,
       "lng": 1.397515
     },
-    "province": "Correze"
+    "province": "Corrze"
   },
   {
     "name": "Vignory",
@@ -41087,7 +41087,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.43951,
       "lng": 3.924015
     },
-    "province": "Lozere"
+    "province": "Lozre"
   },
   {
     "name": "Villefranche d’Albigeois",
@@ -41187,7 +41187,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.9845,
       "lng": 4.72077
     },
-    "province": "Rhone"
+    "province": "Rhne"
   },
   {
     "name": "Villefranche-Vernet-les-Bains",
@@ -41197,7 +41197,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.591998,
       "lng": 2.370396
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Villefranque (Hautes Pyrénées)",
@@ -41207,7 +41207,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.47791,
       "lng": 0.023075
     },
-    "province": "Hautes-Pyrenees"
+    "province": "Hautes-Pyrnes"
   },
   {
     "name": "Villefranque (Pyrénées Atlantiques)",
@@ -41277,7 +41277,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.55648,
       "lng": 4.500414
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Villeneuve-de-Berg Pommiers",
@@ -41287,7 +41287,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.560867,
       "lng": 4.51627
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Villeneuve-la-Comtesse",
@@ -41317,7 +41317,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.543823,
       "lng": 3.849917
     },
-    "province": "Herault"
+    "province": "Hrault"
   },
   {
     "name": "Villeneuve-Loubet Plage",
@@ -41467,7 +41467,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.206602,
       "lng": 5.347872
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Villers-St-Paul",
@@ -41547,7 +41547,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.20797,
       "lng": 5.41005
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Vinça",
@@ -41557,7 +41557,7 @@ window.STATIONS_FRANCE = [
       "lat": 42.648137,
       "lng": 2.527616
     },
-    "province": "Pyrenees-Orientales"
+    "province": "Pyrnes-Orientales"
   },
   {
     "name": "Vincelles",
@@ -41617,7 +41617,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.491703,
       "lng": 5.472142
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Virville - Manneville",
@@ -41667,7 +41667,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.830406,
       "lng": 5.779407
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Vitrey-sur-Mance",
@@ -41677,7 +41677,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.828833,
       "lng": 5.753545
     },
-    "province": "Haute-Saone"
+    "province": "Haute-Sane"
   },
   {
     "name": "Vitrolles Aéroport Marseille-Provence TER",
@@ -41687,7 +41687,7 @@ window.STATIONS_FRANCE = [
       "lat": 43.441734,
       "lng": 5.237122
     },
-    "province": "Bouches-du-Rhone"
+    "province": "Bouches-du-Rhne"
   },
   {
     "name": "Vitry-en-Artois",
@@ -41727,7 +41727,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.483555,
       "lng": 4.687058
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Viviers-du-Lac",
@@ -41817,7 +41817,7 @@ window.STATIONS_FRANCE = [
       "lat": 46.364625,
       "lng": -0.872816
     },
-    "province": "Vendee"
+    "province": "Vende"
   },
   {
     "name": "Vogue Centre",
@@ -41827,7 +41827,7 @@ window.STATIONS_FRANCE = [
       "lat": 44.542916,
       "lng": 4.414206
     },
-    "province": "Ardeche"
+    "province": "Ardche"
   },
   {
     "name": "Voiron",
@@ -41837,7 +41837,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.364037,
       "lng": 5.595054
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Voivres",
@@ -41857,7 +41857,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.864715,
       "lng": 3.003146
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Volx",
@@ -41887,7 +41887,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.290417,
       "lng": 5.632119
     },
-    "province": "Isere"
+    "province": "Isre"
   },
   {
     "name": "Vorey",
@@ -41917,7 +41917,7 @@ window.STATIONS_FRANCE = [
       "lat": 47.175556,
       "lng": 4.971569
     },
-    "province": "Cote-d'Or"
+    "province": "Cte-dOr"
   },
   {
     "name": "Voujeaucourt",
@@ -41997,7 +41997,7 @@ window.STATIONS_FRANCE = [
       "lat": 45.813611,
       "lng": 2.94
     },
-    "province": "Puy-de-Dome"
+    "province": "Puy-de-Dme"
   },
   {
     "name": "Wacquemoulin",
@@ -42317,7 +42317,7 @@ window.STATIONS_FRANCE = [
       "lat": 48.470246,
       "lng": -2.652463
     },
-    "province": "Cotes-d'Armor"
+    "province": "Ctes-d'Armor"
   },
   {
     "name": "Ygos",

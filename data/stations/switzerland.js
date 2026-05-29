@@ -737,7 +737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.335957,
       "lng": 8.76561
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Abtwil AG Auwerstrasse",
@@ -1447,7 +1447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.338499,
       "lng": 8.844109
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adetswil Sunneberg",
@@ -1457,7 +1457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.339029,
       "lng": 8.840972
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adligenswil Blatte",
@@ -1547,7 +1547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.582637,
       "lng": 8.692551
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adlikon b R Dorf",
@@ -1557,7 +1557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.448158,
       "lng": 8.466472
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adlikon b R Leematten",
@@ -1567,7 +1567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452581,
       "lng": 8.467057
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adlikon b R Pächterried",
@@ -1577,7 +1577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445902,
       "lng": 8.470041
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adlikon b R Sonnhalde",
@@ -1587,7 +1587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452006,
       "lng": 8.462202
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adlikon b R Sonnhalde West",
@@ -1597,7 +1597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.4533,
       "lng": 8.458912
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adlikon b R Ziegelhütte",
@@ -1607,7 +1607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452635,
       "lng": 8.466077
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil",
@@ -1617,7 +1617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.312304,
       "lng": 8.524164
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Ahornweg",
@@ -1627,7 +1627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.318794,
       "lng": 8.534386
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Badstrasse",
@@ -1637,7 +1637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313599,
       "lng": 8.533801
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Baldernstrasse",
@@ -1647,7 +1647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32079,
       "lng": 8.515589
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Baumgartenweg",
@@ -1657,7 +1657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.309598,
       "lng": 8.525612
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Bodenacker",
@@ -1667,7 +1667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.316403,
       "lng": 8.517738
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Büchel",
@@ -1677,7 +1677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.301104,
       "lng": 8.522097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Dietlimoos",
@@ -1687,7 +1687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322471,
       "lng": 8.532255
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Friedhof",
@@ -1697,7 +1697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306884,
       "lng": 8.52963
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Grundstrasse",
@@ -1707,7 +1707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.312951,
       "lng": 8.530053
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Grüt",
@@ -1717,7 +1717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322444,
       "lng": 8.528983
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Hofackerstrasse",
@@ -1727,7 +1727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.315136,
       "lng": 8.53577
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Krone",
@@ -1737,7 +1737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313077,
       "lng": 8.527644
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Landolt-Junker-Str",
@@ -1747,7 +1747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.303342,
       "lng": 8.522259
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Moos",
@@ -1757,7 +1757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.325132,
       "lng": 8.531141
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Poststrasse",
@@ -1767,7 +1767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313203,
       "lng": 8.525199
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Rifertstrasse",
@@ -1777,7 +1777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.309949,
       "lng": 8.531824
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Rütistrasse/Wacht",
@@ -1787,7 +1787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307019,
       "lng": 8.532201
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Schulhaus Kopfholz",
@@ -1797,7 +1797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.308798,
       "lng": 8.534449
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Tiefacker",
@@ -1807,7 +1807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.316565,
       "lng": 8.530017
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Tobelhof",
@@ -1817,7 +1817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.309194,
       "lng": 8.52848
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Wanneten-/Haldenstr",
@@ -1827,7 +1827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305913,
       "lng": 8.522475
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Adliswil Zopf",
@@ -1837,7 +1837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.319163,
       "lng": 8.516353
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aedermannsdorf Dorfplatz",
@@ -1947,7 +1947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.330274,
       "lng": 8.654706
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aesch bei Maur Zollingerheim",
@@ -1957,7 +1957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326678,
       "lng": 8.656351
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aesch BL Alterszentrum",
@@ -2087,7 +2087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.542338,
       "lng": 8.68091
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aesch ZH Gemeindehaus",
@@ -2097,7 +2097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.338211,
       "lng": 8.438705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aesch ZH Heligenmattstrasse",
@@ -2107,7 +2107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.334526,
       "lng": 8.436331
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeschau Dorf",
@@ -2527,7 +2527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.267826,
       "lng": 8.485341
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeugst am Albis Grossacher",
@@ -2537,7 +2537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2661,
       "lng": 8.491202
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeugst am Albis Höchweg",
@@ -2547,7 +2547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.270864,
       "lng": 8.480648
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeugst am Albis Müliberg",
@@ -2557,7 +2557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281229,
       "lng": 8.478536
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeugstertal Kloster",
@@ -2567,7 +2567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284303,
       "lng": 8.48686
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeugstertal Landhus",
@@ -2577,7 +2577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.279907,
       "lng": 8.500649
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aeusseres Emdthal",
@@ -2607,7 +2607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281193,
       "lng": 8.457384
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Blitzgbach",
@@ -2617,7 +2617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.285525,
       "lng": 8.453105
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Friedhof",
@@ -2627,7 +2627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282667,
       "lng": 8.446498
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Kronenplatz",
@@ -2637,7 +2637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.28122,
       "lng": 8.454409
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Lilienberg",
@@ -2647,7 +2647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.278577,
       "lng": 8.465951
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Lindenmoos",
@@ -2657,7 +2657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27081,
       "lng": 8.444116
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Stigeli",
@@ -2667,7 +2667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27846,
       "lng": 8.459101
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern a A Weinberg",
@@ -2677,7 +2677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.279754,
       "lng": 8.461312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern aA Moosbach",
@@ -2687,7 +2687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.272743,
       "lng": 8.439855
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern am Albis",
@@ -2697,7 +2697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.276068,
       "lng": 8.446588
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Affoltern iE Bannholz",
@@ -2837,7 +2837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425173,
       "lng": 8.744302
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Agiez L Epine",
@@ -4707,7 +4707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.658407,
       "lng": 8.603216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Altenburg Grosse Breite",
@@ -4717,7 +4717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.656699,
       "lng": 8.602893
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Altenburg Industriegebiet",
@@ -4727,7 +4727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.661373,
       "lng": 8.598227
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Altenburg Rathaus",
@@ -4737,7 +4737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.657247,
       "lng": 8.599333
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Altenburg Schule",
@@ -4987,7 +4987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.573477,
       "lng": 8.780861
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Altikon Herten",
@@ -4997,7 +4997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.568793,
       "lng": 8.800736
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Altishofen Bäckerei",
@@ -6157,7 +6157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.594331,
       "lng": 8.678006
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Andermatt",
@@ -8037,7 +8037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.955522,
       "lng": 6.855174
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Areuse Les Isles",
@@ -8047,7 +8047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954821,
       "lng": 6.847506
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Areuse Les Isles Littorail",
@@ -8057,7 +8057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954226,
       "lng": 6.848518
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Areuse Littorail",
@@ -8067,7 +8067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954545,
       "lng": 6.85281
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Arezen alte Post",
@@ -9457,7 +9457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.246817,
       "lng": 8.643708
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Alte Landstrasse",
@@ -9467,7 +9467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.247123,
       "lng": 8.635047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Appital",
@@ -9477,7 +9477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240543,
       "lng": 8.644863
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Aubrücke",
@@ -9487,7 +9487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.24582,
       "lng": 8.64996
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Austrasse",
@@ -9497,7 +9497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.245191,
       "lng": 8.648243
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Bahnhof",
@@ -9507,7 +9507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.246467,
       "lng": 8.644305
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Grundstein",
@@ -9517,7 +9517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.242179,
       "lng": 8.654841
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Gwad",
@@ -9527,7 +9527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.23951,
       "lng": 8.657574
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Moosacher",
@@ -9537,7 +9537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240714,
       "lng": 8.641294
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Naglikonerweg",
@@ -9547,7 +9547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248022,
       "lng": 8.635442
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Schützenhaus",
@@ -9557,7 +9557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.241667,
       "lng": 8.645331
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Seeguet",
@@ -9567,7 +9567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249155,
       "lng": 8.633438
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Stoffelstrasse",
@@ -9577,7 +9577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.241478,
       "lng": 8.651021
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Strandbad",
@@ -9587,7 +9587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240346,
       "lng": 8.658913
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Au ZH Unter Ort",
@@ -9597,7 +9597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248247,
       "lng": 8.632045
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Aubonne Bougy-St-Martin",
@@ -9907,7 +9907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.341852,
       "lng": 8.817025
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Auslikon Schulhausstrasse",
@@ -9917,7 +9917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343641,
       "lng": 8.807235
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ausserberg",
@@ -10117,7 +10117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.979632,
       "lng": 6.877706
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Auvernier Littorail",
@@ -10127,7 +10127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.974231,
       "lng": 6.878919
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Auvernier Pacotte",
@@ -10137,7 +10137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.975703,
       "lng": 6.872865
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Auw Altersheim",
@@ -11357,7 +11357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505258,
       "lng": 8.545973
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bachenbülach Bramenländli",
@@ -11367,7 +11367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.503523,
       "lng": 8.538961
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bachenbülach Bramenstrasse",
@@ -11377,7 +11377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502956,
       "lng": 8.537172
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bachenbülach Schmiede",
@@ -11387,7 +11387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500862,
       "lng": 8.544993
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bächli Dorf",
@@ -11427,7 +11427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.523766,
       "lng": 8.439127
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bachs Milchhütte",
@@ -11437,7 +11437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.526931,
       "lng": 8.43786
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bachs Neu-Bachs",
@@ -11447,7 +11447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.525987,
       "lng": 8.442156
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bachs Weiherbach",
@@ -11457,7 +11457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.519182,
       "lng": 8.44933
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bad Ragaz",
@@ -12987,7 +12987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430234,
       "lng": 8.641717
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Baltersweil Neue Welt",
@@ -13257,7 +13257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.545026,
       "lng": 8.740958
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bannwil",
@@ -13517,7 +13517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.337313,
       "lng": 8.852163
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bäretswil Bettswil",
@@ -13527,7 +13527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332943,
       "lng": 8.881549
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bäretswil Bussental",
@@ -13537,7 +13537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350077,
       "lng": 8.858519
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bäretswil Eishalle",
@@ -13547,7 +13547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331703,
       "lng": 8.847237
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bäretswil Oberdorf",
@@ -13557,7 +13557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332404,
       "lng": 8.855498
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bäretswil Wappenswil",
@@ -13567,7 +13567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32488,
       "lng": 8.867769
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bargen",
@@ -14667,7 +14667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438926,
       "lng": 8.635739
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Bahnhof",
@@ -14677,7 +14677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438755,
       "lng": 8.626129
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Chlupfgasse",
@@ -14687,7 +14687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444625,
       "lng": 8.624619
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Dietlikonerstr",
@@ -14697,7 +14697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.441767,
       "lng": 8.629662
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Gemeindehaus",
@@ -14707,7 +14707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.443556,
       "lng": 8.629069
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Grindel",
@@ -14717,7 +14717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446522,
       "lng": 8.608412
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Löwen",
@@ -14727,7 +14727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.443583,
       "lng": 8.628125
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Rietli",
@@ -14737,7 +14737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444688,
       "lng": 8.636189
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Schmitte",
@@ -14747,7 +14747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.442944,
       "lng": 8.628763
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Sportanlage",
@@ -14757,7 +14757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444464,
       "lng": 8.610713
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassersdorf Talgüetli",
@@ -14767,7 +14767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445102,
       "lng": 8.620484
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bassins",
@@ -14907,7 +14907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368836,
       "lng": 8.87821
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Dorfmitti",
@@ -14917,7 +14917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.366788,
       "lng": 8.876695
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Giesserei",
@@ -14927,7 +14927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.363534,
       "lng": 8.871751
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Holderbaum",
@@ -14937,7 +14937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.365763,
       "lng": 8.884605
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Hörnen",
@@ -14947,7 +14947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.369709,
       "lng": 8.887095
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Lipperschwändi",
@@ -14957,7 +14957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359614,
       "lng": 8.920104
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Musterplatz",
@@ -14967,7 +14967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.380793,
       "lng": 8.899312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Schindlet",
@@ -14977,7 +14977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.377251,
       "lng": 8.895455
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bauma Widen",
@@ -14987,7 +14987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.370195,
       "lng": 8.865917
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bazenheid",
@@ -16767,7 +16767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.961941,
       "lng": 6.550224
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bémont NE sur-le-Pont",
@@ -16777,7 +16777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.964754,
       "lng": 6.556714
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bendern Pinocchio",
@@ -16837,7 +16837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361134,
       "lng": 8.638616
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Benglen Gerlisbrunnen",
@@ -16847,7 +16847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360918,
       "lng": 8.632791
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Benglen Langwis",
@@ -16857,7 +16857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361961,
       "lng": 8.630121
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Benken",
@@ -16927,7 +16927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.652915,
       "lng": 8.653241
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Benkerjoch Passhöhe",
@@ -17097,7 +17097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.569063,
       "lng": 8.597805
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Berg FR Restaurant",
@@ -17137,7 +17137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.392785,
       "lng": 8.392581
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergdietikon Bergli",
@@ -17147,7 +17147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391131,
       "lng": 8.389579
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergdietikon Bernold",
@@ -17157,7 +17157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388038,
       "lng": 8.388131
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergdietikon Dünni",
@@ -17167,7 +17167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394502,
       "lng": 8.393129
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergdietikon Rietwies",
@@ -17177,7 +17177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393216,
       "lng": 8.390711
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergdietikon Vorbühl",
@@ -17187,7 +17187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389647,
       "lng": 8.385084
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergfrieden",
@@ -17197,7 +17197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397714,
       "lng": 8.399086
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bergün/Bravuogn",
@@ -19167,7 +19167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322768,
       "lng": 8.755979
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bertschikon bei Attikon",
@@ -19177,7 +19177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.526508,
       "lng": 8.813977
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bertschikon bei Gossau Dorf",
@@ -19187,7 +19187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.320305,
       "lng": 8.757561
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Berwangen Ort",
@@ -19747,7 +19747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.929688,
       "lng": 6.811679
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bevaix Chauvigny",
@@ -19757,7 +19757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.920231,
       "lng": 6.80754
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bevaix Giratoire 3 Communes",
@@ -19767,7 +19767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.94283,
       "lng": 6.829096
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bevaix Les Jonchères",
@@ -19777,7 +19777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.925786,
       "lng": 6.810929
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bevaix Les Yères",
@@ -19787,7 +19787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.933472,
       "lng": 6.818147
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bever",
@@ -20157,7 +20157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.154804,
       "lng": 6.844683
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Biaufond Les Avants",
@@ -20167,7 +20167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.147883,
       "lng": 6.843254
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bibenlos-Sonnenhof",
@@ -22217,7 +22217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358356,
       "lng": 8.63004
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Binz bei Maur Fridlimatt",
@@ -22227,7 +22227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359264,
       "lng": 8.624619
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Binz bei Maur Gassacher",
@@ -22237,7 +22237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.357097,
       "lng": 8.627972
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Binz bei Maur Twäracher",
@@ -22247,7 +22247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360891,
       "lng": 8.623478
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Binzenhof",
@@ -22377,7 +22377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.458019,
       "lng": 8.639029
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birgisch Bord",
@@ -22427,7 +22427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.357448,
       "lng": 8.437535
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Aescherstrasse",
@@ -22437,7 +22437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350895,
       "lng": 8.438318
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Altenberg",
@@ -22447,7 +22447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347128,
       "lng": 8.420564
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Landikon Bach",
@@ -22457,7 +22457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.352288,
       "lng": 8.461699
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Landikon Dorf",
@@ -22467,7 +22467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.352783,
       "lng": 8.461097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Obere Risi",
@@ -22477,7 +22477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359462,
       "lng": 8.450795
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Ristet",
@@ -22487,7 +22487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.365727,
       "lng": 8.42941
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Sternen/WSL",
@@ -22497,7 +22497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360091,
       "lng": 8.456269
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Untere Risi",
@@ -22507,7 +22507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359704,
       "lng": 8.447047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Weissenbrunnen",
@@ -22517,7 +22517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.356073,
       "lng": 8.445959
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmensdorf ZH Zentrum",
@@ -22527,7 +22527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353933,
       "lng": 8.437176
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Birmenstorf AG Chrüz",
@@ -22857,7 +22857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412516,
       "lng": 8.69541
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bisisthal Dürrenboden",
@@ -23787,7 +23787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.968958,
       "lng": 6.837685
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bôle collèges",
@@ -23797,7 +23797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.967936,
       "lng": 6.839838
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bôle Pierre-à-Sisier",
@@ -23807,7 +23807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.969806,
       "lng": 6.834049
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bôle sous Le Pré",
@@ -23817,7 +23817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.968332,
       "lng": 6.846481
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bolken Dorf",
@@ -24497,7 +24497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.316628,
       "lng": 8.463065
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten Dorfplatz",
@@ -24507,7 +24507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.315091,
       "lng": 8.467776
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten Dorfstrasse",
@@ -24517,7 +24517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.316871,
       "lng": 8.462364
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten Isenbach",
@@ -24527,7 +24527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.314345,
       "lng": 8.472567
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten Lärchenhof",
@@ -24537,7 +24537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324242,
       "lng": 8.472432
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten Lätten",
@@ -24547,7 +24547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.318902,
       "lng": 8.455793
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten Sunnenberg",
@@ -24557,7 +24557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.312448,
       "lng": 8.473394
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonstetten-Wettswil",
@@ -24567,7 +24567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.325896,
       "lng": 8.468175
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bonvillars bas du village",
@@ -24627,7 +24627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.470065,
       "lng": 8.401921
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Boppelsen Hand",
@@ -24637,7 +24637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.46877,
       "lng": 8.407242
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Borex centre",
@@ -25157,7 +25157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.019256,
       "lng": 6.88402
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudevilliers centre",
@@ -25167,7 +25167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.026115,
       "lng": 6.888901
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudevilliers Jonchère",
@@ -25177,7 +25177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.03069,
       "lng": 6.890852
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry",
@@ -25187,7 +25187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.959445,
       "lng": 6.835046
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Addoz",
@@ -25197,7 +25197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.952556,
       "lng": 6.826597
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Baconnière",
@@ -25207,7 +25207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954012,
       "lng": 6.836656
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Bellevue",
@@ -25217,7 +25217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.950228,
       "lng": 6.830651
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Buchilles",
@@ -25227,7 +25227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.946695,
       "lng": 6.830507
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Cèdres",
@@ -25237,7 +25237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954866,
       "lng": 6.832134
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry centre sportif",
@@ -25247,7 +25247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.944681,
       "lng": 6.82284
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Conrardes",
@@ -25257,7 +25257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.95697,
       "lng": 6.840647
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Les Tilles",
@@ -25267,7 +25267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.946228,
       "lng": 6.833033
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Littorail",
@@ -25277,7 +25277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.949588,
       "lng": 6.838953
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Praz",
@@ -25287,7 +25287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954408,
       "lng": 6.8231
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Sur-la-Forêt",
@@ -25297,7 +25297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.957203,
       "lng": 6.834256
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Tuilière",
@@ -25307,7 +25307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.951462,
       "lng": 6.84286
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boudry Vauvilliers",
@@ -25317,7 +25317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.952601,
       "lng": 6.834211
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bougy-Villars centre",
@@ -25557,7 +25557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.918909,
       "lng": 6.595404
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boveresse piscine",
@@ -25567,7 +25567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.920114,
       "lng": 6.613643
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boveresse Prise-Sèche",
@@ -25577,7 +25577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.926613,
       "lng": 6.608177
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boveresse Séchoir",
@@ -25587,7 +25587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.91677,
       "lng": 6.600698
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Boveresse temple",
@@ -25597,7 +25597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.916204,
       "lng": 6.5997
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Bovernier",
@@ -26347,7 +26347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.461597,
       "lng": 8.661107
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Breite b N dorfGrünenwaldstr",
@@ -26357,7 +26357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.46193,
       "lng": 8.661286
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Breite b Nürensdorf Sternen",
@@ -26367,7 +26367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.460824,
       "lng": 8.659911
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Breitenbach Bandfabrik",
@@ -28207,7 +28207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.955864,
       "lng": 6.748049
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Brot-Dessus Bureau Communal",
@@ -28217,7 +28217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.972566,
       "lng": 6.741074
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Brot-Dessus Le Joratel",
@@ -28227,7 +28227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.965698,
       "lng": 6.733064
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Brot-Dessus V-Ch-les-Brandt",
@@ -28237,7 +28237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.980674,
       "lng": 6.74689
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Brugg",
@@ -29097,7 +29097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.471467,
       "lng": 8.682492
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brütten Hofacher",
@@ -29107,7 +29107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.470964,
       "lng": 8.67059
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brütten Zelgli",
@@ -29117,7 +29117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.471422,
       "lng": 8.673871
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brütten Zentrum",
@@ -29127,7 +29127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.472034,
       "lng": 8.676478
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brüttisellen Gsellhof",
@@ -29137,7 +29137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421712,
       "lng": 8.629662
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brüttisellen Haldenbrücke",
@@ -29147,7 +29147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.418808,
       "lng": 8.631361
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brüttisellen Neuwisen",
@@ -29157,7 +29157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416103,
       "lng": 8.634553
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brüttisellen Ob Wangenstr",
@@ -29167,7 +29167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42582,
       "lng": 8.634849
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Brüttisellen Zentrum",
@@ -29177,7 +29177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423851,
       "lng": 8.630696
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bruzella Cimitero",
@@ -29277,7 +29277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.260868,
       "lng": 8.830023
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bubikon Bahnhof",
@@ -29287,7 +29287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.270657,
       "lng": 8.822597
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bubikon Dorf",
@@ -29297,7 +29297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26841,
       "lng": 8.818966
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bubikon Platte",
@@ -29307,7 +29307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277067,
       "lng": 8.814768
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bubikon Ritterhaus",
@@ -29317,7 +29317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.266675,
       "lng": 8.826203
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bubikon Tafleten",
@@ -29327,7 +29327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.274846,
       "lng": 8.822319
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bubikon Wihalde",
@@ -29337,7 +29337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.264005,
       "lng": 8.814804
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Büblikon Reusstal",
@@ -29367,7 +29367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.541574,
       "lng": 8.643605
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch am Irchel Desibach",
@@ -29377,7 +29377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.551948,
       "lng": 8.643937
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch am Irchel Irchelhof",
@@ -29387,7 +29387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.553548,
       "lng": 8.619855
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch am Irchel Oberbuch",
@@ -29397,7 +29397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.547462,
       "lng": 8.621581
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch am Irchel Sägerei",
@@ -29407,7 +29407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.551615,
       "lng": 8.632961
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch am Irchel Unterbuch",
@@ -29417,7 +29417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.55006,
       "lng": 8.61875
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch am Irchel Wiler",
@@ -29427,7 +29427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.556982,
       "lng": 8.614147
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buch bei Frauenfeld Dorf",
@@ -30067,7 +30067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.455296,
       "lng": 8.437761
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchs ZH Industrie",
@@ -30077,7 +30077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.44948,
       "lng": 8.438327
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchs ZH Linde",
@@ -30087,7 +30087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.45846,
       "lng": 8.440251
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchs ZH Petermoos",
@@ -30097,7 +30097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.457192,
       "lng": 8.443433
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchs ZH Post",
@@ -30107,7 +30107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.456662,
       "lng": 8.43759
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchs-Dällikon",
@@ -30117,7 +30117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.453398,
       "lng": 8.435578
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchs-Dällikon Bahnhof",
@@ -30127,7 +30127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.453353,
       "lng": 8.437005
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Buchserberg Berghaus",
@@ -30377,7 +30377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.523946,
       "lng": 8.536183
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Berglistrasse",
@@ -30387,7 +30387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.524144,
       "lng": 8.546036
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Berufswahlschule",
@@ -30397,7 +30397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.518382,
       "lng": 8.532067
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Cholplatz",
@@ -30407,7 +30407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509905,
       "lng": 8.544544
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Einkaufszentrum Süd",
@@ -30417,7 +30417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509465,
       "lng": 8.53906
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Gewerbehaus",
@@ -30427,7 +30427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.518616,
       "lng": 8.539222
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Grampenweg",
@@ -30437,7 +30437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.516836,
       "lng": 8.53924
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Hinterbirch",
@@ -30447,7 +30447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.522085,
       "lng": 8.528875
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Hirslen",
@@ -30457,7 +30457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.522544,
       "lng": 8.525415
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Hohfuri",
@@ -30467,7 +30467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.52551,
       "lng": 8.544067
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Kaffeestrasse",
@@ -30477,7 +30477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.511775,
       "lng": 8.536211
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Kantonsschule",
@@ -30487,7 +30487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.517123,
       "lng": 8.547222
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Kaserne",
@@ -30497,7 +30497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.513123,
       "lng": 8.525873
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Kreuzstrasse",
@@ -30507,7 +30507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.518804,
       "lng": 8.540606
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Mettmenriet",
@@ -30517,7 +30517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.512476,
       "lng": 8.543465
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Moritz-Meyer-Weg",
@@ -30527,7 +30527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.515047,
       "lng": 8.544157
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Niederflachs",
@@ -30537,7 +30537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.515586,
       "lng": 8.531168
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Obere Frohalde",
@@ -30547,7 +30547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.526796,
       "lng": 8.550737
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Pfarrgässli",
@@ -30557,7 +30557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.516153,
       "lng": 8.540876
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Schuemacher",
@@ -30567,7 +30567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.529106,
       "lng": 8.544139
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Soliboden",
@@ -30577,7 +30577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.526598,
       "lng": 8.539033
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Soligänter",
@@ -30587,7 +30587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.528234,
       "lng": 8.542134
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Sonnenhof",
@@ -30597,7 +30597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.520611,
       "lng": 8.539653
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Spital",
@@ -30607,7 +30607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.52089,
       "lng": 8.533352
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Stadthalle",
@@ -30617,7 +30617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.515236,
       "lng": 8.536552
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Stubenchlaus",
@@ -30627,7 +30627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.522292,
       "lng": 8.551969
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Tiefengasse",
@@ -30637,7 +30637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.514822,
       "lng": 8.533226
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Untere Frohalde",
@@ -30647,7 +30647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.52409,
       "lng": 8.552005
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Untertor",
@@ -30657,7 +30657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.515865,
       "lng": 8.541874
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bülach Witenwisen",
@@ -30667,7 +30667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.520117,
       "lng": 8.546494
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bulle",
@@ -32067,7 +32067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.208674,
       "lng": 8.692695
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Burgholz",
@@ -32397,7 +32397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.686381,
       "lng": 8.668972
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Büsingen Strandbad",
@@ -32417,7 +32417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.690966,
       "lng": 8.681728
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Bussalp",
@@ -32927,7 +32927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.888482,
       "lng": 6.553865
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Buttes bif Les Gouttettes",
@@ -32937,7 +32937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.88502,
       "lng": 6.529171
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Büttikon AG Brünishalden",
@@ -35417,7 +35417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.057622,
       "lng": 6.895625
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cernier centre",
@@ -35427,7 +35427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.059348,
       "lng": 6.902097
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cernier Crêt Debély",
@@ -35437,7 +35437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.060121,
       "lng": 6.90554
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Certara Cardaiolo",
@@ -36217,7 +36217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.967103,
       "lng": 6.812253
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chambrelien La Sauge",
@@ -36227,7 +36227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.97377,
       "lng": 6.815055
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chambrelien village",
@@ -36237,7 +36237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.969626,
       "lng": 6.818507
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chamby",
@@ -36397,7 +36397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.959903,
       "lng": 6.774984
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Champagne collège",
@@ -36947,7 +36947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.110874,
       "lng": 7.031578
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chasseral col",
@@ -36957,7 +36957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.119351,
       "lng": 7.032171
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chasseral Hôtel",
@@ -38397,7 +38397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.899699,
       "lng": 6.782262
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chez-le-Bart Platanes",
@@ -38407,7 +38407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.909767,
       "lng": 6.797984
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chez-le-Bart poste",
@@ -38417,7 +38417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.901272,
       "lng": 6.786074
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chez-le-Maître-Ecoles",
@@ -38437,7 +38437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.064732,
       "lng": 6.927007
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chézard-St-Martin St-Martin",
@@ -38447,7 +38447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.065856,
       "lng": 6.930998
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chézard-St-MartinGrand-Chézar",
@@ -38457,7 +38457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.062386,
       "lng": 6.917487
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chézard-St-MartinPetit-Chézar",
@@ -38467,7 +38467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.06422,
       "lng": 6.923222
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Chiasso",
@@ -40447,7 +40447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.006761,
       "lng": 6.860379
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Coffrane Rue du Collège",
@@ -40457,7 +40457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.010851,
       "lng": 6.861646
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Coglio",
@@ -41177,7 +41177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.96764,
       "lng": 6.848869
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Allées Littorail",
@@ -41187,7 +41187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.968068,
       "lng": 6.869509
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Arsenal",
@@ -41197,7 +41197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.965006,
       "lng": 6.864046
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Littorail",
@@ -41207,7 +41207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.965871,
       "lng": 6.865419
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Perreuses",
@@ -41217,7 +41217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.96817,
       "lng": 6.850886
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Place de jeux",
@@ -41227,7 +41227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.964601,
       "lng": 6.858077
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Rue de L Etang",
@@ -41237,7 +41237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.966444,
       "lng": 6.857556
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Sources",
@@ -41247,7 +41247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.964961,
       "lng": 6.855452
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE St-Etienne",
@@ -41257,7 +41257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.966759,
       "lng": 6.864046
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier NE Vernes",
@@ -41267,7 +41267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.967945,
       "lng": 6.854275
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Colombier VD En Plan",
@@ -41497,7 +41497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.869621,
       "lng": 6.751672
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Concise haut du village",
@@ -42087,7 +42087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.983065,
       "lng": 6.875588
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles NE église",
@@ -42097,7 +42097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.985142,
       "lng": 6.876685
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles NE haut du village",
@@ -42107,7 +42107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.985196,
       "lng": 6.866779
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles NE Les Vernets",
@@ -42117,7 +42117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.98756,
       "lng": 6.866464
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles NE Nicole",
@@ -42127,7 +42127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.983659,
       "lng": 6.877386
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles NE Pharmacie",
@@ -42137,7 +42137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.984513,
       "lng": 6.88011
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles NE rue à Jean",
@@ -42147,7 +42147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.9848,
       "lng": 6.869655
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles-le-Jorat Le Torel",
@@ -42197,7 +42197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.983341,
       "lng": 6.883805
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Corcelles-près-Concisevillage",
@@ -42497,7 +42497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.981726,
       "lng": 6.868873
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cormondrèche Prieuré",
@@ -42507,7 +42507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.9824,
       "lng": 6.870959
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cormoret",
@@ -42527,7 +42527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.03856,
       "lng": 7.023363
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cornol bas du village",
@@ -42847,7 +42847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.94763,
       "lng": 6.851965
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Buffet d un Tram",
@@ -42857,7 +42857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.947324,
       "lng": 6.853349
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Câbles",
@@ -42867,7 +42867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.945014,
       "lng": 6.857916
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Chanélaz",
@@ -42877,7 +42877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.95074,
       "lng": 6.85298
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Cort Agora",
@@ -42887,7 +42887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.944061,
       "lng": 6.844243
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Graviers",
@@ -42897,7 +42897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.945625,
       "lng": 6.855309
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Les Jordils",
@@ -42907,7 +42907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.94123,
       "lng": 6.840216
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortaillod Temple",
@@ -42917,7 +42917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.942911,
       "lng": 6.845879
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cortébert",
@@ -43637,7 +43637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.923351,
       "lng": 6.635668
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet bif de Plancemont",
@@ -43647,7 +43647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.928024,
       "lng": 6.618793
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet centre commercial",
@@ -43657,7 +43657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.922433,
       "lng": 6.62469
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet centre sportif",
@@ -43667,7 +43667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.928204,
       "lng": 6.640287
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet hôpital",
@@ -43677,7 +43677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.925525,
       "lng": 6.631351
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet La Léchère",
@@ -43687,7 +43687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.930712,
       "lng": 6.645069
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet Le Preyel",
@@ -43697,7 +43697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.923305,
       "lng": 6.634947
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Couvet Viaduc",
@@ -43707,7 +43707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.928411,
       "lng": 6.631873
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cozzo Paese",
@@ -44297,7 +44297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.05194,
       "lng": 7.039526
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cressier NE Malpierres",
@@ -44307,7 +44307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.044507,
       "lng": 7.030005
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Cressier NE Sansfoin",
@@ -44317,7 +44317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.04892,
       "lng": 7.034733
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Crésuz village",
@@ -45177,7 +45177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.667085,
       "lng": 8.613797
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dachsen Lindenstrasse",
@@ -45187,7 +45187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.663495,
       "lng": 8.621168
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dägerlen Berg",
@@ -45197,7 +45197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.56375,
       "lng": 8.733227
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dägerlen Lindenhof",
@@ -45207,7 +45207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.567121,
       "lng": 8.713748
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dägerlen Oberwil",
@@ -45217,7 +45217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.572281,
       "lng": 8.716831
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dagmersellen",
@@ -45327,7 +45327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.439735,
       "lng": 8.439298
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dällikon Industrie",
@@ -45337,7 +45337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444733,
       "lng": 8.438785
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dällikon Seitenacker",
@@ -45347,7 +45347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438773,
       "lng": 8.4447
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dalpe Campiano",
@@ -45587,7 +45587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445875,
       "lng": 8.406838
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dänikon Rotflue",
@@ -45597,7 +45597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446999,
       "lng": 8.397111
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Danis vitg",
@@ -45817,7 +45817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.525061,
       "lng": 8.622929
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dättwil AG Kantonsspital",
@@ -47517,7 +47517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.440598,
       "lng": 8.77705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dettighofen D Löwen",
@@ -47747,7 +47747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.475989,
       "lng": 8.454867
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Bahnhof",
@@ -47757,7 +47757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.482955,
       "lng": 8.45893
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Bezirksgebäude",
@@ -47767,7 +47767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.481976,
       "lng": 8.452683
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Erlen",
@@ -47777,7 +47777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.483459,
       "lng": 8.47121
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Gesundheitszentrum",
@@ -47787,7 +47787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479558,
       "lng": 8.450597
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Ruchwiesen",
@@ -47797,7 +47797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.481005,
       "lng": 8.463901
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Spitalstrasse",
@@ -47807,7 +47807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.481481,
       "lng": 8.45066
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dielsdorf Wehntalerstrasse",
@@ -47817,7 +47817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.483171,
       "lng": 8.453294
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Diemtigen Dorf",
@@ -48107,7 +48107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405828,
       "lng": 8.404527
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Bahnhofstrasse",
@@ -48117,7 +48117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.4043,
       "lng": 8.403683
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Birmensdorferstrasse",
@@ -48127,7 +48127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397576,
       "lng": 8.417391
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Dörfli",
@@ -48137,7 +48137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400417,
       "lng": 8.406622
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Gjuchstrasse",
@@ -48187,7 +48187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408543,
       "lng": 8.405867
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Hofacker",
@@ -48197,7 +48197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398259,
       "lng": 8.411665
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Kirchplatz",
@@ -48207,7 +48207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404938,
       "lng": 8.403377
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Lätten",
@@ -48227,7 +48227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41764,
       "lng": 8.399089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Marmori-Weiher",
@@ -48287,7 +48287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410215,
       "lng": 8.404995
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Schöneggstrasse",
@@ -48297,7 +48297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401989,
       "lng": 8.400912
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Schönenwerd",
@@ -48307,7 +48307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397171,
       "lng": 8.424654
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Silbern",
@@ -48327,7 +48327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.40279,
       "lng": 8.405346
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Stadthalle Ost",
@@ -48347,7 +48347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.402547,
       "lng": 8.400698
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Staffelackerstrasse",
@@ -48377,7 +48377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393407,
       "lng": 8.398942
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietikon Weidstrasse",
@@ -48417,7 +48417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42021,
       "lng": 8.619234
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Aegert",
@@ -48427,7 +48427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412067,
       "lng": 8.621437
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Bahnhof",
@@ -48437,7 +48437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42021,
       "lng": 8.618974
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Brandbachstrasse",
@@ -48447,7 +48447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416966,
       "lng": 8.624655
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Dornenstrasse",
@@ -48457,7 +48457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416588,
       "lng": 8.616898
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Dübendorferstrasse",
@@ -48467,7 +48467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413505,
       "lng": 8.619559
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Fuchshalde",
@@ -48477,7 +48477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.420292,
       "lng": 8.612745
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Hinentalstrasse",
@@ -48487,7 +48487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425541,
       "lng": 8.608196
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Hofwiesen",
@@ -48497,7 +48497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.426395,
       "lng": 8.618516
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Hörnligraben",
@@ -48507,7 +48507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412138,
       "lng": 8.614543
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon In Lampitzäckern",
@@ -48517,7 +48517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.417226,
       "lng": 8.614947
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Industriestrasse",
@@ -48527,7 +48527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414251,
       "lng": 8.62195
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Klimmweg",
@@ -48537,7 +48537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430791,
       "lng": 8.617527
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Lettenstrasse",
@@ -48547,7 +48547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424571,
       "lng": 8.611864
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Lindenstrasse",
@@ -48557,7 +48557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.4308,
       "lng": 8.619424
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Mäenriet",
@@ -48567,7 +48567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412435,
       "lng": 8.618489
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Pünten",
@@ -48577,7 +48577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428319,
       "lng": 8.616583
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Rebackerweg",
@@ -48587,7 +48587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428553,
       "lng": 8.619532
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Riedenerstrasse",
@@ -48597,7 +48597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.422629,
       "lng": 8.614138
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietlikon Zentrum",
@@ -48607,7 +48607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423015,
       "lng": 8.618246
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dietschwil b Kirchberg SG",
@@ -48707,7 +48707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.553347,
       "lng": 8.752957
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dinhard Gemeindehaus",
@@ -48717,7 +48717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.555175,
       "lng": 8.76824
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dinhard Grüt",
@@ -48727,7 +48727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.56295,
       "lng": 8.772753
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dino",
@@ -49177,7 +49177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.071088,
       "lng": 6.954082
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Dombresson collège",
@@ -49187,7 +49187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.071699,
       "lng": 6.957876
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Dombresson temple",
@@ -49197,7 +49197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.072112,
       "lng": 6.960545
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Domdidier",
@@ -49467,7 +49467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.572353,
       "lng": 8.649385
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dörflingen Kirche",
@@ -49937,7 +49937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400065,
       "lng": 8.623396
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Alterszentrum",
@@ -49947,7 +49947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387913,
       "lng": 8.620395
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Bahnhof",
@@ -49957,7 +49957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399859,
       "lng": 8.623522
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Bauhof",
@@ -49967,7 +49967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394816,
       "lng": 8.63458
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Bettlistrasse",
@@ -49977,7 +49977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397046,
       "lng": 8.625617
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Branzenäsch",
@@ -49987,7 +49987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394663,
       "lng": 8.631155
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Breitibach",
@@ -49997,7 +49997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.395967,
       "lng": 8.608133
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Chriesmatt",
@@ -50007,7 +50007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405468,
       "lng": 8.625195
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf City Center",
@@ -50017,7 +50017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397001,
       "lng": 8.616493
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Claridenstrasse",
@@ -50027,7 +50027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394879,
       "lng": 8.62871
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf EMPA",
@@ -50037,7 +50037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401873,
       "lng": 8.611441
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Flugplatz",
@@ -50047,7 +50047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.402385,
       "lng": 8.627406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Gfenn",
@@ -50057,7 +50057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393072,
       "lng": 8.647461
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Glärnischstrasse",
@@ -50067,7 +50067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396237,
       "lng": 8.629932
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Grüzenstrasse",
@@ -50077,7 +50077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391292,
       "lng": 8.617158
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Heidenrietstrasse",
@@ -50087,7 +50087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394295,
       "lng": 8.65201
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Hochbord Nord",
@@ -50097,7 +50097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401387,
       "lng": 8.60185
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Hochbord Süd",
@@ -50107,7 +50107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399005,
       "lng": 8.600465
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Hoffnung",
@@ -50117,7 +50117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396003,
       "lng": 8.599962
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Högler",
@@ -50127,7 +50127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391778,
       "lng": 8.614713
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Im Grund",
@@ -50137,7 +50137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401558,
       "lng": 8.617581
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Innovationspark",
@@ -50147,7 +50147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405657,
       "lng": 8.630606
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Kämmaten",
@@ -50157,7 +50157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389486,
       "lng": 8.596654
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Kirche Wil",
@@ -50167,7 +50167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389333,
       "lng": 8.618201
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Kreuzbühl",
@@ -50177,7 +50177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388838,
       "lng": 8.621554
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Kunsteisbahn",
@@ -50187,7 +50187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389216,
       "lng": 8.628916
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Lindenbühl",
@@ -50197,7 +50197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394906,
       "lng": 8.645744
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Lindenplatz",
@@ -50207,7 +50207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398502,
       "lng": 8.620296
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Meiershofstrasse",
@@ -50217,7 +50217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396704,
       "lng": 8.613608
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Memphis",
@@ -50227,7 +50227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399922,
       "lng": 8.616313
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Neugut Süd",
@@ -50237,7 +50237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.402844,
       "lng": 8.601355
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Post",
@@ -50247,7 +50247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396165,
       "lng": 8.616907
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Raubbühl",
@@ -50257,7 +50257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391553,
       "lng": 8.634876
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Ringstrasse",
@@ -50267,7 +50267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400147,
       "lng": 8.60727
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Schossacher",
@@ -50277,7 +50277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394888,
       "lng": 8.640234
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Schwimmbad",
@@ -50287,7 +50287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396515,
       "lng": 8.623154
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Sonnenberg",
@@ -50297,7 +50297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393054,
       "lng": 8.633366
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Sport Heerenschürli",
@@ -50307,7 +50307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404471,
       "lng": 8.595611
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Stadthaus",
@@ -50317,7 +50317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396893,
       "lng": 8.620026
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Sunnhalde",
@@ -50327,7 +50327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390537,
       "lng": 8.632467
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Unterdorf",
@@ -50337,7 +50337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398673,
       "lng": 8.618273
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Wasserfurren",
@@ -50347,7 +50347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.39398,
       "lng": 8.611244
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Zelglistrasse",
@@ -50357,7 +50357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393926,
       "lng": 8.617464
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dübendorf Zwinggarten",
@@ -50367,7 +50367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404282,
       "lng": 8.619711
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Düdingen Am Bach",
@@ -50697,7 +50697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277624,
       "lng": 8.870834
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten Etzelstrasse",
@@ -50707,7 +50707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277408,
       "lng": 8.841098
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten J-C-Heerstrasse",
@@ -50717,7 +50717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.275053,
       "lng": 8.874699
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten Kirche",
@@ -50727,7 +50727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.278109,
       "lng": 8.843642
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten Langacher",
@@ -50737,7 +50737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.278217,
       "lng": 8.864982
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten Lättenmoos",
@@ -50747,7 +50747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.275511,
       "lng": 8.825699
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten Oberdürnten",
@@ -50757,7 +50757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.279071,
       "lng": 8.86038
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürnten Rothus",
@@ -50767,7 +50767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27704,
       "lng": 8.834796
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Dürrenäsch Ausserdorf",
@@ -50947,7 +50947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.227302,
       "lng": 8.5492
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ebikon",
@@ -51187,7 +51187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351389,
       "lng": 8.640998
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ebmatingen Leeacherstrasse",
@@ -51197,7 +51197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354769,
       "lng": 8.634391
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ebmatingen Looren",
@@ -51207,7 +51207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.340431,
       "lng": 8.65147
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ebnat Acker",
@@ -51987,7 +51987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425406,
       "lng": 8.686267
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Brüttenerstrasse",
@@ -51997,7 +51997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.43196,
       "lng": 8.686034
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Eselriet",
@@ -52007,7 +52007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424319,
       "lng": 8.700255
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Girhalde",
@@ -52017,7 +52017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434108,
       "lng": 8.691265
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Kapelle Rikon",
@@ -52027,7 +52027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.43293,
       "lng": 8.689045
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Langhag",
@@ -52037,7 +52037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.437164,
       "lng": 8.686276
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Lindenwiese",
@@ -52047,7 +52047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.426027,
       "lng": 8.699482
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Moosburg",
@@ -52057,7 +52057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.420975,
       "lng": 8.691814
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Müselacher",
@@ -52067,7 +52067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.429047,
       "lng": 8.696596
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Oberkempttal",
@@ -52077,7 +52077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431312,
       "lng": 8.705441
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Vogelbuckstrasse",
@@ -52087,7 +52087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434638,
       "lng": 8.683328
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Wattspitz",
@@ -52097,7 +52097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427096,
       "lng": 8.694681
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Weiherstrasse",
@@ -52107,7 +52107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.43356,
       "lng": 8.68989
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Effretikon Zentrum",
@@ -52117,7 +52117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427681,
       "lng": 8.686411
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Egerkingen",
@@ -52227,7 +52227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.471917,
       "lng": 8.582433
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Egg",
@@ -52237,7 +52237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.301507,
       "lng": 8.689613
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Egg SZ Eintracht",
@@ -52667,7 +52667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.572362,
       "lng": 8.516542
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Breitistrasse",
@@ -52677,7 +52677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.577801,
       "lng": 8.525855
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Kaiserhof",
@@ -52687,7 +52687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.572398,
       "lng": 8.52777
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Oberseglingen",
@@ -52697,7 +52697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.572021,
       "lng": 8.524372
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Schlafapfelbaum",
@@ -52707,7 +52707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.579347,
       "lng": 8.51967
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Städtli",
@@ -52717,7 +52717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.576066,
       "lng": 8.523518
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Steinboden",
@@ -52727,7 +52727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.571859,
       "lng": 8.532004
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Tössriederen",
@@ -52737,7 +52737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.565728,
       "lng": 8.543177
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Viehmarkt",
@@ -52747,7 +52747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.576353,
       "lng": 8.522394
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eglisau Wiler",
@@ -52937,7 +52937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.419231,
       "lng": 8.809249
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Eich Brand",
@@ -53687,7 +53687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498529,
       "lng": 8.863391
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elgg Dorf",
@@ -53697,7 +53697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.491405,
       "lng": 8.866519
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elgg Obergasse",
@@ -53707,7 +53707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.489581,
       "lng": 8.868605
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elgg Post",
@@ -53717,7 +53717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.494525,
       "lng": 8.86571
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elgg Schloss",
@@ -53727,7 +53727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.482353,
       "lng": 8.865369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elgg Sennhof",
@@ -53737,7 +53737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.476528,
       "lng": 8.862285
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ellighausen",
@@ -53757,7 +53757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.562968,
       "lng": 8.82525
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elm Altersheim",
@@ -53857,7 +53857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.503882,
       "lng": 8.784043
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elsau Bettli",
@@ -53867,7 +53867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.494399,
       "lng": 8.80888
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elsau Dorf",
@@ -53877,7 +53877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.504772,
       "lng": 8.801833
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elsau Ebnet",
@@ -53887,7 +53887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502084,
       "lng": 8.801096
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elsau Melcher",
@@ -53897,7 +53897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501788,
       "lng": 8.787351
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elsau Sportplatz",
@@ -53907,7 +53907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502076,
       "lng": 8.790965
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Elsau Tolhusen",
@@ -53917,7 +53917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.487108,
       "lng": 8.812125
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Alterszentrum",
@@ -53927,7 +53927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.512467,
       "lng": 8.591368
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Dreispitz",
@@ -53937,7 +53937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.510184,
       "lng": 8.593625
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Embraport",
@@ -53947,7 +53947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.517834,
       "lng": 8.593697
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Gemeindehaus",
@@ -53957,7 +53957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502534,
       "lng": 8.594694
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Illingerweg",
@@ -53967,7 +53967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.515622,
       "lng": 8.589669
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Im Feld",
@@ -53977,7 +53977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.513833,
       "lng": 8.593706
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Oberdorf",
@@ -53987,7 +53987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500017,
       "lng": 8.598955
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Post",
@@ -53997,7 +53997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.50524,
       "lng": 8.593759
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach Zürcherstrasse",
@@ -54007,7 +54007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.499379,
       "lng": 8.594955
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Embrach-Rorbas",
@@ -54017,7 +54017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.520584,
       "lng": 8.587071
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Emdthal Bad Heustrich",
@@ -54047,7 +54047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.292387,
       "lng": 8.701828
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Emmen Abendweg",
@@ -55057,7 +55057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.065218,
       "lng": 7.016629
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Enges Verger-du-Bas",
@@ -55067,7 +55067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.053801,
       "lng": 7.008647
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Enges village",
@@ -55077,7 +55077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.056633,
       "lng": 7.012072
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Enggistein Dorf",
@@ -55217,7 +55217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.042637,
       "lng": 6.913316
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Engollon village",
@@ -55227,7 +55227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.037189,
       "lng": 6.921559
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Engstlenalp",
@@ -55757,7 +55757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.011966,
       "lng": 7.021834
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Epagny aérodrome",
@@ -56387,7 +56387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306299,
       "lng": 8.605338
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Alterswohnheim",
@@ -56397,7 +56397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307288,
       "lng": 8.594766
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Bahnhof",
@@ -56407,7 +56407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305805,
       "lng": 8.591233
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Bahnhofstrasse",
@@ -56417,7 +56417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.303791,
       "lng": 8.591341
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Chapf",
@@ -56427,7 +56427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307873,
       "lng": 8.609032
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Erlenhöhe",
@@ -56437,7 +56437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306003,
       "lng": 8.602389
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Föhrenstrasse",
@@ -56447,7 +56447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30709,
       "lng": 8.607855
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Im Bindschädler",
@@ -56457,7 +56457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.295584,
       "lng": 8.603935
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Im Loo",
@@ -56467,7 +56467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.304915,
       "lng": 8.593625
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Im Streuli",
@@ -56477,7 +56477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.29705,
       "lng": 8.606398
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Im Vogelsang",
@@ -56487,7 +56487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305778,
       "lng": 8.596636
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Pflugstein",
@@ -56497,7 +56497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296897,
       "lng": 8.608673
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Rankstrasse",
@@ -56507,7 +56507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30763,
       "lng": 8.597319
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Rebstrasse",
@@ -56517,7 +56517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.299117,
       "lng": 8.602191
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Sandfelsenstr",
@@ -56527,7 +56527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307252,
       "lng": 8.600106
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Schulhaus",
@@ -56537,7 +56537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.302353,
       "lng": 8.597895
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZH Trottgatter",
@@ -56547,7 +56547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30718,
       "lng": 8.6135
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlenbach ZHKirchgemeindehaus",
@@ -56557,7 +56557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.302794,
       "lng": 8.593319
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Erlinsbach Breitmis",
@@ -57537,7 +57537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287866,
       "lng": 8.709693
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Esslingen Lieburg",
@@ -57547,7 +57547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296267,
       "lng": 8.71791
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Esslingen Loogarten",
@@ -57557,7 +57557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.290892,
       "lng": 8.71319
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Esslingen Oberesslingen",
@@ -57567,7 +57567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284213,
       "lng": 8.713109
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Estavannens Dessous",
@@ -57877,7 +57877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324819,
       "lng": 8.834302
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ettingen Chirsgärten",
@@ -58577,7 +58577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411644,
       "lng": 8.414299
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fahrweid Brunaustrasse",
@@ -58587,7 +58587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414422,
       "lng": 8.414047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fahrweid Limmatbrücke",
@@ -58597,7 +58597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407599,
       "lng": 8.41189
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fahy douane",
@@ -58967,7 +58967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.374959,
       "lng": 8.632629
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Eggler",
@@ -58977,7 +58977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371588,
       "lng": 8.634714
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Gemeindehaus",
@@ -58987,7 +58987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371813,
       "lng": 8.640162
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Industrie",
@@ -58997,7 +58997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.376119,
       "lng": 8.644351
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Jugendherberge",
@@ -59007,7 +59007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359713,
       "lng": 8.653592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Neuhus",
@@ -59017,7 +59017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368514,
       "lng": 8.645133
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Schützenhaus",
@@ -59027,7 +59027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368622,
       "lng": 8.632476
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Wigarten",
@@ -59037,7 +59037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371004,
       "lng": 8.642175
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fällanden Zil",
@@ -59047,7 +59047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.372244,
       "lng": 8.636216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fanas Kapitelhof",
@@ -59317,7 +59317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390232,
       "lng": 8.747556
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehraltorf Bahnhof",
@@ -59327,7 +59327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.385431,
       "lng": 8.749965
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehraltorf Halden",
@@ -59337,7 +59337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.385243,
       "lng": 8.759907
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehraltorf Schrännenbrunnen",
@@ -59347,7 +59347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.395338,
       "lng": 8.736239
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehraltorf Sennerei",
@@ -59357,7 +59357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388677,
       "lng": 8.75223
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehraltorf Undermüli",
@@ -59367,7 +59367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391796,
       "lng": 8.741992
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehraltorf Zelgli",
@@ -59377,7 +59377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.39478,
       "lng": 8.753705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fehren Postmuseum",
@@ -59467,7 +59467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.239198,
       "lng": 8.783482
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feldbach Viadukt",
@@ -59477,7 +59477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.239986,
       "lng": 8.786443
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feldbrunnen",
@@ -59727,7 +59727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.024586,
       "lng": 6.921298
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fenkrieden Chüttig",
@@ -60137,7 +60137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.692164,
       "lng": 8.645952
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feuerthalen Kirchstrasse",
@@ -60147,7 +60147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.691218,
       "lng": 8.636782
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feuerthalen Lindenbuck",
@@ -60157,7 +60157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.685087,
       "lng": 8.653915
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feuerthalen Stumpenboden",
@@ -60167,7 +60167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.687712,
       "lng": 8.649349
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feuerthalen Zentrum Kohlfirst",
@@ -60177,7 +60177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.690022,
       "lng": 8.643074
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Feusisberg Alterszentrum",
@@ -60947,7 +60947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.333299,
       "lng": 8.923274
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fischenthal Bodmen",
@@ -60957,7 +60957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.338409,
       "lng": 8.925623
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fischenthal Fistel",
@@ -60967,7 +60967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.328044,
       "lng": 8.918513
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fischenthal Schmittenbach",
@@ -60977,7 +60977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.344207,
       "lng": 8.929587
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fischingen Grüner Baum",
@@ -61027,7 +61027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.563831,
       "lng": 8.409517
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fislisbach Alterszentrum",
@@ -61127,7 +61127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.572182,
       "lng": 8.601994
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Flaach Oberdorf",
@@ -61137,7 +61137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.575401,
       "lng": 8.615558
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Flaach Unterdorf",
@@ -61147,7 +61147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.574556,
       "lng": 8.603189
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Flaach Wesenplatz",
@@ -61157,7 +61157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.575463,
       "lng": 8.609572
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Flaach Ziegelhütte",
@@ -61167,7 +61167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.575068,
       "lng": 8.581651
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Flamatt",
@@ -61567,7 +61567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.904859,
       "lng": 6.581579
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fleurier collège régional",
@@ -61577,7 +61577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.903718,
       "lng": 6.576967
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fleurier Grand-Rue",
@@ -61587,7 +61587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.902306,
       "lng": 6.58067
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fleurier Grands Clos",
@@ -61597,7 +61597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.904491,
       "lng": 6.592006
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fleurier Hôtel de ville",
@@ -61607,7 +61607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.901929,
       "lng": 6.584563
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fli Hirschen",
@@ -62627,7 +62627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.056202,
       "lng": 6.890124
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontainemelon collège",
@@ -62637,7 +62637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.055249,
       "lng": 6.887544
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontainemelon Ferme Matile",
@@ -62647,7 +62647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.053891,
       "lng": 6.883085
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontainemelon sous l Usine",
@@ -62657,7 +62657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.055932,
       "lng": 6.891248
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontainemelon Sous la Lisière",
@@ -62667,7 +62667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.057298,
       "lng": 6.893657
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontaines NE Le District",
@@ -62677,7 +62677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.042664,
       "lng": 6.900848
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontaines NE Le Pavé",
@@ -62687,7 +62687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.045289,
       "lng": 6.900596
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontaines NE Les Bassins",
@@ -62697,7 +62697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.045172,
       "lng": 6.901199
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Fontaines-sur-Grandsoncollège",
@@ -62867,7 +62867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32534,
       "lng": 8.647968
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Forcola di Livigno dogana Ita",
@@ -64537,7 +64537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.530553,
       "lng": 8.581031
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Freienstein Breite",
@@ -64547,7 +64547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.535048,
       "lng": 8.581453
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Freienstein Dorf",
@@ -64557,7 +64557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.530688,
       "lng": 8.585157
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Freienstein Friedhof Federen",
@@ -64567,7 +64567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.54161,
       "lng": 8.572302
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Freienstein Wohnschule",
@@ -64577,7 +64577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.532792,
       "lng": 8.590263
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Freienwil Dorf",
@@ -64687,7 +64687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.961464,
       "lng": 6.76645
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Freudwil Im Dörfli",
@@ -64697,7 +64697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.374797,
       "lng": 8.734279
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Fribourg",
@@ -66507,7 +66507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.54161,
       "lng": 8.84819
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gachnang Oberwilerstrasse",
@@ -66517,7 +66517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.539192,
       "lng": 8.854932
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gachnang Trotte",
@@ -66527,7 +66527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.539552,
       "lng": 8.852002
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gadenstätt",
@@ -67587,7 +67587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.283305,
       "lng": 8.545613
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gattikon Gattikerhöhe",
@@ -67597,7 +67597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.285462,
       "lng": 8.555097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gattikon Obstgarten",
@@ -67607,7 +67607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284725,
       "lng": 8.551115
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gebenstorf alte Post",
@@ -69337,7 +69337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.419842,
       "lng": 8.413139
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Geroldswil Grindlen",
@@ -69347,7 +69347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.418125,
       "lng": 8.415333
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Geroldswil Schweizäcker",
@@ -69357,7 +69357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.422881,
       "lng": 8.404375
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Geroldswil Welbrig",
@@ -69367,7 +69367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.418071,
       "lng": 8.419063
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Geroldswil Zentrum",
@@ -69377,7 +69377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421451,
       "lng": 8.409436
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gerolfingen",
@@ -69687,7 +69687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313715,
       "lng": 8.915494
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gibswil Ghöch",
@@ -69697,7 +69697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331451,
       "lng": 8.902773
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Giebenach Lindenplatz",
@@ -70047,7 +70047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452293,
       "lng": 8.846572
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gisikon Weitblick",
@@ -70657,7 +70657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398875,
       "lng": 8.420423
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glarus",
@@ -70787,7 +70787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430602,
       "lng": 8.559474
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Frohbühlstrasse",
@@ -70797,7 +70797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428094,
       "lng": 8.557353
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Giebeleichstrasse",
@@ -70807,7 +70807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428553,
       "lng": 8.563511
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Glatthof",
@@ -70817,7 +70817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434513,
       "lng": 8.567628
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Halden",
@@ -70827,7 +70827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428094,
       "lng": 8.569641
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Lättenwiesen",
@@ -70837,7 +70837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428121,
       "lng": 8.565695
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Oberhusen",
@@ -70847,7 +70847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427016,
       "lng": 8.569704
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Riethofstrasse",
@@ -70857,7 +70857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.436373,
       "lng": 8.568913
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Zentrum",
@@ -70867,7 +70867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.43338,
       "lng": 8.565749
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattbrugg Zil",
@@ -70877,7 +70877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.422737,
       "lng": 8.57686
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden",
@@ -70887,7 +70887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.548576,
       "lng": 8.524039
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden Aarüti",
@@ -70897,7 +70897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.560721,
       "lng": 8.485359
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden Eichhölzli",
@@ -70907,7 +70907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.554582,
       "lng": 8.50856
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden Post",
@@ -70917,7 +70917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.559858,
       "lng": 8.499355
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden Schulhaus Hof",
@@ -70927,7 +70927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.558914,
       "lng": 8.502375
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden Staltigstrasse",
@@ -70937,7 +70937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.556505,
       "lng": 8.504497
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattfelden Stationsweg",
@@ -70947,7 +70947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.556433,
       "lng": 8.512119
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattpark Chavez-Allee",
@@ -70957,7 +70957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.422341,
       "lng": 8.560823
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattpark Lindbergh-Allee",
@@ -70967,7 +70967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42431,
       "lng": 8.56263
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glattpark Wright-Strasse",
@@ -70977,7 +70977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.420525,
       "lng": 8.559214
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Glaubenberg Passhöhe",
@@ -71507,7 +71507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.382007,
       "lng": 8.598083
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gockhausen Ursprungstrasse",
@@ -71517,7 +71517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384847,
       "lng": 8.600052
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Godey",
@@ -72477,7 +72477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.901533,
       "lng": 6.779772
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Gorgier-St-Aubin",
@@ -72487,7 +72487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.899066,
       "lng": 6.781025
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Gorgier-St-Aubin collège",
@@ -72497,7 +72497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.898288,
       "lng": 6.776977
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Gornergrat",
@@ -72947,7 +72947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.301607,
       "lng": 8.763035
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Mitteldorf",
@@ -72957,7 +72957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307396,
       "lng": 8.759278
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Moos",
@@ -72967,7 +72967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.303162,
       "lng": 8.769211
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Oberstufe/Altrüti",
@@ -72977,7 +72977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.299845,
       "lng": 8.767872
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Rigistrasse",
@@ -72987,7 +72987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.311378,
       "lng": 8.758918
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Tannenberg",
@@ -72997,7 +72997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307055,
       "lng": 8.765561
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Unterhofen",
@@ -73007,7 +73007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306093,
       "lng": 8.754145
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossau ZH Zentrum",
@@ -73017,7 +73017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305796,
       "lng": 8.758586
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gossens La Cernia",
@@ -73467,7 +73467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.442261,
       "lng": 8.700381
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grafstal Oberdorf",
@@ -73477,7 +73477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.443475,
       "lng": 8.697837
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grafstal Thalegg",
@@ -73487,7 +73487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.442648,
       "lng": 8.70412
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grafstal Unterdorf",
@@ -73497,7 +73497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445183,
       "lng": 8.701252
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grancia Centro Commerciale 2",
@@ -74467,7 +74467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.557503,
       "lng": 8.606524
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grasswil Oberdorf",
@@ -74597,7 +74597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364891,
       "lng": 8.681314
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Greifensee Im Langacher",
@@ -74607,7 +74607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364523,
       "lng": 8.685135
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Greifensee Pfisterhölzli",
@@ -74617,7 +74617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.363974,
       "lng": 8.690762
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grellingen",
@@ -77047,7 +77047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.198289,
       "lng": 8.687278
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grugnay",
@@ -77167,7 +77167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.276392,
       "lng": 8.756635
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüningen Freihof",
@@ -77177,7 +77177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277974,
       "lng": 8.759251
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüningen Heispel",
@@ -77187,7 +77187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.275323,
       "lng": 8.748958
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüningen Holzhusen",
@@ -77197,7 +77197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.271808,
       "lng": 8.742369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüningen Im Haufland",
@@ -77207,7 +77207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.283683,
       "lng": 8.766334
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüningen Station",
@@ -77217,7 +77217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281444,
       "lng": 8.760105
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüningen Stedtli",
@@ -77227,7 +77227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284132,
       "lng": 8.762559
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gruppaldo Bivio",
@@ -77317,7 +77317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306084,
       "lng": 8.790452
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüt Gossau ZH Dorf",
@@ -77327,7 +77327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.311091,
       "lng": 8.782137
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüt Gossau ZH Grünau",
@@ -77337,7 +77337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.308016,
       "lng": 8.780358
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüt Gossau ZH Hundsruggen",
@@ -77347,7 +77347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30274,
       "lng": 8.788798
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grüt Gossau ZH Lindenhof",
@@ -77357,7 +77357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.311639,
       "lng": 8.785823
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Grütschalp",
@@ -78037,7 +78037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.539767,
       "lng": 8.825762
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Günsberg Bangerten",
@@ -78107,7 +78107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.634657,
       "lng": 8.771234
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gunten Bellevue",
@@ -78547,7 +78547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.382348,
       "lng": 8.717109
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gutenswil Sternen",
@@ -78557,7 +78557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.385369,
       "lng": 8.718772
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gutenswil Unterdorf",
@@ -78567,7 +78567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384901,
       "lng": 8.714494
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Gütighausen",
@@ -78577,7 +78577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.58714,
       "lng": 8.733874
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Guttannen Aegerstein",
@@ -79037,7 +79037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.520989,
       "lng": 8.889406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hagenbuch ZH Egghof",
@@ -79057,7 +79057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.503631,
       "lng": 8.884848
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hägendorf",
@@ -80057,7 +80057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.230296,
       "lng": 8.495435
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hauptwil",
@@ -80107,7 +80107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238808,
       "lng": 8.539537
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Bifang",
@@ -80117,7 +80117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240984,
       "lng": 8.535267
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Grindlen",
@@ -80127,7 +80127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.243914,
       "lng": 8.525693
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Heisch",
@@ -80137,7 +80137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249047,
       "lng": 8.529765
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Post",
@@ -80147,7 +80147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.24475,
       "lng": 8.532974
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Riedmatt",
@@ -80157,7 +80157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26298,
       "lng": 8.517243
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Tüfenbach",
@@ -80167,7 +80167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259016,
       "lng": 8.522035
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Türlersee",
@@ -80177,7 +80177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26752,
       "lng": 8.512605
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen am Albis Vollenweid",
@@ -80187,7 +80187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259618,
       "lng": 8.510528
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hausen b Meiringen Platz",
@@ -80357,7 +80357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.013413,
       "lng": 6.978784
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauterive NE Château",
@@ -80367,7 +80367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.012793,
       "lng": 6.972995
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauterive NE Laténium",
@@ -80377,7 +80377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.009592,
       "lng": 6.971126
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauterive NE Longchamps",
@@ -80387,7 +80387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.011417,
       "lng": 6.969112
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauterive NE Port",
@@ -80397,7 +80397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.010716,
       "lng": 6.973957
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauterive NE poste",
@@ -80407,7 +80407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.012559,
       "lng": 6.970874
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauterive NE Rouges-Terres",
@@ -80417,7 +80417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.01228,
       "lng": 6.977193
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Hauteville",
@@ -80477,7 +80477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.298783,
       "lng": 8.445953
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hedingen Güpf",
@@ -80487,7 +80487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.299728,
       "lng": 8.448233
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hedingen Hausacker",
@@ -80497,7 +80497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.294892,
       "lng": 8.449186
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Heerbrugg",
@@ -81707,7 +81707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.564253,
       "lng": 8.685051
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hennens village",
@@ -82827,7 +82827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287054,
       "lng": 8.615064
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Aryanastrasse",
@@ -82837,7 +82837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288438,
       "lng": 8.61857
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Bergstrasse",
@@ -82847,7 +82847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.294362,
       "lng": 8.614345
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Busenhardstrasse",
@@ -82857,7 +82857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.290955,
       "lng": 8.610497
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Forchstrasse",
@@ -82867,7 +82867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287027,
       "lng": 8.621293
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Freudacherstrasse",
@@ -82877,7 +82877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.29544,
       "lng": 8.613293
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Gartenstrasse",
@@ -82887,7 +82887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.285768,
       "lng": 8.612583
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Grundhofstrasse",
@@ -82897,7 +82897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286146,
       "lng": 8.617707
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Grüt",
@@ -82907,7 +82907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.290191,
       "lng": 8.605859
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Harzerstrasse",
@@ -82917,7 +82917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286712,
       "lng": 8.618021
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Holzwies",
@@ -82927,7 +82927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.293409,
       "lng": 8.608322
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Humrigen",
@@ -82937,7 +82937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284357,
       "lng": 8.620044
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Kirche Wetzwil",
@@ -82947,7 +82947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296573,
       "lng": 8.625455
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Oberdorfweg",
@@ -82957,7 +82957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286964,
       "lng": 8.616511
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Pfarrgasse",
@@ -82967,7 +82967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287098,
       "lng": 8.608906
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Rain",
@@ -82977,7 +82977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.292861,
       "lng": 8.607108
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Rebberg",
@@ -82987,7 +82987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288788,
       "lng": 8.61474
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Rietli",
@@ -82997,7 +82997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286757,
       "lng": 8.625545
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Schulhaus",
@@ -83007,7 +83007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288402,
       "lng": 8.613644
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Sportplatz",
@@ -83017,7 +83017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.292699,
       "lng": 8.611792
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Tennisplätze",
@@ -83027,7 +83027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.290712,
       "lng": 8.615774
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Vogtei",
@@ -83037,7 +83037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.289651,
       "lng": 8.609715
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg Wetzwil",
@@ -83047,7 +83047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.294712,
       "lng": 8.630786
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg-Feldmeilen",
@@ -83057,7 +83057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281824,
       "lng": 8.612719
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg-Feldmeilen Bahnhof",
@@ -83067,7 +83067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.28174,
       "lng": 8.612528
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Herrliberg-Feldmeilen Bhf Ost",
@@ -83077,7 +83077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282793,
       "lng": 8.612026
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hersberg Dorf",
@@ -83277,7 +83277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.545438,
       "lng": 8.694813
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hettlingen Dorf",
@@ -83287,7 +83287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.546078,
       "lng": 8.709559
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hettlingen Föhrenstrasse",
@@ -83297,7 +83297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.548819,
       "lng": 8.714008
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hettlingen Gemeindehaus",
@@ -83307,7 +83307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.545377,
       "lng": 8.704093
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hildisrieden Dorf",
@@ -83617,7 +83617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305738,
       "lng": 8.684343
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinterforst Oberrüti",
@@ -83797,7 +83797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305607,
       "lng": 8.844487
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Bahnhof",
@@ -83807,7 +83807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.299449,
       "lng": 8.840666
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Bossikon",
@@ -83817,7 +83817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30896,
       "lng": 8.813429
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Dorf",
@@ -83827,7 +83827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.302533,
       "lng": 8.842958
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Friedhof",
@@ -83837,7 +83837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.300708,
       "lng": 8.849431
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Girenbad",
@@ -83847,7 +83847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.309527,
       "lng": 8.87185
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Gstalden",
@@ -83857,7 +83857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.300618,
       "lng": 8.843758
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Hadlikon",
@@ -83867,7 +83867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287009,
       "lng": 8.856649
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Hinwil Center Ost",
@@ -83877,7 +83877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30541,
       "lng": 8.820108
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Hinwil Center West",
@@ -83887,7 +83887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306524,
       "lng": 8.817213
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Industriestrasse",
@@ -83897,7 +83897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.304115,
       "lng": 8.828549
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Kreuzplatz",
@@ -83907,7 +83907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.303755,
       "lng": 8.833277
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Langmatt",
@@ -83917,7 +83917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30727,
       "lng": 8.870331
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Ringwil",
@@ -83927,7 +83927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.314794,
       "lng": 8.85548
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Sportplatz",
@@ -83937,7 +83937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.297077,
       "lng": 8.849269
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Wässeristrasse",
@@ -83947,7 +83947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.304466,
       "lng": 8.824171
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Zelgacher",
@@ -83957,7 +83957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.289184,
       "lng": 8.855004
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hinwil Zürichstrasse",
@@ -83967,7 +83967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306785,
       "lng": 8.819793
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirschberg",
@@ -84037,7 +84037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.214331,
       "lng": 8.606839
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirzel Kirche",
@@ -84047,7 +84047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.217108,
       "lng": 8.606416
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirzel Neuhaus",
@@ -84057,7 +84057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.232013,
       "lng": 8.599081
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirzel Post",
@@ -84067,7 +84067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.216147,
       "lng": 8.611064
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirzel Spitzen",
@@ -84077,7 +84077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.210888,
       "lng": 8.619109
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirzel Strickler",
@@ -84087,7 +84087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229774,
       "lng": 8.600861
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hirzel Wolfisbühl",
@@ -84097,7 +84097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.225145,
       "lng": 8.604439
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Furt",
@@ -84107,7 +84107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360513,
       "lng": 8.811379
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Hasel/Schönau",
@@ -84117,7 +84117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379606,
       "lng": 8.832064
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Hofhalden",
@@ -84127,7 +84127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347066,
       "lng": 8.818921
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Industrie",
@@ -84137,7 +84137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368289,
       "lng": 8.821987
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Isikon",
@@ -84147,7 +84147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.376766,
       "lng": 8.813824
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Luppmen",
@@ -84157,7 +84157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.363291,
       "lng": 8.830517
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Oberdorf",
@@ -84167,7 +84167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.366626,
       "lng": 8.82676
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Oberhittnau",
@@ -84177,7 +84177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360891,
       "lng": 8.82285
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hittnau Sonne",
@@ -84187,7 +84187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368253,
       "lng": 8.822499
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hitzkirch",
@@ -84357,7 +84357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.523757,
       "lng": 8.513162
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hochfelden Martinsmühle",
@@ -84367,7 +84367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.523164,
       "lng": 8.517369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Höchstetten Dorfstrasse",
@@ -84677,7 +84677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.47349,
       "lng": 8.854707
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hohenems Bahnhof A",
@@ -84827,7 +84827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.56936,
       "lng": 8.426308
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hohtenn",
@@ -85047,7 +85047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251034,
       "lng": 8.763934
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Eichberg",
@@ -85057,7 +85057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249254,
       "lng": 8.772834
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Eichtal",
@@ -85067,7 +85067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.24947,
       "lng": 8.777904
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Garstlig",
@@ -85077,7 +85077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.245667,
       "lng": 8.780591
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Grossacher",
@@ -85087,7 +85087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.25009,
       "lng": 8.779755
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Grüt",
@@ -85097,7 +85097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.243717,
       "lng": 8.76371
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Hofacherstrasse",
@@ -85107,7 +85107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.246153,
       "lng": 8.775324
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Holflüe",
@@ -85117,7 +85117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249227,
       "lng": 8.768339
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Krone",
@@ -85127,7 +85127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251061,
       "lng": 8.76637
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Niderfeld",
@@ -85137,7 +85137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249425,
       "lng": 8.758972
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Plattenhof",
@@ -85147,7 +85147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253326,
       "lng": 8.775647
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Post",
@@ -85157,7 +85157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.252337,
       "lng": 8.769876
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Tobel",
@@ -85167,7 +85167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253686,
       "lng": 8.780331
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hombrechtikon Wisental",
@@ -85177,7 +85177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249074,
       "lng": 8.7549
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Homburg Dorf",
@@ -85317,7 +85317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229469,
       "lng": 8.622858
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Altersheim/Tödistrasse",
@@ -85327,7 +85327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.261839,
       "lng": 8.584635
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Altes Gemeindehaus",
@@ -85337,7 +85337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.260508,
       "lng": 8.596034
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Arn",
@@ -85347,7 +85347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238071,
       "lng": 8.615918
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Bahnhof",
@@ -85357,7 +85357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.261497,
       "lng": 8.596114
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Baumgärtlihof",
@@ -85367,7 +85367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258998,
       "lng": 8.599692
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Bergli",
@@ -85377,7 +85377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257668,
       "lng": 8.593157
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Bergwerk",
@@ -85387,7 +85387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.255169,
       "lng": 8.612277
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Bocken",
@@ -85397,7 +85397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.244553,
       "lng": 8.610461
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Enderholz",
@@ -85407,7 +85407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.225927,
       "lng": 8.610596
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Gehren",
@@ -85417,7 +85417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251861,
       "lng": 8.601625
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Glärnischhof",
@@ -85427,7 +85427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254593,
       "lng": 8.609491
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Gstaldenrank",
@@ -85437,7 +85437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.247061,
       "lng": 8.600807
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Gumelenstrasse",
@@ -85447,7 +85447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.260886,
       "lng": 8.592079
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Hanegg",
@@ -85457,7 +85457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.231213,
       "lng": 8.612205
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Heubach",
@@ -85467,7 +85467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254692,
       "lng": 8.598047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Hüttenstrasse",
@@ -85477,7 +85477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238916,
       "lng": 8.61697
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Käpfnach",
@@ -85487,7 +85487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254459,
       "lng": 8.615873
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Meilibach",
@@ -85497,7 +85497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251339,
       "lng": 8.626157
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Oberdorf",
@@ -85507,7 +85507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258748,
       "lng": 8.589802
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Panorama/CS",
@@ -85517,7 +85517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258144,
       "lng": 8.587063
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Plattenhof",
@@ -85527,7 +85527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.265381,
       "lng": 8.588213
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Reithy",
@@ -85537,7 +85537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.250108,
       "lng": 8.608187
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Rietli",
@@ -85547,7 +85547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253308,
       "lng": 8.619415
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Risi/Dow",
@@ -85557,7 +85557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.250989,
       "lng": 8.617878
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Rotweg",
@@ -85567,7 +85567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.25676,
       "lng": 8.608412
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Säntisstrasse",
@@ -85577,7 +85577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.264419,
       "lng": 8.586182
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Schärbächli/Fähre",
@@ -85587,7 +85587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259169,
       "lng": 8.602695
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Scheller",
@@ -85597,7 +85597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269156,
       "lng": 8.586919
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Schnegg",
@@ -85607,7 +85607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248481,
       "lng": 8.605329
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Spital",
@@ -85617,7 +85617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.263106,
       "lng": 8.588797
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Stocker",
@@ -85627,7 +85627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.261461,
       "lng": 8.58904
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Stotzweid/Feller",
@@ -85637,7 +85637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.25107,
       "lng": 8.597184
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Sunnehügeli",
@@ -85647,7 +85647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.252751,
       "lng": 8.596726
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Teufenbach",
@@ -85657,7 +85657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.256221,
       "lng": 8.605203
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen untere Mühle",
@@ -85667,7 +85667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259187,
       "lng": 8.598092
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Waidli",
@@ -85677,7 +85677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254153,
       "lng": 8.605535
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Waldegg",
@@ -85687,7 +85687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.245128,
       "lng": 8.608268
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Waldhof",
@@ -85697,7 +85697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.232947,
       "lng": 8.62043
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Wannenthal",
@@ -85707,7 +85707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.256598,
       "lng": 8.602227
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Wannerstrasse",
@@ -85717,7 +85717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.262944,
       "lng": 8.590973
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgen Widmerheim",
@@ -85727,7 +85727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.267196,
       "lng": 8.584447
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgenbach Hauptstrasse",
@@ -85767,7 +85767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.243141,
       "lng": 8.593759
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgenberg Moorschwand",
@@ -85777,7 +85777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.252706,
       "lng": 8.586541
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgenberg Nordecke",
@@ -85787,7 +85787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259879,
       "lng": 8.578154
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgenberg Vorderklausen",
@@ -85797,7 +85797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240705,
       "lng": 8.596744
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgenberg Widenbach",
@@ -85807,7 +85807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234314,
       "lng": 8.597966
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horgenberg Wührenbach",
@@ -85817,7 +85817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2468,
       "lng": 8.589013
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hörhausen alte Post",
@@ -85917,7 +85917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509537,
       "lng": 8.515302
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Höri Gemeindehaus",
@@ -85927,7 +85927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.508071,
       "lng": 8.510187
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Höri Oberhöri",
@@ -85937,7 +85937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.503739,
       "lng": 8.498645
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Höri Schulhaus",
@@ -85947,7 +85947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.508629,
       "lng": 8.506348
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Horn",
@@ -86407,7 +86407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.576219,
       "lng": 8.670312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hundwil Dorf",
@@ -86757,7 +86757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.552136,
       "lng": 8.667588
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hünikon Neftenbach Vontobel",
@@ -86767,7 +86767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.553017,
       "lng": 8.656819
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hüntwangen Dorf",
@@ -86777,7 +86777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.594826,
       "lng": 8.492766
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hüntwangen-Wil",
@@ -86787,7 +86787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.581261,
       "lng": 8.512847
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hunzenschwil",
@@ -86897,7 +86897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.175785,
       "lng": 8.661143
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hütten Schöntal",
@@ -86907,7 +86907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.176342,
       "lng": 8.669916
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hütten Schulhaus",
@@ -86917,7 +86917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.17539,
       "lng": 8.666078
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hütten Segel",
@@ -86927,7 +86927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.181655,
       "lng": 8.655381
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hüttikon",
@@ -86937,7 +86937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446118,
       "lng": 8.386423
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Hüttlingen-Mettendorf",
@@ -87697,7 +87697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408659,
       "lng": 8.722916
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Chrummenacher",
@@ -87707,7 +87707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405423,
       "lng": 8.719177
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Dorfplatz",
@@ -87717,7 +87717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407734,
       "lng": 8.724427
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Horben",
@@ -87727,7 +87727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413118,
       "lng": 8.744886
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Kirche",
@@ -87737,7 +87737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414601,
       "lng": 8.717397
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Löwen",
@@ -87747,7 +87747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416336,
       "lng": 8.717424
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Steinacher",
@@ -87757,7 +87757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411842,
       "lng": 8.713748
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Weisslingerstrasse",
@@ -87767,7 +87767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407931,
       "lng": 8.727052
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Illnau Wingert",
@@ -87777,7 +87777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410556,
       "lng": 8.712489
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Im Fang Dorf",
@@ -89017,7 +89017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.327784,
       "lng": 8.602308
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Itschnach Fallacher",
@@ -89027,7 +89027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329024,
       "lng": 8.606084
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Itschnach Rebweg",
@@ -89037,7 +89037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326588,
       "lng": 8.598092
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Itschnach Tägermoos",
@@ -89047,7 +89047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.325869,
       "lng": 8.594011
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ittenthal Dorfmitte",
@@ -89997,7 +89997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.386088,
       "lng": 8.857009
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Julier La Veduta",
@@ -90317,7 +90317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.566447,
       "lng": 8.419148
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kaiserstuhl AG Bahnhof",
@@ -90327,7 +90327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.566609,
       "lng": 8.418182
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kaiserstuhl OW",
@@ -90797,7 +90797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.226089,
       "lng": 8.531932
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kappel am Albis Kloster",
@@ -90807,7 +90807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.227698,
       "lng": 8.526259
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kappel SO Kreuz",
@@ -91127,7 +91127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332037,
       "lng": 8.804705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Emmetschloo",
@@ -91137,7 +91137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.325626,
       "lng": 8.832216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Oberkempten",
@@ -91147,7 +91147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329078,
       "lng": 8.823074
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Ochsen",
@@ -91157,7 +91157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332674,
       "lng": 8.812952
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Pfadacher",
@@ -91167,7 +91167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329653,
       "lng": 8.813348
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Schornäglen",
@@ -91177,7 +91177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.335532,
       "lng": 8.813294
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Summerau",
@@ -91187,7 +91187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.338265,
       "lng": 8.816009
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kempten Talhof",
@@ -91197,7 +91197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.33244,
       "lng": 8.81635
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kemptthal",
@@ -91207,7 +91207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452834,
       "lng": 8.70557
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kemptthal Bahnhof",
@@ -91217,7 +91217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452994,
       "lng": 8.70545
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kernenried",
@@ -91557,7 +91557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324466,
       "lng": 8.54786
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg Bendlikon",
@@ -91567,7 +91567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32256,
       "lng": 8.551788
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg BL Gemeindehaus",
@@ -91587,7 +91587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.319891,
       "lng": 8.54075
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Auf Brunnen",
@@ -91597,7 +91597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.318776,
       "lng": 8.545748
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Bächlerstrasse",
@@ -91607,7 +91607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329033,
       "lng": 8.539599
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Bendlikon",
@@ -91617,7 +91617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322093,
       "lng": 8.550611
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Breitloo",
@@ -91627,7 +91627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326193,
       "lng": 8.539438
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Emilienheim",
@@ -91637,7 +91637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329213,
       "lng": 8.538152
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Gottlieb-Binder",
@@ -91647,7 +91647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322974,
       "lng": 8.542836
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Hornhaldenstr",
@@ -91657,7 +91657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332107,
       "lng": 8.541847
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Kirche",
@@ -91667,7 +91667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.31777,
       "lng": 8.541514
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Kreuzstrasse",
@@ -91677,7 +91677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32506,
       "lng": 8.545254
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Lindt & Sprüngli",
@@ -91687,7 +91687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.319073,
       "lng": 8.551124
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Mythenstrasse",
@@ -91697,7 +91697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326363,
       "lng": 8.540669
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Obere Hornhalde",
@@ -91707,7 +91707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331568,
       "lng": 8.538116
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Paradiessteig",
@@ -91717,7 +91717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329689,
       "lng": 8.54315
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Paradiesstrasse",
@@ -91727,7 +91727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.328728,
       "lng": 8.547213
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Sanatorium",
@@ -91737,7 +91737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.327109,
       "lng": 8.544454
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Schlimbergstr",
@@ -91747,7 +91747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324772,
       "lng": 8.543006
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Schoorenstrasse",
@@ -91757,7 +91757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.317311,
       "lng": 8.549488
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Schwelle",
@@ -91767,7 +91767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.321671,
       "lng": 8.545227
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Spital",
@@ -91777,7 +91777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.321707,
       "lng": 8.535375
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Stockengut",
@@ -91787,7 +91787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324116,
       "lng": 8.540373
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZH Weinbergstrasse",
@@ -91797,7 +91797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331982,
       "lng": 8.543285
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kilchberg ZHSchulhaus Dorfstr",
@@ -91807,7 +91807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.321761,
       "lng": 8.547798
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Killwangen Mühlehalde",
@@ -91857,7 +91857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405064,
       "lng": 8.680065
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kindhausen ZH Geeren",
@@ -91867,7 +91867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408282,
       "lng": 8.683643
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kippel Altersheim",
@@ -92307,7 +92307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.601532,
       "lng": 8.686888
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kleinandelfingen Dorf",
@@ -92317,7 +92317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.599537,
       "lng": 8.683085
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kleinbösingen",
@@ -92447,7 +92447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.456815,
       "lng": 8.685701
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kleinlützel Chlösterli",
@@ -93077,7 +93077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.454837,
       "lng": 8.587161
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Bahnhof",
@@ -93087,7 +93087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.448832,
       "lng": 8.583781
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Balsberg",
@@ -93097,7 +93097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.442287,
       "lng": 8.570701
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Bramen",
@@ -93107,7 +93107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.443915,
       "lng": 8.578424
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Buchhalden",
@@ -93117,7 +93117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444572,
       "lng": 8.595449
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Chanzler",
@@ -93127,7 +93127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.467089,
       "lng": 8.582029
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Egetswil",
@@ -93137,7 +93137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.469553,
       "lng": 8.584662
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Freienberg",
@@ -93147,7 +93147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.463215,
       "lng": 8.58379
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Geissbergstrasse",
@@ -93157,7 +93157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.454873,
       "lng": 8.591548
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Graswinkel",
@@ -93167,7 +93167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.450936,
       "lng": 8.596474
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Grubenstrasse",
@@ -93177,7 +93177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.447682,
       "lng": 8.603252
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Härdlen",
@@ -93187,7 +93187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.455718,
       "lng": 8.589921
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Hohrainli",
@@ -93197,7 +93197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.460024,
       "lng": 8.581777
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Kaserne Ost",
@@ -93207,7 +93207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.45739,
       "lng": 8.580213
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Kirchgasse",
@@ -93217,7 +93217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452779,
       "lng": 8.58486
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Lägernstrasse",
@@ -93227,7 +93227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445129,
       "lng": 8.576392
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Lindenstrasse",
@@ -93237,7 +93237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452113,
       "lng": 8.587845
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Mühle",
@@ -93247,7 +93247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.450109,
       "lng": 8.591926
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Neubrunnenstrasse",
@@ -93257,7 +93257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444877,
       "lng": 8.578748
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Oberfeld",
@@ -93267,7 +93267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.449093,
       "lng": 8.597733
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Obstgartenstrasse",
@@ -93277,7 +93277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.451206,
       "lng": 8.577453
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Rankstrasse",
@@ -93287,7 +93287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.451188,
       "lng": 8.592052
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Säntisstrasse",
@@ -93297,7 +93297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.451565,
       "lng": 8.591027
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Schluefweg",
@@ -93307,7 +93307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446064,
       "lng": 8.581309
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Schulstrasse",
@@ -93317,7 +93317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445848,
       "lng": 8.587665
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Sporthalle Ruebisbach",
@@ -93327,7 +93327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.461957,
       "lng": 8.577102
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Stadthaus",
@@ -93337,7 +93337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.451259,
       "lng": 8.581103
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Waldeggweg",
@@ -93347,7 +93347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.441129,
       "lng": 8.575781
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Wallisellenstrasse",
@@ -93357,7 +93357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444167,
       "lng": 8.589858
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Weinbergstrasse",
@@ -93367,7 +93367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.466155,
       "lng": 8.58015
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Wohnheim",
@@ -93377,7 +93377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.453624,
       "lng": 8.593265
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kloten Zum Wilden Mann",
@@ -93387,7 +93387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.453543,
       "lng": 8.580195
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Klus",
@@ -93427,7 +93427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22026,
       "lng": 8.466708
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Knonau Uttenberg",
@@ -93437,7 +93437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234494,
       "lng": 8.448898
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Knutwil alte Post",
@@ -93507,7 +93507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.458325,
       "lng": 8.773993
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kollbrunn Weissenthal",
@@ -93517,7 +93517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446423,
       "lng": 8.771198
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kölliken",
@@ -95337,7 +95337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.319163,
       "lng": 8.580626
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht Goldbach",
@@ -95347,7 +95347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326854,
       "lng": 8.575951
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Allmend",
@@ -95357,7 +95357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.31581,
       "lng": 8.597238
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Bergstrasse",
@@ -95367,7 +95367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.314417,
       "lng": 8.589705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Boglerenstrasse",
@@ -95377,7 +95377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326291,
       "lng": 8.582298
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Bühlstrasse",
@@ -95387,7 +95387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331757,
       "lng": 8.579655
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Gartenstrasse",
@@ -95397,7 +95397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.311504,
       "lng": 8.58753
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Hallenbad",
@@ -95407,7 +95407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313572,
       "lng": 8.585094
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Hesligenstrasse",
@@ -95417,7 +95417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.315774,
       "lng": 8.593202
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Himmelistrasse",
@@ -95427,7 +95427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313841,
       "lng": 8.592222
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Ob Heslibachstr",
@@ -95437,7 +95437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.316898,
       "lng": 8.585552
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Oberfeld",
@@ -95447,7 +95447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.31314,
       "lng": 8.588806
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Oberwacht",
@@ -95457,7 +95457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.319406,
       "lng": 8.58451
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Ränkestrasse",
@@ -95467,7 +95467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.314543,
       "lng": 8.595279
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Reform Kirche",
@@ -95477,7 +95477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.316592,
       "lng": 8.583907
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Schiedhaldensteig",
@@ -95487,7 +95487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.321365,
       "lng": 8.586829
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Schiedhaldenstr",
@@ -95497,7 +95497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322974,
       "lng": 8.582577
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küsnacht ZH Schübel",
@@ -95507,7 +95507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32195,
       "lng": 8.589849
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Küssnacht am Rigi",
@@ -95827,7 +95827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.454442,
       "lng": 8.743286
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kyburg Bad",
@@ -95847,7 +95847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.442756,
       "lng": 8.726575
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kyburg Dorf",
@@ -95857,7 +95857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.457165,
       "lng": 8.744491
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Kyburg Ettenhusen",
@@ -95867,7 +95867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.448958,
       "lng": 8.737146
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "L Abbaye Crêt-Blanc",
@@ -96197,7 +96197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.984917,
       "lng": 6.6086
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Brévine bif Petit Baillod",
@@ -96207,7 +96207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.963334,
       "lng": 6.606793
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Brévine Bois-de-l Halle",
@@ -96217,7 +96217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.957024,
       "lng": 6.607952
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Brévine ch du Baillod",
@@ -96227,7 +96227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.970265,
       "lng": 6.603449
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Brévine Ferme Baillod",
@@ -96237,7 +96237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.965509,
       "lng": 6.603305
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Brévine poste",
@@ -96247,7 +96247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.980989,
       "lng": 6.607332
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Brinaz",
@@ -96287,7 +96287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.988818,
       "lng": 6.641033
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Châtagne Combe-la Racine",
@@ -96297,7 +96297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.982175,
       "lng": 6.625508
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Châtagne Crêt-la Châtagne",
@@ -96307,7 +96307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994284,
       "lng": 6.652943
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Châtagne Le Moulinet",
@@ -96317,7 +96317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.984971,
       "lng": 6.636107
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Châtagne Milieu des Prés",
@@ -96327,7 +96327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.991398,
       "lng": 6.646543
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaudanne-Les Moulins",
@@ -96377,7 +96377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.088554,
       "lng": 6.819891
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Allée du Quartz",
@@ -96387,7 +96387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.087349,
       "lng": 6.810803
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Armes-Réunies",
@@ -96397,7 +96397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.099278,
       "lng": 6.822318
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Beaux-Dimanches",
@@ -96407,7 +96407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.09392,
       "lng": 6.828332
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Bibliothèque",
@@ -96417,7 +96417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.103754,
       "lng": 6.825366
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Blaise-Cendrars",
@@ -96427,7 +96427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.090666,
       "lng": 6.805203
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Bois Pt Château",
@@ -96437,7 +96437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.104725,
       "lng": 6.823801
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Bonne-Fontaine",
@@ -96447,7 +96447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.090136,
       "lng": 6.808538
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Cernil-Antoine",
@@ -96457,7 +96457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.096195,
       "lng": 6.814632
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Châpeau Râblé",
@@ -96467,7 +96467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.098676,
       "lng": 6.808655
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Chemin blanc",
@@ -96477,7 +96477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.110496,
       "lng": 6.844036
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Combe-à-l Ours",
@@ -96487,7 +96487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.084023,
       "lng": 6.801715
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Conservatoire",
@@ -96497,7 +96497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.102074,
       "lng": 6.827739
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Eplatures Nord",
@@ -96507,7 +96507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.089444,
       "lng": 6.802875
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Eplatures-Jaune",
@@ -96517,7 +96517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.087529,
       "lng": 6.803657
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F F-Courvoisier",
@@ -96527,7 +96527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.103997,
       "lng": 6.834921
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Jacob-Brandt",
@@ -96537,7 +96537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.092536,
       "lng": 6.81892
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F L Eplattenier",
@@ -96547,7 +96547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.105903,
       "lng": 6.841438
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Lycée-Blaise-C",
@@ -96557,7 +96557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.097031,
       "lng": 6.809598
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Parc des sports",
@@ -96567,7 +96567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.112096,
       "lng": 6.835101
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Paysans-Horlog",
@@ -96577,7 +96577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.087933,
       "lng": 6.813428
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Perret-Gentil",
@@ -96587,7 +96587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.109328,
       "lng": 6.831955
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Point-du-jour",
@@ -96597,7 +96597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.110164,
       "lng": 6.822723
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Ptes Crosettes",
@@ -96607,7 +96607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.097327,
       "lng": 6.838292
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Tricentenaire",
@@ -96617,7 +96617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.094118,
       "lng": 6.809769
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-F Villa Turque",
@@ -96627,7 +96627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.099404,
       "lng": 6.815666
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds 1er août",
@@ -96637,7 +96637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.110002,
       "lng": 6.826984
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds 22 Cantons",
@@ -96647,7 +96647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.10869,
       "lng": 6.822777
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Abeille",
@@ -96657,7 +96657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.100132,
       "lng": 6.820502
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Ami-Girard",
@@ -96667,7 +96667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.097228,
       "lng": 6.81634
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Arc-en-Ciel",
@@ -96677,7 +96677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.091628,
       "lng": 6.805194
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Arêtes",
@@ -96687,7 +96687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.104914,
       "lng": 6.843901
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Balancier",
@@ -96697,7 +96697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.100563,
       "lng": 6.825977
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Bassets-Cr",
@@ -96707,7 +96707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.124043,
       "lng": 6.830804
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Bel-Air",
@@ -96717,7 +96717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.110164,
       "lng": 6.829339
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds bif Bul-Va",
@@ -96727,7 +96727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.12096,
       "lng": 6.836081
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Bougillons",
@@ -96737,7 +96737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.089345,
       "lng": 6.822013
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Breguet",
@@ -96747,7 +96747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.092806,
       "lng": 6.807567
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Brenetets",
@@ -96757,7 +96757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.136565,
       "lng": 6.824682
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Cerisier",
@@ -96767,7 +96767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.093003,
       "lng": 6.850751
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Chapelle",
@@ -96777,7 +96777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.102568,
       "lng": 6.83333
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Charrière",
@@ -96787,7 +96787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.113589,
       "lng": 6.840126
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Chasseral",
@@ -96797,7 +96797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.112501,
       "lng": 6.829734
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Citadelle",
@@ -96807,7 +96807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.108384,
       "lng": 6.827775
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Cluse",
@@ -96817,7 +96817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.099979,
       "lng": 6.834975
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds collège",
@@ -96827,7 +96827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.108501,
       "lng": 6.838067
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Combettes",
@@ -96837,7 +96837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.116924,
       "lng": 6.834804
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Crêtets",
@@ -96847,7 +96847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.097912,
       "lng": 6.832081
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Electrices",
@@ -96857,7 +96857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.107125,
       "lng": 6.822246
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Entilles",
@@ -96867,7 +96867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.094963,
       "lng": 6.816745
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Espacité",
@@ -96877,7 +96877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.102802,
       "lng": 6.829662
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Esplanade",
@@ -96887,7 +96887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.106865,
       "lng": 6.838742
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Etang",
@@ -96897,7 +96897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.108087,
       "lng": 6.840351
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Etoile",
@@ -96907,7 +96907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.103368,
       "lng": 6.837438
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Forains",
@@ -96917,7 +96917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.106838,
       "lng": 6.836656
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Forges",
@@ -96927,7 +96927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.091385,
       "lng": 6.809329
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Foulets",
@@ -96937,7 +96937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.090262,
       "lng": 6.825626
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Frameries",
@@ -96947,7 +96947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.09045,
       "lng": 6.81545
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Fusion",
@@ -96957,7 +96957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.098217,
       "lng": 6.817985
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Gentianes",
@@ -96967,7 +96967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.093003,
       "lng": 6.825734
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Gibraltar",
@@ -96977,7 +96977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.098658,
       "lng": 6.835973
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Gr Fontaine",
@@ -96987,7 +96987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.102847,
       "lng": 6.830894
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Grand-Pont",
@@ -96997,7 +96997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.096743,
       "lng": 6.819756
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Grillon",
@@ -97007,7 +97007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.086486,
       "lng": 6.801634
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Helvétie",
@@ -97017,7 +97017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.088275,
       "lng": 6.816035
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Hôpital",
@@ -97027,7 +97027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.113544,
       "lng": 6.831433
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Joux Perret",
@@ -97037,7 +97037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.112618,
       "lng": 6.84525
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds M St-Hélier",
@@ -97047,7 +97047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.104743,
       "lng": 6.839083
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Malakoff",
@@ -97057,7 +97057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.094954,
       "lng": 6.842032
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Marais",
@@ -97067,7 +97067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.105714,
       "lng": 6.837213
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Marché",
@@ -97077,7 +97077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.104105,
       "lng": 6.831883
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Monbrillant",
@@ -97087,7 +97087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.105543,
       "lng": 6.819181
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Morgarten",
@@ -97097,7 +97097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.090576,
       "lng": 6.809077
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Moulins",
@@ -97107,7 +97107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.107341,
       "lng": 6.831056
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Musées",
@@ -97117,7 +97117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.101202,
       "lng": 6.828979
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Nord",
@@ -97127,7 +97127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.101157,
       "lng": 6.818237
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Notre-Dame",
@@ -97137,7 +97137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.094235,
       "lng": 6.820889
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Numaga",
@@ -97147,7 +97147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.094837,
       "lng": 6.812376
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Ormes",
@@ -97157,7 +97157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.093462,
       "lng": 6.82195
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Paix",
@@ -97167,7 +97167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.098801,
       "lng": 6.819999
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Pâquerette",
@@ -97177,7 +97177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.113031,
       "lng": 6.837897
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Parc Sports",
@@ -97187,7 +97187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.111944,
       "lng": 6.834894
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Patinoire",
@@ -97197,7 +97197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.096123,
       "lng": 6.829528
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Plaisance",
@@ -97207,7 +97207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.10371,
       "lng": 6.816799
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Polyexpo",
@@ -97217,7 +97217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.089219,
       "lng": 6.813509
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Pont",
@@ -97227,7 +97227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.105651,
       "lng": 6.835263
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Pouillerel",
@@ -97237,7 +97237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.100419,
       "lng": 6.817257
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Prés-Verts",
@@ -97247,7 +97247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.092779,
       "lng": 6.845852
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Prévoyance",
@@ -97257,7 +97257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.114946,
       "lng": 6.834364
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Promenade",
@@ -97267,7 +97267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.100545,
       "lng": 6.833555
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Recorne",
@@ -97277,7 +97277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.099637,
       "lng": 6.809589
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Signal",
@@ -97287,7 +97287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.102981,
       "lng": 6.819046
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Sombaille",
@@ -97297,7 +97297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.112034,
       "lng": 6.825914
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Succès",
@@ -97307,7 +97307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.098028,
       "lng": 6.813023
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Swin Golf",
@@ -97317,7 +97317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.125266,
       "lng": 6.827901
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Tête-de-Ran",
@@ -97327,7 +97327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.101651,
       "lng": 6.816116
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Théâtre",
@@ -97337,7 +97337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.101975,
       "lng": 6.828853
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Tourbillon",
@@ -97347,7 +97347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.080005,
       "lng": 6.794344
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Tourelles",
@@ -97357,7 +97357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.101121,
       "lng": 6.81634
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds Versoix",
@@ -97367,7 +97367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.105301,
       "lng": 6.830957
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds-Est",
@@ -97377,7 +97377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.10348,
       "lng": 6.837161
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Fonds-Grenier",
@@ -97387,7 +97387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.099737,
       "lng": 6.833699
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-FondsCombe-Perret",
@@ -97397,7 +97397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.092194,
       "lng": 6.847794
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-FondsOrée-du-Bois",
@@ -97407,7 +97407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.094702,
       "lng": 6.843443
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-FPrés-de-la-Ronde",
@@ -97417,7 +97417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.110209,
       "lng": 6.84089
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-FStavay-Mollondin",
@@ -97427,7 +97427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.106694,
       "lng": 6.825662
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-de-Ste-Croix",
@@ -97457,7 +97457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.018006,
       "lng": 6.715077
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-du-Milieu La Forge",
@@ -97467,7 +97467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.015166,
       "lng": 6.709405
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-du-Milieu La Gr-Joux",
@@ -97477,7 +97477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.001215,
       "lng": 6.7138
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-du-Milieu Les Jolys",
@@ -97487,7 +97487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.009754,
       "lng": 6.693053
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-du-Milieu P-Chaux",
@@ -97497,7 +97497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.022834,
       "lng": 6.712902
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chaux-du-Milieu village",
@@ -97507,7 +97507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.013107,
       "lng": 6.703382
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Chèvrerie-Monteret",
@@ -97537,7 +97537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.122118,
       "lng": 6.883655
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Cibourg village",
@@ -97547,7 +97547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.12229,
       "lng": 6.884649
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Clairière",
@@ -97657,7 +97657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.069466,
       "lng": 6.834897
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Corbaz ancienne école",
@@ -97687,7 +97687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.868714,
       "lng": 6.493205
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-Fées Bolles-Vent",
@@ -97697,7 +97697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.860929,
       "lng": 6.480926
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-Fées Entre-Bolles",
@@ -97707,7 +97707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.863626,
       "lng": 6.484764
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-Fées garage",
@@ -97717,7 +97717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.862808,
       "lng": 6.483578
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-Fées Les Leuba",
@@ -97727,7 +97727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.874008,
       "lng": 6.501853
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-Fées Les Tattets",
@@ -97737,7 +97737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.871195,
       "lng": 6.497583
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-Fées poste",
@@ -97747,7 +97747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.866646,
       "lng": 6.489753
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Côte-aux-FéesLes Bourquins",
@@ -98047,7 +98047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.149474,
       "lng": 6.841205
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Mauguettaz croisée",
@@ -98127,7 +98127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.067339,
       "lng": 7.085064
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Neuveville collège",
@@ -98157,7 +98157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.066,
       "lng": 7.09079
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Neuveville Ruis de Vaux",
@@ -98167,7 +98167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.061838,
       "lng": 7.086224
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Perche",
@@ -98267,7 +98267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.931119,
       "lng": 6.654396
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Punt Alp Alesch",
@@ -98557,7 +98557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.040135,
       "lng": 6.802266
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Sagne-Eglise",
@@ -98567,7 +98567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.050875,
       "lng": 6.818537
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Sarraz",
@@ -99037,7 +99037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.988072,
       "lng": 6.792222
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Tourne La Mauvaise-Combe",
@@ -99047,7 +99047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.99218,
       "lng": 6.798757
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La Tzoumaz centre",
@@ -99267,7 +99267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.099277,
       "lng": 6.826264
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "La-Neuveville",
@@ -99947,7 +99947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.032955,
       "lng": 6.906808
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Landiswil Bärisbach",
@@ -100587,7 +100587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27615,
       "lng": 8.520695
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau aASchwerzi-Wildpark",
@@ -100597,7 +100597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.28771,
       "lng": 8.533145
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Altersheim",
@@ -100607,7 +100607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286236,
       "lng": 8.533828
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Dorf",
@@ -100617,7 +100617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288609,
       "lng": 8.539986
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Hehlstrasse",
@@ -100627,7 +100627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284456,
       "lng": 8.536894
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Hinteralbis",
@@ -100637,7 +100637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.274747,
       "lng": 8.51781
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Langmoos",
@@ -100647,7 +100647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.283125,
       "lng": 8.534395
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Mittelalbis",
@@ -100657,7 +100657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27579,
       "lng": 8.52777
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Unteralbis",
@@ -100667,7 +100667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.285768,
       "lng": 8.527896
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am Albis Unterrengg",
@@ -100677,7 +100677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.280995,
       "lng": 8.537469
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau am AlbisOberrenggstr",
@@ -100687,7 +100687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282676,
       "lng": 8.529891
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langnau bei Reiden Feld",
@@ -101017,7 +101017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286875,
       "lng": 8.544019
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langrickenbach",
@@ -101077,7 +101077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296049,
       "lng": 8.694391
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Langwiesen",
@@ -101087,7 +101087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.683449,
       "lng": 8.662296
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lanterswil Schulhaus",
@@ -103987,7 +103987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.077595,
       "lng": 6.785177
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Le Creux-des-Biches",
@@ -104017,7 +104017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.056627,
       "lng": 7.066329
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Le Lieu",
@@ -104037,7 +104037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.057855,
       "lng": 6.746152
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Le Locle-Col-des-Roches",
@@ -104047,7 +104047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.049879,
       "lng": 6.726068
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Le Lussex",
@@ -104147,7 +104147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.087045,
       "lng": 6.844075
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Le Rocheray",
@@ -104187,7 +104187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.005129,
       "lng": 6.745586
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Le Tremblex",
@@ -105207,7 +105207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.924797,
       "lng": 6.526124
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bayards bif Place Jeannin",
@@ -105217,7 +105217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.932663,
       "lng": 6.532821
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bayards gare",
@@ -105227,7 +105227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.908994,
       "lng": 6.524092
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bayards Haut-de-la-Tour",
@@ -105237,7 +105237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.909794,
       "lng": 6.534636
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bayards Petit-Bayard",
@@ -105247,7 +105247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.917947,
       "lng": 6.525333
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bayards Quartier du Vent",
@@ -105257,7 +105257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.915511,
       "lng": 6.51193
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bayards village",
@@ -105267,7 +105267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.916356,
       "lng": 6.515831
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Bioux AVJ",
@@ -105337,7 +105337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.066063,
       "lng": 6.699759
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Brenets centre sportif",
@@ -105347,7 +105347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.065371,
       "lng": 6.702339
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Brenets Grande Rue 27",
@@ -105357,7 +105357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.065874,
       "lng": 6.703867
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Brenets Les Pâquerettes",
@@ -105367,7 +105367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.069146,
       "lng": 6.707957
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Brenets Parc des Pargots",
@@ -105377,7 +105377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.065694,
       "lng": 6.695525
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Brenets poste",
@@ -105387,7 +105387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.068382,
       "lng": 6.705018
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Breuleux",
@@ -105517,7 +105517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.960835,
       "lng": 6.863949
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Clées-La Russille croisée",
@@ -105537,7 +105537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.022829,
       "lng": 6.780176
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Coeudres-Est",
@@ -105547,7 +105547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.028766,
       "lng": 6.789469
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Collons Cambuse",
@@ -105657,7 +105657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.985519,
       "lng": 6.899149
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Diablerets",
@@ -105917,7 +105917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.084706,
       "lng": 6.79802
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Esserts-de-Rive",
@@ -105977,7 +105977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.015086,
       "lng": 6.853213
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Genevez JU bifLe Prédame",
@@ -106087,7 +106087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.985627,
       "lng": 6.814534
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Grattes de bise",
@@ -106097,7 +106097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.984899,
       "lng": 6.814264
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Haudères centre",
@@ -106177,7 +106177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.047171,
       "lng": 6.874668
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Hauts-Geneveys Crêt Jura",
@@ -106187,7 +106187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.049244,
       "lng": 6.875921
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Joux-Derrière 44",
@@ -106197,7 +106197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.122875,
       "lng": 6.813743
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Joux-Derrière La Grébille",
@@ -106207,7 +106207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.117634,
       "lng": 6.805113
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Joux-Derrière restaurant",
@@ -106217,7 +106217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.121931,
       "lng": 6.80905
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Joux-Derrièreanccollège",
@@ -106227,7 +106227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.123926,
       "lng": 6.821204
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Marches",
@@ -106537,7 +106537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992998,
       "lng": 6.75276
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Petits-Ponts Les Attis",
@@ -106547,7 +106547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.982984,
       "lng": 6.764356
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Places bif",
@@ -106577,7 +106577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.118955,
       "lng": 6.801445
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Planchettes Sur-le-Ring",
@@ -106587,7 +106587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.111746,
       "lng": 6.781975
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Planchettes village",
@@ -106597,7 +106597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.10646,
       "lng": 6.770388
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Plans-sur-Bex Le Chamois",
@@ -106707,7 +106707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.999637,
       "lng": 6.735874
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Ponts-de-Martel Molta-De",
@@ -106717,7 +106717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.998787,
       "lng": 6.722358
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Ponts-de-Martel Pt-Bois",
@@ -106727,7 +106727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.996109,
       "lng": 6.723626
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Ponts-de-Martel rue Pury",
@@ -106737,7 +106737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.997062,
       "lng": 6.726188
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Posses",
@@ -106917,7 +106917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.939719,
       "lng": 6.59819
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Sagnettes bif Charbonni",
@@ -106927,7 +106927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.945787,
       "lng": 6.593866
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Sagnettes ch Chenailleta",
@@ -106937,7 +106937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.951576,
       "lng": 6.60326
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Sagnettes Chablais",
@@ -106947,7 +106947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.929723,
       "lng": 6.606955
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Sagnettes La Roche",
@@ -106957,7 +106957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.93607,
       "lng": 6.605301
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Sairains",
@@ -106997,7 +106997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.970498,
       "lng": 6.573731
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Taillères Bout du Lac",
@@ -107007,7 +107007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.971361,
       "lng": 6.58485
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Taillères restaurant",
@@ -107017,7 +107017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.969815,
       "lng": 6.571088
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Taillères Varodes",
@@ -107027,7 +107027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.97609,
       "lng": 6.595457
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Tavernes collège",
@@ -107067,7 +107067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.905269,
       "lng": 6.479337
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières Croix-Blanche",
@@ -107077,7 +107077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.903052,
       "lng": 6.473528
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières douane",
@@ -107087,7 +107087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.900841,
       "lng": 6.458651
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières gare",
@@ -107097,7 +107097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.905075,
       "lng": 6.479191
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières Le Crêt-sud",
@@ -107107,7 +107107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.906513,
       "lng": 6.493619
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières Meudon",
@@ -107117,7 +107117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.90236,
       "lng": 6.464422
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières Vy-Perroud",
@@ -107127,7 +107127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.905443,
       "lng": 6.483578
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Les Verrières-de-Joux Mairie",
@@ -107137,7 +107137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.89694,
       "lng": 6.449994
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Lessoc",
@@ -108607,7 +108607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.082846,
       "lng": 7.064937
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Lignières cimetière",
@@ -108617,7 +108617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.080553,
       "lng": 7.064766
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Lignières Moulin Navilot",
@@ -108627,7 +108627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.090495,
       "lng": 7.061009
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Ligornetto alla Passeggiata",
@@ -108697,7 +108697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.44147,
       "lng": 8.671489
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lindau Eschikon",
@@ -108707,7 +108707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.448077,
       "lng": 8.682294
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lindau Nürensdorferstrasse",
@@ -108717,7 +108717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.440805,
       "lng": 8.67086
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lindau Rigacher",
@@ -108727,7 +108727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.440203,
       "lng": 8.677503
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Linden Dorf",
@@ -110077,7 +110077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.634864,
       "lng": 8.592816
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lottstetten Grundschule",
@@ -110097,7 +110097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.633039,
       "lng": 8.582038
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lottstetten Kindergarten",
@@ -110467,7 +110467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.476699,
       "lng": 8.592141
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lufingen Dorf",
@@ -110477,7 +110477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.488664,
       "lng": 8.593652
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lufingen Hintermarchlen",
@@ -110487,7 +110487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.48167,
       "lng": 8.58993
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lufingen Unterdorf",
@@ -110497,7 +110497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490821,
       "lng": 8.596762
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Lugaggia",
@@ -113607,7 +113607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415033,
       "lng": 8.803424
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Madetswil Dorf",
@@ -113617,7 +113617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411096,
       "lng": 8.793599
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Madiswil",
@@ -113967,7 +113967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.328178,
       "lng": 8.631071
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Maienfeld",
@@ -114557,7 +114557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253415,
       "lng": 8.692335
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Allenberg",
@@ -114567,7 +114567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254036,
       "lng": 8.708336
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Allmendhof",
@@ -114577,7 +114577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259645,
       "lng": 8.694672
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Asylstrasse",
@@ -114587,7 +114587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249622,
       "lng": 8.701963
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Auf Dorf",
@@ -114597,7 +114597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257083,
       "lng": 8.703671
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Boldernstrasse",
@@ -114607,7 +114607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258702,
       "lng": 8.699589
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Büelen",
@@ -114617,7 +114617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.262486,
       "lng": 8.687085
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Dammstrasse",
@@ -114627,7 +114627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254629,
       "lng": 8.692254
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Glärnischstrasse",
@@ -114637,7 +114637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253551,
       "lng": 8.702511
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Im Russer",
@@ -114647,7 +114647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.260508,
       "lng": 8.690582
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Kirchweg",
@@ -114657,7 +114657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253038,
       "lng": 8.697846
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Sonnenfeld",
@@ -114667,7 +114667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.247285,
       "lng": 8.706916
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Spital",
@@ -114677,7 +114677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251196,
       "lng": 8.69692
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Widenbad",
@@ -114687,7 +114687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.261488,
       "lng": 8.710925
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Männedorf Zentrum Leue",
@@ -114697,7 +114697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253146,
       "lng": 8.695949
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mannenbach-Salenstein",
@@ -115037,7 +115037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.00908,
       "lng": 7.006741
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin Indiennes",
@@ -115047,7 +115047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.009682,
       "lng": 6.995091
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin Village",
@@ -115057,7 +115057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.009215,
       "lng": 7.000835
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin-Epagnier",
@@ -115067,7 +115067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.009099,
       "lng": 7.010586
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin-Epagnier La Tène",
@@ -115077,7 +115077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.006293,
       "lng": 7.018499
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin-Epagnier Marin Centre",
@@ -115087,7 +115087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.010599,
       "lng": 7.004548
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin-Epagnier Paul-Vouga",
@@ -115097,7 +115097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.007597,
       "lng": 7.012674
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marin-EpagnierChamps-Montants",
@@ -115107,7 +115107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.012802,
       "lng": 6.995684
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Marly Cité",
@@ -115327,7 +115327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.631076,
       "lng": 8.656097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Marthalen Dorf",
@@ -115337,7 +115337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.627439,
       "lng": 8.650302
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Martigny",
@@ -115777,7 +115777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234916,
       "lng": 8.426461
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Maschwanden Sagi",
@@ -115787,7 +115787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2355,
       "lng": 8.431252
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mase église",
@@ -116607,7 +116607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351902,
       "lng": 8.66081
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Maur Dorf",
@@ -116617,7 +116617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.340485,
       "lng": 8.669628
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Maur Kirche",
@@ -116627,7 +116627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.337843,
       "lng": 8.674006
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Maur Platten",
@@ -116637,7 +116637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343362,
       "lng": 8.66072
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mauraz",
@@ -117227,7 +117227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269803,
       "lng": 8.644287
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Aebleten",
@@ -117237,7 +117237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269363,
       "lng": 8.663498
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Allmend",
@@ -117247,7 +117247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.271035,
       "lng": 8.648207
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Alte Sonne",
@@ -117257,7 +117257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.266567,
       "lng": 8.656585
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Au",
@@ -117267,7 +117267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.272311,
       "lng": 8.667165
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Beugen",
@@ -117277,7 +117277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.267268,
       "lng": 8.650706
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Bezibüel/Chilchbüel",
@@ -117287,7 +117287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27917,
       "lng": 8.663237
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Bundi",
@@ -117297,7 +117297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281175,
       "lng": 8.667022
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Charrhalten",
@@ -117307,7 +117307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277031,
       "lng": 8.66357
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Dollikon",
@@ -117317,7 +117317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.264086,
       "lng": 8.662797
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Eichholz",
@@ -117327,7 +117327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281885,
       "lng": 8.62319
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Friedhof",
@@ -117337,7 +117337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.271844,
       "lng": 8.641339
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Grueb",
@@ -117347,7 +117347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.266657,
       "lng": 8.659354
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Grüt",
@@ -117357,7 +117357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.271349,
       "lng": 8.670563
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Hallenbad",
@@ -117367,7 +117367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.272302,
       "lng": 8.645349
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Halten",
@@ -117377,7 +117377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.271331,
       "lng": 8.657385
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Hohenegg",
@@ -117387,7 +117387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.274001,
       "lng": 8.66099
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen In der Au",
@@ -117397,7 +117397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.272392,
       "lng": 8.665089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Obermeilen",
@@ -117407,7 +117407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.264841,
       "lng": 8.654742
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Ormis",
@@ -117417,7 +117417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.270792,
       "lng": 8.653025
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Parkresidenz",
@@ -117427,7 +117427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2701,
       "lng": 8.638589
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Plätzli",
@@ -117437,7 +117437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2741,
       "lng": 8.625303
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Rebbergstrasse",
@@ -117447,7 +117447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.278415,
       "lng": 8.619172
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Roren",
@@ -117457,7 +117457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282901,
       "lng": 8.669916
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Schulhaus Feld",
@@ -117467,7 +117467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.276509,
       "lng": 8.622947
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Schulhaus Obermeilen",
@@ -117477,7 +117477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.267889,
       "lng": 8.6561
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Schwabach",
@@ -117487,7 +117487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.275386,
       "lng": 8.625725
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Tobel",
@@ -117497,7 +117497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282262,
       "lng": 8.618732
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Vorderer Pfannenstiel",
@@ -117507,7 +117507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.285525,
       "lng": 8.679939
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Weid",
@@ -117517,7 +117517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2661,
       "lng": 8.668765
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Zentrum Feldmeilen",
@@ -117527,7 +117527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27864,
       "lng": 8.61599
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meilen Zur Au",
@@ -117537,7 +117537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.273273,
       "lng": 8.661799
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Meinier Compois",
@@ -119597,7 +119597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.244072,
       "lng": 8.457365
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettmenstetten Oberdorf",
@@ -119607,7 +119607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.247339,
       "lng": 8.469726
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettmenstetten Rossau",
@@ -119617,7 +119617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.226089,
       "lng": 8.483732
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettmenstetten Rossauerstr",
@@ -119627,7 +119627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.242224,
       "lng": 8.464701
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettmenstetten Schulhaus",
@@ -119637,7 +119637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.244301,
       "lng": 8.465097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettmenstetten Wissenbach",
@@ -119647,7 +119647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.235518,
       "lng": 8.474374
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettmenstetten Zentrum",
@@ -119657,7 +119657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.243681,
       "lng": 8.463551
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mettschlatt",
@@ -121187,7 +121187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305329,
       "lng": 8.720687
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mönchaltorf Langenmatt",
@@ -121197,7 +121197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.31545,
       "lng": 8.720894
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mönchaltorf Mönchhof",
@@ -121207,7 +121207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.311522,
       "lng": 8.72146
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mönchaltorf Traube",
@@ -121217,7 +121217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.308565,
       "lng": 8.721505
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mönchaltorf Wihalde",
@@ -121227,7 +121227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.30158,
       "lng": 8.720013
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Mondacce",
@@ -121307,7 +121307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.877118,
       "lng": 6.509044
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Mont-la-Ville Le Battoir",
@@ -121637,7 +121637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.897632,
       "lng": 6.746476
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Montana Barzettes",
@@ -122197,7 +122197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.986823,
       "lng": 6.836593
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Montezillon Les Pommerets",
@@ -122207,7 +122207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.989538,
       "lng": 6.839191
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Montfaucon bif Les Enfers",
@@ -122697,7 +122697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.99583,
       "lng": 6.844234
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Montmollin L Engolieu",
@@ -122707,7 +122707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.991803,
       "lng": 6.838373
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Montmollin Route de la Tourne",
@@ -122717,7 +122717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992468,
       "lng": 6.845978
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Montpreveyres Balances",
@@ -124517,7 +124517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.911854,
       "lng": 6.610334
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Môtiers collège",
@@ -124527,7 +124527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.910316,
       "lng": 6.609517
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Mottec",
@@ -127717,7 +127717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.374042,
       "lng": 8.680802
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nänikon-Greifensee",
@@ -127727,7 +127727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.369359,
       "lng": 8.686399
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nant croisée",
@@ -128307,7 +128307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.510894,
       "lng": 8.47174
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neerach Post",
@@ -128317,7 +128317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.51289,
       "lng": 8.474769
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neftenbach alte Post",
@@ -128327,7 +128327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.527182,
       "lng": 8.668604
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neftenbach Chlimberg",
@@ -128337,7 +128337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.532603,
       "lng": 8.664316
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neftenbach Herrgass",
@@ -128347,7 +128347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.524809,
       "lng": 8.659255
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neftenbach Tössallmend",
@@ -128357,7 +128357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.519425,
       "lng": 8.657466
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neftenbach Wolfgässli",
@@ -128367,7 +128367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.527407,
       "lng": 8.665979
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neftenbach Wolfzangen",
@@ -128377,7 +128377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.52267,
       "lng": 8.669494
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neggio Bivio per Neggio",
@@ -128477,7 +128477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430234,
       "lng": 8.787944
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nesselnbach Mitteldorf",
@@ -128687,7 +128687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.996728,
       "lng": 6.93569
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Acacias",
@@ -128697,7 +128697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.000181,
       "lng": 6.919824
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Av des Alpes",
@@ -128707,7 +128707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.993673,
       "lng": 6.917154
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Av des Cadolles",
@@ -128717,7 +128717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.000828,
       "lng": 6.924445
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Bachelin",
@@ -128727,7 +128727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994068,
       "lng": 6.920085
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Bas-de-la-Main",
@@ -128737,7 +128737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.987911,
       "lng": 6.917658
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Battieux",
@@ -128747,7 +128747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.982463,
       "lng": 6.902673
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Beauregard",
@@ -128757,7 +128757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.988675,
       "lng": 6.90946
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Case à Chocs",
@@ -128767,7 +128767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.989115,
       "lng": 6.921973
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Caselle",
@@ -128777,7 +128777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.986382,
       "lng": 6.900704
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Ch des Valangines",
@@ -128787,7 +128787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992693,
       "lng": 6.914889
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Châble",
@@ -128797,7 +128797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.010006,
       "lng": 6.964617
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Champ-Bougin",
@@ -128807,7 +128807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.984555,
       "lng": 6.912277
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Champ-Coco",
@@ -128817,7 +128817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.991515,
       "lng": 6.921065
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Chaumière",
@@ -128827,7 +128827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994185,
       "lng": 6.926018
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Chemin des Mulets",
@@ -128837,7 +128837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.003048,
       "lng": 6.957732
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Cheminée",
@@ -128847,7 +128847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.986832,
       "lng": 6.914997
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Cimetière",
@@ -128857,7 +128857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.986922,
       "lng": 6.904336
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Collège des Parcs",
@@ -128867,7 +128867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.993412,
       "lng": 6.922863
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Croix-du-Marché",
@@ -128877,7 +128877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.991596,
       "lng": 6.92893
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel CSEM/Bas-du-Mail",
@@ -128887,7 +128887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.997358,
       "lng": 6.948347
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Denis-de-Rougemont",
@@ -128897,7 +128897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.001268,
       "lng": 6.916669
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Draizes",
@@ -128907,7 +128907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.98925,
       "lng": 6.903077
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Ermitage",
@@ -128917,7 +128917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.998158,
       "lng": 6.932094
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Esplanade du Mail",
@@ -128927,7 +128927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.999525,
       "lng": 6.950765
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Evole",
@@ -128937,7 +128937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.989678,
       "lng": 6.923374
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Fahys",
@@ -128947,7 +128947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.000873,
       "lng": 6.94556
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Falaises",
@@ -128957,7 +128957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.004406,
       "lng": 6.960635
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Favarge",
@@ -128967,7 +128967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.006878,
       "lng": 6.958658
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Fontaine-André",
@@ -128977,7 +128977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.000226,
       "lng": 6.94085
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Gouttes d or",
@@ -128987,7 +128987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.007084,
       "lng": 6.966137
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Grise-Pierre",
@@ -128997,7 +128997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.98471,
       "lng": 6.910026
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Hôpital Pourtalès",
@@ -129007,7 +129007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.996019,
       "lng": 6.942882
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Jardin-Anglais",
@@ -129017,7 +129017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992522,
       "lng": 6.934719
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Les Carrels",
@@ -129027,7 +129027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.988809,
       "lng": 6.898682
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Liserons",
@@ -129037,7 +129037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.999228,
       "lng": 6.94129
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Louis-Favre",
@@ -129047,7 +129047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994149,
       "lng": 6.929667
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Lycée D-Rougemont",
@@ -129057,7 +129057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994545,
       "lng": 6.9396
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Maladière",
@@ -129067,7 +129067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.995345,
       "lng": 6.942342
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Marronniers",
@@ -129077,7 +129077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992207,
       "lng": 6.919339
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Matile 16",
@@ -129087,7 +129087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.998689,
       "lng": 6.934647
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Matile 34",
@@ -129097,7 +129097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.999219,
       "lng": 6.937003
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Microcity",
@@ -129107,7 +129107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.997106,
       "lng": 6.944572
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Monruz",
@@ -129117,7 +129117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.005628,
       "lng": 6.96317
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Nid-du-Crô",
@@ -129127,7 +129127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.996909,
       "lng": 6.953857
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Numa-Droz",
@@ -129137,7 +129137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.990481,
       "lng": 6.931169
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Oriette",
@@ -129147,7 +129147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.990742,
       "lng": 6.925856
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Pierre-à-Bot",
@@ -129157,7 +129157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.00001,
       "lng": 6.914044
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Pierre-qui-Roule",
@@ -129167,7 +129167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.99743,
       "lng": 6.929227
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Piscines",
@@ -129177,7 +129177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.997808,
       "lng": 6.95615
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Place Pury Littorail",
@@ -129187,7 +129187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.989412,
       "lng": 6.928188
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Pont des Parcs",
@@ -129197,7 +129197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.990221,
       "lng": 6.908974
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Port-de-Serrières",
@@ -129207,7 +129207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.980913,
       "lng": 6.904873
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Port-Roulant",
@@ -129217,7 +129217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.986382,
       "lng": 6.913568
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Porte-des-Acacias",
@@ -129227,7 +129227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.999947,
       "lng": 6.917865
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Portes-Rouges",
@@ -129237,7 +129237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.00259,
       "lng": 6.951008
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Poudrières",
@@ -129247,7 +129247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.988782,
       "lng": 6.913046
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Prébarreau",
@@ -129257,7 +129257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992324,
       "lng": 6.92404
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Régional",
@@ -129267,7 +129267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.98978,
       "lng": 6.921775
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Riveraine",
@@ -129277,7 +129277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.996459,
       "lng": 6.946244
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Rocher",
@@ -129287,7 +129287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.998311,
       "lng": 6.936922
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Rochettes",
@@ -129297,7 +129297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994661,
       "lng": 6.932724
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Rosière",
@@ -129307,7 +129307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.991569,
       "lng": 6.916975
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Rue de la Côte",
@@ -129317,7 +129317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994446,
       "lng": 6.92413
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Saars 17",
@@ -129327,7 +129327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.997987,
       "lng": 6.952707
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Saars 55",
@@ -129337,7 +129337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.998976,
       "lng": 6.955062
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Serrières bus",
@@ -129347,7 +129347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.981474,
       "lng": 6.899266
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Serrières Ruau",
@@ -129357,7 +129357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.980085,
       "lng": 6.897087
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel St-Honoré",
@@ -129367,7 +129367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.990859,
       "lng": 6.931276
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel St-Nicolas MEN",
@@ -129377,7 +129377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.989744,
       "lng": 6.916193
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Stand",
@@ -129387,7 +129387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.005448,
       "lng": 6.905037
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Ste-Hélène",
@@ -129397,7 +129397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.004442,
       "lng": 6.955574
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Temple Valangines",
@@ -129407,7 +129407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.991299,
       "lng": 6.912327
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Terreaux Muséum",
@@ -129417,7 +129417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.992774,
       "lng": 6.930108
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Tivoli",
@@ -129427,7 +129427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.983569,
       "lng": 6.906206
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Trois-Chênes",
@@ -129437,7 +129437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.000918,
       "lng": 6.911905
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Université",
@@ -129447,7 +129447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.994176,
       "lng": 6.937608
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Vauseyon",
@@ -129457,7 +129457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.989331,
       "lng": 6.90697
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel Verger-Rond",
@@ -129467,7 +129467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.99859,
       "lng": 6.924139
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neuchâtel-Serrières",
@@ -129477,7 +129477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.983955,
       "lng": 6.903358
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Neudorf Dorf",
@@ -129527,7 +129527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.325814,
       "lng": 8.637845
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neuendorf Hardeck",
@@ -129827,7 +129827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313346,
       "lng": 8.672008
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neuhaus SG Industrie",
@@ -130027,7 +130027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.679388,
       "lng": 8.622084
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neuhausen Rhenania",
@@ -130147,7 +130147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.206762,
       "lng": 8.585993
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neukirch an der Thur Dorf",
@@ -130257,7 +130257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.35788,
       "lng": 8.864358
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Neuwilen Dorf",
@@ -130617,7 +130617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.487469,
       "lng": 8.503296
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederglatt ZH Nöschikon",
@@ -130627,7 +130627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.495388,
       "lng": 8.494995
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederglatt ZH Seeblerstrasse",
@@ -130637,7 +130637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.487342,
       "lng": 8.498474
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederglatt ZHaltes Schulhaus",
@@ -130647,7 +130647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.493185,
       "lng": 8.498312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niedergösgen Falkenstein",
@@ -130727,7 +130727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.47855,
       "lng": 8.488432
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederhasli Dorf",
@@ -130737,7 +130737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.480636,
       "lng": 8.485089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederhasli Hofstetterstrasse",
@@ -130747,7 +130747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.482263,
       "lng": 8.493799
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederhasli Nassenwil",
@@ -130757,7 +130757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.465615,
       "lng": 8.471452
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederhäusern",
@@ -131467,7 +131467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.511198,
       "lng": 8.369607
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederweningen Dorf",
@@ -131477,7 +131477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505907,
       "lng": 8.381049
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Niederwil AG Gnadenthal",
@@ -131597,7 +131597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.579041,
       "lng": 8.71773
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nierlet-les-Bois centre",
@@ -131777,7 +131777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.954914,
       "lng": 6.721799
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Noranco Asilo Bagion",
@@ -132297,7 +132297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.451017,
       "lng": 8.65138
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nürensdorf Chrüzstrass",
@@ -132307,7 +132307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.454244,
       "lng": 8.634624
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nürensdorf Lindauerstrasse",
@@ -132317,7 +132317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.44423,
       "lng": 8.651866
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nürensdorf Oberwil",
@@ -132327,7 +132327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.464105,
       "lng": 8.639955
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nürensdorf Zentrum",
@@ -132337,7 +132337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446729,
       "lng": 8.648216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nürensdorf Zentrum Süd",
@@ -132347,7 +132347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446217,
       "lng": 8.649457
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Nussaus",
@@ -133637,7 +133637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.486992,
       "lng": 8.619568
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberengstringen Eggbühl",
@@ -133647,7 +133647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405522,
       "lng": 8.474086
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberengstringen Lanzrain",
@@ -133657,7 +133657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407338,
       "lng": 8.467946
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberengstringen Paradies",
@@ -133667,7 +133667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410484,
       "lng": 8.458742
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberengstringen Zentrum",
@@ -133677,7 +133677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409136,
       "lng": 8.462598
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberentfelden",
@@ -133897,7 +133897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.470204,
       "lng": 8.510604
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberglatt ZH Bälen",
@@ -133907,7 +133907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.480124,
       "lng": 8.523365
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberglatt ZH Mösli Hofstetten",
@@ -133917,7 +133917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479288,
       "lng": 8.504497
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberglatt ZH Pistenende",
@@ -133927,7 +133927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.48247,
       "lng": 8.527176
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberglatt ZH Rietli",
@@ -133937,7 +133937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.474578,
       "lng": 8.516425
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberglatt ZH Zentrum",
@@ -133947,7 +133947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.476339,
       "lng": 8.520794
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obergoldbach Abzw Landiswil",
@@ -134047,7 +134047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.46531,
       "lng": 8.500514
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberhasli Hasliberg",
@@ -134057,7 +134057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.468735,
       "lng": 8.503157
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberhasli Industrie",
@@ -134067,7 +134067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.459269,
       "lng": 8.490015
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberhasli Moosacker",
@@ -134077,7 +134077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.470613,
       "lng": 8.49904
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberhasli Post",
@@ -134087,7 +134087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.468105,
       "lng": 8.500748
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberhasli Spielplatz",
@@ -134097,7 +134097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.471917,
       "lng": 8.499876
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberhelfenschwil Dorf",
@@ -134757,7 +134757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.527596,
       "lng": 8.712399
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberönz Kreuz",
@@ -134837,7 +134837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.279676,
       "lng": 8.578449
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberrieden Dorf",
@@ -134847,7 +134847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.276724,
       "lng": 8.577633
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberrieden Hubstrasse",
@@ -134857,7 +134857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27944,
       "lng": 8.574621
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberrieden Seehalde",
@@ -134867,7 +134867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.273318,
       "lng": 8.583188
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberrieden Tannenbach",
@@ -134877,7 +134877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269147,
       "lng": 8.58255
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberrieden Wattenbühlweg",
@@ -134887,7 +134887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.273273,
       "lng": 8.580159
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberriet",
@@ -135487,7 +135487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.634172,
       "lng": 8.794893
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obersteckholz Am Wald",
@@ -135807,7 +135807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500098,
       "lng": 8.409481
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberweningen Hüeblistrasse",
@@ -135817,7 +135817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500817,
       "lng": 8.403035
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberweningen Im Hüebli",
@@ -135827,7 +135827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501006,
       "lng": 8.405409
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberwil b Büren Bad",
@@ -136317,7 +136317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507621,
       "lng": 8.760419
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberwinterthur Bahnhof",
@@ -136327,7 +136327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507262,
       "lng": 8.759439
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oberwohlen BE",
@@ -136357,7 +136357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.262055,
       "lng": 8.420322
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obfelden Bachstrasse",
@@ -136367,7 +136367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.263295,
       "lng": 8.42612
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obfelden Bickwil",
@@ -136377,7 +136377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269767,
       "lng": 8.423108
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obfelden Gessnerstrasse",
@@ -136387,7 +136387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.262037,
       "lng": 8.414865
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obfelden Hölibachstrasse",
@@ -136397,7 +136397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268689,
       "lng": 8.432817
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obfelden Toussen",
@@ -136407,7 +136407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.264536,
       "lng": 8.431127
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obfelden Unterlunnern",
@@ -136417,7 +136417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.263106,
       "lng": 8.40984
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Obstalden Bödeli",
@@ -136727,7 +136727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.624041,
       "lng": 8.676343
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oeschberg",
@@ -136827,7 +136827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423627,
       "lng": 8.403188
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Beichlen",
@@ -136837,7 +136837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268743,
       "lng": 8.714197
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Bergstrasse",
@@ -136847,7 +136847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269866,
       "lng": 8.718251
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Buacher",
@@ -136857,7 +136857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268671,
       "lng": 8.724741
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Eichholzstrasse",
@@ -136867,7 +136867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269111,
       "lng": 8.739079
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Felsengrund",
@@ -136877,7 +136877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281714,
       "lng": 8.714925
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Gusch",
@@ -136887,7 +136887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277453,
       "lng": 8.718485
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Langholz",
@@ -136897,7 +136897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26583,
       "lng": 8.724759
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Willikon",
@@ -136907,7 +136907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.266396,
       "lng": 8.735636
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Zelgli",
@@ -136917,7 +136917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.273776,
       "lng": 8.719887
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil am See Zentrum",
@@ -136927,7 +136927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.270091,
       "lng": 8.721002
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil an der Limmat Halde",
@@ -136937,7 +136937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425371,
       "lng": 8.400141
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil an der Limmat Oberdorf",
@@ -136947,7 +136947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427735,
       "lng": 8.398145
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oetwil an der Limmat Post",
@@ -136957,7 +136957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427816,
       "lng": 8.394819
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oey Chirlegand",
@@ -138147,7 +138147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.429856,
       "lng": 8.561829
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Aublick",
@@ -138157,7 +138157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424678,
       "lng": 8.577525
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Austrasse",
@@ -138167,7 +138167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425038,
       "lng": 8.575215
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Bubenholz",
@@ -138177,7 +138177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434495,
       "lng": 8.571691
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Dorf",
@@ -138187,7 +138187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.43222,
       "lng": 8.577938
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Fernsicht",
@@ -138197,7 +138197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423483,
       "lng": 8.581966
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Grätzli",
@@ -138207,7 +138207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424921,
       "lng": 8.581372
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Grossacker",
@@ -138217,7 +138217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.426773,
       "lng": 8.579089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Neuwiesen",
@@ -138227,7 +138227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42804,
       "lng": 8.574334
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Schulstrasse",
@@ -138237,7 +138237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430845,
       "lng": 8.573714
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Schwimmbad",
@@ -138247,7 +138247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.432643,
       "lng": 8.571556
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Opfikon Vreniker",
@@ -138257,7 +138257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428319,
       "lng": 8.579592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Oppens croisée",
@@ -139177,7 +139177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.614611,
       "lng": 8.724093
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ossingen Usserdorf",
@@ -139187,7 +139187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.611267,
       "lng": 8.732068
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Osterfingen Lindenhof",
@@ -139367,7 +139367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.455259,
       "lng": 8.388131
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Otelfingen Golfpark",
@@ -139377,7 +139377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.455813,
       "lng": 8.402097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Otelfingen Landstrasse",
@@ -139387,7 +139387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.459323,
       "lng": 8.38672
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Otelfingen Post",
@@ -139397,7 +139397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.460482,
       "lng": 8.390136
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Otelfingen Schule",
@@ -139407,7 +139407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.462604,
       "lng": 8.390127
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Othmarsingen",
@@ -139467,7 +139467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281831,
       "lng": 8.404869
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottenbach Geeren",
@@ -139477,7 +139477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284249,
       "lng": 8.409193
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottenbach Hinterdorf",
@@ -139487,7 +139487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.283898,
       "lng": 8.402262
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottenbach Rigiblick",
@@ -139497,7 +139497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277912,
       "lng": 8.405166
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottenbach Ulmenhof",
@@ -139507,7 +139507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277804,
       "lng": 8.407422
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottenbach Zentrum",
@@ -139517,7 +139517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281651,
       "lng": 8.404519
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon b Kemptthal",
@@ -139527,7 +139527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.435313,
       "lng": 8.716939
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Brüschweid",
@@ -139537,7 +139537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.29811,
       "lng": 8.796484
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Hasenacher",
@@ -139547,7 +139547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.300214,
       "lng": 8.791594
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Hellberg",
@@ -139557,7 +139557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.293777,
       "lng": 8.804664
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Kirschgarten",
@@ -139567,7 +139567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286074,
       "lng": 8.799963
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Kreisel",
@@ -139577,7 +139577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.295863,
       "lng": 8.778919
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Strick",
@@ -139587,7 +139587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.297274,
       "lng": 8.782245
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon Gossau Unterottikon",
@@ -139597,7 +139597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.292294,
       "lng": 8.775872
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottikon GossauHerschmettlen",
@@ -139607,7 +139607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284231,
       "lng": 8.801231
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ottoberg Feldhof",
@@ -140927,7 +140927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.945338,
       "lng": 6.820439
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Perreux Est",
@@ -140937,7 +140937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.949347,
       "lng": 6.819801
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Perreux Pontareuse",
@@ -140947,7 +140947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.951675,
       "lng": 6.820574
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Perroy Couronnette",
@@ -141007,7 +141007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.985519,
       "lng": 6.883777
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Peseux Fornachon",
@@ -141017,7 +141017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.984683,
       "lng": 6.89176
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Peseux Placeules",
@@ -141027,7 +141027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.985106,
       "lng": 6.886016
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Peseux Tombet",
@@ -141037,7 +141037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.98587,
       "lng": 6.896875
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Peseux Vignoble",
@@ -141047,7 +141047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.988135,
       "lng": 6.893531
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Petit-Lancy Bossons",
@@ -141137,7 +141137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.010126,
       "lng": 6.755279
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Petit-Martel-Est",
@@ -141147,7 +141147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.013675,
       "lng": 6.765242
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Peyres-Possens café",
@@ -141277,7 +141277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364064,
       "lng": 8.620089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfaffhausen Müseren",
@@ -141287,7 +141287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362698,
       "lng": 8.617545
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfaffhausen Pfaffenstein",
@@ -141297,7 +141297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368559,
       "lng": 8.628557
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfaffhausen Sängglen",
@@ -141307,7 +141307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.367049,
       "lng": 8.624763
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon SZ Abzw Etzelpass",
@@ -141537,7 +141537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.367075,
       "lng": 8.78478
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Berg",
@@ -141547,7 +141547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.374141,
       "lng": 8.795837
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Bussenhausen",
@@ -141557,7 +141557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.372559,
       "lng": 8.781562
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Faichrüti",
@@ -141567,7 +141567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359776,
       "lng": 8.758406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Frohwies",
@@ -141577,7 +141577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368235,
       "lng": 8.781517
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Grundstrasse",
@@ -141587,7 +141587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.363633,
       "lng": 8.799028
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Güchweg",
@@ -141597,7 +141597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.363003,
       "lng": 8.795639
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Hermatswil",
@@ -141607,7 +141607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394457,
       "lng": 8.82631
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Hörnlistrasse",
@@ -141617,7 +141617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.370869,
       "lng": 8.78576
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Humbel",
@@ -141627,7 +141627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.381728,
       "lng": 8.800664
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH im Spitz",
@@ -141637,7 +141637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.365466,
       "lng": 8.772312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Matten",
@@ -141647,7 +141647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.370626,
       "lng": 8.776591
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Mettlenstrasse",
@@ -141657,7 +141657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361691,
       "lng": 8.791567
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Rainstrasse",
@@ -141667,7 +141667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.365008,
       "lng": 8.797446
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Ruetschbergstr",
@@ -141677,7 +141677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362833,
       "lng": 8.766757
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Steinwiesstrasse",
@@ -141687,7 +141687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.372056,
       "lng": 8.782281
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Sulzberg",
@@ -141697,7 +141697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379562,
       "lng": 8.782137
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Wallikon",
@@ -141707,7 +141707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379328,
       "lng": 8.802831
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Wiesengrund",
@@ -141717,7 +141717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373575,
       "lng": 8.790201
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfäffikon ZH Witzberg",
@@ -141727,7 +141727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.369817,
       "lng": 8.770874
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfaffnau Brunnmatt",
@@ -141867,7 +141867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.516269,
       "lng": 8.646058
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfungen Eskimo",
@@ -141877,7 +141877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.519047,
       "lng": 8.637213
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Pfyn Biberpfad",
@@ -145837,7 +145837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.913714,
       "lng": 6.654939
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Provence poste",
@@ -146797,7 +146797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.60377,
       "lng": 8.543419
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rafz Bleiki",
@@ -146817,7 +146817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.609982,
       "lng": 8.534871
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rafz Pflegeheim Peteracker",
@@ -146897,7 +146897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.44154,
       "lng": 8.819118
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ramiswil Abzw Scheltenstr",
@@ -147567,7 +147567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498676,
       "lng": 8.794997
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Räterschen Bahnhof",
@@ -147577,7 +147577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498516,
       "lng": 8.794857
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ravecchia Belsoggiorno",
@@ -147997,7 +147997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.482866,
       "lng": 8.436259
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensberg Hirsmühle",
@@ -148007,7 +148007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.482254,
       "lng": 8.444646
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensberg Höfli",
@@ -148017,7 +148017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.480951,
       "lng": 8.436772
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Allmend",
@@ -148027,7 +148027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.44859,
       "lng": 8.456647
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Altersheim",
@@ -148037,7 +148037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434495,
       "lng": 8.467317
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Althard",
@@ -148047,7 +148047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438216,
       "lng": 8.470176
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Chrüzächer",
@@ -148057,7 +148057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427753,
       "lng": 8.473241
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Dreispitz",
@@ -148067,7 +148067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438351,
       "lng": 8.464728
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Feldblumenstrasse",
@@ -148077,7 +148077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.436032,
       "lng": 8.464432
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Furtbächli",
@@ -148087,7 +148087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444491,
       "lng": 8.466688
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Gemeindehaus",
@@ -148097,7 +148097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434216,
       "lng": 8.469645
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Hardhölzli",
@@ -148107,7 +148107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.441614,
       "lng": 8.465906
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Holenbach",
@@ -148117,7 +148117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431223,
       "lng": 8.460944
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Lettenhau",
@@ -148127,7 +148127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425784,
       "lng": 8.471965
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Moosächer",
@@ -148137,7 +148137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.439834,
       "lng": 8.456719
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Obstgarten",
@@ -148147,7 +148147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.429074,
       "lng": 8.46925
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Ostring",
@@ -148157,7 +148157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431987,
       "lng": 8.471075
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Pumpwerkstrasse",
@@ -148167,7 +148167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446118,
       "lng": 8.462373
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Querstrasse",
@@ -148177,7 +148177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444581,
       "lng": 8.462059
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Sportanlage Wisa",
@@ -148187,7 +148187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.437506,
       "lng": 8.461214
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Strassenverkehrs",
@@ -148197,7 +148197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.439717,
       "lng": 8.461681
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Zentrum",
@@ -148207,7 +148207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431456,
       "lng": 8.466292
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf Zentrum Ost",
@@ -148217,7 +148217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430225,
       "lng": 8.470113
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf-Watt",
@@ -148227,7 +148227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.437155,
       "lng": 8.472809
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Regensdorf-Watt Bahnhof",
@@ -148237,7 +148237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.436238,
       "lng": 8.472243
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rehetobel Ausserkaien",
@@ -149177,7 +149177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384731,
       "lng": 8.39623
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Reschen/Resia",
@@ -149447,7 +149447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.529655,
       "lng": 8.752132
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Revereulaz",
@@ -149517,7 +149517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.636986,
       "lng": 8.618588
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rheinau Hallenbad",
@@ -149537,7 +149537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.635907,
       "lng": 8.606902
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rheinau Schulplatz",
@@ -149557,7 +149557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.644761,
       "lng": 8.605778
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rheineck",
@@ -150367,7 +150367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.208361,
       "lng": 8.707464
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Bächlistrasse",
@@ -150377,7 +150377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.205369,
       "lng": 8.700336
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Chrummbächli",
@@ -150387,7 +150387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.205845,
       "lng": 8.698025
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Im Leemann",
@@ -150397,7 +150397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.205279,
       "lng": 8.694196
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Kerag",
@@ -150407,7 +150407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.205054,
       "lng": 8.705783
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Neuhus",
@@ -150417,7 +150417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.204685,
       "lng": 8.702142
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Obermatt",
@@ -150427,7 +150427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.203706,
       "lng": 8.685962
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Richterswil Säumerstrasse",
@@ -150517,7 +150517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.263637,
       "lng": 8.395709
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rickenbach b Ottenbach",
@@ -150527,7 +150527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269066,
       "lng": 8.404851
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rickenbach bei Wil alte Post",
@@ -150647,7 +150647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.541152,
       "lng": 8.787603
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rickenbach Sulz Sunnezirkel",
@@ -150657,7 +150657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.538284,
       "lng": 8.788475
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rickenbach SZ Allerheiligen",
@@ -150787,7 +150787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.551624,
       "lng": 8.795055
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rickenbach-Attikon",
@@ -150797,7 +150797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.535355,
       "lng": 8.789159
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Riddes",
@@ -151207,7 +151207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326354,
       "lng": 8.710098
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Riedikon Dorf",
@@ -151217,7 +151217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332206,
       "lng": 8.711329
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Riedli Talstation Wiriehorn",
@@ -151267,7 +151267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501033,
       "lng": 8.474032
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Riedt b Neerach Storchen",
@@ -151277,7 +151277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500395,
       "lng": 8.474023
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Riedtwil Bahnhof",
@@ -151757,7 +151757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.536936,
       "lng": 8.686097
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rietbad",
@@ -151897,7 +151897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248391,
       "lng": 8.491687
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rifferswil Oberrifferswil",
@@ -151907,7 +151907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.242611,
       "lng": 8.496937
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rifferswil Seleger Moor",
@@ -151917,7 +151917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.242746,
       "lng": 8.506519
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rifferswil Unterrifferswil",
@@ -151927,7 +151927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248238,
       "lng": 8.494501
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Riggisberg Abegg-Stiftung",
@@ -152067,7 +152067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445004,
       "lng": 8.796307
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rindal Grütli",
@@ -152167,7 +152167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360229,
       "lng": 8.477376
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ringlikon Dorf",
@@ -152177,7 +152177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358365,
       "lng": 8.469502
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ringlikon Gättern",
@@ -152187,7 +152187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36197,
       "lng": 8.465322
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ringlikon Langwis",
@@ -152197,7 +152197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359623,
       "lng": 8.465115
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ringoldingen",
@@ -152597,7 +152597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.978247,
       "lng": 6.809931
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Rochefort école",
@@ -152607,7 +152607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.978984,
       "lng": 6.808987
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Rochefort L Erable",
@@ -152617,7 +152617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.982148,
       "lng": 6.811855
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Rochers-de-Naye",
@@ -154027,7 +154027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.525537,
       "lng": 8.578891
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rorbas Bruggi",
@@ -154037,7 +154037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.539596,
       "lng": 8.562864
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rorbas Bütbergstrasse",
@@ -154047,7 +154047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.533376,
       "lng": 8.571457
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rorbas Dorfplatz",
@@ -154057,7 +154057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.529888,
       "lng": 8.580015
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rorbas Hirschen",
@@ -154067,7 +154067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.530778,
       "lng": 8.574747
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rorschach",
@@ -155677,7 +155677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.581244,
       "lng": 8.571017
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüdlingen Sandgruben",
@@ -155717,7 +155717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.640168,
       "lng": 8.674195
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rudolfstetten",
@@ -156467,7 +156467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.454067,
       "lng": 8.532745
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Chilestieg",
@@ -156477,7 +156477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446819,
       "lng": 8.52554
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Gemeindehaus",
@@ -156487,7 +156487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.450064,
       "lng": 8.529828
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Heuelstrasse",
@@ -156497,7 +156497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452392,
       "lng": 8.528462
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Hofwisenunterführung",
@@ -156507,7 +156507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452266,
       "lng": 8.536867
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Hörnlistrasse",
@@ -156517,7 +156517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445686,
       "lng": 8.530664
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Ifangstrasse",
@@ -156527,7 +156527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.448257,
       "lng": 8.535914
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Letten",
@@ -156537,7 +156537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438747,
       "lng": 8.534745
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Oberdorf",
@@ -156547,7 +156547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.45197,
       "lng": 8.530287
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Riedmatt",
@@ -156557,7 +156557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.462352,
       "lng": 8.527581
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Riedmattstrasse",
@@ -156567,7 +156567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.461489,
       "lng": 8.526997
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Rümelbach",
@@ -156577,7 +156577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.449848,
       "lng": 8.540265
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlang Zürichweg",
@@ -156587,7 +156587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.448841,
       "lng": 8.527131
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümligen Kettenschmiede",
@@ -156617,7 +156617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409325,
       "lng": 8.761543
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rumlikon Stuketen",
@@ -156627,7 +156627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.40394,
       "lng": 8.762945
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rümlingen",
@@ -156847,7 +156847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307133,
       "lng": 8.555151
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Belvoir",
@@ -156857,7 +156857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307046,
       "lng": 8.548652
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Bodengasse",
@@ -156867,7 +156867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.310425,
       "lng": 8.552706
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Eggrain",
@@ -156877,7 +156877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.304565,
       "lng": 8.544301
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Langhaldenstrasse",
@@ -156887,7 +156887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.306075,
       "lng": 8.551106
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Loorain",
@@ -156897,7 +156897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.307369,
       "lng": 8.542
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Moosstrasse",
@@ -156907,7 +156907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.302614,
       "lng": 8.545442
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Park im Grüene",
@@ -156917,7 +156917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.300367,
       "lng": 8.550369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Rebsteig",
@@ -156927,7 +156927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.312358,
       "lng": 8.550764
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Säumerstrasse",
@@ -156937,7 +156937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.308106,
       "lng": 8.546162
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Schlossstrasse",
@@ -156947,7 +156947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.313689,
       "lng": 8.553793
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüschlikon Weidstrasse",
@@ -156957,7 +156957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.305706,
       "lng": 8.552939
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Dorf",
@@ -156967,7 +156967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394645,
       "lng": 8.777032
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Gemeindehaus",
@@ -156977,7 +156977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394807,
       "lng": 8.776339
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Kirche",
@@ -156987,7 +156987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396192,
       "lng": 8.773139
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Morgenthal",
@@ -156997,7 +156997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391463,
       "lng": 8.771036
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Platte",
@@ -157007,7 +157007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399895,
       "lng": 8.770263
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Tüfi",
@@ -157017,7 +157017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391418,
       "lng": 8.774856
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russikon Wilhof",
@@ -157027,7 +157027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384955,
       "lng": 8.778569
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Russin",
@@ -157337,7 +157337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.260292,
       "lng": 8.854212
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Bandwies",
@@ -157347,7 +157347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257605,
       "lng": 8.849592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Bergacher",
@@ -157357,7 +157357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.250971,
       "lng": 8.855624
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Drei Eichen",
@@ -157367,7 +157367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253434,
       "lng": 8.856523
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Ferrach",
@@ -157377,7 +157377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.255591,
       "lng": 8.858564
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Gruebenplatz",
@@ -157387,7 +157387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251969,
       "lng": 8.854069
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Gubel",
@@ -157397,7 +157397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26014,
       "lng": 8.861467
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Jonamarkt",
@@ -157407,7 +157407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258989,
       "lng": 8.849548
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Laufenbach",
@@ -157417,7 +157417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.261767,
       "lng": 8.864551
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Löwen",
@@ -157427,7 +157427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258872,
       "lng": 8.851381
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Moosstrasse",
@@ -157437,7 +157437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.255843,
       "lng": 8.856137
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Pilgerhof",
@@ -157447,7 +157447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.267268,
       "lng": 8.868811
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Rekrutierungszentrum",
@@ -157457,7 +157457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.259879,
       "lng": 8.84303
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Seefeldstrasse",
@@ -157467,7 +157467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.252688,
       "lng": 8.843498
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Sportplatz",
@@ -157487,7 +157487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.252652,
       "lng": 8.857925
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Steinstrasse",
@@ -157497,7 +157497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251196,
       "lng": 8.858726
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Unterwiesstrasse",
@@ -157507,7 +157507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.255681,
       "lng": 8.845772
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Waldau",
@@ -157517,7 +157517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.260598,
       "lng": 8.839255
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Weier",
@@ -157527,7 +157527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.253299,
       "lng": 8.8674
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüti ZH Würzhalde",
@@ -157537,7 +157537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26503,
       "lng": 8.866852
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rutschwil",
@@ -157547,7 +157547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.557323,
       "lng": 8.729425
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Rüttenen Brüggmoos",
@@ -159227,7 +159227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394213,
       "lng": 8.854203
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Saland Dillhus",
@@ -159237,7 +159237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379849,
       "lng": 8.860218
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Saland Laubberg",
@@ -159247,7 +159247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384631,
       "lng": 8.843785
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Salavaux Cotterd",
@@ -159927,7 +159927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.192065,
       "lng": 8.680047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Samstagern Fälmis",
@@ -159937,7 +159937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.190087,
       "lng": 8.67753
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Samstagern Im Walder",
@@ -159947,7 +159947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.194599,
       "lng": 8.679103
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Samstagern Sagenbach",
@@ -159957,7 +159957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.19717,
       "lng": 8.681881
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Samstagern Zopfschmitten",
@@ -159967,7 +159967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.192289,
       "lng": 8.675579
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "San Antonino",
@@ -160847,7 +160847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.889991,
       "lng": 6.765596
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Sauges-près-Saint-Aubin",
@@ -160857,7 +160857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.887735,
       "lng": 6.7637
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Saulcy bif La Racine",
@@ -160907,7 +160907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.038439,
       "lng": 6.934441
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Saurenhorn Abzw",
@@ -160967,7 +160967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.047581,
       "lng": 6.955053
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Savagnier Les Prayes",
@@ -160977,7 +160977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.051311,
       "lng": 6.955655
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Savagnier Moulin des Sauges",
@@ -160987,7 +160987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.060795,
       "lng": 6.942099
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Savagnier Petit-Savagnier",
@@ -160997,7 +160997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.05373,
       "lng": 6.95268
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Savagnières parc",
@@ -162307,7 +162307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.695424,
       "lng": 8.651848
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Brüggli",
@@ -162737,7 +162737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.691604,
       "lng": 8.66134
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen JJWepferstr",
@@ -162777,7 +162777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.695442,
       "lng": 8.646292
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Kinepolis",
@@ -162857,7 +162857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.692287,
       "lng": 8.652162
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Logierhaus",
@@ -163027,7 +163027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.691056,
       "lng": 8.656387
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Rheinbühl",
@@ -163037,7 +163037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.689788,
       "lng": 8.65494
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Rheinhalde Mitte",
@@ -163047,7 +163047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.688062,
       "lng": 8.659219
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Rhybadi",
@@ -163057,7 +163057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.694355,
       "lng": 8.637852
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Riet",
@@ -163087,7 +163087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.694085,
       "lng": 8.647515
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Sandlöchli",
@@ -163117,7 +163117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.695586,
       "lng": 8.640701
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Schlossweiher",
@@ -163307,7 +163307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.690606,
       "lng": 8.65974
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schaffhausen Waldfriedhof",
@@ -163387,7 +163387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.686435,
       "lng": 8.663642
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schafhausen",
@@ -163467,7 +163467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.406979,
       "lng": 8.825564
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schallberg",
@@ -164127,7 +164127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.3226,
       "lng": 8.659548
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Scheuren Räbhubel",
@@ -164627,7 +164627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479935,
       "lng": 8.815577
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlatt ZH Oberschlatt",
@@ -164637,7 +164637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.463368,
       "lng": 8.846545
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlatt ZH Schulhaus",
@@ -164647,7 +164647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.473715,
       "lng": 8.827704
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlatt ZH Unterschlatt",
@@ -164657,7 +164657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.469274,
       "lng": 8.827731
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlatt ZH Waltenstein",
@@ -164667,7 +164667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479306,
       "lng": 8.819928
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlattingen",
@@ -164697,7 +164697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498084,
       "lng": 8.391925
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schleinikon Gemeindehaus",
@@ -164707,7 +164707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.497284,
       "lng": 8.395853
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schleinikon Wasen",
@@ -164717,7 +164717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502714,
       "lng": 8.397714
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schleitheim Adlerstrasse",
@@ -164837,7 +164837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401378,
       "lng": 8.445087
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Bahnhof",
@@ -164847,7 +164847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399445,
       "lng": 8.448538
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Brunngasse",
@@ -164857,7 +164857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396488,
       "lng": 8.448062
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Feldstrasse",
@@ -164867,7 +164867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.403428,
       "lng": 8.447892
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Goldschlägistrasse",
@@ -164877,7 +164877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400408,
       "lng": 8.439226
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Heimeliweg",
@@ -164887,7 +164887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394565,
       "lng": 8.437482
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Industrie Gaswerk",
@@ -164897,7 +164897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400956,
       "lng": 8.463011
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Kampstrasse",
@@ -164907,7 +164907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393459,
       "lng": 8.448341
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Kesslerstrasse",
@@ -164917,7 +164917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.39638,
       "lng": 8.438866
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Meuchwis",
@@ -164927,7 +164927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400237,
       "lng": 8.435028
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Nassacker",
@@ -164937,7 +164937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394852,
       "lng": 8.441743
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Reitmen",
@@ -164947,7 +164947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397108,
       "lng": 8.433383
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Rütistrasse",
@@ -164957,7 +164957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400812,
       "lng": 8.453735
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Spital Limmattal",
@@ -164967,7 +164967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.392614,
       "lng": 8.429751
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Steinacker",
@@ -164977,7 +164977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396183,
       "lng": 8.426371
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schlieren Talacker-Windegg",
@@ -164987,7 +164987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405621,
       "lng": 8.447811
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schliern Bus-Endstation",
@@ -165347,7 +165347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.531992,
       "lng": 8.373092
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schneisingen Mitteldorf",
@@ -165357,7 +165357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.519317,
       "lng": 8.363869
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schneisingen Murzlen",
@@ -165367,7 +165367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.512161,
       "lng": 8.364328
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schneisingen Oberdorf",
@@ -165387,7 +165387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.518706,
       "lng": 8.366207
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schnottwil Kappeli",
@@ -165457,7 +165457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.499684,
       "lng": 8.416115
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schöfflisdorf-Oberweningen",
@@ -165467,7 +165467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.497971,
       "lng": 8.411793
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schöftland",
@@ -165637,7 +165637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.200335,
       "lng": 8.622965
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Dorfhuus",
@@ -165647,7 +165647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.193035,
       "lng": 8.644108
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Mühlestalden",
@@ -165657,7 +165657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.19966,
       "lng": 8.654994
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Müsli",
@@ -165667,7 +165667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.205396,
       "lng": 8.622363
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Neubad",
@@ -165677,7 +165677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.193862,
       "lng": 8.636117
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Post",
@@ -165687,7 +165687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.19442,
       "lng": 8.644611
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Sonne",
@@ -165697,7 +165697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.190267,
       "lng": 8.645492
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Tanne",
@@ -165707,7 +165707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.202672,
       "lng": 8.660145
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Wolfbühl",
@@ -165717,7 +165717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.184181,
       "lng": 8.652216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenberg ZH Zweierhof",
@@ -165727,7 +165727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.197233,
       "lng": 8.649681
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schönenbuch Dorf",
@@ -166037,7 +166037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500116,
       "lng": 8.811705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schottikon Bahnhof",
@@ -166047,7 +166047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.4999,
       "lng": 8.812215
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schötz Feld",
@@ -167377,7 +167377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384381,
       "lng": 8.658659
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schwerzenbach ZH Bahnhof",
@@ -167387,7 +167387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384074,
       "lng": 8.659515
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schwerzenbach ZH Dorf",
@@ -167397,7 +167397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.380505,
       "lng": 8.652001
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Schwyz Achermann",
@@ -168317,7 +168317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343605,
       "lng": 8.769463
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seelisberg Dorf",
@@ -169087,7 +169087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.465174,
       "lng": 8.76033
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sennwald Äugstisriet",
@@ -169667,7 +169667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.535768,
       "lng": 8.738868
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seuzach Alterszentrum",
@@ -169677,7 +169677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.535857,
       "lng": 8.727411
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seuzach Breitestrasse",
@@ -169687,7 +169687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.535192,
       "lng": 8.729578
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seuzach Forrenbergstrasse",
@@ -169697,7 +169697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.531641,
       "lng": 8.728616
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seuzach Gemeindehaus",
@@ -169707,7 +169707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.536639,
       "lng": 8.729595
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seuzach Im Räbhag",
@@ -169717,7 +169717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.539785,
       "lng": 8.731969
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Seuzach Mörsburgstrasse",
@@ -169727,7 +169727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.53672,
       "lng": 8.733605
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sévaz village",
@@ -170737,7 +170737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.303155,
       "lng": 8.525247
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sihlbrugg Alter Bahnhof",
@@ -170747,7 +170747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238746,
       "lng": 8.577102
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sihlbrugg Dorf",
@@ -170757,7 +170757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.217198,
       "lng": 8.57704
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sihlwald",
@@ -170767,7 +170767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268277,
       "lng": 8.557497
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Silenen Dägerlohn",
@@ -172997,7 +172997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.319571,
       "lng": 8.521441
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sool Alter Löwen",
@@ -174117,7 +174117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347318,
       "lng": 8.596796
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Splügen Abzw Suretta Seen",
@@ -177207,7 +177207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.894522,
       "lng": 6.77481
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE hôpital",
@@ -177217,7 +177217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.892373,
       "lng": 6.769453
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE Le Devens",
@@ -177227,7 +177227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.903924,
       "lng": 6.760463
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE Les Charrières",
@@ -177237,7 +177237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.89391,
       "lng": 6.768014
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE Pattus",
@@ -177247,7 +177247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.893128,
       "lng": 6.773561
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE Petites Vignes",
@@ -177257,7 +177257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.885712,
       "lng": 6.761704
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE Senet",
@@ -177267,7 +177267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.895349,
       "lng": 6.775673
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE Tivoli",
@@ -177277,7 +177277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.887753,
       "lng": 6.766648
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Aubin NE village",
@@ -177287,7 +177287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.89418,
       "lng": 6.772545
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Barthélemy Champ Cadet",
@@ -177327,7 +177327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.047131,
       "lng": 7.001078
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise bif sur Maley",
@@ -177337,7 +177337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.04119,
       "lng": 6.996601
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise centre",
@@ -177347,7 +177347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.012127,
       "lng": 6.987162
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise CFF",
@@ -177357,7 +177357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.014566,
       "lng": 6.982108
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise La Goulette",
@@ -177367,7 +177367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.020901,
       "lng": 6.990929
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise sentier de la Gare",
@@ -177377,7 +177377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.013413,
       "lng": 6.982335
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise Sous-les-Vignes",
@@ -177387,7 +177387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.011507,
       "lng": 6.991046
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise Voëns",
@@ -177397,7 +177397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.033441,
       "lng": 6.993554
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Blaise-Lac",
@@ -177407,7 +177407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.012094,
       "lng": 6.98468
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Brais Le Cerneux-Bénat",
@@ -178437,7 +178437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.908689,
       "lng": 6.57009
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Sulpice NE La Foule",
@@ -178447,7 +178447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.913066,
       "lng": 6.56715
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Sulpice NE poste",
@@ -178457,7 +178457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.909641,
       "lng": 6.567061
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Sulpice NE Prise Milord",
@@ -178467,7 +178467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.913138,
       "lng": 6.554664
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Sulpice NE Terminus",
@@ -178477,7 +178477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.909641,
       "lng": 6.561757
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "St-Sulpice VD Bochet",
@@ -179087,7 +179087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.53121,
       "lng": 8.466239
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stadel b N Neuwis-Huus",
@@ -179097,7 +179097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.533843,
       "lng": 8.469529
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stadel b N Stig",
@@ -179107,7 +179107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.525627,
       "lng": 8.452539
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stadel b N Zentrum",
@@ -179117,7 +179117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.528027,
       "lng": 8.46676
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa",
@@ -179127,7 +179127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240516,
       "lng": 8.721631
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Bahnhof",
@@ -179137,7 +179137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240408,
       "lng": 8.721927
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Binz",
@@ -179147,7 +179147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249335,
       "lng": 8.723806
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Dorf",
@@ -179157,7 +179157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.239393,
       "lng": 8.734953
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Echtlenbach",
@@ -179167,7 +179167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.246782,
       "lng": 8.719707
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Frohberg",
@@ -179177,7 +179177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248058,
       "lng": 8.739726
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Grund",
@@ -179187,7 +179187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240894,
       "lng": 8.725811
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Kehlhof",
@@ -179197,7 +179197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234179,
       "lng": 8.736248
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Kniebreche",
@@ -179207,7 +179207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.251411,
       "lng": 8.722917
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Krone",
@@ -179217,7 +179217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.241487,
       "lng": 8.722952
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Landi",
@@ -179227,7 +179227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.240741,
       "lng": 8.732508
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Lattenberg",
@@ -179237,7 +179237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.248822,
       "lng": 8.719779
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Laubisrüti",
@@ -179247,7 +179247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238611,
       "lng": 8.747844
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Lindenbänkli",
@@ -179257,7 +179257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.246737,
       "lng": 8.727501
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Metzg",
@@ -179267,7 +179267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.245218,
       "lng": 8.726341
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Mies",
@@ -179277,7 +179277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.239204,
       "lng": 8.739268
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Mühlehölzli",
@@ -179287,7 +179287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257857,
       "lng": 8.720076
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Obstgarten",
@@ -179297,7 +179297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.241146,
       "lng": 8.73036
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Phonak",
@@ -179307,7 +179307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.239258,
       "lng": 8.743753
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Rain",
@@ -179317,7 +179317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.245047,
       "lng": 8.719635
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Schützenhaus Wanne",
@@ -179327,7 +179327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254647,
       "lng": 8.720822
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Strandbad",
@@ -179337,7 +179337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.241011,
       "lng": 8.713945
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Tränkebachstrasse",
@@ -179347,7 +179347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.242197,
       "lng": 8.726998
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Uelikon",
@@ -179357,7 +179357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.249173,
       "lng": 8.718584
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Wässerwies",
@@ -179367,7 +179367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.243213,
       "lng": 8.727762
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stäfa Wiesengrund",
@@ -179377,7 +179377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.244984,
       "lng": 8.722539
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Staffelbach Gemeindehaus",
@@ -179627,7 +179627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.320197,
       "lng": 8.490608
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Aumüli",
@@ -179637,7 +179637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.302092,
       "lng": 8.485907
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Bleiki",
@@ -179647,7 +179647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.333761,
       "lng": 8.488819
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Diebis",
@@ -179657,7 +179657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.349394,
       "lng": 8.475893
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Dorf",
@@ -179667,7 +179667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326777,
       "lng": 8.490339
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Gamlikon",
@@ -179677,7 +179677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.311459,
       "lng": 8.493341
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Langfuren",
@@ -179687,7 +179687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.323631,
       "lng": 8.490168
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Loomatt",
@@ -179697,7 +179697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.339416,
       "lng": 8.485296
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Sellenbüren",
@@ -179707,7 +179707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34329,
       "lng": 8.482078
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Tägerst",
@@ -179717,7 +179717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.298775,
       "lng": 8.487417
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stallikon Wolfenhof",
@@ -179727,7 +179727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.294434,
       "lng": 8.485736
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stammheim",
@@ -179737,7 +179737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.63488,
       "lng": 8.788726
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stammheim Frohsinn",
@@ -179747,7 +179747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.632347,
       "lng": 8.799693
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stampa Palù",
@@ -180587,7 +180587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353854,
       "lng": 8.932358
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Steg FL Hotel",
@@ -180617,7 +180617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.349115,
       "lng": 8.952546
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Steg SG Gebertingen",
@@ -181407,7 +181407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.489981,
       "lng": 8.44684
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Steinmaur Gemeindehaus",
@@ -181417,7 +181417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.493554,
       "lng": 8.448512
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Steinmaur Heitlig",
@@ -181427,7 +181427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.50844,
       "lng": 8.453717
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Steinmaur Obersteinmaur",
@@ -181437,7 +181437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498821,
       "lng": 8.454741
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Steinmaur Sünikon",
@@ -181447,7 +181447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490758,
       "lng": 8.437392
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stels Crals",
@@ -181517,7 +181517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.37958,
       "lng": 8.909874
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sternenberg Kirche",
@@ -181527,7 +181527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387211,
       "lng": 8.911546
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sternenberg Rossweid",
@@ -181537,7 +181537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.385009,
       "lng": 8.914989
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Sternenberg Sunnenbad",
@@ -181547,7 +181547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389701,
       "lng": 8.90618
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stettbach",
@@ -181557,7 +181557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397213,
       "lng": 8.596132
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Stetten AG Dörndler",
@@ -183277,7 +183277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.433749,
       "lng": 8.67299
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tagelswangen Dorf",
@@ -183287,7 +183287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430405,
       "lng": 8.671921
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tagelswangen Gerenhalde",
@@ -183297,7 +183297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431411,
       "lng": 8.667965
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tagelswangen Herdlen",
@@ -183307,7 +183307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434342,
       "lng": 8.673242
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tagelswangen Oberwis",
@@ -183317,7 +183317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431366,
       "lng": 8.678258
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tägerig Dorfzentrum",
@@ -183537,7 +183537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27357,
       "lng": 8.855561
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tann Härtiplatz",
@@ -183547,7 +183547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26076,
       "lng": 8.851507
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tann-Dürnten",
@@ -183557,7 +183557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268371,
       "lng": 8.852704
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Tannay",
@@ -184397,7 +184397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.549107,
       "lng": 8.569138
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Teufen ZH Schloss",
@@ -184407,7 +184407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.543705,
       "lng": 8.571484
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Teufen ZH Schulhaus",
@@ -184417,7 +184417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.546869,
       "lng": 8.568095
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Teufen ZH Unterteufen",
@@ -184427,7 +184427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.55139,
       "lng": 8.565866
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Teufenthal AG",
@@ -184587,7 +184587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.579293,
       "lng": 8.753839
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalheim-Altikon",
@@ -184597,7 +184597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.56962,
       "lng": 8.757627
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalkirch alte Post",
@@ -184637,7 +184637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.295844,
       "lng": 8.564517
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Aegertli",
@@ -184647,7 +184647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296474,
       "lng": 8.55969
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Alterszentrum",
@@ -184657,7 +184657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.28557,
       "lng": 8.569821
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Archstrasse",
@@ -184667,7 +184667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296079,
       "lng": 8.561731
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Aubrigstrasse",
@@ -184677,7 +184677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288078,
       "lng": 8.569821
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Böni",
@@ -184687,7 +184687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284851,
       "lng": 8.565291
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Ebnet",
@@ -184697,7 +184697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288366,
       "lng": 8.557191
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Feldstrasse",
@@ -184707,7 +184707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.290344,
       "lng": 8.559681
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Gewerbestrasse",
@@ -184717,7 +184717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286685,
       "lng": 8.565417
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil In Reben",
@@ -184727,7 +184727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.291944,
       "lng": 8.567933
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Mettli",
@@ -184737,7 +184737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282181,
       "lng": 8.573003
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Mühlebachplatz",
@@ -184747,7 +184747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.291269,
       "lng": 8.564895
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Oeggisbüelplatz",
@@ -184757,7 +184757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.284833,
       "lng": 8.571592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Pilgerweg",
@@ -184767,7 +184767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.298164,
       "lng": 8.561111
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Platte",
@@ -184777,7 +184777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.289984,
       "lng": 8.568374
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Post",
@@ -184787,7 +184787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296816,
       "lng": 8.562657
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Rainstrasse",
@@ -184797,7 +184797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286946,
       "lng": 8.571718
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Rudishaldenstrasse",
@@ -184807,7 +184807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.293346,
       "lng": 8.559268
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Schützenhaus",
@@ -184817,7 +184817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287719,
       "lng": 8.562216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Seehaldenstrasse",
@@ -184827,7 +184827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.297769,
       "lng": 8.554018
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Sonnenberg",
@@ -184837,7 +184837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.293759,
       "lng": 8.556301
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Trotte",
@@ -184847,7 +184847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.291198,
       "lng": 8.566028
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thalwil Zehntenstrasse",
@@ -184857,7 +184857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.289903,
       "lng": 8.570522
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thayngen Bahnhof",
@@ -184917,7 +184917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.422036,
       "lng": 8.767952
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Theilingen Schwemmrüti",
@@ -184927,7 +184927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416112,
       "lng": 8.763035
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Thel",
@@ -185017,7 +185017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.021629,
       "lng": 7.03049
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Thierachern Egg",
@@ -187237,7 +187237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.942407,
       "lng": 6.676585
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Traversa Marolta",
@@ -188717,7 +188717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.637992,
       "lng": 8.694133
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Trüllikon Kindergarten",
@@ -188727,7 +188727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.637867,
       "lng": 8.685144
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Trümmelbachfälle",
@@ -188797,7 +188797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.629084,
       "lng": 8.727186
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Trüttlikon",
@@ -189447,7 +189447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.437384,
       "lng": 8.843803
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Abzw Auli",
@@ -189457,7 +189457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409999,
       "lng": 8.879536
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Freckmünd",
@@ -189467,7 +189467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414404,
       "lng": 8.891293
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Fridtal",
@@ -189477,7 +189477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.44094,
       "lng": 8.837187
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Gosswil",
@@ -189487,7 +189487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409675,
       "lng": 8.874268
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Hutzikon",
@@ -189497,7 +189497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.440185,
       "lng": 8.843597
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Kehlhof",
@@ -189507,7 +189507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434486,
       "lng": 8.856901
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Kellersacker",
@@ -189517,7 +189517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41239,
       "lng": 8.88572
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Neubrunn",
@@ -189527,7 +189527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.439978,
       "lng": 8.893316
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Oberhofen",
@@ -189537,7 +189537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434207,
       "lng": 8.878556
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Schloss",
@@ -189547,7 +189547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.435483,
       "lng": 8.84855
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Seelmatten",
@@ -189567,7 +189567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411419,
       "lng": 8.860065
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Turbenthal Usserdorfweg",
@@ -189577,7 +189577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.432068,
       "lng": 8.84588
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "TurbenthalStrandbad Bichelsee",
@@ -189907,7 +189907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.236012,
       "lng": 8.752751
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerikon Gsteig",
@@ -189917,7 +189917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.239869,
       "lng": 8.758783
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerikon Moritzberg",
@@ -189927,7 +189927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238737,
       "lng": 8.751134
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerikon Rietlirain",
@@ -189937,7 +189937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234655,
       "lng": 8.746073
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerikon Ritterhaus",
@@ -189947,7 +189947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.235015,
       "lng": 8.757156
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerikon Töbeli",
@@ -189957,7 +189957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.238728,
       "lng": 8.755152
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerkheim Abzw Neudorf",
@@ -190047,7 +190047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.223347,
       "lng": 8.497476
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerzlikon Kappelerstrasse",
@@ -190057,7 +190057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.2219,
       "lng": 8.499499
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uerzlikon Weid",
@@ -190307,7 +190307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.25903,
       "lng": 8.678774
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Bergheim",
@@ -190317,7 +190317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.272302,
       "lng": 8.684874
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Brandrain",
@@ -190327,7 +190327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.271628,
       "lng": 8.686384
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Forbüelstrasse",
@@ -190337,7 +190337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.267268,
       "lng": 8.687023
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Gemeindehaus",
@@ -190347,7 +190347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.262504,
       "lng": 8.679975
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Grossdorf",
@@ -190357,7 +190357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.266459,
       "lng": 8.674204
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Kleindorf",
@@ -190367,7 +190367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.264284,
       "lng": 8.682582
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Oergelacher",
@@ -190377,7 +190377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.26876,
       "lng": 8.679499
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Rundi",
@@ -190387,7 +190387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.270486,
       "lng": 8.68224
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Stötzli",
@@ -190397,7 +190397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.269444,
       "lng": 8.68802
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Talstrasse",
@@ -190407,7 +190407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.266549,
       "lng": 8.684407
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am See Tramstrasse",
@@ -190417,7 +190417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.265785,
       "lng": 8.677359
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetikon am SeeBinzigerstrasse",
@@ -190427,7 +190427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268787,
       "lng": 8.690672
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetliberg",
@@ -190437,7 +190437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.352364,
       "lng": 8.487653
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uetliburg SG Berg-Sion-Str",
@@ -190607,7 +190607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.671226,
       "lng": 8.63466
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uhwiesen Rebhof",
@@ -190617,7 +190617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.673689,
       "lng": 8.631613
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uhwiesen Unterdorf",
@@ -190627,7 +190627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.669032,
       "lng": 8.633213
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uhwiesen Wassergasse",
@@ -190637,7 +190637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.66834,
       "lng": 8.638337
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Dorf",
@@ -190647,7 +190647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.370536,
       "lng": 8.454139
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Gläseren",
@@ -190657,7 +190657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373476,
       "lng": 8.44862
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Halde",
@@ -190667,7 +190667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36926,
       "lng": 8.458724
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Roracher",
@@ -190677,7 +190677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.372118,
       "lng": 8.451406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Schlössli",
@@ -190687,7 +190687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368109,
       "lng": 8.447856
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Waldegg",
@@ -190697,7 +190697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.365836,
       "lng": 8.46598
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uitikon Wängi",
@@ -190707,7 +190707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.375975,
       "lng": 8.447613
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Ulmiz FR Abzw Lurtigen",
@@ -191117,7 +191117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414979,
       "lng": 8.446031
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterengstringen Eckstein",
@@ -191127,7 +191127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410484,
       "lng": 8.449033
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterengstringen Langacher",
@@ -191137,7 +191137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412237,
       "lng": 8.453159
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterengstringen Langwisen",
@@ -191147,7 +191147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409046,
       "lng": 8.448053
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterengstringen Sennenbüel",
@@ -191157,7 +191157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413163,
       "lng": 8.448754
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterengstringen Sennenbüel N",
@@ -191167,7 +191167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413496,
       "lng": 8.449312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterentfelden Oberdorf",
@@ -191367,7 +191367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.534374,
       "lng": 8.71426
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterohringen Wisental",
@@ -191377,7 +191377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.53503,
       "lng": 8.709693
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterramsern Post",
@@ -191787,7 +191787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.63961,
       "lng": 8.790336
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterstammheim Neubr-Ulmerh",
@@ -191797,7 +191797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.653652,
       "lng": 8.784025
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Unterterzen",
@@ -191947,7 +191947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390882,
       "lng": 8.434713
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Feldegg",
@@ -191957,7 +191957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.39203,
       "lng": 8.427909
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Heinrich-Stutz-Strasse",
@@ -191967,7 +191967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.370419,
       "lng": 8.424708
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Herweg",
@@ -191977,7 +191977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393459,
       "lng": 8.419315
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Luberzen",
@@ -191987,7 +191987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.395176,
       "lng": 8.422991
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Neumatt",
@@ -191997,7 +191997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387211,
       "lng": 8.420403
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Neumattstrasse",
@@ -192007,7 +192007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387346,
       "lng": 8.423153
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Niederurdorf",
@@ -192017,7 +192017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.39034,
       "lng": 8.418569
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Oberurdorf",
@@ -192027,7 +192027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.3778,
       "lng": 8.422973
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Rainweg",
@@ -192037,7 +192037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389405,
       "lng": 8.425338
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Schlierenstrasse",
@@ -192047,7 +192047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391158,
       "lng": 8.423153
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Sonne",
@@ -192057,7 +192057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.38126,
       "lng": 8.422533
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Spitzacker",
@@ -192067,7 +192067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384344,
       "lng": 8.421823
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Uitikonerstrasse",
@@ -192077,7 +192077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.382258,
       "lng": 8.425931
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urdorf Weihermatt",
@@ -192087,7 +192087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.380971,
       "lng": 8.43033
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Urigen",
@@ -192417,7 +192417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353007,
       "lng": 8.712705
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Apothekerstrasse",
@@ -192427,7 +192427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.346176,
       "lng": 8.715069
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Bahnhof",
@@ -192437,7 +192437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350921,
       "lng": 8.717298
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Bildungszentrum",
@@ -192447,7 +192447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347515,
       "lng": 8.709603
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Bordacker",
@@ -192457,7 +192457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351992,
       "lng": 8.729326
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Brandschenke",
@@ -192467,7 +192467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361143,
       "lng": 8.710736
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Buchholz",
@@ -192477,7 +192477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358473,
       "lng": 8.728876
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Burgreben",
@@ -192487,7 +192487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343892,
       "lng": 8.717091
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Burgstrasse",
@@ -192497,7 +192497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343056,
       "lng": 8.720049
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Dammstrasse",
@@ -192507,7 +192507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353448,
       "lng": 8.71568
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Florastrasse",
@@ -192517,7 +192517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.346544,
       "lng": 8.726395
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Gschwader",
@@ -192527,7 +192527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358266,
       "lng": 8.712777
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Gschwaderstrasse",
@@ -192537,7 +192537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354706,
       "lng": 8.708651
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Haberweid",
@@ -192547,7 +192547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36188,
       "lng": 8.713505
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Hegetsberg",
@@ -192557,7 +192557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34934,
       "lng": 8.733227
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Herracher",
@@ -192567,7 +192567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34009,
       "lng": 8.735223
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Himmelriich",
@@ -192577,7 +192577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.356828,
       "lng": 8.729416
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster im Hölzli",
@@ -192587,7 +192587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.339452,
       "lng": 8.714359
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Jugendhaus",
@@ -192597,7 +192597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.35005,
       "lng": 8.712435
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Jungholz",
@@ -192607,7 +192607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350374,
       "lng": 8.696434
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Koppach",
@@ -192617,7 +192617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.342247,
       "lng": 8.735052
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Krämeracker",
@@ -192627,7 +192627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.35174,
       "lng": 8.705918
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Krone",
@@ -192637,7 +192637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.341124,
       "lng": 8.725667
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Linde",
@@ -192647,7 +192647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.344558,
       "lng": 8.733452
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Loren",
@@ -192657,7 +192657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358032,
       "lng": 8.711617
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Loren-Allee",
@@ -192667,7 +192667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358221,
       "lng": 8.709612
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Meieracher",
@@ -192677,7 +192677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360046,
       "lng": 8.714592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Neufuhr",
@@ -192687,7 +192687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.334139,
       "lng": 8.74067
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Niederuster",
@@ -192697,7 +192697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34454,
       "lng": 8.702178
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Nossikon",
@@ -192707,7 +192707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.340126,
       "lng": 8.729542
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Oberlandstrasse",
@@ -192717,7 +192717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354356,
       "lng": 8.715752
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Oberuster",
@@ -192727,7 +192727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345241,
       "lng": 8.73098
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Pfannenstielstrasse",
@@ -192737,7 +192737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347039,
       "lng": 8.701648
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Poststrasse",
@@ -192747,7 +192747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.349115,
       "lng": 8.717002
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Reithalle",
@@ -192757,7 +192757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.356297,
       "lng": 8.726782
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Schlyffi",
@@ -192767,7 +192767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345726,
       "lng": 8.697369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Seeweg",
@@ -192777,7 +192777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34614,
       "lng": 8.696524
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Sonnenberg",
@@ -192787,7 +192787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350185,
       "lng": 8.70261
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Spital",
@@ -192797,7 +192797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353852,
       "lng": 8.723501
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Sportanlage",
@@ -192807,7 +192807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361017,
       "lng": 8.72715
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Stadthaus",
@@ -192817,7 +192817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347893,
       "lng": 8.719087
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Stadtpark",
@@ -192827,7 +192827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.348153,
       "lng": 8.715698
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Strick",
@@ -192837,7 +192837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.35645,
       "lng": 8.712759
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Talacker",
@@ -192847,7 +192847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343317,
       "lng": 8.716085
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Talweg",
@@ -192857,7 +192857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.348513,
       "lng": 8.730782
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Turicum",
@@ -192867,7 +192867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.348108,
       "lng": 8.69505
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Wageren",
@@ -192877,7 +192877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351902,
       "lng": 8.727105
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Weidli",
@@ -192887,7 +192887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353996,
       "lng": 8.730638
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Wil",
@@ -192897,7 +192897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345097,
       "lng": 8.707797
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Wildsbergstrasse",
@@ -192907,7 +192907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351228,
       "lng": 8.699643
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uster Zentralstrasse",
@@ -192917,7 +192917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347164,
       "lng": 8.717918
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Uttigen",
@@ -193887,7 +193887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.015382,
       "lng": 6.906403
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Valangin La Borcarderie",
@@ -193897,7 +193897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.024551,
       "lng": 6.909406
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Valangin La Cure",
@@ -193907,7 +193907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.018833,
       "lng": 6.902529
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Valata Obersaxen",
@@ -194817,7 +194817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.877636,
       "lng": 6.757582
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Vaumarcus bas du village",
@@ -194827,7 +194827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.87844,
       "lng": 6.757398
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Vaumarcus giratoire",
@@ -194837,7 +194837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.878485,
       "lng": 6.759367
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Vaumarcus haut du village",
@@ -194847,7 +194847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.876642,
       "lng": 6.751897
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Vaumarcus milieu du village",
@@ -194857,7 +194857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 46.876957,
       "lng": 6.755474
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Vaux-sur-Morges bif Bugnon",
@@ -197787,7 +197787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.032137,
       "lng": 6.927276
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Villa Bedretto",
@@ -199277,7 +199277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.074836,
       "lng": 6.972186
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Villiers La Champey",
@@ -199287,7 +199287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.073146,
       "lng": 6.967467
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Villigen Gemeindehaus",
@@ -200277,7 +200277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.574052,
       "lng": 8.624431
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Chammwisen",
@@ -200287,7 +200287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388353,
       "lng": 8.677386
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Chapf",
@@ -200297,7 +200297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393216,
       "lng": 8.679364
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Chappeli",
@@ -200307,7 +200307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389459,
       "lng": 8.674896
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Chrummacher",
@@ -200317,7 +200317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379705,
       "lng": 8.683463
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Dorf",
@@ -200327,7 +200327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389584,
       "lng": 8.693216
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Eichstrasse",
@@ -200337,7 +200337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394789,
       "lng": 8.682249
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Giessen",
@@ -200347,7 +200347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388883,
       "lng": 8.696299
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Gries",
@@ -200357,7 +200357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.38598,
       "lng": 8.679319
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Hegnau",
@@ -200367,7 +200367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388389,
       "lng": 8.676236
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Hofwisen",
@@ -200377,7 +200377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.381099,
       "lng": 8.672981
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Hölzliwisen",
@@ -200387,7 +200387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.380398,
       "lng": 8.678249
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Huzlenstrasse",
@@ -200397,7 +200397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393171,
       "lng": 8.683688
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil In der Au",
@@ -200407,7 +200407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389567,
       "lng": 8.688757
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil In der Höh",
@@ -200417,7 +200417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.385252,
       "lng": 8.668388
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Milandia",
@@ -200427,7 +200427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.378267,
       "lng": 8.67424
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Volkiland Chliriet",
@@ -200437,7 +200437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.381899,
       "lng": 8.667552
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Wallberg",
@@ -200447,7 +200447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389468,
       "lng": 8.687068
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Zentrum",
@@ -200457,7 +200457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389162,
       "lng": 8.681512
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Volketswil Zimikon",
@@ -200467,7 +200467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.38518,
       "lng": 8.672316
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Vollèges centre",
@@ -201027,7 +201027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.072769,
       "lng": 6.869575
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Vufflens-Aclens zone industr",
@@ -201447,7 +201447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.230079,
       "lng": 8.674779
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Bahnhof",
@@ -201457,7 +201457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22918,
       "lng": 8.674752
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Baumgarten",
@@ -201467,7 +201467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22101,
       "lng": 8.67202
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Beichlen",
@@ -201477,7 +201477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.207355,
       "lng": 8.663183
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Boller",
@@ -201487,7 +201487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.221549,
       "lng": 8.682061
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Büelen",
@@ -201497,7 +201497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.232498,
       "lng": 8.661215
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Burstel",
@@ -201507,7 +201507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22554,
       "lng": 8.625411
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Campus Grüental",
@@ -201517,7 +201517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.218475,
       "lng": 8.677557
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Campus Reidbach",
@@ -201527,7 +201527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.219239,
       "lng": 8.687103
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Campus Rothus",
@@ -201537,7 +201537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.224839,
       "lng": 8.679813
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Ceder",
@@ -201547,7 +201547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229693,
       "lng": 8.670905
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Chalchtaren",
@@ -201557,7 +201557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.230377,
       "lng": 8.640387
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Chotten",
@@ -201567,7 +201567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.221028,
       "lng": 8.631982
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Coop",
@@ -201577,7 +201577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229774,
       "lng": 8.67317
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Eichweid",
@@ -201587,7 +201587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.218385,
       "lng": 8.675714
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Feld",
@@ -201597,7 +201597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.213576,
       "lng": 8.664594
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Forschungsanstalt",
@@ -201607,7 +201607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22163,
       "lng": 8.674779
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Friedhof",
@@ -201617,7 +201617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.220794,
       "lng": 8.673638
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Frohmatt",
@@ -201627,7 +201627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22972,
       "lng": 8.66259
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Giessen",
@@ -201637,7 +201637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.223671,
       "lng": 8.682789
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Gisenrüti",
@@ -201647,7 +201647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.212272,
       "lng": 8.647839
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Glärnisch",
@@ -201657,7 +201657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.230017,
       "lng": 8.667777
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Gulmenmatt",
@@ -201667,7 +201667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.231482,
       "lng": 8.659884
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Hallenbad/Frohmatt",
@@ -201677,7 +201677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229163,
       "lng": 8.661017
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Hangenmoos",
@@ -201687,7 +201687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234305,
       "lng": 8.65316
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Herrlisberg",
@@ -201697,7 +201697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.21994,
       "lng": 8.659947
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Hintere Rüti Ost",
@@ -201707,7 +201707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.23524,
       "lng": 8.636063
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Hintere Rüti West",
@@ -201717,7 +201717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.235752,
       "lng": 8.636072
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Krähbach",
@@ -201727,7 +201727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.230997,
       "lng": 8.664163
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Lätten",
@@ -201737,7 +201737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.233037,
       "lng": 8.664487
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Meierhof",
@@ -201747,7 +201747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.223149,
       "lng": 8.681827
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Meierhof-Rain",
@@ -201757,7 +201757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.222682,
       "lng": 8.679975
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Mugern",
@@ -201767,7 +201767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.217648,
       "lng": 8.635182
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Mühlebach",
@@ -201777,7 +201777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22394,
       "lng": 8.673062
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Neubühl",
@@ -201787,7 +201787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.231995,
       "lng": 8.634382
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Neudorf",
@@ -201797,7 +201797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.231249,
       "lng": 8.6657
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Oedischwend",
@@ -201807,7 +201807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22643,
       "lng": 8.647299
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Reidbach",
@@ -201817,7 +201817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22101,
       "lng": 8.684793
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Rötiboden",
@@ -201827,7 +201827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.227006,
       "lng": 8.66401
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Sandhof",
@@ -201837,7 +201837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.219347,
       "lng": 8.669485
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Schlossbergstrasse",
@@ -201847,7 +201847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.225244,
       "lng": 8.674995
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Schluchtal",
@@ -201857,7 +201857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.214915,
       "lng": 8.641312
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Schmiedstube",
@@ -201867,7 +201867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.227698,
       "lng": 8.670437
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Schwanen",
@@ -201877,7 +201877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229711,
       "lng": 8.670141
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Sonnenrainstrasse",
@@ -201887,7 +201887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.229235,
       "lng": 8.671813
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Staubeweidli",
@@ -201897,7 +201897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.22163,
       "lng": 8.686555
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Tiefenhof",
@@ -201907,7 +201907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234592,
       "lng": 8.662158
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Tiefenhofstrasse",
@@ -201917,7 +201917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.23657,
       "lng": 8.662518
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Tiefenhofweiher",
@@ -201927,7 +201927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.234053,
       "lng": 8.660181
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Töbelibach",
@@ -201937,7 +201937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.223302,
       "lng": 8.669206
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Tobelrain",
@@ -201947,7 +201947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.230781,
       "lng": 8.659309
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Waisenhausstrasse",
@@ -201957,7 +201957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.219697,
       "lng": 8.673925
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Weinrebe",
@@ -201967,7 +201967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.231437,
       "lng": 8.67228
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wädenswil Winterberg",
@@ -201977,7 +201977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.236894,
       "lng": 8.646059
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wagen alte Post",
@@ -202317,7 +202317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.272685,
       "lng": 8.913989
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald AR Dorf",
@@ -202377,7 +202377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.278721,
       "lng": 8.932212
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Binzholz",
@@ -202387,7 +202387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.281921,
       "lng": 8.910063
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Blattenbach",
@@ -202397,7 +202397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.276977,
       "lng": 8.899249
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Dieterswil",
@@ -202407,7 +202407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287593,
       "lng": 8.907204
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Elbastrasse",
@@ -202417,7 +202417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.279548,
       "lng": 8.914036
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Etzelstrasse",
@@ -202427,7 +202427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277058,
       "lng": 8.904013
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Farnboden",
@@ -202437,7 +202437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282999,
       "lng": 8.91409
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Gemeindehaus",
@@ -202447,7 +202447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.275583,
       "lng": 8.914459
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Hittenberg",
@@ -202467,7 +202467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.293319,
       "lng": 8.91649
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Katholische Kirche",
@@ -202477,7 +202477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.273633,
       "lng": 8.910845
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Niederholz",
@@ -202487,7 +202487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.282856,
       "lng": 8.926855
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Nordeck",
@@ -202497,7 +202497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.268787,
       "lng": 8.915259
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Ober-Feld",
@@ -202507,7 +202507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.274972,
       "lng": 8.901703
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Pflegezentrum",
@@ -202517,7 +202517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.27543,
       "lng": 8.908067
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Rehazentrum",
@@ -202537,7 +202537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.309805,
       "lng": 8.912697
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Sonnenberg",
@@ -202547,7 +202547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.278208,
       "lng": 8.921767
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Sportstrasse",
@@ -202567,7 +202567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.279098,
       "lng": 8.903141
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wald ZH Wabe",
@@ -202577,7 +202577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.277201,
       "lng": 8.917758
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Waldburg",
@@ -202587,7 +202587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345476,
       "lng": 8.593024
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Walde AG Käserei",
@@ -202657,7 +202657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368307,
       "lng": 8.46347
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Waldegg Leuen",
@@ -202667,7 +202667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362743,
       "lng": 8.459631
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Waldegg Post",
@@ -202677,7 +202677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368334,
       "lng": 8.462005
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Waldenburg",
@@ -203187,7 +203187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41853,
       "lng": 8.595467
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Bahnhof",
@@ -203197,7 +203197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412569,
       "lng": 8.592465
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Blumenweg",
@@ -203207,7 +203207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412615,
       "lng": 8.604484
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Bützacker",
@@ -203217,7 +203217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421586,
       "lng": 8.600385
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Florastrasse",
@@ -203227,7 +203227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411698,
       "lng": 8.597265
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Friedhof",
@@ -203237,7 +203237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415267,
       "lng": 8.593652
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Furtbach",
@@ -203247,7 +203247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411509,
       "lng": 8.608106
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Gemeindehaus",
@@ -203257,7 +203257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416372,
       "lng": 8.591018
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Guggenbühlstrasse",
@@ -203267,7 +203267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41364,
       "lng": 8.596951
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Guyer-Weg",
@@ -203277,7 +203277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416858,
       "lng": 8.600295
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Haldenstrasse",
@@ -203287,7 +203287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415455,
       "lng": 8.596888
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Hallenbad",
@@ -203297,7 +203297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.417847,
       "lng": 8.593454
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Ifang",
@@ -203307,7 +203307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410125,
       "lng": 8.604987
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Kaserne",
@@ -203317,7 +203317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416858,
       "lng": 8.585534
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Lindenplatz",
@@ -203327,7 +203327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.419914,
       "lng": 8.598497
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Riedenerstrasse",
@@ -203337,7 +203337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411006,
       "lng": 8.601616
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Rosenberg",
@@ -203347,7 +203347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412354,
       "lng": 8.59785
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Säntisstrasse",
@@ -203357,7 +203357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413028,
       "lng": 8.600627
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Schäfligraben",
@@ -203367,7 +203367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423672,
       "lng": 8.599369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Schulhaus Bürgli",
@@ -203377,7 +203377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415527,
       "lng": 8.599576
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Spitzacker",
@@ -203387,7 +203387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410979,
       "lng": 8.605589
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Sportzentrum",
@@ -203397,7 +203397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414772,
       "lng": 8.606875
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Steinacker",
@@ -203407,7 +203407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.418808,
       "lng": 8.581939
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Zentrum",
@@ -203417,7 +203417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414188,
       "lng": 8.590865
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wallisellen Zielacker",
@@ -203427,7 +203427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414575,
       "lng": 8.604888
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Walliswil b Wangen Post",
@@ -203527,7 +203527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.622414,
       "lng": 8.779522
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Waltensburg/Vuorz",
@@ -203787,7 +203787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.336796,
       "lng": 8.617026
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Waltwil",
@@ -204017,7 +204017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41043,
       "lng": 8.645888
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wangen b D dorf Hätzelwisen",
@@ -204027,7 +204027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410323,
       "lng": 8.642733
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wangen b D dorf Oberdorf",
@@ -204037,7 +204037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407958,
       "lng": 8.646005
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wangen b D dorf Stierwisen",
@@ -204047,7 +204047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409612,
       "lng": 8.642814
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wangen b D dorf Weidli",
@@ -204057,7 +204057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412453,
       "lng": 8.639865
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wangen b Olten Am Kreuzbach",
@@ -204127,7 +204127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408057,
       "lng": 8.637591
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wangen SZ alte Post",
@@ -204487,7 +204487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.590062,
       "lng": 8.469358
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "WasterkingenAusserdorfstrasse",
@@ -204497,7 +204497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.590278,
       "lng": 8.473556
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Watt Brünigstrasse",
@@ -204507,7 +204507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.446127,
       "lng": 8.481655
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Watt Dorf",
@@ -204517,7 +204517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.442225,
       "lng": 8.480738
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Watt Geerenweg",
@@ -204527,7 +204527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.438998,
       "lng": 8.477241
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Watt Haldensteig",
@@ -204537,7 +204537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.449012,
       "lng": 8.471084
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Watt Laubisser",
@@ -204547,7 +204547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.447475,
       "lng": 8.477781
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Watt Schulhaus",
@@ -204557,7 +204557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.443915,
       "lng": 8.478005
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wattenwil Alpenblick",
@@ -204877,7 +204877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.025306,
       "lng": 7.02116
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Wavre Les Motteresses",
@@ -204887,7 +204887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.022132,
       "lng": 7.019335
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Weberei Matzingen",
@@ -205257,7 +205257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.563463,
       "lng": 8.425257
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weiach Gemeindehaus",
@@ -205267,7 +205267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.556649,
       "lng": 8.437167
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weiach Oberdorfstrasse",
@@ -205277,7 +205277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.553862,
       "lng": 8.441608
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weil am Rhein Berlinerplatz",
@@ -205537,7 +205537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415707,
       "lng": 8.444557
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weiningen ZH Ausserdorf",
@@ -205547,7 +205547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.417685,
       "lng": 8.439532
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weiningen ZH Lindenplatz",
@@ -205557,7 +205557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.419555,
       "lng": 8.43394
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weiningen ZH Schulhaus",
@@ -205567,7 +205567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41835,
       "lng": 8.428664
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weissbad",
@@ -205647,7 +205647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.435573,
       "lng": 8.767458
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisslingen Brauiweiher",
@@ -205657,7 +205657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.425344,
       "lng": 8.751071
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisslingen Dorf",
@@ -205667,7 +205667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431555,
       "lng": 8.76362
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisslingen Lendikerstrasse",
@@ -205677,7 +205677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.429865,
       "lng": 8.769606
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisslingen Mühle",
@@ -205687,7 +205687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.441614,
       "lng": 8.764743
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisslingen Oberhof",
@@ -205697,7 +205697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427375,
       "lng": 8.766838
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisslingen Widum",
@@ -205707,7 +205707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.434611,
       "lng": 8.76344
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Weisstannen Gemse",
@@ -206067,7 +206067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364693,
       "lng": 8.743052
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wermatswil Ledi",
@@ -206077,7 +206077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.363399,
       "lng": 8.736778
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wermatswil Post",
@@ -206087,7 +206087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362131,
       "lng": 8.74627
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wermatswil Stapferstrasse",
@@ -206097,7 +206097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362958,
       "lng": 8.744158
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wernetshausen Dorf",
@@ -206107,7 +206107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.299162,
       "lng": 8.867059
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wernetshausen Letten",
@@ -206117,7 +206117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.297041,
       "lng": 8.861413
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Werthenstein",
@@ -206387,7 +206387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.342238,
       "lng": 8.470104
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Beerimoos",
@@ -206397,7 +206397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329564,
       "lng": 8.480073
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Chilenholzstr",
@@ -206407,7 +206407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.334076,
       "lng": 8.478707
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Dettenbühl",
@@ -206417,7 +206417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.337717,
       "lng": 8.474545
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Dorf",
@@ -206427,7 +206427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.337717,
       "lng": 8.474347
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Eggächer",
@@ -206437,7 +206437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.339784,
       "lng": 8.474715
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Grund",
@@ -206447,7 +206447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331865,
       "lng": 8.47423
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Heidenchilen",
@@ -206457,7 +206457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345627,
       "lng": 8.466688
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Heissächerstr",
@@ -206467,7 +206467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.341672,
       "lng": 8.474086
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Langächer",
@@ -206477,7 +206477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343614,
       "lng": 8.468962
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Moosstrasse",
@@ -206487,7 +206487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.335011,
       "lng": 8.474751
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Oberhusen",
@@ -206497,7 +206497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.337681,
       "lng": 8.477853
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Rehweid",
@@ -206507,7 +206507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343775,
       "lng": 8.470688
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Schürli",
@@ -206517,7 +206517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332917,
       "lng": 8.477889
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wettswil aA Strumbergächer",
@@ -206527,7 +206527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.342679,
       "lng": 8.472252
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon",
@@ -206537,7 +206537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.31803,
       "lng": 8.792277
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Alpenblick",
@@ -206547,7 +206547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.31376,
       "lng": 8.79323
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Alterswohnheim",
@@ -206557,7 +206557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32052,
       "lng": 8.796979
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Bachtelstrasse",
@@ -206567,7 +206567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324889,
       "lng": 8.807379
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Binzackerstrasse",
@@ -206577,7 +206577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.328808,
       "lng": 8.803406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Buchgrindel",
@@ -206587,7 +206587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.328817,
       "lng": 8.789482
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Ettenhausen",
@@ -206597,7 +206597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322489,
       "lng": 8.824396
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Friedhof",
@@ -206607,7 +206607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.327244,
       "lng": 8.809914
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Haldenstrasse",
@@ -206617,7 +206617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.327469,
       "lng": 8.785194
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Kastellstrasse",
@@ -206627,7 +206627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.333249,
       "lng": 8.802804
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Medikon",
@@ -206637,7 +206637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324601,
       "lng": 8.785967
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Motorenstrasse",
@@ -206647,7 +206647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332215,
       "lng": 8.797446
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Oberwetzikon",
@@ -206657,7 +206657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326759,
       "lng": 8.799765
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Robenhausen",
@@ -206667,7 +206667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.329357,
       "lng": 8.785302
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Schloss",
@@ -206677,7 +206677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.324458,
       "lng": 8.798453
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Schönau",
@@ -206687,7 +206687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.325339,
       "lng": 8.789077
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Sonnenfeld",
@@ -206697,7 +206697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326768,
       "lng": 8.805662
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Spital",
@@ -206707,7 +206707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322255,
       "lng": 8.801806
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Stadion",
@@ -206717,7 +206717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.314228,
       "lng": 8.799352
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Uster-/Weststr",
@@ -206727,7 +206727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.327181,
       "lng": 8.793257
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Walfershausen",
@@ -206737,7 +206737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.322156,
       "lng": 8.797401
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Widum",
@@ -206747,7 +206747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.330624,
       "lng": 8.796475
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Wildbach",
@@ -206757,7 +206757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.320511,
       "lng": 8.794462
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wetzikon ZH Zentrum",
@@ -206767,7 +206767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.32666,
       "lng": 8.797275
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wichtrach",
@@ -207047,7 +207047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.525348,
       "lng": 8.775871
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Attikerstrasse",
@@ -207057,7 +207057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.525834,
       "lng": 8.788969
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Baumschulstrasse",
@@ -207067,7 +207067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.521627,
       "lng": 8.784798
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Dorf",
@@ -207077,7 +207077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.521169,
       "lng": 8.7903
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Gemeindehaus",
@@ -207087,7 +207087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.522436,
       "lng": 8.788268
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Hinterdorf",
@@ -207097,7 +207097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.521987,
       "lng": 8.794623
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Ländli",
@@ -207107,7 +207107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.52614,
       "lng": 8.77936
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Oberdorf",
@@ -207117,7 +207117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.522229,
       "lng": 8.797869
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesendangen Wasserfuri",
@@ -207127,7 +207127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.526544,
       "lng": 8.782173
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wiesengrund",
@@ -207867,7 +207867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.606557,
       "lng": 8.504856
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wil ZH Gemeindehaus",
@@ -207877,7 +207877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.605002,
       "lng": 8.507823
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wil ZH Lirenhof",
@@ -207887,7 +207887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.606575,
       "lng": 8.500101
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wila",
@@ -207897,7 +207897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.417771,
       "lng": 8.848467
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wila Espistrasse",
@@ -207907,7 +207907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423465,
       "lng": 8.84517
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wila Geissackerstrasse",
@@ -207917,7 +207917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415716,
       "lng": 8.844154
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wila Talgarten",
@@ -207927,7 +207927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408606,
       "lng": 8.86927
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wila Zentrum",
@@ -207937,7 +207937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.419447,
       "lng": 8.845089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wilchingen Dorf",
@@ -207987,7 +207987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427699,
       "lng": 8.81609
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wildegg",
@@ -208027,7 +208027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.651791,
       "lng": 8.67646
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wilderswil Bahnhof",
@@ -208177,7 +208177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.296571,
       "lng": 8.535652
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wilen",
@@ -208977,7 +208977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.538545,
       "lng": 8.471614
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Windlach Raat",
@@ -208987,7 +208987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.544514,
       "lng": 8.458445
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winikon Post",
@@ -209027,7 +209027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.297201,
       "lng": 8.598975
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Bühlhof",
@@ -209037,7 +209037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.483081,
       "lng": 8.560769
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Oberdorf",
@@ -209047,7 +209047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.491226,
       "lng": 8.555627
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Oberrüti",
@@ -209057,7 +209057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479899,
       "lng": 8.563682
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Scheidweg",
@@ -209067,7 +209067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.496943,
       "lng": 8.545137
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Seebüel",
@@ -209077,7 +209077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.492421,
       "lng": 8.547186
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Wisental",
@@ -209087,7 +209087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479279,
       "lng": 8.553749
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winkel Zentrum",
@@ -209097,7 +209097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.492376,
       "lng": 8.552337
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterberg ZH Dorf",
@@ -209107,7 +209107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.45641,
       "lng": 8.693054
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterberg ZH Wältiwis",
@@ -209117,7 +209117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.454666,
       "lng": 8.696263
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winteregg",
@@ -209197,7 +209197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500331,
       "lng": 8.723815
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Ausserdorf",
@@ -209207,7 +209207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507379,
       "lng": 8.689252
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Autobahn",
@@ -209217,7 +209217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.512098,
       "lng": 8.688686
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Auwiesen",
@@ -209227,7 +209227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.483755,
       "lng": 8.703311
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Bachtelstrasse",
@@ -209237,7 +209237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509195,
       "lng": 8.72315
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Bäumliweg",
@@ -209247,7 +209247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.50212,
       "lng": 8.744724
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Bettenplatz",
@@ -209257,7 +209257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.514202,
       "lng": 8.718943
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Bezirksgebäude",
@@ -209267,7 +209267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.5039,
       "lng": 8.729973
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Binzenloo",
@@ -209277,7 +209277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.472582,
       "lng": 8.787171
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Blumenau",
@@ -209287,7 +209287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507091,
       "lng": 8.712004
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Bolrebenweg",
@@ -209297,7 +209297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.481122,
       "lng": 8.699266
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Breite",
@@ -209307,7 +209307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490264,
       "lng": 8.725901
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Brücke",
@@ -209317,7 +209317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500439,
       "lng": 8.744733
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Bruderhaus",
@@ -209327,7 +209327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.478146,
       "lng": 8.726153
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Brudertobel",
@@ -209337,7 +209337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.481895,
       "lng": 8.722872
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Brühleck",
@@ -209347,7 +209347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.497967,
       "lng": 8.717127
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Brunngasse",
@@ -209357,7 +209357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507298,
       "lng": 8.72573
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Chli-Hegi",
@@ -209367,7 +209367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505294,
       "lng": 8.780735
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Dättnau",
@@ -209377,7 +209377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.485131,
       "lng": 8.691517
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Depot",
@@ -209387,7 +209387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.492619,
       "lng": 8.74378
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Deutweg",
@@ -209397,7 +209397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.493787,
       "lng": 8.741578
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Eidberg",
@@ -209407,7 +209407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.473724,
       "lng": 8.794767
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Eishalle",
@@ -209417,7 +209417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.496349,
       "lng": 8.747592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Else Züblin",
@@ -209427,7 +209427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502426,
       "lng": 8.764231
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Endliker",
@@ -209437,7 +209437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.488034,
       "lng": 8.752878
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Etzberg",
@@ -209447,7 +209447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.491675,
       "lng": 8.759341
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Fachschule",
@@ -209457,7 +209457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501123,
       "lng": 8.693243
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Feldtal",
@@ -209467,7 +209467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.508179,
       "lng": 8.708561
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Finken-Rain",
@@ -209477,7 +209477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.481967,
       "lng": 8.696272
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Fotozentrum",
@@ -209487,7 +209487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.495585,
       "lng": 8.737075
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Freibad Wülflingen",
@@ -209497,7 +209497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.511838,
       "lng": 8.685863
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Freizeitanlage",
@@ -209507,7 +209507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.477706,
       "lng": 8.69932
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Friedhof",
@@ -209517,7 +209517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.513788,
       "lng": 8.721658
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Friedliweg",
@@ -209527,7 +209527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.495459,
       "lng": 8.704875
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Gaswerk",
@@ -209537,7 +209537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.493985,
       "lng": 8.710772
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Gewerbeschule",
@@ -209547,7 +209547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.49803,
       "lng": 8.732751
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Gotzenwil",
@@ -209557,7 +209557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.473247,
       "lng": 8.776591
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grafenstein",
@@ -209567,7 +209567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.497626,
       "lng": 8.698583
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grubenstr",
@@ -209577,7 +209577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507343,
       "lng": 8.765031
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grüntal",
@@ -209587,7 +209587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.480717,
       "lng": 8.772087
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grüze",
@@ -209597,7 +209597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.499046,
       "lng": 8.750899
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grüze Bahnhof",
@@ -209607,7 +209607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498354,
       "lng": 8.750891
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grüze-Märkte",
@@ -209617,7 +209617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.494147,
       "lng": 8.757813
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Grüzenstrasse",
@@ -209627,7 +209627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498228,
       "lng": 8.744589
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Guggenbühl",
@@ -209637,7 +209637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.513923,
       "lng": 8.757687
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Gutschick",
@@ -209647,7 +209647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.489589,
       "lng": 8.749938
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Haldengut",
@@ -209657,7 +209657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507047,
       "lng": 8.730755
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Haltenreben",
@@ -209667,7 +209667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.517123,
       "lng": 8.677961
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hammerweg",
@@ -209677,7 +209677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505087,
       "lng": 8.748023
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hardau",
@@ -209687,7 +209687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.511155,
       "lng": 8.681827
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hedy Hahnloser",
@@ -209697,7 +209697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.484358,
       "lng": 8.694951
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hegi",
@@ -209707,7 +209707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501565,
       "lng": 8.769305
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hegi im Gern",
@@ -209717,7 +209717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505258,
       "lng": 8.776852
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hinterdorf Seen",
@@ -209727,7 +209727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.484771,
       "lng": 8.759161
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hinterwiesli",
@@ -209737,7 +209737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505527,
       "lng": 8.716795
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Hohlandweg",
@@ -209747,7 +209747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.504673,
       "lng": 8.754783
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Im Geissacker",
@@ -209757,7 +209757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.510049,
       "lng": 8.75446
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Industriepark",
@@ -209767,7 +209767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501168,
       "lng": 8.762056
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Irchelstrasse",
@@ -209777,7 +209777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490354,
       "lng": 8.719339
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Jonas Furrer",
@@ -209787,7 +209787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490659,
       "lng": 8.721775
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Kantonsschule",
@@ -209797,7 +209797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.504853,
       "lng": 8.739106
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Klinik Schlosstal",
@@ -209807,7 +209807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505986,
       "lng": 8.685692
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Klösterli Iberg",
@@ -209817,7 +209817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.466056,
       "lng": 8.779387
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Langwiesen",
@@ -209827,7 +209827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.513708,
       "lng": 8.685369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Letten",
@@ -209837,7 +209837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.50355,
       "lng": 8.689504
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Lindenplatz",
@@ -209847,7 +209847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.510588,
       "lng": 8.693549
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Loki",
@@ -209857,7 +209857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.496125,
       "lng": 8.71417
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Loorstrasse",
@@ -209867,7 +209867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.511541,
       "lng": 8.721505
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Musikschule",
@@ -209877,7 +209877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.506354,
       "lng": 8.734243
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Nägelsee",
@@ -209887,7 +209887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.496664,
       "lng": 8.701612
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Neubruch",
@@ -209897,7 +209897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.482821,
       "lng": 8.698538
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Niederfeld",
@@ -209907,7 +209907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509779,
       "lng": 8.679912
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Nussbaumweg",
@@ -209917,7 +209917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490201,
       "lng": 8.728742
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Oberes Büel",
@@ -209927,7 +209927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507739,
       "lng": 8.750936
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Oberfeld",
@@ -209937,7 +209937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509734,
       "lng": 8.703221
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Oberseen",
@@ -209947,7 +209947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.477697,
       "lng": 8.772249
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Obertor",
@@ -209957,7 +209957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500547,
       "lng": 8.732993
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Oberwinterthur",
@@ -209967,7 +209967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.521214,
       "lng": 8.758028
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Obstgartenweg",
@@ -209977,7 +209977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.518562,
       "lng": 8.757651
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Ohrbühl",
@@ -209987,7 +209987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498156,
       "lng": 8.762847
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Palmstrasse",
@@ -209997,7 +209997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500628,
       "lng": 8.737569
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Pfaffenwiesen",
@@ -210007,7 +210007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.514427,
       "lng": 8.763071
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Pflanzschulstrasse",
@@ -210017,7 +210017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.49821,
       "lng": 8.739025
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Rebwiesen",
@@ -210027,7 +210027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.494534,
       "lng": 8.706934
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Römertor",
@@ -210037,7 +210037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.510696,
       "lng": 8.758478
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Rosenau",
@@ -210047,7 +210047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.486695,
       "lng": 8.708516
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Rosenberg",
@@ -210057,7 +210057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.51875,
       "lng": 8.721137
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schachenweg",
@@ -210067,7 +210067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.515973,
       "lng": 8.719941
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Scheidegg",
@@ -210077,7 +210077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.494677,
       "lng": 8.750711
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schiltwiesen",
@@ -210087,7 +210087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.510346,
       "lng": 8.760015
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schloss",
@@ -210097,7 +210097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.51093,
       "lng": 8.697864
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schlossacker",
@@ -210107,7 +210107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.507226,
       "lng": 8.767098
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schlossberg",
@@ -210117,7 +210117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.499379,
       "lng": 8.695023
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schmidgasse",
@@ -210127,7 +210127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500026,
       "lng": 8.727294
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schöntal",
@@ -210137,7 +210137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.493284,
       "lng": 8.708615
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schulhaus Neuhegi",
@@ -210147,7 +210147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.502912,
       "lng": 8.767197
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schulhaus Seen",
@@ -210157,7 +210157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.483117,
       "lng": 8.761453
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schulhaus Wyden",
@@ -210167,7 +210167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.508206,
       "lng": 8.681
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schützenbühl",
@@ -210177,7 +210177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.478811,
       "lng": 8.765777
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schützenhaus",
@@ -210187,7 +210187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.517852,
       "lng": 8.719375
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Schwimmbad Töss",
@@ -210197,7 +210197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.484798,
       "lng": 8.706637
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Seen",
@@ -210207,7 +210207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.487342,
       "lng": 8.767062
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Sennhof",
@@ -210217,7 +210217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.466883,
       "lng": 8.759637
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Spital",
@@ -210227,7 +210227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.505419,
       "lng": 8.728634
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur St Urban",
@@ -210237,7 +210237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.487324,
       "lng": 8.758739
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Stadthaus",
@@ -210247,7 +210247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500556,
       "lng": 8.73071
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Stadtrain",
@@ -210257,7 +210257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.501806,
       "lng": 8.747898
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Stäffelistrasse",
@@ -210267,7 +210267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.504494,
       "lng": 8.771449
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Steig",
@@ -210277,7 +210277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.475216,
       "lng": 8.701244
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Steigmühle",
@@ -210287,7 +210287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.477373,
       "lng": 8.702907
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Stocken",
@@ -210297,7 +210297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.483522,
       "lng": 8.77135
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Storchenbrücke",
@@ -210307,7 +210307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490246,
       "lng": 8.717047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Strahlegg",
@@ -210317,7 +210317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.493356,
       "lng": 8.754909
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Sulzer",
@@ -210327,7 +210327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.498381,
       "lng": 8.719519
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Swica",
@@ -210337,7 +210337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.500997,
       "lng": 8.740832
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Taa",
@@ -210347,7 +210347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.468806,
       "lng": 8.784645
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Talacker",
@@ -210357,7 +210357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.503541,
       "lng": 8.752473
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Technikum",
@@ -210367,7 +210367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.497788,
       "lng": 8.729335
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Tellstrasse",
@@ -210377,7 +210377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.503855,
       "lng": 8.721218
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Töss",
@@ -210387,7 +210387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.489808,
       "lng": 8.709291
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Tössfeld",
@@ -210397,7 +210397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.491513,
       "lng": 8.714296
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Turmstrasse",
@@ -210407,7 +210407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.489607,
       "lng": 8.731115
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Unterdorf",
@@ -210417,7 +210417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.509626,
       "lng": 8.689522
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Waldegg",
@@ -210427,7 +210427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.490632,
       "lng": 8.747781
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Waldheim",
@@ -210437,7 +210437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.491172,
       "lng": 8.73427
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Wallrüti",
@@ -210447,7 +210447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.516719,
       "lng": 8.760868
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Waser",
@@ -210457,7 +210457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.486416,
       "lng": 8.756123
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Wülflingen",
@@ -210467,7 +210467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.506433,
       "lng": 8.680908
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Wylandbrücke",
@@ -210477,7 +210477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.495154,
       "lng": 8.720795
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Zeughaus",
@@ -210487,7 +210487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.494767,
       "lng": 8.733389
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Ziegeleiweg",
@@ -210497,7 +210497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.479629,
       "lng": 8.697468
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winterthur Ziegelhütte",
@@ -210507,7 +210507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.473265,
       "lng": 8.769723
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Winznau Ausserdorf",
@@ -211647,7 +211647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.254782,
       "lng": 8.795406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wolfhausen Neugut",
@@ -211657,7 +211657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.258333,
       "lng": 8.807307
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wolfhausen Oberwolfhausen",
@@ -211667,7 +211667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257776,
       "lng": 8.796439
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wolfhausen Zentrum",
@@ -211677,7 +211677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257191,
       "lng": 8.80132
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wolfhausen Zinkereistrasse",
@@ -211687,7 +211687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.257767,
       "lng": 8.801347
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Wolfikon SG Engel",
@@ -213727,7 +213727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.447853,
       "lng": 8.822913
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zell ZH Hand",
@@ -213737,7 +213737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.457489,
       "lng": 8.84472
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zell ZH Mühliwies",
@@ -213747,7 +213747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.443852,
       "lng": 8.818831
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zeneggen Alt Zeneggen",
@@ -214167,7 +214167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.009271,
       "lng": 7.030573
     },
-    "province": "Neuchatel"
+    "province": "Neuchtel"
   },
   {
     "name": "Zihlschlacht Friedheim/Klinik",
@@ -214747,7 +214747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.346056,
       "lng": 8.6034
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikerberg Hasenbart",
@@ -214757,7 +214757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350113,
       "lng": 8.597733
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikerberg Sennhof",
@@ -214767,7 +214767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347632,
       "lng": 8.615558
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikerberg Trichtenhauserm",
@@ -214777,7 +214777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350625,
       "lng": 8.601949
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikofen",
@@ -214927,7 +214927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.337332,
       "lng": 8.569717
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Allmend",
@@ -214937,7 +214937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.342975,
       "lng": 8.583098
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Bahnübergang",
@@ -214947,7 +214947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345924,
       "lng": 8.566154
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Beugi",
@@ -214957,7 +214957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.336476,
       "lng": 8.57508
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Felbenstrasse",
@@ -214967,7 +214967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.343209,
       "lng": 8.569632
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Gemeindehaus",
@@ -214977,7 +214977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.340755,
       "lng": 8.57597
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Goldhaldenplatz",
@@ -214987,7 +214987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.335038,
       "lng": 8.577516
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Höhestrasse",
@@ -214997,7 +214997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.339856,
       "lng": 8.581525
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Rebwiesstrasse",
@@ -215007,7 +215007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345708,
       "lng": 8.589121
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Schützenstrasse",
@@ -215017,7 +215017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.344899,
       "lng": 8.585876
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zollikon Seestrasse",
@@ -215027,7 +215027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.342796,
       "lng": 8.567322
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zuben Käserei",
@@ -216037,7 +216037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.331689,
       "lng": 8.623806
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zumikon Gössikon",
@@ -216047,7 +216047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332134,
       "lng": 8.614641
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zunzgen Büchel",
@@ -216127,7 +216127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.420913,
       "lng": 8.508565
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Affoltern Bahnhof",
@@ -216137,7 +216137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421433,
       "lng": 8.507525
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Albisriederdörfli",
@@ -216147,7 +216147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.375319,
       "lng": 8.485215
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Altenhofstrasse",
@@ -216157,7 +216157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.355309,
       "lng": 8.561416
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Althoos",
@@ -216167,7 +216167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.4107,
       "lng": 8.524066
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Altstetten",
@@ -216177,7 +216177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391687,
       "lng": 8.489089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Am Börtli",
@@ -216187,7 +216187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399625,
       "lng": 8.507139
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Am Suteracher",
@@ -216197,7 +216197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390942,
       "lng": 8.469789
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Appenzellerstrasse",
@@ -216207,7 +216207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398915,
       "lng": 8.509531
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Aspholz",
@@ -216217,7 +216217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424984,
       "lng": 8.501027
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Aubrücke",
@@ -216227,7 +216227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41088,
       "lng": 8.572122
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Ausserdorfstrasse",
@@ -216237,7 +216237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424508,
       "lng": 8.548562
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Auzelg Ost",
@@ -216247,7 +216247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413343,
       "lng": 8.572167
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Balgrist",
@@ -216257,7 +216257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354578,
       "lng": 8.57502
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Baslerstrasse",
@@ -216267,7 +216267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388766,
       "lng": 8.490141
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Berghaldenstrasse",
@@ -216277,7 +216277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.3585,
       "lng": 8.59002
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Bertastrasse",
@@ -216287,7 +216287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373889,
       "lng": 8.513468
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Berufswahlschule",
@@ -216297,7 +216297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404372,
       "lng": 8.533325
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Besenrainstrasse",
@@ -216307,7 +216307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.345483,
       "lng": 8.52786
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Bethanien",
@@ -216317,7 +216317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.38091,
       "lng": 8.555996
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Binz",
@@ -216327,7 +216327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362632,
       "lng": 8.518424
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Binz Center",
@@ -216337,7 +216337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361898,
       "lng": 8.51105
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Birch-/Glatttalstrasse",
@@ -216347,7 +216347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.427402,
       "lng": 8.546144
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Birchdörfli",
@@ -216357,7 +216357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407536,
       "lng": 8.530592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Bircher-Benner",
@@ -216367,7 +216367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.375732,
       "lng": 8.564796
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Birchstrasse",
@@ -216377,7 +216377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413046,
       "lng": 8.535851
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Bleulerstrasse",
@@ -216387,7 +216387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.347173,
       "lng": 8.571592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Blumenfeldstrasse",
@@ -216397,7 +216397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423779,
       "lng": 8.505252
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Bollingerweg",
@@ -216407,7 +216407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414287,
       "lng": 8.537901
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Botanischer Garten",
@@ -216417,7 +216417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359345,
       "lng": 8.55783
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Bristenstrasse",
@@ -216427,7 +216427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390079,
       "lng": 8.487058
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Brunau",
@@ -216437,7 +216437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.352124,
       "lng": 8.526232
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Buchholz",
@@ -216447,7 +216447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360927,
       "lng": 8.588699
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Buchzelgstrasse",
@@ -216457,7 +216457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359183,
       "lng": 8.585247
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Buhnstrasse",
@@ -216467,7 +216467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42226,
       "lng": 8.538943
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Chaletweg",
@@ -216477,7 +216477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41337,
       "lng": 8.531222
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Chinagarten",
@@ -216487,7 +216487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354518,
       "lng": 8.552948
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Dangelstrasse",
@@ -216497,7 +216497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.334553,
       "lng": 8.529972
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Dolder",
@@ -216507,7 +216507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373203,
       "lng": 8.57453
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Dorflinde",
@@ -216517,7 +216517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407401,
       "lng": 8.549263
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Dreispitz",
@@ -216527,7 +216527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41079,
       "lng": 8.567169
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Dreiwiesen",
@@ -216537,7 +216537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.378824,
       "lng": 8.575646
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Drusbergstrasse",
@@ -216547,7 +216547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360343,
       "lng": 8.578837
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Dunkelhölzli",
@@ -216557,7 +216557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388892,
       "lng": 8.47005
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Einfangstrasse",
@@ -216567,7 +216567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415698,
       "lng": 8.512928
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Elektrowatt",
@@ -216577,7 +216577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.357385,
       "lng": 8.550414
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Enge",
@@ -216587,7 +216587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364145,
       "lng": 8.530646
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich EPI-Klinik",
@@ -216597,7 +216597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.348648,
       "lng": 8.570657
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich ETH Hönggerberg",
@@ -216607,7 +216607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408678,
       "lng": 8.507706
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Ettenfeld",
@@ -216617,7 +216617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42546,
       "lng": 8.553632
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Feusisbergli",
@@ -216627,7 +216627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.392668,
       "lng": 8.470985
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flobotstrasse",
@@ -216637,7 +216637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.380577,
       "lng": 8.568041
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flughafen",
@@ -216647,7 +216647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.450279,
       "lng": 8.562333
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flughafen Im Rohr",
@@ -216657,7 +216657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.445623,
       "lng": 8.549056
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flughafen OPC",
@@ -216667,7 +216667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.452653,
       "lng": 8.565659
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flughafen REGA",
@@ -216677,7 +216677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.458451,
       "lng": 8.572914
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flughafen Werft",
@@ -216687,7 +216687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444778,
       "lng": 8.570684
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flughafen Werkhof",
@@ -216697,7 +216697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.444113,
       "lng": 8.550018
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flühgasse",
@@ -216707,7 +216707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350463,
       "lng": 8.56948
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Flurstrasse",
@@ -216717,7 +216717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.381557,
       "lng": 8.491984
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Freiestrasse",
@@ -216727,7 +216727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362797,
       "lng": 8.562971
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedackerstrasse",
@@ -216737,7 +216737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405936,
       "lng": 8.553191
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedhof Eichbühl",
@@ -216747,7 +216747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.382879,
       "lng": 8.474536
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedhof Hönggerberg",
@@ -216757,7 +216757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408938,
       "lng": 8.494132
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedhof Schwandenholz",
@@ -216767,7 +216767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421352,
       "lng": 8.537757
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedhof Sihlfeld",
@@ -216777,7 +216777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.37593,
       "lng": 8.510897
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedhof Uetliberg",
@@ -216787,7 +216787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358707,
       "lng": 8.500604
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedhof Witikon",
@@ -216797,7 +216797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36134,
       "lng": 8.602821
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friedrichstrasse",
@@ -216807,7 +216807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.40394,
       "lng": 8.569066
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friesenberg",
@@ -216817,7 +216817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364781,
       "lng": 8.507942
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friesenberghalde",
@@ -216827,7 +216827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361116,
       "lng": 8.502402
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Friesenbergstrasse",
@@ -216837,7 +216837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36206,
       "lng": 8.50509
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Frohburg",
@@ -216847,7 +216847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404237,
       "lng": 8.562621
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Fronwald",
@@ -216857,7 +216857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421964,
       "lng": 8.510043
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Frymannstrasse",
@@ -216867,7 +216867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.335137,
       "lng": 8.519149
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Geeringstrasse",
@@ -216877,7 +216877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41444,
       "lng": 8.480432
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Genossenschaftsstrasse",
@@ -216887,7 +216887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.415204,
       "lng": 8.562369
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Giblenstrasse",
@@ -216897,7 +216897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410727,
       "lng": 8.485952
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Giesshübel",
@@ -216907,7 +216907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362456,
       "lng": 8.521849
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Glaubtenstrasse",
@@ -216917,7 +216917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.41417,
       "lng": 8.518933
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Glaubtenstrasse Nord",
@@ -216927,7 +216927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414745,
       "lng": 8.519652
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Glaubtenstrasse Süd",
@@ -216937,7 +216937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413658,
       "lng": 8.518691
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Glockenacker",
@@ -216947,7 +216947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360972,
       "lng": 8.599306
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Goldackerweg",
@@ -216957,7 +216957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371894,
       "lng": 8.487929
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Grubenstrasse",
@@ -216967,7 +216967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362842,
       "lng": 8.511679
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Grünwald",
@@ -216977,7 +216977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.417388,
       "lng": 8.483165
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Gutstrasse",
@@ -216987,7 +216987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371732,
       "lng": 8.506645
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hagenholz",
@@ -216997,7 +216997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414404,
       "lng": 8.555528
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hallenbad Oerlikon",
@@ -217007,7 +217007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410709,
       "lng": 8.555861
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hardbrücke",
@@ -217017,7 +217017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.385215,
       "lng": 8.517099
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hardbrücke Bahnhof",
@@ -217027,7 +217027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.38517,
       "lng": 8.517072
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich HB",
@@ -217037,7 +217037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.378186,
       "lng": 8.539203
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hegianwandweg",
@@ -217047,7 +217047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.356648,
       "lng": 8.510016
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hegibachplatz",
@@ -217057,7 +217057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36169,
       "lng": 8.560623
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Heizenholz",
@@ -217067,7 +217067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.4123,
       "lng": 8.483902
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Herbstweg",
@@ -217077,7 +217077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408839,
       "lng": 8.564796
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Herdernstrasse",
@@ -217087,7 +217087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384829,
       "lng": 8.509162
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hertensteinstrasse",
@@ -217097,7 +217097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.422881,
       "lng": 8.543492
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hertersteg",
@@ -217107,7 +217107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.367678,
       "lng": 8.522987
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Herzogenmühlestrasse",
@@ -217117,7 +217117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407527,
       "lng": 8.572707
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Heubeeriweg",
@@ -217127,7 +217127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.381656,
       "lng": 8.564616
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Himmeri",
@@ -217137,7 +217137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.419878,
       "lng": 8.538656
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hinterbergstrasse",
@@ -217147,7 +217147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.38011,
       "lng": 8.554576
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Höfliweg",
@@ -217157,7 +217157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.367579,
       "lng": 8.51096
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hofstrasse",
@@ -217167,7 +217167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373368,
       "lng": 8.56156
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hohenklingensteig",
@@ -217177,7 +217177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401342,
       "lng": 8.490204
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hölderlinsteig",
@@ -217187,7 +217187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.366995,
       "lng": 8.565039
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Holzerhurd",
@@ -217197,7 +217197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.423806,
       "lng": 8.496613
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hönggerberg",
@@ -217207,7 +217207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404938,
       "lng": 8.50473
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hügelstrasse",
@@ -217217,7 +217217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358536,
       "lng": 8.526997
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hungerbergstrasse",
@@ -217227,7 +217227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.421092,
       "lng": 8.50153
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Hürstholz",
@@ -217237,7 +217237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416885,
       "lng": 8.522862
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Ebnet",
@@ -217247,7 +217247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.431501,
       "lng": 8.543744
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Gut",
@@ -217257,7 +217257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373611,
       "lng": 8.503364
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Hagacker",
@@ -217267,7 +217267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359273,
       "lng": 8.507715
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Hüsli",
@@ -217277,7 +217277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.328233,
       "lng": 8.512695
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Klösterli",
@@ -217287,7 +217287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384631,
       "lng": 8.576932
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Walder",
@@ -217297,7 +217297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.348117,
       "lng": 8.57437
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Im Wingert",
@@ -217307,7 +217307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.401423,
       "lng": 8.508838
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich In der Ey",
@@ -217317,7 +217317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.369242,
       "lng": 8.491624
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Juchhof",
@@ -217327,7 +217327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398313,
       "lng": 8.473178
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Jugendherberge",
@@ -217337,7 +217337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.348,
       "lng": 8.52821
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kalchbühlweg",
@@ -217347,7 +217347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34053,
       "lng": 8.531527
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kanonengasse",
@@ -217357,7 +217357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.378465,
       "lng": 8.530305
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kantonsschule Enge",
@@ -217367,7 +217367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364235,
       "lng": 8.527509
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kapfstrasse",
@@ -217377,7 +217377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.361152,
       "lng": 8.571206
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kappenbühlweg",
@@ -217387,7 +217387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.40296,
       "lng": 8.49824
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Käshaldenstrasse",
@@ -217397,7 +217397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.430018,
       "lng": 8.540903
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kempfhofsteig",
@@ -217407,7 +217407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397306,
       "lng": 8.510025
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kienastenwies",
@@ -217417,7 +217417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.355156,
       "lng": 8.601158
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Köschenrüti",
@@ -217427,7 +217427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.429047,
       "lng": 8.537109
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Krematorium Nordheim",
@@ -217437,7 +217437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405361,
       "lng": 8.528246
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Kreuzplatz",
@@ -217447,7 +217447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364875,
       "lng": 8.554083
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Krönleinstrasse",
@@ -217457,7 +217457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384191,
       "lng": 8.56103
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Lägernstrasse",
@@ -217467,7 +217467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.395913,
       "lng": 8.532183
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Landiwiese",
@@ -217477,7 +217477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350985,
       "lng": 8.534233
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Langensteinenstrasse",
@@ -217487,7 +217487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.392497,
       "lng": 8.549757
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Langgrütstrasse",
@@ -217497,7 +217497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373737,
       "lng": 8.501063
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Lehenstrasse",
@@ -217507,7 +217507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396147,
       "lng": 8.520713
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Leimbach",
@@ -217517,7 +217517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.334601,
       "lng": 8.519603
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Leimgrübelstrasse",
@@ -217527,7 +217527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.428652,
       "lng": 8.543672
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Lerchenhalde",
@@ -217537,7 +217537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411635,
       "lng": 8.509872
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Lerchenrain",
@@ -217547,7 +217547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414296,
       "lng": 8.509495
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Lettenstrasse",
@@ -217557,7 +217557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390573,
       "lng": 8.532741
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Letzibach",
@@ -217567,7 +217567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389081,
       "lng": 8.494689
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Letzipark",
@@ -217577,7 +217577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387769,
       "lng": 8.499211
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Letzipark West",
@@ -217587,7 +217587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.386366,
       "lng": 8.496469
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Loogarten",
@@ -217597,7 +217597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389423,
       "lng": 8.472333
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Loorenstrasse",
@@ -217607,7 +217607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359866,
       "lng": 8.594524
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Maienweg",
@@ -217617,7 +217617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407851,
       "lng": 8.526385
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Maillartstrasse",
@@ -217627,7 +217627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416202,
       "lng": 8.532102
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Manegg",
@@ -217637,7 +217637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.338378,
       "lng": 8.519679
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Marbachweg",
@@ -217647,7 +217647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.330346,
       "lng": 8.515374
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Max-Bill-Platz",
@@ -217657,7 +217657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414044,
       "lng": 8.541334
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Michelstrasse",
@@ -217667,7 +217667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.406322,
       "lng": 8.495606
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Militär-/Langstrasse",
@@ -217677,7 +217677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379597,
       "lng": 8.527626
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Mittelleimbach",
@@ -217687,7 +217687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.323136,
       "lng": 8.514286
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Mötteliweg",
@@ -217697,7 +217697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413954,
       "lng": 8.526457
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Mühlacker",
@@ -217707,7 +217707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.426189,
       "lng": 8.49637
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Neeserweg",
@@ -217717,7 +217717,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.390591,
       "lng": 8.474724
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Neuaffoltern",
@@ -217727,7 +217727,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411842,
       "lng": 8.525028
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Neubühl",
@@ -217737,7 +217737,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.332925,
       "lng": 8.534943
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Neunbrunnen",
@@ -217747,7 +217747,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416705,
       "lng": 8.538206
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Nordheimstrasse",
@@ -217757,7 +217757,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.403545,
       "lng": 8.530529
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Nordstrasse",
@@ -217767,7 +217767,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388326,
       "lng": 8.536166
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Nürenbergstrasse",
@@ -217777,7 +217777,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.392254,
       "lng": 8.533433
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Oberwiesenstrasse",
@@ -217787,7 +217787,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410475,
       "lng": 8.532813
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Oerlikon",
@@ -217797,7 +217797,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411904,
       "lng": 8.544453
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Oerlikon Bahnhof",
@@ -217807,7 +217807,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.411419,
       "lng": 8.544687
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Okenstrasse",
@@ -217817,7 +217817,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.388011,
       "lng": 8.534143
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Orionstrasse",
@@ -217827,7 +217827,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416723,
       "lng": 8.566172
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Pflegezentr Käferberg",
@@ -217837,7 +217837,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399652,
       "lng": 8.517702
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Räffelstrasse",
@@ -217847,7 +217847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.362752,
       "lng": 8.514663
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rautihalde",
@@ -217857,7 +217857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.386169,
       "lng": 8.474104
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rautistrasse",
@@ -217867,7 +217867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.383346,
       "lng": 8.484091
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rebbergsteig",
@@ -217877,7 +217877,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.396902,
       "lng": 8.514969
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rehalp",
@@ -217887,7 +217887,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351027,
       "lng": 8.582979
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Riedbach",
@@ -217897,7 +217897,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.414476,
       "lng": 8.55818
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Riedgraben",
@@ -217907,7 +217907,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410799,
       "lng": 8.558836
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Riedhofstrasse",
@@ -217917,7 +217917,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409927,
       "lng": 8.479579
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Römerhof",
@@ -217927,7 +217927,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.368089,
       "lng": 8.560281
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Röntgenstrasse",
@@ -217937,7 +217937,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.381935,
       "lng": 8.529262
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rosengartenstrasse",
@@ -217947,7 +217947,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394331,
       "lng": 8.525459
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rotbuchstrasse",
@@ -217957,7 +217957,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.391274,
       "lng": 8.536121
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rote Fabrik",
@@ -217967,7 +217967,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.342733,
       "lng": 8.536022
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Rütihof",
@@ -217977,7 +217977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.413451,
       "lng": 8.477313
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Saalsporthalle",
@@ -217987,7 +217987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.357407,
       "lng": 8.522143
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Saatlenstrasse",
@@ -217997,7 +217997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.410808,
       "lng": 8.562864
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Sackzelg",
@@ -218007,7 +218007,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.374384,
       "lng": 8.495516
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Sädlenweg",
@@ -218017,7 +218017,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.367759,
       "lng": 8.48748
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Salzweg",
@@ -218027,7 +218027,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387706,
       "lng": 8.471767
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich SBB-Werkstätte",
@@ -218037,7 +218037,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.386564,
       "lng": 8.503373
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schanzackerstrasse",
@@ -218047,7 +218047,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.392021,
       "lng": 8.547429
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schäppiweg",
@@ -218057,7 +218057,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.389737,
       "lng": 8.55089
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schauenberg",
@@ -218067,7 +218067,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416193,
       "lng": 8.506933
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Scheuchzerstrasse",
@@ -218077,7 +218077,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387787,
       "lng": 8.544229
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schlyfi",
@@ -218087,7 +218087,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.36259,
       "lng": 8.574145
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schönauring",
@@ -218097,7 +218097,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.426126,
       "lng": 8.536345
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schulhaus Altweg",
@@ -218107,7 +218107,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.372271,
       "lng": 8.494204
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schulhaus Buchlern",
@@ -218117,7 +218117,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.384667,
       "lng": 8.478581
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schumacherweg",
@@ -218127,7 +218127,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.412093,
       "lng": 8.514789
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schürgistrasse",
@@ -218137,7 +218137,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.408839,
       "lng": 8.579592
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schützenhaus Höngg",
@@ -218147,7 +218147,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.409729,
       "lng": 8.497054
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schwandenholz",
@@ -218157,7 +218157,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42386,
       "lng": 8.520686
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schweighof",
@@ -218167,7 +218167,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364988,
       "lng": 8.503047
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Schweizer Rück",
@@ -218177,7 +218177,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.359884,
       "lng": 8.535509
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Seebach",
@@ -218187,7 +218187,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.418747,
       "lng": 8.544636
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Seerose",
@@ -218197,7 +218197,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.338912,
       "lng": 8.538134
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Segantinistrasse",
@@ -218207,7 +218207,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.407446,
       "lng": 8.48997
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Segeten",
@@ -218217,7 +218217,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.355749,
       "lng": 8.594308
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Selnau",
@@ -218227,7 +218227,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.372938,
       "lng": 8.532033
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Sihlweidstrasse",
@@ -218237,7 +218237,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.326417,
       "lng": 8.514663
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Singlistrasse",
@@ -218247,7 +218247,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.405109,
       "lng": 8.493485
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Solidapark",
@@ -218257,7 +218257,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.387724,
       "lng": 8.488496
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Sprecherstrasse",
@@ -218267,7 +218267,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.367489,
       "lng": 8.552256
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Spyriplatz",
@@ -218277,7 +218277,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.382285,
       "lng": 8.551978
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Spyristeig",
@@ -218287,7 +218287,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.386258,
       "lng": 8.556203
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Stadelhofen",
@@ -218297,7 +218297,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.366611,
       "lng": 8.548466
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Stadelhofen FB",
@@ -218307,7 +218307,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.366353,
       "lng": 8.54813
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Stadtgrenze",
@@ -218317,7 +218317,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.335038,
       "lng": 8.541469
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Staudenbühl",
@@ -218327,7 +218327,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.420085,
       "lng": 8.535384
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Stierenried",
@@ -218337,7 +218337,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.416624,
       "lng": 8.535482
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Stodolastrasse",
@@ -218347,7 +218347,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.356909,
       "lng": 8.590559
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Strickhof",
@@ -218357,7 +218357,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393558,
       "lng": 8.546036
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Sukkulentensammlung",
@@ -218367,7 +218367,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354931,
       "lng": 8.534296
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Sunnau",
@@ -218377,7 +218377,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.327083,
       "lng": 8.529612
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Thujastrasse",
@@ -218387,7 +218387,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350185,
       "lng": 8.527806
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Tiefenbrunnen",
@@ -218397,7 +218397,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350124,
       "lng": 8.561372
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Tiefenbrunnen Bahnhof",
@@ -218407,7 +218407,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.350211,
       "lng": 8.56093
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Titlisstrasse",
@@ -218417,7 +218417,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.370976,
       "lng": 8.564949
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Tobelhof",
@@ -218427,7 +218427,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.383085,
       "lng": 8.585993
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Trichtenhausenfussweg",
@@ -218437,7 +218437,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.354203,
       "lng": 8.598596
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Trichtisal",
@@ -218447,7 +218447,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.353915,
       "lng": 8.601068
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Triemli",
@@ -218457,7 +218457,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.364997,
       "lng": 8.495197
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Tulpenstrasse",
@@ -218467,7 +218467,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.406116,
       "lng": 8.568536
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Unteraffoltern",
@@ -218477,7 +218477,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.424588,
       "lng": 8.51185
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Untermoosstrasse",
@@ -218487,7 +218487,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.379831,
       "lng": 8.48339
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Verenastrasse",
@@ -218497,7 +218497,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.340827,
       "lng": 8.525379
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Vogelsangstrasse",
@@ -218507,7 +218507,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.383544,
       "lng": 8.549074
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Vulkanstrasse",
@@ -218517,7 +218517,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.394349,
       "lng": 8.484082
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Waidbadstrasse",
@@ -218527,7 +218527,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.398969,
       "lng": 8.51354
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Waidhof",
@@ -218537,7 +218537,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.42386,
       "lng": 8.523041
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Waidspital",
@@ -218547,7 +218547,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.399167,
       "lng": 8.521711
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Waldhaus Dolder",
@@ -218557,7 +218557,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.373244,
       "lng": 8.568546
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Waserstrasse",
@@ -218567,7 +218567,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.35832,
       "lng": 8.58406
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Weihersteig",
@@ -218577,7 +218577,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.397792,
       "lng": 8.528516
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wetlistrasse",
@@ -218587,7 +218587,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.360155,
       "lng": 8.568626
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Widmerstrasse",
@@ -218597,7 +218597,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.336782,
       "lng": 8.532894
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wiedikon",
@@ -218607,7 +218607,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371472,
       "lng": 8.523462
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wieslergasse",
@@ -218617,7 +218617,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.404066,
       "lng": 8.495957
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wiesliacher",
@@ -218627,7 +218627,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.355219,
       "lng": 8.596807
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Winzerhalde",
@@ -218637,7 +218637,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.400057,
       "lng": 8.494564
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wipkingen",
@@ -218647,7 +218647,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.393032,
       "lng": 8.529359
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wollishofen",
@@ -218657,7 +218657,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.34744,
       "lng": 8.533588
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Wonnebergstrasse",
@@ -218667,7 +218667,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.351848,
       "lng": 8.56654
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Zentrum Witikon",
@@ -218677,7 +218677,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.35832,
       "lng": 8.586586
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Zielweg",
@@ -218687,7 +218687,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.358823,
       "lng": 8.497593
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Zweiackerstrasse",
@@ -218697,7 +218697,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.357053,
       "lng": 8.597877
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zürich Zwinglihaus",
@@ -218707,7 +218707,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.371507,
       "lng": 8.515958
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zurzacherberg Passhöhe",
@@ -218847,7 +218847,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.570441,
       "lng": 8.467892
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zweidlen Bahnhof",
@@ -218857,7 +218857,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.570573,
       "lng": 8.468413
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zweidlen Zweidlergraben",
@@ -218867,7 +218867,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.564569,
       "lng": 8.477772
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zweilütschinen",
@@ -218977,7 +218977,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.286568,
       "lng": 8.440763
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zwillikon Gemeindeplatz",
@@ -218987,7 +218987,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.287395,
       "lng": 8.432187
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zwillikon Lochhof",
@@ -218997,7 +218997,7 @@ window.STATIONS_SWITZERLAND = [
       "lat": 47.288555,
       "lng": 8.422488
     },
-    "province": "Zurich"
+    "province": "Zrich"
   },
   {
     "name": "Zwingen",

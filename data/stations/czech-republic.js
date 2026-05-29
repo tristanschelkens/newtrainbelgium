@@ -27,7 +27,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.39888,
       "lng": 12.869047
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Bakov nad Jizerou",
@@ -77,7 +77,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.7386,
       "lng": 14.304971
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Benešov u Prahy",
@@ -107,7 +107,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.554124,
       "lng": 13.772829
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Bily Kostel nad Nisou",
@@ -137,7 +137,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.077194,
       "lng": 17.716619
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Blansko",
@@ -167,7 +167,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.100062,
       "lng": 13.390159
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Blažovice",
@@ -187,7 +187,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.501404,
       "lng": 12.994872
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Bludov",
@@ -247,7 +247,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.035985,
       "lng": 17.79555
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Brandýs nad Orlicí",
@@ -297,7 +297,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.349315,
       "lng": 17.45536
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Březnice",
@@ -317,7 +317,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.396153,
       "lng": 13.421118
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Brniště",
@@ -417,7 +417,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.067458,
       "lng": 18.014216
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Bystřice",
@@ -437,7 +437,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.393203,
       "lng": 17.665671
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Bzenec",
@@ -467,7 +467,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.128352,
       "lng": 16.173844
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Čerčany",
@@ -497,7 +497,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.795868,
       "lng": 14.414092
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Česka Lípa hl.n.",
@@ -517,7 +517,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.55234,
       "lng": 16.184631
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Česka Třebová",
@@ -587,7 +587,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.163555,
       "lng": 15.457187
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Choceň",
@@ -617,7 +617,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.4566,
       "lng": 13.39958
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Chomutov Město",
@@ -627,7 +627,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.469866,
       "lng": 13.414047
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Chotěboř",
@@ -637,7 +637,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.711926,
       "lng": 15.682627
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Chrast u Chrudimi",
@@ -707,7 +707,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.773411,
       "lng": 14.201248
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Děčín Východ",
@@ -717,7 +717,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.77591,
       "lng": 14.223098
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Dětmarovice",
@@ -747,7 +747,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.656505,
       "lng": 13.303154
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Dobronín",
@@ -757,7 +757,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.478235,
       "lng": 15.641905
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Dolní Dobrouč",
@@ -787,7 +787,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.846135,
       "lng": 14.215436
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Domašov nad Bystrici",
@@ -807,7 +807,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.434693,
       "lng": 12.944583
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Doudleby nad Orlici",
@@ -817,7 +817,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.109584,
       "lng": 16.258282
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Drahotuse",
@@ -837,7 +837,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.617455,
       "lng": 13.754508
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Dvůr Králové nad Labem",
@@ -847,7 +847,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.413802,
       "lng": 15.798301
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Františkovy Lázně",
@@ -897,7 +897,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.821867,
       "lng": 15.473545
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Hanušovice",
@@ -927,7 +927,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.599258,
       "lng": 15.5876
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Hladké Životice",
@@ -987,7 +987,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.327155,
       "lng": 17.570899
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Holkov",
@@ -1007,7 +1007,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.59755,
       "lng": 13.101373
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Horažďovice Předměstí",
@@ -1017,7 +1017,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.331254,
       "lng": 13.739373
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Hořice v Podkrkonoší",
@@ -1027,7 +1027,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.356276,
       "lng": 15.634956
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Horni Blatna",
@@ -1057,7 +1057,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.311172,
       "lng": 15.324594
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Horni Dvoriste",
@@ -1077,7 +1077,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.188748,
       "lng": 18.058313
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Horní Lipova",
@@ -1127,7 +1127,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.53668,
       "lng": 15.73799
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Hradčovice",
@@ -1137,7 +1137,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.044381,
       "lng": 17.574693
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Hradec Králové hlavní nádraží",
@@ -1147,7 +1147,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.214444,
       "lng": 15.809868
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Hrádek nad Nisou",
@@ -1177,7 +1177,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.473199,
       "lng": 16.176726
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Hrubá Voda",
@@ -1207,7 +1207,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.316251,
       "lng": 17.476818
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Ivanovice na Hané",
@@ -1267,7 +1267,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.342109,
       "lng": 15.911311
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Jaroměřice nad Rokytnou",
@@ -1277,7 +1277,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.094146,
       "lng": 15.865583
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Jedlová",
@@ -1287,7 +1287,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.842736,
       "lng": 14.570327
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Jeřmanice",
@@ -1327,7 +1327,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.088959,
       "lng": 17.112764
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Jičín",
@@ -1337,7 +1337,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.430419,
       "lng": 15.361216
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Jihlava",
@@ -1347,7 +1347,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.414449,
       "lng": 15.599044
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Jince",
@@ -1397,7 +1397,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.485694,
       "lng": 13.447664
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Jistebník",
@@ -1417,7 +1417,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.411344,
       "lng": 13.258145
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Kalná Voda",
@@ -1427,7 +1427,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.600387,
       "lng": 15.872801
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Kamenny Ujezd",
@@ -1487,7 +1487,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.385014,
       "lng": 13.196389
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Klatovy",
@@ -1497,7 +1497,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.401487,
       "lng": 13.27411
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Kojetín",
@@ -1527,7 +1527,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.884909,
       "lng": 12.975641
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Kopidlno",
@@ -1537,7 +1537,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.333965,
       "lng": 15.260465
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Kostelec nad Orlici Město",
@@ -1547,7 +1547,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.119779,
       "lng": 16.205123
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Kostelec u Jihlavy",
@@ -1557,7 +1557,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.357215,
       "lng": 15.48213
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Králíky",
@@ -1587,7 +1587,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.919019,
       "lng": 14.512293
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Křenovice dolní nádraží",
@@ -1617,7 +1617,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.384767,
       "lng": 16.08038
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Křižanovice",
@@ -1647,7 +1647,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.302327,
       "lng": 17.403394
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Kunčice nad Labem",
@@ -1657,7 +1657,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.583757,
       "lng": 15.62291
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Kunovice",
@@ -1667,7 +1667,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.05195,
       "lng": 17.470067
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Kunovice Zastávka",
@@ -1677,7 +1677,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.038233,
       "lng": 17.460988
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Kunovice-Loucká",
@@ -1687,7 +1687,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.440194,
       "lng": 17.818795
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Kutna Hora hlavní nádraží",
@@ -1727,7 +1727,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.426095,
       "lng": 15.57738
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Lázně Kynžvart",
@@ -1787,7 +1787,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.489937,
       "lng": 15.303361
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Lichkov",
@@ -1847,7 +1847,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.540995,
       "lng": 14.131609
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Litoměřice Město",
@@ -1857,7 +1857,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.532483,
       "lng": 14.138836
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Lochovice",
@@ -1887,7 +1887,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.361292,
       "lng": 13.823207
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Louny Předměstí",
@@ -1897,7 +1897,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.343387,
       "lng": 13.767876
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Lovosice",
@@ -1907,7 +1907,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.509713,
       "lng": 14.059587
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Luhačovice",
@@ -1917,7 +1917,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.098811,
       "lng": 17.751637
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Luka nad Jihlavou",
@@ -1927,7 +1927,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.369575,
       "lng": 15.709962
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Luzná u Rakovníka",
@@ -2057,7 +2057,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.626564,
       "lng": 16.243049
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Mikulovice",
@@ -2177,7 +2177,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.057559,
       "lng": 15.809373
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Moravsky Beroun",
@@ -2217,7 +2217,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.511214,
       "lng": 13.657419
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Mosty u Jablunkova z",
@@ -2237,7 +2237,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.417241,
       "lng": 16.170659
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Namést nad Oslavou",
@@ -2247,7 +2247,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.206996,
       "lng": 16.147547
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Návojná",
@@ -2257,7 +2257,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.100357,
       "lng": 18.044334
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Nemotice",
@@ -2277,7 +2277,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.497581,
       "lng": 13.608724
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Neratovice",
@@ -2327,7 +2327,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.022295,
       "lng": 17.748841
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Nova Paka Město",
@@ -2337,7 +2337,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.494557,
       "lng": 15.512639
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Nove Losiny",
@@ -2357,7 +2357,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.353363,
       "lng": 16.137785
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Nove Sedlo u Lokte",
@@ -2377,7 +2377,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.244891,
       "lng": 15.485833
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Nymburk hlavní nádraží",
@@ -2407,7 +2407,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.715057,
       "lng": 13.209612
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Obrataň",
@@ -2417,7 +2417,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.42867,
       "lng": 14.953483
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Obrnice",
@@ -2427,7 +2427,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.504175,
       "lng": 13.700531
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Okrisky",
@@ -2437,7 +2437,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.247969,
       "lng": 15.770872
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Olbramovice",
@@ -2497,7 +2497,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.278492,
       "lng": 16.085845
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Ostrava hlavní nádraží",
@@ -2567,7 +2567,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.368978,
       "lng": 15.54465
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Ostrov nad Ohři",
@@ -2587,7 +2587,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.009944,
       "lng": 17.436798
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Ostružna",
@@ -2607,7 +2607,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.20234,
       "lng": 17.531706
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Pacov",
@@ -2617,7 +2617,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.459593,
       "lng": 15.019159
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Pardubice hl.n.",
@@ -2647,7 +2647,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.69482,
       "lng": 15.73504
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Pelhřimov",
@@ -2657,7 +2657,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.419438,
       "lng": 15.222351
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Pernink",
@@ -2707,7 +2707,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.861294,
       "lng": 12.730145
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Plasy",
@@ -2717,7 +2717,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.930879,
       "lng": 13.379922
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Plesna (CZ)",
@@ -2737,7 +2737,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.743167,
       "lng": 13.388246
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Plzeň Jižní Předměstí",
@@ -2747,7 +2747,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.740344,
       "lng": 13.36686
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Pocatky-Zirovnice",
@@ -2757,7 +2757,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.237029,
       "lng": 15.212481
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Podbořany",
@@ -2767,7 +2767,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.223523,
       "lng": 13.40457
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Poděbrady",
@@ -2787,7 +2787,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.513183,
       "lng": 16.212108
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Polichno",
@@ -2797,7 +2797,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.068355,
       "lng": 17.711068
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Polom",
@@ -2817,7 +2817,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.046071,
       "lng": 17.527814
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Poteč",
@@ -2827,7 +2827,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.154256,
       "lng": 18.042483
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Potštejn",
@@ -2837,7 +2837,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.083516,
       "lng": 16.315448
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Potůčník",
@@ -3107,7 +3107,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.575131,
       "lng": 13.322624
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Příbram",
@@ -3197,7 +3197,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.642645,
       "lng": 13.800922
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Říkovice",
@@ -3217,7 +3217,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.74038,
       "lng": 13.591743
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Rosice nad Labem",
@@ -3237,7 +3237,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.426599,
       "lng": 14.263831
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Rousínov",
@@ -3257,7 +3257,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.460456,
       "lng": 18.134622
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Ruda nad Moravou",
@@ -3277,7 +3277,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.956836,
       "lng": 14.550812
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Rybniště",
@@ -3287,7 +3287,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.88308,
       "lng": 14.509803
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Rychnov u Jablonce nad Nisou",
@@ -3307,7 +3307,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.593052,
       "lng": 14.05396
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Sedlice",
@@ -3387,7 +3387,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.074297,
       "lng": 17.899779
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Slavkov u Brna",
@@ -3437,7 +3437,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.516176,
       "lng": 15.486553
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Staré Město u Uherské Hradiště",
@@ -3447,7 +3447,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.076572,
       "lng": 17.423108
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Staré Splavy",
@@ -3477,7 +3477,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.640078,
       "lng": 13.155596
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Strakonice",
@@ -3497,7 +3497,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.740838,
       "lng": 13.000208
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Studenec",
@@ -3507,7 +3507,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.222458,
       "lng": 16.069036
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Studénka",
@@ -3537,7 +3537,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.030016,
       "lng": 17.724121
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Sumna",
@@ -3567,7 +3567,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.246791,
       "lng": 13.541799
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Světla nad Sázavou",
@@ -3577,7 +3577,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.670534,
       "lng": 15.416904
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Švihov u Klatov",
@@ -3587,7 +3587,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.47394,
       "lng": 13.29074
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Svitavy",
@@ -3607,7 +3607,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.621691,
       "lng": 15.82052
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Tábor",
@@ -3637,7 +3637,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.58133,
       "lng": 16.178291
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Teplice v Čechách",
@@ -3647,7 +3647,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.646762,
       "lng": 13.828807
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Tišnov",
@@ -3667,7 +3667,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.254064,
       "lng": 17.501314
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Třebechovice pod Orebem",
@@ -3677,7 +3677,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.200016,
       "lng": 15.982335
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Třebenice",
@@ -3687,7 +3687,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.473837,
       "lng": 14.00063
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Třebíč",
@@ -3697,7 +3697,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.211455,
       "lng": 15.884784
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Třeboň",
@@ -3727,7 +3727,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.803143,
       "lng": 13.395356
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Třinec",
@@ -3767,7 +3767,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.565329,
       "lng": 15.910772
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Turnov",
@@ -3787,7 +3787,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.15472,
       "lng": 16.074609
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Uherské Hradiště",
@@ -3797,7 +3797,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.066773,
       "lng": 17.457285
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Uhersky Brod",
@@ -3807,7 +3807,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.021818,
       "lng": 17.643829
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Uhersky Ostroh",
@@ -3817,7 +3817,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 48.981978,
       "lng": 17.403421
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Újezdec u Luhačovic",
@@ -3827,7 +3827,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.033172,
       "lng": 17.685943
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Uničov",
@@ -3847,7 +3847,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.659563,
       "lng": 14.044728
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Ústi nad Labem Západ",
@@ -3857,7 +3857,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.658394,
       "lng": 14.031019
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Ústi nad Labem-Strekov",
@@ -3867,7 +3867,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.649792,
       "lng": 14.048377
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Ústi nad Orlici",
@@ -3887,7 +3887,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.142211,
       "lng": 18.022473
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Valašské Meziříčí",
@@ -3897,7 +3897,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.474614,
       "lng": 17.960438
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Valašské Příkazy",
@@ -3907,7 +3907,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.165897,
       "lng": 18.063607
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Valšov",
@@ -3987,7 +3987,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.042763,
       "lng": 17.50206
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Vlkoš",
@@ -4037,7 +4037,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.618761,
       "lng": 15.623198
     },
-    "province": "Hradec Kralove"
+    "province": "Hradec Krlov"
   },
   {
     "name": "Všetaty",
@@ -4057,7 +4057,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.335425,
       "lng": 17.994444
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Vyhen",
@@ -4107,7 +4107,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.291908,
       "lng": 17.491165
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Záhorovice",
@@ -4117,7 +4117,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.021207,
       "lng": 17.777139
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Žamberk",
@@ -4147,7 +4147,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.33659,
       "lng": 13.555166
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Zateč Západ",
@@ -4157,7 +4157,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 50.338253,
       "lng": 13.534851
     },
-    "province": "Usti nad Labem"
+    "province": "st nad Labem"
   },
   {
     "name": "Zbiroh",
@@ -4167,7 +4167,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.83292,
       "lng": 13.786026
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Zdar nad Sázavou",
@@ -4177,7 +4177,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.55398,
       "lng": 15.939088
     },
-    "province": "Vysocina"
+    "province": "Vysoina"
   },
   {
     "name": "Zdarec u Skutče",
@@ -4207,7 +4207,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.143092,
       "lng": 13.229325
     },
-    "province": "Plzen-"
+    "province": "Plze-"
   },
   {
     "name": "Železný Brod",
@@ -4227,7 +4227,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.224047,
       "lng": 17.660841
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Zlín Střed",
@@ -4237,7 +4237,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.226386,
       "lng": 17.658176
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Zlín-Louky",
@@ -4247,7 +4247,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.216489,
       "lng": 17.623693
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Zlín-Malenovice",
@@ -4257,7 +4257,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.20981,
       "lng": 17.599359
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Zlín-Malenovice Zastávka",
@@ -4267,7 +4267,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.20554,
       "lng": 17.573794
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Zlin-Prstne",
@@ -4277,7 +4277,7 @@ window.STATIONS_CZECH_REPUBLIC = [
       "lat": 49.219932,
       "lng": 17.64062
     },
-    "province": "Zlin"
+    "province": "Zln"
   },
   {
     "name": "Zlonice",

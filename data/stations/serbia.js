@@ -7,7 +7,7 @@ window.STATIONS_SERBIA = [
       "lat": 45.676455,
       "lng": 18.972586
     },
-    "province": "West Backa"
+    "province": "West Baka"
   },
   {
     "name": "Beograd",
@@ -37,7 +37,7 @@ window.STATIONS_SERBIA = [
       "lat": 42.459311,
       "lng": 21.465617
     },
-    "province": "Pcinja"
+    "province": "Pinja"
   },
   {
     "name": "Kliné",
@@ -47,7 +47,7 @@ window.STATIONS_SERBIA = [
       "lat": 42.593546,
       "lng": 20.568914
     },
-    "province": "Raska"
+    "province": "Raka"
   },
   {
     "name": "Kragujevac",
@@ -57,7 +57,7 @@ window.STATIONS_SERBIA = [
       "lat": 44.010334,
       "lng": 20.92793
     },
-    "province": "Sumadija"
+    "province": "umadija"
   },
   {
     "name": "Kraljevo",
@@ -67,7 +67,7 @@ window.STATIONS_SERBIA = [
       "lat": 43.727217,
       "lng": 20.69973
     },
-    "province": "Raska"
+    "province": "Raka"
   },
   {
     "name": "Leskovac",
@@ -87,7 +87,7 @@ window.STATIONS_SERBIA = [
       "lat": 43.316653,
       "lng": 21.876975
     },
-    "province": "Nisava"
+    "province": "Niava"
   },
   {
     "name": "Novi Sad",
@@ -97,7 +97,7 @@ window.STATIONS_SERBIA = [
       "lat": 45.265909,
       "lng": 19.829358
     },
-    "province": "South Backa"
+    "province": "South Baka"
   },
   {
     "name": "Peć",
@@ -107,7 +107,7 @@ window.STATIONS_SERBIA = [
       "lat": 42.660391,
       "lng": 20.304888
     },
-    "province": "Raska"
+    "province": "Raka"
   },
   {
     "name": "Požega",
@@ -177,7 +177,7 @@ window.STATIONS_SERBIA = [
       "lat": 45.785871,
       "lng": 19.114102
     },
-    "province": "West Backa"
+    "province": "West Baka"
   },
   {
     "name": "Sremska Mitrovica",
@@ -207,6 +207,6 @@ window.STATIONS_SERBIA = [
       "lat": 42.710121,
       "lng": 22.062134
     },
-    "province": "Pcinja"
+    "province": "Pinja"
   }
 ];

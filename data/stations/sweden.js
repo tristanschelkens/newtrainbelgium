@@ -37,7 +37,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.133913,
       "lng": 12.948826
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Båstad station",
@@ -47,7 +47,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.425019,
       "lng": 12.868723
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Billeberga station",
@@ -57,7 +57,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.884076,
       "lng": 12.995534
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Bjarnum Station",
@@ -67,7 +67,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.285102,
       "lng": 13.690679
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Bjuv Station",
@@ -77,7 +77,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.083007,
       "lng": 12.911781
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Bräkne-Hoby station",
@@ -97,7 +97,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.067249,
       "lng": 14.480759
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Dösjebro station",
@@ -107,7 +107,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.823093,
       "lng": 13.032794
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Ed Station",
@@ -117,7 +117,7 @@ window.STATIONS_SWEDEN = [
       "lat": 58.913476,
       "lng": 11.932613
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Emmaboda station",
@@ -137,7 +137,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.836235,
       "lng": 13.304286
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Falkenberg",
@@ -157,7 +157,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.546513,
       "lng": 14.18113
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Göteborg Central",
@@ -167,7 +167,7 @@ window.STATIONS_SWEDEN = [
       "lat": 57.709308,
       "lng": 11.973424
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Göteborg Centralstation",
@@ -177,7 +177,7 @@ window.STATIONS_SWEDEN = [
       "lat": 57.709156,
       "lng": 11.972901
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Gothenburg Airport (Landvetter)",
@@ -187,7 +187,7 @@ window.STATIONS_SWEDEN = [
       "lat": 57.668799,
       "lng": 12.292314
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Halmstad Central",
@@ -207,7 +207,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.158516,
       "lng": 13.763923
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Helsingborg Central",
@@ -217,7 +217,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.043688,
       "lng": 12.695069
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Hjärup station",
@@ -227,7 +227,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.673701,
       "lng": 13.135811
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Höör Station",
@@ -237,7 +237,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.936923,
       "lng": 13.541844
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Hovmantorp station",
@@ -277,7 +277,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.144098,
       "lng": 12.778247
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Kävlinge Station",
@@ -287,7 +287,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.793905,
       "lng": 13.111683
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Klippan station",
@@ -297,7 +297,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.130704,
       "lng": 13.129653
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Köpingebro station",
@@ -307,7 +307,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.456369,
       "lng": 13.933495
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Kristianstad Central",
@@ -317,7 +317,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.031777,
       "lng": 14.151052
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Kungsbacka Station",
@@ -347,7 +347,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.879087,
       "lng": 12.85719
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Lessebo station",
@@ -367,7 +367,7 @@ window.STATIONS_SWEDEN = [
       "lat": 58.416013,
       "lng": 15.626676
     },
-    "province": "Ostergotland"
+    "province": "stergtland"
   },
   {
     "name": "Lund Central",
@@ -377,7 +377,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.705523,
       "lng": 13.186582
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Lunnarp station",
@@ -387,7 +387,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.541029,
       "lng": 14.042301
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Malmö Airport",
@@ -397,7 +397,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.540613,
       "lng": 13.364208
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Malmö Central",
@@ -407,7 +407,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.60923,
       "lng": 13.00126
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Mölndal Nedre station",
@@ -417,7 +417,7 @@ window.STATIONS_SWEDEN = [
       "lat": 57.655912,
       "lng": 12.018847
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Mörrum station",
@@ -437,7 +437,7 @@ window.STATIONS_SWEDEN = [
       "lat": 57.652128,
       "lng": 14.694783
     },
-    "province": "Jonkoping"
+    "province": "Jnkping"
   },
   {
     "name": "Norrköping Central",
@@ -447,7 +447,7 @@ window.STATIONS_SWEDEN = [
       "lat": 58.596562,
       "lng": 16.183675
     },
-    "province": "Ostergotland"
+    "province": "stergtland"
   },
   {
     "name": "Nybro Station",
@@ -467,7 +467,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.078333,
       "lng": 14.002182
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Örtofta station",
@@ -477,7 +477,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.778569,
       "lng": 13.242926
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Osby",
@@ -487,7 +487,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.379876,
       "lng": 13.994811
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Oxie station",
@@ -497,7 +497,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.541874,
       "lng": 13.096671
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Öxnered station",
@@ -507,7 +507,7 @@ window.STATIONS_SWEDEN = [
       "lat": 58.359085,
       "lng": 12.273826
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Paarp (Helsingborg kn) station",
@@ -517,7 +517,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.029126,
       "lng": 12.817062
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Perstorp Station",
@@ -527,7 +527,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.13643,
       "lng": 13.397451
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Ronneby station",
@@ -547,7 +547,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.965743,
       "lng": 12.783317
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Rydsgaard station",
@@ -557,7 +557,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.474383,
       "lng": 13.587788
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Simrishamn Station",
@@ -567,7 +567,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.55418,
       "lng": 14.352599
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Skurup Station",
@@ -577,7 +577,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.480172,
       "lng": 13.498894
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Smedstorp (Tomelilla kn) stn",
@@ -587,7 +587,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.54965,
       "lng": 14.117316
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Södertälje Syd station",
@@ -617,7 +617,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.036533,
       "lng": 13.680521
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Stehag station",
@@ -627,7 +627,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.900301,
       "lng": 13.392911
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Stockholm Airport (Arlanda)",
@@ -667,7 +667,7 @@ window.STATIONS_SWEDEN = [
       "lat": 58.78447,
       "lng": 16.92135
     },
-    "province": "Sodermanland"
+    "province": "Sdermanland"
   },
   {
     "name": "Stockholm Vasteras Airport",
@@ -677,7 +677,7 @@ window.STATIONS_SWEDEN = [
       "lat": 59.6017,
       "lng": 16.62798
     },
-    "province": "Vastmanland"
+    "province": "Vstmanland"
   },
   {
     "name": "Storlien station",
@@ -687,7 +687,7 @@ window.STATIONS_SWEDEN = [
       "lat": 63.316147,
       "lng": 12.10041
     },
-    "province": "Jamtland"
+    "province": "Jmtland"
   },
   {
     "name": "Svedala station",
@@ -697,7 +697,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.506906,
       "lng": 13.232328
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Taagarp (Svalöv kn) station",
@@ -707,7 +707,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.926649,
       "lng": 12.952386
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Tomelilla Station",
@@ -717,7 +717,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.54645,
       "lng": 13.94937
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Trelleborg Centralstation",
@@ -727,7 +727,7 @@ window.STATIONS_SWEDEN = [
       "lat": 55.371574,
       "lng": 13.159057
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Trollhättan Centralstation",
@@ -737,7 +737,7 @@ window.STATIONS_SWEDEN = [
       "lat": 58.28749,
       "lng": 12.298653
     },
-    "province": "Vastra Gotaland"
+    "province": "Vstra Gtaland"
   },
   {
     "name": "Tyringe station",
@@ -747,7 +747,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.15964,
       "lng": 13.598548
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Uppsala Central",
@@ -787,7 +787,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.104851,
       "lng": 13.916964
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Vittsjö",
@@ -797,7 +797,7 @@ window.STATIONS_SWEDEN = [
       "lat": 56.342606,
       "lng": 13.657221
     },
-    "province": "Skane"
+    "province": "Skne"
   },
   {
     "name": "Ystad Station",
@@ -807,6 +807,6 @@ window.STATIONS_SWEDEN = [
       "lat": 55.427397,
       "lng": 13.824924
     },
-    "province": "Skane"
+    "province": "Skne"
   }
 ];

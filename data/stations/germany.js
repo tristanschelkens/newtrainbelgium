@@ -47,7 +47,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.841009,
       "lng": 10.09627
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Abenden",
@@ -77,7 +77,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.633988,
       "lng": 8.065319
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Achern Stadt",
@@ -87,7 +87,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.62552,
       "lng": 8.067971
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Achim",
@@ -107,7 +107,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.060089,
       "lng": 7.607867
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Achmer",
@@ -167,7 +167,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.421524,
       "lng": 9.392639
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Adelsheim Ost",
@@ -177,7 +177,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.403123,
       "lng": 9.395129
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Adorf (Erzgeb)",
@@ -207,7 +207,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.137833,
       "lng": 9.379012
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Agatharied",
@@ -237,7 +237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.350095,
       "lng": 8.990839
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Aha",
@@ -247,7 +247,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.83322,
       "lng": 8.134347
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ahaus",
@@ -447,7 +447,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.887883,
       "lng": 10.074939
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ainring",
@@ -467,7 +467,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.592237,
       "lng": 8.131776
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Albersdorf",
@@ -537,7 +537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.21029,
       "lng": 9.026958
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Albstadt-Ebingen West",
@@ -547,7 +547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.211504,
       "lng": 8.996925
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Albstadt-Laufen Ort",
@@ -557,7 +557,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.222857,
       "lng": 8.917317
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Albstadt-Lautlingen",
@@ -567,7 +567,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.213634,
       "lng": 8.954622
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Aldekerk",
@@ -587,7 +587,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.095848,
       "lng": 8.713037
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Aletshausen",
@@ -657,7 +657,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.714886,
       "lng": 9.068228
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Allersberg (Rothsee)",
@@ -677,7 +677,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.327734,
       "lng": 9.722382
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Alpen",
@@ -697,7 +697,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.343807,
       "lng": 8.398253
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Alsdorf (Westerw)",
@@ -827,7 +827,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.720392,
       "lng": 9.382383
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Altdöbern",
@@ -1147,7 +1147,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.859387,
       "lng": 8.114113
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Althegnenberg",
@@ -1187,7 +1187,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.56193,
       "lng": 8.908849
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Altmittweida",
@@ -1247,7 +1247,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.930591,
       "lng": 9.551398
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Altstädten (Allgäu)",
@@ -1267,7 +1267,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.841211,
       "lng": 9.793037
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Alveslohe",
@@ -1397,7 +1397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.578479,
       "lng": 9.873499
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Amstetten (Württ)",
@@ -1407,7 +1407,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.578551,
       "lng": 9.872537
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Amtshainersdorf",
@@ -1637,7 +1637,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.541462,
       "lng": 7.973189
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ardey",
@@ -1907,7 +1907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.907359,
       "lng": 9.1478
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Asselheim",
@@ -2007,7 +2007,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.718864,
       "lng": 8.36235
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Aue (Sachs)",
@@ -2057,7 +2057,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.399563,
       "lng": 9.223274
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Auerbach (V) ob Bf",
@@ -2107,7 +2107,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.856129,
       "lng": 10.317189
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Auggen",
@@ -2117,7 +2117,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.789946,
       "lng": 7.586787
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Augsburg Haunstetterstraße",
@@ -2207,7 +2207,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.953055,
       "lng": 9.64405
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Aumenau",
@@ -2327,7 +2327,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.240193,
       "lng": 9.060704
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bacharach",
@@ -2377,7 +2377,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.862075,
       "lng": 8.399394
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Backnang",
@@ -2387,7 +2387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.942767,
       "lng": 9.42652
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Abbach",
@@ -2437,7 +2437,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.730806,
       "lng": 7.557599
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Belzig",
@@ -2727,7 +2727,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.231573,
       "lng": 9.199767
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Friedrichshall-Kochendorf",
@@ -2737,7 +2737,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.217756,
       "lng": 9.211552
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Gandersheim",
@@ -2757,7 +2757,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.448621,
       "lng": 8.230568
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Grönenbach",
@@ -2787,7 +2787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.80258,
       "lng": 8.439037
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Hersfeld",
@@ -2967,7 +2967,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.919966,
       "lng": 7.69784
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Krozingen Ost",
@@ -2977,7 +2977,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.917143,
       "lng": 7.709787
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Laasphe",
@@ -3047,7 +3047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.772763,
       "lng": 8.734278
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Lobenstein",
@@ -3077,7 +3077,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.493644,
       "lng": 9.771661
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Münder (Deister)",
@@ -3157,7 +3157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.460766,
       "lng": 8.896534
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Oeynhausen",
@@ -3197,7 +3197,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.428899,
       "lng": 8.201946
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Pyrmont",
@@ -3217,7 +3217,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.237721,
       "lng": 9.101308
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Rappenau Busbf R",
@@ -3227,7 +3227,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.237721,
       "lng": 9.101308
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Rappenau Kurpark",
@@ -3237,7 +3237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.240373,
       "lng": 9.113524
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Reichenhall-Kirchberg",
@@ -3267,7 +3267,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.815983,
       "lng": 8.303138
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Rotenfels Schloss",
@@ -3277,7 +3277,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.819948,
       "lng": 8.297133
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Rotenfels Weinbrennerstraße",
@@ -3287,7 +3287,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.811516,
       "lng": 8.312055
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Saarow Klinikum",
@@ -3327,7 +3327,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.555857,
       "lng": 7.94863
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Salzdetfurth",
@@ -3417,7 +3417,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.013534,
       "lng": 9.501094
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Schachen",
@@ -3457,7 +3457,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.200002,
       "lng": 8.641923
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Schönborn-Kronau",
@@ -3467,7 +3467,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.219347,
       "lng": 8.646822
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Schussenried",
@@ -3477,7 +3477,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.994037,
       "lng": 9.6685
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Schwartau",
@@ -3497,7 +3497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.395567,
       "lng": 9.030023
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Segeberg",
@@ -3617,7 +3617,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.678466,
       "lng": 8.72715
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Tölz",
@@ -3637,7 +3637,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.491239,
       "lng": 9.396487
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Urach Ermstalklinik",
@@ -3647,7 +3647,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.494152,
       "lng": 9.386904
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Urach Wasserfall",
@@ -3657,7 +3657,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.499392,
       "lng": 9.376279
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Vilbel",
@@ -3697,7 +3697,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.925161,
       "lng": 9.752289
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wildbad Bf",
@@ -3707,7 +3707,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.75572,
       "lng": 8.551087
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wildbad Kurpark",
@@ -3717,7 +3717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.748762,
       "lng": 8.55008
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wildbad Nord",
@@ -3727,7 +3727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.763972,
       "lng": 8.554971
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wildbad Uhlandplatz",
@@ -3737,7 +3737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.750838,
       "lng": 8.549361
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wildungen",
@@ -3767,7 +3767,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.229748,
       "lng": 9.167226
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wimpfen Im Tal",
@@ -3777,7 +3777,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.229847,
       "lng": 9.187047
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wimpfen Parkplatz Seegarten",
@@ -3787,7 +3787,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.226691,
       "lng": 9.1599
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Wimpfen-Hohenstadt",
@@ -3797,7 +3797,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.242746,
       "lng": 9.139251
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bad Windsheim",
@@ -3867,7 +3867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.790085,
       "lng": 8.190467
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Baden-Baden Haueneberstein",
@@ -3877,7 +3877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.811902,
       "lng": 8.209021
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Baden-Baden Rebland",
@@ -3887,7 +3887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.73384,
       "lng": 8.146573
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bahlingen am Kaiserstuhl",
@@ -3897,7 +3897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.124497,
       "lng": 7.741519
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bahlingen-Riedlen",
@@ -3907,7 +3907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.118474,
       "lng": 7.747308
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bahnbrücken",
@@ -3917,7 +3917,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.11945,
       "lng": 8.764851
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bahnhof Oberbettingen",
@@ -3957,7 +3957,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.504103,
       "lng": 8.371869
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Baiersbronn Schule",
@@ -3967,7 +3967,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.510413,
       "lng": 8.375429
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Baiersdorf",
@@ -4027,7 +4027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.065887,
       "lng": 8.759889
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Balgstädt",
@@ -4047,7 +4047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.278464,
       "lng": 8.850302
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Balingen Süd",
@@ -4057,7 +4057,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.269017,
       "lng": 8.846482
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ballstädt (Gotha)",
@@ -4127,7 +4127,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.359588,
       "lng": 8.783683
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bannemin-Mölschow",
@@ -4377,7 +4377,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.089062,
       "lng": 7.941079
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Batzhausen",
@@ -4397,7 +4397,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.073992,
       "lng": 8.748346
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bäumenheim",
@@ -4707,7 +4707,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.481414,
       "lng": 9.976866
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Beldorf",
@@ -4777,7 +4777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.572367,
       "lng": 9.273424
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Benediktbeuern",
@@ -4837,7 +4837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.943612,
       "lng": 9.244506
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bennungen",
@@ -4987,7 +4987,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.576214,
       "lng": 10.272935
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bergfelde (b Berlin)",
@@ -5017,7 +5017,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.005746,
       "lng": 8.530169
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Berghausen (Pfalz)",
@@ -5037,7 +5037,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.002456,
       "lng": 8.536012
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Berghausen Pfinzbrücke",
@@ -5047,7 +5047,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.006465,
       "lng": 8.520919
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bergheim (Erft)",
@@ -6607,7 +6607,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.730491,
       "lng": 9.345158
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bernau (b Berlin)",
@@ -6777,7 +6777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.997718,
       "lng": 9.136645
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Besseringen",
@@ -6847,7 +6847,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.581908,
       "lng": 7.810915
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Beuna (Geiseltal)",
@@ -6877,7 +6877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.04879,
       "lng": 8.97189
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Beutelsbach",
@@ -6887,7 +6887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.810293,
       "lng": 9.386032
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Beutersitz",
@@ -6937,7 +6937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.338386,
       "lng": 8.03276
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Biberach (Riß)",
@@ -6947,7 +6947,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.101844,
       "lng": 9.793127
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Biberach (Riß) Süd",
@@ -6957,7 +6957,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.087021,
       "lng": 9.80324
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Biblis",
@@ -7137,7 +7137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.449026,
       "lng": 8.860918
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Biersdorf (Westerw)",
@@ -7187,7 +7187,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.910631,
       "lng": 8.257931
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bietigheim-Bissingen",
@@ -7197,7 +7197,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.947936,
       "lng": 9.137552
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bietingen",
@@ -7207,7 +7207,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.744083,
       "lng": 8.738755
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bigge",
@@ -7237,7 +7237,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.948763,
       "lng": 8.620295
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Billenhausen",
@@ -7267,7 +7267,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.372586,
       "lng": 9.083626
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bindfelde",
@@ -7357,7 +7357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.349515,
       "lng": 8.080367
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Birkelbach",
@@ -7397,7 +7397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.874108,
       "lng": 8.645258
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Birkengrund",
@@ -7497,7 +7497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.832389,
       "lng": 8.276979
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bisingen",
@@ -7507,7 +7507,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.312767,
       "lng": 8.921038
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bissendorf",
@@ -7537,7 +7537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.444405,
       "lng": 8.589435
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bitterfeld",
@@ -7567,7 +7567,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.187229,
       "lng": 9.453218
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blaibach (Oberpf)",
@@ -7687,7 +7687,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.06636,
       "lng": 8.464674
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blankensee (Meckl)",
@@ -7717,7 +7717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.403819,
       "lng": 9.791976
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blaufelden",
@@ -7727,7 +7727,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.296232,
       "lng": 9.967679
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blaustein",
@@ -7737,7 +7737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.414597,
       "lng": 9.919326
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blechhammer (Thür)",
@@ -7757,7 +7757,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.124093,
       "lng": 8.004777
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bleichenbach (Oberh)",
@@ -7847,7 +7847,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.85554,
       "lng": 8.607539
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blumberg-Zollhaus",
@@ -7857,7 +7857,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.838056,
       "lng": 8.555842
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Blumenau",
@@ -7927,7 +7927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.822438,
       "lng": 9.912809
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bobitz",
@@ -7957,7 +7957,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.687761,
       "lng": 9.004126
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Böblingen Danziger Str",
@@ -7967,7 +7967,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.678781,
       "lng": 8.997788
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Böblingen Heusteigstr",
@@ -7977,7 +7977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.675635,
       "lng": 9.025772
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Böblingen Südbf",
@@ -7987,7 +7987,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.677235,
       "lng": 9.010508
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Böblingen Zimmerschlag",
@@ -7997,7 +7997,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.670781,
       "lng": 9.035012
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bobstadt",
@@ -8117,7 +8117,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.140656,
       "lng": 9.1912
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Böckingen West",
@@ -8127,7 +8127,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.139316,
       "lng": 9.166093
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bockum-Hövel",
@@ -8157,7 +8157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.383368,
       "lng": 8.990597
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bodenburg",
@@ -8227,7 +8227,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.475926,
       "lng": 9.317211
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bogen",
@@ -8297,7 +8297,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.74873,
       "lng": 8.926648
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Boisheim",
@@ -8347,7 +8347,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.523555,
       "lng": 8.827658
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bönen",
@@ -8597,7 +8597,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.855149,
       "lng": 10.351707
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Boppard Hbf",
@@ -8897,7 +8897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.070175,
       "lng": 7.721617
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bötzingen Mühle",
@@ -8907,7 +8907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.075551,
       "lng": 7.727927
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bous (Saar)",
@@ -8927,7 +8927,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.485599,
       "lng": 9.640049
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Brachbach",
@@ -9097,7 +9097,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.931661,
       "lng": 8.457402
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bräunlingen Industriegebiet",
@@ -9107,7 +9107,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.928829,
       "lng": 8.469546
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Braunsbedra",
@@ -9587,7 +9587,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.036947,
       "lng": 8.693135
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bretten Kupferhälde",
@@ -9597,7 +9597,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.036983,
       "lng": 8.72368
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bretten Rechberg",
@@ -9607,7 +9607,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.032596,
       "lng": 8.701612
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bretten Schulzentrum",
@@ -9617,7 +9617,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.031733,
       "lng": 8.718197
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bretten Stadtmitte",
@@ -9627,7 +9627,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.033981,
       "lng": 8.702933
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bretten Wannenweg",
@@ -9637,7 +9637,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.030394,
       "lng": 8.709396
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bretten-Ruit",
@@ -9647,7 +9647,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.009458,
       "lng": 8.722053
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Brettorf",
@@ -9677,7 +9677,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.172738,
       "lng": 9.4403
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Breyell",
@@ -9717,7 +9717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.014379,
       "lng": 8.467793
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Brigachtal Klengen",
@@ -9727,7 +9727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.007485,
       "lng": 8.465726
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Brilon Stadt",
@@ -9817,7 +9817,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.889461,
       "lng": 8.66703
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Brötzingen Sandweg",
@@ -9827,7 +9827,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.885883,
       "lng": 8.662347
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Brötzingen Wohnlichstraße",
@@ -9837,7 +9837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.882072,
       "lng": 8.653987
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchenbrücken",
@@ -9857,7 +9857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.923989,
       "lng": 8.373973
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchköbel",
@@ -9897,7 +9897,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.124619,
       "lng": 8.589651
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal am Mantel",
@@ -9907,7 +9907,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.141177,
       "lng": 8.563268
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal Bildungszentrum",
@@ -9917,7 +9917,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.110344,
       "lng": 8.574504
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal Schlachthof",
@@ -9927,7 +9927,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.118929,
       "lng": 8.609715
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal Schloßgarten",
@@ -9937,7 +9937,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.131442,
       "lng": 8.594056
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal Sportzentrum",
@@ -9947,7 +9947,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.135442,
       "lng": 8.589939
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal Stegwiesen",
@@ -9957,7 +9957,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.136431,
       "lng": 8.5982
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchsal Tunnelstraße",
@@ -9967,7 +9967,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.119549,
       "lng": 8.594379
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruchweiler",
@@ -10007,7 +10007,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.573922,
       "lng": 9.453065
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bruckmühl",
@@ -10117,7 +10117,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.523434,
       "lng": 9.327162
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Buchen Ost",
@@ -10127,7 +10127,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.519156,
       "lng": 9.332133
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Buchenau (Lahn)",
@@ -10197,7 +10197,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.083578,
       "lng": 7.915163
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Buchholz (Nordheide)",
@@ -10307,7 +10307,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.855252,
       "lng": 7.628165
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bühl (Baden)",
@@ -10317,7 +10317,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.696678,
       "lng": 8.129295
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Buir",
@@ -10607,7 +10607,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.928582,
       "lng": 9.369834
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Burgthann",
@@ -10667,7 +10667,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.104002,
       "lng": 7.611768
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Burladingen",
@@ -10677,7 +10677,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.290051,
       "lng": 9.113057
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Burladingen West",
@@ -10687,7 +10687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.292272,
       "lng": 9.099294
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Bürstadt",
@@ -10727,7 +10727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.92931,
       "lng": 8.450561
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Büsenbachtal",
@@ -10917,7 +10917,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.776485,
       "lng": 8.571133
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Calmbach Süd",
@@ -10927,7 +10927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.773392,
       "lng": 8.566423
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Calw",
@@ -10937,7 +10937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.714729,
       "lng": 8.742027
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Camburg (Saale)",
@@ -11507,7 +11507,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.771123,
       "lng": 9.329715
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Contwig",
@@ -11607,7 +11607,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.137869,
       "lng": 10.064322
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Cranzahl",
@@ -11907,7 +11907,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.388075,
       "lng": 9.18755
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dallgow-Döberitz",
@@ -12207,7 +12207,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.108595,
       "lng": 8.611935
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Delitzsch",
@@ -12317,7 +12317,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.06862,
       "lng": 7.881436
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Derkum",
@@ -12427,7 +12427,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.606705,
       "lng": 9.093433
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dettingen (Main)",
@@ -12447,7 +12447,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.616405,
       "lng": 9.454881
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dettingen Freibad",
@@ -12457,7 +12457,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.523178,
       "lng": 9.351253
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dettingen Gsaidt",
@@ -12467,7 +12467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.514063,
       "lng": 9.35804
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dettingen Lehen",
@@ -12477,7 +12477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.529218,
       "lng": 9.336897
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dettingen-Mitte",
@@ -12487,7 +12487,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.528005,
       "lng": 9.34443
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dettum",
@@ -12577,7 +12577,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.039347,
       "lng": 8.674473
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Diedorf (Schwab)",
@@ -12677,7 +12677,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.859369,
       "lng": 7.76338
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dietzenbach Bahnhof",
@@ -12857,7 +12857,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.598234,
       "lng": 9.683503
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ditfurt",
@@ -12897,7 +12897,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.60796,
       "lng": 9.67491
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ditzingen",
@@ -12907,7 +12907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.823606,
       "lng": 9.066807
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Döbeln Hbf",
@@ -12977,7 +12977,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.608885,
       "lng": 8.167356
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Döggingen",
@@ -12987,7 +12987,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.893654,
       "lng": 8.441104
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Döhlau",
@@ -13087,7 +13087,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.947787,
       "lng": 8.498923
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Donaueschingen Allmendshofen",
@@ -13097,7 +13097,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.940892,
       "lng": 8.502033
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Donaueschingen Aufen",
@@ -13107,7 +13107,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.963356,
       "lng": 8.475623
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Donaueschingen Grüningen",
@@ -13117,7 +13117,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.983052,
       "lng": 8.47182
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Donaueschingen Mitte/Siedlung",
@@ -13127,7 +13127,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.952542,
       "lng": 8.488954
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Donauwörth",
@@ -13197,7 +13197,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.779375,
       "lng": 9.382158
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dorheim (Wetterau)",
@@ -13247,7 +13247,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.47211,
       "lng": 8.494959
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dornstetten-Aach",
@@ -13257,7 +13257,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.473297,
       "lng": 8.482913
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dörpen",
@@ -14387,7 +14387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.929059,
       "lng": 8.272682
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Durmersheim Nord",
@@ -14397,7 +14397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.937796,
       "lng": 8.280584
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dürrenbüchig",
@@ -14407,7 +14407,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.023949,
       "lng": 8.64818
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dürrnhaar",
@@ -14677,7 +14677,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.452406,
       "lng": 9.058447
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Dutenhofen (Wetzlar)",
@@ -14757,7 +14757,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.465769,
       "lng": 8.984152
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ebermannstadt",
@@ -14807,7 +14807,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.716194,
       "lng": 9.526543
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ebersbach (Sachs)",
@@ -14907,7 +14907,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.960363,
       "lng": 7.768181
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ebstorf (Uelzen)",
@@ -14947,7 +14947,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.692148,
       "lng": 9.169167
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Echzell",
@@ -14977,7 +14977,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.152315,
       "lng": 9.936649
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eckernförde",
@@ -15017,7 +15017,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.513025,
       "lng": 9.743111
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Edenkoben",
@@ -15117,7 +15117,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.65562,
       "lng": 7.563919
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Egelsbach",
@@ -15177,7 +15177,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.075673,
       "lng": 8.397911
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eggersdorf",
@@ -15257,7 +15257,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.285674,
       "lng": 9.724341
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ehlenbruch",
@@ -15287,7 +15287,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.662681,
       "lng": 8.944257
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ehr",
@@ -15437,7 +15437,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.432437,
       "lng": 9.290315
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eichstätt Bahnhof",
@@ -15477,7 +15477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.0929,
       "lng": 7.748018
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eichwalde",
@@ -15557,7 +15557,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.627951,
       "lng": 7.595597
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Einbeck Salzderhelden",
@@ -15717,7 +15717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.69649,
       "lng": 9.705149
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eiswoog",
@@ -15797,7 +15797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.955244,
       "lng": 9.123961
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ellerau",
@@ -15817,7 +15817,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.149978,
       "lng": 9.315907
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ellingen (Bay)",
@@ -15847,7 +15847,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.964117,
       "lng": 10.129683
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ellzee",
@@ -15887,7 +15887,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.473095,
       "lng": 9.873427
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Elsfleth",
@@ -16047,7 +16047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.171196,
       "lng": 8.070892
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Elze (Han)",
@@ -16107,7 +16107,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.119202,
       "lng": 7.848077
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Emmerich",
@@ -16187,7 +16187,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.813152,
       "lng": 9.370229
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Endingen am Kaiserstuhl",
@@ -16197,7 +16197,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.144246,
       "lng": 7.701921
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Engelsdorf",
@@ -16247,7 +16247,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.856349,
       "lng": 8.772788
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Engers",
@@ -16277,7 +16277,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.383998,
       "lng": 9.284301
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Engstlatt",
@@ -16287,7 +16287,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.297117,
       "lng": 8.87522
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Enkenbach",
@@ -16337,7 +16337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.55215,
       "lng": 8.96291
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Entringen Hauffstraße",
@@ -16357,7 +16357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.556303,
       "lng": 8.963584
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Enzberg",
@@ -16367,7 +16367,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.933787,
       "lng": 8.799774
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Enzisweiler",
@@ -16427,7 +16427,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.135999,
       "lng": 8.914665
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eppingen West",
@@ -16437,7 +16437,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.132673,
       "lng": 8.904759
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eppstein",
@@ -16497,7 +16497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.3259,
       "lng": 9.894831
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Erdeborn",
@@ -16527,7 +16527,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.948233,
       "lng": 9.299403
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Erdmannsdorf Talstation",
@@ -16627,7 +16627,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.489531,
       "lng": 8.80986
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ergoldsbach",
@@ -16657,7 +16657,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.628508,
       "lng": 9.526803
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Erkelenz",
@@ -16857,7 +16857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.930659,
       "lng": 8.638561
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ersingen West",
@@ -16867,7 +16867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.931432,
       "lng": 8.633941
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Erzhausen",
@@ -16887,7 +16887,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.659539,
       "lng": 8.430119
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eschborn",
@@ -16927,7 +16927,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.323982,
       "lng": 8.867795
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eschelbronn Post",
@@ -16937,7 +16937,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.320116,
       "lng": 8.867858
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eschenau (b Heilbronn)",
@@ -16947,7 +16947,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.144099,
       "lng": 9.40348
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eschenau (Mittelfr)",
@@ -17397,7 +17397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.738811,
       "lng": 9.300077
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Esslingen-Mettingen",
@@ -17407,7 +17407,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.747081,
       "lng": 9.275833
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Esslingen-Zell",
@@ -17417,7 +17417,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.724329,
       "lng": 9.359388
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Esting",
@@ -17467,7 +17467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.93865,
       "lng": 8.408869
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ettlingen West",
@@ -17477,7 +17477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.947091,
       "lng": 8.387717
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Etzbach",
@@ -17507,7 +17507,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.866767,
       "lng": 7.74889
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Etzenrot",
@@ -17517,7 +17517,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.914442,
       "lng": 8.457644
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Etzleben",
@@ -17537,7 +17537,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.501734,
       "lng": 9.538013
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Euerdorf",
@@ -17577,7 +17577,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.909921,
       "lng": 8.743744
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eutingen im Gäu",
@@ -17587,7 +17587,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.479949,
       "lng": 8.782236
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eutingen Nord",
@@ -17597,7 +17597,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.484704,
       "lng": 8.753102
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eyach",
@@ -17607,7 +17607,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.446284,
       "lng": 8.783099
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Eystrup",
@@ -17657,7 +17657,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.661562,
       "lng": 7.83942
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Falkenau (Sachs) Hp",
@@ -17797,7 +17797,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.786935,
       "lng": 9.437612
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Faurndau",
@@ -17807,7 +17807,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.71081,
       "lng": 9.616048
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Favoritepark",
@@ -17817,7 +17817,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.90921,
       "lng": 9.180233
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Fehmarn-Burg",
@@ -17857,7 +17857,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.871442,
       "lng": 8.098292
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Felde",
@@ -17907,7 +17907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.820046,
       "lng": 9.269982
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Felsberg-Altenbrunslar",
@@ -18027,7 +18027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.987345,
       "lng": 9.700763
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Filderstadt",
@@ -18037,7 +18037,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.676471,
       "lng": 9.217529
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Filsen",
@@ -18207,7 +18207,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.084734,
       "lng": 8.783467
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Flensburg",
@@ -18337,7 +18337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.680399,
       "lng": 8.361487
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Förbau",
@@ -18357,7 +18357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.964782,
       "lng": 8.338933
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Forchheim (Oberfr)",
@@ -18387,7 +18387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.97538,
       "lng": 9.638944
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Forst (Lausitz)",
@@ -18947,7 +18947,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.837225,
       "lng": 8.440394
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Frauenau",
@@ -19017,7 +19017,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.93011,
       "lng": 9.197798
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiberg (Sachs)",
@@ -19037,7 +19037,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.99769,
       "lng": 7.841594
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg (Breisgau) ZOB",
@@ -19047,7 +19047,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.996679,
       "lng": 7.84129
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg Klinikum",
@@ -19057,7 +19057,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.005561,
       "lng": 7.842755
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg Messe/Universität",
@@ -19067,7 +19067,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.012914,
       "lng": 7.832669
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg West",
@@ -19077,7 +19077,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.027324,
       "lng": 7.812884
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg-Herdern",
@@ -19087,7 +19087,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.00824,
       "lng": 7.850971
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg-Littenweiler",
@@ -19097,7 +19097,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.981667,
       "lng": 7.895135
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg-St Georgen",
@@ -19107,7 +19107,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.975492,
       "lng": 7.803005
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg-Wiehre",
@@ -19117,7 +19117,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.982414,
       "lng": 7.854127
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freiburg-Zähringen",
@@ -19127,7 +19127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.024366,
       "lng": 7.863736
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freienohl",
@@ -19357,7 +19357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.743751,
       "lng": 9.317984
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freudenstadt Hbf",
@@ -19367,7 +19367,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.460325,
       "lng": 8.428807
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freudenstadt Industriegebiet",
@@ -19377,7 +19377,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.464964,
       "lng": 8.434938
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freudenstadt Schulzentrum",
@@ -19387,7 +19387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.467409,
       "lng": 8.421418
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freudenstadt Stadt",
@@ -19397,7 +19397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.467777,
       "lng": 8.410649
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Freusburg Siedlung",
@@ -19437,7 +19437,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.59537,
       "lng": 9.358013
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Frickenhausen Kelterstraße",
@@ -19447,7 +19447,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.592053,
       "lng": 9.364476
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Frickhofen",
@@ -19467,7 +19467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.031818,
       "lng": 8.936059
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Fridolfing",
@@ -19597,7 +19597,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.650793,
       "lng": 9.483907
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen Flughafen",
@@ -19607,7 +19607,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.672214,
       "lng": 9.523711
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen Hafen",
@@ -19617,7 +19617,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.651206,
       "lng": 9.482819
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen Landratsamt",
@@ -19627,7 +19627,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.657148,
       "lng": 9.451986
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen Ost",
@@ -19637,7 +19637,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.651709,
       "lng": 9.50202
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen Stadt",
@@ -19647,7 +19647,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.65322,
       "lng": 9.473902
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen-Fischbach",
@@ -19657,7 +19657,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.672421,
       "lng": 9.417566
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen-Kluftern",
@@ -19667,7 +19667,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.688152,
       "lng": 9.409512
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichshafen-Manzell",
@@ -19677,7 +19677,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.664321,
       "lng": 9.429154
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichsruhe (Meck)",
@@ -19717,7 +19717,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.11011,
       "lng": 8.476701
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichstal bei Freudenstadt",
@@ -19727,7 +19727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.4818,
       "lng": 8.376921
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Friedrichsthal (b Bayreuth)",
@@ -19787,7 +19787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.381589,
       "lng": 7.862945
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Frimmersdorf",
@@ -19837,7 +19837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.244036,
       "lng": 8.872119
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Fröndenberg",
@@ -19917,7 +19917,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.579765,
       "lng": 8.135174
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Fürstenberg (Havel)",
@@ -20097,7 +20097,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.807735,
       "lng": 8.534502
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gablingen",
@@ -20137,7 +20137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.805772,
       "lng": 8.319975
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gaggenau Mercedes-Benz Werk",
@@ -20147,7 +20147,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.798041,
       "lng": 8.327472
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gaildorf West",
@@ -20157,7 +20157,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.003822,
       "lng": 9.753889
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gaimersheim",
@@ -20197,7 +20197,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.698293,
       "lng": 9.59558
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gammertingen",
@@ -20207,7 +20207,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.250697,
       "lng": 9.217152
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gammertingen Europastraße",
@@ -20217,7 +20217,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.242948,
       "lng": 9.210455
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ganderkesee",
@@ -20327,7 +20327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.641125,
       "lng": 8.90911
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gaschwitz",
@@ -20377,7 +20377,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.634316,
       "lng": 9.854586
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gäufelden",
@@ -20387,7 +20387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.559665,
       "lng": 8.850311
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gausbach",
@@ -20397,7 +20397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.686754,
       "lng": 8.362368
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gauselfingen",
@@ -20407,7 +20407,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.275822,
       "lng": 9.164214
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gauting",
@@ -20557,7 +20557,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.921341,
       "lng": 8.653951
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geisingen-Aulfingen",
@@ -20567,7 +20567,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.886409,
       "lng": 8.66161
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geisingen-Hausen",
@@ -20577,7 +20577,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.912442,
       "lng": 8.678599
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geisingen-Kirchen",
@@ -20587,7 +20587,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.905061,
       "lng": 8.674347
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geisingen-Leipferdingen",
@@ -20597,7 +20597,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.86906,
       "lng": 8.654625
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geislingen (Steige)",
@@ -20607,7 +20607,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.61947,
       "lng": 9.841821
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geislingen (Steige) West",
@@ -20617,7 +20617,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.63077,
       "lng": 9.82191
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Geitau",
@@ -20747,7 +20747,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.151299,
       "lng": 8.984646
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gemmingen West",
@@ -20757,7 +20757,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.154445,
       "lng": 8.97758
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gemünden (Main)",
@@ -20797,7 +20797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.404655,
       "lng": 8.010188
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gennweiler",
@@ -20897,7 +20897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.805205,
       "lng": 9.439752
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gerhausen",
@@ -20907,7 +20907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.39972,
       "lng": 9.806224
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gerichshain",
@@ -20927,7 +20927,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.580884,
       "lng": 9.710615
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gerlenhofen",
@@ -21007,7 +21007,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.768305,
       "lng": 8.336712
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gernsbach Mitte",
@@ -21017,7 +21017,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.763082,
       "lng": 8.339041
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gernsheim",
@@ -21197,7 +21197,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.619947,
       "lng": 10.237275
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Giersleben",
@@ -21287,7 +21287,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.661036,
       "lng": 9.787823
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Girod",
@@ -21527,7 +21527,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.10922,
       "lng": 8.744409
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Godelheim",
@@ -21607,7 +21607,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.696912,
       "lng": 9.020432
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Goldenstedt (Oldb)",
@@ -21637,7 +21637,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.894351,
       "lng": 10.128667
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Golm",
@@ -21657,7 +21657,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.044903,
       "lng": 8.724714
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gölshausen Industriegebiet",
@@ -21667,7 +21667,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.051806,
       "lng": 8.739879
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Golßen (Niederlausitz)",
@@ -21717,7 +21717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.399118,
       "lng": 9.392136
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gommern",
@@ -21737,7 +21737,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.059708,
       "lng": 8.660279
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gondelsheim Graf-Douglas-Straße",
@@ -21747,7 +21747,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.063286,
       "lng": 8.657124
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gondelsheim Schloßstadion",
@@ -21757,7 +21757,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.06574,
       "lng": 8.662868
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Göppingen",
@@ -21767,7 +21767,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.700022,
       "lng": 9.651969
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Görden",
@@ -21937,7 +21937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.051649,
       "lng": 7.727828
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gotteszell",
@@ -21967,7 +21967,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.737709,
       "lng": 8.774937
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Götz",
@@ -22017,7 +22017,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.162284,
       "lng": 8.490545
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Graben-Neudorf Nord",
@@ -22027,7 +22027,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.177961,
       "lng": 8.494096
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grabow (Meckl)",
@@ -22267,7 +22267,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.550815,
       "lng": 7.65987
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grenzach Sparkasse",
@@ -22277,7 +22277,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.552756,
       "lng": 7.661425
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Greppin",
@@ -22377,7 +22377,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.628427,
       "lng": 8.396005
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grimma ob Bf",
@@ -22457,7 +22457,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.226233,
       "lng": 8.997851
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grombach Kirchhardter Straße",
@@ -22467,7 +22467,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.226116,
       "lng": 8.994777
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gronau (Westf)",
@@ -23067,7 +23067,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.00597,
       "lng": 8.492945
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grötzingen Krappmühlenweg",
@@ -23077,7 +23077,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.005782,
       "lng": 8.512182
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grötzingen Oberausstraße",
@@ -23087,7 +23087,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.00526,
       "lng": 8.504047
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grub (Oberbay)",
@@ -23157,7 +23157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.810356,
       "lng": 9.420029
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grünbach (Vogtl)",
@@ -23237,7 +23237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.604931,
       "lng": 9.745448
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Grünstadt",
@@ -23267,7 +23267,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.4754,
       "lng": 8.460746
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Guben",
@@ -23287,7 +23287,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.577491,
       "lng": 8.881558
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gummersbach",
@@ -23327,7 +23327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.044026,
       "lng": 7.874181
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gundelsdorf",
@@ -23357,7 +23357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.282937,
       "lng": 9.157868
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gundersheim (Rheinhess)",
@@ -23467,7 +23467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.113324,
       "lng": 7.988488
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gutach Freilichtmuseum",
@@ -23477,7 +23477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.271677,
       "lng": 8.198575
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Gutenfürst",
@@ -23787,7 +23787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.361489,
       "lng": 9.261783
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haiger",
@@ -23867,7 +23867,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.542707,
       "lng": 9.326443
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haitz-Höchst",
@@ -23927,7 +23927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.290753,
       "lng": 8.270453
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haldensleben",
@@ -24197,7 +24197,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.61284,
       "lng": 7.611678
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haltingen Zentrum",
@@ -24207,7 +24207,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.614467,
       "lng": 7.613962
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Halver-Oberbrügge",
@@ -25027,7 +25027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.099768,
       "lng": 9.235652
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hangelar Mitte",
@@ -25457,7 +25457,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.744532,
       "lng": 8.975306
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haslach",
@@ -25467,7 +25467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.280037,
       "lng": 8.087972
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hasloch (Main)",
@@ -25477,7 +25477,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.789335,
       "lng": 9.482127
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hasloh",
@@ -25557,7 +25557,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.303792,
       "lng": 9.154209
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haste",
@@ -25647,7 +25647,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.824352,
       "lng": 9.549825
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Haubersbronn Mitte",
@@ -25657,7 +25657,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.830869,
       "lng": 9.548998
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hauenstein (Pfalz)",
@@ -25717,7 +25717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.284928,
       "lng": 8.181666
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hausen (b Düren)",
@@ -25777,7 +25777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.080405,
       "lng": 9.027569
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hausen-Raitbach",
@@ -25787,7 +25787,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.679441,
       "lng": 7.846207
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hausen-Starzeln",
@@ -25797,7 +25797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.301746,
       "lng": 9.068048
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Häuserhof",
@@ -25857,7 +25857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.359601,
       "lng": 8.968771
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hechingen Landesbahn",
@@ -25867,7 +25867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.359053,
       "lng": 8.968151
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hechthausen",
@@ -25887,7 +25887,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.509411,
       "lng": 8.633743
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hedemünden",
@@ -25947,7 +25947,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.706112,
       "lng": 9.09916
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heide (Holst)",
@@ -25977,7 +25977,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.403779,
       "lng": 8.675741
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelberg Orthopädie",
@@ -25987,7 +25987,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.409991,
       "lng": 8.77491
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelberg-Altstadt",
@@ -25997,7 +25997,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.41524,
       "lng": 8.720884
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelberg-Kirchheim/Rohrbach",
@@ -26007,7 +26007,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.379391,
       "lng": 8.675381
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelberg-Pfaffengrund/Wieblingen",
@@ -26017,7 +26017,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.411932,
       "lng": 8.641573
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelberg-Schlierbach/Ziegelhausen",
@@ -26027,7 +26027,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.415312,
       "lng": 8.760563
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelberg-Weststadt/Südstadt",
@@ -26037,7 +26037,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.398323,
       "lng": 8.688748
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelsheim",
@@ -26047,7 +26047,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.101607,
       "lng": 8.649483
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelsheim Marktplatz",
@@ -26057,7 +26057,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.10158,
       "lng": 8.643577
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidelsheim Nord",
@@ -26067,7 +26067,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.105112,
       "lng": 8.645249
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidenau",
@@ -26117,7 +26117,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.680264,
       "lng": 10.156606
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidenheim Voithwerk",
@@ -26127,7 +26127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.669288,
       "lng": 10.155886
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidenheim-Mergelstetten",
@@ -26137,7 +26137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.653099,
       "lng": 10.161028
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidenheim-Schnaitheim",
@@ -26147,7 +26147,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.708607,
       "lng": 10.158646
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heidesheim (Rheinh)",
@@ -26197,7 +26197,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.142597,
       "lng": 9.208351
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Finanzamt",
@@ -26207,7 +26207,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.14053,
       "lng": 9.235013
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Friedensplatz",
@@ -26217,7 +26217,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.141312,
       "lng": 9.228775
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Harmonie",
@@ -26227,7 +26227,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.141573,
       "lng": 9.223058
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Harmonie/Hafenmarktpassage",
@@ -26237,7 +26237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.142705,
       "lng": 9.222438
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Harmonie/Kunsthalle",
@@ -26247,7 +26247,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.14249,
       "lng": 9.222599
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Hbf",
@@ -26257,7 +26257,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.143308,
       "lng": 9.207713
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Industrieplatz",
@@ -26267,7 +26267,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.155317,
       "lng": 9.217889
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Kaufland",
@@ -26277,7 +26277,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.170077,
       "lng": 9.224685
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Neckar-Turm Kurt-Schumacher-Platz",
@@ -26287,7 +26287,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.142651,
       "lng": 9.213754
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Pfühlpark",
@@ -26297,7 +26297,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.139955,
       "lng": 9.241378
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Rathaus",
@@ -26307,7 +26307,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.141941,
       "lng": 9.219058
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Sülmertor",
@@ -26317,7 +26317,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.151605,
       "lng": 9.220595
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Technisches Schulzentrum",
@@ -26327,7 +26327,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.148665,
       "lng": 9.221494
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Theater",
@@ -26337,7 +26337,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.146274,
       "lng": 9.22215
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn Trappensee",
@@ -26347,7 +26347,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.140278,
       "lng": 9.252569
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heilbronn-Böckingen Berufsschulzentrum",
@@ -26357,7 +26357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.140431,
       "lng": 9.182328
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heiligengrabe",
@@ -26467,7 +26467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.851473,
       "lng": 8.985437
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heimersheim",
@@ -26597,7 +26597,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.879856,
       "lng": 7.646197
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Heldrungen",
@@ -26687,7 +26687,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.08575,
       "lng": 8.651335
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Helmstadt (Baden)",
@@ -26697,7 +26697,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.320089,
       "lng": 8.975126
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Helmstedt",
@@ -26747,7 +26747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.867878,
       "lng": 9.032064
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hemmoor",
@@ -26767,7 +26767,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.590332,
       "lng": 8.648863
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Henfenfeld",
@@ -26867,7 +26867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.063946,
       "lng": 9.4146
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herbertingen Ort",
@@ -26877,7 +26877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.053572,
       "lng": 9.433396
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herbertshofen",
@@ -26897,7 +26897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.223864,
       "lng": 7.767641
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herbolzheim (Jagst)",
@@ -26907,7 +26907,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.281364,
       "lng": 9.25977
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herborn (Dillkr)",
@@ -26927,7 +26927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.625691,
       "lng": 10.170053
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herchen",
@@ -27037,7 +27037,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.594157,
       "lng": 10.258957
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hermentingen",
@@ -27047,7 +27047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.200842,
       "lng": 9.217467
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hermsdorf (Dresden)",
@@ -27127,7 +27127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.593995,
       "lng": 8.862662
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herrenberg Zwerchweg",
@@ -27137,7 +27137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.58497,
       "lng": 8.86766
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herrensee",
@@ -27157,7 +27157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.417734,
       "lng": 9.897725
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Herrnburg",
@@ -27207,7 +27207,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.549502,
       "lng": 7.739667
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hervest-Dorsten",
@@ -27337,7 +27337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.536688,
       "lng": 8.398963
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hesepe",
@@ -27417,7 +27417,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.217365,
       "lng": 9.229296
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hettstedt",
@@ -27607,7 +27607,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.73971,
       "lng": 8.348821
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hilpoltstein",
@@ -27647,7 +27647,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.958619,
       "lng": 7.991356
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Himmelstadt",
@@ -27707,7 +27707,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.906329,
       "lng": 8.106256
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hirsau",
@@ -27717,7 +27717,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.734056,
       "lng": 8.736786
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hirschaid",
@@ -27827,7 +27827,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.482304,
       "lng": 8.723042
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hochhausen (Tauber)",
@@ -27837,7 +27837,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.66381,
       "lng": 9.633236
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hochheim (Main)",
@@ -27937,7 +27937,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.133833,
       "lng": 8.41615
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hochstetten (Nahe)",
@@ -27957,7 +27957,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.129545,
       "lng": 8.415719
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hochwang",
@@ -27977,7 +27977,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.317411,
       "lng": 8.537388
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hockeroda",
@@ -28007,7 +28007,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.857122,
       "lng": 7.772657
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hof Hbf",
@@ -28047,7 +28047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.872687,
       "lng": 10.11441
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Höfen (Enz) Bf",
@@ -28057,7 +28057,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.798562,
       "lng": 8.581039
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Höfen (Enz) Nord",
@@ -28067,7 +28067,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.807704,
       "lng": 8.581722
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hoffenheim",
@@ -28077,7 +28077,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.272033,
       "lng": 8.838409
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hoffnungsthal",
@@ -28137,7 +28137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.814986,
       "lng": 9.025313
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hohegrete",
@@ -28527,7 +28527,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.63752,
       "lng": 9.006948
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Holzgerlingen Buch",
@@ -28537,7 +28537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.626697,
       "lng": 9.024765
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Holzgerlingen Nord",
@@ -28547,7 +28547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.647858,
       "lng": 9.009636
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Holzhau",
@@ -28727,7 +28727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.44169,
       "lng": 8.689179
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Horb-Heiligenfeld",
@@ -28737,7 +28737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.467795,
       "lng": 8.660153
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hörden",
@@ -28747,7 +28747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.781519,
       "lng": 8.345189
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Horka",
@@ -28787,7 +28787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.21189,
       "lng": 8.232941
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Horneburg",
@@ -29027,7 +29027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.507402,
       "lng": 8.135687
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hubertushöhe",
@@ -29087,7 +29087,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.929917,
       "lng": 8.490509
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hufschlag",
@@ -29117,7 +29117,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.048251,
       "lng": 7.78393
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hulb",
@@ -29127,7 +29127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.679365,
       "lng": 8.98301
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hummelberg",
@@ -29137,7 +29137,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.009809,
       "lng": 8.526807
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hundsgrün",
@@ -29227,7 +29227,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.370999,
       "lng": 9.642459
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hüttengrund",
@@ -29247,7 +29247,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.197162,
       "lng": 8.472638
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Huttenheim Kirche",
@@ -29257,7 +29257,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.196874,
       "lng": 8.466013
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Hüttingen",
@@ -29277,7 +29277,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.582623,
       "lng": 8.391277
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ibach",
@@ -29287,7 +29287,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.455111,
       "lng": 8.162735
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ibbenbüren",
@@ -29397,7 +29397,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.493428,
       "lng": 9.812534
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ihringen",
@@ -29407,7 +29407,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.040412,
       "lng": 7.648777
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ilberstedt",
@@ -29457,7 +29457,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.956584,
       "lng": 8.921164
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ilmenau",
@@ -29517,7 +29517,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.936002,
       "lng": 8.729532
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Immendingen Mitte",
@@ -29527,7 +29527,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.937108,
       "lng": 8.735159
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Immendingen Zimmern",
@@ -29537,7 +29537,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.932874,
       "lng": 8.714053
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Immenhausen",
@@ -29747,7 +29747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.914325,
       "lng": 8.672316
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Isselhorst-Avenwedde",
@@ -29767,7 +29767,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.660887,
       "lng": 7.542947
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ittersbach Bahnhof",
@@ -29777,7 +29777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.869155,
       "lng": 8.51104
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ittersbach Rathaus",
@@ -29787,7 +29787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.8659,
       "lng": 8.509827
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ittling",
@@ -29807,7 +29807,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.187121,
       "lng": 8.934576
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Itzehoe",
@@ -29827,7 +29827,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.730802,
       "lng": 10.134645
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Iversheim",
@@ -29887,7 +29887,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.031419,
       "lng": 10.098796
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jahnsdorf (Erzgeb)",
@@ -29977,7 +29977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.119841,
       "lng": 7.610627
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jeeser",
@@ -30077,7 +30077,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.654406,
       "lng": 8.573282
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jettenbach",
@@ -30167,7 +30167,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.028183,
       "lng": 8.575223
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jöhlingen West",
@@ -30177,7 +30177,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.030942,
       "lng": 8.569974
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jossa",
@@ -30307,7 +30307,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.326188,
       "lng": 9.038123
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jungnau",
@@ -30317,7 +30317,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.139159,
       "lng": 9.213664
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Jünkerath",
@@ -30697,7 +30697,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.593401,
       "lng": 8.11609
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kappelrodeck Ost",
@@ -30707,7 +30707,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.58692,
       "lng": 8.125834
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kapsweyer",
@@ -30737,7 +30737,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.14417,
       "lng": 8.549119
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlshagen",
@@ -30757,7 +30757,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.993718,
       "lng": 8.396014
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe Bahnhofsvorplatz",
@@ -30767,7 +30767,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.994347,
       "lng": 8.399583
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe Hbf",
@@ -30777,7 +30777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.99351,
       "lng": 8.401848
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe Hbf Südausgang",
@@ -30787,7 +30787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.99219,
       "lng": 8.401543
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe West",
@@ -30797,7 +30797,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.002204,
       "lng": 8.363195
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe-Durlach",
@@ -30807,7 +30807,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.001961,
       "lng": 8.462364
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe-Hagsfeld",
@@ -30817,7 +30817,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.026933,
       "lng": 8.453896
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe-Knielingen",
@@ -30827,7 +30827,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.02669,
       "lng": 8.341171
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlsruhe-Mühlburg",
@@ -30837,7 +30837,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.014555,
       "lng": 8.351122
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Karlstadt (Main)",
@@ -31137,7 +31137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.576655,
       "lng": 7.806556
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kehlen",
@@ -31147,7 +31147,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.683028,
       "lng": 9.54818
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Keitum",
@@ -31237,7 +31237,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.120281,
       "lng": 10.124613
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kelsterbach",
@@ -31327,7 +31327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.194451,
       "lng": 7.764091
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kerkerbach",
@@ -31407,7 +31407,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.479364,
       "lng": 8.973742
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kiebitzhöhe",
@@ -31507,7 +31507,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.31568,
       "lng": 9.06083
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kinding (Altmühltal)",
@@ -31567,7 +31567,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.939163,
       "lng": 9.329059
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirchdorf (Deister)",
@@ -31627,7 +31627,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.528751,
       "lng": 9.139476
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirchhain (Bz Kassel)",
@@ -31657,7 +31657,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.037648,
       "lng": 9.150901
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirchheim (Teck)",
@@ -31667,7 +31667,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.644208,
       "lng": 9.443536
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirchheim (Teck) Ötlingen",
@@ -31677,7 +31677,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.657764,
       "lng": 9.41629
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirchheim (Teck) Süd",
@@ -31687,7 +31687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.640262,
       "lng": 9.451788
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirchheim (Unterfr)",
@@ -31807,7 +31807,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.967869,
       "lng": 7.959157
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirkel",
@@ -31837,7 +31837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.361839,
       "lng": 8.104854
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kirnsulzbach",
@@ -31857,7 +31857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.623057,
       "lng": 8.35568
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kissing",
@@ -31877,7 +31877,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.793532,
       "lng": 9.881922
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kitzingen",
@@ -32017,7 +32017,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.392268,
       "lng": 9.292419
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kleinensiel",
@@ -32077,7 +32077,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.685077,
       "lng": 7.524933
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kleinkötz",
@@ -32127,7 +32127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.966696,
       "lng": 8.554872
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kleinwallstadt",
@@ -32267,7 +32267,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.715174,
       "lng": 9.543766
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kloster Marienthal",
@@ -32337,7 +32337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.52663,
       "lng": 8.399008
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Klotten",
@@ -32367,7 +32367,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.993439,
       "lng": 8.744535
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Knöringen-Essingen",
@@ -32507,7 +32507,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.400817,
       "lng": 9.331962
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kolbermoor",
@@ -32537,7 +32537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.098267,
       "lng": 7.887072
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kollnau",
@@ -32547,7 +32547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.101152,
       "lng": 7.973845
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Köln Airport-Businesspark",
@@ -32837,7 +32837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.13746,
       "lng": 7.802924
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Königs Wusterhausen",
@@ -32857,7 +32857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.962579,
       "lng": 8.608933
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Königsborn",
@@ -32877,7 +32877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.739521,
       "lng": 10.116136
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Königsbrück",
@@ -32897,7 +32897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.13719,
       "lng": 7.658072
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Königshofen (Baden)",
@@ -32907,7 +32907,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.546024,
       "lng": 9.724665
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Königshofen (Kahl)",
@@ -33017,7 +33017,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.659863,
       "lng": 9.179541
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Konstanz Marktstätte",
@@ -33027,7 +33027,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.660213,
       "lng": 9.177276
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Konstanz Schweizer Bahnhof",
@@ -33037,7 +33037,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.65855,
       "lng": 9.17679
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Konstanz-Fürstenberg",
@@ -33047,7 +33047,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.677482,
       "lng": 9.162848
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Konstanz-Petershausen",
@@ -33057,7 +33057,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.674839,
       "lng": 9.171514
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Konstanz-Wollmatingen",
@@ -33067,7 +33067,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.682453,
       "lng": 9.147333
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Konz",
@@ -33137,7 +33137,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.57002,
       "lng": 7.874793
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Körle",
@@ -33157,7 +33157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.826474,
       "lng": 9.121102
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Korntal Gymnasium",
@@ -33167,7 +33167,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.831058,
       "lng": 9.112356
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kornwestheim Pbf",
@@ -33177,7 +33177,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.862215,
       "lng": 9.179964
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Korschenbroich",
@@ -33437,7 +33437,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.594223,
       "lng": 9.598708
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kressbronn Hafen",
@@ -33447,7 +33447,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.587338,
       "lng": 9.598124
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kreuz Konz",
@@ -33727,7 +33727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.640523,
       "lng": 9.803401
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kuchenheim",
@@ -33817,7 +33817,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.278685,
       "lng": 9.684519
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Kupfermühle",
@@ -33837,7 +33837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.834312,
       "lng": 8.255729
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Küps",
@@ -33997,7 +33997,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.473544,
       "lng": 8.602218
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lage (Lippe)",
@@ -34027,7 +34027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.340436,
       "lng": 7.834737
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laineck",
@@ -34337,7 +34337,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.599491,
       "lng": 9.544836
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Langenargen Hafen",
@@ -34347,7 +34347,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.596102,
       "lng": 9.539271
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Langenau (Württ)",
@@ -34357,7 +34357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.493333,
       "lng": 10.125988
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Langenbach (Oberbay)",
@@ -34377,7 +34377,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.70227,
       "lng": 8.355473
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Langendorf",
@@ -34547,7 +34547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.915359,
       "lng": 8.503049
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Langenwang (Schwab)",
@@ -34727,7 +34727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.868885,
       "lng": 10.236565
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauchheim Schule",
@@ -34737,7 +34737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.871483,
       "lng": 10.243064
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauchringen",
@@ -34747,7 +34747,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.629084,
       "lng": 8.322195
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauchringen West",
@@ -34757,7 +34757,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.632778,
       "lng": 8.3081
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauda",
@@ -34767,7 +34767,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.565387,
       "lng": 9.709509
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laudenbach (Bergstr)",
@@ -34777,7 +34777,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.612257,
       "lng": 8.644746
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laudenbach (Württ)",
@@ -34787,7 +34787,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.455422,
       "lng": 9.923102
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laudenbach am Main",
@@ -34907,7 +34907,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.563408,
       "lng": 8.058308
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laufenburg (Baden) Ost",
@@ -34917,7 +34917,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.566159,
       "lng": 8.073688
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauffen (Neckar)",
@@ -34927,7 +34927,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.076518,
       "lng": 9.146137
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauingen",
@@ -34947,7 +34947,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.233303,
       "lng": 9.878389
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laupheim West",
@@ -34957,7 +34957,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.230003,
       "lng": 9.847853
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Laurenburg (Lahn)",
@@ -35017,7 +35017,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.519483,
       "lng": 8.116063
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lauter (Sachs)",
@@ -35147,7 +35147,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.55855,
       "lng": 7.913545
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lehmen",
@@ -35257,7 +35257,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.696427,
       "lng": 9.14291
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leingarten",
@@ -35267,7 +35267,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.145033,
       "lng": 9.121965
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leingarten Mitte",
@@ -35277,7 +35277,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.145609,
       "lng": 9.112742
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leingarten Ost",
@@ -35287,7 +35287,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.144197,
       "lng": 9.130945
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leingarten West",
@@ -35297,7 +35297,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.145995,
       "lng": 9.10565
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leipheim",
@@ -35907,7 +35907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.799686,
       "lng": 9.003919
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leopoldshafen Leopoldstraße",
@@ -35917,7 +35917,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.097193,
       "lng": 8.401102
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leopoldstal",
@@ -36107,7 +36107,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.826163,
       "lng": 10.015834
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Leverkusen Mitte",
@@ -36407,7 +36407,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.416921,
       "lng": 9.006463
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lindau Hafen",
@@ -36537,7 +36537,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.12319,
       "lng": 8.408249
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Linnich Bhf",
@@ -36577,7 +36577,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.579864,
       "lng": 9.371533
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Linz (Rhein)",
@@ -36747,7 +36747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.43467,
       "lng": 8.172246
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lochham",
@@ -36807,7 +36807,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.883433,
       "lng": 8.3418
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lohgarten-Roth",
@@ -36937,7 +36937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.544968,
       "lng": 9.917376
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Loppenhausen",
@@ -36977,7 +36977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.797906,
       "lng": 9.695765
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lorchhausen",
@@ -36997,7 +36997,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.597711,
       "lng": 7.655222
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lörrach Hbf",
@@ -37007,7 +37007,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.614054,
       "lng": 7.665416
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lörrach Museum/Burghof",
@@ -37017,7 +37017,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.607959,
       "lng": 7.661191
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lörrach Schwarzwaldstraße",
@@ -37027,7 +37027,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.624679,
       "lng": 7.672571
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lörrach-Brombach/Hauingen",
@@ -37037,7 +37037,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.637614,
       "lng": 7.695206
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lörrach-Haagen/Messe",
@@ -37047,7 +37047,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.633237,
       "lng": 7.680895
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lörrach-Stetten",
@@ -37057,7 +37057,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.601415,
       "lng": 7.659034
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lorsbach",
@@ -37097,7 +37097,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.418058,
       "lng": 8.453186
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lößnitz ob Bf",
@@ -37137,7 +37137,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.625731,
       "lng": 8.566827
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lövenich",
@@ -37167,7 +37167,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.6614,
       "lng": 9.499242
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Loxstedt",
@@ -37497,7 +37497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.891861,
       "lng": 9.18542
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ludwigschorgast",
@@ -37537,7 +37537,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.815655,
       "lng": 9.053189
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ludwigshafen (Rh) Hbf",
@@ -37867,7 +37867,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.527381,
       "lng": 8.649501
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Lützow",
@@ -38027,7 +38027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.287525,
       "lng": 9.221934
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Magstadt",
@@ -38037,7 +38037,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.736218,
       "lng": 8.96525
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mahlow",
@@ -38067,7 +38067,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.722334,
       "lng": 8.969922
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Maichingen Nord",
@@ -38077,7 +38077,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.72739,
       "lng": 8.979359
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Maikammer-Kirrweiler",
@@ -38307,7 +38307,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.771873,
       "lng": 8.904228
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Malsch",
@@ -38317,7 +38317,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.889533,
       "lng": 8.323858
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Malsch Bahnhof (Industriegebiet)",
@@ -38327,7 +38327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.890441,
       "lng": 8.325548
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Malsch Süd",
@@ -38337,7 +38337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.887591,
       "lng": 8.316235
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Malsfeld",
@@ -38417,7 +38417,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.459782,
       "lng": 8.516362
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim Handelshafen",
@@ -38427,7 +38427,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.492619,
       "lng": 8.453914
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim Hbf",
@@ -38437,7 +38437,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.479296,
       "lng": 8.469531
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Friedrichsfeld",
@@ -38447,7 +38447,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.448671,
       "lng": 8.580122
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Friedrichsfeld Süd",
@@ -38457,7 +38457,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.438145,
       "lng": 8.572383
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Käfertal",
@@ -38467,7 +38467,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.501555,
       "lng": 8.503768
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Luzenberg",
@@ -38477,7 +38477,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.516953,
       "lng": 8.477376
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Neckarau",
@@ -38487,7 +38487,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.455548,
       "lng": 8.494788
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Neckarstadt",
@@ -38497,7 +38497,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.503631,
       "lng": 8.459568
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Rheinau",
@@ -38507,7 +38507,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.424095,
       "lng": 8.534943
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Seckenheim",
@@ -38517,7 +38517,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.450963,
       "lng": 8.538107
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mannheim-Waldhof",
@@ -38527,7 +38527,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.525664,
       "lng": 8.482598
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marbach (b Münsingen)",
@@ -38537,7 +38537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.383243,
       "lng": 9.421585
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marbach (Neckar)",
@@ -38547,7 +38547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.943747,
       "lng": 9.264507
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marbach Ost (Villingen-Schwenningen)",
@@ -38557,7 +38557,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.033679,
       "lng": 8.475883
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marbach West (Villingen-Schwenningen)",
@@ -38567,7 +38567,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.031288,
       "lng": 8.469151
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marbach-Grafeneck",
@@ -38577,7 +38577,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.396205,
       "lng": 9.431536
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marbeck-Heiden",
@@ -38687,7 +38687,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.716818,
       "lng": 9.388639
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marke",
@@ -38707,7 +38707,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.739363,
       "lng": 9.002768
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Markelsheim",
@@ -38717,7 +38717,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.478264,
       "lng": 9.835421
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Markkleeberg",
@@ -38967,7 +38967,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.94394,
       "lng": 10.080161
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Martensdorf",
@@ -39047,7 +39047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.863195,
       "lng": 8.447217
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Marzling",
@@ -39107,7 +39107,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.926137,
       "lng": 9.419535
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mauer (b Heidelberg)",
@@ -39117,7 +39117,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.335803,
       "lng": 8.795549
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Maulbronn West",
@@ -39127,7 +39127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.983327,
       "lng": 8.782029
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Maulburg",
@@ -39137,7 +39137,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.644374,
       "lng": 7.780658
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mausheim",
@@ -39157,7 +39157,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.035913,
       "lng": 8.307983
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Maxhütte-Haidhof",
@@ -39267,7 +39267,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.699496,
       "lng": 9.558526
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Meckenheim (Bz Köln)",
@@ -39297,7 +39297,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.320656,
       "lng": 8.812835
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Medewitz (Mark)",
@@ -39347,7 +39347,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.692161,
       "lng": 9.272624
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mehltheuer",
@@ -39687,7 +39687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.053698,
       "lng": 9.336547
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mengeringhausen",
@@ -39727,7 +39727,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.136233,
       "lng": 8.775062
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Meppen",
@@ -39977,7 +39977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.539727,
       "lng": 9.290153
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Metzingen-Neuhausen",
@@ -39987,7 +39987,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.532643,
       "lng": 9.307107
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Meuselbach-Schwarzmühle",
@@ -40027,7 +40027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.861909,
       "lng": 9.535253
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Michelaubrück",
@@ -40077,7 +40077,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.843616,
       "lng": 9.539128
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Miesbach",
@@ -40347,7 +40347,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.872574,
       "lng": 9.637901
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Möckmühl",
@@ -40357,7 +40357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.32106,
       "lng": 9.358211
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mockrehna",
@@ -40397,7 +40397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.825287,
       "lng": 9.960317
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Möhringen Bahnhof",
@@ -40407,7 +40407,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.957855,
       "lng": 8.769435
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Möhringen Rathaus",
@@ -40417,7 +40417,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.957208,
       "lng": 8.763691
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Moidentin",
@@ -40477,7 +40477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.798445,
       "lng": 8.72928
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mönchengladbach Hbf",
@@ -40697,7 +40697,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.352576,
       "lng": 9.143602
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mosbach West",
@@ -40707,7 +40707,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.346769,
       "lng": 9.134038
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mosbach-Neckarelz",
@@ -40717,7 +40717,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.348486,
       "lng": 9.113093
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mosel",
@@ -40767,7 +40767,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.404304,
       "lng": 9.046528
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Möttingen",
@@ -40857,7 +40857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.876714,
       "lng": 8.274336
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Muggensturm Badesee",
@@ -40867,7 +40867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.879996,
       "lng": 8.286616
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlacker",
@@ -40877,7 +40877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.953195,
       "lng": 8.846104
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlacker Rößlesweg",
@@ -40887,7 +40887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.956341,
       "lng": 8.860145
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlacker Steuler",
@@ -40897,7 +40897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.955127,
       "lng": 8.862348
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlanger",
@@ -40937,7 +40937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.449808,
       "lng": 8.727204
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlen (Oldb)",
@@ -40967,7 +40967,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.813659,
       "lng": 8.804394
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlhausen (Thür)",
@@ -40987,7 +40987,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.029364,
       "lng": 8.885549
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mühlheim (Main)",
@@ -41727,7 +41727,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.855239,
       "lng": 9.09622
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Münchingen Rührberg",
@@ -41737,7 +41737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.849792,
       "lng": 9.095851
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Münchsmünster",
@@ -41777,7 +41777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.237869,
       "lng": 9.645668
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Münnerstadt",
@@ -41797,7 +41797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.409716,
       "lng": 9.490271
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Münster (b Dieburg)",
@@ -41927,7 +41927,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.854911,
       "lng": 7.781952
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Münzesheim",
@@ -41937,7 +41937,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.126075,
       "lng": 8.716003
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Münzesheim Ost",
@@ -41947,7 +41947,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.121491,
       "lng": 8.726215
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Murg (Baden)",
@@ -41957,7 +41957,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.553448,
       "lng": 8.018728
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mürlenbach",
@@ -41997,7 +41997,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.98276,
       "lng": 9.577772
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Mußbach",
@@ -42057,7 +42057,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.555827,
       "lng": 8.728004
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nagold Stadtmitte",
@@ -42067,7 +42067,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.551341,
       "lng": 8.728489
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nagold-Iselshausen",
@@ -42077,7 +42077,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.531538,
       "lng": 8.725891
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nagold-Steinberg",
@@ -42087,7 +42087,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.542001,
       "lng": 8.732723
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Naila",
@@ -42287,7 +42287,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.3071,
       "lng": 8.942271
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckarburken",
@@ -42297,7 +42297,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.378384,
       "lng": 9.16372
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckargemünd",
@@ -42307,7 +42307,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.393675,
       "lng": 8.78842
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckargemünd Altstadt",
@@ -42317,7 +42317,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.39239,
       "lng": 8.802956
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckargerach",
@@ -42327,7 +42327,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.397909,
       "lng": 9.0747
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckarhausen bei Neckarsteinach",
@@ -42357,7 +42357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.188973,
       "lng": 9.220064
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckarsulm Mitte",
@@ -42367,7 +42367,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.193413,
       "lng": 9.222941
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckarsulm Nord",
@@ -42377,7 +42377,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.202097,
       "lng": 9.228676
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckarsulm Süd",
@@ -42387,7 +42387,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.180325,
       "lng": 9.220739
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neckarzimmern",
@@ -42397,7 +42397,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.315963,
       "lng": 9.138604
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neef",
@@ -42447,7 +42447,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.423883,
       "lng": 9.066565
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neidenfels",
@@ -42467,7 +42467,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.320233,
       "lng": 8.890151
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neinstedt",
@@ -42487,7 +42487,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.903367,
       "lng": 9.4154
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nemmenich",
@@ -42527,7 +42527,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.009579,
       "lng": 8.854051
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nennhausen",
@@ -42567,7 +42567,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.841346,
       "lng": 8.964726
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nersingen",
@@ -42797,7 +42797,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.288366,
       "lng": 9.270818
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neudietendorf",
@@ -42827,7 +42827,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.811484,
       "lng": 7.562759
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neuenbürg (Enz)",
@@ -42837,7 +42837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.849145,
       "lng": 8.60086
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neuenbürg (Enz) Eyachbrücke",
@@ -42847,7 +42847,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.817197,
       "lng": 8.577866
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neuenbürg (Enz) Freibad",
@@ -42857,7 +42857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.836937,
       "lng": 8.590325
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neuenbürg (Enz) Süd",
@@ -42867,7 +42867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.844569,
       "lng": 8.598865
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neuendettelsau",
@@ -42937,7 +42937,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.205944,
       "lng": 9.585458
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neufahrn (b Freising)",
@@ -42967,7 +42967,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.558559,
       "lng": 9.374077
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neufra (Hohenz)",
@@ -42977,7 +42977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.246022,
       "lng": 9.186652
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neugersdorf",
@@ -43157,7 +43157,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.292196,
       "lng": 8.53007
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neumark (Sachs)",
@@ -43277,7 +43277,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.689374,
       "lng": 8.494851
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neunkirchen (Kr Siegen)",
@@ -43567,7 +43567,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.910194,
       "lng": 8.210881
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neustadt (Waldnaab)",
@@ -43627,7 +43627,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.859662,
       "lng": 9.32549
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neustift (b Passau)",
@@ -43687,7 +43687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.833827,
       "lng": 9.152501
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Neuzelle",
@@ -43857,7 +43857,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.830721,
       "lng": 9.621037
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Niederbobritzsch",
@@ -44257,7 +44257,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.403428,
       "lng": 9.914922
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Niederstotzingen",
@@ -44267,7 +44267,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.53214,
       "lng": 10.235854
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Niedertrebra",
@@ -44347,7 +44347,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.139779,
       "lng": 8.022962
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Niederwürschnitz",
@@ -44387,7 +44387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.920132,
       "lng": 8.769273
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Niemberg",
@@ -44507,7 +44507,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.701699,
       "lng": 9.613918
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nimburg (Baden)",
@@ -44517,7 +44517,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.10553,
       "lng": 7.760081
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nistertal-Bad Marienberg",
@@ -44747,7 +44747,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.109382,
       "lng": 9.148807
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nordholz",
@@ -44817,7 +44817,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.939247,
       "lng": 7.726192
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nörten-Hardenberg",
@@ -44887,7 +44887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.620279,
       "lng": 8.889792
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nünchritz",
@@ -45167,7 +45167,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.628001,
       "lng": 9.34265
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nürtingen-Roßdorf",
@@ -45177,7 +45177,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.608575,
       "lng": 9.345716
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nürtingen-Vorstadt",
@@ -45187,7 +45187,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.620333,
       "lng": 9.34007
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Nützen",
@@ -45227,7 +45227,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.61405,
       "lng": 8.07918
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberachern Bindfadenfabrik",
@@ -45237,7 +45237,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.60346,
       "lng": 8.093267
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberaichen",
@@ -45247,7 +45247,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.705191,
       "lng": 9.127332
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberammergau",
@@ -45327,7 +45327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.64793,
       "lng": 9.364135
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberbrechen",
@@ -45357,7 +45357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.08397,
       "lng": 8.775008
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberelchingen",
@@ -45397,7 +45397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.729876,
       "lng": 9.32727
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberferrieden",
@@ -45457,7 +45457,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.37322,
       "lng": 8.124163
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberharmersbach-Riersbach",
@@ -45467,7 +45467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.381571,
       "lng": 8.141709
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberhausen Hbf",
@@ -45527,7 +45527,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.52903,
       "lng": 8.076888
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberkirch-Köhlersiedlung",
@@ -45537,7 +45537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.524841,
       "lng": 8.089437
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberkochen",
@@ -45547,7 +45547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.782346,
       "lng": 10.107776
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberkotzau",
@@ -45567,7 +45567,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.910545,
       "lng": 7.715881
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberlahnstein",
@@ -45607,7 +45607,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.554388,
       "lng": 9.470774
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberlichtenau",
@@ -45687,7 +45687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.295382,
       "lng": 8.575637
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberndorf (Wittgenstein)",
@@ -45747,7 +45747,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.140062,
       "lng": 8.686231
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberröblingen",
@@ -45787,7 +45787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.089844,
       "lng": 7.620901
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberschefflenz",
@@ -45797,7 +45797,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.416921,
       "lng": 9.278854
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberschleißheim",
@@ -45887,7 +45887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.746173,
       "lng": 8.347616
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberursel (Taunus)",
@@ -45977,7 +45977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.152525,
       "lng": 8.044581
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oberwinter",
@@ -45997,7 +45997,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.751723,
       "lng": 9.574473
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Obstfelderschmiede",
@@ -46077,7 +46077,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.178986,
       "lng": 8.746198
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Odenheim West",
@@ -46087,7 +46087,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.182231,
       "lng": 8.736382
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oderin",
@@ -46257,7 +46257,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.245749,
       "lng": 9.165383
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Offenbach (Main) Hbf",
@@ -46337,7 +46337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.476479,
       "lng": 7.946724
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Offenburg Kreisschulzentrum",
@@ -46347,7 +46347,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.459786,
       "lng": 7.955192
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Offenhausen",
@@ -46357,7 +46357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.399576,
       "lng": 9.369888
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Offensen (Kr North)",
@@ -46387,7 +46387,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.373503,
       "lng": 8.579017
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ohlstadt",
@@ -46407,7 +46407,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.203212,
       "lng": 9.502703
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Öhringen West",
@@ -46417,7 +46417,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.200137,
       "lng": 9.485804
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Öhringen-Cappel",
@@ -46427,7 +46427,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.201917,
       "lng": 9.526686
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Okarben",
@@ -46497,7 +46497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.981942,
       "lng": 8.750675
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ölbronn-Dürrn",
@@ -46507,7 +46507,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.985808,
       "lng": 8.753677
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Olching",
@@ -46617,7 +46617,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.472002,
       "lng": 8.15976
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oppenheim",
@@ -46647,7 +46647,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.98152,
       "lng": 9.462782
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Oppurg",
@@ -46687,7 +46687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.274194,
       "lng": 7.790276
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ortrand",
@@ -46797,7 +46797,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.429956,
       "lng": 9.422663
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Osterhofen (Nby)",
@@ -46977,7 +46977,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.888526,
       "lng": 8.240582
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ötisheim",
@@ -46987,7 +46987,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.966571,
       "lng": 8.813509
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ottbergen",
@@ -47007,7 +47007,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.792872,
       "lng": 8.338313
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ottendorf (Mittweida)",
@@ -47057,7 +47057,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.566865,
       "lng": 8.15104
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ottenhofen (Oberbay)",
@@ -47217,7 +47217,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.586992,
       "lng": 9.447761
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Owschlag",
@@ -47777,7 +47777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.532347,
       "lng": 8.964672
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pfalzel",
@@ -47817,7 +47817,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.849198,
       "lng": 10.437465
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pforzheim Hbf",
@@ -47827,7 +47827,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.894154,
       "lng": 8.703095
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pforzheim Hbf ZOB",
@@ -47837,7 +47837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.893448,
       "lng": 8.70416
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pforzheim Maihälden",
@@ -47847,7 +47847,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.893389,
       "lng": 8.678159
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pforzheim-Weißenstein",
@@ -47857,7 +47857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.865145,
       "lng": 8.676451
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pfreimd",
@@ -47907,7 +47907,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.922959,
       "lng": 9.255176
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Pfungstadt",
@@ -47927,7 +47927,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.231986,
       "lng": 8.453249
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Philippsburg Marktplatz",
@@ -47937,7 +47937,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.236795,
       "lng": 8.45413
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Philippsheim",
@@ -48247,7 +48247,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.713084,
       "lng": 9.410807
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Plön",
@@ -48267,7 +48267,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.796683,
       "lng": 9.595849
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Plüschow",
@@ -49257,7 +49257,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.735875,
       "lng": 8.968987
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Radolfzell Fähre",
@@ -49267,7 +49267,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.735102,
       "lng": 8.969328
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Raguhn",
@@ -49417,7 +49417,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.512283,
       "lng": 10.190468
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ramsbach Birkhof",
@@ -49427,7 +49427,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.488335,
       "lng": 8.145674
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ramsbach Höfle",
@@ -49437,7 +49437,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.494862,
       "lng": 8.139363
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ramsberg",
@@ -49557,7 +49557,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.860579,
       "lng": 8.215745
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rastatt Beinle",
@@ -49567,7 +49567,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.852147,
       "lng": 8.225066
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rastede",
@@ -49677,7 +49677,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.644847,
       "lng": 8.35141
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Raun",
@@ -49707,7 +49707,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.784336,
       "lng": 9.60607
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rebdorf-Hofmühle",
@@ -49757,7 +49757,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.239991,
       "lng": 9.550903
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rechterfeld",
@@ -49997,7 +49997,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.689185,
       "lng": 9.126316
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reichenbach (Fils)",
@@ -50007,7 +50007,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.707942,
       "lng": 9.463744
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reichenbach (Oberlausitz)",
@@ -50037,7 +50037,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.920465,
       "lng": 8.47965
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reichenberg (Unterfr)",
@@ -50087,7 +50087,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.728577,
       "lng": 9.527388
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reifland-Wünschendorf",
@@ -50107,7 +50107,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.216435,
       "lng": 8.920589
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reil",
@@ -50127,7 +50127,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.35397,
       "lng": 8.778838
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reinbek",
@@ -50307,7 +50307,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.592655,
       "lng": 8.007141
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rendsburg",
@@ -50327,7 +50327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.775118,
       "lng": 8.932347
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Renningen Süd",
@@ -50337,7 +50337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.762497,
       "lng": 8.931963
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rennsteig",
@@ -50467,7 +50467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.49603,
       "lng": 9.209196
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reutlingen West",
@@ -50477,7 +50477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.49256,
       "lng": 9.201583
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reutlingen-Betzingen",
@@ -50487,7 +50487,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.49621,
       "lng": 9.175442
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Reutlingen-Sondelfingen",
@@ -50497,7 +50497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.515132,
       "lng": 9.23691
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rhade",
@@ -50587,7 +50587,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.556918,
       "lng": 7.784208
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rheinfelden (D) Busbahnhof",
@@ -50597,7 +50597,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.556658,
       "lng": 7.785487
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rheinhausen",
@@ -50637,7 +50637,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.229155,
       "lng": 8.415961
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rheinweiler",
@@ -50647,7 +50647,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.709528,
       "lng": 7.53127
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rheinzabern Alte Römerstraße",
@@ -50777,7 +50777,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.167848,
       "lng": 8.936554
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rickling",
@@ -50817,7 +50817,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.149595,
       "lng": 9.484923
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Riedrode",
@@ -50857,7 +50857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.154054,
       "lng": 7.749942
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Riegel-Malterdingen",
@@ -50867,7 +50867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.15204,
       "lng": 7.770716
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Riehen",
@@ -50877,7 +50877,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.583212,
       "lng": 7.652319
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rieneck",
@@ -50967,7 +50967,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.038992,
       "lng": 8.782461
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rietschen",
@@ -51017,7 +51017,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.248728,
       "lng": 7.773035
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rinkerode",
@@ -51037,7 +51037,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.036713,
       "lng": 8.673871
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rinnthal",
@@ -51067,7 +51067,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.624725,
       "lng": 9.291025
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ritschenhausen",
@@ -51397,7 +51397,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.360829,
       "lng": 9.341832
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Roisdorf",
@@ -51457,7 +51457,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.815543,
       "lng": 9.319341
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rommerskirchen",
@@ -51567,7 +51567,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.457624,
       "lng": 9.471744
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rosendahl-Holtwick",
@@ -51837,7 +51837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.555467,
       "lng": 8.397354
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rot am See",
@@ -51847,7 +51847,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.249398,
       "lng": 10.030388
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rot-Malsch",
@@ -51857,7 +51857,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.243384,
       "lng": 8.652207
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rötenbach (Baden)",
@@ -51867,7 +51867,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.892827,
       "lng": 8.290058
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rotenbach (Enz)",
@@ -51877,7 +51877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.830159,
       "lng": 8.5789
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rotenburg (Wümme)",
@@ -52027,7 +52027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.23484,
       "lng": 9.694362
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rottenbach",
@@ -52047,7 +52047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.472389,
       "lng": 8.935367
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rottendorf",
@@ -52077,7 +52077,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.165299,
       "lng": 8.639298
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rottweil Göllsdorf",
@@ -52087,7 +52087,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.160013,
       "lng": 8.651074
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rottweil Neufra",
@@ -52097,7 +52097,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.126825,
       "lng": 8.670419
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rottweil Saline",
@@ -52107,7 +52107,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.148705,
       "lng": 8.645609
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rövershagen",
@@ -52157,7 +52157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.881865,
       "lng": 9.530714
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rudersberg Nord",
@@ -52167,7 +52167,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.887609,
       "lng": 9.534157
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rudersberg-Oberndorf",
@@ -52177,7 +52177,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.891717,
       "lng": 9.543694
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rudersdorf (Siegen)",
@@ -52307,7 +52307,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.007292,
       "lng": 8.727015
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Rülzheim Bf",
@@ -52447,7 +52447,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.790013,
       "lng": 8.959548
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ruthenbeck",
@@ -52627,7 +52627,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.961294,
       "lng": 9.063158
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sagard",
@@ -52657,7 +52657,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.689334,
       "lng": 9.736953
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Salem",
@@ -52667,7 +52667,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.757674,
       "lng": 9.297201
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sallach",
@@ -52957,7 +52957,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.138745,
       "lng": 7.620344
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sassenroth",
@@ -52987,7 +52987,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.178689,
       "lng": 10.078157
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sättelstädt",
@@ -53117,7 +53117,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.955949,
       "lng": 7.753888
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schameder",
@@ -53227,7 +53227,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.3717,
       "lng": 9.735263
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schemmerberg",
@@ -53237,7 +53237,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.189174,
       "lng": 9.828868
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schenkenzell",
@@ -53247,7 +53247,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.308425,
       "lng": 8.371887
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Scheppach",
@@ -53257,7 +53257,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.161798,
       "lng": 9.434277
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Scherfede",
@@ -53357,7 +53357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.29122,
       "lng": 8.335094
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schiltach Mitte",
@@ -53367,7 +53367,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.291283,
       "lng": 8.344767
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schimborn",
@@ -53457,7 +53457,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.343546,
       "lng": 9.025205
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schlechtbach",
@@ -53467,7 +53467,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.872552,
       "lng": 9.526363
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schleife",
@@ -53497,7 +53497,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.761594,
       "lng": 7.568935
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schlierbach (Schwalm-Eder-Kreis)",
@@ -53547,7 +53547,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.816868,
       "lng": 8.177127
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schlüchtern",
@@ -53617,7 +53617,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.362352,
       "lng": 9.720377
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schmiechen (Schwab)",
@@ -53637,7 +53637,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.364896,
       "lng": 9.715289
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schmilka-Hirschmühle",
@@ -54037,7 +54037,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.605348,
       "lng": 8.369352
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schönow (Angerm)",
@@ -54117,7 +54117,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.64797,
       "lng": 7.822673
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schopfheim West",
@@ -54127,7 +54127,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.645543,
       "lng": 7.80171
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schopfheim-Schlattholz",
@@ -54137,7 +54137,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.653903,
       "lng": 7.833299
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schopfloch (b Freudenstadt)",
@@ -54147,7 +54147,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.453709,
       "lng": 8.547752
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schopp",
@@ -54177,7 +54177,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.807147,
       "lng": 9.526309
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schorndorf-Hammerschlag",
@@ -54187,7 +54187,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.807605,
       "lng": 9.534561
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schortens-Heidmühle",
@@ -54217,7 +54217,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.95146,
       "lng": 10.117628
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schrobenhausen",
@@ -54237,7 +54237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.346985,
       "lng": 9.975014
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schülldorf",
@@ -54327,7 +54327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.801007,
       "lng": 9.787796
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwäbisch Hall",
@@ -54337,7 +54337,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.108214,
       "lng": 9.733357
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwäbisch Hall-Hessental",
@@ -54347,7 +54347,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.096734,
       "lng": 9.767373
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwabmünchen",
@@ -54367,7 +54367,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.924888,
       "lng": 10.138789
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwaig",
@@ -54397,7 +54397,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.138363,
       "lng": 9.056443
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwaigern (Württ) West",
@@ -54407,7 +54407,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.138813,
       "lng": 9.042474
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwaigern Ost",
@@ -54417,7 +54417,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.140548,
       "lng": 9.069163
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwaikheim",
@@ -54427,7 +54427,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.868328,
       "lng": 9.354588
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwalbach (Taunus) Limes",
@@ -54567,7 +54567,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.598669,
       "lng": 8.383852
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwarzenberg (Erzg)",
@@ -54747,7 +54747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.059766,
       "lng": 8.535859
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwenzin",
@@ -54877,7 +54877,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.383436,
       "lng": 8.578675
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwetzingen-Hirschacker",
@@ -54887,7 +54887,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.406799,
       "lng": 8.556337
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwieberdingen",
@@ -54897,7 +54897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.870575,
       "lng": 9.071392
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Schwindegg",
@@ -54917,7 +54917,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.59061,
       "lng": 7.868743
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sebnitz (Sachs)",
@@ -54957,7 +54957,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.441156,
       "lng": 9.33847
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Seddin",
@@ -55047,7 +55047,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.803411,
       "lng": 8.191411
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Seefeld (Mark)",
@@ -55407,7 +55407,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.378762,
       "lng": 9.380522
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Serrig",
@@ -55427,7 +55427,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.958867,
       "lng": 9.018589
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sersheim Bahnhofstraße",
@@ -55437,7 +55437,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.959083,
       "lng": 9.016378
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Seubersdorf",
@@ -55607,7 +55607,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.297437,
       "lng": 9.305336
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sigmaringen",
@@ -55617,7 +55617,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.086985,
       "lng": 9.221853
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sigmaringendorf",
@@ -55627,7 +55627,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.068899,
       "lng": 9.260938
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Silbach",
@@ -55687,7 +55687,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.703888,
       "lng": 8.999074
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sindorf",
@@ -55707,7 +55707,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.758438,
       "lng": 8.840378
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Singen (Thür)",
@@ -55727,7 +55727,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.759445,
       "lng": 8.872128
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Singen Landesgartenschau",
@@ -55737,7 +55737,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.76074,
       "lng": 8.827047
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Singlis",
@@ -55767,7 +55767,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.250351,
       "lng": 8.875103
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sinsheim Museum/Arena",
@@ -55777,7 +55777,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.241236,
       "lng": 8.899932
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sinzheim",
@@ -55787,7 +55787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.759936,
       "lng": 8.158591
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sinzheim Nord",
@@ -55797,7 +55797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.770534,
       "lng": 8.169495
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sinzig (Rhein)",
@@ -55827,7 +55827,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.795429,
       "lng": 9.095474
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sitzendorf-Unterweißbach",
@@ -55927,7 +55927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.987749,
       "lng": 8.543545
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Söllingen Kapellenstraße",
@@ -55937,7 +55937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.983956,
       "lng": 8.549622
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Söllingen Reetzstraße",
@@ -55947,7 +55947,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.991048,
       "lng": 8.540795
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sollstedt",
@@ -56047,7 +56047,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.366963,
       "lng": 9.618853
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sondernheim",
@@ -56127,7 +56127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.560159,
       "lng": 10.284738
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sonthofen",
@@ -56197,7 +56197,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.068989,
       "lng": 8.740148
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Spaichingen Mitte",
@@ -56207,7 +56207,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.078499,
       "lng": 8.730422
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sparrieshoop",
@@ -56317,7 +56317,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.89765,
       "lng": 8.474625
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sponholz",
@@ -56447,7 +56447,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.123895,
       "lng": 8.342205
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "St Goar",
@@ -56497,7 +56497,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.341268,
       "lng": 8.668711
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "St Ingbert",
@@ -56647,7 +56647,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.783591,
       "lng": 9.410977
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stadtroda",
@@ -56677,7 +56677,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.787653,
       "lng": 8.976223
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stambach",
@@ -56777,7 +56777,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.885024,
       "lng": 7.72834
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Staufen Süd",
@@ -56787,7 +56787,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.877635,
       "lng": 7.72968
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stederdorf (Kr Uelzen)",
@@ -56847,7 +56847,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.298861,
       "lng": 8.056402
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Steinach (Thür)",
@@ -56937,7 +56937,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.641606,
       "lng": 7.741564
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Steinfeld (Oldb)",
@@ -57087,7 +57087,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.235825,
       "lng": 8.907977
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Steinweiler",
@@ -57217,7 +57217,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.022811,
       "lng": 8.872353
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stetten (Schwab)",
@@ -57237,7 +57237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.136952,
       "lng": 9.014904
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stetten-Beinstein",
@@ -57247,7 +57247,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.811965,
       "lng": 9.352368
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stettfeld (Baden)",
@@ -57257,7 +57257,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.179004,
       "lng": 8.643838
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stettfeld-Weiher",
@@ -57267,7 +57267,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.183624,
       "lng": 8.636925
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stift Keppel-Allenbach",
@@ -57287,7 +57287,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.850092,
       "lng": 9.005735
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stockau",
@@ -57477,7 +57477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.13488,
       "lng": 9.127089
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stotternheim",
@@ -57567,7 +57567,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.178747,
       "lng": 9.087716
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Straßkirchen",
@@ -57717,7 +57717,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.747031,
       "lng": 8.45137
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stumsdorf",
@@ -57737,7 +57737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.803938,
       "lng": 9.231696
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Feuersee",
@@ -57747,7 +57747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.772763,
       "lng": 9.166273
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Flughafen/Messe",
@@ -57757,7 +57757,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.690647,
       "lng": 9.192629
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Hbf",
@@ -57767,7 +57767,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.784081,
       "lng": 9.181636
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Hbf (tief)",
@@ -57777,7 +57777,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.783002,
       "lng": 9.179811
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Neckarpark (Mercedes-Benz)",
@@ -57787,7 +57787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.792171,
       "lng": 9.241594
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Nord",
@@ -57797,7 +57797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.803956,
       "lng": 9.18773
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Nürnberger Straße",
@@ -57807,7 +57807,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.806419,
       "lng": 9.234861
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Schwabstraße",
@@ -57817,7 +57817,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.770237,
       "lng": 9.156538
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Stadtmitte",
@@ -57827,7 +57827,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.776224,
       "lng": 9.172925
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart Universität",
@@ -57837,7 +57837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.74584,
       "lng": 9.105398
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Bad Cannstatt",
@@ -57847,7 +57847,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.801376,
       "lng": 9.217529
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Feuerbach",
@@ -57857,7 +57857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.813673,
       "lng": 9.169383
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Münster",
@@ -57867,7 +57867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.820721,
       "lng": 9.215857
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Obertürkheim",
@@ -57877,7 +57877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.762012,
       "lng": 9.267887
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Österfeld",
@@ -57887,7 +57887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.737651,
       "lng": 9.116769
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Rohr",
@@ -57897,7 +57897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.717902,
       "lng": 9.108329
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Sommerrain",
@@ -57907,7 +57907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.815273,
       "lng": 9.248327
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Untertürkheim",
@@ -57917,7 +57917,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.779748,
       "lng": 9.250565
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Vaihingen",
@@ -57927,7 +57927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.72628,
       "lng": 9.113228
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Zazenhausen",
@@ -57937,7 +57937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.836029,
       "lng": 9.199542
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stuttgart-Zuffenhausen",
@@ -57947,7 +57947,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.829413,
       "lng": 9.16674
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Stützerbach",
@@ -58087,7 +58087,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.366487,
       "lng": 8.636745
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sülzbach",
@@ -58097,7 +58097,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.148548,
       "lng": 9.340457
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sulzbach (Inn)",
@@ -58127,7 +58127,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.999534,
       "lng": 9.500618
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sulzbach (Saar)",
@@ -58177,7 +58177,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.002581,
       "lng": 9.501409
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sülzbach Schule",
@@ -58187,7 +58187,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.14506,
       "lng": 9.35146
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sulzbach-Rosenberg",
@@ -58237,7 +58237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.108169,
       "lng": 8.85254
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Sünching",
@@ -58257,7 +58257,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.683644,
       "lng": 9.76028
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Syke",
@@ -58327,7 +58327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.921607,
       "lng": 9.125831
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tangerhütte",
@@ -58387,7 +58387,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.994954,
       "lng": 10.096917
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tannroda",
@@ -58457,7 +58457,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.623628,
       "lng": 9.658298
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tauberfeld",
@@ -58637,7 +58637,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.128425,
       "lng": 7.825226
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Teschenhagen",
@@ -58907,7 +58907,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.635475,
       "lng": 8.271999
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Timmendorferstrand",
@@ -58927,7 +58927,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.903398,
       "lng": 8.155067
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tittmoning-Wiesmühl",
@@ -58947,7 +58947,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.828851,
       "lng": 7.942877
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Töging (Inn)",
@@ -59247,7 +59247,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.140003,
       "lng": 8.236806
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Triebes",
@@ -59327,7 +59327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.838384,
       "lng": 10.401445
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Trochtelfingen (Hohenz)",
@@ -59337,7 +59337,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.307544,
       "lng": 9.246268
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Trochtelfingen ALB-GOLD",
@@ -59347,7 +59347,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.328849,
       "lng": 9.245917
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Troisdorf",
@@ -59377,7 +59377,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.08765,
       "lng": 8.585318
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Trossingen Stadt",
@@ -59387,7 +59387,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.07405,
       "lng": 8.631208
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Trostberg",
@@ -59407,7 +59407,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.515807,
       "lng": 9.055409
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tübingen West",
@@ -59417,7 +59417,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.52004,
       "lng": 9.038249
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tübingen-Derendingen",
@@ -59427,7 +59427,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.503482,
       "lng": 9.050591
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tübingen-Lustnau",
@@ -59437,7 +59437,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.52405,
       "lng": 9.094872
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tulling",
@@ -59497,7 +59497,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.98058,
       "lng": 8.798542
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tuttlingen Gänsäcker",
@@ -59507,7 +59507,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.964516,
       "lng": 8.781202
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tuttlingen Nord",
@@ -59517,7 +59517,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.990486,
       "lng": 8.822525
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tuttlingen Schulen",
@@ -59527,7 +59527,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.986773,
       "lng": 8.801608
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tuttlingen Zentrum",
@@ -59537,7 +59537,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.985614,
       "lng": 8.809437
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Tutzing",
@@ -59597,7 +59597,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.769171,
       "lng": 9.16265
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Überlingen Hafen",
@@ -59607,7 +59607,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.76625,
       "lng": 9.158848
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Überlingen Therme",
@@ -59617,7 +59617,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.76927,
       "lng": 9.145643
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Überlingen-Nußdorf",
@@ -59627,7 +59627,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.754861,
       "lng": 9.188144
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Übersee",
@@ -59647,7 +59647,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.156746,
       "lng": 8.625554
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ubstadt Salzbrunnenstr",
@@ -59657,7 +59657,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.155191,
       "lng": 8.633024
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ubstadt Uhlandstraße",
@@ -59667,7 +59667,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.162715,
       "lng": 8.628826
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ubstadt-Weiher",
@@ -59677,7 +59677,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.167021,
       "lng": 8.623333
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Uchtspringe",
@@ -59797,7 +59797,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.708706,
       "lng": 9.58508
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Uhldingen-Mühlhofen",
@@ -59807,7 +59807,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.736999,
       "lng": 9.248416
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Uhlerborn",
@@ -59867,7 +59867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.399432,
       "lng": 9.982224
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ulm Ost",
@@ -59877,7 +59877,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.407163,
       "lng": 9.994629
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ulm-Donautal",
@@ -59887,7 +59887,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.366343,
       "lng": 9.940352
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ulm-Söflingen",
@@ -59897,7 +59897,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.402722,
       "lng": 9.958852
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ulzburg Süd",
@@ -59927,7 +59927,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.881168,
       "lng": 8.397884
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Undorf",
@@ -60087,7 +60087,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.265102,
       "lng": 9.222779
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Untergrombach",
@@ -60097,7 +60097,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.087646,
       "lng": 8.54813
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterhaching",
@@ -60117,7 +60117,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.354207,
       "lng": 8.090165
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterhausen (Bay)",
@@ -60147,7 +60147,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.524679,
       "lng": 8.981733
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterjesingen Sandäcker",
@@ -60157,7 +60157,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.523304,
       "lng": 8.98826
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterkochen",
@@ -60167,7 +60167,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.81495,
       "lng": 10.12642
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterlemnitz",
@@ -60187,7 +60187,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.565202,
       "lng": 9.460706
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterloquitz",
@@ -60237,7 +60237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.146346,
       "lng": 8.66899
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unteröwisheim Martin-Luther-Straße",
@@ -60247,7 +60247,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.146481,
       "lng": 8.662023
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterreichenbach",
@@ -60257,7 +60257,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.826456,
       "lng": 8.711338
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Unterschleißheim",
@@ -60327,7 +60327,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.804918,
       "lng": 9.574581
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Urft",
@@ -60397,7 +60397,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.550271,
       "lng": 9.894309
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Ürzig (DB)",
@@ -60527,7 +60527,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.947567,
       "lng": 8.958478
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Vallendar",
@@ -60747,7 +60747,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.160274,
       "lng": 9.199111
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Veringenstadt",
@@ -60757,7 +60757,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.181408,
       "lng": 9.210824
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Vernawahlshausen",
@@ -60847,7 +60847,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.058022,
       "lng": 8.465258
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Villingen-Schwenningen Eisstadion",
@@ -60857,7 +60857,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.052772,
       "lng": 8.528551
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Villingen-Schwenningen Hammerstatt",
@@ -60867,7 +60867,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.06017,
       "lng": 8.546925
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Villmar",
@@ -61247,7 +61247,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.137249,
       "lng": 9.697113
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waffenbrunn",
@@ -61277,7 +61277,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.248185,
       "lng": 8.508317
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waging",
@@ -61337,7 +61337,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.814171,
       "lng": 8.965229
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wahrenholz",
@@ -61357,7 +61357,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.826123,
       "lng": 9.29988
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waibstadt",
@@ -61367,7 +61367,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.300942,
       "lng": 8.919357
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waigolshausen",
@@ -61397,7 +61397,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.202537,
       "lng": 9.658702
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waldershof",
@@ -61427,7 +61427,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.789186,
       "lng": 9.637928
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waldheim",
@@ -61447,7 +61447,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.095759,
       "lng": 7.95726
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Waldkirchen (Erzgeb)",
@@ -61497,7 +61497,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.621371,
       "lng": 8.219529
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Walhausen (Saar)",
@@ -61517,7 +61517,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.010941,
       "lng": 9.152115
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Walkenried",
@@ -61567,7 +61567,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.578026,
       "lng": 9.367541
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wallersdorf",
@@ -61617,7 +61617,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.209154,
       "lng": 10.063118
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wallwitz (Saalkr)",
@@ -61747,7 +61747,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.68923,
       "lng": 9.830576
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wangen (Unstrut)",
@@ -61787,7 +61787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.512319,
       "lng": 9.150452
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wansleben am See",
@@ -61907,7 +61907,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.129927,
       "lng": 9.801604
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wasbek",
@@ -61927,7 +61927,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.04683,
       "lng": 7.687125
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wasseralfingen",
@@ -61937,7 +61937,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.858287,
       "lng": 10.103461
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wasserburg (Bodensee)",
@@ -62237,7 +62237,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.580919,
       "lng": 7.910525
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wehrden",
@@ -62417,7 +62417,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.478461,
       "lng": 9.905717
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil am Rhein",
@@ -62427,7 +62427,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.593972,
       "lng": 7.608415
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil am Rhein Ost",
@@ -62437,7 +62437,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.590628,
       "lng": 7.634781
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil am Rhein Rathaus",
@@ -62447,7 +62447,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.592345,
       "lng": 7.611103
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil am Rhein-Gartenstadt",
@@ -62457,7 +62457,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.588704,
       "lng": 7.616281
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil am Rhein-Pfädlistraße",
@@ -62467,7 +62467,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.589019,
       "lng": 7.626493
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil der Stadt",
@@ -62477,7 +62477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.755378,
       "lng": 8.87264
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil im Schönbuch Röte",
@@ -62487,7 +62487,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.620953,
       "lng": 9.049899
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil im Schönbuch Troppel",
@@ -62497,7 +62497,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.620216,
       "lng": 9.042725
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weil im Schönbuch Untere Halde",
@@ -62507,7 +62507,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.620441,
       "lng": 9.062798
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weilbach (Unterallg)",
@@ -62547,7 +62547,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.800297,
       "lng": 9.501993
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weilerswist",
@@ -62577,7 +62577,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.025103,
       "lng": 8.775952
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weilimdorf",
@@ -62587,7 +62587,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.822096,
       "lng": 9.094287
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weimar",
@@ -62637,7 +62637,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.059276,
       "lng": 8.521441
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weingarten Berg",
@@ -62647,7 +62647,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.816886,
       "lng": 9.616965
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weinheim (Bergstr)",
@@ -62657,7 +62657,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.553306,
       "lng": 8.66552
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weinheim-Sulzbach",
@@ -62667,7 +62667,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.575797,
       "lng": 8.65636
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weinsberg",
@@ -62677,7 +62677,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.148,
       "lng": 9.287025
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weinsberg West",
@@ -62687,7 +62687,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.151164,
       "lng": 9.273137
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weinsberg/Ellhofen Gewerbegebiet",
@@ -62697,7 +62697,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.148755,
       "lng": 9.305552
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weischlitz",
@@ -62737,7 +62737,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.727467,
       "lng": 8.35541
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weisenheim (Sand)",
@@ -62767,7 +62767,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.765971,
       "lng": 9.594384
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Weißenburg (Bay)",
@@ -62977,7 +62977,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.834029,
       "lng": 8.769219
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Welver",
@@ -63027,7 +63027,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.672965,
       "lng": 9.373007
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wennigsen (Deister)",
@@ -63147,7 +63147,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.694242,
       "lng": 9.413899
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wernberg",
@@ -63237,7 +63237,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.762413,
       "lng": 9.512816
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wertheim-Bestenheid",
@@ -63247,7 +63247,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.78618,
       "lng": 9.499935
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Werther",
@@ -63417,7 +63417,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.524976,
       "lng": 9.943696
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Westewitz-Hochweitzschen",
@@ -63437,7 +63437,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.881407,
       "lng": 10.183654
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Westheim (Schwab)",
@@ -63717,7 +63717,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.225954,
       "lng": 8.502465
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wiesenthau",
@@ -63737,7 +63737,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.149789,
       "lng": 9.422115
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wiesloch-Walldorf",
@@ -63747,7 +63747,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.291351,
       "lng": 8.664145
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wiesmühl (Alz)",
@@ -63787,7 +63787,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.625277,
       "lng": 8.742944
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wildeck-Bosserode",
@@ -63837,7 +63837,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.95368,
       "lng": 8.572419
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wilgartswiesen",
@@ -63977,7 +63977,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.142418,
       "lng": 9.358867
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wilmersdorf (Angerm)",
@@ -64117,7 +64117,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.879582,
       "lng": 9.392289
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Winningen (Mosel)",
@@ -64167,7 +64167,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.798427,
       "lng": 9.480994
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Winterberg (Westf)",
@@ -64357,7 +64357,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.618405,
       "lng": 9.846244
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wittingen",
@@ -64477,7 +64477,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.293665,
       "lng": 8.221848
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wolfegg",
@@ -64487,7 +64487,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.824167,
       "lng": 9.808759
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wolfen (Bitterfeld)",
@@ -64877,7 +64877,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.015508,
       "lng": 8.60513
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wössingen Ost",
@@ -64887,7 +64887,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.015787,
       "lng": 8.609985
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wremen",
@@ -65167,7 +65167,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.001758,
       "lng": 8.77784
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wurmlingen Nord",
@@ -65177,7 +65177,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.008662,
       "lng": 8.775269
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Würzbach (Saar)",
@@ -65357,7 +65357,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.662092,
       "lng": 8.363653
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wyhlen",
@@ -65367,7 +65367,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.546329,
       "lng": 7.690918
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wyhlen Hebelschule",
@@ -65377,7 +65377,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.549143,
       "lng": 7.692743
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Wyk auf Föhr",
@@ -65437,7 +65437,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.104753,
       "lng": 8.816665
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zapfendorf",
@@ -65537,7 +65537,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.345101,
       "lng": 8.064708
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zell (Wiesental)",
@@ -65547,7 +65547,7 @@ window.STATIONS_GERMANY = [
       "lat": 47.705627,
       "lng": 7.849147
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zell-Romrod",
@@ -65697,7 +65697,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.178024,
       "lng": 8.677494
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zeutern Ost",
@@ -65707,7 +65707,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.178968,
       "lng": 8.70358
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zeutern Sportplatz",
@@ -65717,7 +65717,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.17806,
       "lng": 8.670059
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zeuthen",
@@ -65817,7 +65817,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.430414,
       "lng": 9.371973
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zimmern (Main-Tauber)",
@@ -65827,7 +65827,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.595357,
       "lng": 9.790511
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zimmersrode",
@@ -65917,7 +65917,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.041068,
       "lng": 8.506006
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zollhaus-Petersthal",
@@ -66057,7 +66057,7 @@ window.STATIONS_GERMANY = [
       "lat": 48.544725,
       "lng": 8.018467
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Züssow",
@@ -66077,7 +66077,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.291657,
       "lng": 9.329113
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zuzenhausen",
@@ -66087,7 +66087,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.297392,
       "lng": 8.821438
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zweibrücken Hbf",
@@ -66177,7 +66177,7 @@ window.STATIONS_GERMANY = [
       "lat": 49.416031,
       "lng": 9.042833
     },
-    "province": "Baden-Wurttemberg"
+    "province": "Baden-Wrttemberg"
   },
   {
     "name": "Zwingenberg (Bergstr)",

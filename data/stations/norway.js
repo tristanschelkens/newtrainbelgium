@@ -27,7 +27,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.84635,
       "lng": 11.315312
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Ålen sentrum bussterminal",
@@ -37,7 +37,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.842056,
       "lng": 11.300604
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Ålen stasjon",
@@ -47,7 +47,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.846367,
       "lng": 11.315089
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Alna stasjon",
@@ -87,7 +87,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.56741,
       "lng": 7.69062
     },
-    "province": "More og Romsdal"
+    "province": "Mre og Romsdal"
   },
   {
     "name": "Åneby bussterminal",
@@ -197,7 +197,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.609463,
       "lng": 11.052053
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Asker bussterminal",
@@ -227,7 +227,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.58153,
       "lng": 11.163291
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Askim stasjon",
@@ -237,7 +237,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.5818,
       "lng": 11.163343
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Atna bussterminal",
@@ -377,7 +377,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.771908,
       "lng": 11.469882
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Bergsgrav stasjon",
@@ -387,7 +387,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.771145,
       "lng": 11.471118
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Berkåk bussterminal",
@@ -397,7 +397,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.823128,
       "lng": 10.01401
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Berkåk stasjon",
@@ -407,7 +407,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.823006,
       "lng": 10.014242
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Billingstad stasjon",
@@ -547,7 +547,7 @@ window.STATIONS_NORWAY = [
       "lat": 67.286545,
       "lng": 14.390263
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Bodø stasjon",
@@ -557,7 +557,7 @@ window.STATIONS_NORWAY = [
       "lat": 67.286354,
       "lng": 14.390762
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Bodung stasjon",
@@ -577,7 +577,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.961082,
       "lng": 10.978874
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Bolstad bussterminal",
@@ -1017,7 +1017,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.513466,
       "lng": 11.303643
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Eidsvoll bussterminal",
@@ -1267,7 +1267,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.20876,
       "lng": 10.95059
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Fredrikstad stasjon",
@@ -1277,7 +1277,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.20888,
       "lng": 10.950623
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Frogner bussterminal",
@@ -1437,7 +1437,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.673782,
       "lng": 11.418698
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Glåmos stasjon",
@@ -1447,7 +1447,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.674526,
       "lng": 11.416541
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Gol bussterminal",
@@ -1537,7 +1537,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.69187,
       "lng": 12.75313
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Grong bussterminal",
@@ -1547,7 +1547,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.45789,
       "lng": 12.337177
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Grong stasjon",
@@ -1557,7 +1557,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.458305,
       "lng": 12.337443
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Grorud bussterminal",
@@ -1607,7 +1607,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.443825,
       "lng": 11.618004
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Gullhella stasjon",
@@ -1707,7 +1707,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.120296,
       "lng": 11.384717
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Halden stasjon",
@@ -1717,7 +1717,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.120358,
       "lng": 11.384059
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Hallingskeid stasjon",
@@ -1737,7 +1737,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.92833,
       "lng": 11.144472
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Haltdalen Coop bussterminal",
@@ -1747,7 +1747,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.92448,
       "lng": 11.152943
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Haltdalen stasjon",
@@ -1757,7 +1757,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.92833,
       "lng": 11.144176
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Hamar bussterminal",
@@ -1857,7 +1857,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.568726,
       "lng": 12.493941
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Hauerseter bussterminal",
@@ -1967,7 +1967,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.460976,
       "lng": 11.103511
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Heia stasjon",
@@ -1977,7 +1977,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.473106,
       "lng": 11.329735
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Heimdal bussterminal",
@@ -1987,7 +1987,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.350872,
       "lng": 10.356465
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Heimdal stasjon",
@@ -1997,7 +1997,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.35093,
       "lng": 10.357636
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Hell bussterminal",
@@ -2007,7 +2007,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.445927,
       "lng": 10.899285
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Hell stasjon",
@@ -2017,7 +2017,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.446007,
       "lng": 10.896624
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Hellvik bussterminal",
@@ -2127,7 +2127,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.41145,
       "lng": 10.794617
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Hommelvik stasjon",
@@ -2137,7 +2137,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.411537,
       "lng": 10.793982
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Høn stasjon",
@@ -2197,7 +2197,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.098667,
       "lng": 10.229866
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Hovin stasjon",
@@ -2207,7 +2207,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.098885,
       "lng": 10.230251
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Høybråten bussterminal",
@@ -2357,7 +2357,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.20713,
       "lng": 12.246194
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Jørstad stasjon",
@@ -2367,7 +2367,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.20661,
       "lng": 12.241623
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Kalvskinnet bussterminal",
@@ -2377,7 +2377,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.430275,
       "lng": 10.379194
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Kambo bussterminal",
@@ -2387,7 +2387,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.477516,
       "lng": 10.693691
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Kambo stasjon",
@@ -2397,7 +2397,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.47781,
       "lng": 10.692471
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Kjelsås bussterminal",
@@ -2497,7 +2497,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.620434,
       "lng": 11.03102
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Knapstad stasjon",
@@ -2507,7 +2507,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.62636,
       "lng": 11.032393
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Kolbotn bussterminal",
@@ -2587,7 +2587,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.303642,
       "lng": 9.605061
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Kongsvoll stasjon",
@@ -2597,7 +2597,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.30705,
       "lng": 9.606088
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Koppang bussterminal",
@@ -2637,7 +2637,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.392063,
       "lng": 11.848486
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Korsegården bussterminal",
@@ -2657,7 +2657,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.976433,
       "lng": 10.561233
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Kråkstad bussterminal",
@@ -2707,7 +2707,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.230263,
       "lng": 10.281705
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Kvål stasjon",
@@ -2717,7 +2717,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.23336,
       "lng": 10.279976
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Kvam bussterminal",
@@ -2757,7 +2757,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.43719,
       "lng": 10.416984
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lademoen stasjon",
@@ -2767,7 +2767,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.437225,
       "lng": 10.416702
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Langhus bussterminal",
@@ -2797,7 +2797,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.9607,
       "lng": 10.979059
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Larvik bussterminal",
@@ -2827,7 +2827,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.6961,
       "lng": 12.714875
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Lassemoen stasjon",
@@ -2837,7 +2837,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.69626,
       "lng": 12.714856
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Leangen bussterminal",
@@ -2847,7 +2847,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.436584,
       "lng": 10.464478
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Leangen stasjon",
@@ -2857,7 +2857,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.437576,
       "lng": 10.461661
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Leirsund bussterminal",
@@ -2887,7 +2887,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.422523,
       "lng": 10.629983
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lensmannslia bussterminal",
@@ -2907,7 +2907,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.19779,
       "lng": 10.301831
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Ler stasjon",
@@ -2917,7 +2917,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.197796,
       "lng": 10.298162
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lerkendal stasjon",
@@ -2927,7 +2927,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.413876,
       "lng": 10.409237
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lesja stasjon",
@@ -2957,7 +2957,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.745102,
       "lng": 11.300767
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Levanger stasjon",
@@ -2967,7 +2967,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.744812,
       "lng": 11.300468
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Lier bussterminal",
@@ -2997,7 +2997,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.439884,
       "lng": 10.432905
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lilleby stasjon",
@@ -3007,7 +3007,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.439884,
       "lng": 10.43238
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lillehammer bussterminal",
@@ -3157,7 +3157,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.4379,
       "lng": 10.417499
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Løten bussterminal",
@@ -3187,7 +3187,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.151604,
       "lng": 10.280762
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lundamo stasjon",
@@ -3197,7 +3197,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.15192,
       "lng": 10.280175
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Lunde stasjon",
@@ -3287,7 +3287,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.417934,
       "lng": 10.382497
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Marienborg stasjon",
@@ -3297,7 +3297,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.41843,
       "lng": 10.38282
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Mariero stasjon",
@@ -3347,7 +3347,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.284603,
       "lng": 10.27728
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Melhus skysstasjon",
@@ -3357,7 +3357,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.28439,
       "lng": 10.27675
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Meråker stasjon",
@@ -3367,7 +3367,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.422756,
       "lng": 11.760273
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Messingslett kryss bussterminal",
@@ -3517,7 +3517,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.432323,
       "lng": 10.657114
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Moss stasjon",
@@ -3527,7 +3527,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.43194,
       "lng": 10.657371
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Movatn bussterminal",
@@ -3587,7 +3587,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.55405,
       "lng": 11.324528
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Mysen stasjon",
@@ -3597,7 +3597,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.553726,
       "lng": 11.324217
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Nærbø bussterminal",
@@ -3627,7 +3627,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.92597,
       "lng": 13.152147
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Namsskogan stasjon",
@@ -3637,7 +3637,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.92586,
       "lng": 13.152432
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Nationaltheatret bussterminal",
@@ -3897,7 +3897,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.593563,
       "lng": 9.695223
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Oppdal stasjon",
@@ -3907,7 +3907,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.59311,
       "lng": 9.694018
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Oppegård bussterminal",
@@ -4137,7 +4137,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.347332,
       "lng": 10.867394
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Råde stasjon",
@@ -4147,7 +4147,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.34739,
       "lng": 10.86621
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Rakkestad stasjon",
@@ -4157,7 +4157,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.427258,
       "lng": 11.339387
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Rånåsfoss stasjon",
@@ -4247,7 +4247,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.807304,
       "lng": 11.379963
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Reitan stasjon",
@@ -4257,7 +4257,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.80743,
       "lng": 11.379186
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Rena bussterminal",
@@ -4337,7 +4337,7 @@ window.STATIONS_NORWAY = [
       "lat": 67.09362,
       "lng": 15.398854
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Rognan E6 bussterminal",
@@ -4357,7 +4357,7 @@ window.STATIONS_NORWAY = [
       "lat": 67.09345,
       "lng": 15.398428
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Rognes bru bussterminal",
@@ -4367,7 +4367,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.00406,
       "lng": 10.455127
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Rognes bussterminal",
@@ -4377,7 +4377,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.00449,
       "lng": 10.4589
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Rognes stasjon",
@@ -4387,7 +4387,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.004704,
       "lng": 10.458553
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Røkland bussterminal",
@@ -4437,7 +4437,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.666344,
       "lng": 11.113135
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Ronglan stasjon",
@@ -4447,7 +4447,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.66629,
       "lng": 11.113325
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Røra bussterminal",
@@ -4457,7 +4457,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.857018,
       "lng": 11.400086
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Røra stasjon",
@@ -4467,7 +4467,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.856827,
       "lng": 11.401494
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Røros bussterminal",
@@ -4477,7 +4477,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.574623,
       "lng": 11.380059
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Røros stasjon",
@@ -4487,7 +4487,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.574745,
       "lng": 11.379087
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Rosenholm bussterminal",
@@ -4527,7 +4527,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.752995,
       "lng": 11.318925
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Røstad stasjon",
@@ -4537,7 +4537,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.752987,
       "lng": 11.319091
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Rotvoll stasjon",
@@ -4547,7 +4547,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.436665,
       "lng": 10.4807
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Røyken bussterminal",
@@ -4577,7 +4577,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.377922,
       "lng": 10.748127
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Rygge stasjon",
@@ -4587,7 +4587,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.377895,
       "lng": 10.747897
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Sagdalen bussterminal",
@@ -4727,7 +4727,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.28574,
       "lng": 11.118062
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Sarpsborg stasjon",
@@ -4737,7 +4737,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.285957,
       "lng": 11.118068
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Seimsgrend stasjon",
@@ -4757,7 +4757,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.388973,
       "lng": 10.372043
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Selsbakk stasjon",
@@ -4767,7 +4767,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.3894,
       "lng": 10.373344
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Singsås bussterminal",
@@ -4777,7 +4777,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.956264,
       "lng": 10.729984
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Singsås stasjon",
@@ -4787,7 +4787,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.95629,
       "lng": 10.729145
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Sinsen T bussterminal",
@@ -4857,7 +4857,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.431194,
       "lng": 10.378787
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Skansen stasjon",
@@ -4867,7 +4867,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.431114,
       "lng": 10.377746
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Skarnes bussterminal",
@@ -4897,7 +4897,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.509056,
       "lng": 10.826619
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Skatval kirke bussterminal",
@@ -4907,7 +4907,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.512276,
       "lng": 10.858471
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Skatval stasjon",
@@ -4917,7 +4917,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.50862,
       "lng": 10.825774
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Skavbakken Buss for tog bussterminal",
@@ -5017,7 +5017,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.705406,
       "lng": 11.194127
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Skogn stasjon",
@@ -5027,7 +5027,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.70514,
       "lng": 11.19399
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Skonseng stasjon",
@@ -5067,7 +5067,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.66537,
       "lng": 10.94672
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Skotbu stasjon",
@@ -5077,7 +5077,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.66571,
       "lng": 10.946047
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Skøyen bussterminal",
@@ -5127,7 +5127,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.58014,
       "lng": 11.262348
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Slitu stasjon",
@@ -5137,7 +5137,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.566933,
       "lng": 11.261982
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Snartemo bussterminal",
@@ -5167,7 +5167,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.24591,
       "lng": 12.381093
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Snåsa stasjon",
@@ -5177,7 +5177,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.245766,
       "lng": 12.380184
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Snippen bussterminal",
@@ -5267,7 +5267,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.91967,
       "lng": 11.428751
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Sparbu stasjon",
@@ -5277,7 +5277,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.918934,
       "lng": 11.428811
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Spikkestad bussterminal",
@@ -5307,7 +5307,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.62084,
       "lng": 11.080385
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Spydeberg stasjon",
@@ -5317,7 +5317,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.62107,
       "lng": 11.079742
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Stabekk bussterminal",
@@ -5407,7 +5407,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.43672,
       "lng": 10.479264
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Stavanger bussterminal",
@@ -5457,7 +5457,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.01261,
       "lng": 11.495423
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Steinkjer stasjon",
@@ -5467,7 +5467,7 @@ window.STATIONS_NORWAY = [
       "lat": 64.01268,
       "lng": 11.494591
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Steinvik bussterminal",
@@ -5497,7 +5497,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.469666,
       "lng": 10.913716
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Stjørdal stasjon",
@@ -5507,7 +5507,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.470154,
       "lng": 10.913654
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Stoa stasjon",
@@ -5567,7 +5567,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.051716,
       "lng": 10.284657
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Støren stasjon",
@@ -5577,7 +5577,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.05148,
       "lng": 10.284855
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Strindheim bussterminal",
@@ -5587,7 +5587,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.435234,
       "lng": 10.457002
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Strømmen bussterminal",
@@ -5707,7 +5707,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.660084,
       "lng": 11.001421
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Tomter stasjon",
@@ -5717,7 +5717,7 @@ window.STATIONS_NORWAY = [
       "lat": 59.65988,
       "lng": 11.002309
     },
-    "province": "Ostfold"
+    "province": "stfold"
   },
   {
     "name": "Tønsberg bussterminal",
@@ -5827,7 +5827,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.454052,
       "lng": 10.917269
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Trondheim lufthavn stasjon",
@@ -5837,7 +5837,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.453903,
       "lng": 10.913887
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Trondheim S",
@@ -5847,7 +5847,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.43627,
       "lng": 10.398983
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Trondheim S bussterminal",
@@ -5857,7 +5857,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.436108,
       "lng": 10.40108
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Tronmo kryss bussterminal",
@@ -5937,7 +5937,7 @@ window.STATIONS_NORWAY = [
       "lat": 62.819363,
       "lng": 11.331011
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Upsete stasjon",
@@ -6107,7 +6107,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.791588,
       "lng": 11.484554
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Verdal stasjon",
@@ -6117,7 +6117,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.79101,
       "lng": 11.484599
     },
-    "province": "Nord-Trondelag"
+    "province": "Nord-Trndelag"
   },
   {
     "name": "Vestby bussterminal",
@@ -6237,7 +6237,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.43839,
       "lng": 10.622669
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Vikhammer stasjon",
@@ -6247,7 +6247,7 @@ window.STATIONS_NORWAY = [
       "lat": 63.43875,
       "lng": 10.623685
     },
-    "province": "Sor-Trondelag"
+    "province": "Sr-Trndelag"
   },
   {
     "name": "Vinstra stasjon",

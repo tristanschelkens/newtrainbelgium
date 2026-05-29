@@ -17,7 +17,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.725268,
       "lng": 18.261855
     },
-    "province": "Komarom-Esztergom"
+    "province": "Komrom-Esztergom"
   },
   {
     "name": "Almasfüzitö felsö",
@@ -27,7 +27,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.731192,
       "lng": 18.218383
     },
-    "province": "Komarom-Esztergom"
+    "province": "Komrom-Esztergom"
   },
   {
     "name": "Alsorönök",
@@ -67,7 +67,7 @@ window.STATIONS_HUNGARY = [
       "lat": 46.962453,
       "lng": 17.901864
     },
-    "province": "Veszprem"
+    "province": "Veszprm"
   },
   {
     "name": "Balatonlelle",
@@ -87,7 +87,7 @@ window.STATIONS_HUNGARY = [
       "lat": 46.670042,
       "lng": 21.081538
     },
-    "province": "Bekescsaba"
+    "province": "Bkscsaba"
   },
   {
     "name": "Bicske also",
@@ -97,7 +97,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.486676,
       "lng": 18.643169
     },
-    "province": "Fejer"
+    "province": "Fejr"
   },
   {
     "name": "Bösarkany",
@@ -107,7 +107,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.685509,
       "lng": 17.234307
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Budaörs",
@@ -247,7 +247,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.644257,
       "lng": 17.424708
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Felsögöd",
@@ -267,7 +267,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.624841,
       "lng": 16.692069
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Fertöszentmiklos",
@@ -277,7 +277,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.600075,
       "lng": 16.86077
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Fertöszeplak-Fertöd",
@@ -287,7 +287,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.61764,
       "lng": 16.850783
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Gyöngyös",
@@ -307,7 +307,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.681985,
       "lng": 17.634795
     },
-    "province": "Gyor"
+    "province": "Gyr"
   },
   {
     "name": "Györ-Gyarvaros",
@@ -317,7 +317,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.684781,
       "lng": 17.661996
     },
-    "province": "Gyor"
+    "province": "Gyr"
   },
   {
     "name": "Györszentivan",
@@ -327,7 +327,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.688556,
       "lng": 17.746306
     },
-    "province": "Gyor"
+    "province": "Gyr"
   },
   {
     "name": "Hajduszoboszlo",
@@ -337,7 +337,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.429658,
       "lng": 21.407792
     },
-    "province": "Hajdu-Bihar"
+    "province": "Hajd-Bihar"
   },
   {
     "name": "Hansagliget",
@@ -347,7 +347,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.720036,
       "lng": 17.216176
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Hegyeshalom",
@@ -357,7 +357,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.913335,
       "lng": 17.146591
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Herceghalom",
@@ -377,7 +377,7 @@ window.STATIONS_HUNGARY = [
       "lat": 46.413427,
       "lng": 20.340575
     },
-    "province": "Hodmezovasarhely"
+    "province": "Hdmezvsrhely"
   },
   {
     "name": "Hortobágy",
@@ -387,7 +387,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.586106,
       "lng": 21.154485
     },
-    "province": "Hajdu-Bihar"
+    "province": "Hajd-Bihar"
   },
   {
     "name": "Horvatnadalja",
@@ -407,7 +407,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.657876,
       "lng": 17.523221
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Jak-Balogunyom",
@@ -427,7 +427,7 @@ window.STATIONS_HUNGARY = [
       "lat": 48.489936,
       "lng": 20.694642
     },
-    "province": "Borsod-Abauj-Zemplen"
+    "province": "Borsod-Abaj-Zempln"
   },
   {
     "name": "Karcag",
@@ -437,7 +437,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.303359,
       "lng": 20.929404
     },
-    "province": "Jasz-Nagykun-Szolnok"
+    "province": "Jsz-Nagykun-Szolnok"
   },
   {
     "name": "Kecskemét",
@@ -447,7 +447,7 @@ window.STATIONS_HUNGARY = [
       "lat": 46.913848,
       "lng": 19.700857
     },
-    "province": "Kecskemet"
+    "province": "Kecskemt"
   },
   {
     "name": "Keszthely",
@@ -457,7 +457,7 @@ window.STATIONS_HUNGARY = [
       "lat": 46.757696,
       "lng": 17.247324
     },
-    "province": "Veszprem"
+    "province": "Veszprm"
   },
   {
     "name": "Kimle-Karolyhaza",
@@ -467,7 +467,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.804355,
       "lng": 17.341621
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Körmend",
@@ -487,7 +487,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.756263,
       "lng": 17.425562
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Level",
@@ -497,7 +497,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.889861,
       "lng": 17.192481
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Lövö",
@@ -507,7 +507,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.509923,
       "lng": 16.77735
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Miskolc Tiszai pu",
@@ -527,7 +527,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.852897,
       "lng": 17.160596
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Nagykanizsa",
@@ -557,7 +557,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.705357,
       "lng": 17.87193
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Ötteveny",
@@ -567,7 +567,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.719677,
       "lng": 17.488783
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Pécs",
@@ -577,7 +577,7 @@ window.STATIONS_HUNGARY = [
       "lat": 46.066228,
       "lng": 18.22535
     },
-    "province": "Pecs"
+    "province": "Pcs"
   },
   {
     "name": "Petöhaza",
@@ -587,7 +587,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.59577,
       "lng": 16.889598
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Pinnye",
@@ -597,7 +597,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.600264,
       "lng": 16.768351
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Porpac",
@@ -617,7 +617,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.592911,
       "lng": 17.16145
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Ratot",
@@ -667,7 +667,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.547363,
       "lng": 16.748998
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Szar",
@@ -677,7 +677,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.485238,
       "lng": 18.526713
     },
-    "province": "Fejer"
+    "province": "Fejr"
   },
   {
     "name": "Szarföld",
@@ -687,7 +687,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.58936,
       "lng": 17.122877
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Szeged",
@@ -707,7 +707,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.183327,
       "lng": 18.425944
     },
-    "province": "Szekesfehervar"
+    "province": "Szkesfehrvr"
   },
   {
     "name": "Szolnok",
@@ -737,7 +737,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.735282,
       "lng": 18.178606
     },
-    "province": "Komarom-Esztergom"
+    "province": "Komrom-Esztergom"
   },
   {
     "name": "Tatabanya",
@@ -747,7 +747,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.585266,
       "lng": 18.393141
     },
-    "province": "Tatabanya"
+    "province": "Tatabnya"
   },
   {
     "name": "Tormasliget",
@@ -757,7 +757,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.430341,
       "lng": 16.781638
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Törökbalint",
@@ -777,7 +777,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.169933,
       "lng": 20.412965
     },
-    "province": "Jasz-Nagykun-Szolnok"
+    "province": "Jsz-Nagykun-Szolnok"
   },
   {
     "name": "Tovaroskert",
@@ -787,7 +787,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.647008,
       "lng": 18.348134
     },
-    "province": "Komarom-Esztergom"
+    "province": "Komrom-Esztergom"
   },
   {
     "name": "Ujker",
@@ -797,7 +797,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.45819,
       "lng": 16.786627
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Ujszeged",
@@ -837,7 +837,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.587113,
       "lng": 17.099847
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   },
   {
     "name": "Veszpremvarsany",
@@ -847,7 +847,7 @@ window.STATIONS_HUNGARY = [
       "lat": 47.443537,
       "lng": 17.818759
     },
-    "province": "Veszprem"
+    "province": "Veszprm"
   },
   {
     "name": "Vitnyed-Csermajor",
@@ -857,6 +857,6 @@ window.STATIONS_HUNGARY = [
       "lat": 47.582268,
       "lng": 16.98634
     },
-    "province": "Gyor-Moson-Sopron"
+    "province": "Gyr-Moson-Sopron"
   }
 ];

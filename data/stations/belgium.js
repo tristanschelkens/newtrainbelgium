@@ -87,7 +87,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.546227,
       "lng": 5.321191
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Ampsin",
@@ -97,7 +97,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.539296,
       "lng": 5.289756
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Andenne",
@@ -117,7 +117,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.8179,
       "lng": 4.2918
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Angleur",
@@ -127,7 +127,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.612882,
       "lng": 5.599524
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Ans",
@@ -137,7 +137,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.661028,
       "lng": 5.509686
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Anseremme",
@@ -178,6 +178,16 @@ window.STATIONS_BELGIUM = [
       "lng": 4.421005
     },
     "province": "Antwerp"
+  },
+  {
+    "name": "Antwerp-Linkeroever",
+    "slug": "antwerp-linkeroever",
+    "country": "Belgium",
+    "province": "Antwerp",
+    "coordinates": {
+      "lat": 51.2107,
+      "lng": 4.3776
+    }
   },
   {
     "name": "Antwerp-Luchtbal",
@@ -237,7 +247,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.809722,
       "lng": 4.398333
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Archennes",
@@ -337,7 +347,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.472848,
       "lng": 5.672993
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Baasrode-South",
@@ -407,7 +417,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.522918,
       "lng": 5.191674
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Basse-Wavre",
@@ -607,7 +617,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.658179,
       "lng": 5.457387
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Bilzen",
@@ -677,7 +687,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.685326,
       "lng": 5.28598
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Bockstael",
@@ -687,7 +697,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.879286,
       "lng": 4.348963
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Boechout",
@@ -707,7 +717,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.794482,
       "lng": 4.408184
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Bokrijk",
@@ -757,7 +767,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.801835,
       "lng": 4.393567
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Boortmeerbeek",
@@ -777,7 +787,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.876742,
       "lng": 4.409092
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Bornem",
@@ -847,7 +857,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.644506,
       "lng": 5.612648
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Brugelette",
@@ -897,7 +907,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.845496,
       "lng": 4.357062
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-Chapelle",
@@ -907,7 +917,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.841226,
       "lng": 4.34863
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-Congrès",
@@ -917,7 +927,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.851519,
       "lng": 4.362204
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-Luxembourg",
@@ -927,7 +937,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.838808,
       "lng": 4.373998
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-North",
@@ -937,7 +947,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.860238,
       "lng": 4.361458
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-Schuman",
@@ -947,7 +957,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.843123,
       "lng": 4.380371
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-South",
@@ -957,7 +967,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.835374,
       "lng": 4.335695
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Brussels-West",
@@ -967,7 +977,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.849226,
       "lng": 4.321303
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Buda",
@@ -1147,7 +1157,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.60792,
       "lng": 5.616433
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Ciney",
@@ -1167,7 +1177,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.456766,
       "lng": 5.567118
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Comines",
@@ -1187,7 +1197,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.390732,
       "lng": 5.880806
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Couillet",
@@ -1307,7 +1317,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.818456,
       "lng": 4.403914
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Denderleeuw",
@@ -1397,7 +1407,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.616244,
       "lng": 5.936494
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Drongen",
@@ -1517,7 +1527,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.582831,
       "lng": 5.402714
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Eppegem",
@@ -1607,7 +1617,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.530577,
       "lng": 5.572781
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Essen",
@@ -1637,7 +1647,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.82136,
       "lng": 4.390538
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Eupen",
@@ -1647,7 +1657,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.635364,
       "lng": 6.037155
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Evere",
@@ -1657,7 +1667,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.867555,
       "lng": 4.400902
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Evergem",
@@ -1717,7 +1727,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.664031,
       "lng": 5.398669
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Flawinne",
@@ -1737,7 +1747,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.605079,
       "lng": 5.480552
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Flemalle-Haute",
@@ -1747,7 +1757,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.594715,
       "lng": 5.456227
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Fleurus",
@@ -1837,7 +1847,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.565059,
       "lng": 5.724186
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Frameries",
@@ -1857,7 +1867,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.525723,
       "lng": 5.822223
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Franière",
@@ -2007,7 +2017,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.829929,
       "lng": 4.37866
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Ghent-Dampoort",
@@ -2047,7 +2057,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.750651,
       "lng": 5.535188
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Godarville",
@@ -2237,7 +2247,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.428226,
       "lng": 5.533741
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Hamont",
@@ -2287,7 +2297,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.888644,
       "lng": 4.419888
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Haren-South",
@@ -2297,7 +2307,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.889858,
       "lng": 4.416418
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Hasselt",
@@ -2317,7 +2327,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.553742,
       "lng": 5.330612
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Haversin",
@@ -2427,7 +2437,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.718209,
       "lng": 6.041335
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Herne",
@@ -2457,7 +2467,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.660606,
       "lng": 5.622483
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Herzele",
@@ -2557,7 +2567,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.539764,
       "lng": 5.573518
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Houraing",
@@ -2617,7 +2627,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.527026,
       "lng": 5.233456
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Iddergem",
@@ -2727,7 +2737,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.618464,
       "lng": 5.497892
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Jemeppe-sur-Sambre",
@@ -2747,7 +2757,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.880886,
       "lng": 4.328593
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Jurbise",
@@ -2767,7 +2777,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.544717,
       "lng": 5.809935
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Kalmthout",
@@ -3047,7 +3057,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.599578,
       "lng": 5.46723
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Lembeek",
@@ -3157,7 +3167,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.640506,
       "lng": 5.561958
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Liege-Guillemins",
@@ -3167,7 +3177,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.624297,
       "lng": 5.566667
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Liege-Saint-Lambert",
@@ -3177,7 +3187,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.646484,
       "lng": 5.570714
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Lier",
@@ -3207,7 +3217,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.698226,
       "lng": 5.568457
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Ligny",
@@ -3537,7 +3547,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.855096,
       "lng": 4.394214
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Melkouwen",
@@ -3617,7 +3627,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.838862,
       "lng": 4.399977
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Méry",
@@ -3627,7 +3637,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.547539,
       "lng": 5.587299
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Messancy",
@@ -3657,7 +3667,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.69303,
       "lng": 5.599803
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Moensberg",
@@ -3667,7 +3677,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.778634,
       "lng": 4.331542
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Mol",
@@ -3697,7 +3707,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.669946,
       "lng": 5.367252
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Mons",
@@ -3887,7 +3897,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.571963,
       "lng": 5.742084
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Neufchâteau",
@@ -4147,7 +4157,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.568179,
       "lng": 5.80615
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Pepinster-Cité",
@@ -4157,7 +4167,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.563405,
       "lng": 5.804397
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Péruwelz",
@@ -4217,7 +4227,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.619705,
       "lng": 5.510135
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Poperinge",
@@ -4237,7 +4247,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.509048,
       "lng": 5.57848
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Profondsart",
@@ -4317,7 +4327,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.678773,
       "lng": 5.320679
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Rhisnes",
@@ -4337,7 +4347,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.485037,
       "lng": 5.585968
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Rixensart",
@@ -4447,7 +4457,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.878405,
       "lng": 4.378654
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Scheldewindeke",
@@ -4527,7 +4537,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.610707,
       "lng": 5.555729
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Serskamp",
@@ -4557,7 +4567,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.863169,
       "lng": 4.330634
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Sinaai",
@@ -4577,7 +4587,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.872661,
       "lng": 4.290119
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Sint-Denijs-Boekel",
@@ -4617,7 +4627,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.794042,
       "lng": 4.361862
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Sint-Joris-Weert",
@@ -4717,7 +4727,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.49008,
       "lng": 5.855501
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Spa-Géronstère",
@@ -4727,7 +4737,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.489307,
       "lng": 5.866207
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Statte",
@@ -4737,7 +4747,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.528132,
       "lng": 5.22
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Stockem",
@@ -4817,7 +4827,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.536159,
       "lng": 5.815031
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Thieu",
@@ -4887,7 +4897,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.570588,
       "lng": 5.584153
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Tilly",
@@ -4937,7 +4947,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.872806,
       "lng": 4.342347
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Tournai",
@@ -4957,7 +4967,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.36905,
       "lng": 5.87303
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Trooz",
@@ -4967,7 +4977,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.573195,
       "lng": 5.688715
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Tubize",
@@ -4997,7 +5007,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.791525,
       "lng": 4.332279
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Ukkel-Stalle",
@@ -5007,7 +5017,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.802465,
       "lng": 4.32382
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Veltem",
@@ -5037,7 +5047,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.588135,
       "lng": 5.854917
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Verviers-Palais",
@@ -5047,7 +5057,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.590921,
       "lng": 5.865335
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Veurne",
@@ -5147,7 +5157,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.737859,
       "lng": 5.692652
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Vivier d’Oie",
@@ -5157,7 +5167,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.79601,
       "lng": 4.372658
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Viville",
@@ -5177,7 +5187,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.661028,
       "lng": 5.43014
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Vorst-East",
@@ -5187,7 +5197,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.809917,
       "lng": 4.321042
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Vorst-South",
@@ -5197,7 +5207,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.809081,
       "lng": 4.309788
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Waarschoot",
@@ -5237,7 +5247,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.69454,
       "lng": 5.24952
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Waterloo",
@@ -5257,7 +5267,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.809296,
       "lng": 4.399851
     },
-    "province": "Brussels-Capital Region"
+    "province": "Brussels Capital"
   },
   {
     "name": "Wavre",
@@ -5287,7 +5297,7 @@ window.STATIONS_BELGIUM = [
       "lat": 50.659509,
       "lng": 5.975021
     },
-    "province": "Liege"
+    "province": "Lige"
   },
   {
     "name": "Welle",

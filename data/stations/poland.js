@@ -387,7 +387,7 @@ window.STATIONS_POLAND = [
       "lat": 50.874207,
       "lng": 20.618117
     },
-    "province": "Swietokrzyskie Voivodeship"
+    "province": "witokrzyskie Voivodeship"
   },
   {
     "name": "Kołobrzeg",
@@ -407,7 +407,7 @@ window.STATIONS_POLAND = [
       "lat": 51.744606,
       "lng": 19.818994
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Konin",
@@ -517,7 +517,7 @@ window.STATIONS_POLAND = [
       "lat": 52.226958,
       "lng": 19.348615
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Laskowice Pomorskie",
@@ -567,7 +567,7 @@ window.STATIONS_POLAND = [
       "lat": 51.726248,
       "lng": 19.484457
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Łódź Fabryczna",
@@ -577,7 +577,7 @@ window.STATIONS_POLAND = [
       "lat": 51.769151,
       "lng": 19.469028
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Łódź Kaliska",
@@ -587,7 +587,7 @@ window.STATIONS_POLAND = [
       "lat": 51.757416,
       "lng": 19.430884
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Lodz Widzew",
@@ -597,7 +597,7 @@ window.STATIONS_POLAND = [
       "lat": 51.763088,
       "lng": 19.544463
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Lubań Śląski",
@@ -807,7 +807,7 @@ window.STATIONS_POLAND = [
       "lat": 50.933896,
       "lng": 21.376707
     },
-    "province": "Swietokrzyskie Voivodeship"
+    "province": "witokrzyskie Voivodeship"
   },
   {
     "name": "Oświęcim",
@@ -837,7 +837,7 @@ window.STATIONS_POLAND = [
       "lat": 51.40992,
       "lng": 19.684623
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Polanica Zdrój",
@@ -937,7 +937,7 @@ window.STATIONS_POLAND = [
       "lat": 51.074505,
       "lng": 19.437572
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Rudna Gwizdanow",
@@ -1017,7 +1017,7 @@ window.STATIONS_POLAND = [
       "lat": 51.597659,
       "lng": 18.714984
     },
-    "province": "Lodz Voivodeship"
+    "province": "d Voivodeship"
   },
   {
     "name": "Skarżysko Kamienna",
@@ -1427,7 +1427,7 @@ window.STATIONS_POLAND = [
       "lat": 50.858108,
       "lng": 19.947
     },
-    "province": "Swietokrzyskie Voivodeship"
+    "province": "witokrzyskie Voivodeship"
   },
   {
     "name": "Wrocław Airport",

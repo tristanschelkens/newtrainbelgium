@@ -87,7 +87,7 @@ window.STATIONS_FINLAND = [
       "lat": 60.976817,
       "lng": 25.657992
     },
-    "province": "Paijanne Tavastia"
+    "province": "Pijnne Tavastia"
   },
   {
     "name": "Lappeenranta",

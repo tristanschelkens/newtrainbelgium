@@ -217,7 +217,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.3027,
       "lng": -6.17833
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Booterstown",
@@ -227,7 +227,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.3099,
       "lng": -6.19498
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Bridgetown",
@@ -527,7 +527,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.22,
       "lng": -6.1101
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Crusheen",
@@ -557,7 +557,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2756,
       "lng": -6.10333
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Devon Road",
@@ -727,7 +727,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2951,
       "lng": -6.13498
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Dundalk",
@@ -847,7 +847,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2812,
       "lng": -6.12289
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Glenflesk",
@@ -1057,7 +1057,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2557,
       "lng": -6.11317
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Killora",
@@ -1457,7 +1457,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2954,
       "lng": -6.15206
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Sandycove & Glasthule",
@@ -1467,7 +1467,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2878,
       "lng": -6.12712
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Sandymount",
@@ -1487,7 +1487,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2991,
       "lng": -6.16512
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Shankill",
@@ -1497,7 +1497,7 @@ window.STATIONS_IRELAND = [
       "lat": 53.2364,
       "lng": -6.11691
     },
-    "province": "Dun Laoghaire-Rathdown"
+    "province": "Dn LaoghaireRathdown"
   },
   {
     "name": "Shannon Airport",

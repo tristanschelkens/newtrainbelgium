@@ -3,13 +3,13 @@
     "iso2": "AL",
     "countryName": "Albania",
     "fileName": "albania.js",
-    "count": 1
+    "count": 31
   },
   {
     "iso2": "AD",
     "countryName": "Andorra",
     "fileName": "andorra.js",
-    "count": 2
+    "count": 0
   },
   {
     "iso2": "AT",
@@ -21,7 +21,7 @@
     "iso2": "BY",
     "countryName": "Belarus",
     "fileName": "belarus.js",
-    "count": 1
+    "count": 509
   },
   {
     "iso2": "BE",
@@ -33,7 +33,7 @@
     "iso2": "BA",
     "countryName": "Bosnia and Herzegovina",
     "fileName": "bosnia-and-herzegovina.js",
-    "count": 7
+    "count": 98
   },
   {
     "iso2": "BG",
@@ -63,7 +63,7 @@
     "iso2": "EE",
     "countryName": "Estonia",
     "fileName": "estonia.js",
-    "count": 1
+    "count": 177
   },
   {
     "iso2": "FI",
@@ -87,7 +87,7 @@
     "iso2": "GR",
     "countryName": "Greece",
     "fileName": "greece.js",
-    "count": 1
+    "count": 419
   },
   {
     "iso2": "HU",
@@ -111,19 +111,19 @@
     "iso2": "LV",
     "countryName": "Latvia",
     "fileName": "latvia.js",
-    "count": 2
+    "count": 496
   },
   {
     "iso2": "LI",
     "countryName": "Liechtenstein",
     "fileName": "liechtenstein.js",
-    "count": 2
+    "count": 4
   },
   {
     "iso2": "LT",
     "countryName": "Lithuania",
     "fileName": "lithuania.js",
-    "count": 2
+    "count": 605
   },
   {
     "iso2": "LU",
@@ -135,7 +135,7 @@
     "iso2": "MT",
     "countryName": "Malta",
     "fileName": "malta.js",
-    "count": 1
+    "count": 0
   },
   {
     "iso2": "ME",
@@ -225,13 +225,13 @@
     "iso2": "TR",
     "countryName": "Turkey",
     "fileName": "turkey.js",
-    "count": 3
+    "count": 1452
   },
   {
     "iso2": "UA",
     "countryName": "Ukraine",
     "fileName": "ukraine.js",
-    "count": 25
+    "count": 2250
   },
   {
     "iso2": "GB",

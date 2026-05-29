@@ -27,7 +27,7 @@ window.STATIONS_MONTENEGRO = [
       "lat": 42.819633,
       "lng": 19.537407
     },
-    "province": "Kolasin"
+    "province": "Kolain"
   },
   {
     "name": "Mojkovac",
@@ -47,7 +47,7 @@ window.STATIONS_MONTENEGRO = [
       "lat": 42.769697,
       "lng": 18.945015
     },
-    "province": "Niksic"
+    "province": "Niki"
   },
   {
     "name": "Podgorica",

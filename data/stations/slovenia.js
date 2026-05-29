@@ -37,7 +37,7 @@ window.STATIONS_SLOVENIA = [
       "lat": 45.898804,
       "lng": 15.654552
     },
-    "province": "Brezice"
+    "province": "Breice"
   },
   {
     "name": "Hrpelje-Kozina",
@@ -137,7 +137,7 @@ window.STATIONS_SLOVENIA = [
       "lat": 46.478195,
       "lng": 15.682021
     },
-    "province": "Hoce-Slivnica"
+    "province": "Hoe-Slivnica"
   },
   {
     "name": "Most na Soci",
@@ -197,7 +197,7 @@ window.STATIONS_SLOVENIA = [
       "lat": 46.123831,
       "lng": 15.202907
     },
-    "province": "Lasko"
+    "province": "Lako"
   },
   {
     "name": "Secovlje Portorož Airport",
@@ -227,6 +227,6 @@ window.STATIONS_SLOVENIA = [
       "lat": 46.085267,
       "lng": 15.170708
     },
-    "province": "Radece"
+    "province": "Radee"
   }
 ];

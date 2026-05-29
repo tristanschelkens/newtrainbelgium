@@ -7,7 +7,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.720146,
       "lng": 18.251766
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Borsky Mikulas",
@@ -57,7 +57,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.444167,
       "lng": 18.786389
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Chynorany",
@@ -67,7 +67,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.607838,
       "lng": 18.275168
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Devinska Nova Ves",
@@ -87,7 +87,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.725554,
       "lng": 18.754792
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Holic nad Moravou",
@@ -107,7 +107,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.792764,
       "lng": 18.881608
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Jesenske",
@@ -117,7 +117,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.299418,
       "lng": 20.061379
     },
-    "province": "Banska Bystrica"
+    "province": "Bansk Bystrica"
   },
   {
     "name": "Kapusany pri Presove",
@@ -127,7 +127,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.044004,
       "lng": 21.320624
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Kežmarok",
@@ -137,7 +137,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.139443,
       "lng": 20.424052
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Košice",
@@ -147,7 +147,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.722918,
       "lng": 21.26872
     },
-    "province": "Kosice"
+    "province": "Koice"
   },
   {
     "name": "Kozarovce",
@@ -167,7 +167,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.153043,
       "lng": 19.130024
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Krasno nad Kysucou",
@@ -177,7 +177,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.379283,
       "lng": 18.8357
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Kuty",
@@ -197,7 +197,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.852778,
       "lng": 21.223889
     },
-    "province": "Kosice"
+    "province": "Koice"
   },
   {
     "name": "Liptovsky-Mikuláš",
@@ -207,7 +207,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.091979,
       "lng": 19.606255
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Luzianky",
@@ -227,7 +227,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.521632,
       "lng": 21.626041
     },
-    "province": "Kosice"
+    "province": "Koice"
   },
   {
     "name": "Moravsky Jan",
@@ -247,7 +247,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.466884,
       "lng": 19.552689
     },
-    "province": "Banska Bystrica"
+    "province": "Bansk Bystrica"
   },
   {
     "name": "Nové Mesto nad Váhom",
@@ -257,7 +257,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.751234,
       "lng": 17.835473
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Ochodnica",
@@ -267,7 +267,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.347183,
       "lng": 18.806611
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Partizánske",
@@ -277,7 +277,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.627481,
       "lng": 18.369098
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Poprad-Tatry",
@@ -287,7 +287,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.060031,
       "lng": 20.294964
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Prešov",
@@ -297,7 +297,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.982802,
       "lng": 21.249646
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Prievidza",
@@ -307,7 +307,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.767143,
       "lng": 18.618756
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Rožňava SK",
@@ -317,7 +317,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.65995,
       "lng": 20.534585
     },
-    "province": "Kosice"
+    "province": "Koice"
   },
   {
     "name": "Rusovce",
@@ -337,7 +337,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.083472,
       "lng": 19.309173
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Sekule",
@@ -377,7 +377,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.498229,
       "lng": 18.89181
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Spišská Nová Ves",
@@ -387,7 +387,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.950093,
       "lng": 20.560755
     },
-    "province": "Kosice"
+    "province": "Koice"
   },
   {
     "name": "Starý Smokovec",
@@ -397,7 +397,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.139304,
       "lng": 20.222234
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Štrba",
@@ -407,7 +407,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.083235,
       "lng": 20.066704
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Tatranská Lomnica",
@@ -417,7 +417,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.164888,
       "lng": 20.279701
     },
-    "province": "Presov"
+    "province": "Preov"
   },
   {
     "name": "Topoľčany",
@@ -437,7 +437,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.937383,
       "lng": 18.11347
     },
-    "province": "Trencin"
+    "province": "Trenn"
   },
   {
     "name": "Velke Levare",
@@ -457,7 +457,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.115409,
       "lng": 18.924112
     },
-    "province": "Zilina"
+    "province": "ilina"
   },
   {
     "name": "Žiar nad Hronom",
@@ -467,7 +467,7 @@ window.STATIONS_SLOVAKIA = [
       "lat": 48.578868,
       "lng": 18.870324
     },
-    "province": "Banska Bystrica"
+    "province": "Bansk Bystrica"
   },
   {
     "name": "Žilina",
@@ -477,6 +477,6 @@ window.STATIONS_SLOVAKIA = [
       "lat": 49.227042,
       "lng": 18.746005
     },
-    "province": "Zilina"
+    "province": "ilina"
   }
 ];

@@ -17,7 +17,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.352681,
       "lng": -8.409651
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "A Escravitude",
@@ -27,7 +27,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.739,
       "lng": -8.65259
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "A Friela-Maside",
@@ -77,7 +77,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.186284,
       "lng": -8.46486
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Abaroa - San Miguel",
@@ -117,7 +117,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.94487,
       "lng": -4.60561
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Aeroport Josep Tarradellas Barcelona El Prat",
@@ -177,7 +177,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.81386,
       "lng": -2.573793
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Aguilar de Campoo",
@@ -197,7 +197,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.5245,
       "lng": -4.66082
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Aguilar de Segarra",
@@ -267,7 +267,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.425359,
       "lng": -6.144507
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Alamedilla-Guadahortuna",
@@ -357,7 +357,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.303441,
       "lng": 0.228874
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Alcalá Henares-Universidad",
@@ -487,7 +487,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.849025,
       "lng": -2.514291
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Alfafar-Benetusser",
@@ -517,7 +517,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.12672,
       "lng": -5.450995
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Algemesi",
@@ -567,7 +567,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.733117,
       "lng": -4.664419
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Aljucen",
@@ -627,7 +627,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.954858,
       "lng": -0.076668
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Almenara",
@@ -637,7 +637,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.748735,
       "lng": -0.218141
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Almendralejo",
@@ -667,7 +667,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.883792,
       "lng": -2.435914
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Almonaster-Cortegana",
@@ -687,7 +687,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.277326,
       "lng": -5.429763
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Almorchon",
@@ -707,7 +707,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.819906,
       "lng": -4.698823
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Alpedrete-Mataespesa",
@@ -787,7 +787,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.042794,
       "lng": -3.004019
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Amurrio Iparralde",
@@ -797,7 +797,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.0513,
       "lng": -2.99965
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Amusco",
@@ -837,7 +837,7 @@ window.STATIONS_SPAIN = [
       "lat": 38.028173,
       "lng": -4.065847
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Anglesola",
@@ -867,7 +867,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.02978,
       "lng": -4.56119
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Antequera Ciudad",
@@ -877,7 +877,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.028276,
       "lng": -4.561063
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Antequera Santa Ana",
@@ -887,7 +887,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.070813,
       "lng": -4.720037
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Anzanigo",
@@ -907,7 +907,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.869394,
       "lng": -2.30656
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Arakaldo",
@@ -1017,7 +1017,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.09654,
       "lng": -4.38869
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Arcos de Jalón",
@@ -1067,7 +1067,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.146085,
       "lng": -2.945719
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Arévalo",
@@ -1077,7 +1077,7 @@ window.STATIONS_SPAIN = [
       "lat": 41.047613,
       "lng": -4.702005
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Arguisuelas",
@@ -1137,7 +1137,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.790592,
       "lng": -5.141164
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Arrigorriaga",
@@ -1167,7 +1167,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.46829,
       "lng": -6.53478
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Arrúbal",
@@ -1247,7 +1247,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.459513,
       "lng": -6.047124
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Ateca",
@@ -1287,7 +1287,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.657212,
       "lng": -4.682948
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Avilés",
@@ -1507,7 +1507,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.462673,
       "lng": -8.188435
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Barbantes",
@@ -1667,7 +1667,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.01175,
       "lng": -0.696313
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Barrientos",
@@ -1677,7 +1677,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.414846,
       "lng": -5.965025
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Basauri",
@@ -1797,7 +1797,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.60975,
       "lng": -6.422504
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Benacazon",
@@ -1817,7 +1817,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.599023,
       "lng": -4.536747
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Benalúa de Guadix",
@@ -1837,7 +1837,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.713491,
       "lng": -5.246617
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Benasque-Bus",
@@ -1857,7 +1857,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.427088,
       "lng": 0.414753
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Benicàssim",
@@ -1867,7 +1867,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.058126,
       "lng": 0.057863
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Beniel",
@@ -1927,7 +1927,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.284264,
       "lng": -8.215673
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Betanzos-Infesta",
@@ -1937,7 +1937,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.270808,
       "lng": -8.225983
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Bidebieta-Basauri",
@@ -2017,7 +2017,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.037445,
       "lng": -4.727831
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Bolumburu",
@@ -2037,7 +2037,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.862562,
       "lng": -5.328284
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Boo",
@@ -2077,7 +2077,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.632762,
       "lng": -6.200902
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Brazatortas-Veredas",
@@ -2187,7 +2187,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.8964,
       "lng": -0.103867
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Busdongo",
@@ -2197,7 +2197,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.984294,
       "lng": -5.705444
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Cabañas de Aliste",
@@ -2237,7 +2237,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.415822,
       "lng": -8.168821
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Cabeza de Buey",
@@ -2277,7 +2277,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.6567,
       "lng": -3.26258
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Cabrera de Mar",
@@ -2297,7 +2297,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.461197,
       "lng": -6.385972
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Cadagua",
@@ -2317,7 +2317,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.527945,
       "lng": -6.286893
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Cádiz-Cortadura",
@@ -2327,7 +2327,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.494316,
       "lng": -6.268142
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Cádiz-Estadio",
@@ -2337,7 +2337,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.502982,
       "lng": -6.272025
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Calaf",
@@ -2557,7 +2557,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.290692,
       "lng": -8.352399
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Cambrils",
@@ -2617,7 +2617,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.704733,
       "lng": -4.545619
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Campillo",
@@ -2637,7 +2637,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.032042,
       "lng": -4.863802
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Campo de Criptana",
@@ -2697,7 +2697,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.788854,
       "lng": -6.374979
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Cancienes",
@@ -2857,7 +2857,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.73976,
       "lng": -4.751158
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Cariñena",
@@ -2907,7 +2907,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.73387,
       "lng": -4.608427
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Cartuja",
@@ -2927,7 +2927,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.570133,
       "lng": -4.593975
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Casariche",
@@ -2947,7 +2947,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.804216,
       "lng": -6.332388
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Casatejada",
@@ -2957,7 +2957,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.892059,
       "lng": -5.67755
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Casetas",
@@ -3037,7 +3037,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.988262,
       "lng": -0.052083
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Castiello",
@@ -3147,7 +3147,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.947317,
       "lng": -0.572028
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Cazalla-Constantina",
@@ -3167,7 +3167,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.287869,
       "lng": -8.307848
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Cella",
@@ -3227,7 +3227,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.161155,
       "lng": -8.471019
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Cerceda-Meirama",
@@ -3237,7 +3237,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.206436,
       "lng": -8.446615
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Cercedilla",
@@ -3277,7 +3277,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.779934,
       "lng": -5.006119
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Cervera",
@@ -3307,7 +3307,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.17332,
       "lng": -8.20084
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Cetina",
@@ -3357,7 +3357,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.782175,
       "lng": -0.190526
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Chillaron",
@@ -3447,7 +3447,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.8894,
       "lng": -5.64045
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Circuit Ricardo Tormo",
@@ -3477,7 +3477,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.803117,
       "lng": -5.130835
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Ciudad Real",
@@ -3587,7 +3587,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.460383,
       "lng": -6.201073
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Corcos-Aguilarejo",
@@ -3607,7 +3607,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.912634,
       "lng": -4.720802
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Cornellà",
@@ -3627,7 +3627,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.598636,
       "lng": -5.332814
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Cortes de Navarra",
@@ -3677,7 +3677,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.869951,
       "lng": -4.967843
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Crevillent",
@@ -3697,7 +3697,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.7126,
       "lng": -5.63595
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Cuatro Vientos",
@@ -3817,7 +3817,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.127304,
       "lng": -8.143013
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Daimiel",
@@ -3957,7 +3957,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.425831,
       "lng": -5.208314
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "El Caleyo",
@@ -4027,7 +4027,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.906993,
       "lng": -4.759248
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "El Clot-Aragó",
@@ -4127,7 +4127,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.609819,
       "lng": -4.515369
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "El Pozo",
@@ -4157,7 +4157,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.603796,
       "lng": -6.217164
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "El Puig",
@@ -4267,7 +4267,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.335251,
       "lng": -8.41295
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Elx AV",
@@ -4377,7 +4377,7 @@ window.STATIONS_SPAIN = [
       "lat": 38.010257,
       "lng": -3.832811
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Espinosa de Henares",
@@ -4427,7 +4427,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.853971,
       "lng": -2.560177
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Estivella-Albalat dels Tarongers",
@@ -4517,7 +4517,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.488266,
       "lng": -8.230855
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Ferroñes",
@@ -4577,7 +4577,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.184796,
       "lng": -2.839827
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Fisterra-Bus",
@@ -4587,7 +4587,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.907739,
       "lng": -9.263368
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Flassa",
@@ -4647,7 +4647,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.4385,
       "lng": -8.19748
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Fregenal de la Sierra",
@@ -4717,7 +4717,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.5418,
       "lng": -4.62403
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Fuenlabrada",
@@ -4747,7 +4747,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.1353,
       "lng": -4.73797
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Fuente de San Esteban Boadilla",
@@ -4807,7 +4807,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.951427,
       "lng": -2.488178
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Galapagar-La Navata",
@@ -4907,7 +4907,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.540323,
       "lng": -5.38728
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Gavà",
@@ -4957,7 +4957,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.108244,
       "lng": -2.590888
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Getafe Industrial (Alicante)",
@@ -5087,7 +5087,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.323425,
       "lng": -5.013337
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Gran Alacant-Bus",
@@ -5217,7 +5217,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.692014,
       "lng": -4.483828
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Guadalmez-Los Pedroches",
@@ -5347,7 +5347,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.648915,
       "lng": -4.615124
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Guitiriz",
@@ -5417,7 +5417,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.599231,
       "lng": -4.494876
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Herrera",
@@ -5487,7 +5487,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.883472,
       "lng": -2.436222
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Huesa",
@@ -5497,7 +5497,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.7171,
       "lng": -3.18711
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Huesca",
@@ -5667,7 +5667,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.9514,
       "lng": -2.90077
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Iznalloz",
@@ -5717,7 +5717,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.780223,
       "lng": -3.790975
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Jaravía",
@@ -5727,7 +5727,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.392503,
       "lng": -1.693175
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Jardines de Hércules",
@@ -5747,7 +5747,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.6782,
       "lng": -6.125159
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Jerez-Aeropuerto",
@@ -5757,7 +5757,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.751381,
       "lng": -6.066325
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Jérica-Viver",
@@ -5767,7 +5767,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.914631,
       "lng": -0.568903
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Jimena de la Frontera",
@@ -5777,7 +5777,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.424344,
       "lng": -5.434015
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Jimera de Libar",
@@ -5787,7 +5787,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.660743,
       "lng": -5.281405
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Jodar-Ubeda",
@@ -5797,7 +5797,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.913731,
       "lng": -3.349272
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Juneda",
@@ -5907,7 +5907,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.45623,
       "lng": -6.216026
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "La Asunción/Universidad",
@@ -5917,7 +5917,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.655568,
       "lng": -5.552349
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Barosa",
@@ -5927,7 +5927,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.499398,
       "lng": -6.825565
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Calzada",
@@ -5967,7 +5967,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.641894,
       "lng": -4.492647
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "La Corredoria",
@@ -5997,7 +5997,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.807746,
       "lng": -5.218076
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Espina",
@@ -6007,7 +6007,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.787907,
       "lng": -4.905242
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Floresta",
@@ -6077,7 +6077,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.614919,
       "lng": -6.282201
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Herrera",
@@ -6107,7 +6107,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.411233,
       "lng": -6.139086
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "La Iberia",
@@ -6137,7 +6137,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.771322,
       "lng": -5.04124
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Palma del Condado",
@@ -6217,7 +6217,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.853879,
       "lng": -5.67471
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Puebla de Arganzon",
@@ -6277,7 +6277,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.804411,
       "lng": -5.626564
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "La Rocica",
@@ -6337,7 +6337,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.854041,
       "lng": -5.412737
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Laguna",
@@ -6377,7 +6377,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.7771,
       "lng": -3.23173
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Las Águilas",
@@ -6397,7 +6397,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.544188,
       "lng": -6.19852
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Las Cabezas de San Juan",
@@ -6477,7 +6477,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.874524,
       "lng": -4.719372
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Las Navas del Marques",
@@ -6487,7 +6487,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.589119,
       "lng": -4.361557
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Las Retamas",
@@ -6617,7 +6617,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.602323,
       "lng": -5.575052
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Lerma",
@@ -6727,7 +6727,7 @@ window.STATIONS_SPAIN = [
       "lat": 38.069128,
       "lng": -3.58932
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Linares-Congostinas",
@@ -6807,7 +6807,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.142217,
       "lng": -2.960435
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Llovio",
@@ -6927,7 +6927,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.645006,
       "lng": -4.485111
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Los Ángeles de San Rafael",
@@ -6957,7 +6957,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.173689,
       "lng": -5.460263
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Los Boliches",
@@ -6967,7 +6967,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.554914,
       "lng": -4.614356
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Los Campos",
@@ -7047,7 +7047,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.698516,
       "lng": -4.478163
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Los Propios-Cazorla",
@@ -7057,7 +7057,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.8921,
       "lng": -3.28254
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Los Rosales",
@@ -7147,7 +7147,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.093554,
       "lng": -2.999662
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Lutxana",
@@ -7327,7 +7327,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.675646,
       "lng": -4.487032
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Málaga Centro Alameda",
@@ -7337,7 +7337,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.715667,
       "lng": -4.428746
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Málaga-María Zambrano",
@@ -7347,7 +7347,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.711819,
       "lng": -4.43214
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Malgrat de Mar",
@@ -7417,7 +7417,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.750188,
       "lng": -2.871792
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Marça-Falset",
@@ -7477,7 +7477,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.428621,
       "lng": -6.143365
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Marrón",
@@ -7537,7 +7537,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.865331,
       "lng": -5.522172
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Mataporquera",
@@ -7647,7 +7647,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.215121,
       "lng": -8.449492
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Méndez Álvaro",
@@ -7727,7 +7727,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.751886,
       "lng": -4.66546
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Miño",
@@ -7737,7 +7737,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.349625,
       "lng": -8.207448
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Mirabel",
@@ -7747,7 +7747,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.866305,
       "lng": -6.228994
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Miranda de Ebro",
@@ -7847,7 +7847,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.820864,
       "lng": -0.162686
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Monforte de Lemos",
@@ -7867,7 +7867,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.937508,
       "lng": -6.100879
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Monreal de Ariza",
@@ -8007,7 +8007,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.613839,
       "lng": -4.509131
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Montes Claros",
@@ -8077,7 +8077,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.5788,
       "lng": -4.63414
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Montmeló",
@@ -8227,7 +8227,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.816133,
       "lng": -2.8044
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Narros del Castillo",
@@ -8237,7 +8237,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.866849,
       "lng": -5.051991
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Nava",
@@ -8267,7 +8267,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.874027,
       "lng": -0.506024
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Navalmoral de la Mata",
@@ -8277,7 +8277,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.895061,
       "lng": -5.54567
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Navalperal",
@@ -8287,7 +8287,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.590431,
       "lng": -4.408328
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Navarrete",
@@ -8317,7 +8317,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.495313,
       "lng": -8.161018
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Niebla",
@@ -8337,7 +8337,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.424464,
       "lng": -6.008075
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Noblejas",
@@ -8387,7 +8387,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.420382,
       "lng": -6.144749
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Nueva",
@@ -8447,7 +8447,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.317767,
       "lng": -8.368148
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "O Carballiño",
@@ -8597,7 +8597,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.037816,
       "lng": -8.44808
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Ordizia",
@@ -8667,7 +8667,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.092492,
       "lng": 0.139809
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Ortigosa del Monte",
@@ -8697,7 +8697,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.825329,
       "lng": -8.615774
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Osorno",
@@ -8727,7 +8727,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.5138,
       "lng": -6.05526
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Otero-Herreros",
@@ -8767,7 +8767,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.218149,
       "lng": -8.18706
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Ozanes",
@@ -8807,7 +8807,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.739096,
       "lng": -8.652396
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Padron-Barbanza",
@@ -8817,7 +8817,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.782593,
       "lng": -8.656009
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Palacio de Congresos",
@@ -8837,7 +8837,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.460745,
       "lng": -5.496948
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Palautordera",
@@ -8867,7 +8867,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.718476,
       "lng": -5.292524
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Pamplona/Iruña",
@@ -9037,7 +9037,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.408705,
       "lng": -6.134312
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Peñaflor",
@@ -9087,7 +9087,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.378058,
       "lng": -8.201389
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Perlio",
@@ -9097,7 +9097,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.472346,
       "lng": -8.175203
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Pesúes",
@@ -9147,7 +9147,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.440507,
       "lng": -6.144541
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Pineda de Mar",
@@ -9167,7 +9167,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.127079,
       "lng": -8.163454
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Pinos Puente",
@@ -9217,7 +9217,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.764361,
       "lng": -4.712046
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Plasencia de Jalón",
@@ -9267,7 +9267,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.46615,
       "lng": -6.195786
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Plaza del Carmen",
@@ -9277,7 +9277,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.458082,
       "lng": -6.203625
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Plaza del Rey",
@@ -9287,7 +9287,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.463931,
       "lng": -6.198344
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Plaza Mayor",
@@ -9297,7 +9297,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.656172,
       "lng": -4.480314
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Pobra de San Xián",
@@ -9337,7 +9337,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.545576,
       "lng": -6.60263
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Ponferrada-Bus",
@@ -9347,7 +9347,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.55307,
       "lng": -6.601402
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Ponte Taboada",
@@ -9387,7 +9387,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.411722,
       "lng": -8.180246
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Pontevedra",
@@ -9427,7 +9427,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.598612,
       "lng": -6.108305
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Portbou",
@@ -9477,7 +9477,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.5401,
       "lng": -6.71514
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Posadas",
@@ -9487,7 +9487,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.804215,
       "lng": -5.106403
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Pousa-Crecente",
@@ -9537,7 +9537,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.783242,
       "lng": -5.027172
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Premià de Mar",
@@ -9607,7 +9607,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.787134,
       "lng": -4.974666
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Puente de los Fierros",
@@ -9627,7 +9627,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.395966,
       "lng": -4.75308
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Puente Genil-Herrera",
@@ -9637,7 +9637,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.358647,
       "lng": -4.822092
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Puente San Miguel",
@@ -9677,7 +9677,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.532772,
       "lng": -6.189396
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Puertollano",
@@ -9727,7 +9727,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.399919,
       "lng": -1.750136
     },
-    "province": "Almeria"
+    "province": "Almera"
   },
   {
     "name": "Pumares",
@@ -9817,7 +9817,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.549999,
       "lng": -5.637944
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Quintanilla de Las Torres",
@@ -9967,7 +9967,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.41438,
       "lng": -6.14318
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Riaza",
@@ -10187,7 +10187,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.748531,
       "lng": -5.162127
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Rubí Can Vallhonrat",
@@ -10307,7 +10307,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.36954,
       "lng": -5.022291
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Salamanca-La Alamedilla",
@@ -10337,7 +10337,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.064293,
       "lng": -2.995857
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Salillas de Jalón",
@@ -10417,7 +10417,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.846319,
       "lng": -2.388748
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "San Antonio de Requena",
@@ -10477,7 +10477,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.683443,
       "lng": -5.538308
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "San Fernando de Cádiz",
@@ -10487,7 +10487,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.4758,
       "lng": -6.19444
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "San Fernando Henares",
@@ -10507,7 +10507,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.468185,
       "lng": -6.206727
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "San Jerónimo",
@@ -10567,7 +10567,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.586719,
       "lng": -6.524092
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "San Morales",
@@ -10587,7 +10587,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.468221,
       "lng": -5.419281
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "San Pedro de Rudagüera",
@@ -10607,7 +10607,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.80397,
       "lng": -4.871155
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "San Pedro do Sil",
@@ -10637,7 +10637,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.213718,
       "lng": -5.432298
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "San Roque del Acebal",
@@ -10657,7 +10657,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.521095,
       "lng": -6.280484
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "San Vicente de Alcántara",
@@ -10667,7 +10667,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.381723,
       "lng": -7.116418
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "San Vicente de la Barquera",
@@ -10707,7 +10707,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.89347,
       "lng": -4.58132
     },
-    "province": "Avila"
+    "province": "vila"
   },
   {
     "name": "Sanlúcar la Mayor",
@@ -10957,7 +10957,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.132448,
       "lng": -2.970197
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Santa Cruz de Múdela",
@@ -11007,7 +11007,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.87503,
       "lng": -5.639571
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Santa María de Huerta",
@@ -11097,7 +11097,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.459801,
       "lng": -5.38666
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Santiago de Compostela Airport",
@@ -11107,7 +11107,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.89795,
       "lng": -8.420665
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Santibáñez de la Peña",
@@ -11127,7 +11127,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.455906,
       "lng": -6.209612
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Santullano",
@@ -11217,7 +11217,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.85445,
       "lng": -0.493269
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Segorbe-Ciudad",
@@ -11227,7 +11227,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.8471,
       "lng": -0.482325
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Segovia Estación",
@@ -11267,7 +11267,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.513418,
       "lng": -6.276933
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Segur de Calafell",
@@ -11457,7 +11457,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.81255,
       "lng": -0.431897
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Soria",
@@ -11477,7 +11477,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.789921,
       "lng": -5.128301
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Soto de Dueñas",
@@ -11627,7 +11627,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.9945,
       "lng": -4.92394
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Teixeiro",
@@ -11637,7 +11637,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.141525,
       "lng": -8.037614
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Tembleque",
@@ -11737,7 +11737,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.541,
       "lng": -6.776653
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Toraño",
@@ -11787,7 +11787,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.595664,
       "lng": -6.328783
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Torre-Pacheco",
@@ -11807,7 +11807,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.212192,
       "lng": 0.19929
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Torreblanca (Málaga)",
@@ -11817,7 +11817,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.564922,
       "lng": -4.606767
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Torredembarra",
@@ -11887,7 +11887,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.6225,
       "lng": -4.49931
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Torremuelle",
@@ -11897,7 +11897,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.582233,
       "lng": -4.567114
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Torrijo del Campo",
@@ -12067,7 +12067,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.530047,
       "lng": -6.205022
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Universidad de Alicante",
@@ -12167,7 +12167,7 @@ window.STATIONS_SPAIN = [
       "lat": 43.297029,
       "lng": -8.443765
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Vacarisses",
@@ -12217,7 +12217,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.76645,
       "lng": -4.928344
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Valdebebas",
@@ -12257,7 +12257,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.584244,
       "lng": -6.21622
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Valdelamusa",
@@ -12327,7 +12327,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.427119,
       "lng": -7.23085
     },
-    "province": "Caceres"
+    "province": "Cceres"
   },
   {
     "name": "Valencia Estaciò Nord",
@@ -12437,7 +12437,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.769506,
       "lng": -5.054571
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Valle Real",
@@ -12487,7 +12487,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.776437,
       "lng": -8.428178
     },
-    "province": "A Coruna"
+    "province": "A Corua"
   },
   {
     "name": "Vega Magaz",
@@ -12497,7 +12497,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.553585,
       "lng": -6.068347
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Vellisca",
@@ -12527,7 +12527,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.467726,
       "lng": -6.191055
     },
-    "province": "Cadiz"
+    "province": "Cdiz"
   },
   {
     "name": "Venta Mina-Siete Aguas",
@@ -12597,7 +12597,7 @@ window.STATIONS_SPAIN = [
       "lat": 36.701122,
       "lng": -4.454444
     },
-    "province": "Malaga"
+    "province": "Mlaga"
   },
   {
     "name": "Vidiago",
@@ -12647,7 +12647,7 @@ window.STATIONS_SPAIN = [
       "lat": 39.932951,
       "lng": -0.096553
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Vila-Seca",
@@ -12817,7 +12817,7 @@ window.STATIONS_SPAIN = [
       "lat": 38.215706,
       "lng": -3.517694
     },
-    "province": "Jaen"
+    "province": "Jan"
   },
   {
     "name": "Villa del Rio",
@@ -12827,7 +12827,7 @@ window.STATIONS_SPAIN = [
       "lat": 37.981042,
       "lng": -4.284186
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Villabante",
@@ -12837,7 +12837,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.464556,
       "lng": -5.839132
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Villabona de Asturias",
@@ -12887,7 +12887,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.536883,
       "lng": -6.750773
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Villadoz",
@@ -12987,7 +12987,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.937595,
       "lng": -5.658215
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Villamayor",
@@ -13017,7 +13017,7 @@ window.STATIONS_SPAIN = [
       "lat": 38.255114,
       "lng": -4.571038
     },
-    "province": "Cordoba"
+    "province": "Crdoba"
   },
   {
     "name": "Villanueva de Gallego",
@@ -13157,7 +13157,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.5984,
       "lng": -6.50279
     },
-    "province": "Leon"
+    "province": "Len"
   },
   {
     "name": "Villaverde de Pontones",
@@ -13247,7 +13247,7 @@ window.STATIONS_SPAIN = [
       "lat": 40.472448,
       "lng": 0.456741
     },
-    "province": "Castellon"
+    "province": "Castelln"
   },
   {
     "name": "Vioño",
@@ -13267,7 +13267,7 @@ window.STATIONS_SPAIN = [
       "lat": 42.841213,
       "lng": -2.672618
     },
-    "province": "Araba - Alava"
+    "province": "Araba  -  lava"
   },
   {
     "name": "Xátiva",

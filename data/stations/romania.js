@@ -27,7 +27,7 @@ window.STATIONS_ROMANIA = [
       "lat": 45.661516,
       "lng": 25.61371
     },
-    "province": "Brasov"
+    "province": "Braov"
   },
   {
     "name": "Bucharest Henri Coandă Airport",
@@ -57,7 +57,7 @@ window.STATIONS_ROMANIA = [
       "lat": 44.169486,
       "lng": 28.63147
     },
-    "province": "Constanta"
+    "province": "Constana"
   },
   {
     "name": "Craiova",
@@ -117,7 +117,7 @@ window.STATIONS_ROMANIA = [
       "lat": 46.226398,
       "lng": 24.795737
     },
-    "province": "Mures"
+    "province": "Mure"
   },
   {
     "name": "Timisoara Airport",
@@ -127,7 +127,7 @@ window.STATIONS_ROMANIA = [
       "lat": 45.810147,
       "lng": 21.320177
     },
-    "province": "Timis"
+    "province": "Timi"
   },
   {
     "name": "Timișoara Nord",
@@ -137,6 +137,6 @@ window.STATIONS_ROMANIA = [
       "lat": 45.75121,
       "lng": 21.20656
     },
-    "province": "Timis"
+    "province": "Timi"
   }
 ];

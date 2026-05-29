@@ -899,18 +899,6 @@ function renderCountryFiltersFromData(filters, stationData) {
     return String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
   }
 
-  function readCommentsStore() {
-    try {
-      return JSON.parse(localStorage.getItem("tb_photo_comments_v1") || "{}");
-    } catch {
-      return {};
-    }
-  }
-
-  function writeCommentsStore(value) {
-    localStorage.setItem("tb_photo_comments_v1", JSON.stringify(value || {}));
-  }
-
   function readProfilesStore() {
     try {
       return JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
@@ -945,16 +933,22 @@ function renderCountryFiltersFromData(filters, stationData) {
     searchCommentStatus.classList.toggle("is-success", Boolean(!isError && message));
   }
 
-  function renderSearchComments() {
+  async function renderSearchComments() {
     if (!searchCommentsList) return;
     const key = currentSearchCommentKey();
     if (!key) {
       searchCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
       return;
     }
-    const store = readCommentsStore();
     const profiles = readProfilesStore();
-    const items = Array.isArray(store[key]) ? store[key] : [];
+    let items = [];
+    try {
+      const res = await fetch(`/api/comments?photoKey=${encodeURIComponent(key)}`, { credentials: "include" });
+      const data = await res.json().catch(() => ({}));
+      items = Array.isArray(data?.items) ? data.items : [];
+    } catch {
+      items = [];
+    }
     const user = activeUserName();
     const canModerate = canModerateUser(user);
     if (items.length === 0) {
@@ -962,8 +956,8 @@ function renderCountryFiltersFromData(filters, stationData) {
       return;
     }
     searchCommentsList.innerHTML = items
-      .map((item, index) => {
-        const author = String(item.user || "user").toLowerCase();
+      .map((item) => {
+        const author = String(item.author || item.user || "user").toLowerCase();
         const avatar = String((profiles[author] || {}).avatar || "../images/default-avatar.svg");
         const canDelete = canModerate || user === author;
         return `
@@ -973,10 +967,10 @@ function renderCountryFiltersFromData(filters, stationData) {
                 <img src="${esc(avatar)}" alt="${esc(author)} avatar" />
                 <strong>${esc(author)}</strong>
               </span>
-              ${canDelete ? `<button class="station-lightbox-comment-delete" type="button" data-search-comment-delete="${index}">Delete</button>` : ""}
+              ${canDelete ? `<button class="station-lightbox-comment-delete" type="button" data-search-comment-delete="${Number(item.id || 0)}">Delete</button>` : ""}
             </div>
-            <p>${esc(item.text || "")}</p>
-            <small>${esc(item.createdAt || "")}</small>
+            <p>${esc(item.body || item.text || "")}</p>
+            <small>${esc(new Date(item.created_at || item.createdAt || Date.now()).toLocaleString("en-GB", { hour12: false }))}</small>
           </article>
         `;
       })
@@ -1159,18 +1153,22 @@ function renderCountryFiltersFromData(filters, stationData) {
     }
     const key = currentSearchCommentKey();
     if (!key) return;
-    const store = readCommentsStore();
-    const items = Array.isArray(store[key]) ? store[key] : [];
-    items.push({
-      user,
-      text,
-      createdAt: new Date().toLocaleString("en-GB", { hour12: false }),
-    });
-    store[key] = items;
-    writeCommentsStore(store);
-    if (searchCommentInput) searchCommentInput.value = "";
-    setSearchCommentStatus("Comment posted.");
-    renderSearchComments();
+    fetch("/api/comments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ photoKey: key, body: text }),
+    })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not post comment."));
+        if (searchCommentInput) searchCommentInput.value = "";
+        setSearchCommentStatus("Comment posted.");
+        renderSearchComments();
+      })
+      .catch((err) => {
+        setSearchCommentStatus(String(err?.message || "Could not post comment."), true);
+      });
   });
 
   searchCommentsList?.addEventListener("click", (event) => {
@@ -1179,21 +1177,21 @@ function renderCountryFiltersFromData(filters, stationData) {
     const user = activeUserName();
     const key = currentSearchCommentKey();
     if (!user || !key) return;
-    const index = Number(deleteBtn.dataset.searchCommentDelete || -1);
-    if (!Number.isInteger(index) || index < 0) return;
-    const store = readCommentsStore();
-    const items = Array.isArray(store[key]) ? store[key] : [];
-    if (!items[index]) return;
-    const author = String(items[index].user || "").toLowerCase();
-    if (!(canModerateUser(user) || user === author)) {
-      setSearchCommentStatus("Only moderators or owner can delete comments.", true);
-      return;
-    }
-    items.splice(index, 1);
-    store[key] = items;
-    writeCommentsStore(store);
-    setSearchCommentStatus("Comment removed.");
-    renderSearchComments();
+    const commentId = Number(deleteBtn.dataset.searchCommentDelete || 0);
+    if (!Number.isInteger(commentId) || commentId < 1) return;
+    fetch(`/api/comments/${commentId}`, {
+      method: "DELETE",
+      credentials: "include",
+    })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not remove comment."));
+        setSearchCommentStatus("Comment removed.");
+        renderSearchComments();
+      })
+      .catch((err) => {
+        setSearchCommentStatus(String(err?.message || "Could not remove comment."), true);
+      });
   });
 
   function setActiveButton(value) {
@@ -4563,24 +4561,11 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   if (!signInForm || !createForm || !status) return;
 
-  const storageKey = "tb_accounts_v1";
   const sessionKey = "tb_active_user_v1";
-  const resetFlagKey = "tb_login_reset_done_20260524_v2";
-
-  try {
-    if (!localStorage.getItem(resetFlagKey)) {
-      localStorage.removeItem(storageKey);
-      localStorage.removeItem(sessionKey);
-      localStorage.setItem(resetFlagKey, "1");
-    }
-  } catch {}
+  const storageKey = "tb_accounts_v1";
 
   function normalizeUsername(value) {
     return String(value || "").trim().toLowerCase();
-  }
-
-  function hashPassword(value) {
-    return btoa(unescape(encodeURIComponent(String(value || ""))));
   }
 
   function isValidEmail(value) {
@@ -4599,6 +4584,20 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   function writeAccounts(accounts) {
     localStorage.setItem(storageKey, JSON.stringify(accounts));
+  }
+
+  async function apiRequest(url, payload) {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify(payload || {}),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || !data?.ok) {
+      throw new Error(String(data?.error || "Request failed"));
+    }
+    return data;
   }
 
   function showStatus(message, isError = false) {
@@ -4654,12 +4653,6 @@ function renderCountryFiltersFromData(filters, stationData) {
       showStatus("Username must be at least 3 characters.", true);
       return;
     }
-    const accounts = readAccounts();
-    if (accounts[username]) {
-      setFieldError(usernameInput, true);
-      showStatus("This username already exists.", true);
-      return;
-    }
     if (!email) {
       setFieldError(emailInput, true);
       showStatus("Please enter your email address.", true);
@@ -4668,15 +4661,6 @@ function renderCountryFiltersFromData(filters, stationData) {
     if (!isValidEmail(email)) {
       setFieldError(emailInput, true);
       showStatus("Please enter a valid email address.", true);
-      return;
-    }
-    const emailAlreadyUsed = Object.values(accounts).some(
-      (account) =>
-        String(account?.email || "").trim().toLowerCase() === email,
-    );
-    if (emailAlreadyUsed) {
-      setFieldError(emailInput, true);
-      showStatus("This email address is already in use.", true);
       return;
     }
     if (!password) {
@@ -4705,15 +4689,24 @@ function renderCountryFiltersFromData(filters, stationData) {
       return;
     }
 
-    accounts[username] = {
-      email: email,
-      passwordHash: hashPassword(password),
-      createdAt: new Date().toISOString(),
-    };
-    writeAccounts(accounts);
-    localStorage.setItem(sessionKey, username);
-
-    window.location.replace("Photos.html");
+    apiRequest("/api/auth/register", { username, email, password })
+      .then((data) => {
+        localStorage.setItem(sessionKey, data.user.username);
+        const accounts = readAccounts();
+        accounts[data.user.username] = {
+          email: data.user.email,
+          createdAt: new Date().toISOString(),
+        };
+        writeAccounts(accounts);
+        window.location.replace("Photos.html");
+      })
+      .catch((error) => {
+        const msg = String(error?.message || "");
+        if (msg.toLowerCase().includes("username")) setFieldError(usernameInput, true);
+        if (msg.toLowerCase().includes("email")) setFieldError(emailInput, true);
+        if (msg.toLowerCase().includes("password")) setFieldError(passwordInput, true);
+        showStatus(msg || "Could not create account.", true);
+      });
   });
 
   signInForm.addEventListener("submit", (event) => {
@@ -4725,18 +4718,22 @@ function renderCountryFiltersFromData(filters, stationData) {
     const username = normalizeUsername(usernameInput?.value);
     const password = String(passwordInput?.value || "");
     clearFieldErrors(signInForm);
-    const accounts = readAccounts();
-    const account = accounts[username];
-
-    if (!account || account.passwordHash !== hashPassword(password)) {
-      setFieldError(usernameInput, true);
-      setFieldError(passwordInput, true);
-      showStatus("Invalid username or password.", true);
-      return;
-    }
-
-    localStorage.setItem(sessionKey, username);
-    window.location.replace("Photos.html");
+    apiRequest("/api/auth/login", { username, password })
+      .then((data) => {
+        localStorage.setItem(sessionKey, data.user.username);
+        const accounts = readAccounts();
+        accounts[data.user.username] = {
+          email: data.user.email,
+          createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
+        };
+        writeAccounts(accounts);
+        window.location.replace("Photos.html");
+      })
+      .catch((error) => {
+        setFieldError(usernameInput, true);
+        setFieldError(passwordInput, true);
+        showStatus(String(error?.message || "Invalid username or password."), true);
+      });
   });
 
   const createUsernameInput = createForm.querySelector("#createUsername");
@@ -4746,20 +4743,24 @@ function renderCountryFiltersFromData(filters, stationData) {
       createUsernameInput.classList.remove("is-error");
       return;
     }
-    const accounts = readAccounts();
-    const isTaken = Boolean(accounts[username]);
-    createUsernameInput.classList.toggle("is-error", isTaken);
-    if (isTaken) {
-      showStatus("This username already exists.", true);
-    } else if (status.classList.contains("is-error") && status.textContent === "This username already exists.") {
+    createUsernameInput.classList.toggle("is-error", false);
+    if (status.classList.contains("is-error") && status.textContent === "This username already exists.") {
       showStatus("");
     }
   });
 
-  const activeUser = normalizeUsername(localStorage.getItem(sessionKey));
-  if (activeUser) {
-    showStatus(`Already logged in as ${activeUser}.`);
-  }
+  fetch("/api/auth/session", { credentials: "include" })
+    .then((res) => (res.ok ? res.json() : null))
+    .then((data) => {
+      if (!data?.user?.username) return;
+      const activeUser = normalizeUsername(data.user.username);
+      localStorage.setItem(sessionKey, activeUser);
+      showStatus(`Already logged in as ${activeUser}.`);
+    })
+    .catch(() => {
+      const activeUser = normalizeUsername(localStorage.getItem(sessionKey));
+      if (activeUser) showStatus(`Already logged in as ${activeUser}.`);
+    });
 })();
 
 (function initImageProtection() {
@@ -4817,6 +4818,26 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   function getActiveUser() {
     return normalizeUser(localStorage.getItem(sessionKey));
+  }
+
+  async function syncActiveUserFromServer() {
+    try {
+      const res = await fetch("/api/auth/session", { credentials: "include" });
+      if (!res.ok) {
+        localStorage.removeItem(sessionKey);
+        return "";
+      }
+      const data = await res.json();
+      const user = normalizeUser(data?.user?.username);
+      if (!user) {
+        localStorage.removeItem(sessionKey);
+        return "";
+      }
+      localStorage.setItem(sessionKey, user);
+      return user;
+    } catch {
+      return getActiveUser();
+    }
   }
 
   function getOwnerUser() {
@@ -4885,9 +4906,13 @@ function renderCountryFiltersFromData(filters, stationData) {
       }
     }
 
+    syncActiveUserFromServer().finally(applyNavVisibility);
     applyNavVisibility();
     window.addEventListener("component:loaded", (event) => {
-      if (event.detail?.id === "navbar") applyNavVisibility();
+      if (event.detail?.id === "navbar") {
+        syncActiveUserFromServer().finally(applyNavVisibility);
+        applyNavVisibility();
+      }
     });
     window.addEventListener("storage", applyNavVisibility);
     window.addEventListener("pageshow", applyNavVisibility);
@@ -5023,6 +5048,18 @@ function renderCountryFiltersFromData(filters, stationData) {
       const sources = Object.keys(window)
         .filter((key) => key.startsWith("STATIONS_") && Array.isArray(window[key]))
         .map((key) => window[key]);
+      const isUsefulStationName = (value) => {
+        const name = String(value || "").trim();
+        if (!name) return false;
+        const lower = name.toLowerCase();
+        if (/^\d+\s*km(?:\s|$)/i.test(name)) return false;
+        if (/^\d+[a-z]?\s*kilometers?\b/i.test(lower)) return false;
+        if (/^\d+\s*-\s*\d+\s*km\b/i.test(lower)) return false;
+        if (/\brailway station$/i.test(lower) && /^\d+/.test(lower)) return false;
+        if (/^km\s*\d+/i.test(lower)) return false;
+        return true;
+      };
+
       const merged = new Map();
       sources
         .flat()
@@ -5032,6 +5069,7 @@ function renderCountryFiltersFromData(filters, stationData) {
           const country = String(item?.country || "").trim();
           const province = String(item?.province || item?.region || item?.state || "").trim();
           if (!name || !slug || !country) return;
+          if (!isUsefulStationName(name)) return;
           merged.set(slug, {
             slug,
             name,
@@ -5714,10 +5752,11 @@ function renderCountryFiltersFromData(filters, stationData) {
         return;
       }
 
-      try {
-        const submissions = readJson(submissionsKey, []);
-        submissions.push({
-          id: `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
           stationSlug,
           stationName,
           stationProvince: String(pickedStation?.province || ""),
@@ -5730,41 +5769,32 @@ function renderCountryFiltersFromData(filters, stationData) {
           date,
           operator,
           notes,
-          submittedBy: user,
-          submittedAt: new Date().toISOString(),
-          status: "pending",
+        }),
+      })
+        .then(async (res) => {
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Upload failed."));
+          form.reset();
+          selectedStation = null;
+          selectedOperator = "";
+          selectedOperators = [];
+          isAddingOperator = false;
+          selectedImageDataUrl = "";
+          if (trainTypeInput) trainTypeInput.value = "";
+          applySelectedStationUI();
+          applySelectedOperatorUI();
+          applyTrainTypeUI();
+          renderOperatorChips();
+          if (compositionRows) {
+            compositionRows.innerHTML = "";
+            compositionRows.classList.remove("is-error");
+            appendCompositionRow();
+          }
+          showStatus(status, "Submission sent to moderation.");
+        })
+        .catch((err) => {
+          showStatus(status, String(err?.message || "Upload failed due to a save error."), true);
         });
-        writeJson(submissionsKey, submissions);
-      } catch (err) {
-        const msg = String(err && err.message ? err.message : err || "");
-        const isQuota = msg.toLowerCase().includes("quota");
-        showStatus(
-          status,
-          isQuota
-            ? "Upload failed: image is too large for local storage. Please use a smaller photo and try again."
-            : "Upload failed due to a save error. Please try again.",
-          true,
-        );
-        return;
-      }
-
-      form.reset();
-      selectedStation = null;
-      selectedOperator = "";
-      selectedOperators = [];
-      isAddingOperator = false;
-      selectedImageDataUrl = "";
-      if (trainTypeInput) trainTypeInput.value = "";
-      applySelectedStationUI();
-      applySelectedOperatorUI();
-      applyTrainTypeUI();
-      renderOperatorChips();
-      if (compositionRows) {
-        compositionRows.innerHTML = "";
-        compositionRows.classList.remove("is-error");
-        appendCompositionRow();
-      }
-      showStatus(status, "Submission sent to moderation.");
     });
   })();
 
@@ -5783,8 +5813,13 @@ function renderCountryFiltersFromData(filters, stationData) {
     const logoutBtn = document.getElementById("profileLogoutBtn");
 
     logoutBtn?.addEventListener("click", () => {
-      localStorage.removeItem(sessionKey);
-      window.location.href = "Login.html";
+      fetch("/api/auth/logout", {
+        method: "POST",
+        credentials: "include",
+      }).finally(() => {
+        localStorage.removeItem(sessionKey);
+        window.location.href = "Login.html";
+      });
     });
 
     const user = getActiveUser();
@@ -6039,9 +6074,9 @@ function renderCountryFiltersFromData(filters, stationData) {
       return;
     }
 
+    let pending = [];
+
     function render() {
-      const submissions = readJson(submissionsKey, []);
-      const pending = submissions.filter((item) => item.status === "pending");
 
       if (pending.length === 0) {
         list.innerHTML = '<p class="muted">No pending submissions.</p>';
@@ -6097,38 +6132,39 @@ function renderCountryFiltersFromData(filters, stationData) {
       });
     }
 
-    list.addEventListener("click", (event) => {
+    list.addEventListener("click", async (event) => {
       const btn = event.target.closest("button[data-action]");
       if (!btn) return;
       const itemEl = btn.closest("[data-submission-id]");
       const id = itemEl?.dataset.submissionId;
       if (!id) return;
       const action = btn.dataset.action;
-
-      const submissions = readJson(submissionsKey, []);
-      const target = submissions.find((item) => item.id === id);
-      if (!target) return;
-      if (action === "approve") {
-        const match = String(target.date || "").match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-        if (match) {
-          const dt = new Date(Number(match[3]), Number(match[2]) - 1, Number(match[1]));
-          if (!Number.isNaN(dt.getTime())) {
-            target.date = dt.toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            });
-          }
-        }
+      try {
+        const res = await fetch(`/api/submissions/${encodeURIComponent(id)}/moderate`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ action }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Moderation failed."));
+        pending = pending.filter((item) => item.id !== id);
+        render();
+      } catch (err) {
+        showStatus(status, String(err?.message || "Moderation failed."), true);
       }
-      target.status = action === "approve" ? "approved" : "rejected";
-      target.moderatedBy = user;
-      target.moderatedAt = new Date().toISOString();
-      writeJson(submissionsKey, submissions);
-      render();
     });
 
-    render();
+    fetch("/api/submissions/pending", { credentials: "include" })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not load submissions."));
+        pending = Array.isArray(data.items) ? data.items : [];
+        render();
+      })
+      .catch((err) => {
+        showStatus(status, String(err?.message || "Could not load submissions."), true);
+      });
   })();
 
 })();

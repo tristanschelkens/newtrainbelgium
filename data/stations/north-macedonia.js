@@ -17,7 +17,7 @@ window.STATIONS_NORTH_MACEDONIA = [
       "lat": 41.512644,
       "lng": 20.949929
     },
-    "province": "Kicevo"
+    "province": "Kievo"
   },
   {
     "name": "Kumanovo",

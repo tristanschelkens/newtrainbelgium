@@ -7,7 +7,7 @@ window.STATIONS_PORTUGAL = [
       "lat": 39.440351,
       "lng": -8.194683
     },
-    "province": "Santarem"
+    "province": "Santarm"
   },
   {
     "name": "Aeroporto de Lisboa Humberto Delgado",
@@ -137,7 +137,7 @@ window.STATIONS_PORTUGAL = [
       "lat": 39.653566,
       "lng": -8.493556
     },
-    "province": "Santarem"
+    "province": "Santarm"
   },
   {
     "name": "Figueira da Foz",
@@ -297,7 +297,7 @@ window.STATIONS_PORTUGAL = [
       "lat": 41.664816,
       "lng": -6.829615
     },
-    "province": "Braganca"
+    "province": "Bragana"
   },
   {
     "name": "Setúbal",
@@ -307,7 +307,7 @@ window.STATIONS_PORTUGAL = [
       "lat": 38.530553,
       "lng": -8.885063
     },
-    "province": "Setubal"
+    "province": "Setbal"
   },
   {
     "name": "Silves",
@@ -337,7 +337,7 @@ window.STATIONS_PORTUGAL = [
       "lat": 39.598723,
       "lng": -8.412977
     },
-    "province": "Santarem"
+    "province": "Santarm"
   },
   {
     "name": "Valença",
