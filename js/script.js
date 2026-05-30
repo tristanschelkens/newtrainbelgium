@@ -399,10 +399,34 @@ function normalizeSubmissionConsist(parts) {
 async function mergeApprovedSubmissionsIntoStationData(stationData) {
   if (!stationData || typeof stationData !== "object") return;
   try {
-    const res = await fetch("/api/submissions/approved?limit=200", { credentials: "same-origin" });
-    if (!res.ok) return;
-    const data = await res.json();
-    const items = Array.isArray(data?.items) ? data.items : [];
+    const cacheKey = "tb_approved_submissions_cache_v1";
+    const cacheTtlMs = 1000 * 60 * 5;
+    let items = [];
+    try {
+      const cachedRaw = sessionStorage.getItem(cacheKey);
+      if (cachedRaw) {
+        const cached = JSON.parse(cachedRaw);
+        if (
+          cached &&
+          Number.isFinite(Number(cached.ts)) &&
+          Date.now() - Number(cached.ts) < cacheTtlMs &&
+          Array.isArray(cached.items)
+        ) {
+          items = cached.items;
+        }
+      }
+    } catch {}
+
+    if (items.length === 0) {
+      const res = await fetch("/api/submissions/approved?limit=60", { credentials: "same-origin" });
+      if (!res.ok) return;
+      const data = await res.json();
+      items = Array.isArray(data?.items) ? data.items : [];
+      try {
+        sessionStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), items }));
+      } catch {}
+    }
+
     items.forEach((item) => {
       const stationSlug = String(item?.stationSlug || "").trim().toLowerCase();
       if (!stationSlug) return;
@@ -5026,6 +5050,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     let selectedOperators = [];
     let isAddingOperator = false;
     let selectedImageDataUrl = "";
+    let stationOptionsCache = null;
+    let operatorOptionsCache = null;
 
     imagePickBtn?.addEventListener("click", () => {
       imageFileInput?.click();
@@ -5072,6 +5098,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     });
 
     function getStationOptions() {
+      if (stationOptionsCache) return stationOptionsCache;
       const toSlug = (value) => String(value || "")
         .toLowerCase()
         .normalize("NFD")
@@ -5162,10 +5189,12 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             flag: countryToFlag[toSlug(country).replaceAll("-", "")] || "",
           });
         });
-      return Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
+      stationOptionsCache = Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
+      return stationOptionsCache;
     }
 
     function getOperatorOptions() {
+      if (operatorOptionsCache) return operatorOptionsCache;
       const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
         ? window.STATIONS_DATA
         : {};
@@ -5180,7 +5209,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             .forEach((op) => set.add(op));
         });
       });
-      return Array.from(set).sort((a, b) => a.localeCompare(b));
+      operatorOptionsCache = Array.from(set).sort((a, b) => a.localeCompare(b));
+      return operatorOptionsCache;
     }
 
     function normalizeDigitsDate(value) {

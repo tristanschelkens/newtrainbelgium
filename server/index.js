@@ -257,10 +257,10 @@ app.get('/api/submissions/pending', async (req, res) => {
 
 app.get('/api/submissions/approved', async (req, res) => {
   try {
-    const requestedLimit = Number.parseInt(String(req.query.limit || '200'), 10);
+    const requestedLimit = Number.parseInt(String(req.query.limit || '60'), 10);
     const limit = Number.isFinite(requestedLimit)
-      ? Math.max(1, Math.min(requestedLimit, 500))
-      : 200;
+      ? Math.max(1, Math.min(requestedLimit, 200))
+      : 60;
     const { rows } = await pool.query(
       `SELECT s.*, u.username AS submitted_by_name
        FROM photo_submissions s
