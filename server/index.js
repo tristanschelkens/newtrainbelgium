@@ -255,6 +255,42 @@ app.get('/api/submissions/pending', async (req, res) => {
   }
 });
 
+app.get('/api/submissions/approved', async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT s.*, u.username AS submitted_by_name
+       FROM photo_submissions s
+       JOIN users u ON u.id = s.submitted_by
+       WHERE s.status = 'approved'
+       ORDER BY s.moderated_at DESC NULLS LAST, s.submitted_at DESC`,
+    );
+    return res.json({
+      ok: true,
+      items: rows.map((r) => ({
+        id: r.id,
+        stationSlug: r.station_slug,
+        stationName: r.station_name,
+        stationProvince: r.station_province || '',
+        stationCountry: r.station_country || '',
+        stationCoords: r.station_coords || null,
+        title: r.title,
+        composition: Array.isArray(r.composition) ? r.composition : [],
+        trainType: r.train_type,
+        image: r.image,
+        date: r.date_text,
+        operator: r.operator_text,
+        notes: r.notes || '',
+        submittedBy: r.submitted_by_name,
+        submittedAt: r.submitted_at,
+        moderatedAt: r.moderated_at,
+        status: r.status,
+      })),
+    });
+  } catch {
+    return res.status(500).json({ ok: false, error: 'Server error' });
+  }
+});
+
 app.post('/api/submissions/:id/moderate', async (req, res) => {
   try {
     const user = await requireUser(req, res);

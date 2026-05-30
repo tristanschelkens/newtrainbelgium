@@ -364,7 +364,87 @@ function renderCountryFiltersFromData(filters, stationData) {
   ].join("");
 }
 
-(function initPhotoFilters() {
+function normalizeStationCoords(value) {
+  if (!value) return null;
+  if (Array.isArray(value) && value.length >= 2) {
+    const latArr = Number(value[0]);
+    const lngArr = Number(value[1]);
+    if (Number.isFinite(latArr) && Number.isFinite(lngArr)) return [latArr, lngArr];
+    return null;
+  }
+  const lat = Number(value.lat);
+  const lng = Number(value.lng);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  return [lat, lng];
+}
+
+function normalizeSubmissionConsist(parts) {
+  if (!Array.isArray(parts)) return [];
+  return parts
+    .map((part) => {
+      const kind = String(part?.kind || "").trim().toLowerCase();
+      const label = String(part?.label || "").trim();
+      if (!kind || !label) return null;
+      if (kind === "carriage") {
+        const count = Number(part?.count || 0);
+        return count > 0
+          ? { kind: "carriage", label: `${count}x ${label}`, active: true }
+          : { kind: "carriage", label, active: true };
+      }
+      return { kind: "traction", label, active: true };
+    })
+    .filter(Boolean);
+}
+
+async function mergeApprovedSubmissionsIntoStationData(stationData) {
+  if (!stationData || typeof stationData !== "object") return;
+  try {
+    const res = await fetch("/api/submissions/approved", { credentials: "same-origin" });
+    if (!res.ok) return;
+    const data = await res.json();
+    const items = Array.isArray(data?.items) ? data.items : [];
+    items.forEach((item) => {
+      const stationSlug = String(item?.stationSlug || "").trim().toLowerCase();
+      if (!stationSlug) return;
+
+      if (!stationData[stationSlug] || typeof stationData[stationSlug] !== "object") {
+        stationData[stationSlug] = {
+          slug: stationSlug,
+          name: String(item?.stationName || stationSlug).trim(),
+          province: String(item?.stationProvince || "").trim(),
+          country: String(item?.stationCountry || "").trim(),
+          coords: normalizeStationCoords(item?.stationCoords),
+          photos: [],
+        };
+      }
+
+      const station = stationData[stationSlug];
+      if (!Array.isArray(station.photos)) station.photos = [];
+      if (!station.name) station.name = String(item?.stationName || stationSlug).trim();
+      if (!station.province) station.province = String(item?.stationProvince || "").trim();
+      if (!station.country) station.country = String(item?.stationCountry || "").trim();
+      if (!station.coords) station.coords = normalizeStationCoords(item?.stationCoords);
+
+      const photoId = String(item?.id || "").trim();
+      if (!photoId) return;
+      const exists = station.photos.some((photo) => String(photo?.id || "").trim() === photoId);
+      if (exists) return;
+
+      station.photos.push({
+        id: photoId,
+        operator: String(item?.operator || "").trim(),
+        date: String(item?.date || "").trim(),
+        alt: String(item?.title || station.name || "").trim(),
+        numbers: "",
+        photographer: String(item?.submittedBy || "").trim(),
+        consist: normalizeSubmissionConsist(item?.composition),
+        images: [{ file: String(item?.image || "").trim(), main: true }],
+      });
+    });
+  } catch {}
+}
+
+(async function initPhotoFilters() {
   const filters = document.getElementById("photoFilters");
   const grid = document.getElementById("photoGrid");
   const mapSection = document.getElementById("stationsMap")?.closest("section");
@@ -388,6 +468,7 @@ function renderCountryFiltersFromData(filters, stationData) {
 
   if (!filters || !grid) return;
 
+  await mergeApprovedSubmissionsIntoStationData(stationData);
   renderCountryFiltersFromData(filters, stationData);
   renderPhotoGalleryCardsFromData(grid, stationData);
 
@@ -6091,7 +6172,7 @@ function renderCountryFiltersFromData(filters, stationData) {
               <p><strong>Station:</strong> ${item.stationName || item.stationSlug}</p>
               <div class="moderation-preview">
                 ${item.image
-                  ? `<img src="${escHtml(item.image)}" alt="${escHtml(item.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false;" />`
+                  ? `<img src="${escHtml(item.image)}" alt="${escHtml(item.title)}" loading="lazy" />`
                   : ""}
                 <p class="moderation-preview-fallback" ${item.image ? "hidden" : ""}>Image preview unavailable. Check submitted image path.</p>
               </div>
@@ -6121,13 +6202,26 @@ function renderCountryFiltersFromData(filters, stationData) {
           fallback.hidden = false;
           return;
         }
-        img.addEventListener("load", () => {
+        const showImage = () => {
           img.style.display = "";
           fallback.hidden = true;
-        });
-        img.addEventListener("error", () => {
+        };
+        const showFallback = () => {
           img.style.display = "none";
           fallback.hidden = false;
+        };
+        if (img.complete) {
+          if (img.naturalWidth > 0) {
+            showImage();
+          } else {
+            showFallback();
+          }
+        }
+        img.addEventListener("load", () => {
+          showImage();
+        });
+        img.addEventListener("error", () => {
+          showFallback();
         });
       });
     }
