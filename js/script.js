@@ -399,7 +399,7 @@ function normalizeSubmissionConsist(parts) {
 async function mergeApprovedSubmissionsIntoStationData(stationData) {
   if (!stationData || typeof stationData !== "object") return;
   try {
-    const res = await fetch("/api/submissions/approved", { credentials: "same-origin" });
+    const res = await fetch("/api/submissions/approved?limit=200", { credentials: "same-origin" });
     if (!res.ok) return;
     const data = await res.json();
     const items = Array.isArray(data?.items) ? data.items : [];
