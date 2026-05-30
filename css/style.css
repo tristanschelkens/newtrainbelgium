@@ -2281,6 +2281,10 @@ body.station-lightbox-open {
   text-align: center;
 }
 
+.moderation-preview-fallback[hidden] {
+  display: none;
+}
+
 .moderation-actions {
   margin-top: 10px;
   display: flex;
