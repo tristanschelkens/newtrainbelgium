@@ -396,10 +396,32 @@ function normalizeSubmissionConsist(parts) {
     .filter(Boolean);
 }
 
+function buildApprovedSubmissionPhoto(item, stationSlug, stationName) {
+  const photoId = String(item?.id || "").trim();
+  if (!photoId) return null;
+
+  const src = String(item?.image || "").trim();
+  if (!src) return null;
+
+  return {
+    id: photoId,
+    series: `${stationSlug}-${photoId}`,
+    isMain: true,
+    operator: String(item?.operator || "").trim(),
+    date: String(item?.date || "").trim(),
+    src,
+    alt: String(item?.title || stationName || stationSlug).trim(),
+    label: String(stationName || stationSlug).trim(),
+    numbers: "",
+    photographer: String(item?.submittedBy || "").trim(),
+    consist: normalizeSubmissionConsist(item?.composition),
+  };
+}
+
 async function mergeApprovedSubmissionsIntoStationData(stationData) {
   if (!stationData || typeof stationData !== "object") return;
   try {
-    const cacheKey = "tb_approved_submissions_cache_v1";
+    const cacheKey = "tb_approved_submissions_cache_v2";
     const cacheTtlMs = 1000 * 60 * 5;
     let items = [];
     try {
@@ -454,16 +476,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       const exists = station.photos.some((photo) => String(photo?.id || "").trim() === photoId);
       if (exists) return;
 
-      station.photos.push({
-        id: photoId,
-        operator: String(item?.operator || "").trim(),
-        date: String(item?.date || "").trim(),
-        alt: String(item?.title || station.name || "").trim(),
-        numbers: "",
-        photographer: String(item?.submittedBy || "").trim(),
-        consist: normalizeSubmissionConsist(item?.composition),
-        images: [{ file: String(item?.image || "").trim(), main: true }],
-      });
+      const photo = buildApprovedSubmissionPhoto(item, stationSlug, station.name);
+      if (photo) station.photos.push(photo);
     });
   } catch {}
 }
@@ -495,6 +509,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   await mergeApprovedSubmissionsIntoStationData(stationData);
   renderCountryFiltersFromData(filters, stationData);
   renderPhotoGalleryCardsFromData(grid, stationData);
+  window.dispatchEvent(new CustomEvent("gallery:rendered"));
 
   const buttons = Array.from(filters.querySelectorAll(".filter-btn"));
   const cards = Array.from(grid.querySelectorAll(".photo-card"));
@@ -2552,7 +2567,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   });
 })();
 
-(function initLatestHomePhoto() {
+(async function initLatestHomePhoto() {
   const link = document.getElementById("latestPhotoLink");
   const image = document.getElementById("latestPhotoImage");
   const caption = document.getElementById("latestPhotoCaption");
@@ -2569,6 +2584,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   ) {
     return;
   }
+
+  await mergeApprovedSubmissionsIntoStationData(stationData);
 
   const monthMap = {
     january: 0,
@@ -2592,6 +2609,23 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function parsePhotoDate(value) {
     const raw = String(value || "").trim();
     if (!raw) return null;
+
+    const numericMatch = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2}|\d{4})$/);
+    if (numericMatch) {
+      const day = Number(numericMatch[1]);
+      const month = Number(numericMatch[2]) - 1;
+      const rawYear = String(numericMatch[3] || "");
+      const year = rawYear.length === 2 ? 2000 + Number(rawYear) : Number(rawYear);
+      const dt = new Date(year, month, day);
+      if (
+        dt.getFullYear() === year &&
+        dt.getMonth() === month &&
+        dt.getDate() === day
+      ) {
+        return dt;
+      }
+      return null;
+    }
 
     const match = raw.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
     if (!match) return null;
@@ -2666,11 +2700,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 })();
 
 (function initPhotoMap() {
+  let initialized = false;
+
+  function setupPhotoMap() {
+    if (initialized) return true;
   const mapEl = document.getElementById("stationsMap");
   const grid = document.getElementById("photoGrid");
   const stationData = window.STATIONS_DATA || {};
 
-  if (!mapEl || !grid || typeof window.L === "undefined") return;
+    if (!mapEl || !grid || typeof window.L === "undefined") return true;
 
   const stationCoords = {
     antwerp: [51.2172, 4.4211],
@@ -2725,8 +2763,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     })
     .filter(Boolean);
 
-  if (stations.length === 0) return;
+    if (stations.length === 0) return false;
 
+  initialized = true;
   const map = L.map(mapEl, {
     scrollWheelZoom: true,
     zoomControl: true,
@@ -2777,8 +2816,14 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   window.addEventListener("resize", () => {
     map.invalidateSize();
   });
+    return true;
+  }
+
+  if (!setupPhotoMap()) {
+    window.addEventListener("gallery:rendered", setupPhotoMap, { once: true });
+  }
 })();
-(function initStationPage() {
+(async function initStationPage() {
   const grid = document.getElementById("stationGrid");
   if (!grid) return;
 
@@ -2788,6 +2833,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   const vehicleFilters = document.getElementById("stationVehicleFilters");
 
   const allStations = window.STATIONS_DATA || {};
+  await mergeApprovedSubmissionsIntoStationData(allStations);
   const slug = (new URLSearchParams(window.location.search).get("slug") || "")
     .trim()
     .toLowerCase();
@@ -6272,6 +6318,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         });
         const data = await res.json().catch(() => ({}));
         if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Moderation failed."));
+        try {
+          sessionStorage.removeItem("tb_approved_submissions_cache_v1");
+          sessionStorage.removeItem("tb_approved_submissions_cache_v2");
+        } catch {}
         pending = pending.filter((item) => item.id !== id);
         render();
       } catch (err) {

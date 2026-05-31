@@ -82,6 +82,17 @@ function clearSessionCookie(res) {
   res.clearCookie('tb_session', { path: '/' });
 }
 
+function parseJsonArray(value) {
+  if (Array.isArray(value)) return value;
+  if (typeof value !== 'string') return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true });
 });
@@ -239,7 +250,7 @@ app.get('/api/submissions/pending', async (req, res) => {
         stationCountry: r.station_country || '',
         stationCoords: r.station_coords || null,
         title: r.title,
-        composition: Array.isArray(r.composition) ? r.composition : [],
+        composition: parseJsonArray(r.composition),
         trainType: r.train_type,
         image: r.image,
         date: r.date_text,
@@ -280,7 +291,7 @@ app.get('/api/submissions/approved', async (req, res) => {
         stationCountry: r.station_country || '',
         stationCoords: r.station_coords || null,
         title: r.title,
-        composition: Array.isArray(r.composition) ? r.composition : [],
+        composition: parseJsonArray(r.composition),
         trainType: r.train_type,
         image: r.image,
         date: r.date_text,
