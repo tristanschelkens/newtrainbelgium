@@ -1,6 +1,6 @@
 station({
-  slug: "liege",
-  name: "Liège",
+  slug: "liege-guillemins",
+  name: "Liège-Guillemins",
   country: "Belgium",
   coords: [50.6246, 5.5662],
   folder: "../images/Belgium/Liege/",
