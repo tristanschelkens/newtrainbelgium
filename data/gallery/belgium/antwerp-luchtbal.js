@@ -1,6 +1,6 @@
 station({
-  slug: "luchtbal",
-  name: "Luchtbal",
+  slug: "antwerp-luchtbal",
+  name: "Antwerp-Luchtbal",
   country: "Belgium",
   coords: [51.2442, 4.4248],
   folder: "../images/Belgium/Luchtbal/",

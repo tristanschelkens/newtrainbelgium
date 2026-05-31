@@ -161,7 +161,7 @@ window.STATIONS_BELGIUM = [
   },
   {
     "name": "Antwerp-Berchem",
-    "slug": "antwerpen-berchem",
+    "slug": "antwerp-berchem",
     "country": "Belgium",
     "coordinates": {
       "lat": 51.199527,
@@ -171,7 +171,7 @@ window.STATIONS_BELGIUM = [
   },
   {
     "name": "Antwerp-Central",
-    "slug": "antwerpen-centraal",
+    "slug": "antwerp-central",
     "country": "Belgium",
     "coordinates": {
       "lat": 51.215527,
@@ -191,7 +191,7 @@ window.STATIONS_BELGIUM = [
   },
   {
     "name": "Antwerp-Luchtbal",
-    "slug": "antwerpen-luchtbal",
+    "slug": "antwerp-luchtbal",
     "country": "Belgium",
     "coordinates": {
       "lat": 51.244734,
@@ -201,7 +201,7 @@ window.STATIONS_BELGIUM = [
   },
   {
     "name": "Antwerp-Noorderdokken",
-    "slug": "antwerpen-noorderdokken",
+    "slug": "antwerp-noorderdokken",
     "country": "Belgium",
     "coordinates": {
       "lat": 51.261616,
@@ -211,7 +211,7 @@ window.STATIONS_BELGIUM = [
   },
   {
     "name": "Antwerp-South",
-    "slug": "antwerpen-zuid",
+    "slug": "antwerp-south",
     "country": "Belgium",
     "coordinates": {
       "lat": 51.19754,
