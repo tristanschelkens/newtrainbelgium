@@ -93,6 +93,50 @@ function parseJsonArray(value) {
   }
 }
 
+const stationSlugAliases = {
+  'antwerpen-berchem': 'antwerp-berchem',
+  'antwerpen-centraal': 'antwerp-central',
+  'antwerpen-linkeroever': 'antwerp-linkeroever',
+  'antwerpen-luchtbal': 'antwerp-luchtbal',
+  'antwerpen-noorderdokken': 'antwerp-noorderdokken',
+  'antwerpen-zuid': 'antwerp-south',
+};
+
+const stationNameAliases = {
+  'antwerp-berchem': 'Antwerp-Berchem',
+  'antwerp-central': 'Antwerp-Central',
+  'antwerp-linkeroever': 'Antwerp-Linkeroever',
+  'antwerp-luchtbal': 'Antwerp-Luchtbal',
+  'antwerp-noorderdokken': 'Antwerp-Noorderdokken',
+  'antwerp-south': 'Antwerp-South',
+  'antwerpen-berchem': 'Antwerp-Berchem',
+  'antwerpen-centraal': 'Antwerp-Central',
+  'antwerpen-linkeroever': 'Antwerp-Linkeroever',
+  'antwerpen-luchtbal': 'Antwerp-Luchtbal',
+  'antwerpen-noorderdokken': 'Antwerp-Noorderdokken',
+  'antwerpen-zuid': 'Antwerp-South',
+};
+
+function slugifyStationValue(value) {
+  return String(value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function canonicalStationSlug(value) {
+  const slug = slugifyStationValue(value);
+  return stationSlugAliases[slug] || slug;
+}
+
+function canonicalStationName(name, slug) {
+  const nameKey = slugifyStationValue(name);
+  const slugKey = canonicalStationSlug(slug || nameKey);
+  return stationNameAliases[nameKey] || stationNameAliases[slugKey] || String(name || '').trim();
+}
+
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true });
 });
@@ -190,8 +234,8 @@ app.post('/api/submissions', async (req, res) => {
     if (!user) return;
     const b = req.body || {};
     const id = `sub_${Date.now()}_${crypto.randomBytes(3).toString('hex')}`;
-    const stationSlug = String(b.stationSlug || '').trim().toLowerCase();
-    const stationName = String(b.stationName || '').trim();
+    const stationSlug = canonicalStationSlug(b.stationSlug || b.stationName);
+    const stationName = canonicalStationName(b.stationName, stationSlug);
     const title = String(b.title || '').trim();
     const trainType = String(b.trainType || '').trim();
     const image = String(b.image || '').trim();

@@ -378,6 +378,50 @@ function normalizeStationCoords(value) {
   return [lat, lng];
 }
 
+const stationSlugAliases = {
+  "antwerpen-berchem": "antwerp-berchem",
+  "antwerpen-centraal": "antwerp-central",
+  "antwerpen-linkeroever": "antwerp-linkeroever",
+  "antwerpen-luchtbal": "antwerp-luchtbal",
+  "antwerpen-noorderdokken": "antwerp-noorderdokken",
+  "antwerpen-zuid": "antwerp-south",
+};
+
+const stationNameAliases = {
+  "antwerp-berchem": "Antwerp-Berchem",
+  "antwerp-central": "Antwerp-Central",
+  "antwerp-linkeroever": "Antwerp-Linkeroever",
+  "antwerp-luchtbal": "Antwerp-Luchtbal",
+  "antwerp-noorderdokken": "Antwerp-Noorderdokken",
+  "antwerp-south": "Antwerp-South",
+  "antwerpen-berchem": "Antwerp-Berchem",
+  "antwerpen-centraal": "Antwerp-Central",
+  "antwerpen-linkeroever": "Antwerp-Linkeroever",
+  "antwerpen-luchtbal": "Antwerp-Luchtbal",
+  "antwerpen-noorderdokken": "Antwerp-Noorderdokken",
+  "antwerpen-zuid": "Antwerp-South",
+};
+
+function slugifyStationValue(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function canonicalStationSlug(value) {
+  const slug = slugifyStationValue(value);
+  return stationSlugAliases[slug] || slug;
+}
+
+function canonicalStationName(name, slug) {
+  const nameKey = slugifyStationValue(name);
+  const slugKey = canonicalStationSlug(slug || nameKey);
+  return stationNameAliases[nameKey] || stationNameAliases[slugKey] || String(name || "").trim();
+}
+
 function normalizeSubmissionConsist(parts) {
   if (!Array.isArray(parts)) return [];
   return parts
@@ -450,13 +494,14 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     items.forEach((item) => {
-      const stationSlug = String(item?.stationSlug || "").trim().toLowerCase();
+      const stationSlug = canonicalStationSlug(item?.stationSlug || item?.stationName);
       if (!stationSlug) return;
+      const stationName = canonicalStationName(item?.stationName, stationSlug) || stationSlug;
 
       if (!stationData[stationSlug] || typeof stationData[stationSlug] !== "object") {
         stationData[stationSlug] = {
           slug: stationSlug,
-          name: String(item?.stationName || stationSlug).trim(),
+          name: stationName,
           province: String(item?.stationProvince || "").trim(),
           country: String(item?.stationCountry || "").trim(),
           coords: normalizeStationCoords(item?.stationCoords),
@@ -466,7 +511,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
       const station = stationData[stationSlug];
       if (!Array.isArray(station.photos)) station.photos = [];
-      if (!station.name) station.name = String(item?.stationName || stationSlug).trim();
+      station.name = canonicalStationName(station.name || stationName, stationSlug) || stationName;
       if (!station.province) station.province = String(item?.stationProvince || "").trim();
       if (!station.country) station.country = String(item?.stationCountry || "").trim();
       if (!station.coords) station.coords = normalizeStationCoords(item?.stationCoords);
@@ -2834,9 +2879,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   const allStations = window.STATIONS_DATA || {};
   await mergeApprovedSubmissionsIntoStationData(allStations);
-  const slug = (new URLSearchParams(window.location.search).get("slug") || "")
-    .trim()
-    .toLowerCase();
+  const slug = canonicalStationSlug(new URLSearchParams(window.location.search).get("slug") || "");
   const requestedPhotoIndex = Number(
     new URLSearchParams(window.location.search).get("photo"),
   );
@@ -5145,12 +5188,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     function getStationOptions() {
       if (stationOptionsCache) return stationOptionsCache;
-      const toSlug = (value) => String(value || "")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
       const countryToFlag = {
         albania: "../images/Other/Flags/Albania.svg",
         andorra: "../images/Other/Flags/Andorra.svg",
@@ -5219,20 +5256,23 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         .flat()
         .forEach((item) => {
           const name = String(item?.name || "").trim();
-          const slug = String(item?.slug || toSlug(name)).trim().toLowerCase();
+          const slug = canonicalStationSlug(item?.slug || name);
+          const displayName = canonicalStationName(name, slug) || name;
           const country = String(item?.country || "").trim();
           const province = String(item?.province || item?.region || item?.state || "").trim();
           if (!name || !slug || !country) return;
           if (!isUsefulStationName(name)) return;
+          const existing = merged.get(slug) || {};
           merged.set(slug, {
+            ...existing,
             slug,
-            name,
-            province,
-            country,
+            name: displayName,
+            province: province || existing.province || "",
+            country: country || existing.country || "",
             coordinates: item?.coordinates && typeof item.coordinates === "object"
               ? { lat: Number(item.coordinates.lat), lng: Number(item.coordinates.lng) }
-              : null,
-            flag: countryToFlag[toSlug(country).replaceAll("-", "")] || "",
+              : existing.coordinates || null,
+            flag: countryToFlag[slugifyStationValue(country).replaceAll("-", "")] || existing.flag || "",
           });
         });
       stationOptionsCache = Array.from(merged.values()).sort((a, b) => a.name.localeCompare(b.name));
