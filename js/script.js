@@ -422,12 +422,68 @@ function canonicalStationName(name, slug) {
   return stationNameAliases[nameKey] || stationNameAliases[slugKey] || String(name || "").trim();
 }
 
+const vehiclePrefixNames = {
+  am: "AM",
+  ar: "AR",
+  br: "BR",
+  desiro: "Desiro",
+  e: "E",
+  hld: "HLD",
+  hle: "HLE",
+  hlr: "HLR",
+  i: "I",
+  m: "M",
+  p: "P",
+  mw: "MW",
+  ms: "MS",
+  traxx: "TRAXX",
+  tgv: "TGV",
+};
+
+const spacedVehiclePrefixes = new Set(["am", "ar", "hle", "hld", "hlr", "mw", "ms"]);
+const compactVehiclePrefixes = new Set(["i", "m", "p"]);
+
+function normalizeVehicleLabel(value) {
+  const raw = String(value || "").trim().replace(/\s+/g, " ");
+  if (!raw) return "";
+
+  const compact = raw
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+
+  const match = compact.match(/^([a-z]+)(\d+)(.*)$/);
+  if (!match) {
+    return raw
+      .split(" ")
+      .map((part) => vehiclePrefixNames[part.toLowerCase()] || part)
+      .join(" ");
+  }
+
+  const prefixKey = match[1];
+  const prefix = vehiclePrefixNames[prefixKey] || prefixKey.toUpperCase();
+  const digits = match[2];
+  const tail = match[3] ? ` ${match[3].toUpperCase()}` : "";
+
+  if (spacedVehiclePrefixes.has(prefixKey)) {
+    if (digits.length <= 2) return `${prefix} ${digits.padStart(2, "0")}${tail}`;
+    return `${prefix} ${digits.slice(0, 2).padStart(2, "0")} ${digits.slice(2)}${tail}`;
+  }
+
+  if (compactVehiclePrefixes.has(prefixKey) || prefixKey.length === 1) {
+    return `${prefix}${digits}${tail}`;
+  }
+
+  return `${prefix} ${digits}${tail}`;
+}
+
 function normalizeSubmissionConsist(parts) {
   if (!Array.isArray(parts)) return [];
   return parts
     .map((part) => {
       const kind = String(part?.kind || "").trim().toLowerCase();
-      const label = String(part?.label || "").trim();
+      const label = normalizeVehicleLabel(part?.label);
       if (!kind || !label) return null;
       if (kind === "carriage") {
         const count = Number(part?.count || 0);
@@ -655,7 +711,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   }
 
   function formatSearchTagLabel(label) {
-    return String(label || "").replace(
+    return normalizeVehicleLabel(label).replace(
       /(\d+)\s*x\s*/gi,
       (_, n) => `${n}${String.fromCharCode(215)} `,
     );
@@ -3096,7 +3152,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   }
 
   function formatTagLabel(label) {
-    return String(label || "").replace(
+    return normalizeVehicleLabel(label).replace(
       /(\d+)\s*x\s*/gi,
       (_, n) => `${n}${String.fromCharCode(215)} `,
     );
@@ -5472,13 +5528,13 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             Array.from(row.querySelectorAll("[data-sp-slot]"))
               .map((input) => String(input.value || "").trim())
               .filter(Boolean)
-              .map((label) => ({ kind: "trainset", label })),
+              .map((label) => ({ kind: "trainset", label: normalizeVehicleLabel(label) })),
           );
       }
       return Array.from(compositionRows.querySelectorAll(".submit-composition-row"))
         .map((row) => {
           const kind = String(row.querySelector('[data-comp-field="kind"]')?.value || "");
-          const label = String(row.querySelector('[data-comp-field="label"]')?.value || "").trim();
+          const label = normalizeVehicleLabel(row.querySelector('[data-comp-field="label"]')?.value);
           const count = Number(row.querySelector('[data-comp-field="count"]')?.value || 0);
           if (!kind || !label) return null;
           if (kind === "carriage") {
@@ -5556,6 +5612,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           input.addEventListener("input", () => {
             syncCompositionTitle();
           });
+          input.addEventListener("blur", () => {
+            input.value = normalizeVehicleLabel(input.value);
+            syncCompositionTitle();
+          });
           if (slotsWrap.contains(addBtn)) {
             slotsWrap.insertBefore(input, addBtn);
           } else {
@@ -5630,6 +5690,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           const last = rows[rows.length - 1];
           if (last && row === last && rowIsComplete(row)) appendCompositionRow();
         });
+      });
+      labelInput?.addEventListener("blur", () => {
+        labelInput.value = normalizeVehicleLabel(labelInput.value);
+        refreshKindUi();
+        syncCompositionTitle();
       });
     }
 
@@ -6273,6 +6338,18 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     let pending = [];
 
+    function formatSubmissionCompositionPart(part) {
+      const label = normalizeVehicleLabel(part?.label);
+      if (!label) return "";
+      if (part?.kind === "carriage") return `${Number(part.count || 1)}x ${label}`;
+      return label;
+    }
+
+    function getSubmissionCompositionText(item) {
+      const parts = Array.isArray(item?.composition) ? item.composition : [];
+      return parts.map(formatSubmissionCompositionPart).filter(Boolean).join(" + ");
+    }
+
     function render() {
 
       if (pending.length === 0) {
@@ -6284,7 +6361,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         .map(
           (item) => `
             <article class="moderation-item" data-submission-id="${item.id}">
-              <h3>${item.title}</h3>
+              <h3>${escHtml(getSubmissionCompositionText(item) || item.title)}</h3>
               <p><strong>Station:</strong> ${item.stationName || item.stationSlug}</p>
               <div class="moderation-preview">
                 ${item.image
@@ -6294,9 +6371,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               </div>
               <p><strong>Date:</strong> ${item.date}</p>
               ${Array.isArray(item.composition) && item.composition.length > 0
-                ? `<p><strong>Composition:</strong> ${item.composition
-                    .map((part) => part.kind === "carriage" ? `${Number(part.count || 0)}x ${escHtml(part.label || "")}` : escHtml(part.label || ""))
-                    .join(" + ")}</p>`
+                ? `<p><strong>Composition:</strong> ${escHtml(getSubmissionCompositionText(item))}</p>`
                 : ""}
               <p><strong>Operator:</strong> ${item.operator}</p>
               <p><strong>By:</strong> ${item.submittedBy}</p>

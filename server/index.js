@@ -137,6 +137,71 @@ function canonicalStationName(name, slug) {
   return stationNameAliases[nameKey] || stationNameAliases[slugKey] || String(name || '').trim();
 }
 
+const vehiclePrefixNames = {
+  am: 'AM',
+  ar: 'AR',
+  br: 'BR',
+  desiro: 'Desiro',
+  e: 'E',
+  hld: 'HLD',
+  hle: 'HLE',
+  hlr: 'HLR',
+  i: 'I',
+  m: 'M',
+  p: 'P',
+  mw: 'MW',
+  ms: 'MS',
+  traxx: 'TRAXX',
+  tgv: 'TGV',
+};
+
+const spacedVehiclePrefixes = new Set(['am', 'ar', 'hle', 'hld', 'hlr', 'mw', 'ms']);
+const compactVehiclePrefixes = new Set(['i', 'm', 'p']);
+
+function normalizeVehicleLabel(value) {
+  const raw = String(value || '').trim().replace(/\s+/g, ' ');
+  if (!raw) return '';
+  const compact = raw
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '');
+  const match = compact.match(/^([a-z]+)(\d+)(.*)$/);
+  if (!match) {
+    return raw
+      .split(' ')
+      .map((part) => vehiclePrefixNames[part.toLowerCase()] || part)
+      .join(' ');
+  }
+  const prefixKey = match[1];
+  const prefix = vehiclePrefixNames[prefixKey] || prefixKey.toUpperCase();
+  const digits = match[2];
+  const tail = match[3] ? ` ${match[3].toUpperCase()}` : '';
+  if (spacedVehiclePrefixes.has(prefixKey)) {
+    if (digits.length <= 2) return `${prefix} ${digits.padStart(2, '0')}${tail}`;
+    return `${prefix} ${digits.slice(0, 2).padStart(2, '0')} ${digits.slice(2)}${tail}`;
+  }
+  if (compactVehiclePrefixes.has(prefixKey) || prefixKey.length === 1) return `${prefix}${digits}${tail}`;
+  return `${prefix} ${digits}${tail}`;
+}
+
+function normalizeSubmissionComposition(parts) {
+  if (!Array.isArray(parts)) return [];
+  return parts
+    .map((part) => {
+      const kind = String(part?.kind || '').trim().toLowerCase();
+      const label = normalizeVehicleLabel(part?.label);
+      if (!kind || !label) return null;
+      if (kind === 'carriage') {
+        const count = Number(part?.count || 0);
+        if (!Number.isFinite(count) || count < 1) return null;
+        return { ...part, kind, label, count };
+      }
+      return { ...part, kind, label };
+    })
+    .filter(Boolean);
+}
+
 app.get('/api/health', (_req, res) => {
   res.json({ ok: true });
 });
@@ -244,7 +309,7 @@ app.post('/api/submissions', async (req, res) => {
     if (!stationSlug || !stationName || !title || !trainType || !image || !dateText || !operatorText) {
       return res.status(400).json({ ok: false, error: 'Please complete all required fields.' });
     }
-    const composition = Array.isArray(b.composition) ? b.composition : [];
+    const composition = normalizeSubmissionComposition(b.composition);
     await pool.query(
       `INSERT INTO photo_submissions
       (id, station_slug, station_name, station_province, station_country, station_coords, title, composition, train_type, image, date_text, operator_text, notes, submitted_by, status)
@@ -294,7 +359,7 @@ app.get('/api/submissions/pending', async (req, res) => {
         stationCountry: r.station_country || '',
         stationCoords: r.station_coords || null,
         title: r.title,
-        composition: parseJsonArray(r.composition),
+        composition: normalizeSubmissionComposition(parseJsonArray(r.composition)),
         trainType: r.train_type,
         image: r.image,
         date: r.date_text,
@@ -335,7 +400,7 @@ app.get('/api/submissions/approved', async (req, res) => {
         stationCountry: r.station_country || '',
         stationCoords: r.station_coords || null,
         title: r.title,
-        composition: parseJsonArray(r.composition),
+        composition: normalizeSubmissionComposition(parseJsonArray(r.composition)),
         trainType: r.train_type,
         image: r.image,
         date: r.date_text,
