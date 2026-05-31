@@ -3,7 +3,7 @@ station({
   name: "Antwerp-Central",
   country: "Belgium",
   coords: [51.2165, 4.4211],
-  folder: "../images/Belgium/Antwerp/",
+  folder: "../images/Belgium/antwerp-central/",
   description: "Rail photography in Antwerp.",
 
   photos: [
