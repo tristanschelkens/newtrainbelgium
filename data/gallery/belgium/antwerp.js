@@ -1,6 +1,6 @@
 station({
   slug: "antwerp-central",
-  name: "Antwerpentral",
+  name: "Antwerp-Central",
   country: "Belgium",
   coords: [51.2165, 4.4211],
   folder: "../images/Belgium/Antwerp/",
