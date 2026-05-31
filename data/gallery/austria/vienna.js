@@ -35,7 +35,7 @@ station({
       alt: "Vienna ÖBB 1116 193",
       numbers: "1116 193",
       consist: [traction("Taurus 1116 193", { active: true, filterKey: "taurus", filterLabel: "Taurus" }), carriage("4x UIC-Z")],
-      images: ["Vienna_OEBB_1116193.jpeg", "Vienna_ZSSK_263003_Angle.jpeg"],
+      images: ["Vienna_OEBB_1116193.jpeg"],
     },
     {
       id: "photo-4",
@@ -45,7 +45,7 @@ station({
       alt: "Vienna ÖBB 4020 302-8",
       numbers: "4020 302-8, 4020 305-1",
       consist: [traction("Class 4020 302-8", { active: true, filterKey: "class-4020", filterLabel: "Class 4020" }), traction("Class 4020 305-1", { active: true, filterKey: "class-4020", filterLabel: "Class 4020" })],
-      images: [mainImage("Vienna_OEBB_4020302.jpeg"), image("Vienna_OEBB_4020305.jpeg", { alt: "Vienna ÖBB 4020 305-1", numbers: "4020 305-1, 4020 302-8" })],
+      images: [mainImage("Vienna_OEBB_4020302.jpeg")],
     },
     {
       id: "photo-5",
@@ -124,7 +124,7 @@ station({
       alt: "Vienna ÖBB Cityjet Marchegg",
       numbers: "4024 054-0",
       consist: [traction("Class 4024 054-0", { active: true, filterKey: "class-4024", filterLabel: "Class 4024" })],
-      images: [image("Vienna_OEBB_Cityjet_Marchegg_Wide.jpeg", { alt: "Vienna ÖBB Cityjet Marchegg wide view" }), mainImage("Vienna_OEBB_Cityjet_Marchegg.jpeg")],
+      images: [image("Vienna_OEBB_Cityjet_Marchegg_Wide.jpeg", { alt: "Vienna ÖBB Cityjet Marchegg wide view" })],
     },
     {
       id: "photo-13",
@@ -164,7 +164,7 @@ station({
       alt: "Vienna H-START 470 005 front view",
       numbers: "470 005",
       consist: [traction("Taurus 470 005", { active: true, filterKey: "taurus", filterLabel: "Taurus" }), carriage("6x UIC-Z")],
-      images: [image("Vienna_HSTART_470005.jpeg", { alt: "Vienna H-START 470 005", consist: [{ type: "traction", label: "Taurus 470 005", active: true, filterKey: "taurus", filterLabel: "Taurus" }, ["carriage", "5x UIC-Z"]] }), mainImage("Vienna_HSTART_470005_Front.jpeg")],
+      images: [image("Vienna_HSTART_470005.jpeg", { alt: "Vienna H-START 470 005", consist: [{ type: "traction", label: "Taurus 470 005", active: true, filterKey: "taurus", filterLabel: "Taurus" }, ["carriage", "5x UIC-Z"]] })],
     },
     {
       id: "photo-18",

@@ -3,7 +3,7 @@ station({
   name: "Liège-Guillemins",
   country: "Belgium",
   coords: [50.6246, 5.5662],
-  folder: "../images/Belgium/liege-guillemins/",
+  folder: "../images/Belgium/Liege-Guillemins/",
   description: "Rail photography in Liège.",
 
   photos: [

@@ -3,7 +3,7 @@ station({
   name: "Paris Gare De Lyon",
   country: "France",
   coords: [48.8444, 2.3743],
-  folder: "../images/France/paris_gare-de-lyon/",
+  folder: "../images/France/Paris-Gare-De-Lyon/",
   description: "Rail photography in Paris.",
 
   photos: [

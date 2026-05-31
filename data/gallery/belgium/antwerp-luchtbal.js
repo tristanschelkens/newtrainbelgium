@@ -3,7 +3,7 @@ station({
   name: "Antwerp-Luchtbal",
   country: "Belgium",
   coords: [51.2442, 4.4248],
-  folder: "../images/Belgium/antwerp-luchtbal/",
+  folder: "../images/Belgium/Antwerp-Luchtbal/",
   description: "Rail photography in Luchtbal.",
 
   photos: [

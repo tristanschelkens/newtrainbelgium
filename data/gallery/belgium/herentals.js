@@ -25,7 +25,7 @@ station({
       alt: "Herentals 10x M7",
       numbers: "76010",
       consist: [traction("M7")],
-      images: ["Herentals_M7.webp","Herentals_M7_2.webp"],
+      images: ["Herentals_M7.webp"],
     },
         {
       id: "photo-2",

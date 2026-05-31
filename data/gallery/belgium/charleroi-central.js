@@ -25,7 +25,7 @@ station({
       photographer: "trainbelgium",
       numbers: "4105",
       consist: [traction("AR41 05")],
-      images: ["Charleroi-Central_AR4105.webp", "Charleroi-Central_AR4105_2.webp"],
+      images: ["Charleroi-Central_AR4105.webp"],
     },
        {
       id: "photo-2",
@@ -35,7 +35,7 @@ station({
       photographer: "trainbelgium",
       numbers: "4110",
       consist: [traction("AR41 10")],
-      images: ["Charleroi-Central_AR4110.webp", "Charleroi-Central_AR4110_2.webp"],
+      images: ["Charleroi-Central_AR4110.webp"],
     },
   ],
 });

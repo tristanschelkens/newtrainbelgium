@@ -15,7 +15,7 @@ station({
       alt: "TGV M 1402",
       numbers: "1402",
       consist: [traction("TGV M 1402")],
-      images: ["Leuven_TGV1402.webp", "Leuven_TGV1402_2.webp", "Leuven_TGV1402_3.webp", "Leuven_TGV1402_4.webp", "Leuven_TGV1402_5.webp", "Leuven_TGV1402_6.webp", "Leuven_TGV1402_7.webp"],
+      images: ["Leuven_TGV1402.webp"],
     },
     {
       id: "photo-1",

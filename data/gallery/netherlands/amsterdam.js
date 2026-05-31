@@ -15,7 +15,7 @@ station({
       alt: "Amsterdam NS VIRM",
       numbers: "8636",
       consist: [traction("VIRM 8636")],
-      images: [mainImage("Amsterdam_NS_VIRM_8631.jpeg"), image("Amsterdam_NS_VIRM_9525.jpeg", { alt: "Amsterdam NS VIRM 8636" })],
+      images: [mainImage("Amsterdam_NS_VIRM_8631.jpeg")],
     },
     {
       id: "photo-3",
@@ -25,7 +25,7 @@ station({
       alt: "Amsterdam NS Vectron 193 733 + NightJet",
       numbers: "193 733",
       consist: [traction("Vectron 193 733"), carriage("NightJet", false)],
-      images: ["Amsterdam_NS_Vectron_193733.jpeg", "Amsterdam_Nightjet.jpeg"],
+      images: ["Amsterdam_NS_Vectron_193733.jpeg"],
     },
     {
       id: "photo-5",
