@@ -47,7 +47,8 @@ function mainImage(file, options) {
     "netherlands/amsterdam",
     "netherlands/roosendaal",
     "slovakia/bratislava",
-    "united-kingdom/london",
+    "united-kingdom/london-st-pancras",
+    "united-kingdom/london-paddington",
   ];
 
   stations.forEach(function(stationPath) {
