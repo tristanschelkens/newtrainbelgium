@@ -1360,7 +1360,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           .map((item) => item.trim())
           .filter(Boolean);
         searchLightboxOperator.innerHTML = labels
-          .map((label) => `<span class="station-meta-chip">${esc(label)}</span>`)
+          .map(
+            (label) =>
+              `<button class="station-meta-chip station-meta-chip-link" type="button" data-lightbox-operator="${esc(normalizeFacetKey(label))}">${esc(label)}</button>`,
+          )
           .join("");
         searchLightboxOperator.style.display = "flex";
       } else {
@@ -1429,6 +1432,24 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (e.target === searchLightbox) {
       closeSearchLightbox();
     }
+  });
+
+  searchLightboxOperator?.addEventListener("click", (event) => {
+    const chip = event.target.closest("[data-lightbox-operator]");
+    if (!chip) return;
+    const operatorKey = String(chip.dataset.lightboxOperator || "").trim().toLowerCase();
+    if (!operatorKey) return;
+    activeSortMode = "company";
+    companyDrillOperator = operatorKey;
+    companyDrillMaterial = "";
+    companyDrillNumber = "";
+    placeDrillCountry = "";
+    placeDrillStation = "";
+    placeDrillMaterial = "";
+    placeDrillNumber = "";
+    closeSearchLightbox();
+    updateSortButtons();
+    applyFilters(true);
   });
 
   document.addEventListener("keydown", (e) => {
@@ -1980,7 +2001,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           .split(",")
           .map((label) => label.trim())
           .filter(Boolean)
-          .map((label) => `<span class="station-operator-badge">${esc(label)}</span>`)
+          .map(
+            (label) =>
+              `<span class="station-operator-badge station-operator-badge-link" role="button" tabindex="0" data-photo-operator="${esc(normalizeFacetKey(label))}">${esc(label)}</span>`,
+          )
           .join("");
         const operatorBadge = operatorBadges
           ? `<div class="station-operator-stack">${operatorBadges}</div>`
@@ -2057,7 +2081,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           .split(",")
           .map((label) => label.trim())
           .filter(Boolean)
-          .map((label) => `<span class="station-operator-badge">${esc(label)}</span>`)
+          .map(
+            (label) =>
+              `<span class="station-operator-badge station-operator-badge-link" role="button" tabindex="0" data-photo-operator="${esc(normalizeFacetKey(label))}">${esc(label)}</span>`,
+          )
           .join("");
         const operatorBadge = operatorBadges
           ? `<div class="station-operator-stack">${operatorBadges}</div>`
@@ -2805,6 +2832,25 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   window.addEventListener("beforeunload", persistScrollPosition);
 
   grid.addEventListener("click", (e) => {
+    const photoOperatorBadge = e.target.closest("[data-photo-operator]");
+    if (photoOperatorBadge) {
+      e.preventDefault();
+      e.stopPropagation();
+      const operatorKey = String(photoOperatorBadge.dataset.photoOperator || "").trim().toLowerCase();
+      if (!operatorKey) return;
+      activeSortMode = "company";
+      companyDrillOperator = operatorKey;
+      companyDrillMaterial = "";
+      companyDrillNumber = "";
+      placeDrillCountry = "";
+      placeDrillStation = "";
+      placeDrillMaterial = "";
+      placeDrillNumber = "";
+      updateSortButtons();
+      applyFilters(true);
+      return;
+    }
+
     const placeCountryCard = e.target.closest("[data-place-country-card]");
     if (placeCountryCard) {
       placeDrillCountry = String(placeCountryCard.dataset.placeCountryCard || "");

@@ -1402,7 +1402,7 @@ button.photo-card {
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
-  pointer-events: none;
+  pointer-events: auto;
   user-select: none;
 }
 
@@ -1415,7 +1415,11 @@ button.photo-card {
   flex-wrap: wrap;
   gap: 6px;
   max-width: calc(100% - 20px);
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+.station-operator-badge-link {
+  cursor: pointer;
 }
 
 .station-photographer-badge {
@@ -1647,8 +1651,12 @@ body.station-lightbox-open {
   flex-wrap: wrap;
   gap: 6px;
   max-width: calc(100% - 180px);
-  pointer-events: none;
+  pointer-events: auto;
   user-select: none;
+}
+
+.station-meta-chip-link {
+  cursor: pointer;
 }
 
 .station-lightbox-date {
