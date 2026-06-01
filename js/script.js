@@ -441,6 +441,7 @@ const vehiclePrefixNames = {
   p: "P",
   mw: "MW",
   ms: "MS",
+  skoda: "Skoda",
   traxx: "TRAXX",
   tgv: "TGV",
 };
@@ -498,7 +499,7 @@ function splitTrainNumber(value) {
   const compact = normalized.replace(/\s+/g, " ").trim();
   const parts = compact.split(" ").filter(Boolean);
   if (parts.length < 2) return { train: compact, number: "" };
-  const familyPrefixes = new Set(["AM", "AR", "HLE", "HLD", "HLR", "TRAXX", "BR", "E", "MW", "MS"]);
+  const familyPrefixes = new Set(["AM", "AR", "HLE", "HLD", "HLR", "TRAXX", "BR", "E", "MW", "MS", "SKODA"]);
   if (parts.length >= 2 && familyPrefixes.has(parts[0].toUpperCase()) && /^\d{1,4}$/.test(parts[1])) {
     const train = `${parts[0]} ${parts[1]}`;
     const maybeNumber = parts[2] || "";
@@ -904,6 +905,12 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
     if (withoutCount.startsWith("traxx")) {
       return { key: "traxx", label: "TRAXX" };
+    }
+    if (withoutCount.startsWith("skoda 263")) {
+      return { key: "skoda-263", label: "Skoda 263" };
+    }
+    if (withoutCount.startsWith("skoda")) {
+      return { key: "skoda", label: "Skoda" };
     }
     if (withoutCount.startsWith("br146")) {
       return { key: "br146", label: "BR 146" };
