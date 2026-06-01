@@ -23,7 +23,7 @@ station({
       date: "8 March 2026",
       photographer: "trainbelgium",
       alt: "Liège M7",
-      numbers: "",
+      numbers: "75119",
       consist: [train("M7")],
       images: ["IMG_4723.webp"],
     },
