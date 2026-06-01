@@ -23,7 +23,7 @@ station({
       operator: "NMBS/SNCB",
       date: "17 March 2026",
       alt: "Herentals M7",
-      numbers: "",
+      numbers: "76010",
       consist: [train("M7")],
       images: ["Herentals_M7.webp"],
     },
