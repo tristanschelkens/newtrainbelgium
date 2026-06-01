@@ -1945,12 +1945,22 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (noResults) noResults.style.display = numberMap.size === 0 ? "block" : "none";
   }
 
+  function placeMaterialHasAnyNumber() {
+    return allPhotoEntries
+      .filter((entry) => String(entry?.country || "").trim().toLowerCase() === String(placeDrillCountry || "").trim().toLowerCase())
+      .filter((entry) => entry.slug === placeDrillStation)
+      .filter((entry) => entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial))
+      .some((entry) => String(entry.leadPowerNumber || "").trim() !== "");
+  }
+
   function renderPlacePhotoCards() {
     const entries = allPhotoEntries.filter((entry) => {
       const countryOk = String(entry?.country || "").trim().toLowerCase() === String(placeDrillCountry || "").trim().toLowerCase();
       const stationOk = entry.slug === placeDrillStation;
       const materialOk = entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial);
-      const numberOk = String(entry.leadPowerNumber || "") === String(placeDrillNumber || "");
+      const numberOk =
+        !String(placeDrillNumber || "").trim() ||
+        String(entry.leadPowerNumber || "") === String(placeDrillNumber || "");
       return countryOk && stationOk && materialOk && numberOk;
     });
 
@@ -2177,7 +2187,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       } else if (!placeDrillMaterial) {
         renderPlaceMaterialDrillCards();
       } else if (!placeDrillNumber) {
-        renderPlaceNumberDrillCards();
+        if (placeMaterialHasAnyNumber()) {
+          renderPlaceNumberDrillCards();
+        } else {
+          renderPlacePhotoCards();
+        }
       } else {
         renderPlacePhotoCards();
       }
