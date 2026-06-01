@@ -1905,7 +1905,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" â€¢ ");
+        const metaRow = [stationName, date].filter(Boolean).join(" | ");
 
         return `
           <button
@@ -1982,7 +1982,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" â€¢ ");
+        const metaRow = [stationName, date].filter(Boolean).join(" | ");
 
         return `
           <button
