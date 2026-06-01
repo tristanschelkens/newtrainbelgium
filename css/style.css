@@ -1326,7 +1326,7 @@ button.photo-card {
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
 }
 
-.station-photo-card-detailed img {
+.station-photo-card-detailed > img {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
