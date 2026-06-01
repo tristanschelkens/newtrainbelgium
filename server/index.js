@@ -179,7 +179,7 @@ function normalizeVehicleLabel(value) {
   const tail = match[3] ? ` ${match[3].toUpperCase()}` : '';
   if (spacedVehiclePrefixes.has(prefixKey)) {
     if (digits.length <= 2) return `${prefix} ${digits.padStart(2, '0')}${tail}`;
-    return `${prefix} ${digits.slice(0, 2).padStart(2, '0')} ${digits.slice(2)}${tail}`;
+    return `${prefix} ${digits}${tail}`;
   }
   if (compactVehiclePrefixes.has(prefixKey) || prefixKey.length === 1) return `${prefix}${digits}${tail}`;
   return `${prefix} ${digits}${tail}`;
