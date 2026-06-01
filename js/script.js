@@ -687,6 +687,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   let companyDrillOperator = "";
   let companyDrillMaterial = "";
   let companyDrillNumber = "";
+  let placeDrillCountry = "";
   let placeDrillStation = "";
   let placeDrillMaterial = "";
   let placeDrillNumber = "";
@@ -1613,6 +1614,23 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .replace(/\b\w/g, (m) => m.toUpperCase());
   }
 
+  function placeCountryLabelByKey(countryKey) {
+    const key = String(countryKey || "").trim().toLowerCase();
+    if (!key) return "";
+    const entry = allPhotoEntries.find(
+      (item) => String(item?.country || "").trim().toLowerCase() === key,
+    );
+    if (entry?.slug) {
+      const station = stationData[String(entry.slug || "").toLowerCase()];
+      const explicit = String(station?.country || "").trim();
+      if (explicit) return explicit;
+    }
+    return key
+      .split("-")
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(" ");
+  }
+
   function updateBreadcrumbs() {
     if (!breadcrumbBar || !breadcrumb) return;
 
@@ -1660,6 +1678,17 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     } else if (activeSortMode === "place") {
       parts.push('<button class="photos-crumb-btn" type="button" data-crumb-level="place-root">Place</button>');
 
+      if (placeDrillCountry) {
+        parts.push('<span class="photos-crumb-sep">/</span>');
+        if (placeDrillStation || placeDrillMaterial || placeDrillNumber) {
+          parts.push(
+            `<button class="photos-crumb-btn" type="button" data-crumb-level="place-country">${esc(placeCountryLabelByKey(placeDrillCountry))}</button>`,
+          );
+        } else {
+          parts.push(`<span class="photos-crumb-current">${esc(placeCountryLabelByKey(placeDrillCountry))}</span>`);
+        }
+      }
+
       if (placeDrillStation) {
         parts.push('<span class="photos-crumb-sep">/</span>');
         if (placeDrillMaterial || placeDrillNumber) {
@@ -1698,7 +1727,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       if (activeSortMode === "company") {
         breadcrumbBackBtn.hidden = !(companyDrillOperator || companyDrillMaterial || companyDrillNumber);
       } else if (activeSortMode === "place") {
-        breadcrumbBackBtn.hidden = !(placeDrillStation || placeDrillMaterial || placeDrillNumber);
+        breadcrumbBackBtn.hidden = !(placeDrillCountry || placeDrillStation || placeDrillMaterial || placeDrillNumber);
       }
     }
   }
@@ -1779,9 +1808,40 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (noResults) noResults.style.display = materialMap.size === 0 ? "block" : "none";
   }
 
+  function renderPlaceCountryDrillCards() {
+    const countryMap = new Map();
+    allPhotoEntries.forEach((entry) => {
+      const countryKey = String(entry?.country || "").trim().toLowerCase();
+      if (!countryKey) return;
+      if (!countryMap.has(countryKey)) countryMap.set(countryKey, []);
+      countryMap.get(countryKey).push(entry);
+    });
+
+    const cards = Array.from(countryMap.entries())
+      .sort((a, b) => placeCountryLabelByKey(a[0]).localeCompare(placeCountryLabelByKey(b[0])))
+      .map(([countryKey, entries]) => {
+        const randomEntry = entries[Math.floor(Math.random() * entries.length)] || null;
+        const label = placeCountryLabelByKey(countryKey);
+        return `
+          <button class="photo-card photo-search-result" type="button" data-place-country-card="${esc(countryKey)}">
+            <img loading="lazy" src="${esc(String(randomEntry?.src || ""))}" alt="${esc(label)}" />
+            <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
+              <h3>${esc(label)}</h3>
+            </div>
+          </button>
+        `;
+      })
+      .join("");
+
+    grid.innerHTML = cards;
+    prepareImageFallbacks(grid);
+    if (noResults) noResults.style.display = countryMap.size === 0 ? "block" : "none";
+  }
+
   function renderPlaceDrillCards() {
     const stationMap = new Map();
     allPhotoEntries.forEach((entry) => {
+      if (String(entry?.country || "").trim().toLowerCase() !== String(placeDrillCountry || "").trim().toLowerCase()) return;
       if (!entry.slug) return;
       if (!stationMap.has(entry.slug)) {
         stationMap.set(entry.slug, {
@@ -1814,6 +1874,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function renderPlaceMaterialDrillCards() {
     const materialMap = new Map();
     allPhotoEntries
+      .filter((entry) => String(entry?.country || "").trim().toLowerCase() === String(placeDrillCountry || "").trim().toLowerCase())
       .filter((entry) => entry.slug === placeDrillStation)
       .forEach((entry) => {
         entry.leadMaterialFacets.forEach((facet) => {
@@ -1850,6 +1911,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function renderPlaceNumberDrillCards() {
     const numberMap = new Map();
     allPhotoEntries
+      .filter((entry) => String(entry?.country || "").trim().toLowerCase() === String(placeDrillCountry || "").trim().toLowerCase())
       .filter((entry) => entry.slug === placeDrillStation)
       .filter((entry) => entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial))
       .forEach((entry) => {
@@ -1885,10 +1947,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   function renderPlacePhotoCards() {
     const entries = allPhotoEntries.filter((entry) => {
+      const countryOk = String(entry?.country || "").trim().toLowerCase() === String(placeDrillCountry || "").trim().toLowerCase();
       const stationOk = entry.slug === placeDrillStation;
       const materialOk = entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial);
       const numberOk = String(entry.leadPowerNumber || "") === String(placeDrillNumber || "");
-      return stationOk && materialOk && numberOk;
+      return countryOk && stationOk && materialOk && numberOk;
     });
 
     const grouped = Array.from(
@@ -2074,6 +2137,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       if (queryTerms.length > 0) {
         const filtered = allPhotoEntries.filter((entry) => {
           if (!matchesSearchTerms(entry.search, queryTerms)) return false;
+          if (placeDrillCountry && String(entry.country || "") !== String(placeDrillCountry || "")) return false;
           if (placeDrillStation && entry.slug !== placeDrillStation) return false;
           if (placeDrillMaterial && !entry.leadMaterialFacets.some((f) => f.key === placeDrillMaterial)) return false;
           if (placeDrillNumber && String(entry.leadPowerNumber || "") !== String(placeDrillNumber || "")) return false;
@@ -2106,7 +2170,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         persistSortState(pushHistory);
         return;
       }
-      if (!placeDrillStation) {
+      if (!placeDrillCountry) {
+        renderPlaceCountryDrillCards();
+      } else if (!placeDrillStation) {
         renderPlaceDrillCards();
       } else if (!placeDrillMaterial) {
         renderPlaceMaterialDrillCards();
@@ -2374,6 +2440,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (companyDrillNumber) url.searchParams.set("company_number", companyDrillNumber);
     else url.searchParams.delete("company_number");
 
+    if (placeDrillCountry) url.searchParams.set("place_country", placeDrillCountry);
+    else url.searchParams.delete("place_country");
+
     if (placeDrillStation) url.searchParams.set("place", placeDrillStation);
     else url.searchParams.delete("place");
 
@@ -2533,6 +2602,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     companyDrillOperator = "";
     companyDrillMaterial = "";
     companyDrillNumber = "";
+    placeDrillCountry = "";
     placeDrillStation = "";
     placeDrillMaterial = "";
     placeDrillNumber = "";
@@ -2546,6 +2616,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     companyDrillOperator = "";
     companyDrillMaterial = "";
     companyDrillNumber = "";
+    placeDrillCountry = "";
     placeDrillStation = "";
     placeDrillMaterial = "";
     placeDrillNumber = "";
@@ -2566,6 +2637,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       if (placeDrillNumber) placeDrillNumber = "";
       else if (placeDrillMaterial) placeDrillMaterial = "";
       else if (placeDrillStation) placeDrillStation = "";
+      else if (placeDrillCountry) placeDrillCountry = "";
     }
     applyFilters(true);
   });
@@ -2597,6 +2669,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     if (level === "place-root") {
+      placeDrillCountry = "";
+      placeDrillStation = "";
+      placeDrillMaterial = "";
+      placeDrillNumber = "";
+      applyFilters(true);
+      return;
+    }
+
+    if (level === "place-country") {
       placeDrillStation = "";
       placeDrillMaterial = "";
       placeDrillNumber = "";
@@ -2627,6 +2708,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const queryCompany = (urlParams.get("company") || "").trim().toLowerCase();
     const queryCompanyMaterial = (urlParams.get("company_material") || "").trim().toLowerCase();
     const queryCompanyNumber = String(urlParams.get("company_number") || "").trim();
+    const queryPlaceCountry = (urlParams.get("place_country") || "").trim().toLowerCase();
     const queryPlace = (urlParams.get("place") || "").trim().toLowerCase();
     const queryPlaceMaterial = (urlParams.get("place_material") || "").trim().toLowerCase();
     const queryPlaceNumber = String(urlParams.get("place_number") || "").trim();
@@ -2646,9 +2728,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     companyDrillOperator = activeSortMode === "company" ? queryCompany : "";
     companyDrillMaterial = activeSortMode === "company" ? queryCompanyMaterial : "";
     companyDrillNumber = activeSortMode === "company" ? queryCompanyNumber : "";
+    placeDrillCountry = activeSortMode === "place" ? queryPlaceCountry : "";
     placeDrillStation = activeSortMode === "place" ? queryPlace : "";
     placeDrillMaterial = activeSortMode === "place" ? queryPlaceMaterial : "";
     placeDrillNumber = activeSortMode === "place" ? queryPlaceNumber : "";
+    if (activeSortMode === "place" && !placeDrillCountry && placeDrillStation) {
+      const station = stationData[String(placeDrillStation || "").toLowerCase()];
+      const derivedCountry = String(station?.country || "").trim().toLowerCase();
+      if (derivedCountry) placeDrillCountry = derivedCountry;
+    }
 
     if (searchInput) searchInput.value = activeQuery;
     renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
@@ -2703,9 +2791,23 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   window.addEventListener("beforeunload", persistScrollPosition);
 
   grid.addEventListener("click", (e) => {
+    const placeCountryCard = e.target.closest("[data-place-country-card]");
+    if (placeCountryCard) {
+      placeDrillCountry = String(placeCountryCard.dataset.placeCountryCard || "");
+      placeDrillStation = "";
+      placeDrillMaterial = "";
+      placeDrillNumber = "";
+      applyFilters(true);
+      return;
+    }
+
     const placeCard = e.target.closest("[data-place-card]");
     if (placeCard) {
       placeDrillStation = String(placeCard.dataset.placeCard || "");
+      if (!placeDrillCountry && placeDrillStation) {
+        const station = stationData[String(placeDrillStation || "").toLowerCase()];
+        placeDrillCountry = String(station?.country || "").trim().toLowerCase();
+      }
       placeDrillMaterial = "";
       placeDrillNumber = "";
       applyFilters(true);
@@ -2765,14 +2867,17 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const hasQuery = String(activeQuery || "").trim().length > 0;
     if (hasQuery) {
       if (activeSortMode === "place") {
+        const targetCountry = String(entry.country || "").trim().toLowerCase();
         const targetStation = String(entry.slug || "");
         const leadMaterialKey = String(entry.leadMaterialFacets?.[0]?.key || "");
         const targetNumber = String(entry.leadPowerNumber || "");
         const alreadyAtTarget =
+          placeDrillCountry === targetCountry &&
           placeDrillStation === targetStation &&
           placeDrillMaterial === leadMaterialKey &&
           String(placeDrillNumber || "") === targetNumber;
         if (!alreadyAtTarget) {
+          placeDrillCountry = targetCountry;
           placeDrillStation = targetStation;
           placeDrillMaterial = leadMaterialKey;
           placeDrillNumber = targetNumber;
@@ -6248,6 +6353,7 @@ function formatTagLabel(label) {
         (item) => item.name.toLowerCase() === stationName.toLowerCase(),
       );
       const stationSlug = String(pickedStation?.slug || "").trim().toLowerCase();
+      const stationCountry = String(pickedStation?.country || "").trim();
       const composition = syncCompositionTitle();
       const title = String(titleInput?.value || "").trim();
       const image = String(selectedImageDataUrl || imageInput?.value || "").trim();
@@ -6258,7 +6364,7 @@ function formatTagLabel(label) {
       compositionRows?.classList.remove("is-error");
       trainTypePicker?.classList.remove("is-error");
 
-      if (!stationSlug || !title || !image || !date || !operator || !trainType) {
+      if (!stationSlug || !stationCountry || !title || !image || !date || !operator || !trainType) {
         showStatus(status, "Please complete all required fields.", true);
         stationInput?.classList.toggle("is-error", !stationSlug || !pickedStation);
         compositionRows?.classList.toggle("is-error", !title);
@@ -6286,7 +6392,7 @@ function formatTagLabel(label) {
           stationSlug,
           stationName,
           stationProvince: String(pickedStation?.province || ""),
-          stationCountry: String(pickedStation?.country || ""),
+          stationCountry,
           stationCoords: pickedStation?.coordinates || null,
           title,
           composition,

@@ -13,6 +13,7 @@ station({
           date: "27 May 2024",
       photographer: "trainbelgium",
       alt: "Lier M6",
+      numbers: "65023",
       consist: [train("M6")],
       images: ["Lier_M6HLE1819.webp"],
     },

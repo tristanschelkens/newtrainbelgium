@@ -351,12 +351,13 @@ app.post('/api/submissions', async (req, res) => {
     const id = `sub_${Date.now()}_${crypto.randomBytes(3).toString('hex')}`;
     const stationSlug = canonicalStationSlug(b.stationSlug || b.stationName);
     const stationName = canonicalStationName(b.stationName, stationSlug);
+    const stationCountry = String(b.stationCountry || '').trim();
     const title = String(b.title || '').trim();
     const trainType = String(b.trainType || '').trim();
     const image = String(b.image || '').trim();
     const dateText = String(b.date || '').trim();
     const operatorText = String(b.operator || '').trim();
-    if (!stationSlug || !stationName || !title || !trainType || !image || !dateText || !operatorText) {
+    if (!stationSlug || !stationName || !stationCountry || !title || !trainType || !image || !dateText || !operatorText) {
       return res.status(400).json({ ok: false, error: 'Please complete all required fields.' });
     }
     const composition = normalizeSubmissionComposition(b.composition);
@@ -369,7 +370,7 @@ app.post('/api/submissions', async (req, res) => {
         stationSlug,
         stationName,
         String(b.stationProvince || ''),
-        String(b.stationCountry || ''),
+        stationCountry,
         JSON.stringify(b.stationCoords || null),
         title,
         JSON.stringify(composition),
