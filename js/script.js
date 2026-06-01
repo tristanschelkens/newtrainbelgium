@@ -5937,47 +5937,18 @@ function formatTagLabel(label) {
     }
 
     function rowIsComplete(row) {
-      if (row.classList.contains("trainset")) {
-        const values = Array.from(row.querySelectorAll("[data-sp-slot]"))
-          .map((input) => String(input.value || "").trim())
-          .filter(Boolean);
-        return values.length > 0;
-      }
-      const kind = row.querySelector('[data-comp-field="kind"]')?.value || "";
-      const label = String(row.querySelector('[data-comp-field="label"]')?.value || "").trim();
-      if (!kind || !label) return false;
-      if (kind === "carriage") {
-        const count = Number(row.querySelector('[data-comp-field="count"]')?.value || 0);
-        return count > 0;
-      }
-      return true;
+      const values = Array.from(row.querySelectorAll("[data-sp-slot]"))
+        .map((input) => String(input.value || "").trim())
+        .filter(Boolean);
+      return values.length > 0;
     }
 
     function getCompositionItems() {
       if (!compositionRows) return [];
-      const selectedType = String(trainTypeInput?.value || "");
-      if (selectedType === "trainset" || selectedType === "self-propelled") {
-        return Array.from(compositionRows.querySelectorAll(".submit-composition-row.trainset"))
-          .flatMap((row) =>
-            Array.from(row.querySelectorAll("[data-sp-slot]"))
-              .map((input) => String(input.value || "").trim())
-              .filter(Boolean)
-              .map((label) => ({ kind: "trainset", label: normalizeVehicleLabel(label) })),
-          );
-      }
-      return Array.from(compositionRows.querySelectorAll(".submit-composition-row"))
-        .map((row) => {
-          const kind = String(row.querySelector('[data-comp-field="kind"]')?.value || "");
-          const label = normalizeVehicleLabel(row.querySelector('[data-comp-field="label"]')?.value);
-          const count = Number(row.querySelector('[data-comp-field="count"]')?.value || 0);
-          if (!kind || !label) return null;
-          if (kind === "carriage") {
-            if (count < 1) return null;
-            return { kind, label, count };
-          }
-          return { kind, label };
-        })
-        .filter(Boolean);
+      const firstInput = compositionRows.querySelector("[data-sp-slot]");
+      const label = normalizeVehicleLabel(firstInput?.value);
+      if (!label) return [];
+      return [{ kind: "train", label }];
     }
 
     function buildCompositionTitle(items) {
@@ -5993,138 +5964,31 @@ function formatTagLabel(label) {
     }
 
     function applyTrainTypeUI() {
-      const selectedType = String(trainTypeInput?.value || "");
-      const buttons = Array.from(trainTypePicker?.querySelectorAll("[data-train-type]") || []);
-      buttons.forEach((btn) => {
-        const active = String(btn.dataset.trainType || "") === selectedType;
-        btn.classList.toggle("is-active", active);
-      });
+      const selectedType = "trainset";
+      if (trainTypeInput) trainTypeInput.value = selectedType;
       if (compositionRows) {
-        compositionRows.classList.toggle("is-disabled", !selectedType);
         const hasRows = compositionRows.querySelectorAll(".submit-composition-row").length > 0;
-        if (selectedType && !hasRows) appendCompositionRow();
+        if (!hasRows) appendCompositionRow();
       }
-      return Boolean(selectedType);
+      return true;
     }
 
     function appendCompositionRow() {
       if (!compositionRows) return;
-      const selectedType = String(trainTypeInput?.value || "");
       const row = document.createElement("div");
-      row.className = "submit-composition-row";
-
-      if (selectedType === "trainset" || selectedType === "self-propelled") {
-        const maxTrainsetUnits = 4;
-        row.classList.add("trainset");
-        row.innerHTML = `
-          <div class="submit-trainset-slots" data-trainset-slots></div>
-        `;
-        compositionRows.appendChild(row);
-
-        const slotsWrap = row.querySelector("[data-trainset-slots]");
-        const addBtn = document.createElement("button");
-        addBtn.className = "submit-operator-add submit-trainset-add";
-        addBtn.setAttribute("data-trainset-add", "");
-        addBtn.type = "button";
-        addBtn.setAttribute("aria-label", "Add trainset unit");
-        addBtn.textContent = "+";
-        const syncTrainsetAddState = () => {
-          const count = row.querySelectorAll("[data-sp-slot]").length;
-          if (addBtn) addBtn.hidden = count >= maxTrainsetUnits;
-          if (slotsWrap && !slotsWrap.contains(addBtn)) slotsWrap.appendChild(addBtn);
-        };
-        const appendTrainsetSlot = () => {
-          const count = row.querySelectorAll("[data-sp-slot]").length;
-          if (!slotsWrap || count >= maxTrainsetUnits) return;
-          const input = document.createElement("input");
-          input.type = "text";
-          input.placeholder = `Unit ${count + 1}`;
-          input.setAttribute("data-sp-slot", String(count + 1));
-          input.addEventListener("input", () => {
-            syncCompositionTitle();
-          });
-          input.addEventListener("blur", () => {
-            input.value = normalizeVehicleLabel(input.value);
-            syncCompositionTitle();
-          });
-          if (slotsWrap.contains(addBtn)) {
-            slotsWrap.insertBefore(input, addBtn);
-          } else {
-            slotsWrap.appendChild(input);
-          }
-          syncTrainsetAddState();
-        };
-
-        addBtn?.addEventListener("click", () => {
-          appendTrainsetSlot();
-          const inputs = row.querySelectorAll("[data-sp-slot]");
-          const last = inputs[inputs.length - 1];
-          if (last) last.focus();
-        });
-
-        appendTrainsetSlot();
-        syncTrainsetAddState();
-        return;
-      }
-
+      row.className = "submit-composition-row trainset";
       row.innerHTML = `
-        <div class="comp-kind-toggle" role="group" aria-label="Type">
-          <button type="button" data-kind-val="locomotive">Locomotive</button>
-          <button type="button" data-kind-val="carriage">Carriage</button>
-          <input data-comp-field="kind" type="hidden" value="" />
+        <div class="submit-trainset-slots" data-trainset-slots>
+          <input type="text" placeholder="bv. HLE 18 of AM 08" data-sp-slot="1" />
         </div>
-        <input data-comp-field="label" type="text" placeholder="e.g. M6 or HLE 1812" />
-        <input data-comp-field="count" class="submit-composition-count" type="number" min="1" step="1" placeholder="Qty" />
       `;
       compositionRows.appendChild(row);
-
-      const kindInput = row.querySelector('[data-comp-field="kind"]');
-      const kindButtons = Array.from(row.querySelectorAll("[data-kind-val]"));
-      const labelInput = row.querySelector('[data-comp-field="label"]');
-      const countInput = row.querySelector('[data-comp-field="count"]');
-      const syncKindButtons = () => {
-        kindButtons.forEach((btn) => {
-          const active = String(btn.dataset.kindVal || "") === String(kindInput.value || "");
-          btn.classList.toggle("is-active", active);
-        });
-      };
-      const refreshKindUi = () => {
-        row.dataset.kind = kindInput.value || "";
-        if (kindInput.value === "carriage") {
-          countInput.disabled = false;
-          labelInput.placeholder = "e.g. M6";
-        } else {
-          countInput.disabled = true;
-          countInput.value = "";
-          labelInput.placeholder = "e.g. HLE 1812";
-        }
-        syncKindButtons();
-      };
-      refreshKindUi();
-
-      kindButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          kindInput.value = String(btn.dataset.kindVal || "");
-          refreshKindUi();
-          syncCompositionTitle();
-          const rows = Array.from(compositionRows.querySelectorAll(".submit-composition-row"));
-          const last = rows[rows.length - 1];
-          if (last && row === last && rowIsComplete(row)) appendCompositionRow();
-        });
-      });
-
-      [labelInput, countInput].forEach((el) => {
-        el?.addEventListener("input", () => {
-          refreshKindUi();
-          syncCompositionTitle();
-          const rows = Array.from(compositionRows.querySelectorAll(".submit-composition-row"));
-          const last = rows[rows.length - 1];
-          if (last && row === last && rowIsComplete(row)) appendCompositionRow();
-        });
+      const labelInput = row.querySelector("[data-sp-slot]");
+      labelInput?.addEventListener("input", () => {
+        syncCompositionTitle();
       });
       labelInput?.addEventListener("blur", () => {
         labelInput.value = normalizeVehicleLabel(labelInput.value);
-        refreshKindUi();
         syncCompositionTitle();
       });
     }
@@ -6476,7 +6340,7 @@ function formatTagLabel(label) {
           selectedOperators = [];
           isAddingOperator = false;
           selectedImageDataUrl = "";
-          if (trainTypeInput) trainTypeInput.value = "";
+          if (trainTypeInput) trainTypeInput.value = "trainset";
           applySelectedStationUI();
           applySelectedOperatorUI();
           applyTrainTypeUI();

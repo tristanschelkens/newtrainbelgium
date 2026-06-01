@@ -54,12 +54,9 @@
               <input id="submitOperator" name="operator" type="text" placeholder="Type operator..." required autocomplete="off" />
             </div>
             <div id="submitOperatorSuggestions" class="moderator-suggestions" hidden></div>
-            <label>Composition</label>
-            <div id="submitTrainTypePicker" class="submit-train-type-picker" role="group" aria-label="Train type">
-              <button type="button" data-train-type="trainset">Trainset</button>
-              <button type="button" data-train-type="hauled-set">Hauled set</button>
-              <input id="submitTrainType" name="train_type" type="hidden" value="" />
-            </div>
+            <label for="submitCompositionRows">Materieel op de foto</label>
+            <p class="muted" style="margin:-4px 0 8px 0;">Typ enkel het materieel dat op de foto staat (voorste deel), geen samenstelling.</p>
+            <input id="submitTrainType" name="train_type" type="hidden" value="trainset" />
             <div id="submitCompositionRows" class="submit-composition-rows"></div>
             <input id="submitTitle" name="title" type="hidden" />
             <label for="submitImageUrl">Image path or URL</label>
