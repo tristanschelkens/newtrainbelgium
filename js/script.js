@@ -5182,6 +5182,7 @@ function formatTagLabel(label) {
   const verifyActionBtn = document.getElementById("verifyActionBtn");
   const resetRequestGroup = document.getElementById("resetRequestGroup");
   const resetSetGroup = document.getElementById("resetSetGroup");
+  const resetRequestSubmitBtn = resetRequestForm?.querySelector('button[type="submit"]');
 
   if (!signInForm || !createForm || !status) return;
 
@@ -5190,6 +5191,8 @@ function formatTagLabel(label) {
   let verifyMode = "verify";
   let resetTokenFromLink = "";
   let resetEmailFromLink = "";
+  let resetCooldownTimer = null;
+  let resetCooldownUntil = 0;
 
   function normalizeUsername(value) {
     return String(value || "").trim().toLowerCase();
@@ -5292,6 +5295,38 @@ function formatTagLabel(label) {
       code: String(params.get("code") || "").trim(),
       token: String(params.get("token") || "").trim(),
     };
+  }
+
+  function setResetRequestButtonState(label, disabled) {
+    if (!resetRequestSubmitBtn) return;
+    resetRequestSubmitBtn.textContent = label;
+    resetRequestSubmitBtn.disabled = Boolean(disabled);
+  }
+
+  function stopResetCooldown() {
+    if (resetCooldownTimer) {
+      clearInterval(resetCooldownTimer);
+      resetCooldownTimer = null;
+    }
+    resetCooldownUntil = 0;
+    setResetRequestButtonState("Send reset link", false);
+  }
+
+  function startResetCooldown(seconds) {
+    if (!Number.isFinite(seconds) || seconds <= 0) return;
+    if (resetCooldownTimer) clearInterval(resetCooldownTimer);
+    resetCooldownUntil = Date.now() + seconds * 1000;
+    function tick() {
+      const msLeft = resetCooldownUntil - Date.now();
+      if (msLeft <= 0) {
+        stopResetCooldown();
+        return;
+      }
+      const secsLeft = Math.ceil(msLeft / 1000);
+      setResetRequestButtonState(`Send reset link (${secsLeft}s)`, true);
+    }
+    tick();
+    resetCooldownTimer = setInterval(tick, 250);
   }
 
   // Legacy cleanup: old builds stored emails in localStorage.
@@ -5491,12 +5526,16 @@ function formatTagLabel(label) {
 
   resetRequestForm?.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (Date.now() < resetCooldownUntil) return;
     const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
+    startResetCooldown(30);
     apiRequest("/api/auth/request-password-reset", { email })
       .then(() => {
         showStatus("If the email exists, a reset link has been sent.");
       })
-      .catch((error) => showStatus(String(error?.message || "Could not send reset link."), true));
+      .catch((error) => {
+        showStatus(String(error?.message || "Could not send reset link."), true);
+      });
   });
 
   resetForm?.addEventListener("submit", (event) => {
