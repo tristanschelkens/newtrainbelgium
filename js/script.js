@@ -5180,12 +5180,14 @@ function formatTagLabel(label) {
   const resetPanel = document.getElementById("loginPanelReset");
   const forgotPasswordToggle = document.getElementById("forgotPasswordToggle");
   const verifyActionBtn = document.getElementById("verifyActionBtn");
+  const resetCodeGroup = document.getElementById("resetCodeGroup");
 
   if (!signInForm || !createForm || !status) return;
 
   const sessionKey = "tb_active_user_v1";
   const storageKey = "tb_accounts_v1";
   let verifyMode = "verify";
+  let resetTokenFromLink = "";
 
   function normalizeUsername(value) {
     return String(value || "").trim().toLowerCase();
@@ -5205,8 +5207,19 @@ function formatTagLabel(label) {
     }
   }
 
+  function stripEmailFieldsFromAccounts(accounts) {
+    const normalized = {};
+    Object.entries(accounts || {}).forEach(([username, value]) => {
+      const item = value && typeof value === "object" ? value : {};
+      normalized[username] = {
+        createdAt: item.createdAt || new Date().toISOString(),
+      };
+    });
+    return normalized;
+  }
+
   function writeAccounts(accounts) {
-    localStorage.setItem(storageKey, JSON.stringify(accounts));
+    localStorage.setItem(storageKey, JSON.stringify(stripEmailFieldsFromAccounts(accounts)));
   }
 
   async function apiRequest(url, payload) {
@@ -5275,8 +5288,12 @@ function formatTagLabel(label) {
       mode: String(params.get("mode") || "").trim().toLowerCase(),
       email: String(params.get("email") || "").trim().toLowerCase(),
       code: String(params.get("code") || "").trim(),
+      token: String(params.get("token") || "").trim(),
     };
   }
+
+  // Legacy cleanup: old builds stored emails in localStorage.
+  writeAccounts(readAccounts());
 
   function setTab(mode) {
     const isCreate = mode === "create";
@@ -5415,7 +5432,6 @@ function formatTagLabel(label) {
         localStorage.setItem(sessionKey, data.user.username);
         const accounts = readAccounts();
         accounts[data.user.username] = {
-          email: data.user.email,
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
         };
         writeAccounts(accounts);
@@ -5454,7 +5470,6 @@ function formatTagLabel(label) {
         localStorage.setItem(sessionKey, data.user.username);
         const accounts = readAccounts();
         accounts[data.user.username] = {
-          email: data.user.email,
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
         };
         writeAccounts(accounts);
@@ -5485,9 +5500,11 @@ function formatTagLabel(label) {
     const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
     const code = String(resetForm.querySelector("#resetCode")?.value || "").trim();
     const password = String(resetForm.querySelector("#resetPassword")?.value || "");
-    apiRequest("/api/auth/reset-password", { email, code, password })
+    apiRequest("/api/auth/reset-password", { email, code, token: resetTokenFromLink, password })
       .then(() => {
         showStatus("Password reset completed. You can now sign in.");
+        resetTokenFromLink = "";
+        if (resetCodeGroup) resetCodeGroup.hidden = false;
         setTab("signin");
       })
       .catch((error) => showStatus(String(error?.message || "Could not reset password."), true));
@@ -5524,7 +5541,9 @@ function formatTagLabel(label) {
     openResetPanel(authQuery.email);
     const resetCodeInput = resetForm?.querySelector("#resetCode");
     if (resetCodeInput && authQuery.code) resetCodeInput.value = authQuery.code;
-    showStatus("Use the code from the reset email to set a new password.");
+    resetTokenFromLink = authQuery.token;
+    if (resetCodeGroup && resetTokenFromLink) resetCodeGroup.hidden = true;
+    showStatus(resetTokenFromLink ? "Set your new password below." : "Use the code from the reset email to set a new password.");
   }
 })();
 
@@ -5581,6 +5600,32 @@ function formatTagLabel(label) {
     localStorage.setItem(key, JSON.stringify(value));
   }
 
+  function purgeLegacyEmailCache() {
+    const profiles = readJson(profileKey, {});
+    let profilesChanged = false;
+    Object.keys(profiles || {}).forEach((username) => {
+      const item = profiles[username];
+      if (item && typeof item === "object" && "email" in item) {
+        delete item.email;
+        profilesChanged = true;
+      }
+    });
+    if (profilesChanged) writeJson(profileKey, profiles);
+
+    const accounts = readJson(accountsKey, {});
+    let accountsChanged = false;
+    Object.keys(accounts || {}).forEach((username) => {
+      const item = accounts[username];
+      if (item && typeof item === "object" && "email" in item) {
+        delete item.email;
+        accountsChanged = true;
+      }
+    });
+    if (accountsChanged) writeJson(accountsKey, accounts);
+  }
+
+  purgeLegacyEmailCache();
+
   function getActiveUser() {
     return normalizeUser(localStorage.getItem(sessionKey));
   }
@@ -5602,6 +5647,17 @@ function formatTagLabel(label) {
       return user;
     } catch {
       return getActiveUser();
+    }
+  }
+
+  async function fetchSessionUser() {
+    try {
+      const res = await fetch("/api/auth/session", { credentials: "include" });
+      if (!res.ok) return null;
+      const data = await res.json();
+      return data?.user || null;
+    } catch {
+      return null;
     }
   }
 
@@ -6590,9 +6646,7 @@ function formatTagLabel(label) {
     }
 
     const profiles = readJson(profileKey, {});
-    const accounts = readJson(accountsKey, {});
     const profile = profiles[user] || {};
-    const account = accounts[user] || {};
     const owner = getOwnerUser();
     const userIsOwner = isOwner(user);
     const userIsModerator = isModerator(user);
@@ -6607,16 +6661,23 @@ function formatTagLabel(label) {
 
     form.profileUsername.value = user;
     let profileAvatarValue = String(profile.avatar || "").trim();
-    form.profileEmail.value = profile.email || account.email || "";
+    form.profileEmail.value = "";
+    form.profileEmail.readOnly = true;
     form.profileNotifications.checked = Boolean(profile.notifications);
 
     if (summaryName) summaryName.textContent = user;
-    if (summaryMeta) summaryMeta.textContent = `${profile.email || account.email || "No email set"}`;
+    if (summaryMeta) summaryMeta.textContent = "Loading email...";
     if (roleBadge) roleBadge.textContent = userIsOwner ? "Owner" : userIsModerator ? "Moderator" : "Member";
     if (avatarPreview) {
       avatarPreview.src = profileAvatarValue || defaultAvatar;
       avatarPreview.alt = `${user} avatar`;
     }
+
+    fetchSessionUser().then((sessionUser) => {
+      const sessionEmail = String(sessionUser?.email || "").trim().toLowerCase();
+      form.profileEmail.value = sessionEmail;
+      if (summaryMeta) summaryMeta.textContent = sessionEmail || "No email set";
+    });
 
     avatarTrigger?.addEventListener("click", () => {
       avatarFileInput?.click();
@@ -6637,20 +6698,13 @@ function formatTagLabel(label) {
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      const email = String(form.profileEmail?.value || "").trim().toLowerCase();
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showStatus(status, "Please enter a valid email address.", true);
-        return;
-      }
 
       profiles[user] = {
         avatar: String(profileAvatarValue || "").trim(),
-        email,
         notifications: Boolean(form.profileNotifications?.checked),
       };
       writeJson(profileKey, profiles);
       if (summaryName) summaryName.textContent = user;
-      if (summaryMeta) summaryMeta.textContent = `${profiles[user].email || ""}`;
       if (avatarPreview) avatarPreview.src = profiles[user].avatar || defaultAvatar;
       showStatus(status, "Profile saved.");
     });
@@ -6693,8 +6747,7 @@ function formatTagLabel(label) {
           if (!username) return false;
           const profileItem = profilesMap[username] || {};
           const accountItem = accountsMap[username] || {};
-          const email = normalizeUser(profileItem.email || accountItem.email || "");
-          return username.includes(q) || email.includes(q);
+          return username.includes(q);
         })
         .filter((username) => username !== owner)
         .slice(0, 8)
@@ -6704,7 +6757,7 @@ function formatTagLabel(label) {
           return {
             username,
             avatar: String(profileItem.avatar || defaultAvatar),
-            email: String(profileItem.email || accountItem.email || ""),
+            email: "",
           };
         });
     }

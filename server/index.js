@@ -82,8 +82,8 @@ async function storePasswordResetCode(userId, email, rawCode) {
   );
 }
 
-function buildPasswordResetLink(email, code) {
-  const query = `mode=reset&email=${encodeURIComponent(email)}&code=${encodeURIComponent(code)}`;
+function buildPasswordResetLink(email, token) {
+  const query = `mode=reset&email=${encodeURIComponent(email)}&token=${encodeURIComponent(token)}`;
   return `${appBaseUrl}/pages/Login.html?${query}`;
 }
 
@@ -482,14 +482,14 @@ app.post('/api/auth/request-password-reset', async (req, res) => {
     const { rows } = await pool.query('SELECT id FROM users WHERE email = $1 LIMIT 1', [email]);
     const user = rows[0];
     if (user) {
-      const code = generateNumericCode();
-      await storePasswordResetCode(user.id, email, code);
-      const resetLink = buildPasswordResetLink(email, code);
+      const token = crypto.randomBytes(32).toString('hex');
+      await storePasswordResetCode(user.id, email, token);
+      const resetLink = buildPasswordResetLink(email, token);
       await sendMailOrThrow({
         to: email,
         subject: 'Reset your TrainBelgium password',
-        text: `Click this link to reset your password: ${resetLink}\n\nYour code is: ${code} (expires in 15 minutes).`,
-        html: `<p>Click this link to reset your password:</p><p><a href="${resetLink}">${resetLink}</a></p><p>Your code is: <strong>${code}</strong> (expires in 15 minutes).</p>`,
+        text: `Click this link to reset your password: ${resetLink}\n\nThis link expires in 15 minutes.`,
+        html: `<p>Click this link to reset your password:</p><p><a href="${resetLink}">${resetLink}</a></p><p>This link expires in 15 minutes.</p>`,
       });
     }
     return res.json({ ok: true });
@@ -501,8 +501,9 @@ app.post('/api/auth/request-password-reset', async (req, res) => {
 app.post('/api/auth/reset-password', async (req, res) => {
   const email = String(req.body?.email || '').trim().toLowerCase();
   const code = String(req.body?.code || '').trim();
+  const token = String(req.body?.token || '').trim();
   const password = String(req.body?.password || '');
-  if (!isValidEmail(email) || !/^\d{6}$/.test(code)) return res.status(400).json({ ok: false, error: 'Invalid reset request.' });
+  if (!isValidEmail(email) || (!token && !/^\d{6}$/.test(code))) return res.status(400).json({ ok: false, error: 'Invalid reset request.' });
   if (!isStrongPassword(password)) return res.status(400).json({ ok: false, error: 'Password must be at least 6 chars, include 1 uppercase and 1 number.' });
   try {
     const userRows = await pool.query('SELECT id FROM users WHERE email = $1 LIMIT 1', [email]);
@@ -510,7 +511,8 @@ app.post('/api/auth/reset-password', async (req, res) => {
     if (!user) return res.status(400).json({ ok: false, error: 'Invalid or expired code.' });
     const codeRows = await pool.query('SELECT code_hash, expires_at, used_at FROM password_reset_codes WHERE user_id = $1 LIMIT 1', [user.id]);
     const codeRow = codeRows.rows[0];
-    if (!codeRow || codeRow.used_at || new Date(codeRow.expires_at).getTime() < Date.now() || codeRow.code_hash !== hashOneTimeCode(code)) {
+    const presentedSecret = token || code;
+    if (!codeRow || codeRow.used_at || new Date(codeRow.expires_at).getTime() < Date.now() || codeRow.code_hash !== hashOneTimeCode(presentedSecret)) {
       return res.status(400).json({ ok: false, error: 'Invalid or expired code.' });
     }
     const passwordHash = await bcrypt.hash(password, 12);

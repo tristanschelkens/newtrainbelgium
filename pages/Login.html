@@ -165,8 +165,10 @@
               <button class="btn btn-primary" type="submit">Send reset link</button>
             </form>
             <form class="login-form" id="loginResetForm" novalidate>
-              <label for="resetCode">Reset code</label>
-              <input id="resetCode" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required placeholder="6-digit code" />
+              <div id="resetCodeGroup">
+                <label for="resetCode">Reset code</label>
+                <input id="resetCode" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit code" />
+              </div>
               <label for="resetPassword">New password</label>
               <input id="resetPassword" name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="Choose a new password" />
               <button class="btn btn-primary" type="submit">Reset password</button>
