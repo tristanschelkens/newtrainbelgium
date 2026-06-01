@@ -87,6 +87,49 @@ function buildPasswordResetLink(email, token) {
   return `${appBaseUrl}/pages/Login.html?${query}`;
 }
 
+function formatSubmissionDateForDisplay(rawValue) {
+  const value = String(rawValue || '').trim();
+  if (!value) return '';
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const slashMatch = value.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{4})$/);
+  if (slashMatch) {
+    const day = Number(slashMatch[1]);
+    const month = Number(slashMatch[2]);
+    const year = Number(slashMatch[3]);
+    if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 1900 && year <= 3000) {
+      return `${day} ${monthNames[month - 1]} ${year}`;
+    }
+  }
+  const isoMatch = value.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+  if (isoMatch) {
+    const year = Number(isoMatch[1]);
+    const month = Number(isoMatch[2]);
+    const day = Number(isoMatch[3]);
+    if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 1900 && year <= 3000) {
+      return `${day} ${monthNames[month - 1]} ${year}`;
+    }
+  }
+  return value;
+}
+
+async function isResetEmailCooldownActive(userId, cooldownSeconds = 30) {
+  const q = 'SELECT created_at FROM password_reset_codes WHERE user_id = $1 LIMIT 1';
+  const found = await pool.query(q, [userId]);
+  const row = found.rows[0];
+  if (!row?.created_at) return false;
+  const elapsedMs = Date.now() - new Date(row.created_at).getTime();
+  return elapsedMs < cooldownSeconds * 1000;
+}
+
+async function isVerificationEmailCooldownActive(userId, cooldownSeconds = 30) {
+  const q = 'SELECT created_at FROM email_verification_codes WHERE user_id = $1 LIMIT 1';
+  const found = await pool.query(q, [userId]);
+  const row = found.rows[0];
+  if (!row?.created_at) return false;
+  const elapsedMs = Date.now() - new Date(row.created_at).getTime();
+  return elapsedMs < cooldownSeconds * 1000;
+}
+
 async function ensureAuthTables() {
   await pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS email_verified BOOLEAN NOT NULL DEFAULT false`);
   await pool.query(`
@@ -461,6 +504,9 @@ app.post('/api/auth/resend-verification-code', async (req, res) => {
     const user = rows[0];
     if (!user) return res.json({ ok: true });
     if (user.email_verified) return res.status(400).json({ ok: false, error: 'This email is already verified.' });
+    if (await isVerificationEmailCooldownActive(user.id, 30)) {
+      return res.status(429).json({ ok: false, error: 'Please wait 30 seconds before requesting a new code.' });
+    }
     const code = generateNumericCode();
     await storeEmailVerificationCode(user.id, email, code);
     await sendMailOrThrow({
@@ -482,6 +528,9 @@ app.post('/api/auth/request-password-reset', async (req, res) => {
     const { rows } = await pool.query('SELECT id FROM users WHERE email = $1 LIMIT 1', [email]);
     const user = rows[0];
     if (user) {
+      if (await isResetEmailCooldownActive(user.id, 30)) {
+        return res.status(429).json({ ok: false, error: 'Please wait 30 seconds before requesting another reset email.' });
+      }
       const token = crypto.randomBytes(32).toString('hex');
       await storePasswordResetCode(user.id, email, token);
       const resetLink = buildPasswordResetLink(email, token);
@@ -559,7 +608,7 @@ app.post('/api/submissions', async (req, res) => {
     const title = String(b.title || '').trim();
     const trainType = String(b.trainType || '').trim();
     const image = String(b.image || '').trim();
-    const dateText = String(b.date || '').trim();
+    const dateText = formatSubmissionDateForDisplay(String(b.date || '').trim());
     const operatorText = String(b.operator || '').trim();
     if (!stationSlug || !stationName || !stationCountry || !title || !trainType || !image || !dateText || !operatorText) {
       return res.status(400).json({ ok: false, error: 'Please complete all required fields.' });
