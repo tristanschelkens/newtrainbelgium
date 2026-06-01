@@ -1367,6 +1367,10 @@ button.photo-card {
   display: none;
 }
 
+.station-photo-card-detailed .station-meta {
+  display: none;
+}
+
 
 .station-operator-badge {
   display: inline-flex;
