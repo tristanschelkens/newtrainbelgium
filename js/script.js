@@ -1016,7 +1016,12 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY;
   }
 
-  function leadPowerNumberValue(label, materialKey = "") {
+  function leadPowerNumberValue(label, materialKey = "", explicitNumber = "") {
+    const explicit = String(explicitNumber || "").trim();
+    if (explicit) {
+      const firstExplicit = explicit.split(",")[0].trim();
+      if (firstExplicit) return formatDrillNumber(materialKey, firstExplicit);
+    }
     const raw = String(label || "").trim();
     if (!raw) return "";
     const splitNumber = raw.match(/(\d{2,4}\s*-\s*\d)\b/);
@@ -1110,6 +1115,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         leadPowerNumber: leadPowerNumberValue(
           getLeadPowerLabel(photo?.consist, photo),
           deriveLeadMaterialFacets(photo?.consist, photo)?.[0]?.key || "",
+          photo?.numbers,
         ),
         metaHtml: buildSearchMetaHtml(photo?.consist, { maxVisible: 3 }),
         fullMetaHtml: buildSearchMetaHtml(photo?.consist),

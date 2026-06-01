@@ -143,7 +143,7 @@ station({
       date: "1 June 2025",
       photographer: "trainbelgium",
       alt: "Antwerp AM08 8586 Pride",
-      numbers: "131",
+      numbers: "586",
       consist: [train("AM 08")],
       images: ["Antwerp_AM08_8586_Pride.jpeg"],
     },
