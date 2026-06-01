@@ -447,6 +447,28 @@ app.post('/api/auth/verify-email', async (req, res) => {
   }
 });
 
+app.post('/api/auth/resend-verification-code', async (req, res) => {
+  const email = String(req.body?.email || '').trim().toLowerCase();
+  if (!isValidEmail(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email address.' });
+  try {
+    const { rows } = await pool.query('SELECT id, email_verified FROM users WHERE email = $1 LIMIT 1', [email]);
+    const user = rows[0];
+    if (!user) return res.json({ ok: true });
+    if (user.email_verified) return res.status(400).json({ ok: false, error: 'This email is already verified.' });
+    const code = generateNumericCode();
+    await storeEmailVerificationCode(user.id, email, code);
+    await sendMailOrThrow({
+      to: email,
+      subject: 'Your TrainBelgium verification code',
+      text: `Your verification code is: ${code}. It expires in 15 minutes.`,
+      html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
+    });
+    return res.json({ ok: true });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
+  }
+});
+
 app.post('/api/auth/request-password-reset', async (req, res) => {
   const email = String(req.body?.email || '').trim().toLowerCase();
   if (!isValidEmail(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email address.' });

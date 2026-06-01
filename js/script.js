@@ -5179,11 +5179,13 @@ function formatTagLabel(label) {
   const verifyPanel = document.getElementById("loginPanelVerify");
   const resetPanel = document.getElementById("loginPanelReset");
   const forgotPasswordToggle = document.getElementById("forgotPasswordToggle");
+  const verifyActionBtn = document.getElementById("verifyActionBtn");
 
   if (!signInForm || !createForm || !status) return;
 
   const sessionKey = "tb_active_user_v1";
   const storageKey = "tb_accounts_v1";
+  let verifyMode = "verify";
 
   function normalizeUsername(value) {
     return String(value || "").trim().toLowerCase();
@@ -5289,6 +5291,8 @@ function formatTagLabel(label) {
     createTab.classList.remove("active");
     const verifyEmail = verifyForm?.querySelector("#verifyEmail");
     if (verifyEmail && email) verifyEmail.value = email;
+    verifyMode = "verify";
+    if (verifyActionBtn) verifyActionBtn.textContent = "Verify and continue";
   }
 
   function openResetPanel(email) {
@@ -5424,6 +5428,17 @@ function formatTagLabel(label) {
   verifyForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = String(verifyForm.querySelector("#verifyEmail")?.value || "").trim().toLowerCase();
+    if (verifyMode === "resend") {
+      apiRequest("/api/auth/resend-verification-code", { email })
+        .then(() => {
+          verifyMode = "verify";
+          if (verifyActionBtn) verifyActionBtn.textContent = "Verify and continue";
+          showStatus("New code sent. Check your email.");
+        })
+        .catch((error) => showStatus(String(error?.message || "Could not send new code."), true));
+      return;
+    }
+
     const code = String(verifyForm.querySelector("#verifyCode")?.value || "").trim();
     apiRequest("/api/auth/verify-email", { email, code })
       .then((data) => {
@@ -5436,7 +5451,14 @@ function formatTagLabel(label) {
         writeAccounts(accounts);
         window.location.replace(getPostLoginRedirect());
       })
-      .catch((error) => showStatus(String(error?.message || "Could not verify email."), true));
+      .catch((error) => {
+        const msg = String(error?.message || "Could not verify email.");
+        if (msg.toLowerCase().includes("invalid or expired code")) {
+          verifyMode = "resend";
+          if (verifyActionBtn) verifyActionBtn.textContent = "Send new code";
+        }
+        showStatus(msg, true);
+      });
   });
 
   resetRequestForm?.addEventListener("submit", (event) => {
