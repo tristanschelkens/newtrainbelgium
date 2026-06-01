@@ -4967,6 +4967,35 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     input.classList.toggle("is-error", Boolean(hasError));
   }
 
+  function sanitizeLoginRedirect(rawTarget) {
+    const target = String(rawTarget || "").trim();
+    if (!target) return "";
+    if (target.startsWith("http://") || target.startsWith("https://") || target.startsWith("//")) {
+      return "";
+    }
+    if (!/^[A-Za-z0-9._-]+\.html(?:\?.*)?$/.test(target)) return "";
+    return target;
+  }
+
+  function getPostLoginRedirect() {
+    const params = new URLSearchParams(window.location.search || "");
+    const fromQuery = sanitizeLoginRedirect(params.get("next"));
+    if (fromQuery) {
+      try {
+        sessionStorage.removeItem("tb_post_login_redirect");
+      } catch {}
+      return fromQuery;
+    }
+    try {
+      const fromStorage = sanitizeLoginRedirect(sessionStorage.getItem("tb_post_login_redirect"));
+      if (fromStorage) {
+        sessionStorage.removeItem("tb_post_login_redirect");
+        return fromStorage;
+      }
+    } catch {}
+    return "Photos.html";
+  }
+
   function setTab(mode) {
     const isCreate = mode === "create";
     createPanel.hidden = !isCreate;
@@ -5050,7 +5079,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           createdAt: new Date().toISOString(),
         };
         writeAccounts(accounts);
-        window.location.replace("Photos.html");
+        window.location.replace(getPostLoginRedirect());
       })
       .catch((error) => {
         const msg = String(error?.message || "");
@@ -5079,7 +5108,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
         };
         writeAccounts(accounts);
-        window.location.replace("Photos.html");
+        window.location.replace(getPostLoginRedirect());
       })
       .catch((error) => {
         setFieldError(usernameInput, true);
@@ -5242,11 +5271,16 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   }
 
   (function initNavVisibility() {
+    function submitLoginHref() {
+      return `Login.html?next=${encodeURIComponent("Submit.html")}`;
+    }
+
     function applyNavVisibility() {
       const activeUser = getActiveUser();
       const navModerationItem = document.getElementById("navModerationItem");
       const navProfileItem = document.getElementById("navProfileItem");
       const navLoginItem = document.getElementById("navLoginItem");
+      const navSubmitLink = document.getElementById("navSubmitLink");
       if (navModerationItem) {
         navModerationItem.style.display = isModerator(activeUser) ? "" : "none";
       }
@@ -5255,6 +5289,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       }
       if (navLoginItem) {
         navLoginItem.style.display = activeUser ? "none" : "";
+      }
+      if (navSubmitLink) {
+        navSubmitLink.setAttribute("href", activeUser ? "Submit.html" : submitLoginHref());
       }
     }
 
@@ -5274,6 +5311,22 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const form = document.getElementById("submitPhotoForm");
     const status = document.getElementById("submitPhotoStatus");
     if (!form) return;
+    const submitTarget =
+      `${window.location.pathname.split("/").pop() || "Submit.html"}${window.location.search || ""}`;
+    function redirectToLoginForSubmit() {
+      const target = String(submitTarget || "Submit.html");
+      try {
+        sessionStorage.setItem("tb_post_login_redirect", target);
+      } catch {}
+      window.location.replace(`Login.html?next=${encodeURIComponent(target)}`);
+    }
+
+    if (!getActiveUser()) {
+      syncActiveUserFromServer().then((user) => {
+        if (!user) redirectToLoginForSubmit();
+      });
+    }
+
     const imageInput = document.getElementById("submitImageUrl");
     const titleInput = document.getElementById("submitTitle");
     const stationInput = document.getElementById("submitStation");
@@ -6168,7 +6221,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       event.preventDefault();
       const user = getActiveUser();
       if (!user) {
-        showStatus(status, "Please log in before submitting a photo.", true);
+        redirectToLoginForSubmit();
         return;
       }
 
