@@ -1364,11 +1364,11 @@ button.photo-card {
 }
 
 .station-photo-card-detailed .station-photo-info .station-photo-avatar {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  max-width: 28px;
-  flex: 0 0 28px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  flex: 0 0 24px;
   border-radius: 999px;
   object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.14);
@@ -1376,9 +1376,9 @@ button.photo-card {
 }
 
 .station-photo-info-user {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
-  color: rgba(17, 17, 17, 0.82);
+  color: var(--nmbs-blue);
   line-height: 1.2;
 }
 
