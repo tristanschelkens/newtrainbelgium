@@ -1760,6 +1760,35 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .filter(Boolean)[0] || "Unknown";
   }
 
+  function uniquePreviewSources(list) {
+    return Array.from(
+      new Set(
+        (Array.isArray(list) ? list : [])
+          .map((value) => String(value || "").trim())
+          .filter(Boolean),
+      ),
+    );
+  }
+
+  function getRotatingPreviewSrc(rotationKey, sources) {
+    const items = uniquePreviewSources(sources);
+    if (items.length === 0) return "";
+    const storageKey = "tb_preview_rotation_v1";
+    let state = {};
+    try {
+      state = JSON.parse(sessionStorage.getItem(storageKey) || "{}");
+    } catch {
+      state = {};
+    }
+    const currentIndex = Number(state?.[rotationKey] || 0);
+    const index = Number.isFinite(currentIndex) ? ((currentIndex % items.length) + items.length) % items.length : 0;
+    state[rotationKey] = index + 1;
+    try {
+      sessionStorage.setItem(storageKey, JSON.stringify(state));
+    } catch {}
+    return items[index] || items[0];
+  }
+
   function renderOperatorDrillCards() {
     const operatorMap = new Map();
     allPhotoEntries.forEach((entry) => {
@@ -1770,22 +1799,29 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           key,
           label,
           count: 0,
-          previewSrc: entry.src || "",
+          previewSources: [],
         });
       }
+      if (entry.src) operatorMap.get(key).previewSources.push(entry.src);
       operatorMap.get(key).count += 1;
     });
     const cards = Array.from(operatorMap.values())
       .sort((a, b) => a.label.localeCompare(b.label))
       .map(
-        (item) => `
+        (item) => {
+          const previewSrc = getRotatingPreviewSrc(
+            `company:operator:${item.key}`,
+            item.previewSources,
+          );
+          return `
           <button class="photo-card photo-search-result" type="button" data-company-card="${esc(item.key)}">
-            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(item.label)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(item.label)}</h3>
             </div>
           </button>
-        `,
+        `;
+        },
       )
       .join("");
     grid.innerHTML = cards;
@@ -1805,23 +1841,30 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               key,
               label: facet.label || key,
               count: 0,
-              previewSrc: entry.src || "",
+              previewSources: [],
             });
           }
+          if (entry.src) materialMap.get(key).previewSources.push(entry.src);
           materialMap.get(key).count += 1;
         });
       });
     const cards = Array.from(materialMap.values())
       .sort((a, b) => a.label.localeCompare(b.label))
       .map(
-        (item) => `
+        (item) => {
+          const previewSrc = getRotatingPreviewSrc(
+            `company:${companyDrillOperator}:material:${item.key}`,
+            item.previewSources,
+          );
+          return `
           <button class="photo-card photo-search-result" type="button" data-material-card="${esc(item.key)}">
-            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(item.label)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(item.label)}</h3>
             </div>
           </button>
-        `,
+        `;
+        },
       )
       .join("");
     grid.innerHTML = cards;
@@ -1841,11 +1884,14 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const cards = Array.from(countryMap.entries())
       .sort((a, b) => placeCountryLabelByKey(a[0]).localeCompare(placeCountryLabelByKey(b[0])))
       .map(([countryKey, entries]) => {
-        const randomEntry = entries[Math.floor(Math.random() * entries.length)] || null;
+        const previewSrc = getRotatingPreviewSrc(
+          `place:country:${countryKey}`,
+          entries.map((entry) => entry.src),
+        );
         const label = placeCountryLabelByKey(countryKey);
         return `
           <button class="photo-card photo-search-result" type="button" data-place-country-card="${esc(countryKey)}">
-            <img loading="lazy" src="${esc(String(randomEntry?.src || ""))}" alt="${esc(label)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(label)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(label)}</h3>
             </div>
@@ -1868,22 +1914,29 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         stationMap.set(entry.slug, {
           slug: entry.slug,
           label: stationLabelBySlug(entry.slug),
-          previewSrc: entry.src || "",
+          previewSources: [],
         });
       }
+      if (entry.src) stationMap.get(entry.slug).previewSources.push(entry.src);
     });
 
     const cards = Array.from(stationMap.values())
       .sort((a, b) => a.label.localeCompare(b.label))
       .map(
-        (item) => `
+        (item) => {
+          const previewSrc = getRotatingPreviewSrc(
+            `place:${placeDrillCountry}:station:${item.slug}`,
+            item.previewSources,
+          );
+          return `
           <button class="photo-card photo-search-result" type="button" data-place-card="${esc(item.slug)}">
-            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(item.label)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(item.label)}</h3>
             </div>
           </button>
-        `,
+        `;
+        },
       )
       .join("");
 
@@ -1904,23 +1957,30 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             materialMap.set(key, {
               key,
               label: facet.label || key,
-              previewSrc: entry.src || "",
+              previewSources: [],
             });
           }
+          if (entry.src) materialMap.get(key).previewSources.push(entry.src);
         });
       });
 
     const cards = Array.from(materialMap.values())
       .sort((a, b) => a.label.localeCompare(b.label))
       .map(
-        (item) => `
+        (item) => {
+          const previewSrc = getRotatingPreviewSrc(
+            `place:${placeDrillCountry}:${placeDrillStation}:material:${item.key}`,
+            item.previewSources,
+          );
+          return `
           <button class="photo-card photo-search-result" type="button" data-place-material-card="${esc(item.key)}">
-            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.label)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(item.label)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(item.label)}</h3>
             </div>
           </button>
-        `,
+        `;
+        },
       )
       .join("");
 
@@ -1941,23 +2001,30 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         if (!numberMap.has(number)) {
           numberMap.set(number, {
             number,
-            previewSrc: entry.src || "",
+            previewSources: [],
             leadLabel: number,
           });
         }
+        if (entry.src) numberMap.get(number).previewSources.push(entry.src);
       });
 
     const cards = Array.from(numberMap.values())
       .sort((a, b) => trainOrderValue(a.number) - trainOrderValue(b.number))
       .map(
-        (item) => `
+        (item) => {
+          const previewSrc = getRotatingPreviewSrc(
+            `place:${placeDrillCountry}:${placeDrillStation}:${placeDrillMaterial}:number:${item.number}`,
+            item.previewSources,
+          );
+          return `
           <button class="photo-card photo-search-result" type="button" data-place-number-card="${esc(item.number)}">
-            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.leadLabel)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(item.leadLabel)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(item.leadLabel)}</h3>
             </div>
           </button>
-        `,
+        `;
+        },
       )
       .join("");
 
@@ -2140,23 +2207,30 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         if (!numberMap.has(number)) {
           numberMap.set(number, {
             number,
-            previewSrc: entry.src || "",
+            previewSources: [],
             leadLabel: number,
           });
         }
+        if (entry.src) numberMap.get(number).previewSources.push(entry.src);
       });
 
     const cards = Array.from(numberMap.values())
       .sort((a, b) => trainOrderValue(a.number) - trainOrderValue(b.number))
       .map(
-        (item) => `
+        (item) => {
+          const previewSrc = getRotatingPreviewSrc(
+            `company:${companyDrillOperator}:${companyDrillMaterial}:number:${item.number}`,
+            item.previewSources,
+          );
+          return `
           <button class="photo-card photo-search-result" type="button" data-company-number-card="${esc(item.number)}">
-            <img loading="lazy" src="${esc(item.previewSrc)}" alt="${esc(item.leadLabel)}" />
+            <img loading="lazy" src="${esc(previewSrc)}" alt="${esc(item.leadLabel)}" />
             <div class="overlay" style="opacity:1;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.52));color:#fff;">
               <h3>${esc(item.leadLabel)}</h3>
             </div>
           </button>
-        `,
+        `;
+        },
       )
       .join("");
 
