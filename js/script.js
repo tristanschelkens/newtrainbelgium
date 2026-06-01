@@ -473,10 +473,10 @@ function normalizeVehicleLabel(value) {
 
   if (prefixKey === "br") {
     if (digits.length === 7) {
-      return `BR${digits.slice(0, 3)} ${digits.slice(3, 6)}-${digits.slice(6)}${tail}`;
+      return `BR ${digits.slice(0, 3)} ${digits.slice(3, 6)}-${digits.slice(6)}${tail}`;
     }
     if (digits.length === 6) {
-      return `BR${digits.slice(0, 3)} ${digits.slice(3)}${tail}`;
+      return `BR ${digits.slice(0, 3)} ${digits.slice(3)}${tail}`;
     }
   }
 
@@ -1326,10 +1326,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     if (searchLightboxMeta) {
-      searchLightboxMeta.innerHTML = entry.fullMetaHtml || entry.metaHtml || "";
-      searchLightboxMeta.style.display = Boolean(entry.fullMetaHtml || entry.metaHtml)
-        ? "flex"
-        : "none";
+      searchLightboxMeta.innerHTML = "";
+      searchLightboxMeta.style.display = "none";
     }
 
     if (searchLightboxWatermark) {
