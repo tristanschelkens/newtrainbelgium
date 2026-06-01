@@ -88,6 +88,7 @@
               />
 
               <button class="btn btn-primary" type="submit">Login</button>
+              <button class="btn btn-secondary" type="button" id="forgotPasswordToggle">Forgot password?</button>
             </form>
           </div>
 
@@ -139,6 +140,35 @@
               />
 
               <button class="btn btn-primary" type="submit">Create account</button>
+            </form>
+          </div>
+
+          <div class="login-panel" id="loginPanelVerify" hidden>
+            <h2>Verify your email</h2>
+            <form class="login-form" id="loginVerifyForm" novalidate>
+              <label for="verifyEmail">Email</label>
+              <input id="verifyEmail" name="email" type="email" autocomplete="email" required placeholder="Enter your email" />
+
+              <label for="verifyCode">Verification code</label>
+              <input id="verifyCode" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required placeholder="6-digit code" />
+
+              <button class="btn btn-primary" type="submit">Verify and continue</button>
+            </form>
+          </div>
+
+          <div class="login-panel" id="loginPanelReset" hidden>
+            <h2>Reset password</h2>
+            <form class="login-form" id="loginResetRequestForm" novalidate>
+              <label for="resetEmail">Email</label>
+              <input id="resetEmail" name="email" type="email" autocomplete="email" required placeholder="Enter your email" />
+              <button class="btn btn-primary" type="submit">Send reset code</button>
+            </form>
+            <form class="login-form" id="loginResetForm" novalidate>
+              <label for="resetCode">Reset code</label>
+              <input id="resetCode" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required placeholder="6-digit code" />
+              <label for="resetPassword">New password</label>
+              <input id="resetPassword" name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="Choose a new password" />
+              <button class="btn btn-primary" type="submit">Reset password</button>
             </form>
           </div>
 

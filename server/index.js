@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
+const nodemailer = require('nodemailer');
 const { Pool } = require('pg');
 require('dotenv').config();
 
@@ -11,12 +12,26 @@ const port = Number(process.env.PORT || 3000);
 const dbUrl = String(process.env.DATABASE_URL || '');
 const sessionSecret = String(process.env.SESSION_SECRET || 'change_me');
 const ownerUsername = String(process.env.OWNER_USERNAME || 'trainbelgium').trim().toLowerCase();
+const smtpHost = String(process.env.SMTP_HOST || '').trim();
+const smtpPort = Number(process.env.SMTP_PORT || 587);
+const smtpUser = String(process.env.SMTP_USER || '').trim();
+const smtpPass = String(process.env.SMTP_PASS || '').trim();
+const smtpFrom = String(process.env.SMTP_FROM || smtpUser || '').trim();
+const smtpSecure = String(process.env.SMTP_SECURE || 'false').trim().toLowerCase() === 'true';
 
 if (!dbUrl) {
   console.warn('DATABASE_URL is not set. Auth API will fail until configured.');
 }
 
 const pool = new Pool({ connectionString: dbUrl || undefined });
+const mailTransporter = smtpHost && smtpUser && smtpPass
+  ? nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpSecure,
+      auth: { user: smtpUser, pass: smtpPass }
+    })
+  : null;
 
 app.use(express.json({ limit: '15mb' }));
 app.use(cookieParser(sessionSecret));
@@ -27,6 +42,67 @@ function normalizeUsername(value) {
 
 function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim());
+}
+
+function isStrongPassword(password) {
+  return String(password || '').length >= 6 && /[A-Z]/.test(String(password || '')) && /[0-9]/.test(String(password || ''));
+}
+
+function generateNumericCode() {
+  return String(crypto.randomInt(100000, 1000000));
+}
+
+function hashOneTimeCode(rawCode) {
+  return crypto.createHash('sha256').update(String(rawCode || '')).digest('hex');
+}
+
+async function sendMailOrThrow({ to, subject, text, html }) {
+  if (!mailTransporter || !smtpFrom) {
+    throw new Error('Mail service is not configured on the server.');
+  }
+  await mailTransporter.sendMail({ from: smtpFrom, to, subject, text, html });
+}
+
+async function storeEmailVerificationCode(userId, email, rawCode) {
+  const expiresAt = new Date(Date.now() + 1000 * 60 * 15);
+  await pool.query('DELETE FROM email_verification_codes WHERE user_id = $1', [userId]);
+  await pool.query(
+    'INSERT INTO email_verification_codes (user_id, email, code_hash, expires_at) VALUES ($1, $2, $3, $4)',
+    [userId, email, hashOneTimeCode(rawCode), expiresAt.toISOString()],
+  );
+}
+
+async function storePasswordResetCode(userId, email, rawCode) {
+  const expiresAt = new Date(Date.now() + 1000 * 60 * 15);
+  await pool.query('DELETE FROM password_reset_codes WHERE user_id = $1', [userId]);
+  await pool.query(
+    'INSERT INTO password_reset_codes (user_id, email, code_hash, expires_at) VALUES ($1, $2, $3, $4)',
+    [userId, email, hashOneTimeCode(rawCode), expiresAt.toISOString()],
+  );
+}
+
+async function ensureAuthTables() {
+  await pool.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS email_verified BOOLEAN NOT NULL DEFAULT false`);
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS email_verification_codes (
+      user_id BIGINT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+      email TEXT NOT NULL,
+      code_hash TEXT NOT NULL,
+      expires_at TIMESTAMPTZ NOT NULL,
+      used_at TIMESTAMPTZ,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    )
+  `);
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS password_reset_codes (
+      user_id BIGINT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+      email TEXT NOT NULL,
+      code_hash TEXT NOT NULL,
+      expires_at TIMESTAMPTZ NOT NULL,
+      used_at TIMESTAMPTZ,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    )
+  `);
 }
 
 function readSessionToken(req) {
@@ -278,9 +354,7 @@ app.post('/api/auth/register', async (req, res) => {
 
   if (!username || username.length < 3) return res.status(400).json({ ok: false, error: 'Username must be at least 3 characters.' });
   if (!isValidEmail(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email address.' });
-  if (password.length < 6) return res.status(400).json({ ok: false, error: 'Password must be at least 6 characters.' });
-  if (!/[A-Z]/.test(password)) return res.status(400).json({ ok: false, error: 'Password must contain at least 1 uppercase letter.' });
-  if (!/[0-9]/.test(password)) return res.status(400).json({ ok: false, error: 'Password must contain at least 1 number.' });
+  if (!isStrongPassword(password)) return res.status(400).json({ ok: false, error: 'Password must be at least 6 chars, include 1 uppercase and 1 number.' });
 
   try {
     const existing = await pool.query('SELECT id FROM users WHERE username = $1 OR email = $2 LIMIT 1', [username, email]);
@@ -288,14 +362,17 @@ app.post('/api/auth/register', async (req, res) => {
 
     const passwordHash = await bcrypt.hash(password, 12);
     const user = await insertUserWithRandomId(username, email, passwordHash);
-    const token = crypto.randomBytes(32).toString('hex');
-    const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
-    await pool.query('INSERT INTO user_sessions (token, user_id, expires_at) VALUES ($1, $2, $3)', [token, user.id, expiresAt.toISOString()]);
-    setSessionCookie(res, token, expiresAt);
-
-    return res.status(201).json({ ok: true, user });
+    const code = generateNumericCode();
+    await storeEmailVerificationCode(user.id, email, code);
+    await sendMailOrThrow({
+      to: email,
+      subject: 'Your TrainBelgium verification code',
+      text: `Your verification code is: ${code}. It expires in 15 minutes.`,
+      html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
+    });
+    return res.status(201).json({ ok: true, requiresEmailVerification: true, email });
   } catch (err) {
-    return res.status(500).json({ ok: false, error: 'Server error' });
+    return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
   }
 });
 
@@ -305,13 +382,24 @@ app.post('/api/auth/login', async (req, res) => {
   if (!username || !password) return res.status(400).json({ ok: false, error: 'Username and password are required.' });
 
   try {
-    const q = 'SELECT id, username, email, role, password_hash FROM users WHERE username = $1 LIMIT 1';
+    const q = 'SELECT id, username, email, role, password_hash, email_verified FROM users WHERE username = $1 LIMIT 1';
     const { rows } = await pool.query(q, [username]);
     const userRow = rows[0];
     if (!userRow) return res.status(401).json({ ok: false, error: 'Invalid username or password.' });
 
     const ok = await bcrypt.compare(password, userRow.password_hash);
     if (!ok) return res.status(401).json({ ok: false, error: 'Invalid username or password.' });
+    if (!userRow.email_verified) {
+      const code = generateNumericCode();
+      await storeEmailVerificationCode(userRow.id, userRow.email, code);
+      await sendMailOrThrow({
+        to: userRow.email,
+        subject: 'Your TrainBelgium verification code',
+        text: `Your verification code is: ${code}. It expires in 15 minutes.`,
+        html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
+      });
+      return res.status(403).json({ ok: false, error: 'Email verification required.', requiresEmailVerification: true, email: userRow.email });
+    }
 
     const token = crypto.randomBytes(32).toString('hex');
     const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
@@ -328,7 +416,80 @@ app.post('/api/auth/login', async (req, res) => {
       }
     });
   } catch (err) {
-    return res.status(500).json({ ok: false, error: 'Server error' });
+    return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
+  }
+});
+
+app.post('/api/auth/verify-email', async (req, res) => {
+  const email = String(req.body?.email || '').trim().toLowerCase();
+  const code = String(req.body?.code || '').trim();
+  if (!isValidEmail(email) || !/^\d{6}$/.test(code)) {
+    return res.status(400).json({ ok: false, error: 'Please enter a valid email and 6-digit code.' });
+  }
+  try {
+    const { rows } = await pool.query('SELECT id, username, email, role FROM users WHERE email = $1 LIMIT 1', [email]);
+    const user = rows[0];
+    if (!user) return res.status(400).json({ ok: false, error: 'Invalid code.' });
+    const codeRows = await pool.query('SELECT code_hash, expires_at, used_at FROM email_verification_codes WHERE user_id = $1 LIMIT 1', [user.id]);
+    const codeRow = codeRows.rows[0];
+    if (!codeRow || codeRow.used_at || new Date(codeRow.expires_at).getTime() < Date.now() || codeRow.code_hash !== hashOneTimeCode(code)) {
+      return res.status(400).json({ ok: false, error: 'Invalid or expired code.' });
+    }
+    await pool.query('UPDATE users SET email_verified = true WHERE id = $1', [user.id]);
+    await pool.query('UPDATE email_verification_codes SET used_at = now() WHERE user_id = $1', [user.id]);
+    const token = crypto.randomBytes(32).toString('hex');
+    const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
+    await pool.query('INSERT INTO user_sessions (token, user_id, expires_at) VALUES ($1, $2, $3)', [token, user.id, expiresAt.toISOString()]);
+    setSessionCookie(res, token, expiresAt);
+    return res.json({ ok: true, user });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
+  }
+});
+
+app.post('/api/auth/request-password-reset', async (req, res) => {
+  const email = String(req.body?.email || '').trim().toLowerCase();
+  if (!isValidEmail(email)) return res.status(400).json({ ok: false, error: 'Please enter a valid email address.' });
+  try {
+    const { rows } = await pool.query('SELECT id FROM users WHERE email = $1 LIMIT 1', [email]);
+    const user = rows[0];
+    if (user) {
+      const code = generateNumericCode();
+      await storePasswordResetCode(user.id, email, code);
+      await sendMailOrThrow({
+        to: email,
+        subject: 'Your TrainBelgium password reset code',
+        text: `Your password reset code is: ${code}. It expires in 15 minutes.`,
+        html: `<p>Your password reset code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
+      });
+    }
+    return res.json({ ok: true });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
+  }
+});
+
+app.post('/api/auth/reset-password', async (req, res) => {
+  const email = String(req.body?.email || '').trim().toLowerCase();
+  const code = String(req.body?.code || '').trim();
+  const password = String(req.body?.password || '');
+  if (!isValidEmail(email) || !/^\d{6}$/.test(code)) return res.status(400).json({ ok: false, error: 'Invalid reset request.' });
+  if (!isStrongPassword(password)) return res.status(400).json({ ok: false, error: 'Password must be at least 6 chars, include 1 uppercase and 1 number.' });
+  try {
+    const userRows = await pool.query('SELECT id FROM users WHERE email = $1 LIMIT 1', [email]);
+    const user = userRows.rows[0];
+    if (!user) return res.status(400).json({ ok: false, error: 'Invalid or expired code.' });
+    const codeRows = await pool.query('SELECT code_hash, expires_at, used_at FROM password_reset_codes WHERE user_id = $1 LIMIT 1', [user.id]);
+    const codeRow = codeRows.rows[0];
+    if (!codeRow || codeRow.used_at || new Date(codeRow.expires_at).getTime() < Date.now() || codeRow.code_hash !== hashOneTimeCode(code)) {
+      return res.status(400).json({ ok: false, error: 'Invalid or expired code.' });
+    }
+    const passwordHash = await bcrypt.hash(password, 12);
+    await pool.query('UPDATE users SET password_hash = $1 WHERE id = $2', [passwordHash, user.id]);
+    await pool.query('UPDATE password_reset_codes SET used_at = now() WHERE user_id = $1', [user.id]);
+    return res.json({ ok: true });
+  } catch (err) {
+    return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
   }
 });
 
@@ -576,6 +737,13 @@ app.delete('/api/comments/:id', async (req, res) => {
 
 app.use(express.static(path.resolve(__dirname, '..')));
 
-app.listen(port, () => {
-  console.log(`TrainBelgium server on http://localhost:${port}`);
-});
+ensureAuthTables()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`TrainBelgium server on http://localhost:${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Failed to initialize auth tables:', err);
+    process.exit(1);
+  });

@@ -5168,11 +5168,17 @@ function formatTagLabel(label) {
 (function initLoginPage() {
   const signInForm = document.getElementById("loginSignInForm");
   const createForm = document.getElementById("loginCreateForm");
+  const verifyForm = document.getElementById("loginVerifyForm");
+  const resetRequestForm = document.getElementById("loginResetRequestForm");
+  const resetForm = document.getElementById("loginResetForm");
   const status = document.getElementById("loginStatus");
   const signInTab = document.getElementById("loginTabSignIn");
   const createTab = document.getElementById("loginTabCreate");
   const signInPanel = document.getElementById("loginPanelSignIn");
   const createPanel = document.getElementById("loginPanelCreate");
+  const verifyPanel = document.getElementById("loginPanelVerify");
+  const resetPanel = document.getElementById("loginPanelReset");
+  const forgotPasswordToggle = document.getElementById("forgotPasswordToggle");
 
   if (!signInForm || !createForm || !status) return;
 
@@ -5210,7 +5216,9 @@ function formatTagLabel(label) {
     });
     const data = await response.json().catch(() => ({}));
     if (!response.ok || !data?.ok) {
-      throw new Error(String(data?.error || "Request failed"));
+      const err = new Error(String(data?.error || "Request failed"));
+      err.data = data || {};
+      throw err;
     }
     return data;
   }
@@ -5263,6 +5271,8 @@ function formatTagLabel(label) {
     const isCreate = mode === "create";
     createPanel.hidden = !isCreate;
     signInPanel.hidden = isCreate;
+    if (verifyPanel) verifyPanel.hidden = true;
+    if (resetPanel) resetPanel.hidden = true;
     createTab.classList.toggle("active", isCreate);
     signInTab.classList.toggle("active", !isCreate);
     createTab.setAttribute("aria-selected", isCreate ? "true" : "false");
@@ -5270,8 +5280,34 @@ function formatTagLabel(label) {
     showStatus("");
   }
 
+  function openVerifyPanel(email) {
+    signInPanel.hidden = true;
+    createPanel.hidden = true;
+    if (resetPanel) resetPanel.hidden = true;
+    if (verifyPanel) verifyPanel.hidden = false;
+    signInTab.classList.remove("active");
+    createTab.classList.remove("active");
+    const verifyEmail = verifyForm?.querySelector("#verifyEmail");
+    if (verifyEmail && email) verifyEmail.value = email;
+  }
+
+  function openResetPanel(email) {
+    signInPanel.hidden = true;
+    createPanel.hidden = true;
+    if (verifyPanel) verifyPanel.hidden = true;
+    if (resetPanel) resetPanel.hidden = false;
+    signInTab.classList.remove("active");
+    createTab.classList.remove("active");
+    const resetEmail = resetRequestForm?.querySelector("#resetEmail");
+    if (resetEmail && email) resetEmail.value = email;
+  }
+
   signInTab?.addEventListener("click", () => setTab("signin"));
   createTab?.addEventListener("click", () => setTab("create"));
+  forgotPasswordToggle?.addEventListener("click", () => {
+    openResetPanel("");
+    showStatus("Request a reset code with your account email.");
+  });
 
   createForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -5335,14 +5371,13 @@ function formatTagLabel(label) {
 
     apiRequest("/api/auth/register", { username, email, password })
       .then((data) => {
-        localStorage.setItem(sessionKey, data.user.username);
-        const accounts = readAccounts();
-        accounts[data.user.username] = {
-          email: data.user.email,
-          createdAt: new Date().toISOString(),
-        };
-        writeAccounts(accounts);
-        window.location.replace(getPostLoginRedirect());
+        if (data?.requiresEmailVerification) {
+          openVerifyPanel(email);
+          showStatus("We sent you a verification code by email. Enter it below.");
+          return;
+        }
+        showStatus("Account created. Please sign in.");
+        setTab("signin");
       })
       .catch((error) => {
         const msg = String(error?.message || "");
@@ -5374,10 +5409,57 @@ function formatTagLabel(label) {
         window.location.replace(getPostLoginRedirect());
       })
       .catch((error) => {
+        const msg = String(error?.message || "Invalid username or password.");
+        if (msg.toLowerCase().includes("verification required")) {
+          openVerifyPanel(String(error?.data?.email || ""));
+          showStatus("Email verification required. Enter your email and code.", true);
+          return;
+        }
         setFieldError(usernameInput, true);
         setFieldError(passwordInput, true);
-        showStatus(String(error?.message || "Invalid username or password."), true);
+        showStatus(msg, true);
       });
+  });
+
+  verifyForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = String(verifyForm.querySelector("#verifyEmail")?.value || "").trim().toLowerCase();
+    const code = String(verifyForm.querySelector("#verifyCode")?.value || "").trim();
+    apiRequest("/api/auth/verify-email", { email, code })
+      .then((data) => {
+        localStorage.setItem(sessionKey, data.user.username);
+        const accounts = readAccounts();
+        accounts[data.user.username] = {
+          email: data.user.email,
+          createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
+        };
+        writeAccounts(accounts);
+        window.location.replace(getPostLoginRedirect());
+      })
+      .catch((error) => showStatus(String(error?.message || "Could not verify email."), true));
+  });
+
+  resetRequestForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
+    apiRequest("/api/auth/request-password-reset", { email })
+      .then(() => {
+        showStatus("If the email exists, a reset code has been sent.");
+      })
+      .catch((error) => showStatus(String(error?.message || "Could not send reset code."), true));
+  });
+
+  resetForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
+    const code = String(resetForm.querySelector("#resetCode")?.value || "").trim();
+    const password = String(resetForm.querySelector("#resetPassword")?.value || "");
+    apiRequest("/api/auth/reset-password", { email, code, password })
+      .then(() => {
+        showStatus("Password reset completed. You can now sign in.");
+        setTab("signin");
+      })
+      .catch((error) => showStatus(String(error?.message || "Could not reset password."), true));
   });
 
   const createUsernameInput = createForm.querySelector("#createUsername");
