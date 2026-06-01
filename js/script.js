@@ -5979,7 +5979,7 @@ function formatTagLabel(label) {
       row.className = "submit-composition-row trainset";
       row.innerHTML = `
         <div class="submit-trainset-slots" data-trainset-slots>
-          <input type="text" placeholder="bv. HLE 18 of AM 08" data-sp-slot="1" />
+          <input type="text" placeholder="e.g. HLE 18, AM 08, Class 373" data-sp-slot="1" />
         </div>
       `;
       compositionRows.appendChild(row);

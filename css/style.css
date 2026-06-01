@@ -2580,10 +2580,16 @@ body.station-lightbox-open {
 .submit-composition-rows {
   display: grid;
   gap: 10px;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 12px;
-  background: #fbfcfe;
+  background: #fff;
+}
+
+.submit-material-help {
+  margin: -4px 0 8px 0;
+  font-size: 14px;
+  color: #6b7280;
 }
 
 .submit-train-type-picker {
@@ -2643,17 +2649,23 @@ body.station-lightbox-open {
 .submit-composition-row.trainset {
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .submit-trainset-slots {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 10px;
+  display: block;
 }
 
 .submit-trainset-slots [data-sp-slot] {
   min-width: 0;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 0 14px;
+  font-size: 16px;
 }
 
 .submit-trainset-add {
