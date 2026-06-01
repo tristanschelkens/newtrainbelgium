@@ -492,6 +492,25 @@ app.post('/api/submissions/:id/moderate', async (req, res) => {
   }
 });
 
+app.delete('/api/submissions/:id', async (req, res) => {
+  try {
+    const user = await requireUser(req, res);
+    if (!user) return;
+    const username = String(user?.username || '').trim().toLowerCase();
+    if (username !== ownerUsername) {
+      return res.status(403).json({ ok: false, error: 'Only owner can delete photos.' });
+    }
+    const id = String(req.params.id || '').trim();
+    if (!id) return res.status(400).json({ ok: false, error: 'Missing submission id.' });
+
+    const result = await pool.query('DELETE FROM photo_submissions WHERE id = $1', [id]);
+    if (result.rowCount === 0) return res.status(404).json({ ok: false, error: 'Photo not found.' });
+    return res.json({ ok: true });
+  } catch {
+    return res.status(500).json({ ok: false, error: 'Server error' });
+  }
+});
+
 app.get('/api/comments', async (req, res) => {
   try {
     const photoKey = String(req.query.photoKey || '').trim();

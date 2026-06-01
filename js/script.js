@@ -1096,6 +1096,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         .join(" ");
 
       return {
+        photoId: String(photo?.id || "").trim(),
         index,
         slug,
         series:
@@ -1167,6 +1168,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       <div class="station-lightbox-operator" aria-hidden="true"></div>
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
+      <button class="station-lightbox-delete" type="button" id="photoSearchDeleteBtn" hidden>Delete photo</button>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
     <div class="station-lightbox-panel">
@@ -1189,6 +1191,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   const searchLightboxOperator = searchLightbox.querySelector(".station-lightbox-operator");
   const searchLightboxDate = searchLightbox.querySelector(".station-lightbox-date");
   const searchLightboxMeta = searchLightbox.querySelector(".station-lightbox-meta");
+  const searchLightboxDeleteBtn = searchLightbox.querySelector("#photoSearchDeleteBtn");
   const searchLightboxWatermark = searchLightbox.querySelector(".station-lightbox-watermark");
   const searchLightboxClose = searchLightbox.querySelector(".station-lightbox-close");
   const searchLightboxPrev = searchLightbox.querySelector(".station-lightbox-nav.prev");
@@ -1204,6 +1207,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   function activeUserName() {
     return String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
+  }
+
+  function ownerUserName() {
+    return String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
   }
 
   function readProfilesStore() {
@@ -1387,6 +1394,14 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       searchLightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
     }
 
+    if (searchLightboxDeleteBtn) {
+      const canDelete = activeUserName() === ownerUserName();
+      const photoId = String(entry?.photoId || "").trim();
+      const deletable = canDelete && photoId.startsWith("sub_");
+      searchLightboxDeleteBtn.hidden = !deletable;
+      searchLightboxDeleteBtn.dataset.photoId = deletable ? photoId : "";
+    }
+
     searchLightbox.classList.add("is-open");
     searchLightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("station-lightbox-open");
@@ -1445,6 +1460,27 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     closeSearchLightbox();
     updateSortButtons();
     applyFilters(true);
+  });
+
+  searchLightboxDeleteBtn?.addEventListener("click", async (event) => {
+    event.stopPropagation();
+    const id = String(searchLightboxDeleteBtn.dataset.photoId || "").trim();
+    if (!id) return;
+    if (!confirm("Delete this photo permanently?")) return;
+    try {
+      const res = await fetch(`/api/submissions/${encodeURIComponent(id)}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not delete photo."));
+      sessionStorage.removeItem("tb_approved_submissions_cache_v1");
+      sessionStorage.removeItem("tb_approved_submissions_cache_v2");
+      closeSearchLightbox();
+      window.location.reload();
+    } catch (err) {
+      setSearchCommentStatus(String(err?.message || "Could not delete photo."), true);
+    }
   });
 
   document.addEventListener("keydown", (e) => {
@@ -3464,6 +3500,7 @@ function formatTagLabel(label) {
     const explicitIsMain = typeof photo.isMain === "boolean" ? photo.isMain : null;
 
     return {
+      id: String(photo.id || "").trim(),
       src: photo.src || "",
       alt: photo.alt || station.name,
       label: photo.label || station.name,
@@ -3657,6 +3694,7 @@ function formatTagLabel(label) {
       <div class="station-lightbox-operator" aria-hidden="true"></div>
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
+      <button class="station-lightbox-delete" type="button" id="stationLightboxDeleteBtn" hidden>Delete photo</button>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
     <div class="station-lightbox-panel">
@@ -3704,6 +3742,7 @@ function formatTagLabel(label) {
   const lightboxOperator = lightbox.querySelector(".station-lightbox-operator");
   const lightboxDate = lightbox.querySelector(".station-lightbox-date");
   const lightboxMeta = lightbox.querySelector(".station-lightbox-meta");
+  const lightboxDeleteBtn = lightbox.querySelector("#stationLightboxDeleteBtn");
   const lightboxWatermark = lightbox.querySelector(".station-lightbox-watermark");
   const closeBtn = lightbox.querySelector(".station-lightbox-close");
   const prevBtn = lightbox.querySelector(".station-lightbox-nav.prev");
@@ -3808,6 +3847,7 @@ function formatTagLabel(label) {
     dateLabel,
     operatorLabel,
     photographerLabel,
+    photoId = "",
   ) {
     if (!lightboxImg) return;
 
@@ -3860,6 +3900,17 @@ function formatTagLabel(label) {
       );
     }
 
+    if (lightboxDeleteBtn) {
+      const activeUser = getActiveUser();
+      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+        .trim()
+        .toLowerCase();
+      const canDelete = activeUser && activeUser === ownerUser;
+      const deletable = canDelete && String(photoId || "").startsWith("sub_");
+      lightboxDeleteBtn.hidden = !deletable;
+      lightboxDeleteBtn.dataset.photoId = deletable ? String(photoId || "") : "";
+    }
+
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("station-lightbox-open");
@@ -3891,6 +3942,7 @@ function formatTagLabel(label) {
       photoDate,
       photo.operator || "",
       photo.photographer || "",
+      photo.id || "",
     );
     renderLightboxComments();
     updateLightboxNav();
@@ -3916,6 +3968,27 @@ function formatTagLabel(label) {
     const user = String(lightboxWatermark.dataset.profileUser || "").trim();
     if (!user) return;
     openCommenterProfile(user);
+  });
+
+  lightboxDeleteBtn?.addEventListener("click", async (event) => {
+    event.stopPropagation();
+    const id = String(lightboxDeleteBtn.dataset.photoId || "").trim();
+    if (!id) return;
+    if (!confirm("Delete this photo permanently?")) return;
+    try {
+      const res = await fetch(`/api/submissions/${encodeURIComponent(id)}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not delete photo."));
+      sessionStorage.removeItem("tb_approved_submissions_cache_v1");
+      sessionStorage.removeItem("tb_approved_submissions_cache_v2");
+      closeLightbox();
+      window.location.reload();
+    } catch (err) {
+      setCommentStatus(String(err?.message || "Could not delete photo."), true);
+    }
   });
 
   function canModerateComments() {

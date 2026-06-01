@@ -1639,6 +1639,25 @@ body.station-lightbox-open {
   user-select: none;
 }
 
+.station-lightbox-delete {
+  position: absolute;
+  right: 14px;
+  bottom: 52px;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(184, 35, 35, 0.86);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.station-lightbox-delete:hover {
+  background: rgba(160, 25, 25, 0.92);
+}
+
 .station-lightbox-watermark:hover {
   background: rgba(0, 0, 0, 0.62);
 }
