@@ -38,9 +38,10 @@
       <section class="container section" style="padding-top: 18px">
         <div class="profile-grid">
           <div class="card profile-summary-card">
-            <div class="profile-avatar-wrap">
+            <button class="profile-avatar-wrap" id="profileAvatarTrigger" type="button" aria-label="Change profile photo">
               <img id="profileAvatarPreview" src="../images/default-avatar.svg" alt="Profile avatar" />
-            </div>
+              <span class="profile-avatar-overlay">Adjust profile photo</span>
+            </button>
             <h2 id="profileSummaryName">Guest</h2>
             <p class="muted" id="profileSummaryMeta">Not logged in</p>
             <div class="badges">
@@ -57,11 +58,6 @@
             <form id="profileForm" class="login-form" novalidate>
               <label for="profileUsername">Username</label>
               <input id="profileUsername" name="username" type="text" readonly />
-              <label for="profileAvatar">Profile photo</label>
-              <div class="profile-avatar-input-row">
-                <input id="profileAvatar" name="avatar" type="text" placeholder="Select an image..." readonly />
-                <button class="btn btn-secondary" id="profileAvatarPickBtn" type="button">Choose file</button>
-              </div>
               <input id="profileAvatarFile" name="avatar_file" type="file" accept="image/*" hidden />
               <label for="profileEmail">Email</label>
               <input id="profileEmail" name="email" type="email" placeholder="you@example.com" required />

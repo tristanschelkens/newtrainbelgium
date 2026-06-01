@@ -6311,9 +6311,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const status = document.getElementById("profileStatus");
     if (!form) return;
     const defaultAvatar = "../images/default-avatar.svg";
-    const avatarPathInput = document.getElementById("profileAvatar");
     const avatarFileInput = document.getElementById("profileAvatarFile");
-    const avatarPickBtn = document.getElementById("profileAvatarPickBtn");
+    const avatarTrigger = document.getElementById("profileAvatarTrigger");
     const avatarPreview = document.getElementById("profileAvatarPreview");
     const summaryName = document.getElementById("profileSummaryName");
     const summaryMeta = document.getElementById("profileSummaryMeta");
@@ -6361,7 +6360,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     let selectedModeratorUser = "";
 
     form.profileUsername.value = user;
-    form.profileAvatar.value = profile.avatar || "";
+    let profileAvatarValue = String(profile.avatar || "").trim();
     form.profileEmail.value = profile.email || account.email || "";
     form.profileNotifications.checked = Boolean(profile.notifications);
 
@@ -6369,11 +6368,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (summaryMeta) summaryMeta.textContent = `${profile.email || account.email || "No email set"}`;
     if (roleBadge) roleBadge.textContent = userIsOwner ? "Owner" : userIsModerator ? "Moderator" : "Member";
     if (avatarPreview) {
-      avatarPreview.src = profile.avatar || defaultAvatar;
+      avatarPreview.src = profileAvatarValue || defaultAvatar;
       avatarPreview.alt = `${user} avatar`;
     }
 
-    avatarPickBtn?.addEventListener("click", () => {
+    avatarTrigger?.addEventListener("click", () => {
       avatarFileInput?.click();
     });
 
@@ -6384,7 +6383,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       reader.onload = () => {
         const result = typeof reader.result === "string" ? reader.result : "";
         if (!result) return;
-        if (avatarPathInput) avatarPathInput.value = result;
+        profileAvatarValue = result;
         if (avatarPreview) avatarPreview.src = result;
       };
       reader.readAsDataURL(picked);
@@ -6399,7 +6398,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       }
 
       profiles[user] = {
-        avatar: String(form.profileAvatar?.value || "").trim(),
+        avatar: String(profileAvatarValue || "").trim(),
         email,
         notifications: Boolean(form.profileNotifications?.checked),
       };
