@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "ZSSK",
       date: "23 March 2026",
-      photographer: "trainbelgium",
+      photographer: "EURORAILSHOTS",
       alt: "Bratislava ZSSK 263 003-6",
       numbers: "003-6",
       consist: [train("Škoda 263")],

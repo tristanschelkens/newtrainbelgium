@@ -11,7 +11,7 @@ const app = express();
 const port = Number(process.env.PORT || 3000);
 const dbUrl = String(process.env.DATABASE_URL || '');
 const sessionSecret = String(process.env.SESSION_SECRET || 'change_me');
-const ownerUsername = String(process.env.OWNER_USERNAME || 'trainbelgium').trim().toLowerCase();
+const ownerUsername = String(process.env.OWNER_USERNAME || 'EURORAILSHOTS').trim().toLowerCase();
 const smtpHost = String(process.env.SMTP_HOST || '').trim();
 const smtpPort = Number(process.env.SMTP_PORT || 587);
 const smtpUser = String(process.env.SMTP_USER || '').trim();
@@ -415,7 +415,7 @@ app.post('/api/auth/register', async (req, res) => {
     await storeEmailVerificationCode(user.id, email, code);
     await sendMailOrThrow({
       to: email,
-      subject: 'Your TrainBelgium verification code',
+      subject: 'Your EURORAILSHOTS verification code',
       text: `Your verification code is: ${code}. It expires in 15 minutes.`,
       html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
     });
@@ -443,7 +443,7 @@ app.post('/api/auth/login', async (req, res) => {
       await storeEmailVerificationCode(userRow.id, userRow.email, code);
       await sendMailOrThrow({
         to: userRow.email,
-        subject: 'Your TrainBelgium verification code',
+        subject: 'Your EURORAILSHOTS verification code',
         text: `Your verification code is: ${code}. It expires in 15 minutes.`,
         html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
       });
@@ -511,7 +511,7 @@ app.post('/api/auth/resend-verification-code', async (req, res) => {
     await storeEmailVerificationCode(user.id, email, code);
     await sendMailOrThrow({
       to: email,
-      subject: 'Your TrainBelgium verification code',
+      subject: 'Your EURORAILSHOTS verification code',
       text: `Your verification code is: ${code}. It expires in 15 minutes.`,
       html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
     });
@@ -536,7 +536,7 @@ app.post('/api/auth/request-password-reset', async (req, res) => {
       const resetLink = buildPasswordResetLink(email, token);
       await sendMailOrThrow({
         to: email,
-        subject: 'Reset your TrainBelgium password',
+        subject: 'Reset your EURORAILSHOTS password',
         text: `Click this link to reset your password: ${resetLink}\n\nThis link expires in 15 minutes.`,
         html: `<p>Click this link to reset your password:</p><p><a href="${resetLink}">${resetLink}</a></p><p>This link expires in 15 minutes.</p>`,
       });
@@ -832,7 +832,7 @@ app.use(express.static(path.resolve(__dirname, '..')));
 ensureAuthTables()
   .then(() => {
     app.listen(port, () => {
-      console.log(`TrainBelgium server on http://localhost:${port}`);
+      console.log(`EURORAILSHOTS server on http://localhost:${port}`);
     });
   })
   .catch((err) => {

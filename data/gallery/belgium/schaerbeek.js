@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "ÖBB",
       date: "7 January 2026",
-      photographer: "trainbelgium",
+      photographer: "EURORAILSHOTS",
       alt: "Schaerbeek Vectron 1293 181",
       numbers: "1293 181",
       consist: [train("Vectron 1293")],

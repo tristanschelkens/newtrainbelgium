@@ -1,4 +1,4 @@
-﻿function toggleMenu() {
+function toggleMenu() {
   const nav = document.getElementById("navLinks");
   const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
@@ -441,7 +441,7 @@ const vehiclePrefixNames = {
   p: "P",
   mw: "MW",
   ms: "MS",
-  skoda: "Škoda",
+  skoda: "�koda",
   traxx: "TRAXX",
   tgv: "TGV",
 };
@@ -913,10 +913,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       return { key: "traxx", label: "TRAXX" };
     }
     if (withoutCount.startsWith("skoda 263") || combinedWithoutCount.startsWith("skoda 263")) {
-      return { key: "skoda-263", label: "Škoda 263" };
+      return { key: "skoda-263", label: "�koda 263" };
     }
     if (withoutCount.startsWith("skoda")) {
-      return { key: "skoda", label: "Škoda" };
+      return { key: "skoda", label: "�koda" };
     }
     if (withoutCount.startsWith("br146")) {
       return { key: "br146", label: "BR 146" };
@@ -1169,7 +1169,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <button class="station-lightbox-delete" type="button" id="photoSearchDeleteBtn" hidden>Delete photo</button>
-      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
+      <div class="station-lightbox-watermark">&copy; eurorailshots.com</div>
     </div>
     <div class="station-lightbox-panel">
       <div class="station-lightbox-panel-top">
@@ -1210,7 +1210,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   }
 
   function ownerUserName() {
-    return String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    return String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
   }
 
   function readProfilesStore() {
@@ -1224,7 +1224,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function canModerateUser(user) {
     const normalized = String(user || "").trim().toLowerCase();
     if (!normalized) return false;
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
     if (normalized === owner) return true;
     try {
       const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
@@ -1390,7 +1390,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     if (searchLightboxWatermark) {
-      const owner = (entry.photographer || "").trim() || "trainbelgium.com";
+      const owner = (entry.photographer || "").trim() || "eurorailshots.com";
       searchLightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
     }
 
@@ -2094,7 +2094,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" • ");
+        const metaRow = [stationName, date].filter(Boolean).join(" � ");
 
         return `
           <button
@@ -2174,7 +2174,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" • ");
+        const metaRow = [stationName, date].filter(Boolean).join(" � ");
 
         return `
           <button
@@ -3136,7 +3136,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   overlayText.textContent = latestPhoto.stationName;
 
   caption.classList.add("latest-photo-line");
-  caption.innerHTML = `<span class="latest-photo-tag">Newest upload</span><span class="latest-photo-separator">Â·</span><a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">Â·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
+  caption.innerHTML = `<span class="latest-photo-tag">Newest upload</span><span class="latest-photo-separator">·</span><a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
 })();
 
 (function initPhotoMap() {
@@ -3301,7 +3301,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     subtitle.textContent = `${station.country}${description}`;
   }
 
-  document.title = `${station.name} - trainbelgium.com`;
+  document.title = `${station.name} - eurorailshots.com`;
 
   function esc(value) {
     return String(value || "")
@@ -3321,7 +3321,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
     const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
@@ -3368,7 +3368,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .replace(/\s+/g, " ");
     if (!normalized) return "";
 
-    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
+    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
@@ -3695,7 +3695,7 @@ function formatTagLabel(label) {
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <button class="station-lightbox-delete" type="button" id="stationLightboxDeleteBtn" hidden>Delete photo</button>
-      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
+      <div class="station-lightbox-watermark">&copy; eurorailshots.com</div>
     </div>
     <div class="station-lightbox-panel">
       <div class="station-lightbox-panel-top">
@@ -3814,7 +3814,7 @@ function formatTagLabel(label) {
     try {
       roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
     } catch {}
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
     const profile = profiles[user] || {};
     const account = accounts[user] || {};
     const role = user === owner ? "Owner" : Array.isArray(roles?.moderators) && roles.moderators.includes(user) ? "Moderator" : "Member";
@@ -3886,7 +3886,7 @@ function formatTagLabel(label) {
     }
 
     if (lightboxWatermark) {
-      const owner = String(photographerLabel || "").trim() || "trainbelgium.com";
+      const owner = String(photographerLabel || "").trim() || "eurorailshots.com";
       const profileUser = owner.toLowerCase().endsWith(".com")
         ? owner.slice(0, -4)
         : owner;
@@ -3902,7 +3902,7 @@ function formatTagLabel(label) {
 
     if (lightboxDeleteBtn) {
       const activeUser = getActiveUser();
-      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS")
         .trim()
         .toLowerCase();
       const canDelete = activeUser && activeUser === ownerUser;
@@ -3995,7 +3995,7 @@ function formatTagLabel(label) {
     const user = getActiveUser();
     if (!user) return false;
     try {
-      const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+      const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS")
         .trim()
         .toLowerCase();
       if (user === owner) return true;
@@ -5131,7 +5131,7 @@ function formatTagLabel(label) {
     try {
       const data = new FormData(form);
       const response = await fetch(
-        "https://formsubmit.co/ajax/info@trainbelgium.com",
+        "https://formsubmit.co/ajax/info@eurorailshots.com",
         {
           method: "POST",
           headers: {
@@ -5724,8 +5724,8 @@ function formatTagLabel(label) {
   function getOwnerUser() {
     const saved = normalizeUser(localStorage.getItem(ownerKey));
     if (saved) return saved;
-    localStorage.setItem(ownerKey, "trainbelgium");
-    return "trainbelgium";
+    localStorage.setItem(ownerKey, "EURORAILSHOTS");
+    return "EURORAILSHOTS";
   }
 
   function readRoles() {
@@ -5867,7 +5867,7 @@ function formatTagLabel(label) {
       "CIE",
       "Comboios de Portugal",
       "CrossCountry",
-      "ÄŒD",
+      "ČD",
       "DB",
       "DSB",
       "East Midlands Railway",
@@ -5885,7 +5885,7 @@ function formatTagLabel(label) {
       "GWR",
       "Hellenic Train",
       "Hull Trains",
-      "IarnrÃ³d Ã‰ireann",
+      "Iarnród Éireann",
       "Infrabel",
       "Italo",
       "LNER",
@@ -5893,7 +5893,7 @@ function formatTagLabel(label) {
       "Lumo",
       "LVR",
       "LTG Link",
-      "MÃV-START",
+      "MÁV-START",
       "Merseyrail",
       "Metronom",
       "MTRX",
@@ -5904,7 +5904,7 @@ function formatTagLabel(label) {
       "Northern",
       "NS",
       "NTV",
-      "Ã–BB",
+      "ÖBB",
       "OUIGO",
       "PKP Intercity",
       "Polregio",
@@ -5918,9 +5918,9 @@ function formatTagLabel(label) {
       "South Western Railway",
       "Southeastern",
       "Southern",
-      "SÅ½",
-      "TÃ¥gÃ¥keriet i Bergslagen",
-      "TCDD TaÅŸÄ±macÄ±lÄ±k",
+      "SŽ",
+      "Tågåkeriet i Bergslagen",
+      "TCDD Taşımacılık",
       "Thalys",
       "Trenitalia",
       "Transdev",
@@ -5988,7 +5988,7 @@ function formatTagLabel(label) {
         austria: "../images/Other/Flags/Austria.svg",
         belarus: "../images/Other/Flags/Belarus.svg",
         belgium: "../images/Other/Flags/Belgium.svg",
-        bosniaandherzegovina: "../images/Other/Flags/BosniÃ«Herzegovina.svg",
+        bosniaandherzegovina: "../images/Other/Flags/BosniëHerzegovina.svg",
         bulgaria: "../images/Other/Flags/Bulgaria.svg",
         croatia: "../images/Other/Flags/Croatia.svg",
         cyprus: "../images/Other/Flags/Cyprus.svg",

@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "SNCF",
       date: "9 April 2026",
-      photographer: "trainbelgium",
+      photographer: "EURORAILSHOTS",
       alt: "Paris TGV Dasye 717",
       numbers: "717",
       consist: [train("TGV Dasye")],
