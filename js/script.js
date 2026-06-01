@@ -954,7 +954,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       (item) => String(item?.kind || "").toLowerCase() === "traction" && String(item?.label || "").trim(),
     );
     const chosen = preferredTraction || explicitLead || firstTraction;
-    return chosen ? String(chosen.label || "").trim() : "";
+    return chosen ? normalizeVehicleLabel(String(chosen.label || "").trim()) : "";
   }
 
   function trainOrderValue(value) {
@@ -1828,10 +1828,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const leadMeta = photo.leadPowerLabel
           ? `<div class="station-meta"><span class="station-meta-chip">${esc(photo.leadPowerLabel)}</span></div>`
           : "";
+        const title = String(photo.leadPowerLabel || photo.alt || "").trim();
+        const stationName = String(photo.stationName || "").trim();
+        const date = String(photo.date || "").trim();
+        const photographer = String(photo.photographer || "").trim();
+        const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
           <button
-            class="photo-card station-photo-card photo-search-result"
+            class="photo-card station-photo-card station-photo-card-detailed photo-search-result"
             type="button"
             data-series-key="${esc(photo.seriesKey)}"
             data-photo-index="${photo.index}"
@@ -1841,6 +1846,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${buildPhotographerBadge(photo.photographer)}
             <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
             ${leadMeta}
+            <div class="station-photo-info">
+              <div class="station-photo-info-title">${esc(title)}</div>
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
+              ${photographer ? `<div class="station-photo-info-by">By ${esc(photographer)}</div>` : ""}
+            </div>
           </button>
         `;
       })
@@ -1889,10 +1899,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const leadMeta = photo.leadPowerLabel
           ? `<div class="station-meta"><span class="station-meta-chip">${esc(photo.leadPowerLabel)}</span></div>`
           : "";
+        const title = String(photo.leadPowerLabel || photo.alt || "").trim();
+        const stationName = String(photo.stationName || "").trim();
+        const date = String(photo.date || "").trim();
+        const photographer = String(photo.photographer || "").trim();
+        const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
           <button
-            class="photo-card station-photo-card photo-search-result"
+            class="photo-card station-photo-card station-photo-card-detailed photo-search-result"
             type="button"
             data-series-key="${esc(photo.seriesKey)}"
             data-photo-index="${photo.index}"
@@ -1902,6 +1917,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${buildPhotographerBadge(photo.photographer)}
             <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
             ${leadMeta}
+            <div class="station-photo-info">
+              <div class="station-photo-info-title">${esc(title)}</div>
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
+              ${photographer ? `<div class="station-photo-info-by">By ${esc(photographer)}</div>` : ""}
+            </div>
           </button>
         `;
       })
@@ -3600,7 +3620,17 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     if (lightboxWatermark) {
       const owner = String(photographerLabel || "").trim() || "trainbelgium.com";
+      const profileUser = owner.toLowerCase().endsWith(".com")
+        ? owner.slice(0, -4)
+        : owner;
       lightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
+      lightboxWatermark.dataset.profileUser = String(profileUser || "").trim().toLowerCase();
+      lightboxWatermark.setAttribute("role", "button");
+      lightboxWatermark.setAttribute("tabindex", "0");
+      lightboxWatermark.setAttribute(
+        "aria-label",
+        `Open profile of ${String(profileUser || owner).trim()}`,
+      );
     }
 
     lightbox.classList.add("is-open");
@@ -3646,6 +3676,20 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function getCurrentCommentKey() {
     return `${slug}::${currentPhotoIndex}`;
   }
+
+  lightboxWatermark?.addEventListener("click", () => {
+    const user = String(lightboxWatermark.dataset.profileUser || "").trim();
+    if (!user) return;
+    openCommenterProfile(user);
+  });
+
+  lightboxWatermark?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    const user = String(lightboxWatermark.dataset.profileUser || "").trim();
+    if (!user) return;
+    openCommenterProfile(user);
+  });
 
   function canModerateComments() {
     const user = getActiveUser();
