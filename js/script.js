@@ -5269,6 +5269,15 @@ function formatTagLabel(label) {
     return "Photos.html";
   }
 
+  function readAuthQueryParams() {
+    const params = new URLSearchParams(window.location.search || "");
+    return {
+      mode: String(params.get("mode") || "").trim().toLowerCase(),
+      email: String(params.get("email") || "").trim().toLowerCase(),
+      code: String(params.get("code") || "").trim(),
+    };
+  }
+
   function setTab(mode) {
     const isCreate = mode === "create";
     createPanel.hidden = !isCreate;
@@ -5310,7 +5319,7 @@ function formatTagLabel(label) {
   createTab?.addEventListener("click", () => setTab("create"));
   forgotPasswordToggle?.addEventListener("click", () => {
     openResetPanel("");
-    showStatus("Request a reset code with your account email.");
+    showStatus("Enter your email and we will send a password reset link.");
   });
 
   createForm.addEventListener("submit", (event) => {
@@ -5466,9 +5475,9 @@ function formatTagLabel(label) {
     const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
     apiRequest("/api/auth/request-password-reset", { email })
       .then(() => {
-        showStatus("If the email exists, a reset code has been sent.");
+        showStatus("If the email exists, a reset link has been sent.");
       })
-      .catch((error) => showStatus(String(error?.message || "Could not send reset code."), true));
+      .catch((error) => showStatus(String(error?.message || "Could not send reset link."), true));
   });
 
   resetForm?.addEventListener("submit", (event) => {
@@ -5509,6 +5518,14 @@ function formatTagLabel(label) {
       const activeUser = normalizeUsername(localStorage.getItem(sessionKey));
       if (activeUser) showStatus(`Already logged in as ${activeUser}.`);
     });
+
+  const authQuery = readAuthQueryParams();
+  if (authQuery.mode === "reset") {
+    openResetPanel(authQuery.email);
+    const resetCodeInput = resetForm?.querySelector("#resetCode");
+    if (resetCodeInput && authQuery.code) resetCodeInput.value = authQuery.code;
+    showStatus("Use the code from the reset email to set a new password.");
+  }
 })();
 
 (function initImageProtection() {

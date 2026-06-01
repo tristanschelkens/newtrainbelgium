@@ -18,6 +18,7 @@ const smtpUser = String(process.env.SMTP_USER || '').trim();
 const smtpPass = String(process.env.SMTP_PASS || '').trim();
 const smtpFrom = String(process.env.SMTP_FROM || smtpUser || '').trim();
 const smtpSecure = String(process.env.SMTP_SECURE || 'false').trim().toLowerCase() === 'true';
+const appBaseUrl = String(process.env.APP_BASE_URL || `http://localhost:${port}`).trim().replace(/\/+$/, '');
 
 if (!dbUrl) {
   console.warn('DATABASE_URL is not set. Auth API will fail until configured.');
@@ -79,6 +80,11 @@ async function storePasswordResetCode(userId, email, rawCode) {
     'INSERT INTO password_reset_codes (user_id, email, code_hash, expires_at) VALUES ($1, $2, $3, $4)',
     [userId, email, hashOneTimeCode(rawCode), expiresAt.toISOString()],
   );
+}
+
+function buildPasswordResetLink(email, code) {
+  const query = `mode=reset&email=${encodeURIComponent(email)}&code=${encodeURIComponent(code)}`;
+  return `${appBaseUrl}/pages/Login.html?${query}`;
 }
 
 async function ensureAuthTables() {
@@ -478,11 +484,12 @@ app.post('/api/auth/request-password-reset', async (req, res) => {
     if (user) {
       const code = generateNumericCode();
       await storePasswordResetCode(user.id, email, code);
+      const resetLink = buildPasswordResetLink(email, code);
       await sendMailOrThrow({
         to: email,
-        subject: 'Your TrainBelgium password reset code',
-        text: `Your password reset code is: ${code}. It expires in 15 minutes.`,
-        html: `<p>Your password reset code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
+        subject: 'Reset your TrainBelgium password',
+        text: `Click this link to reset your password: ${resetLink}\n\nYour code is: ${code} (expires in 15 minutes).`,
+        html: `<p>Click this link to reset your password:</p><p><a href="${resetLink}">${resetLink}</a></p><p>Your code is: <strong>${code}</strong> (expires in 15 minutes).</p>`,
       });
     }
     return res.json({ ok: true });
