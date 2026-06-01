@@ -56,7 +56,13 @@
             <div id="submitOperatorSuggestions" class="moderator-suggestions" hidden></div>
             <label for="submitCompositionRows">Rolling Stock</label>
             <input id="submitTrainType" name="train_type" type="hidden" value="trainset" />
-            <div id="submitCompositionRows" class="submit-composition-rows"></div>
+            <div id="submitCompositionRows" class="submit-composition-rows">
+              <div class="submit-composition-row trainset">
+                <div class="submit-trainset-slots" data-trainset-slots>
+                  <input type="text" placeholder="e.g. HLE 18, AM 08, Class 373" data-sp-slot="1" />
+                </div>
+              </div>
+            </div>
             <input id="submitTitle" name="title" type="hidden" />
             <label for="submitImageUrl">Image path or URL</label>
             <div class="profile-avatar-input-row">
