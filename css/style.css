@@ -1363,10 +1363,12 @@ button.photo-card {
   gap: 10px;
 }
 
-.station-photo-avatar {
+.station-photo-card-detailed .station-photo-info .station-photo-avatar {
   width: 28px;
   height: 28px;
   min-width: 28px;
+  max-width: 28px;
+  flex: 0 0 28px;
   border-radius: 999px;
   object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.14);
