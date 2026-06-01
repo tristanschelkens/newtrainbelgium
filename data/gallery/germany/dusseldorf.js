@@ -12,9 +12,9 @@ station({
       operator: "DB",
       date: "10 December 2025",
       photographer: "trainbelgium",
-      alt: "Dusseldorf BR146 572-3 + 5x Stadler KISS",
+      alt: "Dusseldorf BR 146 572-3 + 5x Stadler KISS",
       numbers: "146 572-3, 146 572 3, 146 572",
-      consist: [traction("BR146 572-3"), carriage("5x KISS", true)],
+      consist: [traction("BR 146 572-3"), carriage("5x KISS", true)],
       images: ["Dusseldorf_BR14657235xStadlerKISS.webp"],
     }
   ],
