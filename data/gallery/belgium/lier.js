@@ -12,8 +12,8 @@ station({
       operator: "NMBS/SNCB",
           date: "27 May 2024",
       photographer: "trainbelgium",
-      alt: "Lier M6 + HLE18/19",
-      consist: [train("HLE 18")],
+      alt: "Lier M6",
+      consist: [train("M6")],
       images: ["Lier_M6HLE1819.webp"],
     },
     {
