@@ -1356,11 +1356,21 @@ button.photo-card {
   line-height: 1.25;
 }
 
-.station-photo-info-by {
-  font-size: 12px;
-  font-weight: 800;
-  color: var(--nmbs-blue);
-  line-height: 1.2;
+.station-photo-info-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.station-photo-avatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #fff;
 }
 
 .station-photo-card-detailed .station-photographer-badge {

@@ -727,6 +727,20 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     );
   }
 
+  function getProfileAvatarForUser(username) {
+    const user = String(username || "").trim().toLowerCase();
+    if (!user) return "../images/default-avatar.svg";
+    try {
+      const raw = localStorage.getItem("tb_profiles_v1");
+      const profiles = raw ? JSON.parse(raw) : {};
+      const profile = profiles && typeof profiles === "object" ? profiles[user] : null;
+      const avatar = String(profile?.avatar || "").trim();
+      return avatar || "../images/default-avatar.svg";
+    } catch {
+      return "../images/default-avatar.svg";
+    }
+  }
+
   function buildSearchMetaHtml(consist, options = {}) {
     const visibleItems = (Array.isArray(consist) ? consist : []).filter(
       (item) => item && item.showOnCard !== false,
@@ -1832,6 +1846,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const stationName = String(photo.stationName || "").trim();
         const date = String(photo.date || "").trim();
         const photographer = String(photo.photographer || "").trim();
+        const avatarSrc = getProfileAvatarForUser(photographer);
+        const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
         const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
@@ -1848,8 +1864,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
-              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
-              ${photographer ? `<div class="station-photo-info-by">By ${esc(photographer)}</div>` : ""}
+              <div class="station-photo-info-footer">
+                ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : "<div></div>"}
+                <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
+              </div>
             </div>
           </button>
         `;
@@ -1903,6 +1921,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const stationName = String(photo.stationName || "").trim();
         const date = String(photo.date || "").trim();
         const photographer = String(photo.photographer || "").trim();
+        const avatarSrc = getProfileAvatarForUser(photographer);
+        const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
         const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
@@ -1919,8 +1939,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
-              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
-              ${photographer ? `<div class="station-photo-info-by">By ${esc(photographer)}</div>` : ""}
+              <div class="station-photo-info-footer">
+                ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : "<div></div>"}
+                <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
+              </div>
             </div>
           </button>
         `;
