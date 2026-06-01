@@ -471,6 +471,15 @@ function normalizeVehicleLabel(value) {
   const digits = match[2];
   const tail = match[3] ? ` ${match[3].toUpperCase()}` : "";
 
+  if (prefixKey === "br") {
+    if (digits.length === 7) {
+      return `BR${digits.slice(0, 3)} ${digits.slice(3, 6)}-${digits.slice(6)}${tail}`;
+    }
+    if (digits.length === 6) {
+      return `BR${digits.slice(0, 3)} ${digits.slice(3)}${tail}`;
+    }
+  }
+
   if (spacedVehiclePrefixes.has(prefixKey)) {
     if (digits.length <= 2) return `${prefix} ${digits.padStart(2, "0")}${tail}`;
     return `${prefix} ${digits}${tail}`;
@@ -984,6 +993,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function leadPowerNumberValue(label) {
     const raw = String(label || "").trim();
     if (!raw) return "";
+    const splitNumber = raw.match(/(\d{2,4}\s*-\s*\d)\b/);
+    if (splitNumber && splitNumber[1]) {
+      return splitNumber[1].replace(/\s+/g, "");
+    }
     const groups = raw.match(/\d+/g);
     if (!groups || groups.length === 0) return "";
     return groups[groups.length - 1];
