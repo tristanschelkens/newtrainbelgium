@@ -5180,7 +5180,8 @@ function formatTagLabel(label) {
   const resetPanel = document.getElementById("loginPanelReset");
   const forgotPasswordToggle = document.getElementById("forgotPasswordToggle");
   const verifyActionBtn = document.getElementById("verifyActionBtn");
-  const resetCodeGroup = document.getElementById("resetCodeGroup");
+  const resetRequestGroup = document.getElementById("resetRequestGroup");
+  const resetSetGroup = document.getElementById("resetSetGroup");
 
   if (!signInForm || !createForm || !status) return;
 
@@ -5188,6 +5189,7 @@ function formatTagLabel(label) {
   const storageKey = "tb_accounts_v1";
   let verifyMode = "verify";
   let resetTokenFromLink = "";
+  let resetEmailFromLink = "";
 
   function normalizeUsername(value) {
     return String(value || "").trim().toLowerCase();
@@ -5330,6 +5332,8 @@ function formatTagLabel(label) {
     createTab.classList.remove("active");
     const resetEmail = resetRequestForm?.querySelector("#resetEmail");
     if (resetEmail && email) resetEmail.value = email;
+    if (resetRequestGroup) resetRequestGroup.hidden = false;
+    if (resetSetGroup) resetSetGroup.hidden = true;
   }
 
   signInTab?.addEventListener("click", () => setTab("signin"));
@@ -5497,14 +5501,16 @@ function formatTagLabel(label) {
 
   resetForm?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
-    const code = String(resetForm.querySelector("#resetCode")?.value || "").trim();
+    const requestEmail = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
+    const email = String(resetEmailFromLink || requestEmail).trim().toLowerCase();
     const password = String(resetForm.querySelector("#resetPassword")?.value || "");
-    apiRequest("/api/auth/reset-password", { email, code, token: resetTokenFromLink, password })
+    apiRequest("/api/auth/reset-password", { email, token: resetTokenFromLink, password })
       .then(() => {
         showStatus("Password reset completed. You can now sign in.");
         resetTokenFromLink = "";
-        if (resetCodeGroup) resetCodeGroup.hidden = false;
+        resetEmailFromLink = "";
+        if (resetRequestGroup) resetRequestGroup.hidden = false;
+        if (resetSetGroup) resetSetGroup.hidden = true;
         setTab("signin");
       })
       .catch((error) => showStatus(String(error?.message || "Could not reset password."), true));
@@ -5539,11 +5545,15 @@ function formatTagLabel(label) {
   const authQuery = readAuthQueryParams();
   if (authQuery.mode === "reset") {
     openResetPanel(authQuery.email);
-    const resetCodeInput = resetForm?.querySelector("#resetCode");
-    if (resetCodeInput && authQuery.code) resetCodeInput.value = authQuery.code;
     resetTokenFromLink = authQuery.token;
-    if (resetCodeGroup && resetTokenFromLink) resetCodeGroup.hidden = true;
-    showStatus(resetTokenFromLink ? "Set your new password below." : "Use the code from the reset email to set a new password.");
+    resetEmailFromLink = authQuery.email;
+    if (resetTokenFromLink) {
+      if (resetRequestGroup) resetRequestGroup.hidden = true;
+      if (resetSetGroup) resetSetGroup.hidden = false;
+      showStatus("Set your new password below.");
+    } else {
+      showStatus("Invalid reset link. Please request a new one.", true);
+    }
   }
 })();
 
