@@ -506,7 +506,7 @@ app.post('/api/auth/reset-password', async (req, res) => {
   if (!isValidEmail(email) || (!token && !/^\d{6}$/.test(code))) return res.status(400).json({ ok: false, error: 'Invalid reset request.' });
   if (!isStrongPassword(password)) return res.status(400).json({ ok: false, error: 'Password must be at least 6 chars, include 1 uppercase and 1 number.' });
   try {
-    const userRows = await pool.query('SELECT id FROM users WHERE email = $1 LIMIT 1', [email]);
+    const userRows = await pool.query('SELECT id, username, email, role FROM users WHERE email = $1 LIMIT 1', [email]);
     const user = userRows.rows[0];
     if (!user) return res.status(400).json({ ok: false, error: 'Invalid or expired code.' });
     const codeRows = await pool.query('SELECT code_hash, expires_at, used_at FROM password_reset_codes WHERE user_id = $1 LIMIT 1', [user.id]);
@@ -518,7 +518,19 @@ app.post('/api/auth/reset-password', async (req, res) => {
     const passwordHash = await bcrypt.hash(password, 12);
     await pool.query('UPDATE users SET password_hash = $1 WHERE id = $2', [passwordHash, user.id]);
     await pool.query('UPDATE password_reset_codes SET used_at = now() WHERE user_id = $1', [user.id]);
-    return res.json({ ok: true });
+    const sessionToken = crypto.randomBytes(32).toString('hex');
+    const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
+    await pool.query('INSERT INTO user_sessions (token, user_id, expires_at) VALUES ($1, $2, $3)', [sessionToken, user.id, expiresAt.toISOString()]);
+    setSessionCookie(res, sessionToken, expiresAt);
+    return res.json({
+      ok: true,
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+      }
+    });
   } catch (err) {
     return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
   }

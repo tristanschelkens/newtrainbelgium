@@ -5505,8 +5505,19 @@ function formatTagLabel(label) {
     const email = String(resetEmailFromLink || requestEmail).trim().toLowerCase();
     const password = String(resetForm.querySelector("#resetPassword")?.value || "");
     apiRequest("/api/auth/reset-password", { email, token: resetTokenFromLink, password })
-      .then(() => {
-        showStatus("Password reset completed. You can now sign in.");
+      .then((data) => {
+        const resetUser = data?.user || null;
+        if (resetUser?.username) {
+          localStorage.setItem(sessionKey, normalizeUsername(resetUser.username));
+          const accounts = readAccounts();
+          accounts[normalizeUsername(resetUser.username)] = {
+            createdAt: accounts[normalizeUsername(resetUser.username)]?.createdAt || new Date().toISOString(),
+          };
+          writeAccounts(accounts);
+          window.location.replace(getPostLoginRedirect());
+          return;
+        }
+        showStatus("Password reset completed.");
         resetTokenFromLink = "";
         resetEmailFromLink = "";
         if (resetRequestGroup) resetRequestGroup.hidden = false;
