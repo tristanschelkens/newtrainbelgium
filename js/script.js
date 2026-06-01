@@ -1797,7 +1797,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           numberMap.set(number, {
             number,
             previewSrc: entry.src || "",
-            leadLabel: entry.leadPowerLabel || number,
+            leadLabel: number,
           });
         }
       });
@@ -1850,10 +1850,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const operatorBadge = operatorBadges
           ? `<div class="station-operator-stack">${operatorBadges}</div>`
           : "";
-        const leadMeta = photo.leadPowerLabel
-          ? `<div class="station-meta"><span class="station-meta-chip">${esc(photo.leadPowerLabel)}</span></div>`
+        const displayNumber = String(photo.leadPowerNumber || "").trim();
+        const leadMeta = displayNumber
+          ? `<div class="station-meta"><span class="station-meta-chip">${esc(displayNumber)}</span></div>`
           : "";
-        const title = String(photo.leadPowerLabel || photo.alt || "").trim();
+        const title = String(displayNumber || photo.leadPowerLabel || photo.alt || "").trim();
         const stationName = String(photo.stationName || "").trim();
         const date = String(photo.date || "").trim();
         const photographer = String(photo.photographer || "").trim();
@@ -1926,10 +1927,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const operatorBadge = operatorBadges
           ? `<div class="station-operator-stack">${operatorBadges}</div>`
           : "";
-        const leadMeta = photo.leadPowerLabel
-          ? `<div class="station-meta"><span class="station-meta-chip">${esc(photo.leadPowerLabel)}</span></div>`
+        const displayNumber = String(photo.leadPowerNumber || "").trim();
+        const leadMeta = displayNumber
+          ? `<div class="station-meta"><span class="station-meta-chip">${esc(displayNumber)}</span></div>`
           : "";
-        const title = String(photo.leadPowerLabel || photo.alt || "").trim();
+        const title = String(displayNumber || photo.leadPowerLabel || photo.alt || "").trim();
         const stationName = String(photo.stationName || "").trim();
         const date = String(photo.date || "").trim();
         const photographer = String(photo.photographer || "").trim();
@@ -1977,7 +1979,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           numberMap.set(number, {
             number,
             previewSrc: entry.src || "",
-            leadLabel: entry.leadPowerLabel || number,
+            leadLabel: number,
           });
         }
       });
