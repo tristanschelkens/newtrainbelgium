@@ -5375,7 +5375,7 @@ function formatTagLabel(label) {
   createTab?.addEventListener("click", () => setTab("create"));
   forgotPasswordToggle?.addEventListener("click", () => {
     openResetPanel("");
-    showStatus("Enter your email and we will send a password reset link.");
+    showStatus("");
   });
 
   createForm.addEventListener("submit", (event) => {
@@ -5813,6 +5813,8 @@ function formatTagLabel(label) {
     if (!form) return;
     const submitTarget =
       `${window.location.pathname.split("/").pop() || "Submit.html"}${window.location.search || ""}`;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    let isSubmittingPhoto = false;
     function redirectToLoginForSubmit() {
       const target = String(submitTarget || "Submit.html");
       try {
@@ -6580,6 +6582,7 @@ function formatTagLabel(label) {
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+      if (isSubmittingPhoto) return;
       const user = getActiveUser();
       if (!user) {
         redirectToLoginForSubmit();
@@ -6621,6 +6624,9 @@ function formatTagLabel(label) {
         showStatus(status, "Date must be valid and cannot be in the future.", true);
         return;
       }
+
+      isSubmittingPhoto = true;
+      if (submitBtn) submitBtn.disabled = true;
 
       fetch("/api/submissions", {
         method: "POST",
@@ -6664,6 +6670,10 @@ function formatTagLabel(label) {
         })
         .catch((err) => {
           showStatus(status, String(err?.message || "Upload failed due to a save error."), true);
+        })
+        .finally(() => {
+          isSubmittingPhoto = false;
+          if (submitBtn) submitBtn.disabled = false;
         });
     });
   })();
