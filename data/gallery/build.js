@@ -7,6 +7,19 @@ window.GALLERY_STATIONS = window.GALLERY_STATIONS || [];
       if (!raw) return { train: "", number: "" };
       var parts = raw.split(/\s+/).filter(Boolean);
       if (parts.length < 2) return { train: raw, number: "" };
+      var p0 = String(parts[0] || "").toUpperCase();
+      var p1 = String(parts[1] || "");
+      var families = ["AM", "AR", "HLE", "HLD", "HLR", "TRAXX", "BR", "E", "MW", "MS"];
+      if (families.includes(p0) && /^\d{1,4}$/.test(p1)) {
+        var trainFam = parts[0] + " " + parts[1];
+        var famNum = String(parts[2] || "");
+        return { train: trainFam, number: /^\d+(?:-\d+)?$/.test(famNum) ? famNum : "" };
+      }
+      if (String(parts[0] || "").toLowerCase() === "class" && /^\d{1,4}$/.test(p1)) {
+        var trainClass = "Class " + parts[1];
+        var clsNum = String(parts[2] || "");
+        return { train: trainClass, number: /^\d+(?:-\d+)?$/.test(clsNum) ? clsNum : "" };
+      }
       var last = parts[parts.length - 1];
       if (/^\d+(?:-\d+)?$/.test(last)) {
         return { train: parts.slice(0, -1).join(" "), number: last };

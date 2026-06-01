@@ -229,6 +229,17 @@ function normalizeSubmissionComposition(parts) {
     if (!raw) return { train: '', number: '' };
     const chunks = raw.split(/\s+/).filter(Boolean);
     if (chunks.length < 2) return { train: raw, number: '' };
+    const familyPrefixes = new Set(['AM', 'AR', 'HLE', 'HLD', 'HLR', 'TRAXX', 'BR', 'E', 'MW', 'MS']);
+    if (familyPrefixes.has(String(chunks[0] || '').toUpperCase()) && /^\d{1,4}$/.test(String(chunks[1] || ''))) {
+      const train = `${chunks[0]} ${chunks[1]}`;
+      const maybeNumber = String(chunks[2] || '');
+      return { train, number: /^\d+(?:-\d+)?$/.test(maybeNumber) ? maybeNumber : '' };
+    }
+    if (String(chunks[0] || '').toLowerCase() === 'class' && /^\d{1,4}$/.test(String(chunks[1] || ''))) {
+      const train = `Class ${chunks[1]}`;
+      const maybeNumber = String(chunks[2] || '');
+      return { train, number: /^\d+(?:-\d+)?$/.test(maybeNumber) ? maybeNumber : '' };
+    }
     const last = chunks[chunks.length - 1];
     if (/^\d+(?:-\d+)?$/.test(last)) {
       return { train: chunks.slice(0, -1).join(' ').trim(), number: last };

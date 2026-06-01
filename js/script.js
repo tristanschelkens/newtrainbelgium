@@ -498,6 +498,17 @@ function splitTrainNumber(value) {
   const compact = normalized.replace(/\s+/g, " ").trim();
   const parts = compact.split(" ").filter(Boolean);
   if (parts.length < 2) return { train: compact, number: "" };
+  const familyPrefixes = new Set(["AM", "AR", "HLE", "HLD", "HLR", "TRAXX", "BR", "E", "MW", "MS"]);
+  if (parts.length >= 2 && familyPrefixes.has(parts[0].toUpperCase()) && /^\d{1,4}$/.test(parts[1])) {
+    const train = `${parts[0]} ${parts[1]}`;
+    const maybeNumber = parts[2] || "";
+    return { train, number: /^\d+(?:-\d+)?$/.test(maybeNumber) ? maybeNumber : "" };
+  }
+  if (parts[0].toLowerCase() === "class" && /^\d{1,4}$/.test(parts[1])) {
+    const train = `Class ${parts[1]}`;
+    const maybeNumber = parts[2] || "";
+    return { train, number: /^\d+(?:-\d+)?$/.test(maybeNumber) ? maybeNumber : "" };
+  }
   const last = parts[parts.length - 1];
   if (/^\d+(?:-\d+)?$/.test(last)) {
     return {
