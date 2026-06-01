@@ -141,9 +141,9 @@ station({
       operator: "ÖBB",
       date: "24 March 2026",
       photographer: "trainbelgium",
-      alt: "Vienna ÖBB Cityjet Glueck",
-      numbers: "1116",
-      consist: [train("Taurus 1116")],
+      alt: "Vienna ÖBB 86-33 210-4",
+      numbers: "86-33 106-4",
+      consist: [train("CityShuttle")],
       images: ["Vienna_OEBB_Cityjet_Glueck.jpeg"],
     },
     {
@@ -192,8 +192,8 @@ station({
       date: "24 March 2026",
       photographer: "trainbelgium",
       alt: "Vienna ÖBB 86-33 210-4",
-      numbers: "1116",
-      consist: [train("Taurus 1116")],
+      numbers: "86-33 210-4",
+      consist: [train("CityShuttle")],
       images: ["Vienna_OEBB_Doubledecker_8633210.jpeg"],
     }
   ],
