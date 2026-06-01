@@ -3638,8 +3638,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     if (lightboxMeta) {
-      lightboxMeta.innerHTML = metaHtml || "";
-      lightboxMeta.style.display = metaHtml ? "flex" : "none";
+      lightboxMeta.innerHTML = "";
+      lightboxMeta.style.display = "none";
     }
 
     if (lightboxWatermark) {
