@@ -192,6 +192,11 @@ function renderPhotoGalleryCardsFromData(grid, stationData) {
       .replaceAll("'", "&#39;");
   }
 
+  function buildPhotographerBadge(photographer) {
+    const name = String(photographer || "").trim();
+    return name ? `<span class="station-photographer-badge">By ${esc(name)}</span>` : "";
+  }
+
   function getStationCoverPhoto(station) {
     const photos = Array.isArray(station?.photos) ? station.photos : [];
     if (photos.length === 0) return null;
@@ -708,6 +713,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
+  }
+
+  function buildPhotographerBadge(photographer) {
+    const name = String(photographer || "").trim();
+    return name ? `<span class="station-photographer-badge">By ${esc(name)}</span>` : "";
   }
 
   function formatSearchTagLabel(label) {
@@ -1828,6 +1838,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             data-photo-slug="${esc(photo.slug)}"
           >
             ${operatorBadge}
+            ${buildPhotographerBadge(photo.photographer)}
             <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
             ${leadMeta}
           </button>
@@ -1888,6 +1899,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             data-photo-slug="${esc(photo.slug)}"
           >
             ${operatorBadge}
+            ${buildPhotographerBadge(photo.photographer)}
             <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
             ${leadMeta}
           </button>
@@ -1957,8 +1969,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
                 type="button"
                 data-series-key="${esc(photo.seriesKey)}"
                 data-photo-index="${photo.index}"
-                data-photo-slug="${esc(photo.slug)}"
-              >
+              data-photo-slug="${esc(photo.slug)}"
+            >
+                ${buildPhotographerBadge(photo.photographer)}
                 <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
                 <div class="overlay"><h3>${esc(photo.leadPowerLabel || photo.alt || "")}</h3></div>
               </button>
@@ -2009,8 +2022,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
                 type="button"
                 data-series-key="${esc(photo.seriesKey)}"
                 data-photo-index="${photo.index}"
-                data-photo-slug="${esc(photo.slug)}"
-              >
+              data-photo-slug="${esc(photo.slug)}"
+            >
+                ${buildPhotographerBadge(photo.photographer)}
                 <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
                 <div class="overlay"><h3>${esc(photo.leadPowerLabel || photo.alt || "")}</h3></div>
               </button>
@@ -2097,6 +2111,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
                   .filter(Boolean)[0] || "",
               )}"
             >
+              ${buildPhotographerBadge(photo.photographer)}
               <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
               <div class="overlay"><h3>${esc(photo.stationName)}</h3></div>
             </button>
@@ -2973,6 +2988,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .replaceAll("'", "&#39;");
   }
 
+  function buildPhotographerBadge(photographer) {
+    const name = String(photographer || "").trim();
+    return name ? `<span class="station-photographer-badge">By ${esc(name)}</span>` : "";
+  }
+
   function normalizeVehicleType(type, number) {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
@@ -3271,6 +3291,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       return `
         <div class="photo-card station-photo-card" data-photo-index="${photo.sourceIndex}" data-vehicle-types="${esc(photo.filterKeys.join("|"))}" data-photo-date="${esc(photo.date)}" data-photo-operator="${esc(photo.operatorKeys.join("|"))}">
           ${operatorBadge}
+          ${buildPhotographerBadge(photo.photographer)}
           <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
           ${photo.metaHtml ? `<div class="station-meta">${photo.metaHtml}</div>` : ""}
         </div>
@@ -5197,6 +5218,87 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     let selectedImageDataUrl = "";
     let stationOptionsCache = null;
     let operatorOptionsCache = null;
+    const europeanOperatorOptions = [
+      "Arriva",
+      "Arriva Rail London",
+      "Avanti West Coast",
+      "BDZ",
+      "Caledonian Sleeper",
+      "Captrain",
+      "CargoNet",
+      "CFL",
+      "Chiltern Railways",
+      "CIE",
+      "Comboios de Portugal",
+      "CrossCountry",
+      "ČD",
+      "DB",
+      "DSB",
+      "East Midlands Railway",
+      "Eesti Liinirongid",
+      "Eurostar",
+      "Euskotren",
+      "Ferrovie del Sud Est",
+      "Freightliner",
+      "Gatwick Express",
+      "Govia Thameslink Railway",
+      "Grand Central",
+      "Great Northern",
+      "Greater Anglia",
+      "Green Cargo",
+      "GWR",
+      "Hellenic Train",
+      "Hull Trains",
+      "Iarnród Éireann",
+      "Infrabel",
+      "Italo",
+      "LNER",
+      "London Northwestern Railway",
+      "Lumo",
+      "LVR",
+      "LTG Link",
+      "MÁV-START",
+      "Merseyrail",
+      "Metronom",
+      "MTRX",
+      "National Express",
+      "Network Rail",
+      "NMBS/SNCB",
+      "NordWestBahn",
+      "Northern",
+      "NS",
+      "NTV",
+      "ÖBB",
+      "OUIGO",
+      "PKP Intercity",
+      "Polregio",
+      "ProRail",
+      "Rail Force One",
+      "Renfe",
+      "RegioJet",
+      "SBB",
+      "ScotRail",
+      "SNCF",
+      "South Western Railway",
+      "Southeastern",
+      "Southern",
+      "SŽ",
+      "Tågåkeriet i Bergslagen",
+      "TCDD Taşımacılık",
+      "Thalys",
+      "Trenitalia",
+      "Transdev",
+      "TransPennine Express",
+      "Transport for Wales",
+      "Trenord",
+      "Ukrainian Railways",
+      "Vias",
+      "Vlexx",
+      "VR",
+      "West Midlands Railway",
+      "Westbahn",
+      "ZSSK",
+    ];
 
     imagePickBtn?.addEventListener("click", () => {
       imageFileInput?.click();
@@ -5340,7 +5442,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       const stationData = window.STATIONS_DATA && typeof window.STATIONS_DATA === "object"
         ? window.STATIONS_DATA
         : {};
-      const set = new Set();
+      const byKey = new Map();
+      const addOperator = (value) => {
+        const label = String(value || "").trim();
+        if (!label) return;
+        const key = normalizeSearchText(label).replace(/[^a-z0-9]+/g, "");
+        if (!key) return;
+        if (!byKey.has(key)) byKey.set(key, label);
+      };
+      europeanOperatorOptions.forEach(addOperator);
       Object.values(stationData).forEach((station) => {
         const photos = Array.isArray(station?.photos) ? station.photos : [];
         photos.forEach((photo) => {
@@ -5348,10 +5458,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             .split(",")
             .map((entry) => entry.trim())
             .filter(Boolean)
-            .forEach((op) => set.add(op));
+            .forEach(addOperator);
         });
       });
-      operatorOptionsCache = Array.from(set).sort((a, b) => a.localeCompare(b));
+      operatorOptionsCache = Array.from(byKey.values()).sort((a, b) => a.localeCompare(b));
       return operatorOptionsCache;
     }
 
@@ -5478,10 +5588,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       if (has("zssk")) return "../images/Other/OperatorLogos/ZSSK.svg";
       if (has("mav start") || has("mav")) return "../images/Other/OperatorLogos/MAV-start.svg";
       if (has("gwr") || has("great western railway")) return "../images/Other/OperatorLogos/GWR.svg";
-      if (has("cd")) return "../images/Other/OperatorLogos/CD.svg";
+      if (has("cd") || has("ceske drahy")) return "../images/Other/OperatorLogos/CD.svg";
       if (has("cfl")) return "../images/Other/OperatorLogos/CFL.svg";
-      if (has("db")) return "../images/Other/OperatorLogos/DB.svg";
-      if (has("ns")) return "../images/Other/OperatorLogos/NS.svg";
+      if (has("deutsche bahn") || has("db")) return "../images/Other/OperatorLogos/DB.svg";
+      if (has("nederlandse spoorwegen") || has("ns international") || has("ns")) return "../images/Other/OperatorLogos/NS.svg";
       if (has("obb") || has("oebb")) return "../images/Other/OperatorLogos/OBB.svg";
       return "";
     }
@@ -5769,17 +5879,19 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         return;
       }
       operatorSuggestions.innerHTML = matches
-        .map(
-          (item) => `
+        .map((item) => {
+          const logo = getOperatorLogoPath(item);
+          return `
             <button class="moderator-suggestion submit-suggestion submit-operator-suggestion" type="button" data-operator-value="${escHtml(item)}">
               <span class="submit-operator-logo">
-                <img class="${escHtml(getOperatorLogoClass(item))}" src="${escHtml(getOperatorLogoPath(item))}" alt="${escHtml(item)} logo" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;" />
-                <span hidden>${escHtml(operatorInitials(item))}</span>
+                ${logo
+                  ? `<img class="${escHtml(getOperatorLogoClass(item))}" src="${escHtml(logo)}" alt="${escHtml(item)} logo" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;" /><span hidden>${escHtml(operatorInitials(item))}</span>`
+                  : `<span>${escHtml(operatorInitials(item))}</span>`}
               </span>
               <span><strong>${escHtml(item)}</strong></span>
             </button>
-          `,
-        )
+          `;
+        })
         .join("");
       operatorSuggestions.hidden = false;
     }

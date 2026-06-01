@@ -82,6 +82,30 @@ function clearSessionCookie(res) {
   res.clearCookie('tb_session', { path: '/' });
 }
 
+function generateRandomUserId() {
+  return crypto.randomInt(1_000_000_000, 999_999_999_999);
+}
+
+async function insertUserWithRandomId(username, email, passwordHash) {
+  const maxAttempts = 8;
+  for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+    const id = generateRandomUserId();
+    try {
+      const insert = await pool.query(
+        'INSERT INTO users (id, username, email, password_hash) VALUES ($1, $2, $3, $4) RETURNING id, username, email, role',
+        [id, username, email, passwordHash],
+      );
+      return insert.rows[0];
+    } catch (err) {
+      if (err?.code === '23505' && String(err?.constraint || '').includes('users_pkey')) {
+        continue;
+      }
+      throw err;
+    }
+  }
+  throw new Error('Could not generate a unique user id.');
+}
+
 function parseJsonArray(value) {
   if (Array.isArray(value)) return value;
   if (typeof value !== 'string') return [];
@@ -232,12 +256,7 @@ app.post('/api/auth/register', async (req, res) => {
     if (existing.rowCount > 0) return res.status(409).json({ ok: false, error: 'Username or email already exists.' });
 
     const passwordHash = await bcrypt.hash(password, 12);
-    const insert = await pool.query(
-      'INSERT INTO users (username, email, password_hash) VALUES ($1, $2, $3) RETURNING id, username, email, role',
-      [username, email, passwordHash]
-    );
-
-    const user = insert.rows[0];
+    const user = await insertUserWithRandomId(username, email, passwordHash);
     const token = crypto.randomBytes(32).toString('hex');
     const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
     await pool.query('INSERT INTO user_sessions (token, user_id, expires_at) VALUES ($1, $2, $3)', [token, user.id, expiresAt.toISOString()]);

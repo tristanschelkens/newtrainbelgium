@@ -1346,6 +1346,27 @@ button.photo-card {
   max-width: calc(100% - 20px);
   pointer-events: none;
 }
+
+.station-photographer-badge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 20px);
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: #111;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
 .station-meta {
   position: absolute;
   left: 10px;
