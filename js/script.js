@@ -645,11 +645,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   const grid = document.getElementById("photoGrid");
   const mapSection = document.getElementById("stationsMap")?.closest("section");
   const searchInput = document.getElementById("photoSearch");
-  const resetFiltersButton = document.getElementById("photoResetFilters");
-  const filterMenu = document.getElementById("photoFilterMenu");
-  const filterToggle = document.getElementById("photoFilterToggle");
-  const filterPanel = document.getElementById("photoFilterPanel");
-  const filterSummary = document.getElementById("photoFilterSummary");
   const operatorFilters = document.getElementById("photoOperatorFilters");
   const materialFilters = document.getElementById("photoMaterialFilters");
   const sortByPlaceBtn = document.getElementById("photoSortPlace");
@@ -662,14 +657,14 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   const galleryTitle = galleryHead?.querySelector("h2");
   const stationData = window.STATIONS_DATA || {};
 
-  if (!filters || !grid) return;
+  if (!grid) return;
 
   await mergeApprovedSubmissionsIntoStationData(stationData);
-  renderCountryFiltersFromData(filters, stationData);
+  if (filters) renderCountryFiltersFromData(filters, stationData);
   renderPhotoGalleryCardsFromData(grid, stationData);
   window.dispatchEvent(new CustomEvent("gallery:rendered"));
 
-  const buttons = Array.from(filters.querySelectorAll(".filter-btn"));
+  const buttons = filters ? Array.from(filters.querySelectorAll(".filter-btn")) : [];
   const cards = Array.from(grid.querySelectorAll(".photo-card"));
   const originalGridHtml = grid.innerHTML;
   const noResults = document.getElementById("noResults");
@@ -1530,29 +1525,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       const isActive = (btn.dataset.filter || "").toLowerCase() === value;
       btn.classList.toggle("active", isActive);
     });
-
-    if (filterSummary) {
-      const activeButton = buttons.find(
-        (btn) => (btn.dataset.filter || "").toLowerCase() === value,
-      );
-      const parts = [];
-      if (value !== "all") parts.push(activeButton?.textContent?.trim() || "Country");
-      if (activeOperatorFilter !== "all") {
-        const btn = operatorFilters?.querySelector(`[data-operator-filter="${activeOperatorFilter}"]`);
-        parts.push(btn?.textContent?.trim() || "Operator");
-      }
-      if (activeMaterialFilter !== "all") {
-        const btn = materialFilters?.querySelector(`[data-material-filter="${activeMaterialFilter}"]`);
-        parts.push(btn?.textContent?.trim() || "Train type");
-      }
-      filterSummary.textContent = parts.length > 0 ? parts.join(" Â· ") : "All filters";
-    }
-  }
-
-  function setFilterMenuOpen(isOpen) {
-    if (!filterToggle || !filterPanel) return;
-    filterToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    filterPanel.hidden = !isOpen;
   }
 
   searchLightboxImg?.addEventListener("load", syncSearchLightboxPanelWidth);
@@ -2578,27 +2550,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     window.history.replaceState({}, "", url);
   }
 
-  function resetPhotoFilters() {
-    activeFilter = "all";
-    activeOperatorFilter = "all";
-    activeMaterialFilter = "all";
-    activeQuery = "";
-
-    if (searchInput) {
-      searchInput.value = "";
-    }
-
-    renderFacetButtons(operatorFilters, operatorOptions, activeOperatorFilter, "data-operator-filter");
-    renderFacetButtons(materialFilters, sortedMaterialOptions, activeMaterialFilter, "data-material-filter");
-    setActiveButton(activeFilter);
-    applyFilters();
-    persistPhotoFilter(activeFilter);
-    persistPhotoSearch(activeQuery);
-    persistFacetParam("operator", activeOperatorFilter);
-    persistFacetParam("material", activeMaterialFilter);
-    setFilterMenuOpen(false);
-  }
-
   function renderFacetButtons(container, options, activeValue, dataAttr) {
     if (!container) return;
 
@@ -2650,7 +2601,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       persistPhotoSearch(activeQuery);
       persistFacetParam("operator", activeOperatorFilter);
       persistFacetParam("material", activeMaterialFilter);
-      setFilterMenuOpen(false);
     });
   });
 
@@ -2680,25 +2630,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     persistFacetParam("material", activeMaterialFilter);
   });
 
-  if (filterToggle && filterPanel) {
-    filterToggle.addEventListener("click", () => {
-      const isOpen = filterToggle.getAttribute("aria-expanded") === "true";
-      setFilterMenuOpen(!isOpen);
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!filterMenu || !filterMenu.contains(e.target)) {
-        setFilterMenuOpen(false);
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        setFilterMenuOpen(false);
-      }
-    });
-  }
-
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       activeQuery = searchInput.value.trim();
@@ -2709,8 +2640,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       persistFacetParam("material", activeMaterialFilter);
     });
   }
-
-  resetFiltersButton?.addEventListener("click", resetPhotoFilters);
 
   sortByPlaceBtn?.addEventListener("click", () => {
     activeSortMode = "place";
@@ -2831,11 +2760,13 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const initialFilter = availableFilters.has(queryFilter) ? queryFilter : "all";
     activeFilter = initialFilter;
     activeOperatorFilter =
-      queryOperator === "all" || operatorOptions.some((option) => option.key === queryOperator)
+      operatorFilters &&
+      (queryOperator === "all" || operatorOptions.some((option) => option.key === queryOperator))
         ? queryOperator
         : "all";
     activeMaterialFilter =
-      queryMaterial === "all" || sortedMaterialOptions.some((option) => option.key === queryMaterial)
+      materialFilters &&
+      (queryMaterial === "all" || sortedMaterialOptions.some((option) => option.key === queryMaterial))
         ? queryMaterial
         : "all";
     activeQuery = querySearch;
@@ -2862,7 +2793,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   }
 
   applyStateFromUrl();
-  setFilterMenuOpen(false);
 
   window.addEventListener("popstate", () => {
     applyStateFromUrl();
