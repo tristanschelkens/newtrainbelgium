@@ -889,7 +889,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     {
       const emuMatch = withoutCount.match(/^(am|ar)\s*(\d{2,3})\b/i);
       if (emuMatch) {
-        const family = `${emuMatch[1].toUpperCase()}${emuMatch[2]}`;
+        const family = `${emuMatch[1].toUpperCase()} ${emuMatch[2]}`;
         return {
           key: normalizeFacetKey(family),
           label: family,
@@ -897,7 +897,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       }
     }
     if (withoutCount.startsWith("am08")) {
-      return { key: "am08", label: "AM08" };
+      return { key: "am08", label: "AM 08" };
     }
     if (withoutCount.startsWith("e320")) {
       return { key: "e320", label: "E320" };
@@ -3157,6 +3157,13 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     return parts[0];
   }
   function getVehicleFilterLabel(key) {
+    const normalizedKey = String(key || "").trim().toLowerCase();
+    const familyMatch = normalizedKey.match(/^(am|ar|mw|ms)-?(\d{2,3})$/);
+    if (familyMatch) return `${familyMatch[1].toUpperCase()} ${familyMatch[2]}`;
+    const brMatch = normalizedKey.match(/^br-?(\d{3})$/);
+    if (brMatch) return `BR ${brMatch[1]}`;
+    const eMatch = normalizedKey.match(/^e-?(\d{3})$/);
+    if (eMatch) return `E ${eMatch[1]}`;
     if (key === "coradia-max") return "Coradia Max";
     if (key === "hle18-19") return "HLE 18/19";
     if (key === "hle13") return "HLE 13";
