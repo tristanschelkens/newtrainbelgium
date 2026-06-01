@@ -92,7 +92,7 @@ station({
       date: "23 March 2026",
       photographer: "trainbelgium",
       alt: "Vienna ÖBB 4024 017-7",
-      numbers: "4024",
+      numbers: "017-7",
       consist: [train("Class 4024")],
       images: ["Vienna_OEBB_4024017.jpeg"],
     },
