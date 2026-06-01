@@ -14,7 +14,7 @@ station({
       photographer: "trainbelgium",
       alt: "Bratislava ZSSK 263 003-6",
       numbers: "003-6",
-      consist: [train("Skoda 263")],
+      consist: [train("Škoda 263")],
       images: [mainImage("Bratislava_ZSSK_263003.jpeg")],
     }
   ],

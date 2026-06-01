@@ -441,7 +441,7 @@ const vehiclePrefixNames = {
   p: "P",
   mw: "MW",
   ms: "MS",
-  skoda: "Skoda",
+  skoda: "Škoda",
   traxx: "TRAXX",
   tgv: "TGV",
 };
@@ -839,7 +839,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (!label) return null;
 
     const normalized = normalizeSearchValue(label);
+    const combinedNormalized = normalizeSearchValue(
+      `${label} ${String(item.number || "").trim()}`.trim(),
+    );
     const withoutCount = normalized.replace(/^\d+\s*x\s*/i, "").trim();
+    const combinedWithoutCount = combinedNormalized.replace(/^\d+\s*x\s*/i, "").trim();
 
     if (withoutCount.startsWith("vectron")) {
       return { key: "vectron", label: "Vectron" };
@@ -906,11 +910,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (withoutCount.startsWith("traxx")) {
       return { key: "traxx", label: "TRAXX" };
     }
-    if (withoutCount.startsWith("skoda 263")) {
-      return { key: "skoda-263", label: "Skoda 263" };
+    if (withoutCount.startsWith("skoda 263") || combinedWithoutCount.startsWith("skoda 263")) {
+      return { key: "skoda-263", label: "Škoda 263" };
     }
     if (withoutCount.startsWith("skoda")) {
-      return { key: "skoda", label: "Skoda" };
+      return { key: "skoda", label: "Škoda" };
     }
     if (withoutCount.startsWith("br146")) {
       return { key: "br146", label: "BR 146" };
