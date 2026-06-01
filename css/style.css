@@ -1359,7 +1359,7 @@ button.photo-card {
 .station-photo-info-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 10px;
 }
 
@@ -1373,6 +1373,13 @@ button.photo-card {
   object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.14);
   background: #fff;
+}
+
+.station-photo-info-user {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(17, 17, 17, 0.82);
+  line-height: 1.2;
 }
 
 .station-photo-card-detailed .station-photographer-badge {

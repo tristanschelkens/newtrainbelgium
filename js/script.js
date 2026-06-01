@@ -1864,9 +1864,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
               <div class="station-photo-info-footer">
-                ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : "<div></div>"}
                 <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
+                <div class="station-photo-info-user">${esc(photographer)}</div>
               </div>
             </div>
           </button>
@@ -1939,9 +1940,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
               <div class="station-photo-info-footer">
-                ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : "<div></div>"}
                 <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
+                <div class="station-photo-info-user">${esc(photographer)}</div>
               </div>
             </div>
           </button>
