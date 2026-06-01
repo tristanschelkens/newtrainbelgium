@@ -4,39 +4,10 @@ function station(data) {
   window.GALLERY_STATIONS.push(data);
 }
 
-function traction(label, activeOrOptions, options) {
-  var itemOptions =
-    activeOrOptions && typeof activeOrOptions === "object"
-      ? activeOrOptions
-      : options || {};
-  var active =
-    typeof activeOrOptions === "boolean" ? activeOrOptions : itemOptions.active;
-
+function train(label, options) {
   return {
-    kind: "traction",
-    label: label,
-    active: active !== false,
-    ...itemOptions,
-  };
-}
-
-function inactiveTraction(label, options) {
-  return traction(label, false, options);
-}
-
-function carriage(label, activeOrOptions, options) {
-  var itemOptions =
-    activeOrOptions && typeof activeOrOptions === "object"
-      ? activeOrOptions
-      : options || {};
-  var active =
-    typeof activeOrOptions === "boolean" ? activeOrOptions : itemOptions.active;
-
-  return {
-    kind: "carriage",
-    label: label,
-    ...(typeof active === "boolean" ? { active: active } : {}),
-    ...itemOptions,
+    train: label,
+    ...(options || {}),
   };
 }
 

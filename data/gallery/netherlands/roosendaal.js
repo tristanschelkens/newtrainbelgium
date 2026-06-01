@@ -12,9 +12,9 @@ station({
       operator: "NMBS/SNCB, NS",
       date: "1 June 2025",
       photographer: "trainbelgium",
-      alt: "Roosendaal TRAXX 186 121 + 7x I11 + TRAXX",
-      numbers: "186 121",
-      consist: [traction("TRAXX 186 121"), carriage("7x I11"), traction("TRAXX 186 200")],
+      alt: "Roosendaal TRAXX 186 121 + I11 + TRAXX",
+      numbers: "121",
+      consist: [train("TRAXX 186")],
       images: ["Roosendaal_TRAXX1861217xI11TRAXX.webp"],
     }
   ],

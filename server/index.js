@@ -213,21 +213,37 @@ function normalizeVehicleLabel(value) {
   return `${prefix} ${digits}${tail}`;
 }
 
+function pickLeadCompositionItem(parts) {
+  const list = Array.isArray(parts) ? parts.filter(Boolean) : [];
+  if (list.length === 0) return null;
+  const explicitLead = list.find((part) => part?.lead === true);
+  if (explicitLead) return explicitLead;
+  const firstTraction = list.find((part) => String(part?.train || part?.label || '').trim());
+  return firstTraction || list[0];
+}
+
 function normalizeSubmissionComposition(parts) {
   if (!Array.isArray(parts)) return [];
-  return parts
+  function splitTrainNumber(value) {
+    const raw = normalizeVehicleLabel(value).replace(/^\d+\s*x\s*/i, '').trim();
+    if (!raw) return { train: '', number: '' };
+    const chunks = raw.split(/\s+/).filter(Boolean);
+    if (chunks.length < 2) return { train: raw, number: '' };
+    const last = chunks[chunks.length - 1];
+    if (/^\d+(?:-\d+)?$/.test(last)) {
+      return { train: chunks.slice(0, -1).join(' ').trim(), number: last };
+    }
+    return { train: raw, number: '' };
+  }
+  const normalized = parts
     .map((part) => {
-      const kind = String(part?.kind || '').trim().toLowerCase();
-      const label = normalizeVehicleLabel(part?.label);
-      if (!kind || !label) return null;
-      if (kind === 'carriage') {
-        const count = Number(part?.count || 0);
-        if (!Number.isFinite(count) || count < 1) return null;
-        return { ...part, kind, label, count };
-      }
-      return { ...part, kind, label };
+      const split = splitTrainNumber(part?.train || part?.label);
+      if (!split.train) return null;
+      return { train: split.train, number: split.number, lead: Boolean(part?.lead) };
     })
     .filter(Boolean);
+  const lead = pickLeadCompositionItem(normalized);
+  return lead ? [lead] : [];
 }
 
 app.get('/api/health', (_req, res) => {

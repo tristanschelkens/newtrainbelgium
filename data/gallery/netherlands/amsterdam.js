@@ -14,7 +14,7 @@ station({
       photographer: "trainbelgium",
       alt: "Amsterdam NS VIRM",
       numbers: "8636",
-      consist: [traction("VIRM 8636")],
+      consist: [train("VIRM 8636")],
       images: [mainImage("Amsterdam_NS_VIRM_8631.jpeg")],
     },
     {
@@ -23,8 +23,8 @@ station({
       date: "22 March 2026",
       photographer: "trainbelgium",
       alt: "Amsterdam NS Vectron 193 733 + NightJet",
-      numbers: "193 733",
-      consist: [traction("Vectron 193 733"), carriage("NightJet", false)],
+      numbers: "733",
+      consist: [train("Vectron 193")],
       images: ["Amsterdam_NS_Vectron_193733.jpeg"],
     },
     {
@@ -34,7 +34,7 @@ station({
       photographer: "trainbelgium",
       alt: "Amsterdam Eurostar 4003 rear view",
       numbers: "4001",
-      consist: [traction("E320 4001")],
+      consist: [train("E 320")],
       images: ["Amsterdam_Eurostar_4003_Rear.jpeg"],
     },
     {
@@ -44,7 +44,7 @@ station({
       photographer: "trainbelgium",
       alt: "Amsterdam Eurostar 4002",
       numbers: "4002",
-      consist: [traction("E320 4002")],
+      consist: [train("E 320")],
       images: ["Amsterdam_Eurostar_4003.jpeg"],
     },
     {
@@ -53,8 +53,8 @@ station({
       date: "22 March 2026",
       photographer: "trainbelgium",
       alt: "Amsterdam Rail Force One 193 946",
-      numbers: "193 946",
-      consist: [traction("Vectron 193 946", { active: true, filterKey: "vectron", filterLabel: "Vectron" })],
+      numbers: "946",
+      consist: [train("Vectron 193")],
       images: ["Amsterdam_RailForceOne_193946.jpeg"],
     },
     {
@@ -64,7 +64,7 @@ station({
       photographer: "trainbelgium",
       alt: "Amsterdam NS VIRM rear view",
       numbers: "8655",
-      consist: [traction("VIRM 8655")],
+      consist: [train("VIRM 8655")],
       images: ["Amsterdam_NS_VIRM_8631_Rear.jpeg"],
     }
   ],

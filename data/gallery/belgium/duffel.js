@@ -13,7 +13,7 @@ station({
       date: "25 May 2024",
       photographer: "trainbelgium",
       alt: "Duffel M4",
-      consist: [carriage("M4", true)],
+      consist: [train("M4")],
       images: ["Duffel_M4HLE27.webp"],
     }
   ],

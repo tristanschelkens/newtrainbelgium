@@ -13,8 +13,8 @@ station({
       date: "7 Februari 2025",
       photographer: "trainbelgium",
       alt: "Brussels-Midi HLE 1834 + NightJet",
-      numbers: "1834",
-      consist: [traction("HLE18 34"), carriage("NightJet")],
+      numbers: "34",
+      consist: [train("HLE 18")],
       images: ["Brussels_HLE1834NightJet.jpeg"],
     }
   ],

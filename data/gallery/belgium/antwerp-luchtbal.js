@@ -14,7 +14,7 @@ station({
       photographer: "trainbelgium",
       alt: "Luchtbal E320 4029",
       numbers: "4029",
-      consist: [traction("E320 4029")],
+      consist: [train("E 320")],
       images: ["Luchtbal_E320.webp"],
     }
   ],

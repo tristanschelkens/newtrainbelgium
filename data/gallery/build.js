@@ -2,22 +2,30 @@ window.GALLERY_STATIONS = window.GALLERY_STATIONS || [];
 
 (function buildStationsDataFromGallery() {
   function normalizeConsistItem(item) {
+    function splitTrainNumber(value) {
+      var raw = String(value || "").trim().replace(/^\d+\s*x\s*/i, "");
+      if (!raw) return { train: "", number: "" };
+      var parts = raw.split(/\s+/).filter(Boolean);
+      if (parts.length < 2) return { train: raw, number: "" };
+      var last = parts[parts.length - 1];
+      if (/^\d+(?:-\d+)?$/.test(last)) {
+        return { train: parts.slice(0, -1).join(" "), number: last };
+      }
+      return { train: raw, number: "" };
+    }
+
     if (Array.isArray(item)) {
-      return {
-        kind: item[0] || "carriage",
-        label: item[1] || "",
-        ...(item.length > 2 ? { active: item[2] } : {}),
-      };
+      var splitA = splitTrainNumber(item[1] || "");
+      return { train: splitA.train, number: splitA.number, ...(item.length > 2 ? { active: item[2] } : {}) };
     }
 
     if (!item || typeof item !== "object") {
-      return { kind: "carriage", label: String(item || "") };
+      var splitB = splitTrainNumber(String(item || ""));
+      return { train: splitB.train, number: splitB.number };
     }
 
-    return {
-      ...item,
-      kind: item.kind || item.type || "carriage",
-    };
+    var splitC = splitTrainNumber(item.train || item.label || "");
+    return { ...item, train: splitC.train, number: splitC.number };
   }
 
   function imageFileName(image) {

@@ -13,8 +13,8 @@ station({
       date: "7 February 2026",
       photographer: "trainbelgium",
       alt: "London Class 373 3206",
-      numbers: "373 3206, 3206",
-      consist: [traction("Class 373 3206")],
+      numbers: "3206",
+      consist: [train("Class 373")],
       images: ["London_Class3733206.webp"],
     },
     {
@@ -23,8 +23,8 @@ station({
       date: "7 February 2026",
       photographer: "trainbelgium",
       alt: "London Class 802 104",
-      numbers: "802 104, 104",
-      consist: [traction("Class 802 104")],
+      numbers: "104",
+      consist: [train("Class 802")],
       images: ["qscqcc.jpeg"],
     },
     {
@@ -33,8 +33,8 @@ station({
       date: "7 February 2026",
       photographer: "trainbelgium",
       alt: "London Class 387 140",
-      numbers: "387 140, 140",
-      consist: [traction("Class 387 140")],
+      numbers: "140",
+      consist: [train("Class 387")],
       images: ["qscqsc.jpeg"],
     },
     {
@@ -43,8 +43,8 @@ station({
       date: "7 February 2026",
       photographer: "trainbelgium",
       alt: "London Class 387 156",
-      numbers: "387 156, 156",
-      consist: [traction("Class 387 156")],
+      numbers: "156",
+      consist: [train("Class 387")],
       images: ["qscqscc.jpeg"],
     }
   ],

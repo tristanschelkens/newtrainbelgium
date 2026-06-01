@@ -14,7 +14,7 @@ station({
       photographer: "trainbelgium",
       alt: "TGV M 1402",
       numbers: "1402",
-      consist: [traction("TGV M 1402")],
+      consist: [train("TGV M")],
       images: ["Leuven_TGV1402.webp"],
     },
     {
@@ -22,9 +22,9 @@ station({
       operator: "NMBS/SNCB",
       date: "9 April 2025",
       photographer: "trainbelgium",
-      alt: "Leuven HLE 1913 + 6x M7 ",
-      numbers: "1913",
-      consist: [traction("HLE19 13"), traction("6x M7", false)],
+      alt: "Leuven HLE 1913 + M7",
+      numbers: "13",
+      consist: [train("HLE 19")],
       images: ["Leuven_HLE1913M7.webp"],
     }
   ],

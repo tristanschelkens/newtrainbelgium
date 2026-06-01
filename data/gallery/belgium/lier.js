@@ -12,8 +12,8 @@ station({
       operator: "NMBS/SNCB",
           date: "27 May 2024",
       photographer: "trainbelgium",
-      alt: "Lier 8x M6 + HLE 18/19",
-      consist: [carriage("8x M6", true), traction("HLE18 42")],
+      alt: "Lier M6 + HLE18/19",
+      consist: [train("HLE 18")],
       images: ["Lier_M6HLE1819.webp"],
     },
     {
@@ -22,8 +22,8 @@ station({
       date: "27 May 2024",
       photographer: "trainbelgium",
       alt: "Lier MW4124 + MW41 + MW41 + MW41",
-      numbers: "4124",
-      consist: [traction("AR41 24"), traction("AR41 36"), traction("AR41 76"), traction("AR41 27")],
+      numbers: "24",
+      consist: [train("AR 41")],
       images: ["Lier_MW4124MW41MW41MW41.webp"],
     }
   ],

@@ -36,19 +36,26 @@ window.GALLERY_STATIONS = window.GALLERY_STATIONS || [];
 
   function normalizeConsist(parts) {
     if (!Array.isArray(parts)) return [];
-    return parts
+    function splitTrainNumber(value) {
+      var raw = String(value || "").trim().replace(/^\d+\s*x\s*/i, "");
+      if (!raw) return { train: "", number: "" };
+      var pieces = raw.split(/\s+/).filter(Boolean);
+      if (pieces.length < 2) return { train: raw, number: "" };
+      var last = pieces[pieces.length - 1];
+      if (/^\d+(?:-\d+)?$/.test(last)) {
+        return { train: pieces.slice(0, -1).join(" "), number: last };
+      }
+      return { train: raw, number: "" };
+    }
+    var normalized = parts
       .map(function(part) {
-        var kind = String(part && part.kind ? part.kind : "").trim().toLowerCase();
-        var label = String(part && part.label ? part.label : "").trim();
-        if (!kind || !label) return null;
-        if (kind === "carriage") {
-          var count = Number(part.count || 0);
-          if (count > 0) return { kind: "carriage", label: count + "x " + label, active: true };
-          return { kind: "carriage", label: label, active: true };
-        }
-        return { kind: "traction", label: label, active: true };
+        var split = splitTrainNumber(part && (part.train || part.label) ? (part.train || part.label) : "");
+        if (!split.train) return null;
+        return { train: split.train, number: split.number, active: true, lead: Boolean(part && part.lead) };
       })
       .filter(Boolean);
+    var lead = normalized.find(function(part) { return part && part.lead === true; }) || normalized[0] || null;
+    return lead ? [lead] : [];
   }
 
   function stationBySlug(slug) {

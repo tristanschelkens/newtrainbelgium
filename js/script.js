@@ -1,4 +1,4 @@
-function toggleMenu() {
+﻿function toggleMenu() {
   const nav = document.getElementById("navLinks");
   const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
@@ -492,22 +492,50 @@ function normalizeVehicleLabel(value) {
   return `${prefix} ${digits}${tail}`;
 }
 
+function splitTrainNumber(value) {
+  const normalized = normalizeVehicleLabel(value).replace(/^\d+\s*x\s*/i, "").trim();
+  if (!normalized) return { train: "", number: "" };
+  const compact = normalized.replace(/\s+/g, " ").trim();
+  const parts = compact.split(" ").filter(Boolean);
+  if (parts.length < 2) return { train: compact, number: "" };
+  const last = parts[parts.length - 1];
+  if (/^\d+(?:-\d+)?$/.test(last)) {
+    return {
+      train: parts.slice(0, -1).join(" ").trim(),
+      number: last,
+    };
+  }
+  return { train: compact, number: "" };
+}
+
+function composeTrainLabel(item) {
+  const train = String(item?.train || item?.label || "").trim();
+  const number = String(item?.number || "").trim();
+  if (!train) return number;
+  return number ? `${train} ${number}` : train;
+}
+
+function pickLeadCompositionItem(parts) {
+  const list = Array.isArray(parts) ? parts.filter(Boolean) : [];
+  if (list.length === 0) return null;
+  const explicitLead = list.find((part) => part?.lead === true);
+  if (explicitLead) return explicitLead;
+  const firstTraction = list.find((part) => String(part?.train || part?.label || "").trim());
+  return firstTraction || list[0];
+}
+
 function normalizeSubmissionConsist(parts) {
   if (!Array.isArray(parts)) return [];
-  return parts
+  const normalized = parts
     .map((part) => {
-      const kind = String(part?.kind || "").trim().toLowerCase();
-      const label = normalizeVehicleLabel(part?.label);
-      if (!kind || !label) return null;
-      if (kind === "carriage") {
-        const count = Number(part?.count || 0);
-        return count > 0
-          ? { kind: "carriage", label: `${count}x ${label}`, active: true }
-          : { kind: "carriage", label, active: true };
-      }
-      return { kind: "traction", label, active: true };
+      const raw = part?.train || part?.label;
+      const split = splitTrainNumber(raw);
+      if (!split.train) return null;
+      return { train: split.train, number: split.number, active: true, lead: Boolean(part?.lead) };
     })
     .filter(Boolean);
+  const lead = pickLeadCompositionItem(normalized);
+  return lead ? [lead] : [];
 }
 
 function buildApprovedSubmissionPhoto(item, stationSlug, stationName) {
@@ -763,13 +791,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     const tagsHtml = renderedItems
       .map((item, index) => {
-        const kind = String(item.kind || "carriage").toLowerCase();
-        const cls =
-          kind === "traction"
-            ? item.active !== false
-              ? "station-meta-chip"
-              : "station-meta-inactive"
-            : "station-meta-carriage";
+        const cls = item.active !== false ? "station-meta-chip" : "station-meta-inactive";
         const separatorLabel = String(item.separatorAfter || "").trim();
         const plus =
           index < renderedItems.length - 1
@@ -778,7 +800,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               : '<span class="station-meta-plus">+</span>'
             : "";
 
-        return `<span class="${cls}">${esc(formatSearchTagLabel(item.label || ""))}</span>${plus}`;
+        return `<span class="${cls}">${esc(formatSearchTagLabel(composeTrainLabel(item)))}</span>${plus}`;
       })
       .join("");
 
@@ -791,8 +813,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   function deriveMaterialFacet(item) {
     if (!item) return null;
-    const kind = String(item.kind || "").toLowerCase();
-    if (kind !== "traction" && kind !== "carriage") return null;
 
     const explicitLabel = String(item.filterLabel || "").trim();
     const explicitKey = String(item.filterKey || "").trim();
@@ -803,7 +823,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       };
     }
 
-    const label = String(item.label || "").trim();
+    const label = String(item.train || item.label || "").trim();
     if (!label) return null;
 
     const normalized = normalizeSearchValue(label);
@@ -875,7 +895,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       return { key: "traxx", label: "TRAXX" };
     }
     if (withoutCount.startsWith("br146")) {
-      return { key: "br146", label: "BR146" };
+      return { key: "br146", label: "BR 146" };
     }
     if (withoutCount.startsWith("class ")) {
       const match = withoutCount.match(/^class\s+(\d+)/);
@@ -966,18 +986,13 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       preferredLabel
         ? items.find(
             (item) =>
-              String(item?.kind || "").toLowerCase() === "traction" &&
-              String(item?.label || "").trim().toLowerCase() === preferredLabel,
+              String(item?.train || item?.label || "").trim().toLowerCase() === preferredLabel,
           )
         : null;
-    const explicitLead = items.find(
-      (item) => String(item?.kind || "").toLowerCase() === "traction" && item?.lead === true,
-    );
-    const firstTraction = items.find(
-      (item) => String(item?.kind || "").toLowerCase() === "traction" && String(item?.label || "").trim(),
-    );
+    const explicitLead = items.find((item) => item?.lead === true);
+    const firstTraction = items.find((item) => String(item?.train || item?.label || "").trim());
     const chosen = preferredTraction || explicitLead || firstTraction;
-    return chosen ? normalizeVehicleLabel(String(chosen.label || "").trim()) : "";
+    return chosen ? composeTrainLabel(chosen) : "";
   }
 
   function trainOrderValue(value) {
@@ -990,7 +1005,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY;
   }
 
-  function leadPowerNumberValue(label) {
+  function leadPowerNumberValue(label, materialKey = "") {
     const raw = String(label || "").trim();
     if (!raw) return "";
     const splitNumber = raw.match(/(\d{2,4}\s*-\s*\d)\b/);
@@ -999,7 +1014,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
     const groups = raw.match(/\d+/g);
     if (!groups || groups.length === 0) return "";
-    return groups[groups.length - 1];
+    const fallback = groups[groups.length - 1];
+    return formatDrillNumber(materialKey, fallback);
   }
 
   function hydratePhotoCard(card) {
@@ -1080,7 +1096,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
           : [],
         leadMaterialFacets: deriveLeadMaterialFacets(photo?.consist, photo),
         leadPowerLabel: getLeadPowerLabel(photo?.consist, photo),
-        leadPowerNumber: leadPowerNumberValue(getLeadPowerLabel(photo?.consist, photo)),
+        leadPowerNumber: leadPowerNumberValue(
+          getLeadPowerLabel(photo?.consist, photo),
+          deriveLeadMaterialFacets(photo?.consist, photo)?.[0]?.key || "",
+        ),
         metaHtml: buildSearchMetaHtml(photo?.consist, { maxVisible: 3 }),
         fullMetaHtml: buildSearchMetaHtml(photo?.consist),
         href: `Station.html?slug=${encodeURIComponent(slug)}&photo=${index}&lightbox=1`,
@@ -1470,7 +1489,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const btn = materialFilters?.querySelector(`[data-material-filter="${activeMaterialFilter}"]`);
         parts.push(btn?.textContent?.trim() || "Train type");
       }
-      filterSummary.textContent = parts.length > 0 ? parts.join(" · ") : "All filters";
+      filterSummary.textContent = parts.length > 0 ? parts.join(" Â· ") : "All filters";
     }
   }
 
@@ -1534,6 +1553,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const key = String(materialKey || "").trim().toLowerCase();
     const raw = String(number || "").trim();
     if (!raw) return "";
+    if (key === "e320" && /^320\d{3,5}$/.test(raw)) {
+      return raw.slice(3);
+    }
+    if (key === "am08" && /^08\d{2,5}$/.test(raw)) {
+      return raw.slice(2).replace(/^0+/, "") || "0";
+    }
+    if (key === "br146" && /^146\d{2,5}$/.test(raw)) {
+      return raw.slice(3);
+    }
     if (
       (key === "hle-18" || key === "hle-19" || key === "hle-18-19") &&
       /^(18|19)\d{2}$/.test(raw)
@@ -1860,7 +1888,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" • ");
+        const metaRow = [stationName, date].filter(Boolean).join(" â€¢ ");
 
         return `
           <button
@@ -1937,7 +1965,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" • ");
+        const metaRow = [stationName, date].filter(Boolean).join(" â€¢ ");
 
         return `
           <button
@@ -2869,7 +2897,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   overlayText.textContent = latestPhoto.stationName;
 
   caption.classList.add("latest-photo-line");
-  caption.innerHTML = `<span class="latest-photo-tag">Newest upload</span><span class="latest-photo-separator">·</span><a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
+  caption.innerHTML = `<span class="latest-photo-tag">Newest upload</span><span class="latest-photo-separator">Â·</span><a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">Â·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
 })();
 
 (function initPhotoMap() {
@@ -3054,7 +3082,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
     const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
@@ -3101,7 +3129,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .replace(/\s+/g, " ");
     if (!normalized) return "";
 
-    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
+    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
@@ -3161,74 +3189,31 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         ? photo.consist
         : buildConsistFromLegacy(photo);
 
-    return source
+    const normalizedItems = source
       .map((entry) => {
-        const kind = String(entry.kind || "carriage").toLowerCase();
-        const label = String(entry.label || "").trim();
-        if (!label) return null;
-
-        const explicitType = String(entry.vehicleType || "").trim();
-        const explicitNumber = String(entry.vehicleNumber || "").trim();
-
-        let inferredType = explicitType;
-        let inferredNumber = explicitNumber;
-
-        if (!inferredType && kind === "traction") {
-          const tractionLabel = label
-            .replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "")
-            .trim();
-          const parts = tractionLabel.split(/\s+/).filter(Boolean);
-          const first = parts[0] || "";
-          const firstLower = first.toLowerCase();
-
-          if (firstLower === "hle") {
-            inferredType = "HLE";
-            inferredNumber = parts[1] || "";
-          } else if (firstLower === "coradia" && String(parts[1] || "").toLowerCase() === "max") {
-            inferredType = "Coradia Max";
-            inferredNumber = parts[2] || "";
-          } else if (/^am\d+/i.test(first)) {
-            inferredType = first;
-            inferredNumber = parts[1] || "";
-          } else if (firstLower === "class" && parts[1]) {
-            inferredType = `Class ${parts[1]}`;
-            inferredNumber = parts[2] || "";
-          } else if (firstLower === "tgv" && parts[1] && /^[a-z]+$/i.test(parts[1])) {
-            inferredType = `TGV ${parts[1]}`;
-            inferredNumber = parts[2] || "";
-          } else {
-            inferredType = first;
-            inferredNumber = parts[1] || "";
-          }
-        }
-
+        const split = splitTrainNumber(entry.train || entry.label || "");
+        if (!split.train) return null;
+        const filterKey =
+          String(entry.filterKey || "").trim().toLowerCase() ||
+          normalizeVehicleType(split.train, split.number);
         return {
-          kind,
-          label,
-          active: kind === "traction" ? entry.active !== false : false,
+          train: split.train,
+          number: split.number,
+          label: composeTrainLabel(split),
+          active: entry.active !== false,
           showOnCard: entry.showOnCard !== false,
           separatorAfter: String(entry.separatorAfter || "").trim(),
-          filterKey:
-            String(entry.filterKey || "").trim().toLowerCase() ||
-            (kind === "traction"
-              ? normalizeVehicleType(inferredType, inferredNumber)
-              : kind === "carriage" && entry.active === true
-                ? normalizeCarriageType(label)
-                : ""),
-          filterLabel:
-            String(entry.filterLabel || "").trim() ||
-            (kind === "traction"
-              ? getVehicleFilterLabel(
-                  String(entry.filterKey || "").trim().toLowerCase() ||
-                    normalizeVehicleType(inferredType, inferredNumber),
-                )
-              : ""),
+          filterKey,
+          filterLabel: String(entry.filterLabel || "").trim() || getVehicleFilterLabel(filterKey),
+          lead: Boolean(entry.lead),
         };
       })
       .filter(Boolean);
-  }
 
-  function formatTagLabel(label) {
+    const lead = normalizedItems.find((item) => item?.lead === true) || normalizedItems[0] || null;
+    return lead ? [lead] : [];
+  }
+function formatTagLabel(label) {
     return normalizeVehicleLabel(label).replace(
       /(\d+)\s*x\s*/gi,
       (_, n) => `${n}${String.fromCharCode(215)} `,
@@ -3246,12 +3231,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     const tagsHtml = renderedItems
       .map((item, index) => {
-        const cls =
-          item.kind === "traction"
-            ? item.active
-              ? "station-meta-chip"
-              : "station-meta-inactive"
-            : "station-meta-carriage";
+        const cls = item.active ? "station-meta-chip" : "station-meta-inactive";
 
         const separatorLabel = String(item.separatorAfter || "").trim();
         const plus =
@@ -3261,7 +3241,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               : '<span class="station-meta-plus">+</span>'
             : "";
 
-        return `<span class="${cls}">${esc(formatTagLabel(item.label))}</span>${plus}`;
+        return `<span class="${cls}">${esc(formatTagLabel(composeTrainLabel(item)))}</span>${plus}`;
       })
       .join("");
 
@@ -5365,7 +5345,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       "CIE",
       "Comboios de Portugal",
       "CrossCountry",
-      "ČD",
+      "ÄŒD",
       "DB",
       "DSB",
       "East Midlands Railway",
@@ -5383,7 +5363,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       "GWR",
       "Hellenic Train",
       "Hull Trains",
-      "Iarnród Éireann",
+      "IarnrÃ³d Ã‰ireann",
       "Infrabel",
       "Italo",
       "LNER",
@@ -5391,7 +5371,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       "Lumo",
       "LVR",
       "LTG Link",
-      "MÁV-START",
+      "MÃV-START",
       "Merseyrail",
       "Metronom",
       "MTRX",
@@ -5402,7 +5382,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       "Northern",
       "NS",
       "NTV",
-      "ÖBB",
+      "Ã–BB",
       "OUIGO",
       "PKP Intercity",
       "Polregio",
@@ -5416,9 +5396,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       "South Western Railway",
       "Southeastern",
       "Southern",
-      "SŽ",
-      "Tågåkeriet i Bergslagen",
-      "TCDD Taşımacılık",
+      "SÅ½",
+      "TÃ¥gÃ¥keriet i Bergslagen",
+      "TCDD TaÅŸÄ±macÄ±lÄ±k",
       "Thalys",
       "Trenitalia",
       "Transdev",
@@ -5486,7 +5466,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         austria: "../images/Other/Flags/Austria.svg",
         belarus: "../images/Other/Flags/Belarus.svg",
         belgium: "../images/Other/Flags/Belgium.svg",
-        bosniaandherzegovina: "../images/Other/Flags/BosniëHerzegovina.svg",
+        bosniaandherzegovina: "../images/Other/Flags/BosniÃ«Herzegovina.svg",
         bulgaria: "../images/Other/Flags/Bulgaria.svg",
         croatia: "../images/Other/Flags/Croatia.svg",
         cyprus: "../images/Other/Flags/Cyprus.svg",
@@ -5791,12 +5771,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     function buildCompositionTitle(items) {
-      return items
-        .map((item) => {
-          if (item.kind === "carriage") return `${item.count}x ${item.label}`;
-          return item.label;
-        })
-        .join(" + ");
+      const lead = pickLeadCompositionItem(items);
+      if (!lead) return "";
+      return composeTrainLabel(splitTrainNumber(lead.train || lead.label || ""));
     }
 
     function syncCompositionTitle() {
@@ -6584,15 +6561,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     let pending = [];
 
     function formatSubmissionCompositionPart(part) {
-      const label = normalizeVehicleLabel(part?.label);
+      const label = normalizeVehicleLabel(part?.train || part?.label);
       if (!label) return "";
-      if (part?.kind === "carriage") return `${Number(part.count || 1)}x ${label}`;
       return label;
     }
 
     function getSubmissionCompositionText(item) {
       const parts = Array.isArray(item?.composition) ? item.composition : [];
-      return parts.map(formatSubmissionCompositionPart).filter(Boolean).join(" + ");
+      const lead = pickLeadCompositionItem(parts);
+      return lead ? formatSubmissionCompositionPart(lead) : "";
     }
 
     function render() {
@@ -6616,7 +6593,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               </div>
               <p><strong>Date:</strong> ${item.date}</p>
               ${Array.isArray(item.composition) && item.composition.length > 0
-                ? `<p><strong>Composition:</strong> ${escHtml(getSubmissionCompositionText(item))}</p>`
+                ? `<p><strong>Train:</strong> ${escHtml(getSubmissionCompositionText(item))}</p>`
                 : ""}
               <p><strong>Operator:</strong> ${item.operator}</p>
               <p><strong>By:</strong> ${item.submittedBy}</p>
@@ -6715,3 +6692,4 @@ window.addEventListener("component:loaded", (e) => {
   handleNavbarScroll();
   setActiveNavLink();
 });
+

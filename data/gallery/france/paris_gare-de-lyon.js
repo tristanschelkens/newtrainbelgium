@@ -14,7 +14,7 @@ station({
       photographer: "trainbelgium",
       alt: "Paris TGV Dasye 717",
       numbers: "717",
-      consist: [traction("TGV Dasye 717")],
+      consist: [train("TGV Dasye")],
       images: ["ParisGareDeLyon_TGVDasye717.jpeg"],
     }
   ],
