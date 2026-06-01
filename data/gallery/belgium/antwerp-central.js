@@ -163,7 +163,7 @@ station({
       date: "19 January 2026",
       photographer: "trainbelgium",
       alt: "Antwerp TRAXX 186 204",
-      numbers: "199",
+      numbers: "204",
       consist: [train("TRAXX 186")],
       images: ["Antwerp_TRAXX_186204.jpeg"],
     }
