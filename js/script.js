@@ -497,6 +497,9 @@ function splitTrainNumber(value) {
   const normalized = normalizeVehicleLabel(value).replace(/^\d+\s*x\s*/i, "").trim();
   if (!normalized) return { train: "", number: "" };
   const compact = normalized.replace(/\s+/g, " ").trim();
+  if (/^flirt\s+\d{1,2}$/i.test(compact)) {
+    return { train: compact.toUpperCase(), number: "" };
+  }
   const parts = compact.split(" ").filter(Boolean);
   if (parts.length < 2) return { train: compact, number: "" };
   const familyPrefixes = new Set(["AM", "AR", "HLE", "HLD", "HLR", "TRAXX", "BR", "E", "MW", "MS", "SKODA"]);
@@ -872,8 +875,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     if (withoutCount.startsWith("coradia max")) {
       return { key: "coradia-max", label: "Coradia Max" };
     }
-    if (withoutCount.startsWith("flirt 3")) {
+    if (withoutCount.startsWith("flirt 3") || combinedWithoutCount.startsWith("flirt 3")) {
       return { key: "flirt-3", label: "FLIRT 3" };
+    }
+    if (withoutCount.startsWith("flirt")) {
+      return { key: "flirt", label: "FLIRT" };
     }
     if (withoutCount.startsWith("virm")) {
       return { key: "virm", label: "VIRM" };

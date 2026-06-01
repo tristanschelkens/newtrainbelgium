@@ -53,7 +53,7 @@ station({
       date: "8 March 2026",
       photographer: "trainbelgium",
       alt: "Liège Stadler FLIRT 3",
-      numbers: "3",
+      numbers: "554",
       consist: [train("FLIRT 3")],
       images: ["IMG_4749.webp"],
     }
