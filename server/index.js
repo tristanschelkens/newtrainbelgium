@@ -773,6 +773,28 @@ app.get('/api/moderators', async (req, res) => {
   }
 });
 
+app.get('/api/users/search', async (req, res) => {
+  try {
+    const user = await requireUser(req, res);
+    if (!user) return;
+    if (!isOwnerUser(user)) return res.status(403).json({ ok: false, error: 'Only owner can search users.' });
+    const q = String(req.query.q || '').trim().toLowerCase();
+    if (!q) return res.json({ ok: true, items: [] });
+    const like = `%${q}%`;
+    const found = await pool.query(
+      `SELECT id, username, email, role
+       FROM users
+       WHERE lower(username) LIKE $1
+       ORDER BY username ASC
+       LIMIT 12`,
+      [like],
+    );
+    return res.json({ ok: true, items: found.rows });
+  } catch {
+    return res.status(500).json({ ok: false, error: 'Server error' });
+  }
+});
+
 app.post('/api/moderators', async (req, res) => {
   try {
     const user = await requireUser(req, res);

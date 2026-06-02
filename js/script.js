@@ -4142,15 +4142,14 @@ function formatTagLabel(label) {
     openLightboxByIndex(currentSeriesPool[currentSeriesPosition]);
   }
 
-  Array.from(grid.querySelectorAll(".station-photo-card img")).forEach(
-    (img) => {
-      img.addEventListener("click", () => {
-        const card = img.closest(".station-photo-card");
-        const index = Number(card?.dataset.photoIndex || 0);
-        openLightboxByIndex(index, img);
-      });
-    },
-  );
+  Array.from(grid.querySelectorAll(".station-photo-card")).forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button, input, textarea, select")) return;
+      const img = card.querySelector("img");
+      const index = Number(card?.dataset.photoIndex || 0);
+      openLightboxByIndex(index, img || null);
+    });
+  });
 
   if (closeBtn) {
     closeBtn.addEventListener("click", closeLightbox);
@@ -6844,6 +6843,16 @@ function formatTagLabel(label) {
       }
     }
 
+    function getUserSnapshotById(userId) {
+      const id = String(userId || "").trim();
+      const accountsMap = readJson(accountsKey, {});
+      const profilesMap = readJson(profileKey, {});
+      const usernames = Object.keys(accountsMap || {});
+      const matchUsername = usernames.find((name) => String(accountsMap?.[name]?.id || "").trim() === id) || "";
+      const profileItem = profilesMap[matchUsername] || {};
+      return { id, username: matchUsername, label: matchUsername, avatar: String(profileItem.avatar || defaultAvatar), email: "" };
+    }
+
     function renderModeratorList() {
       if (!moderatorList) return;
       const roles = readRoles();
@@ -6852,11 +6861,12 @@ function formatTagLabel(label) {
         return;
       }
       moderatorList.innerHTML = roles.moderatorIds
-        .map((modId) => {
+        .map((modId, idx) => {
           const item = getUserSnapshotById(modId);
+          const label = item.label || (Array.isArray(roles.moderators) ? (roles.moderators[idx] || `User #${modId}`) : `User #${modId}`);
           return `
-            <article class="moderation-item" data-mod-user-id="${item.id}">
-              <h3>${item.label}</h3>
+            <article class="moderation-item" data-mod-user-id="${modId}">
+              <h3>${escHtml(label)}</h3>
               <div class="moderation-actions">
                 <button class="btn btn-danger" type="button" data-mod-action="remove">Remove moderator</button>
               </div>
@@ -6866,37 +6876,26 @@ function formatTagLabel(label) {
         .join("");
     }
 
-    function getUserSnapshotById(userId) {
-      const id = String(userId || "").trim();
-      const accountsMap = readJson(accountsKey, {});
-      const profilesMap = readJson(profileKey, {});
-      const usernames = Object.keys(accountsMap || {});
-      const matchUsername = usernames.find((name) => String(accountsMap?.[name]?.id || "").trim() === id) || "";
-      const profileItem = profilesMap[matchUsername] || {};
-      return { id, username: matchUsername, label: matchUsername || `User #${id}`, avatar: String(profileItem.avatar || defaultAvatar), email: "" };
-    }
-
-    function getModeratorCandidates(query) {
-      const accountsMap = readJson(accountsKey, {});
-      const profilesMap = readJson(profileKey, {});
+    async function getModeratorCandidates(query) {
       const q = normalizeUser(query);
       if (!q) return [];
-      const usernames = Array.from(new Set([...Object.keys(accountsMap || {}), ...Object.keys(profilesMap || {})]));
-      return usernames
-        .map((username) => normalizeUser(username))
-        .filter((username) => {
-          if (!username) return false;
-          return username.includes(q);
-        })
-        .map((username) => {
-          const profileItem = profilesMap[username] || {};
-          const accountItem = accountsMap[username] || {};
-          const id = String(accountItem?.id || "").trim();
-          return { username, id, avatar: String(profileItem.avatar || defaultAvatar), email: "" };
-        })
-        .filter((item) => Boolean(item.id))
-        .filter((item) => !isOwner(item.username, item.id))
-        .slice(0, 8);
+      try {
+        const res = await fetch(`/api/users/search?q=${encodeURIComponent(q)}`, { credentials: "include" });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) return [];
+        return (Array.isArray(data?.items) ? data.items : [])
+          .map((item) => ({
+            username: normalizeUser(item?.username || ""),
+            id: String(item?.id || "").trim(),
+            avatar: defaultAvatar,
+            email: String(item?.email || ""),
+          }))
+          .filter((item) => Boolean(item.username && item.id))
+          .filter((item) => !isOwner(item.username, item.id))
+          .slice(0, 8);
+      } catch {
+        return [];
+      }
     }
 
     function hideModeratorSuggestions() {
@@ -6905,9 +6904,9 @@ function formatTagLabel(label) {
       moderatorSuggestions.innerHTML = "";
     }
 
-    function renderModeratorSuggestions() {
+    async function renderModeratorSuggestions() {
       if (!moderatorSuggestions || !moderatorInput) return;
-      const candidates = getModeratorCandidates(moderatorInput.value);
+      const candidates = await getModeratorCandidates(moderatorInput.value);
       const roles = readRoles();
       const filtered = candidates.filter((item) => !roles.moderatorIds.includes(item.id));
       if (filtered.length === 0) {
@@ -6918,8 +6917,7 @@ function formatTagLabel(label) {
         return;
       }
       moderatorSuggestions.innerHTML = filtered
-        .map(
-          (item) => `
+        .map((item) => `
             <button class="moderator-suggestion" type="button" data-mod-suggest="${item.username}" data-mod-suggest-id="${item.id}">
               <img src="${escHtml(item.avatar)}" alt="${escHtml(item.username)} avatar" />
               <span>
@@ -6927,8 +6925,7 @@ function formatTagLabel(label) {
                 <small>${item.email ? escHtml(item.email) : ""}</small>
               </span>
             </button>
-          `
-        )
+          `)
         .join("");
       moderatorSuggestions.hidden = false;
       if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
@@ -6936,7 +6933,128 @@ function formatTagLabel(label) {
 
     if (userIsOwner && moderatorCard) {
       moderatorCard.hidden = false;
-      renderModeratorList();
+      loadModeratorsFromServer().then(() => {
+        renderModeratorList();
+        renderModeratorSuggestions();
+      });
+
+      moderatorInput?.addEventListener("input", () => {
+        selectedModeratorUser = "";
+        selectedModeratorId = "";
+        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+        renderModeratorSuggestions();
+      });
+
+      moderatorSuggestions?.addEventListener("click", (event) => {
+        const btn = event.target.closest("[data-mod-suggest]");
+        if (!btn || !moderatorInput) return;
+        moderatorInput.value = String(btn.dataset.modSuggest || "");
+        selectedModeratorUser = normalizeUser(btn.dataset.modSuggest || "");
+        selectedModeratorId = String(btn.dataset.modSuggestId || "").trim();
+        hideModeratorSuggestions();
+        if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
+      });
+
+      moderatorForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const candidate = normalizeUser(selectedModeratorUser || moderatorForm.moderator_username?.value);
+        const candidateId = String(selectedModeratorId || findUserIdByUsername(candidate)).trim();
+        if (!candidate || !candidateId) {
+          showStatus(moderatorStatus, "Select a member from the list first.", true);
+          return;
+        }
+        fetch("/api/moderators", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ userId: candidateId }),
+        })
+          .then(async (res) => {
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not add moderator."));
+            moderatorForm.reset();
+            selectedModeratorUser = "";
+            selectedModeratorId = "";
+            hideModeratorSuggestions();
+            if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+            showStatus(moderatorStatus, "Moderator added.");
+            return loadModeratorsFromServer();
+          })
+          .then(() => {
+            renderModeratorList();
+            renderModeratorSuggestions();
+          })
+          .catch((err) => {
+            showStatus(moderatorStatus, String(err?.message || "Could not add moderator."), true);
+          });
+      });
+
+      moderatorList?.addEventListener("click", (event) => {
+        const btn = event.target.closest("[data-mod-action='remove']");
+        if (!btn) return;
+        const item = btn.closest("[data-mod-user-id]");
+        const modId = String(item?.dataset.modUserId || "").trim();
+        if (!modId) return;
+        fetch(`/api/moderators/${encodeURIComponent(modId)}`, {
+          method: "DELETE",
+          credentials: "include",
+        })
+          .then(async (res) => {
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not remove moderator."));
+            showStatus(moderatorStatus, "Moderator removed.");
+            return loadModeratorsFromServer();
+          })
+          .then(() => {
+            renderModeratorList();
+            renderModeratorSuggestions();
+          })
+          .catch((err) => {
+            showStatus(moderatorStatus, String(err?.message || "Could not remove moderator."), true);
+          });
+      });
+    }
+    async function loadModeratorsFromServer() {
+      try {
+        const res = await fetch("/api/moderators", { credentials: "include" });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not load moderators."));
+        const items = Array.isArray(data?.items) ? data.items : [];
+        writeRoles({
+          moderatorIds: items.map((item) => String(item?.id || "").trim()).filter(Boolean),
+          moderators: items.map((item) => normalizeUser(item?.username || "")).filter(Boolean),
+        });
+      } catch (err) {
+        showStatus(moderatorStatus, String(err?.message || "Could not load moderators."), true);
+      }
+    }
+
+    function renderModeratorList() {
+      if (!moderatorList) return;
+      fetch("/api/moderators", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ userId: candidateId }),
+        })
+          .then(async (res) => {
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not add moderator."));
+            moderatorForm.reset();
+            selectedModeratorUser = "";
+            selectedModeratorId = "";
+            hideModeratorSuggestions();
+            if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+            showStatus(moderatorStatus, "Moderator added.");
+            return loadModeratorsFromServer();
+          })
+          .then(() => {
+            renderModeratorList();
+            renderModeratorSuggestions();
+          })
+          .catch((err) => {
+            showStatus(moderatorStatus, String(err?.message || "Could not add moderator."), true);
+          });
       renderModeratorSuggestions();
 
       moderatorInput?.addEventListener("input", renderModeratorSuggestions);
@@ -6972,42 +7090,56 @@ function formatTagLabel(label) {
           showStatus(moderatorStatus, "Owner already has full access.", true);
           return;
         }
-        const roles = readRoles();
-        const profilesMap = readJson(profileKey, {});
-        const accountsMap = readJson(accountsKey, {});
-        const accountExists = Boolean(accountsMap[candidate] || profilesMap[candidate]);
-        if (!accountExists) {
-          showStatus(moderatorStatus, "Select an existing member from the list.", true);
-          return;
-        }
-        if (roles.moderatorIds.includes(candidateId)) {
-          showStatus(moderatorStatus, "This user is already a moderator.", true);
-          return;
-        }
-        roles.moderatorIds.push(candidateId);
-        writeRoles(roles);
-        moderatorForm.reset();
-        selectedModeratorUser = "";
-        selectedModeratorId = "";
-        hideModeratorSuggestions();
-        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
-        showStatus(moderatorStatus, "Moderator added.");
-        renderModeratorList();
+        fetch("/api/moderators", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ userId: candidateId }),
+        })
+          .then(async (res) => {
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not add moderator."));
+            moderatorForm.reset();
+            selectedModeratorUser = "";
+            selectedModeratorId = "";
+            hideModeratorSuggestions();
+            if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+            showStatus(moderatorStatus, "Moderator added.");
+            return loadModeratorsFromServer();
+          })
+          .then(() => {
+            renderModeratorList();
+            renderModeratorSuggestions();
+          })
+          .catch((err) => {
+            showStatus(moderatorStatus, String(err?.message || "Could not add moderator."), true);
+          });
       });
-
       moderatorList?.addEventListener("click", (event) => {
         const btn = event.target.closest("[data-mod-action='remove']");
         if (!btn) return;
         const item = btn.closest("[data-mod-user-id]");
         const modId = String(item?.dataset.modUserId || "").trim();
         if (!modId) return;
-        const roles = readRoles();
-        roles.moderatorIds = roles.moderatorIds.filter((id) => id !== modId);
-        writeRoles(roles);
-        showStatus(moderatorStatus, "Moderator removed.");
-        renderModeratorList();
-        renderModeratorSuggestions();
+        fetch(`/api/moderators/${encodeURIComponent(modId)}`, {
+          method: "DELETE",
+          credentials: "include",
+        })
+          .then(async (res) => {
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not remove moderator."));
+            showStatus(moderatorStatus, "Moderator removed.");
+            return loadModeratorsFromServer();
+          })
+          .then(() => {
+            renderModeratorList();
+            renderModeratorSuggestions();
+          })
+          .catch((err) => {
+            showStatus(moderatorStatus, String(err?.message || "Could not remove moderator."), true);
+          });
       });
+
     }
   })();
 
