@@ -6877,13 +6877,40 @@ function formatTagLabel(label) {
         .join("");
     }
 
+    function getLocalModeratorCandidates(query) {
+      const accountsMap = readJson(accountsKey, {});
+      const profilesMap = readJson(profileKey, {});
+      const q = normalizeUser(query);
+      if (!q) return [];
+      const usernames = Array.from(new Set([...Object.keys(accountsMap || {}), ...Object.keys(profilesMap || {})]));
+      return usernames
+        .map((username) => normalizeUser(username))
+        .filter((username) => Boolean(username) && username.includes(q))
+        .map((username) => {
+          const profileItem = profilesMap[username] || {};
+          const accountItem = accountsMap[username] || {};
+          return {
+            username,
+            id: String(accountItem?.id || "").trim(),
+            avatar: String(profileItem.avatar || defaultAvatar),
+            email: "",
+          };
+        })
+        .filter((item) => Boolean(item.id))
+        .filter((item) => !isOwner(item.username, item.id))
+        .slice(0, 8);
+    }
+
     async function getModeratorCandidates(query) {
       const q = normalizeUser(query);
       if (!q) return [];
       try {
         const res = await fetch(`/api/users/search?q=${encodeURIComponent(q)}`, { credentials: "include" });
         const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data?.ok) return [];
+        if (!res.ok || !data?.ok) {
+          showStatus(moderatorStatus, String(data?.error || "User search failed. Try refreshing or restarting server."), true);
+          return getLocalModeratorCandidates(q);
+        }
         return (Array.isArray(data?.items) ? data.items : [])
           .map((item) => ({
             username: normalizeUser(item?.username || ""),
@@ -6895,7 +6922,8 @@ function formatTagLabel(label) {
           .filter((item) => !isOwner(item.username, item.id))
           .slice(0, 8);
       } catch {
-        return [];
+        showStatus(moderatorStatus, "User search failed. Try refreshing or restarting server.", true);
+        return getLocalModeratorCandidates(q);
       }
     }
 
