@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "NMBS/SNCB, NS",
       date: "1 June 2025",
-      photographer: "EURORAILSHOTS",
+      photographer: "trainbelgium",
       alt: "Roosendaal TRAXX 186 121 + I11 + TRAXX",
       numbers: "121",
       consist: [train("TRAXX 186")],

@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "DB",
       date: "16 February 2024",
-      photographer: "EURORAILSHOTS",
+      photographer: "trainbelgium",
       alt: "BR 146 005",
       numbers: "005",
       consist: [train("BR 146")],

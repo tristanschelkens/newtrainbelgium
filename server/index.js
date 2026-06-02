@@ -12,6 +12,7 @@ const port = Number(process.env.PORT || 3000);
 const dbUrl = String(process.env.DATABASE_URL || '');
 const sessionSecret = String(process.env.SESSION_SECRET || 'change_me');
 const ownerUsername = String(process.env.OWNER_USERNAME || 'EURORAILSHOTS').trim().toLowerCase();
+const ownerUserId = String(process.env.OWNER_USER_ID || '').trim();
 const smtpHost = String(process.env.SMTP_HOST || '').trim();
 const smtpPort = Number(process.env.SMTP_PORT || 587);
 const smtpUser = String(process.env.SMTP_USER || '').trim();
@@ -184,7 +185,9 @@ async function requireUser(req, res) {
 function isModeratorUser(user) {
   const role = String(user?.role || '').toLowerCase();
   const username = String(user?.username || '').toLowerCase();
-  return role === 'moderator' || role === 'admin' || username === ownerUsername;
+  const userId = String(user?.id || '').trim();
+  const isOwnerById = Boolean(ownerUserId) && userId === ownerUserId;
+  return role === 'moderator' || role === 'admin' || isOwnerById || username === ownerUsername;
 }
 
 async function clearSession(token) {
@@ -750,7 +753,9 @@ app.delete('/api/submissions/:id', async (req, res) => {
     const user = await requireUser(req, res);
     if (!user) return;
     const username = String(user?.username || '').trim().toLowerCase();
-    if (username !== ownerUsername) {
+    const userId = String(user?.id || '').trim();
+    const isOwnerById = Boolean(ownerUserId) && userId === ownerUserId;
+    if (!isOwnerById && username !== ownerUsername) {
       return res.status(403).json({ ok: false, error: 'Only owner can delete photos.' });
     }
     const id = String(req.params.id || '').trim();

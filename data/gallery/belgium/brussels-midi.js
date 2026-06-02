@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "NMBS/SNCB, ÖBB",
       date: "7 Februari 2025",
-      photographer: "EURORAILSHOTS",
+      photographer: "trainbelgium",
       alt: "Brussels-Midi HLE 1834 + NightJet",
       numbers: "34",
       consist: [train("HLE 18")],

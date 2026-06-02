@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "NMBS/SNCB",
       date: "25 May 2024",
-      photographer: "EURORAILSHOTS",
+      photographer: "trainbelgium",
       alt: "Duffel M4",
       numbers: "58054",
       consist: [train("M4")],

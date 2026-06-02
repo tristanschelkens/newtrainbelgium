@@ -1213,6 +1213,14 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     return String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
   }
 
+  function activeUserId() {
+    return String(localStorage.getItem("tb_active_user_id_v1") || "").trim();
+  }
+
+  function ownerUserId() {
+    return String(localStorage.getItem("tb_owner_user_id_v1") || "").trim();
+  }
+
   function readProfilesStore() {
     try {
       return JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
@@ -1223,11 +1231,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   function canModerateUser(user) {
     const normalized = String(user || "").trim().toLowerCase();
-    if (!normalized) return false;
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
-    if (normalized === owner) return true;
+    const activeId = activeUserId();
+    const ownerId = ownerUserId();
+    if (!normalized && !activeId) return false;
+    const owner = ownerUserName();
+    if ((ownerId && activeId && activeId === ownerId) || normalized === owner) return true;
     try {
-      const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
+      const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[],"moderatorIds":[]}' );
+      const modIds = Array.isArray(roles?.moderatorIds) ? roles.moderatorIds.map((id) => String(id || "").trim()) : [];
+      if (activeId && modIds.includes(activeId)) return true;
       const mods = Array.isArray(roles?.moderators) ? roles.moderators.map((item) => String(item || "").trim().toLowerCase()) : [];
       return mods.includes(normalized);
     } catch {
@@ -2423,7 +2435,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
               <div class="overlay"><h3>${esc(photo.stationName)}</h3></div>
             </button>
-          `,
+          `
         )
         .join("");
       sortVisibleCards();
@@ -3817,7 +3829,12 @@ function formatTagLabel(label) {
     const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
     const profile = profiles[user] || {};
     const account = accounts[user] || {};
-    const role = user === owner ? "Owner" : Array.isArray(roles?.moderators) && roles.moderators.includes(user) ? "Moderator" : "Member";
+    const accountId = String(account?.id || "").trim();
+    const ownerId = String(localStorage.getItem("tb_owner_user_id_v1") || "").trim();
+    const modIds = Array.isArray(roles?.moderatorIds) ? roles.moderatorIds.map((id) => String(id || "").trim()) : [];
+    const isOwnerById = Boolean(ownerId && accountId && ownerId === accountId);
+    const isModById = Boolean(accountId && modIds.includes(accountId));
+    const role = isOwnerById || user === owner ? "Owner" : isModById || (Array.isArray(roles?.moderators) && roles.moderators.includes(user)) ? "Moderator" : "Member";
     const avatar = String(profile.avatar || "../images/default-avatar.svg");
     const displayName = String(user);
     stationProfileAvatar.src = avatar;
@@ -3905,7 +3922,9 @@ function formatTagLabel(label) {
       const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS")
         .trim()
         .toLowerCase();
-      const canDelete = activeUser && activeUser === ownerUser;
+      const activeUserId = String(localStorage.getItem("tb_active_user_id_v1") || "").trim();
+      const ownerUserId = String(localStorage.getItem("tb_owner_user_id_v1") || "").trim();
+      const canDelete = (ownerUserId && activeUserId && activeUserId === ownerUserId) || (activeUser && activeUser === ownerUser);
       const deletable = canDelete && String(photoId || "").startsWith("sub_");
       lightboxDeleteBtn.hidden = !deletable;
       lightboxDeleteBtn.dataset.photoId = deletable ? String(photoId || "") : "";
@@ -3993,6 +4012,7 @@ function formatTagLabel(label) {
 
   function canModerateComments() {
     const user = getActiveUser();
+    const userId = getActiveUserId();
     if (!user) return false;
     try {
       const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS")
@@ -4085,6 +4105,7 @@ function formatTagLabel(label) {
   lightboxCommentForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     const user = getActiveUser();
+    const userId = getActiveUserId();
     if (!user) {
       setCommentStatus("Log in to post a comment.", true);
       return;
@@ -5187,6 +5208,7 @@ function formatTagLabel(label) {
   if (!signInForm || !createForm || !status) return;
 
   const sessionKey = "tb_active_user_v1";
+  const sessionIdKey = "tb_active_user_id_v1";
   const storageKey = "tb_accounts_v1";
   let verifyMode = "verify";
   let resetTokenFromLink = "";
@@ -5218,6 +5240,7 @@ function formatTagLabel(label) {
       const item = value && typeof value === "object" ? value : {};
       normalized[username] = {
         createdAt: item.createdAt || new Date().toISOString(),
+        id: item.id ? String(item.id) : "",
       };
     });
     return normalized;
@@ -5469,9 +5492,11 @@ function formatTagLabel(label) {
     apiRequest("/api/auth/login", { username, password })
       .then((data) => {
         localStorage.setItem(sessionKey, data.user.username);
+        localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
         const accounts = readAccounts();
         accounts[data.user.username] = {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
+          id: String(data?.user?.id || accounts[data.user.username]?.id || ""),
         };
         writeAccounts(accounts);
         window.location.replace(getPostLoginRedirect());
@@ -5507,9 +5532,11 @@ function formatTagLabel(label) {
     apiRequest("/api/auth/verify-email", { email, code })
       .then((data) => {
         localStorage.setItem(sessionKey, data.user.username);
+        localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
         const accounts = readAccounts();
         accounts[data.user.username] = {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
+          id: String(data?.user?.id || accounts[data.user.username]?.id || ""),
         };
         writeAccounts(accounts);
         window.location.replace(getPostLoginRedirect());
@@ -5548,9 +5575,11 @@ function formatTagLabel(label) {
         const resetUser = data?.user || null;
         if (resetUser?.username) {
           localStorage.setItem(sessionKey, normalizeUsername(resetUser.username));
+          localStorage.setItem(sessionIdKey, String(resetUser?.id || ""));
           const accounts = readAccounts();
           accounts[normalizeUsername(resetUser.username)] = {
             createdAt: accounts[normalizeUsername(resetUser.username)]?.createdAt || new Date().toISOString(),
+            id: String(resetUser?.id || accounts[normalizeUsername(resetUser.username)]?.id || ""),
           };
           writeAccounts(accounts);
           window.location.replace(getPostLoginRedirect());
@@ -5585,6 +5614,7 @@ function formatTagLabel(label) {
       if (!data?.user?.username) return;
       const activeUser = normalizeUsername(data.user.username);
       localStorage.setItem(sessionKey, activeUser);
+      localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
       showStatus(`Already logged in as ${activeUser}.`);
     })
     .catch(() => {
@@ -5642,6 +5672,8 @@ function formatTagLabel(label) {
   const commentsKey = "tb_photo_comments_v1";
   const rolesKey = "tb_roles_v1";
   const ownerKey = "tb_owner_user_v1";
+  const ownerIdKey = "tb_owner_user_id_v1";
+  const sessionIdKey = "tb_active_user_id_v1";
 
   function normalizeUser(value) {
     return String(value || "").trim().toLowerCase();
@@ -5690,20 +5722,27 @@ function formatTagLabel(label) {
     return normalizeUser(localStorage.getItem(sessionKey));
   }
 
+  function getActiveUserId() {
+    return String(localStorage.getItem(sessionIdKey) || "").trim();
+  }
+
   async function syncActiveUserFromServer() {
     try {
       const res = await fetch("/api/auth/session", { credentials: "include" });
       if (!res.ok) {
         localStorage.removeItem(sessionKey);
+        localStorage.removeItem(sessionIdKey);
         return "";
       }
       const data = await res.json();
       const user = normalizeUser(data?.user?.username);
       if (!user) {
         localStorage.removeItem(sessionKey);
+        localStorage.removeItem(sessionIdKey);
         return "";
       }
       localStorage.setItem(sessionKey, user);
+      localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
       return user;
     } catch {
       return getActiveUser();
@@ -5728,30 +5767,47 @@ function formatTagLabel(label) {
     return "EURORAILSHOTS";
   }
 
+  function getOwnerUserId() {
+    const saved = String(localStorage.getItem(ownerIdKey) || "").trim();
+    if (saved) return saved;
+    return "";
+  }
+
+  function findUserIdByUsername(username) {
+    const key = normalizeUser(username);
+    if (!key) return "";
+    const accounts = readJson(accountsKey, {});
+    return String(accounts?.[key]?.id || "").trim();
+  }
+
   function readRoles() {
-    const roles = readJson(rolesKey, { moderators: [] });
+    const roles = readJson(rolesKey, { moderators: [], moderatorIds: [] });
     if (!Array.isArray(roles.moderators)) roles.moderators = [];
+    if (!Array.isArray(roles.moderatorIds)) roles.moderatorIds = [];
     return roles;
   }
 
   function writeRoles(roles) {
-    const normalized = {
-      moderators: Array.from(
-        new Set((roles?.moderators || []).map((user) => normalizeUser(user)).filter(Boolean)),
-      ),
-    };
-    writeJson(rolesKey, normalized);
+    const normalizedModeratorIds = Array.from(new Set((roles?.moderatorIds || []).map((id) => String(id || "").trim()).filter(Boolean)));
+    const normalizedModerators = Array.from(new Set((roles?.moderators || []).map((user) => normalizeUser(user)).filter(Boolean)));
+    writeJson(rolesKey, { moderatorIds: normalizedModeratorIds, moderators: normalizedModerators });
   }
 
-  function isOwner(user) {
+  function isOwner(user, userId = "") {
+    const normalizedId = String(userId || "").trim();
+    const ownerId = getOwnerUserId();
+    if (ownerId && normalizedId) return normalizedId === ownerId;
     return normalizeUser(user) === getOwnerUser();
   }
 
-  function isModerator(user) {
+  function isModerator(user, userId = "") {
     const normalized = normalizeUser(user);
-    if (!normalized) return false;
-    if (isOwner(normalized)) return true;
-    return readRoles().moderators.includes(normalized);
+    const normalizedId = String(userId || "").trim();
+    if (!normalized && !normalizedId) return false;
+    if (isOwner(normalized, normalizedId)) return true;
+    const roles = readRoles();
+    if (normalizedId && Array.isArray(roles.moderatorIds) && roles.moderatorIds.includes(normalizedId)) return true;
+    return Array.isArray(roles.moderators) && roles.moderators.includes(normalized);
   }
 
   function showStatus(el, message, isError = false) {
@@ -6349,7 +6405,7 @@ function formatTagLabel(label) {
                 <small>${escHtml(item.province ? `${item.province}, ${item.country || "-"}` : (item.country || "-"))}</small>
               </span>
             </button>
-          `,
+          `
         )
         .join("");
       stationSuggestions.hidden = false;
@@ -6584,6 +6640,7 @@ function formatTagLabel(label) {
       event.preventDefault();
       if (isSubmittingPhoto) return;
       const user = getActiveUser();
+    const userId = getActiveUserId();
       if (!user) {
         redirectToLoginForSubmit();
         return;
@@ -6702,6 +6759,7 @@ function formatTagLabel(label) {
     });
 
     const user = getActiveUser();
+    const userId = getActiveUserId();
     if (!user) {
       if (summaryName) summaryName.textContent = "Guest";
       if (summaryMeta) summaryMeta.textContent = "Not logged in";
@@ -6718,8 +6776,8 @@ function formatTagLabel(label) {
     const profiles = readJson(profileKey, {});
     const profile = profiles[user] || {};
     const owner = getOwnerUser();
-    const userIsOwner = isOwner(user);
-    const userIsModerator = isModerator(user);
+    const userIsOwner = isOwner(user, userId);
+    const userIsModerator = isModerator(user, userId);
     const moderatorCard = document.getElementById("moderatorManagementCard");
     const moderatorForm = document.getElementById("moderatorAssignForm");
     const moderatorStatus = document.getElementById("moderatorAssignStatus");
@@ -6728,6 +6786,7 @@ function formatTagLabel(label) {
     const moderatorSuggestions = document.getElementById("moderatorSuggestions");
     const moderatorAddBtn = document.getElementById("moderatorAddBtn");
     let selectedModeratorUser = "";
+    let selectedModeratorId = "";
 
     form.profileUsername.value = user;
     let profileAvatarValue = String(profile.avatar || "").trim();
@@ -6782,22 +6841,33 @@ function formatTagLabel(label) {
     function renderModeratorList() {
       if (!moderatorList) return;
       const roles = readRoles();
-      if (roles.moderators.length === 0) {
+      if (roles.moderatorIds.length === 0) {
         moderatorList.innerHTML = '<p class="muted">No extra moderators yet.</p>';
         return;
       }
-      moderatorList.innerHTML = roles.moderators
-        .map(
-          (username) => `
-            <article class="moderation-item" data-mod-user="${username}">
-              <h3>${username}</h3>
+      moderatorList.innerHTML = roles.moderatorIds
+        .map((modId) => {
+          const item = getUserSnapshotById(modId);
+          return `
+            <article class="moderation-item" data-mod-user-id="${item.id}">
+              <h3>${item.label}</h3>
               <div class="moderation-actions">
                 <button class="btn btn-danger" type="button" data-mod-action="remove">Remove moderator</button>
               </div>
             </article>
-          `,
-        )
+          `;
+        })
         .join("");
+    }
+
+    function getUserSnapshotById(userId) {
+      const id = String(userId || "").trim();
+      const accountsMap = readJson(accountsKey, {});
+      const profilesMap = readJson(profileKey, {});
+      const usernames = Object.keys(accountsMap || {});
+      const matchUsername = usernames.find((name) => String(accountsMap?.[name]?.id || "").trim() === id) || "";
+      const profileItem = profilesMap[matchUsername] || {};
+      return { id, username: matchUsername, label: matchUsername || `User #${id}`, avatar: String(profileItem.avatar || defaultAvatar), email: "" };
     }
 
     function getModeratorCandidates(query) {
@@ -6805,31 +6875,22 @@ function formatTagLabel(label) {
       const profilesMap = readJson(profileKey, {});
       const q = normalizeUser(query);
       if (!q) return [];
-      const usernames = Array.from(
-        new Set([
-          ...Object.keys(accountsMap || {}),
-          ...Object.keys(profilesMap || {}),
-        ]),
-      );
+      const usernames = Array.from(new Set([...Object.keys(accountsMap || {}), ...Object.keys(profilesMap || {})]));
       return usernames
         .map((username) => normalizeUser(username))
         .filter((username) => {
           if (!username) return false;
-          const profileItem = profilesMap[username] || {};
-          const accountItem = accountsMap[username] || {};
           return username.includes(q);
         })
-        .filter((username) => username !== owner)
-        .slice(0, 8)
         .map((username) => {
           const profileItem = profilesMap[username] || {};
           const accountItem = accountsMap[username] || {};
-          return {
-            username,
-            avatar: String(profileItem.avatar || defaultAvatar),
-            email: "",
-          };
-        });
+          const id = String(accountItem?.id || "").trim();
+          return { username, id, avatar: String(profileItem.avatar || defaultAvatar), email: "" };
+        })
+        .filter((item) => Boolean(item.id))
+        .filter((item) => !isOwner(item.username, item.id))
+        .slice(0, 8);
     }
 
     function hideModeratorSuggestions() {
@@ -6842,28 +6903,29 @@ function formatTagLabel(label) {
       if (!moderatorSuggestions || !moderatorInput) return;
       const candidates = getModeratorCandidates(moderatorInput.value);
       const roles = readRoles();
-      const filtered = candidates.filter((item) => !roles.moderators.includes(item.username));
+      const filtered = candidates.filter((item) => !roles.moderatorIds.includes(item.id));
       if (filtered.length === 0) {
         hideModeratorSuggestions();
         selectedModeratorUser = "";
+        selectedModeratorId = "";
         if (moderatorAddBtn) moderatorAddBtn.disabled = true;
         return;
       }
       moderatorSuggestions.innerHTML = filtered
         .map(
           (item) => `
-            <button class="moderator-suggestion" type="button" data-mod-suggest="${item.username}">
+            <button class="moderator-suggestion" type="button" data-mod-suggest="${item.username}" data-mod-suggest-id="${item.id}">
               <img src="${escHtml(item.avatar)}" alt="${escHtml(item.username)} avatar" />
               <span>
                 <strong>${escHtml(item.username)}</strong>
                 <small>${item.email ? escHtml(item.email) : ""}</small>
               </span>
             </button>
-          `,
+          `
         )
         .join("");
       moderatorSuggestions.hidden = false;
-      if (moderatorAddBtn) moderatorAddBtn.disabled = selectedModeratorUser === "";
+      if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
     }
 
     if (userIsOwner && moderatorCard) {
@@ -6874,6 +6936,7 @@ function formatTagLabel(label) {
       moderatorInput?.addEventListener("input", renderModeratorSuggestions);
       moderatorInput?.addEventListener("input", () => {
         selectedModeratorUser = "";
+        selectedModeratorId = "";
         if (moderatorAddBtn) moderatorAddBtn.disabled = true;
       });
 
@@ -6882,22 +6945,24 @@ function formatTagLabel(label) {
         if (!btn || !moderatorInput) return;
         moderatorInput.value = String(btn.dataset.modSuggest || "");
         selectedModeratorUser = normalizeUser(btn.dataset.modSuggest || "");
+        selectedModeratorId = String(btn.dataset.modSuggestId || "").trim();
         hideModeratorSuggestions();
-        if (moderatorAddBtn) moderatorAddBtn.disabled = !selectedModeratorUser;
+        if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
       });
 
       moderatorForm?.addEventListener("submit", (event) => {
         event.preventDefault();
         const candidate = normalizeUser(selectedModeratorUser || moderatorForm.moderator_username?.value);
-        if (!candidate) {
+        const candidateId = String(selectedModeratorId || findUserIdByUsername(candidate)).trim();
+        if (!candidate || !candidateId) {
           showStatus(moderatorStatus, "Select a member from the list first.", true);
           return;
         }
-        if (!selectedModeratorUser || candidate !== normalizeUser(moderatorInput?.value)) {
+        if (!selectedModeratorUser || candidate !== normalizeUser(moderatorInput?.value) || !candidateId) {
           showStatus(moderatorStatus, "Select a member from the list first.", true);
           return;
         }
-        if (candidate === owner) {
+        if (isOwner(candidate, candidateId)) {
           showStatus(moderatorStatus, "Owner already has full access.", true);
           return;
         }
@@ -6909,14 +6974,15 @@ function formatTagLabel(label) {
           showStatus(moderatorStatus, "Select an existing member from the list.", true);
           return;
         }
-        if (roles.moderators.includes(candidate)) {
+        if (roles.moderatorIds.includes(candidateId)) {
           showStatus(moderatorStatus, "This user is already a moderator.", true);
           return;
         }
-        roles.moderators.push(candidate);
+        roles.moderatorIds.push(candidateId);
         writeRoles(roles);
         moderatorForm.reset();
         selectedModeratorUser = "";
+        selectedModeratorId = "";
         hideModeratorSuggestions();
         if (moderatorAddBtn) moderatorAddBtn.disabled = true;
         showStatus(moderatorStatus, "Moderator added.");
@@ -6926,11 +6992,11 @@ function formatTagLabel(label) {
       moderatorList?.addEventListener("click", (event) => {
         const btn = event.target.closest("[data-mod-action='remove']");
         if (!btn) return;
-        const item = btn.closest("[data-mod-user]");
-        const username = normalizeUser(item?.dataset.modUser);
-        if (!username) return;
+        const item = btn.closest("[data-mod-user-id]");
+        const modId = String(item?.dataset.modUserId || "").trim();
+        if (!modId) return;
         const roles = readRoles();
-        roles.moderators = roles.moderators.filter((user) => user !== username);
+        roles.moderatorIds = roles.moderatorIds.filter((id) => id !== modId);
         writeRoles(roles);
         showStatus(moderatorStatus, "Moderator removed.");
         renderModeratorList();
@@ -6945,7 +7011,8 @@ function formatTagLabel(label) {
     if (!list) return;
 
     const user = getActiveUser();
-    if (!isModerator(user)) {
+    const userId = getActiveUserId();
+    if (!isModerator(user, userId)) {
       showStatus(status, "Only moderators can access this page.", true);
       return;
     }
@@ -6995,7 +7062,7 @@ function formatTagLabel(label) {
                 <button class="btn btn-danger" type="button" data-action="reject">Reject</button>
               </div>
             </article>
-          `,
+          `
         )
         .join("");
 
