@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "NMBS/SNCB",
       date: "8 March 2026",
-      photographer: "trainbelgium",
+      photographer: "eurorailshots",
       alt: "Hasselt HLE 1914 HLE 1853 + I10 + M7 + HLE 1814",
       numbers: "14",
       consist: [train("HLE 19")],

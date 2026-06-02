@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "Eurostar",
       date: "7 February 2026",
-      photographer: "trainbelgium",
+      photographer: "eurorailshots",
       alt: "London St Pancras Class 373 3206",
       numbers: "3206",
       consist: [train("Class 373")],

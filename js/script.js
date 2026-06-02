@@ -1,4 +1,4 @@
-﻿function toggleMenu() {
+function toggleMenu() {
   const nav = document.getElementById("navLinks");
   const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
@@ -1169,7 +1169,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <button class="station-lightbox-delete" type="button" id="photoSearchDeleteBtn" hidden>Delete photo</button>
-      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
+      <div class="station-lightbox-watermark">&copy; eurorailshots.com</div>
     </div>
     <div class="station-lightbox-panel">
       <div class="station-lightbox-panel-top">
@@ -1210,7 +1210,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   }
 
   function ownerUserName() {
-    return String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    return String(localStorage.getItem("tb_owner_user_v1") || "eurorailshots").trim().toLowerCase();
   }
 
   function readProfilesStore() {
@@ -1224,7 +1224,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function canModerateUser(user) {
     const normalized = String(user || "").trim().toLowerCase();
     if (!normalized) return false;
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "eurorailshots").trim().toLowerCase();
     if (normalized === owner) return true;
     try {
       const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
@@ -1390,7 +1390,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     if (searchLightboxWatermark) {
-      const owner = (entry.photographer || "").trim() || "trainbelgium.com";
+      const owner = (entry.photographer || "").trim() || "eurorailshots.com";
       searchLightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
     }
 
@@ -3301,7 +3301,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     subtitle.textContent = `${station.country}${description}`;
   }
 
-  document.title = `${station.name} - trainbelgium.com`;
+  document.title = `${station.name} - eurorailshots.com`;
 
   function esc(value) {
     return String(value || "")
@@ -3695,7 +3695,7 @@ function formatTagLabel(label) {
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <button class="station-lightbox-delete" type="button" id="stationLightboxDeleteBtn" hidden>Delete photo</button>
-      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
+      <div class="station-lightbox-watermark">&copy; eurorailshots.com</div>
     </div>
     <div class="station-lightbox-panel">
       <div class="station-lightbox-panel-top">
@@ -3814,7 +3814,7 @@ function formatTagLabel(label) {
     try {
       roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
     } catch {}
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "eurorailshots").trim().toLowerCase();
     const profile = profiles[user] || {};
     const account = accounts[user] || {};
     const role = user === owner ? "Owner" : Array.isArray(roles?.moderators) && roles.moderators.includes(user) ? "Moderator" : "Member";
@@ -3886,7 +3886,7 @@ function formatTagLabel(label) {
     }
 
     if (lightboxWatermark) {
-      const owner = String(photographerLabel || "").trim() || "trainbelgium.com";
+      const owner = String(photographerLabel || "").trim() || "eurorailshots.com";
       const profileUser = owner.toLowerCase().endsWith(".com")
         ? owner.slice(0, -4)
         : owner;
@@ -3902,7 +3902,7 @@ function formatTagLabel(label) {
 
     if (lightboxDeleteBtn) {
       const activeUser = getActiveUser();
-      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "eurorailshots")
         .trim()
         .toLowerCase();
       const canDelete = activeUser && activeUser === ownerUser;
@@ -3995,7 +3995,7 @@ function formatTagLabel(label) {
     const user = getActiveUser();
     if (!user) return false;
     try {
-      const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+      const owner = String(localStorage.getItem("tb_owner_user_v1") || "eurorailshots")
         .trim()
         .toLowerCase();
       if (user === owner) return true;
@@ -5131,7 +5131,7 @@ function formatTagLabel(label) {
     try {
       const data = new FormData(form);
       const response = await fetch(
-        "https://formsubmit.co/ajax/info@trainbelgium.com",
+        "https://formsubmit.co/ajax/info@eurorailshots.com",
         {
           method: "POST",
           headers: {
@@ -5724,8 +5724,8 @@ function formatTagLabel(label) {
   function getOwnerUser() {
     const saved = normalizeUser(localStorage.getItem(ownerKey));
     if (saved) return saved;
-    localStorage.setItem(ownerKey, "trainbelgium");
-    return "trainbelgium";
+    localStorage.setItem(ownerKey, "eurorailshots");
+    return "eurorailshots";
   }
 
   function readRoles() {
