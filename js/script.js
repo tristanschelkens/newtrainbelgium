@@ -2090,7 +2090,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" &bull; ");
+        const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
           <button
@@ -2106,7 +2106,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
-              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(stationName)}${stationName && date ? " &bull; " : ""}${esc(date)}</div>` : ""}
               <div class="station-photo-info-footer">
                 <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
                 <div class="station-photo-info-user">${esc(photographer)}</div>
@@ -2170,7 +2170,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" &bull; ");
+        const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
           <button
@@ -2186,7 +2186,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
-              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(stationName)}${stationName && date ? " &bull; " : ""}${esc(date)}</div>` : ""}
               <div class="station-photo-info-footer">
                 <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
                 <div class="station-photo-info-user">${esc(photographer)}</div>
@@ -4144,7 +4144,8 @@ function formatTagLabel(label) {
 
   Array.from(grid.querySelectorAll(".station-photo-card")).forEach((card) => {
     card.addEventListener("click", (event) => {
-      if (event.target.closest("a, button, input, textarea, select")) return;
+      const blocker = event.target.closest("a, button, input, textarea, select");
+      if (blocker && blocker !== card) return;
       const img = card.querySelector("img");
       const index = Number(card?.dataset.photoIndex || 0);
       openLightboxByIndex(index, img || null);
