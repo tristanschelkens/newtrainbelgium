@@ -1209,16 +1209,12 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     return String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
   }
 
-  function ownerUserName() {
-    return String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
-  }
-
   function activeUserId() {
     return String(localStorage.getItem("tb_active_user_id_v1") || "").trim();
   }
 
-  function ownerUserId() {
-    return String(localStorage.getItem("tb_owner_user_id_v1") || "").trim();
+  function activeIsModerator() {
+    return String(localStorage.getItem("tb_active_user_is_moderator_v1") || "false") === "true";
   }
 
   function readProfilesStore() {
@@ -1231,20 +1227,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   function canModerateUser(user) {
     const normalized = String(user || "").trim().toLowerCase();
-    const activeId = activeUserId();
-    const ownerId = ownerUserId();
-    if (!normalized && !activeId) return false;
-    const owner = ownerUserName();
-    if ((ownerId && activeId && activeId === ownerId) || normalized === owner) return true;
-    try {
-      const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[],"moderatorIds":[]}' );
-      const modIds = Array.isArray(roles?.moderatorIds) ? roles.moderatorIds.map((id) => String(id || "").trim()) : [];
-      if (activeId && modIds.includes(activeId)) return true;
-      const mods = Array.isArray(roles?.moderators) ? roles.moderators.map((item) => String(item || "").trim().toLowerCase()) : [];
-      return mods.includes(normalized);
-    } catch {
-      return false;
-    }
+    if (!normalized && !activeUserId()) return false;
+    return activeIsModerator();
   }
 
   function currentSearchCommentKey() {
@@ -3816,25 +3800,25 @@ function formatTagLabel(label) {
     if (!user || !stationProfileDetails || !stationProfileName || !stationProfileUser || !stationProfileAvatar) return;
     let profiles = {};
     let accounts = {};
-    let roles = { moderators: [] };
+    let roles = { moderators: [], moderatorIds: [] };
     try {
       profiles = JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
     } catch {}
     try {
       accounts = JSON.parse(localStorage.getItem("tb_accounts_v1") || "{}");
     } catch {}
-    try {
-      roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
-    } catch {}
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS").trim().toLowerCase();
+    const owner = "";
     const profile = profiles[user] || {};
     const account = accounts[user] || {};
     const accountId = String(account?.id || "").trim();
-    const ownerId = String(localStorage.getItem("tb_owner_user_id_v1") || "").trim();
+    const ownerId = "";
     const modIds = Array.isArray(roles?.moderatorIds) ? roles.moderatorIds.map((id) => String(id || "").trim()) : [];
     const isOwnerById = Boolean(ownerId && accountId && ownerId === accountId);
     const isModById = Boolean(accountId && modIds.includes(accountId));
-    const role = isOwnerById || user === owner ? "Owner" : isModById || (Array.isArray(roles?.moderators) && roles.moderators.includes(user)) ? "Moderator" : "Member";
+    const activeName = String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
+    const activeOwner = String(localStorage.getItem("tb_active_user_is_owner_v1") || "false") === "true";
+    const activeModerator = String(localStorage.getItem("tb_active_user_is_moderator_v1") || "false") === "true";
+    const role = activeOwner && activeName === user ? "Owner" : activeModerator && activeName === user ? "Moderator" : "Member";
     const avatar = String(profile.avatar || "../images/default-avatar.svg");
     const displayName = String(user);
     stationProfileAvatar.src = avatar;
@@ -3919,12 +3903,7 @@ function formatTagLabel(label) {
 
     if (lightboxDeleteBtn) {
       const activeUser = getActiveUser();
-      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS")
-        .trim()
-        .toLowerCase();
-      const activeUserId = String(localStorage.getItem("tb_active_user_id_v1") || "").trim();
-      const ownerUserId = String(localStorage.getItem("tb_owner_user_id_v1") || "").trim();
-      const canDelete = (ownerUserId && activeUserId && activeUserId === ownerUserId) || (activeUser && activeUser === ownerUser);
+      const canDelete = String(localStorage.getItem("tb_active_user_is_owner_v1") || "false") === "true";
       const deletable = canDelete && String(photoId || "").startsWith("sub_");
       lightboxDeleteBtn.hidden = !deletable;
       lightboxDeleteBtn.dataset.photoId = deletable ? String(photoId || "") : "";
@@ -4011,21 +3990,7 @@ function formatTagLabel(label) {
   });
 
   function canModerateComments() {
-    const user = getActiveUser();
-    const userId = getActiveUserId();
-    if (!user) return false;
-    try {
-      const owner = String(localStorage.getItem("tb_owner_user_v1") || "EURORAILSHOTS")
-        .trim()
-        .toLowerCase();
-      if (user === owner) return true;
-      const rawRoles = localStorage.getItem("tb_roles_v1");
-      const roles = rawRoles ? JSON.parse(rawRoles) : {};
-      const moderators = Array.isArray(roles?.moderators) ? roles.moderators : [];
-      return moderators.map((name) => String(name || "").trim().toLowerCase()).includes(user);
-    } catch {
-      return false;
-    }
+    return String(localStorage.getItem("tb_active_user_is_moderator_v1") || "false") === "true";
   }
 
   function setCommentStatus(message, isError = false) {
@@ -5209,6 +5174,9 @@ function formatTagLabel(label) {
 
   const sessionKey = "tb_active_user_v1";
   const sessionIdKey = "tb_active_user_id_v1";
+  const sessionRoleKey = "tb_active_user_role_v1";
+  const sessionIsOwnerKey = "tb_active_user_is_owner_v1";
+  const sessionIsModeratorKey = "tb_active_user_is_moderator_v1";
   const storageKey = "tb_accounts_v1";
   let verifyMode = "verify";
   let resetTokenFromLink = "";
@@ -5264,6 +5232,14 @@ function formatTagLabel(label) {
       throw err;
     }
     return data;
+  }
+
+  function setSessionFromUser(user) {
+    localStorage.setItem(sessionKey, normalizeUsername(user?.username));
+    localStorage.setItem(sessionIdKey, String(user?.id || ""));
+    localStorage.setItem(sessionRoleKey, String(user?.role || ""));
+    localStorage.setItem(sessionIsOwnerKey, String(Boolean(user?.isOwner)));
+    localStorage.setItem(sessionIsModeratorKey, String(Boolean(user?.isModerator)));
   }
 
   function showStatus(message, isError = false) {
@@ -5491,8 +5467,7 @@ function formatTagLabel(label) {
     clearFieldErrors(signInForm);
     apiRequest("/api/auth/login", { username, password })
       .then((data) => {
-        localStorage.setItem(sessionKey, data.user.username);
-        localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
+        setSessionFromUser(data.user);
         const accounts = readAccounts();
         accounts[data.user.username] = {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
@@ -5531,8 +5506,7 @@ function formatTagLabel(label) {
     const code = String(verifyForm.querySelector("#verifyCode")?.value || "").trim();
     apiRequest("/api/auth/verify-email", { email, code })
       .then((data) => {
-        localStorage.setItem(sessionKey, data.user.username);
-        localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
+        setSessionFromUser(data.user);
         const accounts = readAccounts();
         accounts[data.user.username] = {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
@@ -5574,8 +5548,7 @@ function formatTagLabel(label) {
       .then((data) => {
         const resetUser = data?.user || null;
         if (resetUser?.username) {
-          localStorage.setItem(sessionKey, normalizeUsername(resetUser.username));
-          localStorage.setItem(sessionIdKey, String(resetUser?.id || ""));
+          setSessionFromUser(resetUser);
           const accounts = readAccounts();
           accounts[normalizeUsername(resetUser.username)] = {
             createdAt: accounts[normalizeUsername(resetUser.username)]?.createdAt || new Date().toISOString(),
@@ -5613,8 +5586,7 @@ function formatTagLabel(label) {
     .then((data) => {
       if (!data?.user?.username) return;
       const activeUser = normalizeUsername(data.user.username);
-      localStorage.setItem(sessionKey, activeUser);
-      localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
+      setSessionFromUser(data.user);
       showStatus(`Already logged in as ${activeUser}.`);
     })
     .catch(() => {
@@ -5670,10 +5642,10 @@ function formatTagLabel(label) {
   const profileKey = "tb_profiles_v1";
   const submissionsKey = "tb_photo_submissions_v1";
   const commentsKey = "tb_photo_comments_v1";
-  const rolesKey = "tb_roles_v1";
-  const ownerKey = "tb_owner_user_v1";
-  const ownerIdKey = "tb_owner_user_id_v1";
   const sessionIdKey = "tb_active_user_id_v1";
+  const sessionRoleKey = "tb_active_user_role_v1";
+  const sessionIsOwnerKey = "tb_active_user_is_owner_v1";
+  const sessionIsModeratorKey = "tb_active_user_is_moderator_v1";
 
   function normalizeUser(value) {
     return String(value || "").trim().toLowerCase();
@@ -5726,12 +5698,31 @@ function formatTagLabel(label) {
     return String(localStorage.getItem(sessionIdKey) || "").trim();
   }
 
+  function getActiveUserRole() {
+    return String(localStorage.getItem(sessionRoleKey) || "").trim().toLowerCase();
+  }
+
+  function getActiveIsOwner() {
+    return String(localStorage.getItem(sessionIsOwnerKey) || "false") === "true";
+  }
+
+  function getActiveIsModerator() {
+    return String(localStorage.getItem(sessionIsModeratorKey) || "false") === "true";
+  }
+
   async function syncActiveUserFromServer() {
     try {
       const res = await fetch("/api/auth/session", { credentials: "include" });
       if (!res.ok) {
         localStorage.removeItem(sessionKey);
         localStorage.removeItem(sessionIdKey);
+        localStorage.removeItem(sessionRoleKey);
+        localStorage.removeItem(sessionIsOwnerKey);
+        localStorage.removeItem(sessionIsModeratorKey);
+        localStorage.removeItem(sessionIdKey);
+        localStorage.removeItem(sessionRoleKey);
+        localStorage.removeItem(sessionIsOwnerKey);
+        localStorage.removeItem(sessionIsModeratorKey);
         return "";
       }
       const data = await res.json();
@@ -5739,10 +5730,20 @@ function formatTagLabel(label) {
       if (!user) {
         localStorage.removeItem(sessionKey);
         localStorage.removeItem(sessionIdKey);
+        localStorage.removeItem(sessionRoleKey);
+        localStorage.removeItem(sessionIsOwnerKey);
+        localStorage.removeItem(sessionIsModeratorKey);
+        localStorage.removeItem(sessionIdKey);
+        localStorage.removeItem(sessionRoleKey);
+        localStorage.removeItem(sessionIsOwnerKey);
+        localStorage.removeItem(sessionIsModeratorKey);
         return "";
       }
       localStorage.setItem(sessionKey, user);
       localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
+      localStorage.setItem(sessionRoleKey, String(data?.user?.role || ""));
+      localStorage.setItem(sessionIsOwnerKey, String(Boolean(data?.user?.isOwner)));
+      localStorage.setItem(sessionIsModeratorKey, String(Boolean(data?.user?.isModerator)));
       return user;
     } catch {
       return getActiveUser();
@@ -5760,17 +5761,32 @@ function formatTagLabel(label) {
     }
   }
 
+  function isOwner(user, userId = "") {
+    return getActiveIsOwner();
+  }
+
+  function isModerator(user, userId = "") {
+    return getActiveIsModerator();
+  }
+
+  let moderatorState = { moderatorIds: [], moderators: [] };
+
+  function readRoles() {
+    return moderatorState;
+  }
+
+  function writeRoles(roles) {
+    const ids = Array.from(new Set((roles?.moderatorIds || []).map((id) => String(id || "").trim()).filter(Boolean)));
+    const names = Array.from(new Set((roles?.moderators || []).map((name) => normalizeUser(name)).filter(Boolean)));
+    moderatorState = { moderatorIds: ids, moderators: names };
+  }
+
   function getOwnerUser() {
-    const saved = normalizeUser(localStorage.getItem(ownerKey));
-    if (saved) return saved;
-    localStorage.setItem(ownerKey, "EURORAILSHOTS");
-    return "EURORAILSHOTS";
+    return getActiveIsOwner() ? getActiveUser() : "";
   }
 
   function getOwnerUserId() {
-    const saved = String(localStorage.getItem(ownerIdKey) || "").trim();
-    if (saved) return saved;
-    return "";
+    return getActiveIsOwner() ? getActiveUserId() : "";
   }
 
   function findUserIdByUsername(username) {
@@ -5780,35 +5796,6 @@ function formatTagLabel(label) {
     return String(accounts?.[key]?.id || "").trim();
   }
 
-  function readRoles() {
-    const roles = readJson(rolesKey, { moderators: [], moderatorIds: [] });
-    if (!Array.isArray(roles.moderators)) roles.moderators = [];
-    if (!Array.isArray(roles.moderatorIds)) roles.moderatorIds = [];
-    return roles;
-  }
-
-  function writeRoles(roles) {
-    const normalizedModeratorIds = Array.from(new Set((roles?.moderatorIds || []).map((id) => String(id || "").trim()).filter(Boolean)));
-    const normalizedModerators = Array.from(new Set((roles?.moderators || []).map((user) => normalizeUser(user)).filter(Boolean)));
-    writeJson(rolesKey, { moderatorIds: normalizedModeratorIds, moderators: normalizedModerators });
-  }
-
-  function isOwner(user, userId = "") {
-    const normalizedId = String(userId || "").trim();
-    const ownerId = getOwnerUserId();
-    if (ownerId && normalizedId) return normalizedId === ownerId;
-    return normalizeUser(user) === getOwnerUser();
-  }
-
-  function isModerator(user, userId = "") {
-    const normalized = normalizeUser(user);
-    const normalizedId = String(userId || "").trim();
-    if (!normalized && !normalizedId) return false;
-    if (isOwner(normalized, normalizedId)) return true;
-    const roles = readRoles();
-    if (normalizedId && Array.isArray(roles.moderatorIds) && roles.moderatorIds.includes(normalizedId)) return true;
-    return Array.isArray(roles.moderators) && roles.moderators.includes(normalized);
-  }
 
   function showStatus(el, message, isError = false) {
     if (!el) return;
@@ -6754,6 +6741,10 @@ function formatTagLabel(label) {
         credentials: "include",
       }).finally(() => {
         localStorage.removeItem(sessionKey);
+        localStorage.removeItem(sessionIdKey);
+        localStorage.removeItem(sessionRoleKey);
+        localStorage.removeItem(sessionIsOwnerKey);
+        localStorage.removeItem(sessionIsModeratorKey);
         window.location.href = "Login.html";
       });
     });
@@ -6837,6 +6828,21 @@ function formatTagLabel(label) {
       if (avatarPreview) avatarPreview.src = profiles[user].avatar || defaultAvatar;
       showStatus(status, "Profile saved.");
     });
+
+    async function loadModeratorsFromServer() {
+      try {
+        const res = await fetch("/api/moderators", { credentials: "include" });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not load moderators."));
+        const items = Array.isArray(data?.items) ? data.items : [];
+        writeRoles({
+          moderatorIds: items.map((item) => String(item?.id || "").trim()).filter(Boolean),
+          moderators: items.map((item) => normalizeUser(item?.username || "")).filter(Boolean),
+        });
+      } catch (err) {
+        showStatus(moderatorStatus, String(err?.message || "Could not load moderators."), true);
+      }
+    }
 
     function renderModeratorList() {
       if (!moderatorList) return;
