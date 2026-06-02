@@ -2954,11 +2954,20 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     const slug = String(searchCard.dataset.photoSlug || "").trim().toLowerCase();
     const index = Number(searchCard.dataset.photoIndex || 0);
-    const entry = (photoSeriesGroups.get(searchCard.dataset.seriesKey || "") || []).find(
+    const seriesKey = String(searchCard.dataset.seriesKey || "");
+    let entry = (photoSeriesGroups.get(seriesKey) || []).find(
       (photo) => photo.slug === slug && photo.index === index,
     );
 
+    if (!entry) {
+      entry = allPhotoEntries.find((photo) => String(photo.seriesKey || "") === seriesKey && Number(photo.index) === index) || null;
+    }
     if (!entry) return;
+
+    if (searchCard.classList.contains("station-photo-card-detailed")) {
+      openSearchLightboxEntry(entry);
+      return;
+    }
 
     const hasQuery = String(activeQuery || "").trim().length > 0;
     if (hasQuery) {
