@@ -1,4 +1,4 @@
-function toggleMenu() {
+﻿function toggleMenu() {
   const nav = document.getElementById("navLinks");
   const menuBtn = document.getElementById("menuBtn");
   if (!nav) return;
@@ -441,7 +441,7 @@ const vehiclePrefixNames = {
   p: "P",
   mw: "MW",
   ms: "MS",
-  skoda: "�koda",
+  skoda: "Škoda",
   traxx: "TRAXX",
   tgv: "TGV",
 };
@@ -913,10 +913,10 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       return { key: "traxx", label: "TRAXX" };
     }
     if (withoutCount.startsWith("skoda 263") || combinedWithoutCount.startsWith("skoda 263")) {
-      return { key: "skoda-263", label: "�koda 263" };
+      return { key: "skoda-263", label: "Škoda 263" };
     }
     if (withoutCount.startsWith("skoda")) {
-      return { key: "skoda", label: "�koda" };
+      return { key: "skoda", label: "Škoda" };
     }
     if (withoutCount.startsWith("br146")) {
       return { key: "br146", label: "BR 146" };
@@ -1169,7 +1169,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <button class="station-lightbox-delete" type="button" id="photoSearchDeleteBtn" hidden>Delete photo</button>
-      <div class="station-lightbox-watermark">&copy; eurorailshots.com</div>
+      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
     <div class="station-lightbox-panel">
       <div class="station-lightbox-panel-top">
@@ -1209,12 +1209,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     return String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
   }
 
-  function activeUserId() {
-    return String(localStorage.getItem("tb_active_user_id_v1") || "").trim();
-  }
-
-  function activeIsModerator() {
-    return String(localStorage.getItem("tb_active_user_is_moderator_v1") || "false") === "true";
+  function ownerUserName() {
+    return String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
   }
 
   function readProfilesStore() {
@@ -1227,8 +1223,16 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   function canModerateUser(user) {
     const normalized = String(user || "").trim().toLowerCase();
-    if (!normalized && !activeUserId()) return false;
-    return activeIsModerator();
+    if (!normalized) return false;
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
+    if (normalized === owner) return true;
+    try {
+      const roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
+      const mods = Array.isArray(roles?.moderators) ? roles.moderators.map((item) => String(item || "").trim().toLowerCase()) : [];
+      return mods.includes(normalized);
+    } catch {
+      return false;
+    }
   }
 
   function currentSearchCommentKey() {
@@ -1386,7 +1390,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     }
 
     if (searchLightboxWatermark) {
-      const owner = (entry.photographer || "").trim() || "eurorailshots.com";
+      const owner = (entry.photographer || "").trim() || "trainbelgium.com";
       searchLightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
     }
 
@@ -2090,7 +2094,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" � ");
+        const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
           <button
@@ -2106,7 +2110,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
-              ${metaRow ? `<div class="station-photo-info-meta">${esc(stationName)}${stationName && date ? " &bull; " : ""}${esc(date)}</div>` : ""}
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
               <div class="station-photo-info-footer">
                 <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
                 <div class="station-photo-info-user">${esc(photographer)}</div>
@@ -2170,7 +2174,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
         const photographer = String(photo.photographer || "").trim();
         const avatarSrc = getProfileAvatarForUser(photographer);
         const avatarAlt = photographer ? `Profile photo of ${photographer}` : "Profile photo";
-        const metaRow = [stationName, date].filter(Boolean).join(" � ");
+        const metaRow = [stationName, date].filter(Boolean).join(" • ");
 
         return `
           <button
@@ -2186,7 +2190,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
             ${leadMeta}
             <div class="station-photo-info">
               <div class="station-photo-info-title">${esc(title)}</div>
-              ${metaRow ? `<div class="station-photo-info-meta">${esc(stationName)}${stationName && date ? " &bull; " : ""}${esc(date)}</div>` : ""}
+              ${metaRow ? `<div class="station-photo-info-meta">${esc(metaRow)}</div>` : ""}
               <div class="station-photo-info-footer">
                 <img class="station-photo-avatar" loading="lazy" src="${esc(avatarSrc)}" alt="${esc(avatarAlt)}" />
                 <div class="station-photo-info-user">${esc(photographer)}</div>
@@ -2419,7 +2423,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
               <img loading="lazy" src="${esc(photo.src)}" alt="${esc(photo.alt)}" />
               <div class="overlay"><h3>${esc(photo.stationName)}</h3></div>
             </button>
-          `
+          `,
         )
         .join("");
       sortVisibleCards();
@@ -2954,20 +2958,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
     const slug = String(searchCard.dataset.photoSlug || "").trim().toLowerCase();
     const index = Number(searchCard.dataset.photoIndex || 0);
-    const seriesKey = String(searchCard.dataset.seriesKey || "");
-    let entry = (photoSeriesGroups.get(seriesKey) || []).find(
+    const entry = (photoSeriesGroups.get(searchCard.dataset.seriesKey || "") || []).find(
       (photo) => photo.slug === slug && photo.index === index,
     );
 
-    if (!entry) {
-      entry = allPhotoEntries.find((photo) => String(photo.seriesKey || "") === seriesKey && Number(photo.index) === index) || null;
-    }
     if (!entry) return;
-
-    if (searchCard.classList.contains("station-photo-card-detailed")) {
-      openSearchLightboxEntry(entry);
-      return;
-    }
 
     const hasQuery = String(activeQuery || "").trim().length > 0;
     if (hasQuery) {
@@ -3141,7 +3136,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   overlayText.textContent = latestPhoto.stationName;
 
   caption.classList.add("latest-photo-line");
-  caption.innerHTML = `<span class="latest-photo-tag">Newest upload</span><span class="latest-photo-separator">·</span><a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
+  caption.innerHTML = `<span class="latest-photo-tag">Newest upload</span><span class="latest-photo-separator">Â·</span><a class="latest-photo-link" href="${stationLink}">${latestPhoto.stationName}</a><span class="latest-photo-separator">Â·</span><span class="latest-photo-date">${formatPhotoDate(latestPhoto.parsedDate)}</span>`;
 })();
 
 (function initPhotoMap() {
@@ -3306,7 +3301,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     subtitle.textContent = `${station.country}${description}`;
   }
 
-  document.title = `${station.name} - eurorailshots.com`;
+  document.title = `${station.name} - trainbelgium.com`;
 
   function esc(value) {
     return String(value || "")
@@ -3326,7 +3321,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     const rawType = String(type || "").trim();
     const rawNumber = String(number || "").trim();
     const lowerType = rawType.toLowerCase();
-    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
+    const typeWithoutCount = lowerType.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/, "");
     const normalizedType = typeWithoutCount.replace(/\s+/g, " ").trim();
     const compactType = normalizedType.replace(/\s+/g, "");
     const compactNumber = rawNumber.toLowerCase().replace(/\s+/g, "");
@@ -3373,7 +3368,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       .replace(/\s+/g, " ");
     if (!normalized) return "";
 
-    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
+    const withoutCount = normalized.replace(/^\d+\s*[xÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½]\s*/i, "");
     const parts = withoutCount.split(/\s+/).filter(Boolean);
     if (parts.length === 0) return "";
 
@@ -3700,7 +3695,7 @@ function formatTagLabel(label) {
       <div class="station-lightbox-date" aria-hidden="true"></div>
       <div class="station-lightbox-meta" aria-hidden="true"></div>
       <button class="station-lightbox-delete" type="button" id="stationLightboxDeleteBtn" hidden>Delete photo</button>
-      <div class="station-lightbox-watermark">&copy; eurorailshots.com</div>
+      <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
     <div class="station-lightbox-panel">
       <div class="station-lightbox-panel-top">
@@ -3809,25 +3804,20 @@ function formatTagLabel(label) {
     if (!user || !stationProfileDetails || !stationProfileName || !stationProfileUser || !stationProfileAvatar) return;
     let profiles = {};
     let accounts = {};
-    let roles = { moderators: [], moderatorIds: [] };
+    let roles = { moderators: [] };
     try {
       profiles = JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
     } catch {}
     try {
       accounts = JSON.parse(localStorage.getItem("tb_accounts_v1") || "{}");
     } catch {}
-    const owner = "";
+    try {
+      roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
+    } catch {}
+    const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium").trim().toLowerCase();
     const profile = profiles[user] || {};
     const account = accounts[user] || {};
-    const accountId = String(account?.id || "").trim();
-    const ownerId = "";
-    const modIds = Array.isArray(roles?.moderatorIds) ? roles.moderatorIds.map((id) => String(id || "").trim()) : [];
-    const isOwnerById = Boolean(ownerId && accountId && ownerId === accountId);
-    const isModById = Boolean(accountId && modIds.includes(accountId));
-    const activeName = String(localStorage.getItem("tb_active_user_v1") || "").trim().toLowerCase();
-    const activeOwner = String(localStorage.getItem("tb_active_user_is_owner_v1") || "false") === "true";
-    const activeModerator = String(localStorage.getItem("tb_active_user_is_moderator_v1") || "false") === "true";
-    const role = activeOwner && activeName === user ? "Owner" : activeModerator && activeName === user ? "Moderator" : "Member";
+    const role = user === owner ? "Owner" : Array.isArray(roles?.moderators) && roles.moderators.includes(user) ? "Moderator" : "Member";
     const avatar = String(profile.avatar || "../images/default-avatar.svg");
     const displayName = String(user);
     stationProfileAvatar.src = avatar;
@@ -3896,7 +3886,7 @@ function formatTagLabel(label) {
     }
 
     if (lightboxWatermark) {
-      const owner = String(photographerLabel || "").trim() || "eurorailshots.com";
+      const owner = String(photographerLabel || "").trim() || "trainbelgium.com";
       const profileUser = owner.toLowerCase().endsWith(".com")
         ? owner.slice(0, -4)
         : owner;
@@ -3912,7 +3902,10 @@ function formatTagLabel(label) {
 
     if (lightboxDeleteBtn) {
       const activeUser = getActiveUser();
-      const canDelete = String(localStorage.getItem("tb_active_user_is_owner_v1") || "false") === "true";
+      const ownerUser = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+        .trim()
+        .toLowerCase();
+      const canDelete = activeUser && activeUser === ownerUser;
       const deletable = canDelete && String(photoId || "").startsWith("sub_");
       lightboxDeleteBtn.hidden = !deletable;
       lightboxDeleteBtn.dataset.photoId = deletable ? String(photoId || "") : "";
@@ -3999,7 +3992,20 @@ function formatTagLabel(label) {
   });
 
   function canModerateComments() {
-    return String(localStorage.getItem("tb_active_user_is_moderator_v1") || "false") === "true";
+    const user = getActiveUser();
+    if (!user) return false;
+    try {
+      const owner = String(localStorage.getItem("tb_owner_user_v1") || "trainbelgium")
+        .trim()
+        .toLowerCase();
+      if (user === owner) return true;
+      const rawRoles = localStorage.getItem("tb_roles_v1");
+      const roles = rawRoles ? JSON.parse(rawRoles) : {};
+      const moderators = Array.isArray(roles?.moderators) ? roles.moderators : [];
+      return moderators.map((name) => String(name || "").trim().toLowerCase()).includes(user);
+    } catch {
+      return false;
+    }
   }
 
   function setCommentStatus(message, isError = false) {
@@ -4079,7 +4085,6 @@ function formatTagLabel(label) {
   lightboxCommentForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     const user = getActiveUser();
-    const userId = getActiveUserId();
     if (!user) {
       setCommentStatus("Log in to post a comment.", true);
       return;
@@ -4151,15 +4156,15 @@ function formatTagLabel(label) {
     openLightboxByIndex(currentSeriesPool[currentSeriesPosition]);
   }
 
-  Array.from(grid.querySelectorAll(".station-photo-card")).forEach((card) => {
-    card.addEventListener("click", (event) => {
-      const blocker = event.target.closest("a, button, input, textarea, select");
-      if (blocker && blocker !== card) return;
-      const img = card.querySelector("img");
-      const index = Number(card?.dataset.photoIndex || 0);
-      openLightboxByIndex(index, img || null);
-    });
-  });
+  Array.from(grid.querySelectorAll(".station-photo-card img")).forEach(
+    (img) => {
+      img.addEventListener("click", () => {
+        const card = img.closest(".station-photo-card");
+        const index = Number(card?.dataset.photoIndex || 0);
+        openLightboxByIndex(index, img);
+      });
+    },
+  );
 
   if (closeBtn) {
     closeBtn.addEventListener("click", closeLightbox);
@@ -5126,7 +5131,7 @@ function formatTagLabel(label) {
     try {
       const data = new FormData(form);
       const response = await fetch(
-        "https://formsubmit.co/ajax/info@eurorailshots.com",
+        "https://formsubmit.co/ajax/info@trainbelgium.com",
         {
           method: "POST",
           headers: {
@@ -5182,10 +5187,6 @@ function formatTagLabel(label) {
   if (!signInForm || !createForm || !status) return;
 
   const sessionKey = "tb_active_user_v1";
-  const sessionIdKey = "tb_active_user_id_v1";
-  const sessionRoleKey = "tb_active_user_role_v1";
-  const sessionIsOwnerKey = "tb_active_user_is_owner_v1";
-  const sessionIsModeratorKey = "tb_active_user_is_moderator_v1";
   const storageKey = "tb_accounts_v1";
   let verifyMode = "verify";
   let resetTokenFromLink = "";
@@ -5217,7 +5218,6 @@ function formatTagLabel(label) {
       const item = value && typeof value === "object" ? value : {};
       normalized[username] = {
         createdAt: item.createdAt || new Date().toISOString(),
-        id: item.id ? String(item.id) : "",
       };
     });
     return normalized;
@@ -5241,14 +5241,6 @@ function formatTagLabel(label) {
       throw err;
     }
     return data;
-  }
-
-  function setSessionFromUser(user) {
-    localStorage.setItem(sessionKey, normalizeUsername(user?.username));
-    localStorage.setItem(sessionIdKey, String(user?.id || ""));
-    localStorage.setItem(sessionRoleKey, String(user?.role || ""));
-    localStorage.setItem(sessionIsOwnerKey, String(Boolean(user?.isOwner)));
-    localStorage.setItem(sessionIsModeratorKey, String(Boolean(user?.isModerator)));
   }
 
   function showStatus(message, isError = false) {
@@ -5476,11 +5468,10 @@ function formatTagLabel(label) {
     clearFieldErrors(signInForm);
     apiRequest("/api/auth/login", { username, password })
       .then((data) => {
-        setSessionFromUser(data.user);
+        localStorage.setItem(sessionKey, data.user.username);
         const accounts = readAccounts();
         accounts[data.user.username] = {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
-          id: String(data?.user?.id || accounts[data.user.username]?.id || ""),
         };
         writeAccounts(accounts);
         window.location.replace(getPostLoginRedirect());
@@ -5515,11 +5506,10 @@ function formatTagLabel(label) {
     const code = String(verifyForm.querySelector("#verifyCode")?.value || "").trim();
     apiRequest("/api/auth/verify-email", { email, code })
       .then((data) => {
-        setSessionFromUser(data.user);
+        localStorage.setItem(sessionKey, data.user.username);
         const accounts = readAccounts();
         accounts[data.user.username] = {
           createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
-          id: String(data?.user?.id || accounts[data.user.username]?.id || ""),
         };
         writeAccounts(accounts);
         window.location.replace(getPostLoginRedirect());
@@ -5557,11 +5547,10 @@ function formatTagLabel(label) {
       .then((data) => {
         const resetUser = data?.user || null;
         if (resetUser?.username) {
-          setSessionFromUser(resetUser);
+          localStorage.setItem(sessionKey, normalizeUsername(resetUser.username));
           const accounts = readAccounts();
           accounts[normalizeUsername(resetUser.username)] = {
             createdAt: accounts[normalizeUsername(resetUser.username)]?.createdAt || new Date().toISOString(),
-            id: String(resetUser?.id || accounts[normalizeUsername(resetUser.username)]?.id || ""),
           };
           writeAccounts(accounts);
           window.location.replace(getPostLoginRedirect());
@@ -5595,7 +5584,7 @@ function formatTagLabel(label) {
     .then((data) => {
       if (!data?.user?.username) return;
       const activeUser = normalizeUsername(data.user.username);
-      setSessionFromUser(data.user);
+      localStorage.setItem(sessionKey, activeUser);
       showStatus(`Already logged in as ${activeUser}.`);
     })
     .catch(() => {
@@ -5651,10 +5640,8 @@ function formatTagLabel(label) {
   const profileKey = "tb_profiles_v1";
   const submissionsKey = "tb_photo_submissions_v1";
   const commentsKey = "tb_photo_comments_v1";
-  const sessionIdKey = "tb_active_user_id_v1";
-  const sessionRoleKey = "tb_active_user_role_v1";
-  const sessionIsOwnerKey = "tb_active_user_is_owner_v1";
-  const sessionIsModeratorKey = "tb_active_user_is_moderator_v1";
+  const rolesKey = "tb_roles_v1";
+  const ownerKey = "tb_owner_user_v1";
 
   function normalizeUser(value) {
     return String(value || "").trim().toLowerCase();
@@ -5703,56 +5690,20 @@ function formatTagLabel(label) {
     return normalizeUser(localStorage.getItem(sessionKey));
   }
 
-  function getActiveUserId() {
-    return String(localStorage.getItem(sessionIdKey) || "").trim();
-  }
-
-  function getActiveUserRole() {
-    return String(localStorage.getItem(sessionRoleKey) || "").trim().toLowerCase();
-  }
-
-  function getActiveIsOwner() {
-    return String(localStorage.getItem(sessionIsOwnerKey) || "false") === "true";
-  }
-
-  function getActiveIsModerator() {
-    return String(localStorage.getItem(sessionIsModeratorKey) || "false") === "true";
-  }
-
   async function syncActiveUserFromServer() {
     try {
       const res = await fetch("/api/auth/session", { credentials: "include" });
       if (!res.ok) {
         localStorage.removeItem(sessionKey);
-        localStorage.removeItem(sessionIdKey);
-        localStorage.removeItem(sessionRoleKey);
-        localStorage.removeItem(sessionIsOwnerKey);
-        localStorage.removeItem(sessionIsModeratorKey);
-        localStorage.removeItem(sessionIdKey);
-        localStorage.removeItem(sessionRoleKey);
-        localStorage.removeItem(sessionIsOwnerKey);
-        localStorage.removeItem(sessionIsModeratorKey);
         return "";
       }
       const data = await res.json();
       const user = normalizeUser(data?.user?.username);
       if (!user) {
         localStorage.removeItem(sessionKey);
-        localStorage.removeItem(sessionIdKey);
-        localStorage.removeItem(sessionRoleKey);
-        localStorage.removeItem(sessionIsOwnerKey);
-        localStorage.removeItem(sessionIsModeratorKey);
-        localStorage.removeItem(sessionIdKey);
-        localStorage.removeItem(sessionRoleKey);
-        localStorage.removeItem(sessionIsOwnerKey);
-        localStorage.removeItem(sessionIsModeratorKey);
         return "";
       }
       localStorage.setItem(sessionKey, user);
-      localStorage.setItem(sessionIdKey, String(data?.user?.id || ""));
-      localStorage.setItem(sessionRoleKey, String(data?.user?.role || ""));
-      localStorage.setItem(sessionIsOwnerKey, String(Boolean(data?.user?.isOwner)));
-      localStorage.setItem(sessionIsModeratorKey, String(Boolean(data?.user?.isModerator)));
       return user;
     } catch {
       return getActiveUser();
@@ -5770,41 +5721,38 @@ function formatTagLabel(label) {
     }
   }
 
-  function isOwner(user, userId = "") {
-    return getActiveIsOwner();
+  function getOwnerUser() {
+    const saved = normalizeUser(localStorage.getItem(ownerKey));
+    if (saved) return saved;
+    localStorage.setItem(ownerKey, "trainbelgium");
+    return "trainbelgium";
   }
-
-  function isModerator(user, userId = "") {
-    return getActiveIsModerator();
-  }
-
-  let moderatorState = { moderatorIds: [], moderators: [] };
 
   function readRoles() {
-    return moderatorState;
+    const roles = readJson(rolesKey, { moderators: [] });
+    if (!Array.isArray(roles.moderators)) roles.moderators = [];
+    return roles;
   }
 
   function writeRoles(roles) {
-    const ids = Array.from(new Set((roles?.moderatorIds || []).map((id) => String(id || "").trim()).filter(Boolean)));
-    const names = Array.from(new Set((roles?.moderators || []).map((name) => normalizeUser(name)).filter(Boolean)));
-    moderatorState = { moderatorIds: ids, moderators: names };
+    const normalized = {
+      moderators: Array.from(
+        new Set((roles?.moderators || []).map((user) => normalizeUser(user)).filter(Boolean)),
+      ),
+    };
+    writeJson(rolesKey, normalized);
   }
 
-  function getOwnerUser() {
-    return getActiveIsOwner() ? getActiveUser() : "";
+  function isOwner(user) {
+    return normalizeUser(user) === getOwnerUser();
   }
 
-  function getOwnerUserId() {
-    return getActiveIsOwner() ? getActiveUserId() : "";
+  function isModerator(user) {
+    const normalized = normalizeUser(user);
+    if (!normalized) return false;
+    if (isOwner(normalized)) return true;
+    return readRoles().moderators.includes(normalized);
   }
-
-  function findUserIdByUsername(username) {
-    const key = normalizeUser(username);
-    if (!key) return "";
-    const accounts = readJson(accountsKey, {});
-    return String(accounts?.[key]?.id || "").trim();
-  }
-
 
   function showStatus(el, message, isError = false) {
     if (!el) return;
@@ -5919,7 +5867,7 @@ function formatTagLabel(label) {
       "CIE",
       "Comboios de Portugal",
       "CrossCountry",
-      "ČD",
+      "ÄŒD",
       "DB",
       "DSB",
       "East Midlands Railway",
@@ -5937,7 +5885,7 @@ function formatTagLabel(label) {
       "GWR",
       "Hellenic Train",
       "Hull Trains",
-      "Iarnród Éireann",
+      "IarnrÃ³d Ã‰ireann",
       "Infrabel",
       "Italo",
       "LNER",
@@ -5945,7 +5893,7 @@ function formatTagLabel(label) {
       "Lumo",
       "LVR",
       "LTG Link",
-      "MÁV-START",
+      "MÃV-START",
       "Merseyrail",
       "Metronom",
       "MTRX",
@@ -5956,7 +5904,7 @@ function formatTagLabel(label) {
       "Northern",
       "NS",
       "NTV",
-      "ÖBB",
+      "Ã–BB",
       "OUIGO",
       "PKP Intercity",
       "Polregio",
@@ -5970,9 +5918,9 @@ function formatTagLabel(label) {
       "South Western Railway",
       "Southeastern",
       "Southern",
-      "SŽ",
-      "Tågåkeriet i Bergslagen",
-      "TCDD Taşımacılık",
+      "SÅ½",
+      "TÃ¥gÃ¥keriet i Bergslagen",
+      "TCDD TaÅŸÄ±macÄ±lÄ±k",
       "Thalys",
       "Trenitalia",
       "Transdev",
@@ -6040,7 +5988,7 @@ function formatTagLabel(label) {
         austria: "../images/Other/Flags/Austria.svg",
         belarus: "../images/Other/Flags/Belarus.svg",
         belgium: "../images/Other/Flags/Belgium.svg",
-        bosniaandherzegovina: "../images/Other/Flags/BosniëHerzegovina.svg",
+        bosniaandherzegovina: "../images/Other/Flags/BosniÃ«Herzegovina.svg",
         bulgaria: "../images/Other/Flags/Bulgaria.svg",
         croatia: "../images/Other/Flags/Croatia.svg",
         cyprus: "../images/Other/Flags/Cyprus.svg",
@@ -6401,7 +6349,7 @@ function formatTagLabel(label) {
                 <small>${escHtml(item.province ? `${item.province}, ${item.country || "-"}` : (item.country || "-"))}</small>
               </span>
             </button>
-          `
+          `,
         )
         .join("");
       stationSuggestions.hidden = false;
@@ -6636,7 +6584,6 @@ function formatTagLabel(label) {
       event.preventDefault();
       if (isSubmittingPhoto) return;
       const user = getActiveUser();
-    const userId = getActiveUserId();
       if (!user) {
         redirectToLoginForSubmit();
         return;
@@ -6750,16 +6697,11 @@ function formatTagLabel(label) {
         credentials: "include",
       }).finally(() => {
         localStorage.removeItem(sessionKey);
-        localStorage.removeItem(sessionIdKey);
-        localStorage.removeItem(sessionRoleKey);
-        localStorage.removeItem(sessionIsOwnerKey);
-        localStorage.removeItem(sessionIsModeratorKey);
         window.location.href = "Login.html";
       });
     });
 
     const user = getActiveUser();
-    const userId = getActiveUserId();
     if (!user) {
       if (summaryName) summaryName.textContent = "Guest";
       if (summaryMeta) summaryMeta.textContent = "Not logged in";
@@ -6776,8 +6718,8 @@ function formatTagLabel(label) {
     const profiles = readJson(profileKey, {});
     const profile = profiles[user] || {};
     const owner = getOwnerUser();
-    const userIsOwner = isOwner(user, userId);
-    const userIsModerator = isModerator(user, userId);
+    const userIsOwner = isOwner(user);
+    const userIsModerator = isModerator(user);
     const moderatorCard = document.getElementById("moderatorManagementCard");
     const moderatorForm = document.getElementById("moderatorAssignForm");
     const moderatorStatus = document.getElementById("moderatorAssignStatus");
@@ -6786,7 +6728,6 @@ function formatTagLabel(label) {
     const moderatorSuggestions = document.getElementById("moderatorSuggestions");
     const moderatorAddBtn = document.getElementById("moderatorAddBtn");
     let selectedModeratorUser = "";
-    let selectedModeratorId = "";
 
     form.profileUsername.value = user;
     let profileAvatarValue = String(profile.avatar || "").trim();
@@ -6838,102 +6779,57 @@ function formatTagLabel(label) {
       showStatus(status, "Profile saved.");
     });
 
-    async function loadModeratorsFromServer() {
-      try {
-        const res = await fetch("/api/moderators", { credentials: "include" });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not load moderators."));
-        const items = Array.isArray(data?.items) ? data.items : [];
-        writeRoles({
-          moderatorIds: items.map((item) => String(item?.id || "").trim()).filter(Boolean),
-          moderators: items.map((item) => normalizeUser(item?.username || "")).filter(Boolean),
-        });
-      } catch (err) {
-        showStatus(moderatorStatus, String(err?.message || "Could not load moderators."), true);
-      }
-    }
-
-    function getUserSnapshotById(userId) {
-      const id = String(userId || "").trim();
-      const accountsMap = readJson(accountsKey, {});
-      const profilesMap = readJson(profileKey, {});
-      const usernames = Object.keys(accountsMap || {});
-      const matchUsername = usernames.find((name) => String(accountsMap?.[name]?.id || "").trim() === id) || "";
-      const profileItem = profilesMap[matchUsername] || {};
-      return { id, username: matchUsername, label: matchUsername, avatar: String(profileItem.avatar || defaultAvatar), email: "" };
-    }
-
     function renderModeratorList() {
       if (!moderatorList) return;
       const roles = readRoles();
-      if (roles.moderatorIds.length === 0) {
+      if (roles.moderators.length === 0) {
         moderatorList.innerHTML = '<p class="muted">No extra moderators yet.</p>';
         return;
       }
-      moderatorList.innerHTML = roles.moderatorIds
-        .map((modId, idx) => {
-          const item = getUserSnapshotById(modId);
-          const label = item.label || (Array.isArray(roles.moderators) ? (roles.moderators[idx] || `User #${modId}`) : `User #${modId}`);
-          return `
-            <article class="moderation-item" data-mod-user-id="${modId}">
-              <h3>${escHtml(label)}</h3>
+      moderatorList.innerHTML = roles.moderators
+        .map(
+          (username) => `
+            <article class="moderation-item" data-mod-user="${username}">
+              <h3>${username}</h3>
               <div class="moderation-actions">
                 <button class="btn btn-danger" type="button" data-mod-action="remove">Remove moderator</button>
               </div>
             </article>
-          `;
-        })
+          `,
+        )
         .join("");
     }
 
-    function getLocalModeratorCandidates(query) {
+    function getModeratorCandidates(query) {
       const accountsMap = readJson(accountsKey, {});
       const profilesMap = readJson(profileKey, {});
       const q = normalizeUser(query);
       if (!q) return [];
-      const usernames = Array.from(new Set([...Object.keys(accountsMap || {}), ...Object.keys(profilesMap || {})]));
+      const usernames = Array.from(
+        new Set([
+          ...Object.keys(accountsMap || {}),
+          ...Object.keys(profilesMap || {}),
+        ]),
+      );
       return usernames
         .map((username) => normalizeUser(username))
-        .filter((username) => Boolean(username) && username.includes(q))
+        .filter((username) => {
+          if (!username) return false;
+          const profileItem = profilesMap[username] || {};
+          const accountItem = accountsMap[username] || {};
+          return username.includes(q);
+        })
+        .filter((username) => username !== owner)
+        .slice(0, 8)
         .map((username) => {
           const profileItem = profilesMap[username] || {};
           const accountItem = accountsMap[username] || {};
           return {
             username,
-            id: String(accountItem?.id || "").trim(),
             avatar: String(profileItem.avatar || defaultAvatar),
             email: "",
           };
-        })
-        .filter((item) => Boolean(item.id))
-        .filter((item) => !isOwner(item.username, item.id))
-        .slice(0, 8);
-    }
-
-    async function getModeratorCandidates(query) {
-      const q = normalizeUser(query);
-      if (!q) return [];
-      try {
-        const res = await fetch(`/api/users/search?q=${encodeURIComponent(q)}`, { credentials: "include" });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data?.ok) {
-          showStatus(moderatorStatus, String(data?.error || "User search failed. Try refreshing or restarting server."), true);
-          return getLocalModeratorCandidates(q);
-        }
-        return (Array.isArray(data?.items) ? data.items : [])
-          .map((item) => ({
-            username: normalizeUser(item?.username || ""),
-            id: String(item?.id || "").trim(),
-            avatar: defaultAvatar,
-            email: String(item?.email || ""),
-          }))
-          .filter((item) => Boolean(item.username && item.id))
-          .filter((item) => !isOwner(item.username, item.id))
-          .slice(0, 8);
-      } catch {
-        showStatus(moderatorStatus, "User search failed. Try refreshing or restarting server.", true);
-        return getLocalModeratorCandidates(q);
-      }
+        });
     }
 
     function hideModeratorSuggestions() {
@@ -6942,163 +6838,42 @@ function formatTagLabel(label) {
       moderatorSuggestions.innerHTML = "";
     }
 
-    async function renderModeratorSuggestions() {
+    function renderModeratorSuggestions() {
       if (!moderatorSuggestions || !moderatorInput) return;
-      const candidates = await getModeratorCandidates(moderatorInput.value);
+      const candidates = getModeratorCandidates(moderatorInput.value);
       const roles = readRoles();
-      const filtered = candidates.filter((item) => !roles.moderatorIds.includes(item.id));
+      const filtered = candidates.filter((item) => !roles.moderators.includes(item.username));
       if (filtered.length === 0) {
         hideModeratorSuggestions();
         selectedModeratorUser = "";
-        selectedModeratorId = "";
         if (moderatorAddBtn) moderatorAddBtn.disabled = true;
         return;
       }
       moderatorSuggestions.innerHTML = filtered
-        .map((item) => `
-            <button class="moderator-suggestion" type="button" data-mod-suggest="${item.username}" data-mod-suggest-id="${item.id}">
+        .map(
+          (item) => `
+            <button class="moderator-suggestion" type="button" data-mod-suggest="${item.username}">
               <img src="${escHtml(item.avatar)}" alt="${escHtml(item.username)} avatar" />
               <span>
                 <strong>${escHtml(item.username)}</strong>
                 <small>${item.email ? escHtml(item.email) : ""}</small>
               </span>
             </button>
-          `)
+          `,
+        )
         .join("");
       moderatorSuggestions.hidden = false;
-      if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
+      if (moderatorAddBtn) moderatorAddBtn.disabled = selectedModeratorUser === "";
     }
 
     if (userIsOwner && moderatorCard) {
       moderatorCard.hidden = false;
-      loadModeratorsFromServer().then(() => {
-        renderModeratorList();
-        renderModeratorSuggestions();
-      });
-
-      moderatorInput?.addEventListener("input", () => {
-        selectedModeratorUser = "";
-        selectedModeratorId = "";
-        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
-        renderModeratorSuggestions();
-      });
-
-      moderatorSuggestions?.addEventListener("click", (event) => {
-        const btn = event.target.closest("[data-mod-suggest]");
-        if (!btn || !moderatorInput) return;
-        moderatorInput.value = String(btn.dataset.modSuggest || "");
-        selectedModeratorUser = normalizeUser(btn.dataset.modSuggest || "");
-        selectedModeratorId = String(btn.dataset.modSuggestId || "").trim();
-        hideModeratorSuggestions();
-        if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
-      });
-
-      moderatorForm?.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const candidate = normalizeUser(selectedModeratorUser || moderatorForm.moderator_username?.value);
-        const candidateId = String(selectedModeratorId || findUserIdByUsername(candidate)).trim();
-        if (!candidate || !candidateId) {
-          showStatus(moderatorStatus, "Select a member from the list first.", true);
-          return;
-        }
-        fetch("/api/moderators", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ userId: candidateId }),
-        })
-          .then(async (res) => {
-            const data = await res.json().catch(() => ({}));
-            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not add moderator."));
-            moderatorForm.reset();
-            selectedModeratorUser = "";
-            selectedModeratorId = "";
-            hideModeratorSuggestions();
-            if (moderatorAddBtn) moderatorAddBtn.disabled = true;
-            showStatus(moderatorStatus, "Moderator added.");
-            return loadModeratorsFromServer();
-          })
-          .then(() => {
-            renderModeratorList();
-            renderModeratorSuggestions();
-          })
-          .catch((err) => {
-            showStatus(moderatorStatus, String(err?.message || "Could not add moderator."), true);
-          });
-      });
-
-      moderatorList?.addEventListener("click", (event) => {
-        const btn = event.target.closest("[data-mod-action='remove']");
-        if (!btn) return;
-        const item = btn.closest("[data-mod-user-id]");
-        const modId = String(item?.dataset.modUserId || "").trim();
-        if (!modId) return;
-        fetch(`/api/moderators/${encodeURIComponent(modId)}`, {
-          method: "DELETE",
-          credentials: "include",
-        })
-          .then(async (res) => {
-            const data = await res.json().catch(() => ({}));
-            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not remove moderator."));
-            showStatus(moderatorStatus, "Moderator removed.");
-            return loadModeratorsFromServer();
-          })
-          .then(() => {
-            renderModeratorList();
-            renderModeratorSuggestions();
-          })
-          .catch((err) => {
-            showStatus(moderatorStatus, String(err?.message || "Could not remove moderator."), true);
-          });
-      });
-    }
-    async function loadModeratorsFromServer() {
-      try {
-        const res = await fetch("/api/moderators", { credentials: "include" });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not load moderators."));
-        const items = Array.isArray(data?.items) ? data.items : [];
-        writeRoles({
-          moderatorIds: items.map((item) => String(item?.id || "").trim()).filter(Boolean),
-          moderators: items.map((item) => normalizeUser(item?.username || "")).filter(Boolean),
-        });
-      } catch (err) {
-        showStatus(moderatorStatus, String(err?.message || "Could not load moderators."), true);
-      }
-    }
-
-    function renderModeratorList() {
-      if (!moderatorList) return;
-      fetch("/api/moderators", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ userId: candidateId }),
-        })
-          .then(async (res) => {
-            const data = await res.json().catch(() => ({}));
-            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not add moderator."));
-            moderatorForm.reset();
-            selectedModeratorUser = "";
-            selectedModeratorId = "";
-            hideModeratorSuggestions();
-            if (moderatorAddBtn) moderatorAddBtn.disabled = true;
-            showStatus(moderatorStatus, "Moderator added.");
-            return loadModeratorsFromServer();
-          })
-          .then(() => {
-            renderModeratorList();
-            renderModeratorSuggestions();
-          })
-          .catch((err) => {
-            showStatus(moderatorStatus, String(err?.message || "Could not add moderator."), true);
-          });
+      renderModeratorList();
       renderModeratorSuggestions();
 
       moderatorInput?.addEventListener("input", renderModeratorSuggestions);
       moderatorInput?.addEventListener("input", () => {
         selectedModeratorUser = "";
-        selectedModeratorId = "";
         if (moderatorAddBtn) moderatorAddBtn.disabled = true;
       });
 
@@ -7107,77 +6882,60 @@ function formatTagLabel(label) {
         if (!btn || !moderatorInput) return;
         moderatorInput.value = String(btn.dataset.modSuggest || "");
         selectedModeratorUser = normalizeUser(btn.dataset.modSuggest || "");
-        selectedModeratorId = String(btn.dataset.modSuggestId || "").trim();
         hideModeratorSuggestions();
-        if (moderatorAddBtn) moderatorAddBtn.disabled = !(selectedModeratorUser && selectedModeratorId);
+        if (moderatorAddBtn) moderatorAddBtn.disabled = !selectedModeratorUser;
       });
 
       moderatorForm?.addEventListener("submit", (event) => {
         event.preventDefault();
         const candidate = normalizeUser(selectedModeratorUser || moderatorForm.moderator_username?.value);
-        const candidateId = String(selectedModeratorId || findUserIdByUsername(candidate)).trim();
-        if (!candidate || !candidateId) {
+        if (!candidate) {
           showStatus(moderatorStatus, "Select a member from the list first.", true);
           return;
         }
-        if (!selectedModeratorUser || candidate !== normalizeUser(moderatorInput?.value) || !candidateId) {
+        if (!selectedModeratorUser || candidate !== normalizeUser(moderatorInput?.value)) {
           showStatus(moderatorStatus, "Select a member from the list first.", true);
           return;
         }
-        if (isOwner(candidate, candidateId)) {
+        if (candidate === owner) {
           showStatus(moderatorStatus, "Owner already has full access.", true);
           return;
         }
-        fetch("/api/moderators", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ userId: candidateId }),
-        })
-          .then(async (res) => {
-            const data = await res.json().catch(() => ({}));
-            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not add moderator."));
-            moderatorForm.reset();
-            selectedModeratorUser = "";
-            selectedModeratorId = "";
-            hideModeratorSuggestions();
-            if (moderatorAddBtn) moderatorAddBtn.disabled = true;
-            showStatus(moderatorStatus, "Moderator added.");
-            return loadModeratorsFromServer();
-          })
-          .then(() => {
-            renderModeratorList();
-            renderModeratorSuggestions();
-          })
-          .catch((err) => {
-            showStatus(moderatorStatus, String(err?.message || "Could not add moderator."), true);
-          });
+        const roles = readRoles();
+        const profilesMap = readJson(profileKey, {});
+        const accountsMap = readJson(accountsKey, {});
+        const accountExists = Boolean(accountsMap[candidate] || profilesMap[candidate]);
+        if (!accountExists) {
+          showStatus(moderatorStatus, "Select an existing member from the list.", true);
+          return;
+        }
+        if (roles.moderators.includes(candidate)) {
+          showStatus(moderatorStatus, "This user is already a moderator.", true);
+          return;
+        }
+        roles.moderators.push(candidate);
+        writeRoles(roles);
+        moderatorForm.reset();
+        selectedModeratorUser = "";
+        hideModeratorSuggestions();
+        if (moderatorAddBtn) moderatorAddBtn.disabled = true;
+        showStatus(moderatorStatus, "Moderator added.");
+        renderModeratorList();
       });
+
       moderatorList?.addEventListener("click", (event) => {
         const btn = event.target.closest("[data-mod-action='remove']");
         if (!btn) return;
-        const item = btn.closest("[data-mod-user-id]");
-        const modId = String(item?.dataset.modUserId || "").trim();
-        if (!modId) return;
-        fetch(`/api/moderators/${encodeURIComponent(modId)}`, {
-          method: "DELETE",
-          credentials: "include",
-        })
-          .then(async (res) => {
-            const data = await res.json().catch(() => ({}));
-            if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not remove moderator."));
-            showStatus(moderatorStatus, "Moderator removed.");
-            return loadModeratorsFromServer();
-          })
-          .then(() => {
-            renderModeratorList();
-            renderModeratorSuggestions();
-          })
-          .catch((err) => {
-            showStatus(moderatorStatus, String(err?.message || "Could not remove moderator."), true);
-          });
+        const item = btn.closest("[data-mod-user]");
+        const username = normalizeUser(item?.dataset.modUser);
+        if (!username) return;
+        const roles = readRoles();
+        roles.moderators = roles.moderators.filter((user) => user !== username);
+        writeRoles(roles);
+        showStatus(moderatorStatus, "Moderator removed.");
+        renderModeratorList();
+        renderModeratorSuggestions();
       });
-
     }
   })();
 
@@ -7187,8 +6945,7 @@ function formatTagLabel(label) {
     if (!list) return;
 
     const user = getActiveUser();
-    const userId = getActiveUserId();
-    if (!isModerator(user, userId)) {
+    if (!isModerator(user)) {
       showStatus(status, "Only moderators can access this page.", true);
       return;
     }
@@ -7238,7 +6995,7 @@ function formatTagLabel(label) {
                 <button class="btn btn-danger" type="button" data-action="reject">Reject</button>
               </div>
             </article>
-          `
+          `,
         )
         .join("");
 

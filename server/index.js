@@ -11,8 +11,7 @@ const app = express();
 const port = Number(process.env.PORT || 3000);
 const dbUrl = String(process.env.DATABASE_URL || '');
 const sessionSecret = String(process.env.SESSION_SECRET || 'change_me');
-const ownerUsername = String(process.env.OWNER_USERNAME || 'eurorailshots').trim().toLowerCase();
-const ownerUserId = String(process.env.OWNER_USER_ID || '').trim();
+const ownerUsername = String(process.env.OWNER_USERNAME || 'trainbelgium').trim().toLowerCase();
 const smtpHost = String(process.env.SMTP_HOST || '').trim();
 const smtpPort = Number(process.env.SMTP_PORT || 587);
 const smtpUser = String(process.env.SMTP_USER || '').trim();
@@ -185,26 +184,7 @@ async function requireUser(req, res) {
 function isModeratorUser(user) {
   const role = String(user?.role || '').toLowerCase();
   const username = String(user?.username || '').toLowerCase();
-  const userId = String(user?.id || '').trim();
-  const isOwnerById = Boolean(ownerUserId) && userId === ownerUserId;
-  return role === 'moderator' || role === 'admin' || isOwnerById || username === ownerUsername;
-}
-
-function isOwnerUser(user) {
-  const username = String(user?.username || '').trim().toLowerCase();
-  const userId = String(user?.id || '').trim();
-  return (Boolean(ownerUserId) && userId === ownerUserId) || username === ownerUsername;
-}
-
-function serializeSessionUser(user) {
-  return {
-    id: user.id,
-    username: user.username,
-    email: user.email,
-    role: user.role,
-    isOwner: isOwnerUser(user),
-    isModerator: isModeratorUser(user),
-  };
+  return role === 'moderator' || role === 'admin' || username === ownerUsername;
 }
 
 async function clearSession(token) {
@@ -410,7 +390,7 @@ app.get('/api/auth/session', async (req, res) => {
   try {
     const user = await loadSessionUser(req);
     if (!user) return res.status(401).json({ ok: false, error: 'Not authenticated' });
-    return res.json({ ok: true, user: serializeSessionUser(user) });
+    return res.json({ ok: true, user });
   } catch (err) {
     return res.status(500).json({ ok: false, error: 'Server error' });
   }
@@ -435,7 +415,7 @@ app.post('/api/auth/register', async (req, res) => {
     await storeEmailVerificationCode(user.id, email, code);
     await sendMailOrThrow({
       to: email,
-      subject: 'Your eurorailshots verification code',
+      subject: 'Your TrainBelgium verification code',
       text: `Your verification code is: ${code}. It expires in 15 minutes.`,
       html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
     });
@@ -463,7 +443,7 @@ app.post('/api/auth/login', async (req, res) => {
       await storeEmailVerificationCode(userRow.id, userRow.email, code);
       await sendMailOrThrow({
         to: userRow.email,
-        subject: 'Your eurorailshots verification code',
+        subject: 'Your TrainBelgium verification code',
         text: `Your verification code is: ${code}. It expires in 15 minutes.`,
         html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
       });
@@ -477,7 +457,12 @@ app.post('/api/auth/login', async (req, res) => {
 
     return res.json({
       ok: true,
-      user: serializeSessionUser(userRow)
+      user: {
+        id: userRow.id,
+        username: userRow.username,
+        email: userRow.email,
+        role: userRow.role
+      }
     });
   } catch (err) {
     return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
@@ -505,7 +490,7 @@ app.post('/api/auth/verify-email', async (req, res) => {
     const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
     await pool.query('INSERT INTO user_sessions (token, user_id, expires_at) VALUES ($1, $2, $3)', [token, user.id, expiresAt.toISOString()]);
     setSessionCookie(res, token, expiresAt);
-    return res.json({ ok: true, user: serializeSessionUser(user) });
+    return res.json({ ok: true, user });
   } catch (err) {
     return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
   }
@@ -526,7 +511,7 @@ app.post('/api/auth/resend-verification-code', async (req, res) => {
     await storeEmailVerificationCode(user.id, email, code);
     await sendMailOrThrow({
       to: email,
-      subject: 'Your eurorailshots verification code',
+      subject: 'Your TrainBelgium verification code',
       text: `Your verification code is: ${code}. It expires in 15 minutes.`,
       html: `<p>Your verification code is: <strong>${code}</strong></p><p>This code expires in 15 minutes.</p>`,
     });
@@ -551,7 +536,7 @@ app.post('/api/auth/request-password-reset', async (req, res) => {
       const resetLink = buildPasswordResetLink(email, token);
       await sendMailOrThrow({
         to: email,
-        subject: 'Reset your eurorailshots password',
+        subject: 'Reset your TrainBelgium password',
         text: `Click this link to reset your password: ${resetLink}\n\nThis link expires in 15 minutes.`,
         html: `<p>Click this link to reset your password:</p><p><a href="${resetLink}">${resetLink}</a></p><p>This link expires in 15 minutes.</p>`,
       });
@@ -588,7 +573,12 @@ app.post('/api/auth/reset-password', async (req, res) => {
     setSessionCookie(res, sessionToken, expiresAt);
     return res.json({
       ok: true,
-      user: serializeSessionUser(user)
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+      }
     });
   } catch (err) {
     return res.status(500).json({ ok: false, error: String(err?.message || 'Server error') });
@@ -755,94 +745,12 @@ app.post('/api/submissions/:id/moderate', async (req, res) => {
   }
 });
 
-app.get('/api/moderators', async (req, res) => {
-  try {
-    const user = await requireUser(req, res);
-    if (!user) return;
-    if (!isOwnerUser(user)) return res.status(403).json({ ok: false, error: 'Only owner can view moderators.' });
-    const q = `
-      SELECT id, username, email, role
-      FROM users
-      WHERE role = 'moderator'
-      ORDER BY username ASC
-    `;
-    const { rows } = await pool.query(q);
-    return res.json({ ok: true, items: rows });
-  } catch {
-    return res.status(500).json({ ok: false, error: 'Server error' });
-  }
-});
-
-app.get('/api/users/search', async (req, res) => {
-  try {
-    const user = await requireUser(req, res);
-    if (!user) return;
-    if (!isOwnerUser(user)) return res.status(403).json({ ok: false, error: 'Only owner can search users.' });
-    const q = String(req.query.q || '').trim().toLowerCase();
-    if (!q) return res.json({ ok: true, items: [] });
-    const like = `%${q}%`;
-    const found = await pool.query(
-      `SELECT id, username, email, role
-       FROM users
-       WHERE lower(username) LIKE $1
-       ORDER BY username ASC
-       LIMIT 12`,
-      [like],
-    );
-    return res.json({ ok: true, items: found.rows });
-  } catch {
-    return res.status(500).json({ ok: false, error: 'Server error' });
-  }
-});
-
-app.post('/api/moderators', async (req, res) => {
-  try {
-    const user = await requireUser(req, res);
-    if (!user) return;
-    if (!isOwnerUser(user)) return res.status(403).json({ ok: false, error: 'Only owner can assign moderators.' });
-    const targetUserId = String(req.body?.userId || '').trim();
-    if (!targetUserId) return res.status(400).json({ ok: false, error: 'Missing user id.' });
-    if (ownerUserId && targetUserId === ownerUserId) {
-      return res.status(400).json({ ok: false, error: 'Owner already has full access.' });
-    }
-    const found = await pool.query('SELECT id, username, email, role FROM users WHERE id = $1 LIMIT 1', [targetUserId]);
-    const target = found.rows[0];
-    if (!target) return res.status(404).json({ ok: false, error: 'User not found.' });
-    if (String(target.role || '').toLowerCase() === 'moderator') {
-      return res.status(409).json({ ok: false, error: 'This user is already a moderator.' });
-    }
-    await pool.query("UPDATE users SET role = 'moderator' WHERE id = $1", [targetUserId]);
-    return res.json({ ok: true });
-  } catch {
-    return res.status(500).json({ ok: false, error: 'Server error' });
-  }
-});
-
-app.delete('/api/moderators/:id', async (req, res) => {
-  try {
-    const user = await requireUser(req, res);
-    if (!user) return;
-    if (!isOwnerUser(user)) return res.status(403).json({ ok: false, error: 'Only owner can remove moderators.' });
-    const targetUserId = String(req.params.id || '').trim();
-    if (!targetUserId) return res.status(400).json({ ok: false, error: 'Missing user id.' });
-    const found = await pool.query('SELECT id, role FROM users WHERE id = $1 LIMIT 1', [targetUserId]);
-    const target = found.rows[0];
-    if (!target) return res.status(404).json({ ok: false, error: 'User not found.' });
-    if (String(target.role || '').toLowerCase() !== 'moderator') {
-      return res.status(409).json({ ok: false, error: 'User is not a moderator.' });
-    }
-    await pool.query("UPDATE users SET role = 'user' WHERE id = $1", [targetUserId]);
-    return res.json({ ok: true });
-  } catch {
-    return res.status(500).json({ ok: false, error: 'Server error' });
-  }
-});
-
 app.delete('/api/submissions/:id', async (req, res) => {
   try {
     const user = await requireUser(req, res);
     if (!user) return;
-    if (!isOwnerUser(user)) {
+    const username = String(user?.username || '').trim().toLowerCase();
+    if (username !== ownerUsername) {
       return res.status(403).json({ ok: false, error: 'Only owner can delete photos.' });
     }
     const id = String(req.params.id || '').trim();
@@ -924,7 +832,7 @@ app.use(express.static(path.resolve(__dirname, '..')));
 ensureAuthTables()
   .then(() => {
     app.listen(port, () => {
-      console.log(`eurorailshots server on http://localhost:${port}`);
+      console.log(`TrainBelgium server on http://localhost:${port}`);
     });
   })
   .catch((err) => {
