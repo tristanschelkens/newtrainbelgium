@@ -111,12 +111,12 @@ img {
   gap: 12px;
 }
 
-.brand-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--nmbs-blue);
+.brand-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
   flex-shrink: 0;
+  display: block;
 }
 
 .brand-text {
