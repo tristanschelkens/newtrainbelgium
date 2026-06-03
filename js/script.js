@@ -577,67 +577,6 @@ function buildApprovedSubmissionPhoto(item, stationSlug, stationName) {
 
 async function mergeApprovedSubmissionsIntoStationData(stationData) {
   if (!stationData || typeof stationData !== "object") return;
-  try {
-    const cacheKey = "tb_approved_submissions_cache_v2";
-    const cacheTtlMs = 1000 * 60 * 5;
-    let items = [];
-    try {
-      const cachedRaw = sessionStorage.getItem(cacheKey);
-      if (cachedRaw) {
-        const cached = JSON.parse(cachedRaw);
-        if (
-          cached &&
-          Number.isFinite(Number(cached.ts)) &&
-          Date.now() - Number(cached.ts) < cacheTtlMs &&
-          Array.isArray(cached.items)
-        ) {
-          items = cached.items;
-        }
-      }
-    } catch {}
-
-    if (items.length === 0) {
-      const res = await fetch("/api/submissions/approved?limit=60", { credentials: "same-origin" });
-      if (!res.ok) return;
-      const data = await res.json();
-      items = Array.isArray(data?.items) ? data.items : [];
-      try {
-        sessionStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), items }));
-      } catch {}
-    }
-
-    items.forEach((item) => {
-      const stationSlug = canonicalStationSlug(item?.stationSlug || item?.stationName);
-      if (!stationSlug) return;
-      const stationName = canonicalStationName(item?.stationName, stationSlug) || stationSlug;
-
-      if (!stationData[stationSlug] || typeof stationData[stationSlug] !== "object") {
-        stationData[stationSlug] = {
-          slug: stationSlug,
-          name: stationName,
-          province: String(item?.stationProvince || "").trim(),
-          country: String(item?.stationCountry || "").trim(),
-          coords: normalizeStationCoords(item?.stationCoords),
-          photos: [],
-        };
-      }
-
-      const station = stationData[stationSlug];
-      if (!Array.isArray(station.photos)) station.photos = [];
-      station.name = canonicalStationName(station.name || stationName, stationSlug) || stationName;
-      if (!station.province) station.province = String(item?.stationProvince || "").trim();
-      if (!station.country) station.country = String(item?.stationCountry || "").trim();
-      if (!station.coords) station.coords = normalizeStationCoords(item?.stationCoords);
-
-      const photoId = String(item?.id || "").trim();
-      if (!photoId) return;
-      const exists = station.photos.some((photo) => String(photo?.id || "").trim() === photoId);
-      if (exists) return;
-
-      const photo = buildApprovedSubmissionPhoto(item, stationSlug, station.name);
-      if (photo) station.photos.push(photo);
-    });
-  } catch {}
 }
 
 (async function initPhotoFilters() {
@@ -1201,6 +1140,7 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   const searchCommentForm = searchLightbox.querySelector("#photoSearchCommentForm");
   const searchCommentInput = searchLightbox.querySelector("#photoSearchCommentInput");
   const searchCommentStatus = searchLightbox.querySelector("#photoSearchCommentStatus");
+  if (searchCommentForm) searchCommentForm.hidden = true;
   let currentSearchSeriesPool = [];
   let currentSearchSeriesPosition = 0;
   let currentSearchEntry = null;
@@ -1249,46 +1189,8 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   async function renderSearchComments() {
     if (!searchCommentsList) return;
-    const key = currentSearchCommentKey();
-    if (!key) {
-      searchCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
-      return;
-    }
-    const profiles = readProfilesStore();
-    let items = [];
-    try {
-      const res = await fetch(`/api/comments?photoKey=${encodeURIComponent(key)}`, { credentials: "include" });
-      const data = await res.json().catch(() => ({}));
-      items = Array.isArray(data?.items) ? data.items : [];
-    } catch {
-      items = [];
-    }
-    const user = activeUserName();
-    const canModerate = canModerateUser(user);
-    if (items.length === 0) {
-      searchCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
-      return;
-    }
-    searchCommentsList.innerHTML = items
-      .map((item) => {
-        const author = String(item.author || item.user || "user").toLowerCase();
-        const avatar = String((profiles[author] || {}).avatar || "../images/default-avatar.svg");
-        const canDelete = canModerate || user === author;
-        return `
-          <article class="station-lightbox-comment">
-            <div class="station-lightbox-comment-header">
-              <span class="station-comment-author">
-                <img src="${esc(avatar)}" alt="${esc(author)} avatar" />
-                <strong>${esc(author)}</strong>
-              </span>
-              ${canDelete ? `<button class="station-lightbox-comment-delete" type="button" data-search-comment-delete="${Number(item.id || 0)}">Delete</button>` : ""}
-            </div>
-            <p>${esc(item.body || item.text || "")}</p>
-            <small>${esc(new Date(item.created_at || item.createdAt || Date.now()).toLocaleString("en-GB", { hour12: false }))}</small>
-          </article>
-        `;
-      })
-      .join("");
+    searchCommentsList.innerHTML =
+      '<p class="muted">Comments are currently unavailable.</p>';
   }
 
   function persistSearchLightboxState(entry) {
@@ -1462,25 +1364,9 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
     applyFilters(true);
   });
 
-  searchLightboxDeleteBtn?.addEventListener("click", async (event) => {
+  searchLightboxDeleteBtn?.addEventListener("click", (event) => {
     event.stopPropagation();
-    const id = String(searchLightboxDeleteBtn.dataset.photoId || "").trim();
-    if (!id) return;
-    if (!confirm("Delete this photo permanently?")) return;
-    try {
-      const res = await fetch(`/api/submissions/${encodeURIComponent(id)}`, {
-        method: "DELETE",
-        credentials: "include",
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not delete photo."));
-      sessionStorage.removeItem("tb_approved_submissions_cache_v1");
-      sessionStorage.removeItem("tb_approved_submissions_cache_v2");
-      closeSearchLightbox();
-      window.location.reload();
-    } catch (err) {
-      setSearchCommentStatus(String(err?.message || "Could not delete photo."), true);
-    }
+    setSearchCommentStatus("Community uploads are disabled.", true);
   });
 
   document.addEventListener("keydown", (e) => {
@@ -1503,58 +1389,11 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
 
   searchCommentForm?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const user = activeUserName();
-    if (!user) {
-      setSearchCommentStatus("Log in to post a comment.", true);
-      return;
-    }
-    const text = String(searchCommentInput?.value || "").trim();
-    if (!text) {
-      setSearchCommentStatus("Please write a comment first.", true);
-      return;
-    }
-    const key = currentSearchCommentKey();
-    if (!key) return;
-    fetch("/api/comments", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({ photoKey: key, body: text }),
-    })
-      .then(async (res) => {
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not post comment."));
-        if (searchCommentInput) searchCommentInput.value = "";
-        setSearchCommentStatus("Comment posted.");
-        renderSearchComments();
-      })
-      .catch((err) => {
-        setSearchCommentStatus(String(err?.message || "Could not post comment."), true);
-      });
+    if (searchCommentInput) searchCommentInput.value = "";
+    setSearchCommentStatus("Comments are disabled on this website.", true);
   });
 
-  searchCommentsList?.addEventListener("click", (event) => {
-    const deleteBtn = event.target.closest("[data-search-comment-delete]");
-    if (!deleteBtn) return;
-    const user = activeUserName();
-    const key = currentSearchCommentKey();
-    if (!user || !key) return;
-    const commentId = Number(deleteBtn.dataset.searchCommentDelete || 0);
-    if (!Number.isInteger(commentId) || commentId < 1) return;
-    fetch(`/api/comments/${commentId}`, {
-      method: "DELETE",
-      credentials: "include",
-    })
-      .then(async (res) => {
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data?.ok) throw new Error(String(data?.error || "Could not remove comment."));
-        setSearchCommentStatus("Comment removed.");
-        renderSearchComments();
-      })
-      .catch((err) => {
-        setSearchCommentStatus(String(err?.message || "Could not remove comment."), true);
-      });
-  });
+  searchCommentsList?.addEventListener("click", () => {});
 
   function setActiveButton(value) {
     buttons.forEach((btn) => {
@@ -3702,7 +3541,6 @@ function formatTagLabel(label) {
         <h3>Comments</h3>
         <p class="muted" id="stationLightboxCommentsMeta">Join the discussion for this photo.</p>
       </div>
-      <a class="btn btn-secondary station-lightbox-submit-link" id="stationLightboxSubmitSimilar" href="../pages/Submit.html">Submit photo of this train</a>
       <div class="station-lightbox-comments" id="stationLightboxCommentsList"></div>
       <form class="login-form" id="stationLightboxCommentForm" novalidate>
         <input
@@ -3753,12 +3591,12 @@ function formatTagLabel(label) {
   const lightboxCommentForm = lightbox.querySelector("#stationLightboxCommentForm");
   const lightboxCommentInput = lightbox.querySelector("#stationLightboxCommentInput");
   const lightboxCommentStatus = lightbox.querySelector("#stationLightboxCommentStatus");
-  const lightboxSubmitSimilar = lightbox.querySelector("#stationLightboxSubmitSimilar");
   const stationProfileAvatar = commenterProfileModal.querySelector("#stationProfileAvatar");
   const stationProfileName = commenterProfileModal.querySelector("#stationProfileName");
   const stationProfileUser = commenterProfileModal.querySelector("#stationProfileUser");
   const stationProfileDetails = commenterProfileModal.querySelector("#stationProfileDetails");
   const stationProfileClose = commenterProfileModal.querySelector(".station-profile-close");
+  if (lightboxCommentForm) lightboxCommentForm.hidden = true;
   let currentPhotoIndex = 0;
   let currentSeriesPool = [];
   let currentSeriesPosition = 0;
@@ -3800,37 +3638,13 @@ function formatTagLabel(label) {
   }
 
   function openCommenterProfile(username) {
-    const user = String(username || "").trim().toLowerCase();
+    const user = String(username || "").trim();
     if (!user || !stationProfileDetails || !stationProfileName || !stationProfileUser || !stationProfileAvatar) return;
-    let profiles = {};
-    let accounts = {};
-    let roles = { moderators: [] };
-    try {
-      profiles = JSON.parse(localStorage.getItem("tb_profiles_v1") || "{}");
-    } catch {}
-    try {
-      accounts = JSON.parse(localStorage.getItem("tb_accounts_v1") || "{}");
-    } catch {}
-    try {
-      roles = JSON.parse(localStorage.getItem("tb_roles_v1") || '{"moderators":[]}');
-    } catch {}
-    const owner = String(localStorage.getItem("tb_owner_user_v1") || "eurorailshots").trim().toLowerCase();
-    const profile = profiles[user] || {};
-    const account = accounts[user] || {};
-    const role = user === owner ? "Owner" : Array.isArray(roles?.moderators) && roles.moderators.includes(user) ? "Moderator" : "Member";
-    const avatar = String(profile.avatar || "../images/default-avatar.svg");
-    const displayName = String(user);
-    stationProfileAvatar.src = avatar;
-    stationProfileName.textContent = displayName;
+    stationProfileAvatar.src = "../images/default-avatar.svg";
+    stationProfileName.textContent = user;
     stationProfileUser.textContent = "";
     stationProfileUser.style.display = "none";
-    stationProfileDetails.innerHTML = `
-      <p><strong>Role:</strong> ${esc(role)}</p>
-      <p><strong>Email:</strong> ${esc(String(profile.email || account.email || "Not set"))}</p>
-      <p><strong>Notifications:</strong> ${profile.notifications ? "Enabled" : "Disabled"}</p>
-      <p><strong>Created:</strong> ${account.createdAt ? new Date(account.createdAt).toLocaleString("en-GB") : "Unknown"}</p>
-      <p><strong>Avatar path:</strong> ${esc(avatar)}</p>
-    `;
+    stationProfileDetails.innerHTML = "<p><strong>Info:</strong> Profile pages are no longer available.</p>";
     commenterProfileModal.classList.add("is-open");
     commenterProfileModal.setAttribute("aria-hidden", "false");
   }
@@ -3887,17 +3701,11 @@ function formatTagLabel(label) {
 
     if (lightboxWatermark) {
       const owner = String(photographerLabel || "").trim() || "eurorailshots.com";
-      const profileUser = owner.toLowerCase().endsWith(".com")
-        ? owner.slice(0, -4)
-        : owner;
       lightboxWatermark.innerHTML = `&copy; ${esc(owner)}`;
-      lightboxWatermark.dataset.profileUser = String(profileUser || "").trim().toLowerCase();
-      lightboxWatermark.setAttribute("role", "button");
-      lightboxWatermark.setAttribute("tabindex", "0");
-      lightboxWatermark.setAttribute(
-        "aria-label",
-        `Open profile of ${String(profileUser || owner).trim()}`,
-      );
+      lightboxWatermark.removeAttribute("role");
+      lightboxWatermark.removeAttribute("tabindex");
+      lightboxWatermark.removeAttribute("aria-label");
+      lightboxWatermark.dataset.profileUser = "";
     }
 
     if (lightboxDeleteBtn) {
@@ -3956,19 +3764,7 @@ function formatTagLabel(label) {
     return `${slug}::${currentPhotoIndex}`;
   }
 
-  lightboxWatermark?.addEventListener("click", () => {
-    const user = String(lightboxWatermark.dataset.profileUser || "").trim();
-    if (!user) return;
-    openCommenterProfile(user);
-  });
-
-  lightboxWatermark?.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-    event.preventDefault();
-    const user = String(lightboxWatermark.dataset.profileUser || "").trim();
-    if (!user) return;
-    openCommenterProfile(user);
-  });
+  lightboxWatermark?.addEventListener("click", () => {});
 
   lightboxDeleteBtn?.addEventListener("click", async (event) => {
     event.stopPropagation();
@@ -4017,102 +3813,16 @@ function formatTagLabel(label) {
 
   function renderLightboxComments() {
     if (!lightboxCommentsList) return;
-    const profilesMap = (() => {
-      try {
-        const raw = localStorage.getItem("tb_profiles_v1");
-        return raw ? JSON.parse(raw) : {};
-      } catch {
-        return {};
-      }
-    })();
-    const allComments = (() => {
-      try {
-        const raw = localStorage.getItem("tb_photo_comments_v1");
-        return raw ? JSON.parse(raw) : {};
-      } catch {
-        return {};
-      }
-    })();
-    const comments = Array.isArray(allComments[getCurrentCommentKey()])
-      ? allComments[getCurrentCommentKey()]
-      : [];
-
     if (lightboxCommentsMeta) {
-      lightboxCommentsMeta.textContent = "Join the discussion for this photo.";
+      lightboxCommentsMeta.textContent = "Comments are currently unavailable.";
     }
-
-    if (comments.length === 0) {
-      lightboxCommentsList.innerHTML = '<p class="muted">No comments yet.</p>';
-    } else {
-      lightboxCommentsList.innerHTML = comments
-        .map((item, commentIndex) => {
-          const commenter = String(item.user || "user").toLowerCase();
-          const avatar = String((profilesMap[commenter] || {}).avatar || "../images/default-avatar.svg");
-          return `
-            <article class="station-lightbox-comment">
-              <div class="station-lightbox-comment-header">
-                <button class="station-comment-author" type="button" data-comment-user="${esc(item.user || "user")}">
-                  <img src="${esc(avatar)}" alt="${esc(item.user || "user")} avatar" />
-                  <strong>${esc(item.user || "user")}</strong>
-                </button>
-                ${
-                  canModerateComments()
-                    ? `<button class="station-lightbox-comment-delete" type="button" data-comment-delete="${commentIndex}">Delete</button>`
-                    : ""
-                }
-              </div>
-              <p>${esc(item.text || "")}</p>
-              <small>${new Date(item.createdAt).toLocaleString("en-GB")}</small>
-            </article>
-          `;
-        })
-        .join("");
-    }
-
-    const activePhoto = photoBySourceIndex.get(currentPhotoIndex);
-    if (lightboxSubmitSimilar && activePhoto) {
-      const params = new URLSearchParams({
-        station: slug,
-        operator: String(activePhoto.operator || ""),
-        date: String(activePhoto.date || ""),
-        title: String(activePhoto.alt || "").slice(0, 120),
-        notes: `Same train as photo #${currentPhotoIndex + 1}${activePhoto.numbers ? ` (${activePhoto.numbers})` : ""}`,
-      });
-      lightboxSubmitSimilar.href = `../pages/Submit.html?${params.toString()}`;
-    }
+    lightboxCommentsList.innerHTML = '<p class="muted">Comments are currently unavailable.</p>';
   }
 
   lightboxCommentForm?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const user = getActiveUser();
-    if (!user) {
-      setCommentStatus("Log in to post a comment.", true);
-      return;
-    }
-    const text = String(lightboxCommentInput?.value || "").trim();
-    if (!text) {
-      setCommentStatus("Please write a comment first.", true);
-      return;
-    }
-
-    let allComments = {};
-    try {
-      const raw = localStorage.getItem("tb_photo_comments_v1");
-      allComments = raw ? JSON.parse(raw) : {};
-    } catch {
-      allComments = {};
-    }
-    const key = getCurrentCommentKey();
-    if (!Array.isArray(allComments[key])) allComments[key] = [];
-    allComments[key].push({
-      user,
-      text,
-      createdAt: new Date().toISOString(),
-    });
-    localStorage.setItem("tb_photo_comments_v1", JSON.stringify(allComments));
     if (lightboxCommentInput) lightboxCommentInput.value = "";
-    setCommentStatus("Comment posted.");
-    renderLightboxComments();
+    setCommentStatus("Comments are disabled on this website.", true);
   });
 
   lightboxImg?.addEventListener("load", syncLightboxPanelWidth);
@@ -4120,34 +3830,7 @@ function formatTagLabel(label) {
   window.addEventListener("resize", syncLightboxPanelWidth);
 
   lightboxCommentsList?.addEventListener("click", (event) => {
-    const authorBtn = event.target.closest("[data-comment-user]");
-    if (authorBtn) {
-      openCommenterProfile(authorBtn.dataset.commentUser);
-      return;
-    }
-    const deleteBtn = event.target.closest("[data-comment-delete]");
-    if (!deleteBtn) return;
-    if (!canModerateComments()) {
-      setCommentStatus("Only moderators or owner can delete comments.", true);
-      return;
-    }
-    const deleteIndex = Number(deleteBtn.dataset.commentDelete);
-    if (!Number.isInteger(deleteIndex) || deleteIndex < 0) return;
-    let allComments = {};
-    try {
-      const raw = localStorage.getItem("tb_photo_comments_v1");
-      allComments = raw ? JSON.parse(raw) : {};
-    } catch {
-      allComments = {};
-    }
-    const key = getCurrentCommentKey();
-    const list = Array.isArray(allComments[key]) ? allComments[key] : [];
-    if (!list[deleteIndex]) return;
-    list.splice(deleteIndex, 1);
-    allComments[key] = list;
-    localStorage.setItem("tb_photo_comments_v1", JSON.stringify(allComments));
-    setCommentStatus("Comment deleted.");
-    renderLightboxComments();
+    event.preventDefault();
   });
   function openSiblingInSeries(step) {
     if (!Array.isArray(currentSeriesPool) || currentSeriesPool.length === 0) return;
@@ -5165,448 +4848,6 @@ function formatTagLabel(label) {
   });
 })();
 
-(function initLoginPage() {
-  const signInForm = document.getElementById("loginSignInForm");
-  const createForm = document.getElementById("loginCreateForm");
-  const verifyForm = document.getElementById("loginVerifyForm");
-  const resetRequestForm = document.getElementById("loginResetRequestForm");
-  const resetForm = document.getElementById("loginResetForm");
-  const status = document.getElementById("loginStatus");
-  const signInTab = document.getElementById("loginTabSignIn");
-  const createTab = document.getElementById("loginTabCreate");
-  const signInPanel = document.getElementById("loginPanelSignIn");
-  const createPanel = document.getElementById("loginPanelCreate");
-  const verifyPanel = document.getElementById("loginPanelVerify");
-  const resetPanel = document.getElementById("loginPanelReset");
-  const forgotPasswordToggle = document.getElementById("forgotPasswordToggle");
-  const verifyActionBtn = document.getElementById("verifyActionBtn");
-  const resetRequestGroup = document.getElementById("resetRequestGroup");
-  const resetSetGroup = document.getElementById("resetSetGroup");
-  const resetRequestSubmitBtn = resetRequestForm?.querySelector('button[type="submit"]');
-
-  if (!signInForm || !createForm || !status) return;
-
-  const sessionKey = "tb_active_user_v1";
-  const storageKey = "tb_accounts_v1";
-  let verifyMode = "verify";
-  let resetTokenFromLink = "";
-  let resetEmailFromLink = "";
-  let resetCooldownTimer = null;
-  let resetCooldownUntil = 0;
-
-  function normalizeUsername(value) {
-    return String(value || "").trim().toLowerCase();
-  }
-
-  function isValidEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
-  }
-
-  function readAccounts() {
-    try {
-      const raw = localStorage.getItem(storageKey);
-      const parsed = raw ? JSON.parse(raw) : {};
-      return parsed && typeof parsed === "object" ? parsed : {};
-    } catch {
-      return {};
-    }
-  }
-
-  function stripEmailFieldsFromAccounts(accounts) {
-    const normalized = {};
-    Object.entries(accounts || {}).forEach(([username, value]) => {
-      const item = value && typeof value === "object" ? value : {};
-      normalized[username] = {
-        createdAt: item.createdAt || new Date().toISOString(),
-      };
-    });
-    return normalized;
-  }
-
-  function writeAccounts(accounts) {
-    localStorage.setItem(storageKey, JSON.stringify(stripEmailFieldsFromAccounts(accounts)));
-  }
-
-  async function apiRequest(url, payload) {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify(payload || {}),
-    });
-    const data = await response.json().catch(() => ({}));
-    if (!response.ok || !data?.ok) {
-      const err = new Error(String(data?.error || "Request failed"));
-      err.data = data || {};
-      throw err;
-    }
-    return data;
-  }
-
-  function showStatus(message, isError = false) {
-    status.textContent = message;
-    status.classList.toggle("is-error", isError);
-    status.classList.toggle("is-success", !isError && Boolean(message));
-  }
-
-  function clearFieldErrors(form) {
-    form?.querySelectorAll("input").forEach((input) => input.classList.remove("is-error"));
-  }
-
-  function setFieldError(input, hasError) {
-    if (!input) return;
-    input.classList.toggle("is-error", Boolean(hasError));
-  }
-
-  function sanitizeLoginRedirect(rawTarget) {
-    const target = String(rawTarget || "").trim();
-    if (!target) return "";
-    if (target.startsWith("http://") || target.startsWith("https://") || target.startsWith("//")) {
-      return "";
-    }
-    if (!/^[A-Za-z0-9._-]+\.html(?:\?.*)?$/.test(target)) return "";
-    return target;
-  }
-
-  function getPostLoginRedirect() {
-    const params = new URLSearchParams(window.location.search || "");
-    const fromQuery = sanitizeLoginRedirect(params.get("next"));
-    if (fromQuery) {
-      try {
-        sessionStorage.removeItem("tb_post_login_redirect");
-      } catch {}
-      return fromQuery;
-    }
-    try {
-      const fromStorage = sanitizeLoginRedirect(sessionStorage.getItem("tb_post_login_redirect"));
-      if (fromStorage) {
-        sessionStorage.removeItem("tb_post_login_redirect");
-        return fromStorage;
-      }
-    } catch {}
-    return "Photos.html";
-  }
-
-  function readAuthQueryParams() {
-    const params = new URLSearchParams(window.location.search || "");
-    return {
-      mode: String(params.get("mode") || "").trim().toLowerCase(),
-      email: String(params.get("email") || "").trim().toLowerCase(),
-      code: String(params.get("code") || "").trim(),
-      token: String(params.get("token") || "").trim(),
-    };
-  }
-
-  function setResetRequestButtonState(label, disabled) {
-    if (!resetRequestSubmitBtn) return;
-    resetRequestSubmitBtn.textContent = label;
-    resetRequestSubmitBtn.disabled = Boolean(disabled);
-  }
-
-  function stopResetCooldown() {
-    if (resetCooldownTimer) {
-      clearInterval(resetCooldownTimer);
-      resetCooldownTimer = null;
-    }
-    resetCooldownUntil = 0;
-    setResetRequestButtonState("Send reset link", false);
-  }
-
-  function startResetCooldown(seconds) {
-    if (!Number.isFinite(seconds) || seconds <= 0) return;
-    if (resetCooldownTimer) clearInterval(resetCooldownTimer);
-    resetCooldownUntil = Date.now() + seconds * 1000;
-    function tick() {
-      const msLeft = resetCooldownUntil - Date.now();
-      if (msLeft <= 0) {
-        stopResetCooldown();
-        return;
-      }
-      const secsLeft = Math.ceil(msLeft / 1000);
-      setResetRequestButtonState(`Send reset link (${secsLeft}s)`, true);
-    }
-    tick();
-    resetCooldownTimer = setInterval(tick, 250);
-  }
-
-  // Legacy cleanup: old builds stored emails in localStorage.
-  writeAccounts(readAccounts());
-
-  function setTab(mode) {
-    const isCreate = mode === "create";
-    createPanel.hidden = !isCreate;
-    signInPanel.hidden = isCreate;
-    if (verifyPanel) verifyPanel.hidden = true;
-    if (resetPanel) resetPanel.hidden = true;
-    createTab.classList.toggle("active", isCreate);
-    signInTab.classList.toggle("active", !isCreate);
-    createTab.setAttribute("aria-selected", isCreate ? "true" : "false");
-    signInTab.setAttribute("aria-selected", !isCreate ? "true" : "false");
-    showStatus("");
-  }
-
-  function openVerifyPanel(email) {
-    signInPanel.hidden = true;
-    createPanel.hidden = true;
-    if (resetPanel) resetPanel.hidden = true;
-    if (verifyPanel) verifyPanel.hidden = false;
-    signInTab.classList.remove("active");
-    createTab.classList.remove("active");
-    const verifyEmail = verifyForm?.querySelector("#verifyEmail");
-    if (verifyEmail && email) verifyEmail.value = email;
-    verifyMode = "verify";
-    if (verifyActionBtn) verifyActionBtn.textContent = "Verify and continue";
-  }
-
-  function openResetPanel(email) {
-    signInPanel.hidden = true;
-    createPanel.hidden = true;
-    if (verifyPanel) verifyPanel.hidden = true;
-    if (resetPanel) resetPanel.hidden = false;
-    signInTab.classList.remove("active");
-    createTab.classList.remove("active");
-    const resetEmail = resetRequestForm?.querySelector("#resetEmail");
-    if (resetEmail && email) resetEmail.value = email;
-    if (resetRequestGroup) resetRequestGroup.hidden = false;
-    if (resetSetGroup) resetSetGroup.hidden = true;
-  }
-
-  signInTab?.addEventListener("click", () => setTab("signin"));
-  createTab?.addEventListener("click", () => setTab("create"));
-  forgotPasswordToggle?.addEventListener("click", () => {
-    openResetPanel("");
-    showStatus("");
-  });
-
-  createForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const usernameInput = createForm.querySelector("#createUsername");
-    const emailInput = createForm.querySelector("#createEmail");
-    const passwordInput = createForm.querySelector("#createPassword");
-    const confirmInput = createForm.querySelector("#createPasswordConfirm");
-
-    const username = normalizeUsername(usernameInput?.value);
-    const email = String(emailInput?.value || "").trim().toLowerCase();
-    const password = String(passwordInput?.value || "");
-    const confirm = String(confirmInput?.value || "");
-    clearFieldErrors(createForm);
-
-    if (!username) {
-      setFieldError(usernameInput, true);
-      showStatus("Please enter a username.", true);
-      return;
-    }
-    if (username.length < 3) {
-      setFieldError(usernameInput, true);
-      showStatus("Username must be at least 3 characters.", true);
-      return;
-    }
-    if (!email) {
-      setFieldError(emailInput, true);
-      showStatus("Please enter your email address.", true);
-      return;
-    }
-    if (!isValidEmail(email)) {
-      setFieldError(emailInput, true);
-      showStatus("Please enter a valid email address.", true);
-      return;
-    }
-    if (!password) {
-      setFieldError(passwordInput, true);
-      showStatus("Please choose a password.", true);
-      return;
-    }
-    if (password.length < 6) {
-      setFieldError(passwordInput, true);
-      showStatus("Password must be at least 6 characters.", true);
-      return;
-    }
-    if (!/[A-Z]/.test(password)) {
-      setFieldError(passwordInput, true);
-      showStatus("Password must contain at least 1 uppercase letter.", true);
-      return;
-    }
-    if (!/[0-9]/.test(password)) {
-      setFieldError(passwordInput, true);
-      showStatus("Password must contain at least 1 number.", true);
-      return;
-    }
-    if (password !== confirm) {
-      setFieldError(confirmInput, true);
-      showStatus("Passwords do not match.", true);
-      return;
-    }
-
-    apiRequest("/api/auth/register", { username, email, password })
-      .then((data) => {
-        if (data?.requiresEmailVerification) {
-          openVerifyPanel(email);
-          showStatus("We sent you a verification code by email. Enter it below.");
-          return;
-        }
-        showStatus("Account created. Please sign in.");
-        setTab("signin");
-      })
-      .catch((error) => {
-        const msg = String(error?.message || "");
-        if (msg.toLowerCase().includes("username")) setFieldError(usernameInput, true);
-        if (msg.toLowerCase().includes("email")) setFieldError(emailInput, true);
-        if (msg.toLowerCase().includes("password")) setFieldError(passwordInput, true);
-        showStatus(msg || "Could not create account.", true);
-      });
-  });
-
-  signInForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const usernameInput = signInForm.querySelector("#signinUsername");
-    const passwordInput = signInForm.querySelector("#signinPassword");
-
-    const username = normalizeUsername(usernameInput?.value);
-    const password = String(passwordInput?.value || "");
-    clearFieldErrors(signInForm);
-    apiRequest("/api/auth/login", { username, password })
-      .then((data) => {
-        localStorage.setItem(sessionKey, data.user.username);
-        const accounts = readAccounts();
-        accounts[data.user.username] = {
-          createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
-        };
-        writeAccounts(accounts);
-        window.location.replace(getPostLoginRedirect());
-      })
-      .catch((error) => {
-        const msg = String(error?.message || "Invalid username or password.");
-        if (msg.toLowerCase().includes("verification required")) {
-          openVerifyPanel(String(error?.data?.email || ""));
-          showStatus("Email verification required. Enter your email and code.", true);
-          return;
-        }
-        setFieldError(usernameInput, true);
-        setFieldError(passwordInput, true);
-        showStatus(msg, true);
-      });
-  });
-
-  verifyForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const email = String(verifyForm.querySelector("#verifyEmail")?.value || "").trim().toLowerCase();
-    if (verifyMode === "resend") {
-      apiRequest("/api/auth/resend-verification-code", { email })
-        .then(() => {
-          verifyMode = "verify";
-          if (verifyActionBtn) verifyActionBtn.textContent = "Verify and continue";
-          showStatus("New code sent. Check your email.");
-        })
-        .catch((error) => showStatus(String(error?.message || "Could not send new code."), true));
-      return;
-    }
-
-    const code = String(verifyForm.querySelector("#verifyCode")?.value || "").trim();
-    apiRequest("/api/auth/verify-email", { email, code })
-      .then((data) => {
-        localStorage.setItem(sessionKey, data.user.username);
-        const accounts = readAccounts();
-        accounts[data.user.username] = {
-          createdAt: accounts[data.user.username]?.createdAt || new Date().toISOString(),
-        };
-        writeAccounts(accounts);
-        window.location.replace(getPostLoginRedirect());
-      })
-      .catch((error) => {
-        const msg = String(error?.message || "Could not verify email.");
-        if (msg.toLowerCase().includes("invalid or expired code")) {
-          verifyMode = "resend";
-          if (verifyActionBtn) verifyActionBtn.textContent = "Send new code";
-        }
-        showStatus(msg, true);
-      });
-  });
-
-  resetRequestForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (Date.now() < resetCooldownUntil) return;
-    const email = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
-    startResetCooldown(30);
-    apiRequest("/api/auth/request-password-reset", { email })
-      .then(() => {
-        showStatus("If the email exists, a reset link has been sent.");
-      })
-      .catch((error) => {
-        showStatus(String(error?.message || "Could not send reset link."), true);
-      });
-  });
-
-  resetForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const requestEmail = String(resetRequestForm.querySelector("#resetEmail")?.value || "").trim().toLowerCase();
-    const email = String(resetEmailFromLink || requestEmail).trim().toLowerCase();
-    const password = String(resetForm.querySelector("#resetPassword")?.value || "");
-    apiRequest("/api/auth/reset-password", { email, token: resetTokenFromLink, password })
-      .then((data) => {
-        const resetUser = data?.user || null;
-        if (resetUser?.username) {
-          localStorage.setItem(sessionKey, normalizeUsername(resetUser.username));
-          const accounts = readAccounts();
-          accounts[normalizeUsername(resetUser.username)] = {
-            createdAt: accounts[normalizeUsername(resetUser.username)]?.createdAt || new Date().toISOString(),
-          };
-          writeAccounts(accounts);
-          window.location.replace(getPostLoginRedirect());
-          return;
-        }
-        showStatus("Password reset completed.");
-        resetTokenFromLink = "";
-        resetEmailFromLink = "";
-        if (resetRequestGroup) resetRequestGroup.hidden = false;
-        if (resetSetGroup) resetSetGroup.hidden = true;
-        setTab("signin");
-      })
-      .catch((error) => showStatus(String(error?.message || "Could not reset password."), true));
-  });
-
-  const createUsernameInput = createForm.querySelector("#createUsername");
-  createUsernameInput?.addEventListener("input", () => {
-    const username = normalizeUsername(createUsernameInput.value);
-    if (!username) {
-      createUsernameInput.classList.remove("is-error");
-      return;
-    }
-    createUsernameInput.classList.toggle("is-error", false);
-    if (status.classList.contains("is-error") && status.textContent === "This username already exists.") {
-      showStatus("");
-    }
-  });
-
-  fetch("/api/auth/session", { credentials: "include" })
-    .then((res) => (res.ok ? res.json() : null))
-    .then((data) => {
-      if (!data?.user?.username) return;
-      const activeUser = normalizeUsername(data.user.username);
-      localStorage.setItem(sessionKey, activeUser);
-      showStatus(`Already logged in as ${activeUser}.`);
-    })
-    .catch(() => {
-      const activeUser = normalizeUsername(localStorage.getItem(sessionKey));
-      if (activeUser) showStatus(`Already logged in as ${activeUser}.`);
-    });
-
-  const authQuery = readAuthQueryParams();
-  if (authQuery.mode === "reset") {
-    openResetPanel(authQuery.email);
-    resetTokenFromLink = authQuery.token;
-    resetEmailFromLink = authQuery.email;
-    if (resetTokenFromLink) {
-      if (resetRequestGroup) resetRequestGroup.hidden = true;
-      if (resetSetGroup) resetSetGroup.hidden = false;
-      showStatus("Set your new password below.");
-    } else {
-      showStatus("Invalid reset link. Please request a new one.", true);
-    }
-  }
-})();
-
 (function initImageProtection() {
   document.addEventListener("contextmenu", (e) => {
     if (e.target.closest("img, .photo-card, .station-lightbox")) {
@@ -5635,6 +4876,7 @@ function formatTagLabel(label) {
 })();
 
 (function initCommunityFeatures() {
+  return;
   const accountsKey = "tb_accounts_v1";
   const sessionKey = "tb_active_user_v1";
   const profileKey = "tb_profiles_v1";
