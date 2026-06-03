@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "Eurostar",
       date:"23 May 2025",
-      photographer: "eurorailshots",
+      photographer: "trainbelgium",
       alt: "Luchtbal E320 4029",
       numbers: "4029",
       consist: [train("E 320")],

@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "NMBS/SNCB, NS",
       date: "24 October 2024",
-      photographer: "eurorailshots",
+      photographer: "trainbelgium",
       alt: "Mechelen TRAXX 186 205 + ICR + TRAXX",
       numbers: "205",
       consist: [train("TRAXX 186")],

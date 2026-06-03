@@ -11,7 +11,7 @@ station({
       id: "photo-0",
       operator: "DB",
       date: "10 December 2025",
-      photographer: "eurorailshots",
+      photographer: "trainbelgium",
       alt: "Dusseldorf BR 146 572-3 + Stadler KISS",
       numbers: "572-3",
       consist: [train("BR 146")],
