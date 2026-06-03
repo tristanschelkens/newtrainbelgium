@@ -717,14 +717,15 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   function getProfileAvatarForUser(username) {
     const user = String(username || "").trim().toLowerCase();
     if (!user) return "../images/default-avatar.svg";
+    if (user === "trainbelgium") return "../images/apple-touch-icon.svg";
     try {
       const raw = localStorage.getItem("tb_profiles_v1");
       const profiles = raw ? JSON.parse(raw) : {};
       const profile = profiles && typeof profiles === "object" ? profiles[user] : null;
       const avatar = String(profile?.avatar || "").trim();
-      return avatar || "../images/default-avatar.svg";
+      return avatar || (user === "trainbelgium" ? "../images/apple-touch-icon.svg" : "../images/default-avatar.svg");
     } catch {
-      return "../images/default-avatar.svg";
+      return user === "trainbelgium" ? "../images/apple-touch-icon.svg" : "../images/default-avatar.svg";
     }
   }
 
@@ -1110,18 +1111,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
       <button class="station-lightbox-delete" type="button" id="photoSearchDeleteBtn" hidden>Delete photo</button>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
-    <div class="station-lightbox-panel">
-      <div class="station-lightbox-panel-top">
-        <h3>Comments</h3>
-        <p class="muted">Join the discussion for this photo.</p>
-      </div>
-      <div class="station-lightbox-comments" id="photoSearchCommentsList"></div>
-      <form class="login-form" id="photoSearchCommentForm">
-        <input id="photoSearchCommentInput" name="comment" type="text" maxlength="400" placeholder="Write your comment..." />
-        <button class="btn btn-primary" type="submit">Post comment</button>
-      </form>
-      <p class="muted" id="photoSearchCommentStatus"></p>
-    </div>
   `;
   document.body.appendChild(searchLightbox);
 
@@ -1140,7 +1129,6 @@ async function mergeApprovedSubmissionsIntoStationData(stationData) {
   const searchCommentForm = searchLightbox.querySelector("#photoSearchCommentForm");
   const searchCommentInput = searchLightbox.querySelector("#photoSearchCommentInput");
   const searchCommentStatus = searchLightbox.querySelector("#photoSearchCommentStatus");
-  if (searchCommentForm) searchCommentForm.hidden = true;
   let currentSearchSeriesPool = [];
   let currentSearchSeriesPosition = 0;
   let currentSearchEntry = null;
@@ -3536,25 +3524,6 @@ function formatTagLabel(label) {
       <button class="station-lightbox-delete" type="button" id="stationLightboxDeleteBtn" hidden>Delete photo</button>
       <div class="station-lightbox-watermark">&copy; trainbelgium.com</div>
     </div>
-    <div class="station-lightbox-panel">
-      <div class="station-lightbox-panel-top">
-        <h3>Comments</h3>
-        <p class="muted" id="stationLightboxCommentsMeta">Join the discussion for this photo.</p>
-      </div>
-      <div class="station-lightbox-comments" id="stationLightboxCommentsList"></div>
-      <form class="login-form" id="stationLightboxCommentForm" novalidate>
-        <input
-          id="stationLightboxCommentInput"
-          name="comment"
-          type="text"
-          maxlength="240"
-          placeholder="Write your comment..."
-          required
-        />
-        <button class="btn btn-primary" type="submit">Post comment</button>
-      </form>
-      <p class="login-status" id="stationLightboxCommentStatus" role="status" aria-live="polite"></p>
-    </div>
   `;
   document.body.appendChild(lightbox);
   const commenterProfileModal = document.createElement("div");
@@ -3564,7 +3533,7 @@ function formatTagLabel(label) {
     <div class="station-profile-card">
       <button class="station-profile-close" type="button" aria-label="Close profile">&times;</button>
       <div class="station-profile-head">
-        <img id="stationProfileAvatar" src="../images/default-avatar.svg" alt="Profile avatar" />
+        <img id="stationProfileAvatar" src="../images/apple-touch-icon.svg" alt="Profile avatar" />
         <div>
           <h3 id="stationProfileName">Member</h3>
           <p id="stationProfileUser" class="muted"></p>
@@ -3596,7 +3565,6 @@ function formatTagLabel(label) {
   const stationProfileUser = commenterProfileModal.querySelector("#stationProfileUser");
   const stationProfileDetails = commenterProfileModal.querySelector("#stationProfileDetails");
   const stationProfileClose = commenterProfileModal.querySelector(".station-profile-close");
-  if (lightboxCommentForm) lightboxCommentForm.hidden = true;
   let currentPhotoIndex = 0;
   let currentSeriesPool = [];
   let currentSeriesPosition = 0;
@@ -3640,7 +3608,7 @@ function formatTagLabel(label) {
   function openCommenterProfile(username) {
     const user = String(username || "").trim();
     if (!user || !stationProfileDetails || !stationProfileName || !stationProfileUser || !stationProfileAvatar) return;
-    stationProfileAvatar.src = "../images/default-avatar.svg";
+    stationProfileAvatar.src = "../images/apple-touch-icon.svg";
     stationProfileName.textContent = user;
     stationProfileUser.textContent = "";
     stationProfileUser.style.display = "none";
